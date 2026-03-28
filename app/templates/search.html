@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Search | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel hero">
+    <h1>Search DailyMed Products</h1>
+    <p>Enter a medication name or NDC to search live DailyMed product records and inspect inactive ingredient listings.</p>
+    {% include "partials/search_form.html" %}
+    {% if error %}
+    <p class="message error">{{ error }}</p>
+    {% endif %}
+</section>
+{% endblock %}

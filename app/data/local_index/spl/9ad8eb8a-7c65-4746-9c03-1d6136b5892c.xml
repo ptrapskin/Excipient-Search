@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="0b18f935-a249-4b27-98af-f8144646bbe6"/>
+   <code code="50578-4" codeSystem="2.16.840.1.113883.6.1" displayName="PRESCRIPTION ANIMAL DRUG LABEL"/>
+   <title>Salix<sup>®</sup>
+      <br/> (furosemide tablets)</title>
+   <effectiveTime value="20251030"/>
+   <setId root="9ad8eb8a-7c65-4746-9c03-1d6136b5892c"/>
+   <versionNumber value="7"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="001317601" root="1.3.6.1.4.1.519.1"/>
+            <name>Merck Sharp &amp; Dohme Corp.</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="DLDE">
+               <id root="de293e82-4d0f-4b94-b85e-e3cb49fd34b0"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20250501"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="57926-464" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Salix</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Furosemide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="50" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FUROSEMIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FUROSEMIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="500" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="57926-464-31" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NADA034621" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73593" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20110315"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48330" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="YELLOW" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="2" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48345" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OVAL" xsi:type="CE">
+                              <originalText>Oblong</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="13" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">SALIX</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="57926-463" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Salix</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Furosemide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="12.5" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FUROSEMIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FUROSEMIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LACTOSE MONOHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICROCRYSTALLINE CELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="I753WB2F1M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FD&amp;C YELLOW NO. 5</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="500" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="57926-463-30" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NADA034621" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73593" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20110315"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48330" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="yellow" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="2" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="6" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">SALIX</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="66658c98-622d-4fb3-b4f4-c48c8505ddb0"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">FOR USE IN ANIMALS ONLY</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ab280e8e-6e5f-4987-92cd-1a8321e8a209"/>
+               <code code="50745-9" codeSystem="2.16.840.1.113883.6.1" displayName="VETERINARY INDICATIONS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">A diuretic-saluretic for prompt relief of edema.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="66641276-6604-426c-bb90-619440613f7f"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Caution:</content> Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+                  <paragraph>See package labeling for storage conditions.</paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="0267a21b-a78a-4424-9193-2a96cd0b83bb"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>Salix<sup>®</sup> (furosemide tablets) is a chemically distinct diuretic and saluretic pharmacodynamically characterized by the following:</paragraph>
+                  <paragraph>1) A high degree of efficacy, low-inherent toxicity and a high therapeutic index.</paragraph>
+                  <paragraph>2) A rapid onset of action and of comparatively short duration.</paragraph>
+                  <paragraph>3) A pharmacological action in the functional area of the nephron, i.e., proximal and distal tubules and the ascending limb of the loop of Henle.</paragraph>
+                  <paragraph>4) A dose-response relationship and a ratio of minimum to maximum effective dose range greater than tenfold.</paragraph>
+                  <paragraph>5) It may be administered orally or parenterally.</paragraph>
+                  <paragraph>It is readily absorbed from the intestinal tract and well tolerated.</paragraph>
+                  <paragraph>The intravenous route produces the most rapid diuretic response.</paragraph>
+                  <paragraph>The CAS Registry Number is 54-31-9.</paragraph>
+                  <paragraph>Salix<sup>®</sup>, a diuretic, is an anthranilic acid derivative with the following structural formula:</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM1"/>
+                  </paragraph>
+                  <paragraph>Generic name: Furosemide (except in United Kingdom-furosemide).</paragraph>
+                  <paragraph>Chemical name: 4-chloro-N-furfuryl-5-sulfamoylanthranilic acid.</paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Chemical Structure</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="salix-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="eda6e65f-557a-435e-9fdc-594a667999a6"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <section>
+                     <id root="a8e918e0-aa70-4ae4-aa6d-5b5a6ff251ad"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>ACTIONS</title>
+                     <text>
+                        <paragraph>The therapeutic efficacy of Salix<sup>®</sup> is from the activity of the intact and unaltered molecule throughout the nephron, inhibiting the reabsorption of sodium not only in the proximal and distal tubule but also in the ascending limb of the loop of Henle. The prompt onset of action is a result of the drug's rapid absorption and a poor lipid solubility.</paragraph>
+                        <paragraph>The low lipid solubility and a rapid renal excretion minimize the possibility of its accumulation in tissues and organs or crystalluria. Salix<sup>®</sup> has no inhibitory effect on carbonic anhydrase or aldosterone activity in the distal tubule. The drug possesses diuretic activity either in presence of acidosis or alkalosis.</paragraph>
+                     </text>
+                     <effectiveTime value="20250501"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="a1f11749-296b-449e-8740-dddae1221f66"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS</title>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <section>
+                     <id root="caf5b465-2a0d-444e-a763-e71707f4b155"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>Dogs and Cats</paragraph>
+                        <paragraph>Salix<sup>®</sup> is an effective diuretic possessing a wide therapeutic range. Pharmacologically it promotes the rapid removal of abnormally retained extracellular fluids. The rationale for the efficacious use of diuretic therapy is determined by the clinical pathology producing the edema. Salix<sup>®</sup> is indicated for the treatment of edema (pulmonary congestion, ascites) associated with cardiac insufficiency and acute noninflammatory tissue edema.</paragraph>
+                        <paragraph>The continued use of heart stimulants, such as digitalis or its glycosides is indicated in cases of edema involving cardiac insufficiency.</paragraph>
+                     </text>
+                     <effectiveTime value="20250501"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ee3b0f16-2763-4630-a90b-5d4232791b46"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS – PRECAUTIONS</title>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <section>
+                     <id root="fd55ee8c-1970-4535-a8d1-d8c71041e765"/>
+                     <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+                     <text>
+                        <paragraph>Salix<sup>®</sup> is a highly effective diuretic-saluretic which if given in excessive amounts may result in dehydration and electrolyte imbalance. </paragraph>
+                        <paragraph>Therefore, the dosage and schedule may have to be adjusted to the patient's needs. The animal should be observed for early signs of electrolyte imbalance, and corrective measures administered. Early signs of electrolyte imbalance are: increased thirst, lethargy, drowsiness or restlessness, fatigue, oliguria, gastro-intestinal disturbances and tachycardia. Special attention should be given to potassium levels. Salix<sup>®</sup> may lower serum calcium levels and cause tetany in rare cases of animals having an existing hypocalcemic tendency.</paragraph>
+                        <paragraph>Although diabetes mellitus is a rarely reported disease in animals, active or latent diabetes mellitus may on rare occasions be exacerbated by Salix<sup>®</sup>. </paragraph>
+                        <paragraph>While it has not been reported in animals the use of high doses of salicylates, as in rheumatic diseases, in conjunction with Salix<sup>®</sup> may result in salicylate toxicity because of competition for renal excretory sites.</paragraph>
+                        <paragraph>Transient loss of auditory capacity has been experimentally produced in cats following intravenous injection of excessive doses of Salix<sup>®</sup> at a very rapid rate.</paragraph>
+                        <paragraph>Electrolyte balance should be monitored prior to surgery in patients receiving Salix<sup>®</sup>. </paragraph>
+                        <paragraph>Imbalances must be corrected by administration of suitable fluid therapy.</paragraph>
+                        <paragraph>Salix<sup>®</sup> is contraindicated in anuria. Therapy should be discontinued in cases of progressive renal disease if increasing azotemia and oliguria occur during the treatment. Sudden alterations of fluid and electrolyte imbalance in an animal with cirrhosis may precipitate hepatic coma, therefore observation during period of therapy is necessary. </paragraph>
+                        <paragraph>In hepatic coma and in states of electrolyte depletion, therapy should not be instituted until the basic condition is improved or corrected. Potassium supplementation may be necessary in cases routinely treated with potassium-depleting steroids.</paragraph>
+                     </text>
+                     <effectiveTime value="20250501"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="845a1952-ed39-4c45-a80c-b5cc0d947d59"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph>Salix<sup>®</sup> is a highly effective diuretic and if given in excessive amounts as with any diuretic may lead to excessive diuresis which could result in electrolyte imbalance, dehydration and reduction of plasma volume enhancing the risk of circulatory collapse, thrombosis, and embolism. Therefore, the animal should be observed for early signs of fluid depletion with electrolyte imbalance, and corrective measures administered. Excessive loss of potassium in patients receiving digitalis or its glycosides may precipitate digitalis toxicity. Caution should be exercised in animals administered potassium-depleting steroids.</paragraph>
+                  <paragraph>It is important to correct potassium deficiency with dietary supplementation. Caution should be exercised in prescribing enteric-coated potassium tablets. </paragraph>
+                  <paragraph>There have been several reports in human literature, published and unpublished, concerning nonspecific small-bowel lesions consisting of stenosis, with or without ulceration, associated with the administration of enteric-coated thiazides with potassium salts.</paragraph>
+                  <paragraph>These lesions may occur with enteric-coated potassium tablets alone or when they are used with nonenteric-coated thiazides, or certain other oral diuretics. These small-bowel lesions may have caused obstruction, hemorrhage, and perforation. Surgery was frequently required, and deaths have occured. Available information tends to implicate enteric-coated potassium salts, although lesions of this type also occur spontaneously. Therefore, coated potassium-containing formulations should be administered only when indicated and should be discontinued immediately if abdominal pain, distention, nausea, vomiting, or gastro-intestinal bleeding occurs.</paragraph>
+                  <paragraph>Human patients with known sulfonamide sensitivity may show allergic reactions to Salix<sup>®</sup>; however, these reactions have not been reported in animals.</paragraph>
+                  <paragraph>Sulfonamide diuretics have been reported to decrease arterial responsiveness to pressor amines and to enhance the effect of tubocurarine. Caution should be exercised in administering curare or its derivatives to patients undergoing therapy with Salix<sup>®</sup> and it is advisable to discontinue Salix<sup>®</sup> for one day prior to any elective surgery.</paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="fb54c016-38e8-459e-9afe-d9b1f1f673fd"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>The usual dosage of Salix<sup>®</sup> is 1 to 2 mg/lb. body weight (approximately 2.5 to 5 mg/kg). The lower dosage is suggested for cats. </paragraph>
+                  <paragraph>Administer once or twice daily at 6 to 8 hour intervals either orally, intravenously, or intramuscularly. A prompt diuresis usually ensues from the initial treatment. Diuresis may be initiated by the parenteral administration of Salix<sup>®</sup> injection and then maintained by oral administration.</paragraph>
+                  <paragraph>The dosage should be adjusted to the individual's response. In severe edematous or refractory cases, the dose may be doubled or increased by increments of 1 mg per pound body weight. The established effective dose should be administered once or twice daily. The daily schedule of administration can be timed to control the period of micturition for the convenience of the client or veterinarian.</paragraph>
+                  <paragraph>Mobilization of the edema may be most efficiently and safely accomplished by utilizing an intermittent daily dosage schedule, i.e. every other day or 2 to 4 consecutive days weekly.</paragraph>
+                  <paragraph>Diuretic therapy should be discontinued after reduction of the edema, or maintained after determining a carefully programmed dosage schedule to prevent recurrence of edema. For long-term treatment, the dose can generally be lowered after the edema has once been reduced. Re-examination and consultations with client will enhance the establishment of a satisfactorily programmed dosage schedule. Clinical examination and serum BUN, CO2 and electrolyte determinations should be performed during the early period of therapy and periodically thereafter, especially in refractory cases. Abnormalities should be corrected or the drug temporarily withdrawn.</paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="436560f5-8269-483d-99af-fc767c4ac7f1"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">DOSAGE: ORAL</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <section>
+                     <id root="5e4ffbfb-ecb2-49ff-96cd-2a404e901d0e"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>DOG AND CAT</paragraph>
+                        <paragraph>One-half to one 50 mg scored tablet per 25 pounds body weight.</paragraph>
+                        <paragraph>One 12.5 mg tablet per 5 to 10 pounds body weight.</paragraph>
+                        <paragraph>Administer once or twice daily, permitting a 6-to 8-hour interval between treatments. In refractory or severe edematous cases, the dosage may be doubled or increase by increments of 1 mg per pound body weight as recommended in preceding paragraphs, "Dosage and Administration".</paragraph>
+                     </text>
+                     <effectiveTime value="20250501"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="105a8d76-37e6-49f8-bc7d-85f16f978d7e"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <section>
+                     <id root="31affa1a-05c3-46e5-8d8c-4e0edea8d750"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Tablets:</content>
+                        </paragraph>
+                        <paragraph>50 mg (scored) tablets</paragraph>
+                        <paragraph>Each tablet contains 50.0 milligrams of furosemide:4-chloro-N-furfuryl-5-sulfamoylanthranilic acid.</paragraph>
+                        <paragraph>12.5 mg tablets</paragraph>
+                        <paragraph>Each tablet contains 12.5 milligrams of furosemide:4-chloro-N-furfuryl-5-sulfamoylanthranilic acid.</paragraph>
+                     </text>
+                     <effectiveTime value="20250501"/>
+                     <component>
+                        <section>
+                           <id root="e14ca8f1-be14-42c5-9a06-8aa5c7dcfe9f"/>
+                           <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                           <text>
+                              <paragraph>Available in bottles of 500 tablets.</paragraph>
+                           </text>
+                           <effectiveTime value="20250501"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="898614c2-f5b3-41a8-806c-177f646bac46"/>
+               <code code="34091-9" codeSystem="2.16.840.1.113883.6.1" displayName="ANIMAL PHARMACOLOGY &amp; OR TOXICOLOGY SECTION"/>
+               <title>TOXICOLOGY</title>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <section>
+                     <id root="c249a28c-df1f-46b3-89e7-432a5a92ad26"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Acute Toxicity:</content>
+                        </paragraph>
+                        <paragraph>The following table illustrates low acute toxicity of Salix<sup>®</sup> in three different species.</paragraph>
+                        <paragraph>(Two values indicate two different studies.)</paragraph>
+                        <table width="70%">
+                           <caption>LD<sub>50</sub> of Salix<sup>®</sup> in mg/kg body weight</caption>
+                           <col width="20%" align="left" valign="top"/>
+                           <col width="40%" align="center" valign="top"/>
+                           <col width="40%" align="center" valign="top"/>
+                           <thead>
+                              <tr>
+                                 <th>SPECIES</th>
+                                 <th>ORAL</th>
+                                 <th>INTRAVENOUS</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Mouse</td>
+                                 <td>1050-1500</td>
+                                 <td>308</td>
+                              </tr>
+                              <tr>
+                                 <td>Rat</td>
+                                 <td>2650-4600<footnote>NOTE: The lower value for the rat oral LD<sub>50</sub> was obtained in a group of fasted animals; the higher figure is from a study performed in fed rats. Toxic doses lead to convulsions, ataxia, paralysis and collapse. Animals surviving toxic dosages may become dehydrated and depleted of electrolytes due to the massive diuresis and saluresis.</footnote>
+                                 </td>
+                                 <td>680</td>
+                              </tr>
+                              <tr>
+                                 <td>Dog</td>
+                                 <td>&gt;1000 and &gt;4640</td>
+                                 <td>&gt;300 and &gt;464</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20250501"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="34fb45ef-1382-48f2-9192-34c1eef26e22"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Chronic Toxicity:</content>
+                        </paragraph>
+                        <paragraph>Chronic Toxicity studies with Salix<sup>®</sup> were done in a one-year study in rats and dogs. In a one-year study in rats, renal tubular degeneration occured with all doses higher than 50 mg/kg. </paragraph>
+                        <paragraph>A six-month study in dogs revealed calcification and scarring of the renal parenchyma at all doses above 10 mg/kg.</paragraph>
+                     </text>
+                     <effectiveTime value="20250501"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="29a7c44e-b28b-4418-88d2-f4061df45a86"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <section>
+                     <id root="be1ea9a2-c745-43cd-a1b2-eebfa5125e4b"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Reproductive Studies:</content>
+                        </paragraph>
+                        <paragraph>Reproductive Studies were conducted in mice, rats and rabbits. Only in rabbits administered high doses (equivalent to 10 to 25 times the recommended average dose of 2 mg/kg for dogs and cats) of furosemide during the second trimester period did unexplained maternal deaths and abortions occur. The administration of Salix<sup>®</sup> is not recommended during the second trimester of pregnancy.</paragraph>
+                     </text>
+                     <effectiveTime value="20250501"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="01cba0c7-3a0a-4ade-9e78-2076b2b25402"/>
+               <code code="34093-5" codeSystem="2.16.840.1.113883.6.1" displayName="REFERENCES SECTION"/>
+               <text>
+                  <paragraph>REFERENCES available upon request</paragraph>
+                  <paragraph>Salix<sup>®</sup> Tablets 12.5 mg and 50 mg</paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="4e8a9311-45d2-47b4-b685-ebc70b8129d6"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Furosemide (active ingred.) made in Germany. Formulated in Austria.</paragraph>
+                  <paragraph>© 2024, Intervet Inc. (d/b/a Merck Animal Health) Rahway, NJ 07065</paragraph>
+                  <paragraph>Rev. 08/24</paragraph>
+                  <paragraph>220840 R2</paragraph>
+               </text>
+               <effectiveTime value="20250501"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="3049aa77-1b5d-4229-ab34-1b5784c97b1d"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 50 mg Tablet Bottle Label</title>
+               <text>
+                  <paragraph>Salix<sup>®</sup>
+                     <br/>(furosemide tablets)</paragraph>
+                  <paragraph>50mg</paragraph>
+                  <paragraph>Caution: Federal law restricts this<br/>drug to use by or on the order<br/>of a licensed veterinarian.</paragraph>
+                  <paragraph>Do not use if bottle<br/>closure seal is broken.</paragraph>
+                  <paragraph>Store at or below<br/>25° C (77°F)</paragraph>
+                  <paragraph>Keep this and all<br/>medication out of the<br/>reach of children.</paragraph>
+                  <paragraph>500 Tablets</paragraph>
+                  <paragraph>MERCK<br/>Animal Health</paragraph>
+                  <renderMultiMedia referencedObject="MM2"/>
+               </text>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>PRINCIPAL DISPLAY PANEL - 50 mg Tablet Bottle Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="salix-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="5ee9d292-e7ee-4eb5-a220-f4b7ae8e858a"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 12.5 mg Tablet Bottle Label</title>
+               <text>
+                  <paragraph>Salix<sup>®</sup>
+                     <br/>(furosemide tablets)</paragraph>
+                  <paragraph>12.5 mg</paragraph>
+                  <paragraph>Caution: Federal law restricts this<br/>drug to use by or on the order of<br/>a licensed veterinarian.</paragraph>
+                  <paragraph>Do not use if bottle closure<br/>seal is broken.</paragraph>
+                  <paragraph>Store at or below 25° C (77°F)</paragraph>
+                  <paragraph>Keep this and all<br/>medication out of the<br/>reach of children.</paragraph>
+                  <paragraph>500 Tablets</paragraph>
+                  <paragraph>MERCK<br/>Animal Health</paragraph>
+                  <renderMultiMedia referencedObject="MM3"/>
+               </text>
+               <effectiveTime value="20250501"/>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>PRINCIPAL DISPLAY PANEL - 12.5 mg Tablet Bottle Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="salix-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

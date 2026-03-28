@@ -1,0 +1,2363 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="a67aa830-538d-4920-ac7e-9b4418362473"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use Lasix<sup>®</sup> ONYU safely and effectively. See full prescribing information for Lasix<sup>®</sup> ONYU. Lasix<sup>®</sup> ONYU (furosemide injection), for subcutaneous use<br/>Initial U.S. Approval: 1968</title>
+   <effectiveTime value="20251114"/>
+   <setId root="cb27654f-c7a1-4796-ab08-60a5fa16f5c0"/>
+   <versionNumber value="3"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="117146655"/>
+            <name>SQ Innovation, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="079589218"/>
+                        <name>Sharp Sterile Manufacturing, LLC</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="81137-001" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84732" displayName="label" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="81137-001" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84731" displayName="pack" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="81137-001" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="82272e81-d325-4020-938b-667aa2369cd7"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20251022"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="81137-001" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>LASIX ONYU</name>
+                        <formCode code="C42946" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>furosemide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="30"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FUROSEMIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FUROSEMIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="QTT17582CB" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROCHLORIC ACID</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="55X04QC32I" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="300" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="2PP9364507" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>BETADEX SULFOBUTYL ETHER SODIUM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="3" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="023C2WHX2V" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TROMETHAMINE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WATER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="2.67" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <formCode code="C43183" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTRIDGE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                    <asContent>
+                                       <quantity>
+                                          <numerator value="1" unit="1"/>
+                                          <denominator value="1"/>
+                                       </quantity>
+                                       <containerPackagedProduct>
+                                          <code code="81137-001-15" codeSystem="2.16.840.1.113883.6.69"/>
+                                          <formCode code="C43197" displayName="KIT" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       </containerPackagedProduct>
+                                       <subjectOf>
+                                          <marketingAct>
+                                             <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                             <statusCode code="active"/>
+                                             <effectiveTime>
+                                                <low value="20251201"/>
+                                             </effectiveTime>
+                                          </marketingAct>
+                                       </subjectOf>
+                                    </asContent>
+                                    <asContent>
+                                       <quantity>
+                                          <numerator value="3" unit="1"/>
+                                          <denominator value="1" unit="1"/>
+                                       </quantity>
+                                       <containerPackagedProduct>
+                                          <code code="81137-001-35" codeSystem="2.16.840.1.113883.6.69"/>
+                                          <formCode code="C43197" displayName="KIT" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       </containerPackagedProduct>
+                                       <subjectOf>
+                                          <marketingAct>
+                                             <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                             <statusCode code="active"/>
+                                             <effectiveTime>
+                                                <low value="20260615"/>
+                                             </effectiveTime>
+                                          </marketingAct>
+                                       </subjectOf>
+                                    </asContent>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102834" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 1: Convenience Kit of Co-Package" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA217294" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20251201"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUBCUTANEOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_ec7dc1f6-1fb7-4bf1-e053-2a95a90a3b93">
+               <id root="22966ad1-7292-4f53-b1f4-e8a2fcb87bda"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <effectiveTime value="20251014"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Lasix ONYU is a loop diuretic indicated for the treatment of edema in adult patients with chronic heart failure. (<linkHtml href="#id_link_ec7dc1f6-1fba-4bf1-e053-2a95a90a3b93">1.1</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="id_link_ec7dc1f6-1fba-4bf1-e053-2a95a90a3b93">
+                     <id root="f657da56-084a-418e-92d2-46433a9fc126"/>
+                     <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+                     <title>1.1 Congestion</title>
+                     <text>
+                        <paragraph>Lasix ONYU is indicated for the treatment of edema in adult patients with chronic heart failure.</paragraph>
+                     </text>
+                     <effectiveTime value="20251014"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf7fdbd-cf62-331f-e053-2a95a90a68b2">
+               <id root="552155e7-d44f-4edb-957c-4c2523a7efab"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20251020"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>The Infusor is pre-programmed to deliver 30 mg of Lasix ONYU over the first hour then 12.5 mg per hour for the subsequent 4 hours. (<linkHtml href="#id_link_ec6a644c-020d-972c-e053-2a95a90ab6f4">2.1</linkHtml>)</item>
+                           <item>Lasix ONYU is not for chronic use and should be replaced with oral diuretics as soon as practical. (<linkHtml href="#id_link_ec6a644c-020d-972c-e053-2a95a90ab6f4">2.1</linkHtml>)</item>
+                           <item>See Full Prescribing Information for important administration instructions. (<linkHtml href="#id_link_ec6b2b19-02d0-6a3e-e053-2995a90a24d5">2.2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="id_link_ec6a644c-020d-972c-e053-2a95a90ab6f4">
+                     <id root="4cbaa13d-4d97-4ac2-a511-8ac62444e15e"/>
+                     <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+                     <title>2.1 Dosage</title>
+                     <text>
+                        <paragraph>The Infusor with single-dose prefilled cartridge delivers 30 mg of Lasix ONYU over the first hour followed by 12.5 mg per hour for the subsequent 4 hours<content styleCode="italics"> [see Clinical Pharmacology (<linkHtml href="#id_link_eaf8e628-a0fe-06f8-e053-2995a90a3ab2">12</linkHtml>)].</content> Administer Lasix ONYU once or twice daily as needed for edema. Lasix ONYU is not for chronic use and should be replaced with oral diuretics as soon as practical.</paragraph>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6b2b19-02d0-6a3e-e053-2995a90a24d5">
+                     <id root="2c2418f7-4c63-45e1-8108-5cc473c5af49"/>
+                     <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+                     <title>2.2 Important Administration Instructions </title>
+                     <text>
+                        <paragraph>Lasix ONYU is intended for use in a setting where the patient can limit their activity for the duration of administration <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#L99dc335d-3148-4dfe-ad50-5663005f9046">5.5</linkHtml>)]</content>.</paragraph>
+                        <paragraph>The Infusor for Lasix ONYU is not compatible with use in an MRI setting.</paragraph>
+                        <paragraph>Inspect Lasix ONYU prefilled cartridge prior to administration. Lasix ONYU is a clear to slightly yellow solution. Do not use Lasix ONYU if solution is discolored or cloudy <content styleCode="italics">[see Description (<linkHtml href="#id_link_eaf8c81b-909e-350c-e053-2a95a90aadda">11</linkHtml>)] </content>.</paragraph>
+                        <paragraph>Refer to the Instructions for Use for additional information.</paragraph>
+                        <paragraph>Push the Lasix ONYU prefilled cartridge into Disposable Unit. Slide the Reusable Unit and Disposable Unit together until the Status Light on the Reusable Unit turns on. The Infusor will remain ready to start infusion for 7 hours.</paragraph>
+                        <paragraph>Peel away the paper liner on the Infusor and apply onto a clean, dry area of the abdomen between the top of the beltline and the bottom of the ribcage that is not tender, bruised, red, or indurated. Make sure the Status Lights and the Start/Stop Button are facing up in a horizontal position.</paragraph>
+                        <paragraph>Start the injection by firmly pressing and holding the Start/Stop Button until you hear the motor and see the blue Status Light change to flashing slowly.</paragraph>
+                        <paragraph>Do not remove until the injection is complete which is signaled by the solid blue Status Light and the OK tone (one long beep).</paragraph>
+                        <paragraph>Rotate the site of each subcutaneous administration.</paragraph>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf8144a-8eb3-d170-e053-2995a90a9ca5">
+               <id root="272c0dd3-4626-49a6-b2f9-b81b45fad8f1"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Injection: 80 mg per 2.67 mL as a clear to slightly yellow solution in a single-dose prefilled cartridge co-packaged with a single-use Disposable Unit of the Infusor.</paragraph>
+               </text>
+               <effectiveTime value="20251020"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Injection: 80 mg per 2.67 mL in a single-dose prefilled cartridge co-packaged with a single-use Disposable Unit of the Infusor. (<linkHtml href="#id_link_eaf8144a-8eb3-d170-e053-2995a90a9ca5">3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf81b94-ff05-f072-e053-2a95a90a117f">
+               <id root="d6f0cf4e-563f-4ce2-9328-67f95ff7d558"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <list listType="unordered">
+                     <item>Lasix ONYU is contraindicated in patients with anuria.</item>
+                     <item>Lasix ONYU is contraindicated in patients with a history of hypersensitivity to furosemide, any component of the Lasix ONYU formulation, or medical adhesives.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20251020"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>Anuria. (<linkHtml href="#id_link_eaf81b94-ff05-f072-e053-2a95a90a117f">4</linkHtml>)</item>
+                           <item>Hypersensitivity to furosemide or medical adhesives. (<linkHtml href="#id_link_eaf81b94-ff05-f072-e053-2a95a90a117f">4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf82b9b-d777-0267-e053-2995a90a2588">
+               <id root="43d69664-1305-4788-9a48-0b964793fced"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <text>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20251002"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="underline">Fluid, Electrolyte, and Metabolic Abnormalities</content>: Monitor serum electrolytes, CO<sub>2</sub>, BUN, creatinine, glucose, and uric acid. (<linkHtml href="#id_link_ec6b7937-74d6-d494-e053-2a95a90a004b">5.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Worsening Renal Function</content>: Monitor for dehydration and azotemia. (<linkHtml href="#id_link_ec6b80a0-c23a-fab0-e053-2a95a90adba5">5.2</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Ototoxicity</content>: Avoid higher than recommended doses. (<linkHtml href="#id_link_ec6b80a0-c23c-fab0-e053-2a95a90adba5">5.3</linkHtml>, <linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Acute Urinary Retention</content>: Monitor patients with symptoms of urinary retention. (<linkHtml href="#id_link_ec6b87f1-e5ff-21c2-e053-2a95a90ab76d">5.4</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Incomplete Dosing</content>: Fluid contact and certain patient movements during treatment may cause the On-body Infusor to prematurely terminate infusion. Ensure patients can detect and respond to alarms. (<linkHtml href="#L99dc335d-3148-4dfe-ad50-5663005f9046">5.5</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="id_link_ec6b7937-74d6-d494-e053-2a95a90a004b">
+                     <id root="0f3fd18c-0d75-4efa-9086-2fb7689bae15"/>
+                     <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+                     <title>5.1 Fluid, Electrolyte, and Metabolic Abnormalities</title>
+                     <text>
+                        <paragraph>Furosemide may cause fluid, electrolyte, and metabolic abnormalities such as hypovolemia, hypokalemia, azotemia, hyponatremia, hypochloremic alkalosis, hypomagnesemia, hypocalcemia, hyperglycemia, or hyperuricemia, particularly in patients receiving higher doses, patients with inadequate oral electrolyte intake, and in elderly patients. Excessive diuresis may cause dehydration and blood volume reduction with circulatory collapse and possible vascular thrombosis and embolism, particularly in elderly patients. Serum electrolytes, CO<sub>2</sub>, BUN, creatinine, glucose, and uric acid should be monitored frequently during furosemide therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20251002"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6b80a0-c23a-fab0-e053-2a95a90adba5">
+                     <id root="8c4a97bf-9225-4f6d-b014-87b435d2d005"/>
+                     <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+                     <title>5.2 Worsening Renal Function</title>
+                     <text>
+                        <paragraph>Furosemide can cause dehydration and azotemia. If increasing azotemia and oliguria occur during treatment of severe progressive renal disease, discontinue furosemide <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#id_link_ec6c1181-35ef-3fb9-e053-2a95a90a0d1d">12.3</linkHtml>)]. </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20251002"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6b80a0-c23c-fab0-e053-2a95a90adba5">
+                     <id root="712652c9-c4ad-4895-9c68-20c7d6ae0f08"/>
+                     <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+                     <title>5.3 Ototoxicity</title>
+                     <text>
+                        <paragraph>Cases of tinnitus and reversible or irreversible hearing impairment and deafness have been reported with furosemide. Reports usually indicate that furosemide ototoxicity is associated with rapid injection, severe renal impairment, the use of higher than recommended doses, hypoproteinemia or concomitant therapy with aminoglycoside antibiotics, ethacrynic acid, or other ototoxic drugs. If the physician elects to use high-dose parenteral therapy, controlled intravenous infusion is advisable (for adults, an infusion rate not exceeding 4 mg furosemide per minute has been used)<content styleCode="italics"> [see Drug Interactions (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7</linkHtml>)]. </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20251002"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6b87f1-e5ff-21c2-e053-2a95a90ab76d">
+                     <id root="e6dd4fca-eb4b-4d70-9513-e85ed8a3dcd1"/>
+                     <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+                     <title>5.4 Acute Urinary Retention</title>
+                     <text>
+                        <paragraph>In patients with severe symptoms of urinary retention (because of bladder emptying disorders, prostatic hyperplasia, urethral narrowing), the administration of furosemide can cause acute urinary retention related to increased production and retention of urine. These patients require careful monitoring, especially during the initial stages of treatment.</paragraph>
+                     </text>
+                     <effectiveTime value="20251002"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L99dc335d-3148-4dfe-ad50-5663005f9046">
+                     <id root="def4b975-4b55-42c7-a847-6fc006b064cc"/>
+                     <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+                     <title>5.5 Incomplete Dosing</title>
+                     <text>
+                        <paragraph>The Lasix ONYU Infusor should not come in contact with water or any other fluids (blood or drug product). Fluid contact with the Infusor circuit board can lead to device errors and premature termination of infusion.<br/>The Lasix ONYU is intended for use in a setting where the patient can limit their activity for the duration of administration. Certain patient movements may cause interruption of device adherence to skin and premature termination of infusion.<br/>Lasix ONYU should only be used in patients who can detect and respond to alarms to ensure a complete dose is administered.</paragraph>
+                     </text>
+                     <effectiveTime value="20251002"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf84712-cede-09ee-e053-2995a90a0c61">
+               <id root="4946665d-da51-4eda-bcf8-186330764a51"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following important adverse reactions are discussed elsewhere in the labeling:</paragraph>
+                  <paragraph/>
+                  <list listType="unordered">
+                     <item>Fluid, Electrolyte, and Metabolic Abnormalities <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#id_link_ec6b7937-74d6-d494-e053-2a95a90a004b">5.1</linkHtml>)]. </content>
+                     </item>
+                     <item>Ototoxicity <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#id_link_ec6b80a0-c23c-fab0-e053-2a95a90adba5">5.3</linkHtml>)] </content>
+                     </item>
+                  </list>
+                  <paragraph>The following adverse reactions associated with the use of furosemide were identified in clinical trials or post-marketing reports. Because these reactions were reported voluntarily from a population of uncertain size, it is not always possible to estimate their frequency reliably, or to establish a causal relationship to drug exposure.</paragraph>
+                  <paragraph>Adverse reactions are categorized below by organ system and listed by decreasing severity.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Gastrointestinal System Reactions:</content> pancreatitis, jaundice (intrahepatic cholestatic jaundice), increased liver enzymes, anorexia, oral and gastric irritation, cramping, diarrhea, constipation, nausea, vomiting.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Systemic Hypersensitivity Reactions:</content> severe anaphylactic or anaphylactoid reactions (e.g., with shock), systemic vasculitis, interstitial nephritis, necrotizing angiitis.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Central Nervous System Reactions:</content> tinnitus and hearing loss, paresthesias, vertigo, dizziness, headache, blurred vision, xanthopsia.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Hematologic Reactions:</content> aplastic anemia, thrombocytopenia, agranulocytosis, hemolytic anemia, leukopenia, anemia, eosinophilia.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Dermatologic Hypersensitivity Reactions:</content> toxic epidermal necrolysis, Stevens-Johnson Syndrome, erythema multiforme, drug rash with eosinophilia and systemic symptoms, acute generalized exanthematous pustulosis, exfoliative dermatitis, bullous pemphigoid, purpura, photosensitivity, rash.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Cardiovascular Reactions:</content> orthostatic hypotension, increase in cholesterol and triglyceride serum levels.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Administration Site and Skin Reactions:</content> erythema, bruising, edema, infusion site pain.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Other Reactions:</content> glycosuria, muscle spasm, weakness, restlessness, urinary bladder spasm, thrombophlebitis, transient injection site pain following intramuscular injection, fever.</paragraph>
+               </text>
+               <effectiveTime value="20251020"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions during treatment with the Lasix ONYU Infusor were administration site and skin reactions: erythema, bruising, edema, and infusion site pain. (<linkHtml href="#id_link_eaf84712-cede-09ee-e053-2995a90a0c61">6</linkHtml>)</paragraph>
+                        <paragraph/>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact SQ Innovation, at 1-855-452-7496 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf88eec-5edf-b551-e053-2a95a90a3de4">
+               <id root="918b68b8-d108-48b5-a42b-285982169c3e"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20251020"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="underline">Aminoglycoside antibiotics</content>: Increased potential ototoxicity of the antibiotics. Avoid combination. (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Ethacrynic acid</content>: Risk of ototoxicity. Avoid combination. (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Salicylates</content>: Risk of salicylate toxicity. (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Cisplatin and nephrotoxic drugs</content>: Risk of ototoxicity and nephrotoxicity. (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Lithium</content>: Risk of lithium toxicity. (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Renin-angiotensin inhibitors</content>: Increased risk of hypotension and renal failure. (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Adrenergic blocking drugs</content>: Risk of potentiation. (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Drugs undergoing renal tubular secretion</content>: Risk of toxicity potentiation. (<linkHtml href="#id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">7.1</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="id_link_ec6d53cb-00f4-79bc-e053-2995a90adb50">
+                     <id root="6130b55f-3253-423b-a25c-a6a732d60a6e"/>
+                     <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title>7.1 Effects of Furosemide on Other Drugs</title>
+                     <text>
+                        <table width="100%" border="5">
+                           <caption>Table 1: Effects of Furosemide on Other Drugs</caption>
+                           <tbody>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">
+                                    <content styleCode="bold">Drug/Substance Class or Name</content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule">
+                                    <content styleCode="bold">Drug Interaction Effect</content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule">
+                                    <content styleCode="bold">Recommendations</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Aminoglycoside antibiotics</td>
+                                 <td styleCode="Lrule Rrule Toprule">Furosemide may increase the ototoxic potential of aminoglycoside antibiotics, especially in the presence of impaired renal function <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#id_link_ec6b80a0-c23c-fab0-e053-2a95a90adba5">5.3</linkHtml>)]. </content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule">Avoid combination except in life-threatening situations.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Ethacrynic acid</td>
+                                 <td styleCode="Lrule Rrule Toprule">Possibility of ototoxicity <content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#id_link_ec6b80a0-c23c-fab0-e053-2a95a90adba5">5.3</linkHtml>)]. </content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule">Avoid concomitant use with ethacrynic acid.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Salicylates</td>
+                                 <td styleCode="Lrule Rrule Toprule">May experience salicylate toxicity at lower doses because of competitive renal excretory sites.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor for symptoms of salicylate toxicity.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Cisplatin<br/>
+                                    <br/>Cisplatin and nephrotoxic drugs</td>
+                                 <td styleCode="Lrule Rrule Toprule">There is a risk of ototoxic effects if cisplatin and furosemide are given concomitantly <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#id_link_ec6b80a0-c23c-fab0-e053-2a95a90adba5">5.3</linkHtml>)]. </content>
+                                    <br/>
+                                    <br/>Nephrotoxicity</td>
+                                 <td styleCode="Lrule Rrule Toprule">Administer furosemide at lower doses and with positive fluid balance when used to achieve forced diuresis during cisplatin treatment. Monitor renal function.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Paralytic agents</td>
+                                 <td styleCode="Lrule Rrule Toprule">Furosemide has a tendency to antagonize the skeletal muscle relaxing effect of tubocurarine and may potentiate the action of succinylcholine.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor for skeletal muscle effect.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Lithium</td>
+                                 <td styleCode="Lrule Rrule Toprule">Furosemide reduces lithium’s renal clearance and adds a high-risk of lithium toxicity.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Avoid concomitant use with lithium.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Angiotensin converting enzyme inhibitors or angiotensin II receptor blockers</td>
+                                 <td styleCode="Lrule Rrule Toprule">May lead to severe hypotension and deterioration in renal function, including renal failure.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor for changes in blood pressure and renal function and interrupt or reduce the dosage of furosemide, angiotensin converting enzyme inhibitors, or angiotensin receptor blockers if needed.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Antihypertensive drugs</td>
+                                 <td styleCode="Lrule Rrule Toprule">Furosemide may add to or potentiate the therapeutic effect of other antihypertensive drugs.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor for changes in blood pressure and adjust the dose of other antihypertensive drugs if needed.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Adrenergic blocking drugs or peripheral adrenergic blocking drugs</td>
+                                 <td styleCode="Lrule Rrule Toprule">Potentiation occurs.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor for changes in blood pressure and adjust the dose of adrenergic blocking drugs if needed.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Norepinephrine</td>
+                                 <td styleCode="Lrule Rrule Toprule">Furosemide may decrease arterial responsiveness (vasoconstricting effect) to norepinephrine.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor blood pressure (or mean arterial pressure).</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Chloral hydrate</td>
+                                 <td styleCode="Lrule Rrule Toprule">In isolated cases, intravenous administration of furosemide within 24 hours of taking chloral hydrate may lead to flushing, sweating attacks, restlessness, nausea, increase in blood pressure, and tachycardia.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Concomitant use with chloral hydrate is not recommended.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Methotrexate and other drugs undergoing renal tubular secretion</td>
+                                 <td styleCode="Lrule Rrule Toprule">Furosemide may decrease renal elimination of other drugs that undergo tubular secretion. High-dose treatment of furosemide may result in elevated serum levels of these drugs and may potentiate their toxicity.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor serum levels of drugs undergoing renal tubular secretion and adjust the dose if needed.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Cephalosporin</td>
+                                 <td styleCode="Lrule Rrule Toprule">Furosemide can increase the risk of cephalosporin-induced nephrotoxicity even in the setting of minor or transient renal impairment.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor for changes in renal function.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Cyclosporine</td>
+                                 <td styleCode="Lrule Rrule Toprule">Increased risk of gouty arthritis secondary to furosemide-induced hyperuricemia and cyclosporine impairment of renal urate excretion.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor serum urate levels.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Thyroid hormones</td>
+                                 <td styleCode="Lrule Rrule Toprule">High doses (&gt; 80 mg) of furosemide may inhibit the binding of thyroid hormones to carrier proteins and result in transient increase in free thyroid hormones, followed by an overall decrease in total thyroid hormone levels.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor the total thyroid hormone levels.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6d9974-acf8-bd29-e053-2a95a90a7db7">
+                     <id root="72de5d12-8374-4f8e-bbe5-442975becdc6"/>
+                     <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title>7.2 Effect of Other Drugs on Furosemide</title>
+                     <text>
+                        <table width="100%" border="10">
+                           <caption>Table 2: Effect of Other Drugs on Furosemide</caption>
+                           <tbody>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">
+                                    <content styleCode="bold">Drug/Substance Class or Name</content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule">
+                                    <content styleCode="bold">Drug Interaction Effect</content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule">
+                                    <content styleCode="bold">Recommendations</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Phenytoin</td>
+                                 <td styleCode="Lrule Rrule Toprule">
+                                    <paragraph>Phenytoin interferes directly with renal action of furosemide.</paragraph>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor diuretic effects of furosemide and adjust the dose of furosemide if needed.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Methotrexate and other drugs undergoing renal tubular secretion</td>
+                                 <td styleCode="Lrule Rrule Toprule">May reduce the effect of furosemide. High-dose treatment of methotrexate and these other drugs may result in elevated serum levels of furosemide and may potentiate the toxicity of furosemide.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Monitor for enhanced toxicity of furosemide.</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule">Indomethacin</td>
+                                 <td styleCode="Lrule Rrule Toprule">Coadministration of indomethacin may reduce the natriuretic and antihypertensive effects of furosemide in some patients by inhibiting prostaglandin synthesis.<br/>Indomethacin may also affect plasma renin levels, aldosterone excretion, and renin profile evaluation.</td>
+                                 <td styleCode="Lrule Rrule Toprule">Patients receiving both indomethacin and furosemide should be observed closely to determine if the desired diuretic and/or antihypertensive effect of furosemide is achieved.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph/>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf8ae5d-9bdc-62ce-e053-2995a90a0e0b">
+               <id root="303ee076-3154-4d08-bdcb-6138e3493d8c"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20251020"/>
+               <component>
+                  <section ID="id_link_ec6b8c01-e9d3-10d1-e053-2a95a90a7b6e">
+                     <id root="bcd45fe9-e8af-4ae7-9793-0a7d724be3c7"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>Available data from published observational studies, case reports, and post marketing reports, from decades of use, have not demonstrated a drug-associated risk of major birth defects, miscarriage, or other adverse maternal or fetal outcomes with furosemide use during pregnancy. Untreated congestive heart failure can lead to adverse outcomes for the mother and the fetus <content styleCode="italics">(see Clinical Considerations).</content>
+                        </paragraph>
+                        <paragraph>In animal reproduction studies, furosemide has been shown to cause unexplained maternal deaths and abortions in rabbits when administered orally during organogenesis at 4 times a human i.v. dose of 80 mg based on body surface area (BSA) and oral bioavailability corrections, presumably secondary to volume depletion <content styleCode="italics">(see Data).</content>
+                        </paragraph>
+                        <paragraph>The background risk for major birth defects and miscarriage for the indicated populations is unknown. All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in the clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Clinical Considerations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Disease-associated Maternal and/or Embryo/fetal Risk</content>
+                        </paragraph>
+                        <paragraph>Pregnant women with congestive heart failure are at increased risk for pre-term birth. Stroke volume and heart rate increase during pregnancy, increasing cardiac output, especially during the first trimester.</paragraph>
+                        <paragraph>Clinical classification of heart disease may worsen with pregnancy and lead to maternal death and/or stillbirth. Closely monitor pregnant patients for destabilization of their heart failure.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal Data</content>
+                        </paragraph>
+                        <paragraph>The effects of furosemide on embryonic and fetal development and on pregnant dams were studied in mice, rats, and rabbits.</paragraph>
+                        <paragraph>Furosemide caused unexplained maternal deaths and abortions in rabbits at the lowest dose of 25 mg/kg (approximately 4 times the human i.v. dose of 80 mg based on BSA and oral bioavailability corrections). In another study, a dose of 50 mg/kg (approximately 7 times a human i.v. dose of 80 mg based on BSA and oral bioavailability corrections) also caused maternal deaths and abortions when administered to rabbits between Days 12 and 17 of gestation. In a third study, none of the pregnant rabbits survived an oral dose of 100 mg/kg. Data from the above studies indicate fetal lethality that can precede maternal deaths.</paragraph>
+                        <paragraph>The results of the mouse study and one of the three rabbit studies also showed an increased incidence and severity of hydronephrosis (distention of the renal pelvis and, in some cases, of the ureters) in fetuses of treated dams as compared with the incidence of fetuses from the control group.</paragraph>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6b80a0-c240-fab0-e053-2a95a90adba5">
+                     <id root="bbc56658-2514-413b-9ea0-64b9d1a44986"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>The presence of furosemide has been reported in human breast milk. There are no data on the effects on the breastfed infant or the effects on milk production. Doses of furosemide associated with clinically significant diuresis may impair milk production. The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for furosemide and any potential adverse effects on the breastfed infant from furosemide or from the underlying maternal condition.</paragraph>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6b90f6-5f98-d4c3-e053-2a95a90abbe3">
+                     <id root="7cb22810-9728-4bfd-a6e1-e83b939d3287"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>Safety and efficacy for pediatric use have not been established <content styleCode="italics">[see Indications and Usage (<linkHtml href="#id_link_ec7dc1f6-1fb7-4bf1-e053-2a95a90a3b93">1</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6b9d60-c15e-6183-e053-2a95a90a81fd">
+                     <id root="719acc39-047b-4d3f-8f5e-bdd5184ca7f6"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>
+                           <content>Controlled clinical studies did not include sufficient numbers of subjects to determine whether subjects aged 65 and over respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger patients. In general, dose selection for the elderly patients should be cautious, reflecting the greater frequency of decreased hepatic, renal or cardiac function, and of concomitant disease or other drug therapy.</content>
+                        </paragraph>
+                        <paragraph>Lasix ONYU is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug may be greater in patients with impaired renal function. Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection, and it may be useful to monitor renal function <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#id_link_ec6c1181-35ef-3fb9-e053-2a95a90a0d1d">12.3</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L654fe6db-4bd4-46cd-830a-f77b87cb9819">
+                     <id root="9f0f4bfd-f77b-4bc5-99c2-ac8219fc247c"/>
+                     <code code="88828-9" codeSystem="2.16.840.1.113883.6.1" displayName="RENAL IMPAIRMENT SUBSECTION"/>
+                     <title>8.6 Renal Impairment</title>
+                     <text>
+                        <paragraph>Significantly reduced renal function can affect the response to furosemide. Lasix ONYU will deliver only an 80 mg dose of furosemide, and patients with significantly reduced renal function may require additional diuretic therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20251020"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L2be3bcc3-975a-43d7-b896-5b00dbdbd400">
+                     <id root="4aa39f07-eb90-46cf-9a1a-b7f50afe98f7"/>
+                     <code code="88829-7" codeSystem="2.16.840.1.113883.6.1" displayName="HEPATIC IMPAIRMENT SUBSECTION"/>
+                     <title>8.7 Hepatic Impairment</title>
+                     <text>
+                        <paragraph>In patients with hepatic cirrhosis and ascites, sudden alterations of fluid and electrolyte balance may precipitate hepatic encephalopathy and coma. Treat such patients in a setting where clinical status and electrolyte balance can be carefully monitored.</paragraph>
+                     </text>
+                     <effectiveTime value="20251017"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf8bdde-2297-50d6-e053-2995a90add08">
+               <id root="f4e74517-02f6-4351-94e9-8fb40f368f36"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>The principal signs and symptoms of overdose with Lasix ONYU are dehydration, blood volume reduction, hypotension, electrolyte imbalance, hypokalemia, and hypochloremic alkalosis, and are extensions of its diuretic action.</paragraph>
+                  <paragraph>The concentration of furosemide in biological fluids associated with toxicity or death is not known.</paragraph>
+                  <paragraph>Treatment of overdosage is supportive and consists of replacement of excessive fluid and electrolyte losses. Serum electrolytes, carbon dioxide level, and blood pressure should be determined frequently. Adequate drainage must be assured in patients with urinary bladder outlet obstruction (such as prostatic hypertrophy).</paragraph>
+                  <paragraph>Hemodialysis does not accelerate furosemide elimination.</paragraph>
+               </text>
+               <effectiveTime value="20251016"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf8c81b-909e-350c-e053-2a95a90aadda">
+               <id root="f4772d9d-011a-466a-8176-4a7587d2c995"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Lasix ONYU (furosemide injection) for subcutaneous use is a loop diuretic. Chemically, it is 4-chloro-N-furfuryl-5-sulfamoylanthranilic acid.</paragraph>
+                  <paragraph>Furosemide is a white to slightly yellow crystalline powder. It is sparingly soluble in alcohol, freely soluble in dilute alkali solutions, and insoluble in dilute acids. The structural formula is as follows:</paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_eaf8a718-a386-6dd0-e053-2a95a90a9899"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Molecular Formula: C<sub>12</sub>H<sub>11</sub>ClN<sub>2</sub>O<sub>5</sub>S</paragraph>
+                  <paragraph>Molecular Weight: 330.75 g/mol</paragraph>
+                  <paragraph/>
+                  <paragraph>Lasix ONYU is a single-dose prefilled cartridge co-packaged with a single-use Disposable Unit of the Infusor.</paragraph>
+                  <paragraph>The single-dose prefilled cartridge contains 80 mg furosemide in a 2.67 mL sterile, clear to slightly yellow, and nonpyrogenic aqueous solution. The pH of Lasix ONYU, 7.5, differs from that of Furosemide Injection, USP. Each 1 mL dose of Lasix ONYU contains 30 mg of furosemide and the following inactive ingredients: betadex sulfobutyl ether sodium (300 mg), hydrochloric acid for pH adjustment if needed, sodium hydroxide for pH adjustment if needed, tromethamine (3 mg), and water for injection (q.s.).</paragraph>
+                  <paragraph>Each single-dose of Lasix ONYU is administered via an electromechanical (battery powered, microprocessor controlled) Infusor, pre-programmed to deliver 80 mg of Lasix ONYU over 5-hours using a bi-phasic delivery profile. The Infusor consists of a custom Reusable Unit which can be used for close to 50 treatments. The Reusable Unit is used with a Disposable Unit and single-dose prefilled cartridge which are provided together for the user as a Lasix ONYU Kit. The Disposable Unit must be discarded after use.</paragraph>
+               </text>
+               <effectiveTime value="20251017"/>
+               <component>
+                  <observationMedia ID="img_eaf8a718-a386-6dd0-e053-2a95a90a9899">
+                     <text>image-Structure</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="structure.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf8e628-a0fe-06f8-e053-2995a90a3ab2">
+               <id root="bfd82973-5b8a-420e-b9ba-71ec141d53b5"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <text/>
+               <effectiveTime value="20251016"/>
+               <component>
+                  <section ID="id_link_ec6bdf5f-68d7-ff3c-e053-2a95a90a30dc">
+                     <id root="2314e019-80dd-4709-a825-6ce1cd187426"/>
+                     <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Furosemide primarily inhibits the reabsorption of sodium and chloride in the proximal and distal tubules and in the loop of Henle. The high degree of diuresis is largely due to the unique site of action. The action on the distal tubule is independent of any inhibitory effect on carbonic anhydrase and aldosterone.</paragraph>
+                     </text>
+                     <effectiveTime value="20251016"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6be2fa-8bf0-1857-e053-2995a90a7e74">
+                     <id root="aad92059-9c74-4e1b-93f4-62106021f97f"/>
+                     <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>In patients with NYHA Class II and Class III heart failure, subcutaneous administration of Lasix ONYU (30 mg furosemide over the first hour followed by 12.5 mg per hour for the subsequent 4 hours, total 80 mg furosemide within 5 hours) produced similar diuresis and natriuresis to intravenous administration (single 80 mg bolus) at 8- and 24-hour post-dose. The duration of diuretic effect with Lasix ONYU is at least 8 hours after initiation of dosing.</paragraph>
+                     </text>
+                     <effectiveTime value="20251016"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_ec6c1181-35ef-3fb9-e053-2a95a90a0d1d">
+                     <id root="536a74c6-d0c5-4da7-b96e-f6da087c13db"/>
+                     <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Absorption</content>
+                        </paragraph>
+                        <paragraph>In patients with NYHA Class II and Class III heart failure, subcutaneous infusion of Lasix ONYU (30 mg furosemide over the first hour followed by 12.5 mg per hour for the subsequent 4 hours, 80 mg furosemide total), the bioavailability was 112% (90% CI: 104, 120%), with a median Tmax of 5 hours relative to 80 mg intravenous furosemide (single 80 mg bolus). The pharmacokinetic parameters of Lasix ONYU are presented in Table 3 below:</paragraph>
+                        <table width="80%">
+                           <caption>Table 3: Pharmacokinetic Data of Lasix ONYU Following Subcutaneous Infusion (n = 18)</caption>
+                           <colgroup>
+                              <col width="40%" align="left"/>
+                              <col width="15%" align="center"/>
+                              <col width="15%" align="center"/>
+                              <col width="15%" align="center"/>
+                              <col width="15%" align="center"/>
+                           </colgroup>
+                           <tbody>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule" align="left">
+                                    <content styleCode="bold">Dose</content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">
+                                    <paragraph>
+                                       <content styleCode="bold">C <sub>max</sub>
+                                       </content>
+                                    </paragraph>
+                                    <content styleCode="bold">(ng/mL)<footnote ID="fn-01">Mean ± SD</footnote>
+                                    </content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">
+                                    <content styleCode="bold">AUC <sub>t</sub> (ng×hr/mL)<footnoteRef IDREF="fn-01"/>
+                                    </content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">
+                                    <content styleCode="bold">T<sub>1/2</sub> (hr)<footnoteRef IDREF="fn-01"/>
+                                    </content>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">
+                                    <paragraph>
+                                       <content styleCode="bold">AUC <sub>∞</sub>
+                                       </content>
+                                    </paragraph>
+                                    <content styleCode="bold">(ng×hr/mL)<footnoteRef IDREF="fn-01"/>
+                                    </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule" align="left">Lasix ONYU: 30 mg subcutaneously infused over the first hour followed by 12.5 mg per hour for the subsequent 4 hours (total dose: 80 mg furosemide)</td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">
+                                    <paragraph>2010 ± 391</paragraph>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">13000 ± 2510</td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">
+                                    <paragraph>3.7 ± 0.7</paragraph>
+                                 </td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">13100 ± 2550</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule Toprule" align="left">Furosemide administered as single 80 mg bolus dose intravenously</td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">13800 ± 4100</td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">11900 ± 3380</td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">3.7 ± 1.3</td>
+                                 <td styleCode="Lrule Rrule Toprule" align="center">12000 ± 3400</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>The terminal half-life of furosemide is approximately 2 hours.</paragraph>
+                        <paragraph>The impact of subcutaneous edema at the administration site of Lasix ONYU on drug absorption is unknown.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>
+                        </paragraph>
+                        <paragraph>Furosemide is extensively bound to plasma proteins, mainly to albumin. Plasma concentrations ranging from 1 mcg per mL to 400 mcg per mL are 91% to 99% bound in healthy individuals. The unbound fraction averages 2.3% to 4.1% at therapeutic concentrations.<br/>Furosemide binding to albumin may be reduced in elderly patients.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Elimination</content>
+                        </paragraph>
+                        <paragraph>Significantly more furosemide is excreted in urine following the intravenous injection than after the tablet or oral solution.</paragraph>
+                        <paragraph>Furosemide is predominantly excreted unchanged in the urine.</paragraph>
+                        <paragraph>The renal clearance of furosemide after intravenous administration in older healthy male subjects (60 to 70 years of age) is significantly less than in younger healthy male subjects (20 to 35 years of age).</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Metabolism</content>
+                        </paragraph>
+                        <paragraph>Furosemide glucuronide is the only or at least the major biotransformation product of furosemide in humans.</paragraph>
+                     </text>
+                     <effectiveTime value="20251016"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eb00d0ed-5574-45ba-e053-2a95a90adeb1">
+               <id root="c9b9c5d7-62ce-424d-b335-4990986c0492"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <text/>
+               <effectiveTime value="20251016"/>
+               <component>
+                  <section ID="id_link_ec6bb71d-f8f8-3051-e053-2995a90a383d">
+                     <id root="c16c2263-a043-4fc9-bbfb-086878471c8a"/>
+                     <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Carcinogenesis</content>
+                        </paragraph>
+                        <paragraph>Furosemide was tested for carcinogenicity by oral administration in one strain of mice and one strain of rats. A small but significantly increased incidence of mammary gland carcinomas occurred in female mice at a dose approximately 8 times a human i.v. dose of 80 mg based on BSA and oral bioavailability corrections. There were marginal increases in uncommon tumors in male rats at a dose of 15 mg per kg (slightly greater than the maximum human dose) but not at 30 mg per kg.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Mutagenesis</content>
+                        </paragraph>
+                        <paragraph>Furosemide was devoid of mutagenic activity in various strains of Salmonella typhimurium when tested in the presence or absence of an in vitro metabolic activation system, and questionably positive for gene mutation in mouse lymphoma cells in the presence of rat liver S9 at the highest dose tested. Furosemide did not induce sister chromatid exchange in human cells in vitro, but other studies on chromosomal aberrations in human cells in vitro gave conflicting results. In Chinese hamster cells it induced chromosomal damage but was questionably positive for sister chromatid exchange. Studies on the induction by furosemide of chromosomal aberrations in mice were inconclusive. The urine of rats treated with this drug did not induce gene conversion in Saccharomyces cerevisiae.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Impairment of Fertility</content>
+                        </paragraph>
+                        <paragraph>Furosemide produced no impairment of fertility in male or female rats, at 100 mg per kg per day (the maximum effective diuretic dose in the rat), approximately 7 times a human i.v. dose of 80 mg based on BSA and oral bioavailability corrections.</paragraph>
+                     </text>
+                     <effectiveTime value="20251016"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf8f5fc-e344-4268-e053-2995a90acdd5">
+               <id root="fd8a8df6-d4c9-4355-b1aa-84c41485c60a"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>Lasix ONYU injection is a sterile, clear to slightly yellow, non-pyrogenic liquid supplied in a single-dose prefilled cartridge for subcutaneous infusion co-packaged with a Disposable Unit. The Infusor with single-dose prefilled cartridge is designed to deliver 80 mg of Lasix ONYU in 2.67 mL solution over 5 hours.</paragraph>
+                  <table border="1" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td styleCode="Lrule Rrule Toprule" valign="top">
+                              <paragraph>Lasix ONYU Kit: Carton containing one 80 mg/2.67 mL single-dose prefilled cartridge co-packaged with a Disposable Unit and two alcohol pads.</paragraph>
+                           </td>
+                           <td styleCode="Lrule Rrule Toprule" valign="top">
+                              <paragraph>NDC 81137‐001‐15</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Rrule Toprule" valign="top">
+                              <paragraph>Starter Kit: Carton containing three Lasix ONYU Kits co-packaged with one Reusable Unit and one wall charger.</paragraph>
+                           </td>
+                           <td styleCode="Lrule Rrule Toprule" valign="top">
+                              <paragraph>NDC 81137‐001‐35</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>Store between 20°C and 25°C (68°F and 77°F); excursions permitted between 15°C and 30°C (59°F and 86°F) [See USP Controlled Room Temperature]. Do not refrigerate or freeze.</paragraph>
+                  <paragraph>Protect Lasix ONYU from light. Do not remove the prefilled cartridge from carton until it is ready for use. Do not use if the solution is discolored or cloudy. Protect the Infusor from water.</paragraph>
+               </text>
+               <effectiveTime value="20251016"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_eaf8fe00-528c-6dd2-e053-2a95a90a221a">
+               <id root="3a774fdc-9c8c-4a3d-b7a9-c7bfda83d2fc"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>Advise the patient and/or caregiver to read the FDA-approved patient labeling <content styleCode="italics">[Instructions for Use]</content>.</paragraph>
+                  <paragraph>Advise the patient that Lasix ONYU should not come into contact with water or other fluids. Patients should check the device for alarms to ensure a complete dose is administered <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="https://validator.pragmaticdata.com/validator-lite/spl-form/form.html#L99dc335d-3148-4dfe-ad50-5663005f9046">5.5</linkHtml>)]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Fluid, Electrolyte, and Metabolic Abnormalities</content>
+                  </paragraph>
+                  <paragraph>Advise patients that they may experience symptoms from excessive fluid and/or electrolyte losses. The postural hypotension that sometimes occurs can usually be managed by getting up slowly. Potassium supplements and/or dietary measures may be needed to control or avoid hypokalemia <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#id_link_ec6b7937-74d6-d494-e053-2a95a90a004b">5.1</linkHtml>)]. </content>
+                  </paragraph>
+                  <paragraph>Advise patients that furosemide may increase blood glucose levels and thereby affect urine glucose tests <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#id_link_ec6b7937-74d6-d494-e053-2a95a90a004b">5.1</linkHtml>)]. </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Photosensitivity</content>
+                  </paragraph>
+                  <paragraph>The skin of some patients may be more sensitive to the effects of sunlight while taking furosemide <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#id_link_eaf84712-cede-09ee-e053-2995a90a0c61">6</linkHtml>)].</content>
+                  </paragraph>
+                  <paragraph>
+                     <content>For more information about Lasix® ONYU, go to www.Lasix-ONYU.com or call 1-855-452-7496 (1-855-4LASIX6).</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Ldbba33e1-6b16-4084-ba49-fad2d4a13c17"/>
+                  </paragraph>
+                  <paragraph>Lasix<sup>®</sup> ONYU (furosemide injection 80 mg/2.67 mL) for subcutaneous use</paragraph>
+                  <paragraph>Manufactured for:<br/>SQ Innovation, Inc.<br/>20 Burlington Mall Road, Suite 220<br/>Burlington, MA 01803<br/>USA</paragraph>
+                  <paragraph>Patent Protected<br/>©2023</paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20251020"/>
+               <component>
+                  <observationMedia ID="Ldbba33e1-6b16-4084-ba49-fad2d4a13c17">
+                     <text>image-logo</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="logo.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L9b8ee74d-1975-4401-bfdc-8c00c9180f54">
+               <id root="a69b934d-5346-4072-8ebd-1c431fca7e79"/>
+               <code code="59845-8" codeSystem="2.16.840.1.113883.6.1" displayName="INSTRUCTIONS FOR USE SECTION"/>
+               <title>SQ Innovation<br/>Instructions for Use<br/>Lasix<sup>®</sup> ONYU (lay-six on-yoo) (furosemide injection) 80 mg/2.67 mL (30 mg/mL) <br/>for Subcutaneous Use with Infusor</title>
+               <text>
+                  <paragraph>These Instructions for Use contains information on how to use Lasix ONYU with the Infusor.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lb6bd0530-18e3-4787-bbcf-4ee09a834d02"/>
+                  </paragraph>
+                  <paragraph>Contact Information:<br/>SQ Innovation, Inc.<br/>Burlington, MA 01803, USA<br/>Phone: 1-855-452-7496 (1-855-4LASIX6)<br/>www.Lasix-ONYU.com</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">1: Important Information You Need to Know </content>
+                  </paragraph>
+                  <paragraph>Before Using the Lasix ONYU Infusor</paragraph>
+                  <list listType="unordered">
+                     <item>Keep the Lasix ONYU Infusor out of sight and reach of children.</item>
+                     <item>The Lasix ONYU treatment is for adult patients only as prescribed by a healthcare provider.</item>
+                     <item>
+                        <content styleCode="bold">For subcutaneous (under the skin) use only.</content> The Lasix ONYU Infusor delivers the medicine just under the skin.</item>
+                     <item>
+                        <content styleCode="bold">Use on the stomach only.</content> Do not use on any other area of the body.</item>
+                     <item>The Lasix ONYU Infusor is intended to be used by a single person and <content styleCode="bold">should not be shared</content>
+                        <content styleCode="bold">.</content>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Do not use</content> the Prefilled Cartridge <content styleCode="bold">if the solution is cloudy, yellow-brown or contains floating particles.</content> It should be clear or light yellow. If it is not clear or light yellow, contact your healthcare provider to get a new one.</item>
+                     <item>
+                        <content styleCode="bold">Do not use</content> any part of the Lasix ONYU Infusor <content styleCode="bold">if it has expired</content>
+                        <content styleCode="bold">.</content> If it is expired, contact your healthcare provider to get a new one.</item>
+                     <item>
+                        <content styleCode="bold">Do not use</content> any part of the Lasix ONYU Infusor (Prefilled Cartridge, Disposable Unit, Reusable Unit or Charger) <content styleCode="bold">if it appears to be broken or damaged</content> or does not work right. Use a new one or call SQ Innovation at 1-855-452-7496.</item>
+                     <item>
+                        <content styleCode="bold">Do not use</content> a Disposable Unit if it was dropped as it may be damaged or contaminated. Use a new one.</item>
+                     <item>
+                        <content styleCode="bold">Do not use</content> the Lasix ONYU Infusor <content styleCode="bold">if you can see the needle</content>
+                        <content styleCode="bold">.</content> Do not touch the needle or put the Lasix ONYU Infusor on your stomach, as you may get an injury. Go to <content styleCode="bold">Troubleshooting: You Can See the Needle</content> for instructions on what to do.</item>
+                     <item>
+                        <content styleCode="bold">Do not use more than 1 Lasix ONYU Infusor at a time.</content>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Do not do</content> more than 2 infusions in a 24-hour period.</item>
+                     <item>
+                        <content styleCode="bold">Do not use a Disposable Unit or Prefilled Cartridge more than 1 time.</content>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L7491db62-2ebc-4482-b57f-bf9fc7715ea2"/>
+                  </paragraph>
+                  <paragraph>Before Starting a Treatment</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <content styleCode="bold">Talk with your healthcare provider before using</content> the Lasix ONYU Infusor. <br/>
+                        <content styleCode="bold">Do not</content> start an infusion unless directed to do so by your healthcare provider.</item>
+                     <item>
+                        <content styleCode="bold">A healthcare provider should train you</content> before using the Lasix ONYU Infusor by yourself.</item>
+                     <item>
+                        <content styleCode="bold">Read the step-by-step instructions</content> (go to <content styleCode="bold">Chapter 2: </content>
+                        <content styleCode="bold">How to Use the Lasix ONYU Infusor) </content>
+                        <content styleCode="bold">before using</content> the Lasix ONYU Infusor by yourself.</item>
+                     <item>You may watch the optional training video.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lddcfbbfb-aee9-408f-9386-9a1d575bffb0"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>During a Treatment</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <content styleCode="bold">Start the infusion within 7 hours</content> of preparing the Lasix ONYU Infusor.</item>
+                     <item>The infusion will last about 5 hours. During this time, you should limit your activities so that your bending movements are limited. Wearing the Lasix ONYU Infusor while riding in a car or airplane is not recommended. Be sure you have access to a bathroom after starting the infusion. You should urinate (pee) a lot and will need to make frequent bathroom visits.</item>
+                     <item>Frequent urination is to be expected during use of the Lasix ONYU Infusor. <content styleCode="bold">Be sure you have access to a bathroom for up to 8 hours</content> after starting the infusion.</item>
+                     <item>
+                        <content styleCode="bold">Call your healthcare provider if you did not urinate a lot</content> (at least 2 times during the 5-hour infusion).</item>
+                     <item>
+                        <content styleCode="bold">Do not</content> apply lotions, oils, or ointments to the stomach area where you will apply the Lasix ONYU Infusor.</item>
+                     <item>
+                        <content styleCode="bold">Do not get the Lasix ONYU Infusor wet.</content> Doing so may damage the Lasix ONYU Infusor. Do not shower, bathe, or swim while wearing the Lasix ONYU Infusor.</item>
+                     <item>
+                        <content styleCode="bold">Do not remove the Lasix ONYU Infusor</content> from the stomach until the infusion is done. Removing the Lasix ONYU Infusor before stopping it will expose the needle, and may injure you or others. Go to <content styleCode="bold">How to Stop the Lasix ONYU Infusor Early</content> if you need to stop the infusion early.</item>
+                     <item>
+                        <content styleCode="bold">Do not</content> use the Lasix ONYU Infusor in or around a Magnetic Resonance Imaging (MRI) machine.</item>
+                     <item>
+                        <content styleCode="bold">Do not</content> use the Lasix ONYU Infusor within 12 inches of mobile phones, tablets, computers, or wireless accessories (for example: TV remote control, Bluetooth computer keyboard or mouse) during the 5-hour infusion. It may cause the Lasix ONYU Infusor to break.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20251020"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Ld683ef4c-c6b4-43ad-8ef0-4d94c5d51ef0">
+               <id root="4e3a3b66-dcf0-4b7d-9b4d-3f2e4196fbd3"/>
+               <code code="59845-8" codeSystem="2.16.840.1.113883.6.1" displayName="INSTRUCTIONS FOR USE SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">2: How to Use the Lasix ONYU Infusor</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Inside the Box</content>
+                  </paragraph>
+                  <paragraph>Contents of the Lasix ONYU Kit</paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L550b9152-cbbb-4ee7-8ed2-f61e178a06fc"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Note:</content> The Single-Dose Prefilled Cartridge is referred to as Prefilled Cartridge throughout this Instructions for Use.</paragraph>
+                  <paragraph/>
+                  <paragraph>Contents of the Reusable Unit and Charger Box</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L369daba8-c5dc-437a-ad01-70de57a67b84"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Contents of the Lasix ONYU Starter Kit</paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lcfc88656-6b45-4af5-9f49-c083f189ceca"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Supplies not included:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Cotton ball and small adhesive bandage (if needed) for <content styleCode="bold">Step 21</content> in <content styleCode="bold">End the Infusion</content>
+                        <content styleCode="bold">.</content>
+                     </item>
+                     <item>You will also need a sharps disposal container for <content styleCode="bold">Step 25 in Throw Away (Disposal), Cleaning, and Storage</content>
+                        <content styleCode="bold">.</content> You may obtain a free sharps disposal container from SQ Innovation. Visit www.Lasix-ONYU.com/sharps/ or call 1-855-452-7496 to have a container mailed<br/>to you at no charge.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Get to Know the Lasix ONYU Infusor Parts</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <renderMultiMedia referencedObject="L64f5efe2-2add-4634-8b90-943b5dd1bcdd"/>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Get Ready for the Infusion</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L7491db62-2ebc-4482-b57f-bf9fc7715ea2"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not start an infusion unless directed to do so by your healthcare provider.</content>
+                  </paragraph>
+                  <paragraph>Step 1</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Gather</content> the white Reusable Unit, Charger, and 1 Lasix ONYU Kit.</paragraph>
+                  <paragraph>Only use the Charger that has been provided.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use if</content> the Disposable Unit was dropped or if any parts appear to be broken or <content styleCode="bold">damaged</content>
+                     <content styleCode="bold">.</content> Use a new one.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L00138580-0b63-4d96-adb6-89788ee98e9b"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 2</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Charge the Reusable Unit.</content> Plug the Charger into the back of the white Reusable Unit and a power outlet. Check the Battery Light:</paragraph>
+                  <list listType="unordered">
+                     <item>When the <content styleCode="bold">Battery Light turns solid blue, unplug the charger</content> from the Reusable Unit. The Reusable Unit is ready to use.</item>
+                     <item>If the <content styleCode="bold">Battery Light</content> is <content styleCode="bold">flashing blue, wait</content> for charging to finish.</item>
+                     <item>If any lights are <content styleCode="bold">red, unplug the Charger</content> and plug it back in. If the lights are still red, go to <content styleCode="bold">Troubleshooting: Lights and Tones Table</content> for instructions.<br/>Always charge the Reusable Unit before each infusion.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Ld794e7a4-d869-4add-9670-fbddf2953ee7"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Prepare the Medicine</content>
+                  </paragraph>
+                  <paragraph>Step 3<br/>
+                     <content styleCode="bold">Wash your hands</content> with soap and water.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L9973ed1e-b389-4ff4-9616-ab906096105f"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 4</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Check the expiration</content> date on the Lasix ONYU Kit.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use if</content> the expiration date has <content styleCode="bold">passed</content>
+                     <content styleCode="bold">.</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L102376bf-aea7-445e-a6ee-e5e63cd8396c"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 5</paragraph>
+                  <paragraph>Gather all supplies needed. On a clean, flat, well-lit work surface,<content styleCode="bold"> open 1 Lasix ONYU Kit</content> and remove the contents.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not</content> open the contents until you are ready to start the infusion.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use the Disposable Unit if</content> the sealed <content styleCode="bold">packaging</content> appears to be <content styleCode="bold">damaged.</content> Use a new one.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use the Disposable Unit if it was dropped or</content> if any parts appear to be <content styleCode="bold">broken.</content> Use a new one.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L49547e7a-8b8f-442c-9266-77692b51d964"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 6</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Remove Prefilled Cartridge, Disposable Unit, and 2 alcohol pads from packaging:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Remove the Prefilled Cartridge from its box and sealed tray.</item>
+                     <item>Remove the Disposable Unit from its sealed package.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Do not remove the paper liner</content> from the back of the Disposable Unit.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L6ba7ecd5-08e7-42b2-9dbf-2e753a4d0a00"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 7</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Check the Prefilled Cartridge</content> appearance.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use</content> the Prefilled Cartridge<content styleCode="bold"> if the medicine is cloudy</content>
+                     <content styleCode="bold">,</content> appears <content styleCode="bold">yellow-brown</content>
+                     <content styleCode="bold">,</content> or you see floating <content styleCode="bold">particles.</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L3889d5ab-17d9-4a77-a17a-56fbdd5d927e"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 8<br/>
+                     <content styleCode="bold">Wipe the silver top of the Prefilled Cartridge</content> with an alcohol pad.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lf55a5d90-de90-43f4-af67-d84e7413a406"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 9</paragraph>
+                  <paragraph>Push the<content styleCode="bold"> Prefilled Cartridge</content> into the green Disposable Unit with the silver top inserted first.</paragraph>
+                  <paragraph>﻿The Prefilled Cartridge is fully inserted when the bottom of the Prefilled Cartridge is at the tip<br/>of the arrow on the Disposable Unit.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L79b3cfdd-fe91-43e0-a231-8fe7449239bf"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Prepare the Lasix ONYU Infusor</content>
+                  </paragraph>
+                  <paragraph>Step 10</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Check the following:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>The Reusable Unit Battery Light is solid blue, and</item>
+                     <item>The Charger is disconnected from the Reusable Unit.<br/>
+                        <content styleCode="bold">Slide together</content> the white Reusable Unit and green Disposable Unit together until the Status Light on the Reusable Unit turns on.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L0f271c0e-380e-4220-97d7-1be5b6cf19cb"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 11</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Check</content> the Status Light.</paragraph>
+                  <list listType="unordered">
+                     <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">blue and flashing fast, and you hear the OK Tone (1 long beep), continue</content> to <content styleCode="bold">Step</content>
+                        <content styleCode="bold"> 12.</content> The Lasix ONYU Infusor is ready to start your infusion.</item>
+                     <item>The Lasix ONYU Infusor will remain ready to start infusion for 7 hours.</item>
+                     <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">flashing red and you hear the Alarm Tone (2 short beeps), do not use</content> the Lasix ONYU Infusor. Go to <content styleCode="bold">Troubleshooting: The Status Light is Flashing Red</content> for instructions.</item>
+                     <item>If the <content styleCode="bold">Battery Light</content> is <content styleCode="bold">solid red, do not use</content> the Lasix ONYU Infusor. Go to <content styleCode="bold">Troubleshooting: Checking the Reusable Unit Battery</content> for instructions.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L7b1aa1e6-61d4-4fda-9129-fcf7b4075b5b"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Prepare the Application Site</content>
+                  </paragraph>
+                  <paragraph>Step 12</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Choose a site</content> on the stomach, above the beltline, to the left or right of the belly button.<br/>Trim excessive hair at the site. This will help the Lasix ONYU Infusor stick to the skin.<br/>Alternate (rotate) sites between left and right sides of the stomach with each infusion.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not</content> choose a site where:</paragraph>
+                  <list listType="unordered">
+                     <item>the skin is irritated, broken, tender, red, bruised, or hard,</item>
+                     <item>the skin is wet or sweaty,</item>
+                     <item>there are folds in the skin when standing up straight, or</item>
+                     <item>belts, waistbands, or tight clothing may rub against or move the Lasix ONYU Infusor.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Le15d373c-8d5f-4cfd-b651-12884686bb5d"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 13</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Wipe the site with</content> an <content styleCode="bold">alcohol</content> pad.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Let dry</content> for at least 10 seconds.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="La2ae1e54-91ba-4e61-922f-acf08879385f"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Attach the Lasix ONYU Infusor</content>
+                  </paragraph>
+                  <paragraph>Step 14</paragraph>
+                  <paragraph>Hold the blue tab with one hand and use the other hand to <content styleCode="bold">peel off the paper liner</content> from the adhesive on the back of the Lasix ONYU Infusor.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Leave the sticky adhesive on</content> the Lasix ONYU Infusor. Only remove the paper liner.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not</content> touch the sticky adhesive with your fingers or let it touch any surfaces before sticking the Lasix ONYU Infusor to your stomach.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Ldc3147f7-e54f-4279-b287-5774a18edc92"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 15</paragraph>
+                  <paragraph>While standing up straight, press the Lasix ONYU Infusor onto the site on your stomach you wiped with the alcohol pad.</paragraph>
+                  <paragraph>Make sure the <content styleCode="bold">Status Light</content> and the<content styleCode="bold"> Start/Stop Button are facing up</content> in a horizontal position as shown, so you can see them when the Lasix ONYU Infusor is on your stomach.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L775128cf-9a96-4488-bfa6-999605253ade"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 16</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Rub the edges</content> of the adhesive with a finger to get the Lasix ONYU Infusor to stick well.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Le28c9774-dad5-4978-8b64-38bd4747b1e7"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Start the Infusion</content>
+                  </paragraph>
+                  <paragraph>Start your infusion within 7 hours of connecting the Reusable Unit and Disposable Unit. If more than 7 hours pass without starting your infusion, the Lasix ONYU Infusor will time out and the infusion cannot be delivered (go to <content styleCode="bold">Troubleshooting: The Status Light is Flashing Red).</content>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 17</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Press and hold</content> the <content styleCode="bold">Start/Stop </content>
+                     <content styleCode="bold">Button</content> until you <content styleCode="bold">hear the motor</content> and <content styleCode="bold">see the blue Status Light</content> change to <content styleCode="bold">flashing slow</content>.</paragraph>
+                  <paragraph>The needle will automatically insert into your skin after the Start/Stop Button is pressed. You may feel a slight pinch.</paragraph>
+                  <paragraph>You <content styleCode="bold">will hear the motor start and stop often</content> during your infusion. The motor runs for a few seconds at a time then pauses for several minutes.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L33e87e61-4cfe-44f6-bdc4-df1d484dec49"/>
+                  </paragraph>
+                  <paragraph>Step 18</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Check</content> the Status Light.</paragraph>
+                  <list listType="unordered">
+                     <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">blue</content> and <content styleCode="bold">flashing slow, and you hear the OK Tone (1 long beep),</content> the infusion has <content styleCode="bold">started</content>. You will hear the motor running.</item>
+                     <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">flashing red, and you hear the Alarm Tone (2 short beeps),</content> the infusion <content styleCode="bold">did not start</content>. Go to <content styleCode="bold">Troubleshooting: The Status Light is Flashing Red</content> for instructions.</item>
+                     <item>If the <content styleCode="bold">Status Light</content> is<content styleCode="bold"> blue and flashing fast, and you hear the OK Tone (1 long beep),</content> the infusion <content styleCode="bold">did not start</content>. Repeat <content styleCode="bold">Step 17</content>
+                        <content styleCode="bold">.</content>
+                     </item>
+                     <item>For additional assistance go to <content styleCode="bold">Troubleshooting: Lights and Tones Table</content> for instructions or call 1-855-452-7496.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lc1e701f9-d181-410e-a88a-5e80d3885440"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">During the Infusion</content>
+                  </paragraph>
+                  <paragraph>Step 19</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Wait 5 hours</content> for the Lasix ONYU Infusor to deliver the full infusion.</paragraph>
+                  <paragraph>You will see the blue Status Light flashing slow and sometimes hear the motor running.</paragraph>
+                  <paragraph>Check the Lasix ONYU Infusor every now and then to make sure it is working properly.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not remove the Lasix ONYU Infusor</content> from your stomach until the infusion is done. The infusion is complete when the Status Light is solid blue and you hear the OK Tone (1 long beep). Go to <content styleCode="bold">Troubleshooting: </content>
+                     <content styleCode="bold">How to Stop the Infusor Early</content> if you need to stop the infusion early.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L9e41c61f-6b23-418e-87de-db2ffe7c28c3"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">End the Infusion</content>
+                  </paragraph>
+                  <paragraph>Step 20</paragraph>
+                  <paragraph>After 5 hours, <content styleCode="bold">check</content> the Status Light.</paragraph>
+                  <list listType="unordered">
+                     <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">solid blue, and you hear the OK Tone (1 long beep),</content> the infusion is <content styleCode="bold">done</content>
+                        <content styleCode="bold">.</content>
+                     </item>
+                     <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">flashing red, and you hear the Alarm Tone (2 short beeps),</content> an <content styleCode="bold">error</content> happened. Go to <content styleCode="bold">Troubleshooting: The Status Light is Flashing Red</content>.</item>
+                     <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">blue</content> and <content styleCode="bold">flashing slow, and you hear the OK Tone (1 long beep),</content> the infusion is <content styleCode="bold">not done yet</content>. Continue to wait.</item>
+                  </list>
+                  <paragraph>The <content styleCode="bold">needle automatically pulls in (retracts)</content> when the infusion is done. You may feel a slight pinch.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L2d4be9a3-324a-4552-8a53-7f1136826299"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 21</paragraph>
+                  <paragraph>When the infusion is done, <content styleCode="bold">remove the Lasix ONYU Infusor</content> from your stomach. Peel the Lasix ONYU Infusor off the skin by holding down the skin and pulling the blue tab away from the stomach.</paragraph>
+                  <paragraph>You might have some discomfort after you remove the Lasix ONYU Infusor. This discomfort should quickly go away, but some redness of the skin may remain. If there is any bleeding, pat with a small cotton ball or apply a small adhesive bandage over the site.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lf6edbb1f-3b70-4911-9e29-26330f7ef1df"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Confirm the Infusion Worked</content>
+                  </paragraph>
+                  <paragraph>Step 22</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Look in the window</content> on the back of the Infusor to check whether all the medicine was delivered.</paragraph>
+                  <list listType="unordered">
+                     <item>If the middle of the window is all <content styleCode="bold">gray </content>(whole gray stopper is visible with very little or no liquid), all of the medicine was delivered.<br/>If you <content styleCode="bold">see anything else</content> (like a lot of liquid, a large bubble in the liquid, no gray stopper, or only part of the gray stopper), some of the medicine was not delivered. <content styleCode="bold">Call your healthcare provider right away.</content>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L8058a06f-86ba-4346-9d2f-f7f0f5b6e58d"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 23</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Confirm</content> the medicine worked.</paragraph>
+                  <list listType="unordered">
+                     <item>If you <content styleCode="bold">urinate a lot</content> (at least 2 times during the 5-hour infusion), the<content styleCode="bold"> medicine worked.</content>
+                     </item>
+                     <item>If you <content styleCode="bold">urinate less than 2 times</content> (during the 5-hour infusion), the medicine may not have worked. <content styleCode="bold">Call your healthcare provider right away.</content>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L420a2042-904f-4a95-83a0-e16ba838537c"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Throw Away (Disposal), Cleaning, and Storage</content>
+                  </paragraph>
+                  <paragraph>Step 24</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pull apart</content> the green Disposable Unit and white Reusable Unit.</paragraph>
+                  <paragraph>The Reusable Unit automatically turns off when the two parts are separated.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L58ec2157-e2d3-489f-a79f-eba33248867a"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Step 25</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not save and re-use</content> the green Disposable Unit or Prefilled Cartridge. <content styleCode="bold">They are for one-time use only.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Throw away</content> the green <content styleCode="bold">Disposable Unit into</content> an FDA-cleared <content styleCode="bold">sharps disposal container.</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lc99272b5-0412-410a-9a44-db325d3ab6e0"/>
+                  </paragraph>
+                  <paragraph>You may obtain a free sharps disposal container from SQ Innovation. Visit www.Lasix-ONYU.com/sharps/ or call 1-855-452-7496 to have a container mailed to you at no charge.</paragraph>
+                  <paragraph>Alternatively, if you do not have an FDA-cleared sharps disposal container, you may use a household container that is:</paragraph>
+                  <list listType="unordered">
+                     <item>made of heavy-duty plastic,</item>
+                     <item>can be closed with a tight fitting, puncture-resistant lid, without sharps being able to come out,</item>
+                     <item>upright and stable during use,</item>
+                     <item>leak-resistant, and</item>
+                     <item>properly labeled to warn of hazardous waste inside the container.</item>
+                  </list>
+                  <paragraph/>
+                  <paragraph>When your Sharps container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you throw away used needles and syringes. For more information about safe sharps disposal and for specific information about sharps disposal in the state that you live in, go to the FDAs website at: </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">https://www.fda.gov/medical-devices/safely-using-sharps-needles-and-syringes-home-work-and-travel/best-way-get-rid-used-needles-and-other-sharps</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not</content> dispose of your used sharps disposal container in your household trash unless your community guidelines permit this.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not</content> recycle the green Disposable Unit and used sharps disposal container or throw them away into household trash.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Important: Always keep the sharps disposal container out of the reach of children.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Scan the code below with your phone for a sharps disposal location near you or call Safe Needle Disposal at 1-800-643-1643.</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Le936ca60-a599-4de1-a7e3-a7e403c8257c"/>
+                  </paragraph>
+                  <paragraph>Step 26</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Wipe the</content> white <content styleCode="bold">Reusable Unit with</content> a clean, <content styleCode="bold">water-damp cloth</content> to remove visible dirt right after use. Let dry completely before storing.</paragraph>
+                  <paragraph>If needed, a mild detergent, like dish soap, may be added to the damp cleaning cloth.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use harsh cleaners</content> that contain bleach, alcohol, ammonia, or other solvents. These cleaners may damage the Reusable Unit.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not submerge</content> the Reusable Unit <content styleCode="bold">in liquids</content> or spray liquids directly on the surface. It contains parts that should not get wet.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L8cc8e20c-f4e3-406e-a006-f09437763575"/>
+                  </paragraph>
+                  <paragraph>Step 27</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Store</content> the Reusable Unit, Charger, and any remaining Lasix ONYU Kits for next use.</paragraph>
+                  <list listType="unordered">
+                     <item>Keep at room temperature between 68°F and 77°F (20°C and 25°C).</item>
+                     <item>
+                        <content styleCode="bold">Do not</content> refrigerate or freeze.</item>
+                     <item>Keep in a dark place to protect from light.</item>
+                     <item>Keep dry.</item>
+                     <item>Keep extra Prefilled Cartridges and Disposable Units in their original packaging until it is time to use them.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L028a5572-81b0-4b5c-9fa4-edecd771c229"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20251014"/>
+               <component>
+                  <observationMedia ID="Lb6bd0530-18e3-4787-bbcf-4ee09a834d02">
+                     <text>image-3</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-3-infusor-blue-status-blue-tab.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L550b9152-cbbb-4ee7-8ed2-f61e178a06fc">
+                     <text>image-5</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-5-kit-contents-horizontal-text.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L369daba8-c5dc-437a-ad01-70de57a67b84">
+                     <text>image-6</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-6-ru-charger.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lcfc88656-6b45-4af5-9f49-c083f189ceca">
+                     <text>image-7</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-7-starter-kit.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L64f5efe2-2add-4634-8b90-943b5dd1bcdd">
+                     <text>image-8</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-8-get-to-know-infusor-parts.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L00138580-0b63-4d96-adb6-89788ee98e9b">
+                     <text>image-9</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-9-step-1-ru-charger-kit.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Ld794e7a4-d869-4add-9670-fbddf2953ee7">
+                     <text>image-10</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-10-step-2-ru-charging.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L9973ed1e-b389-4ff4-9616-ab906096105f">
+                     <text>image-11</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-11-step-3-hand-washing.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L102376bf-aea7-445e-a6ee-e5e63cd8396c">
+                     <text>image-12</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-12-step-4-kit-back-lot-exp.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L49547e7a-8b8f-442c-9266-77692b51d964">
+                     <text>image-12-5</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-12-5-step-5-treatment-kit-contents.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L6ba7ecd5-08e7-42b2-9dbf-2e753a4d0a00">
+                     <text>image-13</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-13-step-6-cartridge-du.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L3889d5ab-17d9-4a77-a17a-56fbdd5d927e">
+                     <text>image-14</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-14-step-7-cartridge-hand.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lf55a5d90-de90-43f4-af67-d84e7413a406">
+                     <text>image-15</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-15-step-8-wipe-tube-alcohol.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L79b3cfdd-fe91-43e0-a231-8fe7449239bf">
+                     <text>image-16</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-16-step-9-du-drug-cartridge-blue-arrow-together.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L0f271c0e-380e-4220-97d7-1be5b6cf19cb">
+                     <text>image-17</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-17-step-10-infusor-slide-together.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L7b1aa1e6-61d4-4fda-9129-fcf7b4075b5b">
+                     <text>image-18</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-18-step-11-ru-status.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Le15d373c-8d5f-4cfd-b651-12884686bb5d">
+                     <text>image-19</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-19-step-12-infusor-placement.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="La2ae1e54-91ba-4e61-922f-acf08879385f">
+                     <text>image-20</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-20-step-13-wipe-abdomen-alcohol-pad.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Ldc3147f7-e54f-4279-b287-5774a18edc92">
+                     <text>image-21</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-21-step-14-du-peel-liner-detail.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L775128cf-9a96-4488-bfa6-999605253ade">
+                     <text>image-22</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-22-step-15-infusor-press-button-lights-up-detail.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Le28c9774-dad5-4978-8b64-38bd4747b1e7">
+                     <text>image-23</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-23-step-16-infusor-smooth-adhesive-edge.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L33e87e61-4cfe-44f6-bdc4-df1d484dec49">
+                     <text>image-24</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-24-step-17-infusor-press-button.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lc1e701f9-d181-410e-a88a-5e80d3885440">
+                     <text>image-25</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-25-step-18-ru-check-status2.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L9e41c61f-6b23-418e-87de-db2ffe7c28c3">
+                     <text>image-26</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-26-step-19-time-wait-5-hours.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L2d4be9a3-324a-4552-8a53-7f1136826299">
+                     <text>image-27</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-27-step-20-ru-status-3.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lf6edbb1f-3b70-4911-9e29-26330f7ef1df">
+                     <text>image-28</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-28-step-21-infusor-peel-away-abdomen.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L8058a06f-86ba-4346-9d2f-f7f0f5b6e58d">
+                     <text>image-29</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-29-step-22-confirmation-infusion-worked.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L420a2042-904f-4a95-83a0-e16ba838537c">
+                     <text>image-30</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-30-step-23-toilet.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L58ec2157-e2d3-489f-a79f-eba33248867a">
+                     <text>image-31</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-31-step-24-infusor-slide-apart.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lc99272b5-0412-410a-9a44-db325d3ab6e0">
+                     <text>image-32</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-32-step-25-du-sharps-disposal.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L8cc8e20c-f4e3-406e-a006-f09437763575">
+                     <text>image-33</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-33-step-26-ru-wipe-off.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L028a5572-81b0-4b5c-9fa4-edecd771c229">
+                     <text>image-34</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-34-step-27-starter-kit-storage.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Le936ca60-a599-4de1-a7e3-a7e403c8257c">
+                     <text>image-35</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-35-fda-sharps-qr-code.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lf0a5ccf3-dddf-4799-9747-cabc88a83066">
+                     <text>image-36</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-36-lights-tones-table.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lb4446381-4106-4c43-a55d-976a8e3adfac">
+                     <text>image-37</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-37-ru-battery-blue-blinking.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L5fda9cb1-5e0a-4bb0-a77a-5a59e21debee">
+                     <text>image-38</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-38-ru-battery-blue.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L220e2bee-d436-42ab-8574-096d0ff6ff25">
+                     <text>image-39</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-39-ru-battery-red.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L8ce2df34-9c55-4569-9a0a-8482f1deefdb">
+                     <text>image-40</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-40-infusor-battery-red-blue-tab.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L5277f37e-1b7a-4318-ad29-77fb7a9f7506">
+                     <text>image-41</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-41-ru-battery-red-status.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lb3a88ac0-12ff-4418-b0a6-ce7d5d7d2c49">
+                     <text>image-42</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-42-infusor-status-blinking-red-body.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L7b46560b-fce2-47b3-88b9-f340778c3a25">
+                     <text>image-43</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-43-ru-alarm-red.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L1f75afc6-e90b-4a94-bf73-80d74ec2f1a6">
+                     <text>image-44</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-44-infusor-status-blinking-red-body-alarm.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lceb2d876-e4ce-49aa-8cb1-7f990e3e7255">
+                     <text>image-44-5</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-44-5-press-hold-start-stop-button.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L733c3acb-db80-4d22-9ac9-052cc10bcf9e">
+                     <text>image-45</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-45-status-light-flashing-red-blue.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lb38fe86e-ddd6-4cb9-880f-1889d0e20769">
+                     <text>image-46</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-46-toilet.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Leb6d0fd7-5e0f-411d-8fa6-b52a888a1202">
+                     <text>image-47</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-47-confirmation-infusion-worked.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L3cfc94d1-662f-4b21-9889-ac42a379a2b8">
+                     <text>image-48</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-48-ru-infusor-no-lights.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lb6674c95-15f4-4183-be63-dd1ab3d42b7e">
+                     <text>image-49</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-49-ru-charging-status.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L5e412ef2-00e4-42b8-9f44-a0697a1f6857">
+                     <text>image-50</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-50-assembled-device-off.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L627dd1fe-52a9-4621-ba1b-c8ec153f049a">
+                     <text>image-51</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-51-infusor-ready.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Laa93e305-08b7-4445-9051-3216a4d48a08">
+                     <text>image-52</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-52-symbols-legend.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L7491db62-2ebc-4482-b57f-bf9fc7715ea2">
+                     <text>image-warning</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="warning.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lddcfbbfb-aee9-408f-9386-9a1d575bffb0">
+                     <text>image-training</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="training-video.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Lbad49010-1165-4648-9dab-c99426052656">
+               <id root="a452fcb2-4817-4980-b181-75281a0f72ee"/>
+               <code code="59845-8" codeSystem="2.16.840.1.113883.6.1" displayName="INSTRUCTIONS FOR USE SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>3:<content styleCode="bold"> Troubleshooting</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Customer Service Contact Information</content>
+                  </paragraph>
+                  <paragraph>Contact Information:<br/>SQ Innovation, Inc.<br/>Burlington, MA 01803, USA<br/>Phone: 1-855-452-7496 (1-855-4LASIX6)<br/>www.Lasix-ONYU.com</paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Lights and Tones Table</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <renderMultiMedia referencedObject="Lf0a5ccf3-dddf-4799-9747-cabc88a83066"/>
+                     </content>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Checking the Reusable Unit Battery</content>
+                  </paragraph>
+                  <paragraph>If the Battery Light is charged, the white Reusable Unit is able to deliver a full infusion. If the Battery Light is low, the Reusable Unit cannot deliver a full infusion and it needs to be charged.</paragraph>
+                  <paragraph>Always charge the Reusable Unit before you use a new Disposable Unit (before each infusion).</paragraph>
+                  <paragraph>Charging may take up to 20 minutes.</paragraph>
+                  <paragraph/>
+                  <paragraph>A. Battery Light is flashing blue</paragraph>
+                  <paragraph>The Reusable Unit <content styleCode="bold">battery is being charged</content>
+                     <content styleCode="bold">.</content> Wait until the Battery Light turns solid blue before using the Lasix ONYU Infusor.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lb4446381-4106-4c43-a55d-976a8e3adfac"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>B. Battery Light is solid blue</paragraph>
+                  <paragraph>The Reusable Unit<content styleCode="bold"> battery is done charging</content> and ready to use.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L5fda9cb1-5e0a-4bb0-a77a-5a59e21debee"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>C. Battery Light is solid red <content styleCode="bold">before preparing the Lasix ONYU Infusor</content> for use</paragraph>
+                  <paragraph>The Reusable Unit <content styleCode="bold">battery is low</content> and cannot deliver a full infusion.</paragraph>
+                  <paragraph>Charge the Reusable Unit:</paragraph>
+                  <list listType="ordered">
+                     <item>Plug the Charger into the back of the Reusable Unit.</item>
+                     <item>Plug the other end of the Charger into a power outlet.</item>
+                     <item>Wait until the Battery Light turns solid blue.</item>
+                  </list>
+                  <renderMultiMedia referencedObject="L220e2bee-d436-42ab-8574-096d0ff6ff25"/>
+                  <paragraph>D. Battery Light is solid red <content styleCode="bold">when the Disposable Unit and Reusable Unit are connected</content>
+                  </paragraph>
+                  <paragraph>The Reusable Unit <content styleCode="bold">battery is low</content> and the Lasix ONYU Infusor will not start.</paragraph>
+                  <list listType="ordered">
+                     <item>Pull apart the white Reusable Unit and green Disposable Unit.</item>
+                     <item>Put the Disposable Unit to the side while you charge the Reusable Unit (<content styleCode="bold">do not</content> remove the Prefilled Cartridge from the Disposable Unit).</item>
+                     <item>Charge the Reusable Unit:<list listType="ordered" styleCode="LittleAlpha">
+                           <item>Plug the Charger into the back of the Reusable Unit.</item>
+                           <item>Plug the other end of the Charger into a power outlet.</item>
+                           <item>Wait until the Battery Light turns solid blue.</item>
+                           <item>Follow instructions beginning with <content styleCode="bold">Step 10</content> in <content styleCode="bold">Prepare the Lasix ONYU Infusor</content> to connect the Reusable Unit to the Disposable Unit.</item>
+                        </list>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L8ce2df34-9c55-4569-9a0a-8482f1deefdb"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">The Reusable Unit Has Expired</content>
+                  </paragraph>
+                  <paragraph>When the Reusable Unit expires, the Lasix ONYU Infusor can no longer be used. The Reusable Unit needs to be replaced.</paragraph>
+                  <paragraph>The Reusable Unit is expired if it does not light up at all after charging or the <content styleCode="bold">Status Light and the Battery Light are both solid red</content> when the Reusable Unit is plugged in or when the Reusable Unit and Disposable Unit are pulled apart.</paragraph>
+                  <paragraph>Call 1-855-452-7496 for a replacement Reusable Unit, which will be shipped overnight when possible. Also call your healthcare provider.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The Reusable Unit should not be thrown away (disposed of) with household waste and should not be recycled in your local recycling program. Throw away the Reusable Unit</content> according to local regulations for electronic devices with lithium batteries.</paragraph>
+                  <paragraph>Alternatively, the Reusable Unit may be returned to SQ Innovation, free of charge, for proper and safe recycling. Go to <content styleCode="bold">Chapter 4</content> for more information.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L5277f37e-1b7a-4318-ad29-77fb7a9f7506"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">The Status Light is Flashing Red</content>
+                  </paragraph>
+                  <paragraph>When an <content styleCode="bold">error happens inside the Lasix ONYU Infusor</content> or the white Reusable Unit and green Disposable Unit have been<content styleCode="bold"> connected for 7 hours without starting infusion</content>
+                     <content styleCode="bold">,</content> the Status Light will flash red and you will hear a repeating Alarm Tone (2 short beeps).</paragraph>
+                  <paragraph>This can happen in the following 2 situations:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <content styleCode="bold">Before</content> the white Reusable Unit and green Disposable Unit are <content styleCode="bold">connected,</content> see Section A below for what to do.</item>
+                     <item>
+                        <content styleCode="bold">After</content> the white Reusable Unit and green Disposable Unit are <content styleCode="bold">connected,</content> see Section B below for what to do.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lb3a88ac0-12ff-4418-b0a6-ce7d5d7d2c49"/>
+                  </paragraph>
+                  <paragraph>A. If the Status Light flashes red <content styleCode="bold">before</content> the white Reusable Unit is <content styleCode="bold">connected</content> to the green Disposable Unit, <content styleCode="bold">a device error happened.</content> Follow the instructions below:</paragraph>
+                  <list listType="ordered">
+                     <item>Unplug the Charger (if it is connected).</item>
+                     <item>Press and hold the Start/Stop Button until the flashing red light turns off (1 second).</item>
+                     <item>Plug the charger into the Reusable Unit and a power outlet. Check the Lights:<list listType="unordered" styleCode="Disc">
+                           <item>If the <content styleCode="bold">Battery Light</content> is <content styleCode="bold">solid</content> or <content styleCode="bold">flashing blue</content>, the Reusable Unit is <content styleCode="bold">ready to use</content>. Continue with <content styleCode="bold">Step 2 in Get Ready for the Infusion.</content>
+                           </item>
+                           <item>If the <content styleCode="bold">Status Light</content> is still <content styleCode="bold">flashing red</content>
+                              <content styleCode="bold">,</content> the Reusable Unit cannot be used. Call 1-855-452-7496 for a replacement Reusable Unit, which will be shipped overnight when possible. Also call your healthcare provider.<paragraph>
+                                 <renderMultiMedia referencedObject="L7b46560b-fce2-47b3-88b9-f340778c3a25"/>
+                              </paragraph>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+                  <paragraph>B. If the Status Light flashes red <content styleCode="bold">after connecting</content> the white Reusable Unit and green Disposable Unit, <content styleCode="bold">a device error happened</content> or the <content styleCode="bold">Lasix ONYU </content>
+                     <content styleCode="bold">Infusor timed out</content> (because it was connected for 7 hours without starting the infusion). The Lasix ONYU Infusor cannot be used. Follow the steps below:</paragraph>
+                  <list listType="ordered">
+                     <item>If the Lasix ONYU Infusor is on the body, <content styleCode="bold">remove it from</content> the stomach.</item>
+                     <item>If you can see the needle, <content styleCode="bold">do not touch the needle</content> because you could get an injury.</item>
+                     <item>
+                        <content styleCode="bold">Pull apart</content> the Reusable Unit and Disposable Unit.</item>
+                     <item>
+                        <content styleCode="bold">Throw away the Disposable Unit </content>with the Prefilled Cartridge<content styleCode="bold"> into an FDA-cleared sharps disposal container</content> (see <content styleCode="bold">Step 25</content> in <content styleCode="bold">Throw Away (Disposal), Cleaning, and Storage).</content> You should not throw away the Disposable Unit in the household trash.<br/>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>
+                              <content styleCode="bold">Do not</content> save and re-use the Disposable Unit or Prefilled Cartridge as the medicine may be contaminated. They are for one-time use only.</item>
+                        </list>
+                     </item>
+                     <item>Determine the next steps:<list listType="ordered" styleCode="LittleAlpha">
+                           <item>If the error happened <content styleCode="bold">before the infusion was started</content>
+                              <content styleCode="bold">,</content> get a new Lasix ONYU Kit and <content styleCode="bold">start over</content> at <content styleCode="bold">Step 1</content> in <content styleCode="bold">Get Ready for the Infusion.</content>
+                           </item>
+                           <item>If the error happened <content styleCode="bold">after the infusion was started, call your healthcare provider</content> to see what to do because some of the medicine was not delivered.</item>
+                        </list>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L1f75afc6-e90b-4a94-bf73-80d74ec2f1a6"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">You Can See the Needle</content>
+                  </paragraph>
+                  <paragraph>You may see the needle in one of these situations:</paragraph>
+                  <list listType="unordered">
+                     <item>You <content styleCode="bold">press the Start/Stop Button before the Lasix ONYU Infusor is placed on the stomach,</content> see Section A below for what to do.</item>
+                     <item>You <content styleCode="bold">remove the Infusor before infusion is done</content> or the <content styleCode="bold">Lasix ONYU Infusor falls off</content> during the 5-hour infusion, see Section B below for what to do.</item>
+                     <item>The <content styleCode="bold">needle did not retract automatically</content> after infusion, see Section C below for what to do.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Do not</content> touch the needle because you could get an injury.</paragraph>
+                  <paragraph>A. If you see the needle <content styleCode="bold">before the Lasix ONYU Infusor is placed on the stomach,</content> you should start over with a new Lasix ONYU Kit. Follow the steps below:</paragraph>
+                  <list listType="ordered">
+                     <item>
+                        <content styleCode="bold">Press and hold</content> the <content styleCode="bold">Start/Stop </content>
+                        <content styleCode="bold">Button</content> (4 seconds) until the Status Light flashes red and you hear the Alarm Tone (2 short beeps). </item>
+                     <item>
+                        <content styleCode="bold">Pull apart</content> the white Reusable Unit and green Disposable Unit.</item>
+                     <item>
+                        <content styleCode="bold">Throw away the Disposable Unit </content>with Prefilled Cartridge<content styleCode="bold"> into an FDA-cleared sharps disposal container. </content>You should not throw away the Disposable Unit in the household trash.<list listType="unordered" styleCode="Disc">
+                           <item>
+                              <content styleCode="bold">Do not</content> save and re-use the Disposable Unit or Prefilled Cartridge as the medicine may be contaminated. They are for one-time use only.</item>
+                        </list>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Return to Step 1 in Get Ready for the Infusion</content> to start over with a new Lasix ONYU Kit. Be careful not to press the Start/Stop Button until after the Lasix ONYU Infusor is on the stomach.</item>
+                  </list>
+                  <paragraph>B. If you see the needle because <content styleCode="bold">the Lasix ONYU Infusor fell off or it was removed before infusion was done,</content> follow the steps below:</paragraph>
+                  <paragraph>You should not stick the Infusor back on the stomach because it may fall off again.</paragraph>
+                  <list listType="ordered">
+                     <item>
+                        <content styleCode="bold">Press and hold</content> the <content styleCode="bold">Start/Stop</content>
+                        <content styleCode="bold">Button</content> (4 seconds) until the Status Light flashes red and you hear the Alarm Tone (2 short beeps).</item>
+                     <item>
+                        <content styleCode="bold">Pull apart</content> the white Reusable Unit and green Disposable Unit.</item>
+                     <item>
+                        <content styleCode="bold">Throw away the Disposable Unit</content> with the Prefilled Cartridge<content styleCode="bold"> into an FDA-cleared sharps disposal container. </content>You should not throw away the Disposable Unit in the household trash.<list listType="unordered" styleCode="Disc">
+                           <item>
+                              <content styleCode="bold">Do not</content> save and re-use the Disposable Unit or Prefilled Cartridge as the medicine may be contaminated. They are for one-time use only.</item>
+                        </list>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Call your healthcare provider</content> to see what to do because some of the medicine was not delivered.</item>
+                  </list>
+                  <paragraph>C. If you see the needle <content styleCode="bold">after the 5-hour infusion is done,</content> the needle did not retract automatically. Follow the steps below:</paragraph>
+                  <list listType="ordered">
+                     <item>
+                        <content styleCode="bold">Carefully pull apart</content> the white Reusable Unit and green Disposable Unit.</item>
+                     <item>
+                        <content styleCode="bold">Throw away the Disposable Unit </content>with the Prefilled Cartridge<content styleCode="bold"> into an FDA-cleared sharps disposal container.</content> You should not throw away the Disposable Unit in the household trash.<list listType="unordered" styleCode="Disc">
+                           <item>
+                              <content styleCode="bold">Do not</content> save and re-use the Disposable Unit or Prefilled Cartridge as the medicine may be contaminated. They are for one-time use only.</item>
+                        </list>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Continue with Step 26 and Step 27</content> in<content styleCode="bold"> Throw Away (Disposal), Cleaning, and Storage </content>to clean and store the Reusable Unit.</item>
+                  </list>
+                  <paragraph>
+                     <br/>
+                     <content styleCode="bold">How to Stop the Lasix ONYU Infusor Early</content>
+                  </paragraph>
+                  <paragraph>Follow these steps below if you need to stop the Lasix ONYU Infusor before the 5-hour infusion is finished. <content styleCode="bold">Do not remove the Lasix ONYU Infusor</content> from the stomach <content styleCode="bold">before stopping it.</content> Removing the Lasix ONYU Infusor from the body before stopping it will expose the needle, and you could get an injury if you touch it.</paragraph>
+                  <list listType="ordered">
+                     <item>
+                        <content styleCode="bold">Press and hold</content> the <content styleCode="bold">Start/Stop</content>
+                        <content styleCode="bold">Button </content>(4 seconds) until you hear the Alarm Tone (2 short beeps) and the Status Light is flashing red.<renderMultiMedia referencedObject="Lceb2d876-e4ce-49aa-8cb1-7f990e3e7255"/>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Confirm </content>infusion was stopped. Check the Status Light:<list listType="unordered" styleCode="Disc">
+                           <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">flashing red</content> and you hear the Alarm Tone (2 short beeps), infusion has<content styleCode="bold"> stopped.</content> The needle will retract shortly after you press the Start/Stop Button.</item>
+                           <item>If the <content styleCode="bold">Status Light</content> is<content styleCode="bold"> blue</content>
+                              <content styleCode="bold"> and flashing slow,</content> the infusion <content styleCode="bold">did not stop.</content> Repeat <content styleCode="bold">Step 1</content> in <content styleCode="bold">How to Stop the Lasix ONYU Infusor  Early</content> above.<br/>
+                              <renderMultiMedia referencedObject="L733c3acb-db80-4d22-9ac9-052cc10bcf9e"/>
+                           </item>
+                        </list>
+                     </item>
+                     <item>The infusion cannot be restarted. You must <content styleCode="bold">remove the Lasix ONYU Infusor </content>and contact your healthcare provider. Follow the steps below:<list listType="ordered" styleCode="LittleAlpha">
+                           <item>
+                              <content styleCode="bold">Remove</content> the Lasix ONYU Infusor from your stomach.</item>
+                           <item>
+                              <content styleCode="bold">Pull apart</content> the white Reusable Unit and green Disposable Unit.</item>
+                           <item>
+                              <content styleCode="bold">Throw away the Disposable Unit </content>withthe Prefilled Cartridge<content styleCode="bold"> in an FDA-cleared sharps disposal container.</content> You should not throw away the Disposable Unit in the household trash.</item>
+                        </list>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="bold">Do not</content> save and re-use the Disposable Unit or Prefilled Cartridge as the medicine may be contaminated. They are for one-time use only.</item>
+                           <item>
+                              <content styleCode="bold">Call your healthcare provider</content> because you did not get all of the medicine.</item>
+                        </list>
+                     </item>
+                  </list>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">You Did Not Urinate (Pee) Much During Infusion</content>
+                  </paragraph>
+                  <paragraph>The Lasix ONYU Infusor delivers a diuretic medicine which should make you urinate a lot. If you do not urinate a lot (at least 2 times during the 5-hour infusion), there are two reasons this could have happened:</paragraph>
+                  <list listType="unordered">
+                     <item>The diuretic medicine, Lasix ONYU, was not effective for you, or</item>
+                     <item>The Lasix ONYU Infusor did not work properly.</item>
+                  </list>
+                  <renderMultiMedia referencedObject="Lb38fe86e-ddd6-4cb9-880f-1889d0e20769"/>
+                  <paragraph>In either case, <content styleCode="bold">it is important that you call your healthcare provider. </content>Follow the steps below to determine whether the Lasix ONYU Infusor worked and if all the medicine was delivered:</paragraph>
+                  <list listType="ordered">
+                     <item>
+                        <content styleCode="bold">Remove the Lasix ONYU Infusor</content> from your stomach.</item>
+                     <item>
+                        <content styleCode="bold">Look at the</content>
+                        <content styleCode="bold"> window </content>on the back of the Lasix ONYU Infusor:<list listType="unordered" styleCode="Disc">
+                           <item>If the middle of the window is all <content styleCode="bold">gray</content> (whole gray stopper is visible with very little or no liquid), all the medicine was delivered. The Lasix ONYU Infusor worked.</item>
+                           <item>If you <content styleCode="bold">see anything else</content> (like a lot of liquid, a large bubble in the liquid, no gray stopper, or only part of the gray stopper), some of the medicine was not delivered. You did not get a full infusion.</item>
+                        </list>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Check your stomach:</content> If you see or feel a lot of liquid on your stomach, you may not have received a full infusion due to the medicine leaking.</item>
+                  </list>
+                  <renderMultiMedia referencedObject="Leb6d0fd7-5e0f-411d-8fa6-b52a888a1202"/>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">The Reusable Unit Does Not Light Up</content>
+                  </paragraph>
+                  <paragraph>This can happen in the following situations:</paragraph>
+                  <list listType="unordered">
+                     <item>The <content styleCode="bold">Reusable Unit has not been used for a long time</content> or the <content styleCode="bold">Reusable Unit is expired,</content> see Section A below for what to do.</item>
+                     <item>The<content styleCode="bold"> Reusable Unit and Disposable Unit have been connected for more than 7 hours</content> and infusion has not been started, see Section B below for what to do.</item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L3cfc94d1-662f-4b21-9889-ac42a379a2b8"/>
+                  </paragraph>
+                  <paragraph>A. If the white <content styleCode="bold">Reusable Unit does not light up,</content> try charging it, even if it has recently been charged. The Battery Light on the Reusable Unit must always be solid blue before connecting it to the Disposable Unit.</paragraph>
+                  <paragraph>Follow the steps below:</paragraph>
+                  <list listType="ordered">
+                     <item>
+                        <content styleCode="bold">Plug</content> the Charger into the back of the Reusable Unit and plug the other end of the Charger into a power outlet.</item>
+                     <item>
+                        <content styleCode="bold">Wait</content> 20 minutes.</item>
+                     <item>
+                        <content styleCode="bold">Disconnect</content> the Charger from the Reusable Unit and power outlet.</item>
+                     <item>
+                        <content styleCode="bold">Check </content>the Battery Light:<list listType="unordered">
+                           <item>If the <content styleCode="bold">Battery Light</content> is <content styleCode="bold">solid blue,</content> the Reusable Unit is <content styleCode="bold">ready to use.</content>
+                           </item>
+                           <item>If the <content styleCode="bold">Battery Light did not light up</content> after 20 minutes of charging, the Reusable Unit expired. Call 1-855-452-7496 for a replacement Reusable Unit, which will be shipped overnight when possible. <content styleCode="bold">Also call your healthcare provider. </content>
+                              <content styleCode="bold">Go to Troubleshooting: The Reusable Unit Has Expired</content> for more information.</item>
+                           <item>If you see other lights, go to <content styleCode="bold">Troubleshooting: Lights and Tones Table.</content>
+                           </item>
+                        </list>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lb6674c95-15f4-4183-be63-dd1ab3d42b7e"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>B. If the<content styleCode="bold"> Reusable Unit and Disposable Unit have been connected for more than 7 hours</content> and infusion has not been started, the Lasix ONYU Infusor will automatically time out. The Lasix ONYU Infusor cannot be restarted.</paragraph>
+                  <paragraph>Follow the steps below:</paragraph>
+                  <list listType="ordered">
+                     <item>If the Lasix ONYU Infusor is on the body,<content styleCode="bold"> remove the Lasix ONYU Infusor</content> from your stomach.</item>
+                     <item>If you can see the needle, <content styleCode="bold">do not touch the needle</content> because you could get an injury.<br/>
+                        <br/>
+                        <renderMultiMedia referencedObject="L5e412ef2-00e4-42b8-9f44-a0697a1f6857"/>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Pull apart</content> the Reusable Unit and Disposable Unit.</item>
+                     <item>
+                        <content styleCode="bold">Throw away the Disposable Unit </content>with the Prefilled Cartridge<content styleCode="bold"> in an FDA-cleared sharps disposal container. </content>You should not throw away the Disposable Unit in the household trash.<list listType="unordered">
+                           <item>
+                              <content styleCode="bold">Do not</content> save and re-use the Disposable Unit or Prefilled Cartridge as the medicine may be contaminated. They are for one-time use only.</item>
+                        </list>
+                     </item>
+                     <item>Get a new Lasix ONYU Kit and <content styleCode="bold">start over</content> at <content styleCode="bold">Step 1</content> in <content styleCode="bold">Get Ready for the Infusion.</content>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">The Lasix ONYU Infusor Will Not Start the Infusion</content>
+                  </paragraph>
+                  <paragraph>You press the Start/Stop Button and the infusion does not start.</paragraph>
+                  <paragraph>This can happen in the following situations:</paragraph>
+                  <list listType="unordered">
+                     <item>The <content styleCode="bold">Reusable Unit and Disposable Unit are not properly connected,</content> see Section A below for what to do.</item>
+                     <item>The <content styleCode="bold">Reusable Unit is powered off</content> and both the Battery Light and Status Light are off, go to <content styleCode="bold">Troubleshooting: The Reusable Unit Does Not Light Up</content> for what to do.</item>
+                     <item>A <content styleCode="bold">device error has happened</content> and the Status Light is flashing red, go to <content styleCode="bold">Troubleshooting: The Status Light is Flashing Red</content> for what to do.</item>
+                  </list>
+                  <paragraph>A. If the infusion does not start, follow the steps below:</paragraph>
+                  <list listType="ordered">
+                     <item>
+                        <content styleCode="bold">Firmly push</content> the Reusable Unit and Disposable Unit <content styleCode="bold">together</content>. There should be no gap or space between the parts when they are properly connected.</item>
+                     <item>Check the Status Light:<list listType="unordered">
+                           <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">blue</content> and <content styleCode="bold">flashing fast</content> and you hear the OK Tone (1 long beep), the Lasix ONYU Infusor is properly connected. The <content styleCode="bold">Lasix ONYU Infusor is ready</content> to deliver infusion. <br/>If the Lasix ONYU Infusor is <content styleCode="bold">not on the body</content>, go to <content styleCode="bold">Step 12</content> in <content styleCode="bold">Prepare the Application site.</content>
+                              <br/>If the Lasix ONYU Infusor is <content styleCode="bold">on the body</content>, go to <content styleCode="bold">Step 17</content> in <content styleCode="bold">Start the infusion.</content>
+                           </item>
+                           <item>If the <content styleCode="bold">Status Light</content> is <content styleCode="bold">flashing red</content> and you hear the Alarm Tone (2 short beeps), there is a <content styleCode="bold">problem with the Infusor.</content> Go to <content styleCode="bold">Troubleshooting: The Status Light is Flashing Red</content> to see what to do.</item>
+                        </list>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <renderMultiMedia referencedObject="L627dd1fe-52a9-4621-ba1b-c8ec153f049a"/>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">This Instructions for Use has been approved by the U.S. Food and Drug Administration.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Issued: 10/2025</content>
+                  </paragraph>
+                  <paragraph>SP110004US</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Symbols</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Laa93e305-08b7-4445-9051-3216a4d48a08"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20251014"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Ld50a3af2-59a4-48dd-98ed-1b7bfeaaf6d1">
+               <id root="556d449a-742c-4db5-add4-0bad2bf6a206"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title/>
+               <text>
+                  <paragraph>Treatment Kit Label Artwork</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L943c8565-3886-41d9-b6e0-29ab0dbb346d"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Starter Kit Label Artwork</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L3acabeee-df0a-442f-b47a-3a0cc79201c8"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20251003"/>
+               <component>
+                  <observationMedia ID="L943c8565-3886-41d9-b6e0-29ab0dbb346d">
+                     <text>treatment-kit</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="treatment-kit-label.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L3acabeee-df0a-442f-b47a-3a0cc79201c8">
+                     <text>starter-kit</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="starter-kit-label.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

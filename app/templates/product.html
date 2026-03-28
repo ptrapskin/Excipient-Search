@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+
+{% block title %}Product | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel">
+    {% macro source_label(source_type) -%}
+        {%- if source_type == "table" -%}
+            Structured Table
+        {%- elif source_type == "xml_structured" -%}
+            Structured XML
+        {%- elif source_type == "narrative_text" -%}
+            Narrative Text
+        {%- else -%}
+            {{ source_type or "Unavailable" }}
+        {%- endif -%}
+    {%- endmacro %}
+    {% macro dailymed_page_url(setid) -%}
+        https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid={{ setid }}
+    {%- endmacro %}
+    <div class="back-nav">
+        <a href="javascript:history.back()" class="button secondary">&larr; Back to results</a>
+    </div>
+    {% if error %}
+    <h1>Product Detail</h1>
+    <p class="message error">{{ error }}</p>
+    {% elif product %}
+    <div class="meta-row">
+        <div>
+            <h1>{{ product.product_name }}</h1>
+            <p class="subtle">
+                <a href="{{ dailymed_page_url(product.setid) }}" target="_blank" rel="noreferrer">Open official DailyMed label</a>
+            </p>
+        </div>
+        {% if cached %}
+        <p class="message info">Loaded from cache.</p>
+        {% endif %}
+    </div>
+
+    <dl class="details-list summary-grid">
+        <div>
+            <dt>Labeler</dt>
+            <dd>{{ product.labeler or "Unknown" }}</dd>
+        </div>
+        <div>
+            <dt>Dosage Form</dt>
+            <dd>{{ product.dosage_form or "Unknown" }}</dd>
+        </div>
+        <div>
+            <dt>Route</dt>
+            <dd>{{ product.route or "Unknown" }}</dd>
+        </div>
+        <div>
+            <dt>NDCs</dt>
+            <dd>{{ product.ndcs | join(", ") if product.ndcs else "Unavailable" }}</dd>
+        </div>
+        <div>
+            <dt>DailyMed</dt>
+            <dd><a href="{{ dailymed_page_url(product.setid) }}" target="_blank" rel="noreferrer">Open label page</a></dd>
+        </div>
+        <div>
+            <dt>Fetched At</dt>
+            <dd>{{ product.fetched_at }}</dd>
+        </div>
+    </dl>
+
+    <section class="content-block">
+        <h2>Active Ingredients</h2>
+        {% if product.active_ingredients %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>UNII</th>
+                    <th>Strength</th>
+                    <th>Source</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ingredient in product.active_ingredients %}
+                <tr>
+                    <td>{{ ingredient.display_name or "Unavailable" }}</td>
+                    <td>{{ ingredient.unii or "Unavailable" }}</td>
+                    <td>{{ ingredient.strength or "Unavailable" }}</td>
+                    <td>{{ source_label(ingredient.source_type) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="message empty">No active ingredient list was parsed from the retrieved SPL.</p>
+        {% endif %}
+    </section>
+
+    <section class="content-block">
+        <h2>Parsed Inactive Ingredients</h2>
+        {% if product.inactive_ingredients %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>UNII</th>
+                    <th>Source</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ingredient in product.inactive_ingredients %}
+                <tr>
+                    <td>{{ ingredient.display_name or "Unavailable" }}</td>
+                    <td>{{ ingredient.unii or "Unavailable" }}</td>
+                    <td>{{ source_label(ingredient.source_type) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="message empty">No inactive ingredients were parsed from the source text.</p>
+        {% endif %}
+    </section>
+
+    <section class="content-block">
+        <details>
+            <summary>Debug Details</summary>
+
+            <div class="content-block">
+                <h2>Record Metadata</h2>
+                <dl class="details-list summary-grid">
+                    <div>
+                        <dt>SETID</dt>
+                        <dd>{{ product.setid }}</dd>
+                    </div>
+                    <div>
+                        <dt>SPL XML</dt>
+                        <dd><a href="{{ product.spl_source }}" target="_blank" rel="noreferrer">Open raw XML</a></dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="content-block">
+                <h2>Inactive Ingredients Raw Text</h2>
+                {% if product.inactive_ingredients_raw %}
+                <pre class="raw-block">{{ product.inactive_ingredients_raw }}</pre>
+                {% else %}
+                <p class="message empty">No inactive ingredient source text was found in the retrieved SPL.</p>
+                {% endif %}
+            </div>
+
+            <div class="content-block">
+                <h2>Active Ingredient Debug View</h2>
+                {% if product.active_ingredients %}
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Display Name</th>
+                            <th>Normalized</th>
+                            <th>UNII</th>
+                            <th>Strength</th>
+                            <th>Source</th>
+                            <th>Confidence</th>
+                            <th>Raw Source Text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ingredient in product.active_ingredients %}
+                        <tr>
+                            <td>{{ ingredient.display_name or "Unavailable" }}</td>
+                            <td>{{ ingredient.normalized_name or "Unavailable" }}</td>
+                            <td>{{ ingredient.unii or "Unavailable" }}</td>
+                            <td>{{ ingredient.strength or "Unavailable" }}</td>
+                            <td>{{ source_label(ingredient.source_type) }}</td>
+                            <td>{{ ingredient.confidence or "Unavailable" }}</td>
+                            <td>{{ ingredient.raw_name }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p class="message empty">No active ingredient debug data is available.</p>
+                {% endif %}
+            </div>
+
+            <div class="content-block">
+                <h2>Inactive Ingredient Debug View</h2>
+                {% if product.inactive_ingredients %}
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Display Name</th>
+                            <th>Normalized</th>
+                            <th>UNII</th>
+                            <th>Strength</th>
+                            <th>Source</th>
+                            <th>Confidence</th>
+                            <th>Raw Source Text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ingredient in product.inactive_ingredients %}
+                        <tr>
+                            <td>{{ ingredient.display_name or "Unavailable" }}</td>
+                            <td>{{ ingredient.normalized_name or "Unavailable" }}</td>
+                            <td>{{ ingredient.unii or "Unavailable" }}</td>
+                            <td>{{ ingredient.strength or "Unavailable" }}</td>
+                            <td>{{ source_label(ingredient.source_type) }}</td>
+                            <td>{{ ingredient.confidence or "Unavailable" }}</td>
+                            <td>{{ ingredient.raw_name }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p class="message empty">No inactive ingredient debug data is available.</p>
+                {% endif %}
+            </div>
+        </details>
+    </section>
+    {% else %}
+    <h1>Product Detail</h1>
+    <p class="message empty">No product was loaded.</p>
+    {% endif %}
+</section>
+{% endblock %}

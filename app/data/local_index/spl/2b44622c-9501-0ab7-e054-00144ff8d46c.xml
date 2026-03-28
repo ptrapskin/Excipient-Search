@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="2b44622c-9502-0ab7-e054-00144ff8d46c"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>METFROMIN HCL</title>
+   <effectiveTime value="20160208"/>
+   <setId root="2b44622c-9501-0ab7-e054-00144ff8d46c"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="079254320"/>
+            <name>Direct RX</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="079254320"/>
+                        <name>Direct RX</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73606" displayName="repack" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="61919-990" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="2be937a1-a459-2e7b-e054-00144ff8d46c"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20160208"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="61919-990" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>METFORMIN HYDROCHLORIDE</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>METFORMIN HYDROCHLORIDE</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="23155-103" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="RDH86HJV5Z" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE K90</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="0WZ8WG20P6" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE 2910 (6 MPA.S)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7CVR7L4A2D" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MALTODEXTRIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="R75537T0T4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE 2910 (5 MPA.S)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="B697894SGQ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYETHYLENE GLYCOL 400</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="8A6OMU3I8L" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>BLACKBERRY</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="850"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="786Z46389E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>METFORMIN HYDROCHLORIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9100L32L2N" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>METFORMIN</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="U725QWY32X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE K30</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="180" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="61919-990-82" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20160205"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA090564" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20160205"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="13" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText>( biconvex)</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText>(white to off white)</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">H;103</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b44f94c-9e4c-41fc-e054-00144ff88e88">
+               <id root="2b44f94c-9e4b-41fc-e054-00144ff88e88"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b43d466-114f-23a8-e054-00144ff88e88">
+               <id root="2b43d466-114e-23a8-e054-00144ff88e88"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b453a8d-cde8-53ea-e054-00144ff88e88">
+               <id root="2b453a8d-cde7-53ea-e054-00144ff88e88"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>CLINICAL STUDIES</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b457025-163b-374c-e054-00144ff8d46c">
+               <id root="2b457025-163a-374c-e054-00144ff8d46c"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b453a8d-cdfe-53ea-e054-00144ff88e88">
+               <id root="2b482136-72b3-1ad4-e054-00144ff8d46c"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b453a8d-ce06-53ea-e054-00144ff88e88">
+               <id root="2be90432-0246-2552-e054-00144ff8d46c"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph>Lactic acidosis is a rare, but serious, metabolic complication that can occur due to Metformin accumulation during treatment with Metformin Hydrochloride Tablets USP; when it occurs, it is fatal in approximately 50% of cases. Lactic acidosis may also occur in association with a number of pathophysiologic conditions, including diabetes mellitus, and whenever there is significant tissue hypoperfusion and hypoxemia. Lactic acidosis is characterized by elevated blood lactate levels (&gt;5 mmol/L), decreased blood pH, electrolyte disturbances with an increased anion gap, and an increased lactate/pyruvate ratio. When Metformin is implicated as the cause of lactic acidosis, Metformin plasma levels &gt;5 mcg/mL are generally found.
+  <br/>
+    The reported incidence of lactic acidosis in patients receiving Metformin hydrochloride is very low (approximately 0.03 cases/1000 patient-years, with approximately 0.015 fatal cases/1000 patient-years). In more than 20,000 patient-years exposure to Metformin in clinical trials, there were no reports of lactic acidosis. Reported cases have occurred primarily in diabetic patients with significant renal insufficiency, including both intrinsic renal disease and renal hypoperfusion, often in the setting of multiple concomitant medical/surgical problems and multiple concomitant medications. Patients with congestive heart failure requiring pharmacologic management, in particular those with unstable or acute congestive heart failure who are at risk of hypoperfusion and hypoxemia, are at increased risk of lactic acidosis. The risk of lactic acidosis increases with the degree of renal dysfunction and the patient’s age. The risk of lactic acidosis may, therefore, be significantly decreased by regular monitoring of renal function in patients taking Metformin Hydrochloride Tablets USP and by use of the minimum effective dose of Metformin Hydrochloride Tablets USP. In particular, treatment of the elderly should be accompanied by careful monitoring of renal function. Metformin Hydrochloride Tablets USP treatment should not be initiated in patients ≥80 years of age unless measurement of creatinine clearance demonstrates that renal function is not reduced, as these patients are more susceptible to developing lactic acidosis. In addition, Metformin Hydrochloride Tablets USP should be promptly withheld in the presence of any condition associated with hypoxemia, dehydration, or sepsis. Because impaired hepatic function may significantly limit the ability to clear lactate, Metformin Hydrochloride Tablets USP should generally be avoided in patients with clinical or laboratory evidence of hepatic disease. Patients should be cautioned against excessive alcohol intake, either acute or chronic, when taking Metformin Hydrochloride Tablets USP, since alcohol potentiates the effects of Metformin hydrochloride on lactate metabolism. In addition, Metformin Hydrochloride Tablets USP should be temporarily discontinued prior to any intravascular radiocontrast study and for any surgical procedure (see also PRECAUTIONS).
+  <br/>
+    The onset of lactic acidosis often is subtle, and accompanied only by nonspecific symptoms such as malaise, myalgias, respiratory distress, increasing somnolence, and nonspecific abdominal distress. There may be associated hypothermia, hypotension, and resistant bradyarrhythmias with more marked acidosis. The patient and the patient’s physician must be aware of the possible importance of such symptoms and the patient should be instructed to notify the physician immediately if they occur (see also PRECAUTIONS). Metformin Hydrochloride Tablets USP should be withdrawn until the situation is clarified. Serum electrolytes, ketones, blood glucose, and if indicated, blood pH, lactate levels, and even blood Metformin levels may be useful. Once a patient is stabilized on any dose level of Metformin Hydrochloride Tablets USP, gastrointestinal symptoms, which are common during initiation of therapy, are unlikely to be drug related. Later occurrence of gastrointestinal symptoms could be due to lactic acidosis or other serious disease.
+  <br/>
+    Levels of fasting venous plasma lactate above the upper limit of normal but less than 5 mmol/L in patients taking Metformin Hydrochloride Tablets USP do not necessarily indicate impending lactic acidosis and may be explainable by other mechanisms, such as poorly controlled diabetes or obesity, vigorous physical activity, or technical problems in sample handling. (See also PRECAUTIONS.)
+  <br/>
+   Lactic acidosis should be suspected in any diabetic patient with metabolic acidosis lacking evidence of ketoacidosis (ketonuria and ketonemia).
+  <br/>
+   Lactic acidosis is a medical emergency that must be treated in a hospital setting. In a patient with lactic acidosis who is taking Metformin Hydrochloride Tablets USP, the drug should be discontinued immediately and general supportive measures promptly instituted. Because Metformin hydrochloride is dialyzable (with a clearance of up to 170 mL/min under good hemodynamic conditions), prompt hemodialysis is recommended to correct the acidosis and remove the accumulated Metformin. Such management often results in prompt reversal of symptoms and recovery. (See also CONTRAINDICATIONS and PRECAUTIONS.)
+ </paragraph>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b457025-1645-374c-e054-00144ff8d46c">
+               <id root="2b457025-1644-374c-e054-00144ff8d46c"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b4564e3-aab8-5869-e054-00144ff88e88">
+               <id root="2b4564e3-aab7-5869-e054-00144ff88e88"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b457025-164b-374c-e054-00144ff8d46c">
+               <id root="2b457025-164a-374c-e054-00144ff8d46c"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b457025-164e-374c-e054-00144ff8d46c">
+               <id root="2b457025-164d-374c-e054-00144ff8d46c"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION
+ <br/>
+               </title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b4564e3-aabc-5869-e054-00144ff88e88">
+               <id root="2b4564e3-aabb-5869-e054-00144ff88e88"/>
+               <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+               <title>Patient Package Insert</title>
+               <text>
+                  <list listType="unordered">
+                     <item/>
+                  </list>
+               </text>
+               <effectiveTime value="20160205"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_2b45c77b-187a-1752-e054-00144ff8d46c">
+               <id root="2b45c77b-1879-1752-e054-00144ff8d46c"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PACKAGE LABEL.PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_2b45c77b-1878-1752-e054-00144ff8d46c"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20160205"/>
+               <component>
+                  <observationMedia ID="img_2b45c77b-1878-1752-e054-00144ff8d46c">
+                     <text>metformin 850</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="metformin 850mg.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Results | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel results-panel">
+    <h1>Search Results</h1>
+    {% include "partials/search_form.html" %}
+    {% if error %}
+    <p class="message error">{{ error }}</p>
+    {% else %}
+    <div class="meta-row">
+        <p><strong>Query:</strong> {{ normalized_query.normalized_text if normalized_query else query }}</p>
+    </div>
+
+    {% if results %}
+    <section class="content-block">
+        <h2>Excipient Filter</h2>
+        <form class="filter-form" action="/search" method="get">
+            <input type="hidden" name="q" value="{{ query }}">
+            <div class="filter-grid">
+                <div>
+                    <label for="include-filter">Include excipients</label>
+                    <div class="quick-choices" data-quick-include data-current-include="{{ include | e }}"></div>
+                    <input id="include-filter" name="include" type="text" value="{{ include }}" placeholder="e.g. lactose, gelatin">
+                </div>
+                <div>
+                    <label for="exclude-filter">Exclude excipients</label>
+                    <input id="exclude-filter" name="exclude" type="text" value="{{ exclude }}" placeholder="e.g. red dye, FD&C red">
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button type="submit">Apply Filter</button>
+                <a class="button secondary" href="/search?q={{ query }}">Clear</a>
+            </div>
+        </form>
+        {% if excipient_filter.include_terms or excipient_filter.exclude_terms %}
+        <p class="subtle">
+            Showing {{ matching_rows | length }} matching product variants.
+        </p>
+        {% endif %}
+    </section>
+
+    <section class="content-block">
+        <h2>Matching Products</h2>
+        {% if matching_rows %}
+        <div class="drug-forms matching-form-filter" data-matching-form-filter hidden>
+            <span class="drug-forms-label">Filter by form:</span>
+            <div class="drug-forms-chips" data-matching-form-chips></div>
+            <span class="subtle" data-matching-form-summary></span>
+        </div>
+        <div class="matching-products-wrap">
+        <table class="data-table matching-products-table" data-sort-table>
+            <thead>
+                <tr>
+                    <th><button type="button" class="table-sort-button" data-sort-key="product">Product</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="ndcs">NDCs</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="labeler">Labeler</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="strength">Strength</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="form">Form</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="route">Route</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="include">Matched Include</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="exclude">Matched Exclude</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in matching_rows %}
+                <tr
+                    data-matching-form="{{ row.dosage_form or '' }}"
+                    data-sort-product="{{ row.product_name or '' }}"
+                    data-sort-ndcs="{{ row.ndcs | join(', ') if row.ndcs else '' }}"
+                    data-sort-labeler="{{ row.labeler or '' }}"
+                    data-sort-strength="{{ row.dailymed_strength or '' }}"
+                    data-sort-form="{{ row.dosage_form or '' }}"
+                    data-sort-route="{{ row.route or '' }}"
+                    data-sort-include="{{ row.matched_include_terms | join(', ') if row.matched_include_terms else '' }}"
+                    data-sort-exclude="{{ row.matched_exclude_terms | join(', ') if row.matched_exclude_terms else '' }}"
+                >
+                    <td>
+                        {% if row.setid %}
+                        <a href="/products/{{ row.setid }}{% if row.ndcs %}?ndc={{ row.ndcs[0] }}{% endif %}">{{ row.product_name }}</a>
+                        {% else %}
+                        {{ row.product_name }}
+                        {% endif %}
+                    </td>
+                    <td>{{ row.ndcs | join(", ") if row.ndcs else "Unavailable" }}</td>
+                    <td>{{ row.labeler or "Unknown" }}</td>
+                    <td>{{ row.dailymed_strength or "Unavailable" }}</td>
+                    <td>{{ row.dosage_form or "Unknown" }}</td>
+                    <td>{{ row.route or "Unknown" }}</td>
+                    <td>{{ row.matched_include_terms | join(", ") if row.matched_include_terms else "None" }}</td>
+                    <td>{{ row.matched_exclude_terms | join(", ") if row.matched_exclude_terms else "None" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        {% else %}
+        <p class="message empty">No products matched the current excipient filter.</p>
+        {% endif %}
+    </section>
+
+    {% else %}
+    <p class="message empty">No DailyMed products matched this search.</p>
+    {% endif %}
+    {% endif %}
+</section>
+{% endblock %}

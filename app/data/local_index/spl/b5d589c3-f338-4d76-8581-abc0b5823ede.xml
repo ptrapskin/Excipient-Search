@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="583fc1d0-c1bd-478f-bd6a-852e98100f37"/>
+   <code code="50578-4" codeSystem="2.16.840.1.113883.6.1" displayName="PRESCRIPTION ANIMAL DRUG LABEL"/>
+   <title>
+      <content styleCode="bold">Amoxicillin and Clavulanate </content>
+      <content styleCode="bold">Potassium for Oral Suspension </content>
+      <content styleCode="bold">Drops</content>
+   </title>
+   <effectiveTime value="20250409"/>
+   <setId root="b5d589c3-f338-4d76-8581-abc0b5823ede"/>
+   <versionNumber value="3"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="079421067"/>
+            <name>Cronus Pharma LLC</name>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="e66d85dc-b734-4fc3-8d05-6b9eb3180e14"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <title/>
+               <text/>
+               <effectiveTime value="20250409"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="69043-024" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxicillin and Clavulanate Potassium Drops</name>
+                        <formCode code="C42994" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUSPENSION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Amoxicillin and Clavulanate Potassium</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="50" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMOXICILLIN ANHYDROUS</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="12.5" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="Q42OMW3AT8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CLAVULANATE POTASSIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="23521W1S24" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CLAVULANIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="15" unit="mL"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <formCode code="C43169" displayName="BOTTLE" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1" unit="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="69043-024-11" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" displayName="CARTON" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20210925"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANADA200709" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73583" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLFLAVOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C73368" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BUBBLE GUM" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="L41b1051e-9b24-470b-a7dc-d33aa53921e2">
+               <id root="b1bd946c-d6a9-49b0-846d-970ba9ffba07"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">For veterinary oral suspension</content>
+                     <br/>
+                     <content styleCode="italics">For use in dogs and cats﻿</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250407"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L5c27a94e-e1cc-463e-af8d-89ef10d4b415">
+               <id root="d7b96d14-ebb9-4391-ac6d-f374a7ff3e04"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>
+                  <content styleCode="bold">CAUTION</content>
+               </title>
+               <text>
+                  <paragraph>Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+               </text>
+               <effectiveTime value="20210920"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Le19ebbe5-ff57-4f4d-8a58-ade2b3bb86ae">
+               <id root="108127bf-b258-4a74-97e7-96a1affb14f9"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>
+                  <content styleCode="bold">DESCRIPTION</content>
+               </title>
+               <text>
+                  <paragraph>Amoxicillin trihydrate/clavulanate potassium is an orally administered formulation comprised of the broad-spectrum antibiotic amoxicillin trihydrate and the β-lactamase inhibitor, clavulanate potassium (the potassium salt of clavulanic acid).</paragraph>
+                  <paragraph>Amoxicillin trihydrate is a semisynthetic antibiotic with a broad spectrum of bactericidal activity against many gram-positive and gram-negative, aerobic and anaerobic microorganisms. It does not resist destruction by β-lactamases; therefore, it is not effective against β-lactamase-producing bacteria. Chemically, it is D(-)-α-amino-p-hydroxybenzyl penicillin trihydrate.</paragraph>
+                  <paragraph>Clavulanic acid, an inhibitor of β-lactamase enzymes, is produced by the fermentation of <content styleCode="italics">Streptomyces clavuligerus</content>. Clavulanic acid by itself has only weak antibacterial activity. Chemically, clavulanate potassium is potassium z-(3R,5R)-2-β-hydroxyethylidene clavam-3-carboxylate.</paragraph>
+               </text>
+               <effectiveTime value="20210921"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L1116c295-9383-4fe7-8e5e-a3e932b3cd68">
+               <id root="e874080c-a9be-4093-958f-6dff1c299865"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>
+                  <content styleCode="bold">CLINICAL PHARMACOLOGY</content>
+               </title>
+               <text>
+                  <paragraph>Amoxicillin and Clavulanate Potassium for Oral Suspension is stable in the presence of gastric acid and is not significantly influenced by gastric or intestinal contents. The 2 components are rapidly absorbed resulting in amoxicillin and clavulanic acid concentrations in serum, urine, and tissues similar to those produced when each is administered alone.</paragraph>
+                  <paragraph>Amoxicillin and clavulanic acid diffuse readily into most body tissues and fluids with the exception of brain and spinal fluid, which amoxicillin penetrates adequately when meninges are inflamed. Most of the amoxicillin is excreted unchanged in the urine. Clavulanic acid’s penetration into spinal fluid is unknown at this time. Approximately 15% of the administered dose of clavulanic acid is excreted in the urine within the first 6 hours.</paragraph>
+                  <paragraph>Amoxicillin and Clavulanate Potassium for Oral Suspension combines the distinctive properties of a broad-spectrum antibiotic and a β-lactamase inhibitor to effectively extend the antibacterial spectrum of amoxicillin to include β-lactamase-producing as well as non-β-lactamase-producing aerobic and anaerobic organisms.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Microbiology</content>
+                     <br/>Amoxicillin is bactericidal in action and acts through the inhibition of biosynthesis of cell wall mucopeptide of susceptible organisms. The action of clavulanic acid extends the antimicrobial spectrum of amoxicillin to include organisms resistant to amoxicillin and other β-lactam antibiotics.</paragraph>
+                  <paragraph>Amoxicillin/clavulanate has been shown to have a wide range of activity which includes β-lactamase-producing strains of both gram-positive and gram-negative aerobes, facultative anaerobes, and obligate anaerobes. Many strains of the following organisms, including β-lactamase-producing strains, isolated from veterinary sources, were found to be susceptible to amoxicillin/clavulanate in vitro but the clinical significance of this activity has not been demonstrated for some of these organisms in animals. Aerobic bacteria, including <content styleCode="italics">Staphylococcus aureus<sup>1</sup>
+                     </content>, β-lactamase-producing <content styleCode="italics">Staphylococcus aureus<sup>1</sup>
+                     </content> (penicillin resistant), <content styleCode="italics">Staphylococcus </content>species<sup>1</sup>, <content styleCode="italics">Staphylococcus epidermidis</content>, <content styleCode="italics">Staphylococcus intermedius, Streptococcus faecalis, Streptococcus </content>species<sup>1</sup>
+                     <content styleCode="italics">, Corynebacterium pyogenes, Corynebacterium</content> species<content styleCode="italics">, Erysipelothrix rhusiopathiae, Bordetella bronchiseptica, Escherichia coli<sup>1</sup>,</content>
+                     <content styleCode="italics">Proteus mirabilis, </content>
+                     <content styleCode="italics">Proteus</content> species,<content styleCode="italics"> Enterobacter </content>species,<content styleCode="italics"> Klebsiella pneumoniae, Salmonella dublin, Salmonella typhimurium, Pasteurella multocida<sup>1</sup>, Pasteurella haemolytica, Pasteurella </content>species<sup>1</sup>.</paragraph>
+                  <paragraph>
+                     <sup>1</sup>The susceptibility of these organisms has also been demonstrated in <content styleCode="italics">in vivo</content> studies.</paragraph>
+                  <paragraph>Studies have demonstrated that both aerobic and anaerobic flora are isolated from gingival cultures of dogs with clinical evidence of periodontal disease. Both gram-positive and gram-negative aerobic and anaerobic subgingival isolates indicate sensitivity to amoxicillin/clavulanic acid during antimicrobial susceptibility testing.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Susceptibility test</content>
+                  </paragraph>
+                  <paragraph>The recommended quantitative disc susceptibility method (FEDERAL REGISTER 37:20527–29; Bauer AW, Kirby WMM, Sherris JC, <content styleCode="italics">et al:</content> Antibiotic susceptibility testing by standardized single disc method. <content styleCode="italics">Am J Clin Path</content> 45:493, 1966) utilized 30 mcg Augmentin<sup>®</sup> (AMC) discs for estimating the susceptibility of bacteria to amoxicillin and clavulanate potassium tablets and amoxicillin and clavulanate potassium for oral suspension.</paragraph>
+               </text>
+               <effectiveTime value="20210921"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L727bbb22-ef73-4233-a0a3-1fbd98b01501">
+               <id root="9c37a67c-c5e1-447f-ac10-b710f18de90f"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>
+                  <content styleCode="bold">INDICATIONS AND USAGE</content>
+               </title>
+               <text>
+                  <paragraph>Amoxicillin and Clavulanate Potassium for Oral Suspension drops are indicated in the treatment of:</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Dogs:</content> Skin and soft tissue infections such as wounds, abscesses, cellulitis, superficial/juvenile and deep pyoderma due to susceptible strains of the following organisms: β-lactamase-producing <content styleCode="italics">Staphylococcus aureus</content>, non-β-lactamase-producing <content styleCode="italics">Staphylococcus aureus, Staphylococcus</content> spp., <content styleCode="italics">Streptococcus</content> spp., and<content styleCode="italics"> E. coli</content>.</paragraph>
+                  <paragraph>Periodontal infections due to susceptible strains of both aerobic and anaerobic bacteria. Amoxicillin and clavulanate potassium for oral suspension has been shown to be clinically effective for treating cases of canine periodontal disease.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Cats:</content> Skin and soft tissue infections such as wounds, abscesses, and cellulitis/dermatitis due to susceptible strains of the following organisms: β-lactamase-producing <content styleCode="italics">Staphylococcus aureus,</content> non-β-lactamase-producing <content styleCode="italics">Staphylococcus aureus, Staphylococcus</content> spp., <content styleCode="italics">Streptococcus</content> spp., <content styleCode="italics">E. coli, Pasteurella multocida,</content> and <content styleCode="italics">Pasteurella</content> spp.</paragraph>
+                  <paragraph>Urinary tract infections (cystitis) due to susceptible strains of <content styleCode="italics">E. coli</content>.</paragraph>
+                  <paragraph>Therapy may be initiated with Amoxicillin and Clavulanate Potassium for Oral Suspension prior to obtaining results from bacteriological and susceptibility studies.</paragraph>
+                  <paragraph>A culture should be obtained prior to treatment to determine susceptibility of the organisms to Amoxicillin and Clavulanate Potassium for Oral Suspension. Following determination of susceptibility results and clinical response to medication, therapy may be reevaluated.</paragraph>
+               </text>
+               <effectiveTime value="20241112"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lc3179fd8-8695-42cc-907c-327f1e4b30ea">
+               <id root="384324c1-4edb-4e5e-b451-f5174003d295"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>
+                  <content styleCode="bold">CONTRAINDICATIONS</content>
+               </title>
+               <text>
+                  <paragraph>The use of this drug is contraindicated in animals with a history of an allergic reaction to any of the penicillins or cephalosporins.</paragraph>
+               </text>
+               <effectiveTime value="20210921"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lf2c2b1a4-c804-4bd1-83d6-9f30ec096318">
+               <id root="7e3db97a-40aa-40ae-98c6-a70ebc5e4aa0"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>
+                  <content styleCode="bold">WARNINGS</content>
+               </title>
+               <text>
+                  <paragraph>Safety of use in pregnant or breeding animals has not been determined. For use in dogs and cats only.</paragraph>
+                  <paragraph>Keep Amoxicillin and Clavulanate Potassium for Oral Suspension in a secure location out of reach of dogs, cats and other animals to prevent accidental ingestion or overdose.</paragraph>
+               </text>
+               <effectiveTime value="20241112"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lb13b3b6c-4370-4960-bf63-8b01843752a1">
+               <id root="0f846c09-a39a-4251-9df4-74dc66001456"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>
+                  <content styleCode="bold">ADVERSE REACTIONS</content>
+               </title>
+               <text>
+                  <paragraph>Amoxicillin and Clavulanate Potassium for Oral Suspension contains a semisynthetic penicillin (amoxicillin) and has the potential for producing allergic reactions.</paragraph>
+                  <paragraph>If an allergic reaction occurs, administer epinephrine and/or steroids.</paragraph>
+                  <paragraph>To report suspected adverse drug events, for technical assistance or to obtain a copy of the Safety Data Sheet, contact Cronus Pharma LLC at 1-844-227-6687. For additional information about adverse experience reporting for animal drugs, contact FDA at 1-888-FDA-VETS or http://www.fda.gov/reportanimalae.</paragraph>
+               </text>
+               <effectiveTime value="20241112"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L06390458-8f4e-445a-8126-03e038f0e921">
+               <id root="d9bc193c-a0b1-4392-902a-4abb61326d78"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>
+                  <content styleCode="bold">DOSAGE AND ADMINISTRATION</content>
+               </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">Dogs:</content> The recommended dosage is 6.25 mg/lb (1 mL/10 lb) of body weight twice a day. Skin and soft tissue infections such as abscesses, cellulitis, wounds, superficial/juvenile pyoderma, and periodontal infections should be treated for 5–7 days or for 48 hours after all symptoms have subsided. If no response is seen after 5 days of treatment, therapy should be discontinued and the case reevaluated. Deep pyoderma may require treatment for 21 days; the maximum duration of treatment should not exceed 30 days.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Cats:</content> The recommended dosage is 62.5 mg (1 mL) twice a day. Skin and soft tissue infections such as abscesses and cellulitis/dermatitis should be treated for 5–7 days or 48 hours after all symptoms have subsided, not to exceed 30 days. If no response is seen after 3 days of treatment, therapy should be discontinued and the case reevaluated.</paragraph>
+                  <paragraph>Urinary tract infections may require treatment for 10–14 days or longer. The maximum duration of treatment should not exceed 30 days.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Reconstitution instructions - Oral Suspension</content>
+                     <br/>Add 14 mL of water to the 15-mL bottle and shake vigorously. Each mL of suspension will contain 50 mg of amoxicillin activity as the trihydrate and 12.5 mg of clavulanic acid activity as the potassium salt.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Note:</content>
+                     <br/>Any unused portion of the reconstituted suspension must be discarded after 10 days.<br/>Refrigeration of the reconstituted suspension is required.</paragraph>
+               </text>
+               <effectiveTime value="20241112"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lcf94722e-57d7-497a-9273-d5840b813e41">
+               <id root="dbbae9bf-b7c1-4662-b4af-564dc6e2cefd"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <title>
+                  <content styleCode="bold">STORAGE CONDITIONS</content>
+               </title>
+               <text>
+                  <paragraph>Do not store dry powder at temperatures above 25°C (77°F).</paragraph>
+               </text>
+               <effectiveTime value="20241112"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L80a1afc3-9776-4e6a-aa94-aef73a0c7d45">
+               <id root="1313957f-6f03-4de9-b69b-712f80f486fe"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>
+                  <content styleCode="bold">HOW SUPPLIED</content>
+               </title>
+               <text>
+                  <paragraph>Amoxicillin and Clavulanate Potassium for Oral Suspension drops are supplied in 15-mL bottles containing 50 mg of amoxicillin/12.5 mg of clavulanic acid per mL.</paragraph>
+                  <paragraph>Approved by FDA under ANADA # 200-709</paragraph>
+                  <paragraph>Augmentin<sup>®</sup> is a trademark owned by<br/>
+                     <content styleCode="bold">GlaxoSmithKline.</content>
+                  </paragraph>
+                  <paragraph>Manufactured for:<br/>
+                     <content styleCode="bold">Cronus Pharma LLC,</content>
+                     <br/>East Brunswick, NJ 08816.<br/>Contact No: 1-844-227-6687<br/>(1-844-2-CRONUS)</paragraph>
+                  <paragraph>Made in India<br/>
+                     <content styleCode="bold">Revised: April 2021</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241112"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lb217c9bb-1637-4d5c-b4cd-9adf219b3fa3">
+               <id root="8b7f0885-0c93-432c-b874-b73fc8681882"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>
+                  <content styleCode="bold">PACKAGE LABEL.PRINCIPAL DISPLAY PANEL</content>
+               </title>
+               <text>
+                  <paragraph>NDC 69043-024-11</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Amoxicillin and Clavulanate Potassium for Oral Suspension</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Drops</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">For veterinary oral suspension</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">For use in dogs and cats</content>
+                  </paragraph>
+                  <paragraph>When reconstituted each mL contains 50 mg of amoxicillin as the trihydrate and 12.5 of clavulanic acid as the potassium salt.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do Not Use if Product is Discolored</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Caution:</content> Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+                  <paragraph>Approved by FDA under ANADA # 200-709</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">15 mL</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L0e09c673-c11c-443b-991c-a39bd70d96b8"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250407"/>
+               <component>
+                  <observationMedia ID="L0e09c673-c11c-443b-991c-a39bd70d96b8">
+                     <text>carton 15mL.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="carton 15mL.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

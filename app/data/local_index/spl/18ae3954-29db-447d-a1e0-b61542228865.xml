@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="0371decf-5e7c-4e6f-9d69-fadcddeb38f8"/>
+   <code code="50578-4" displayName="PRESCRIPTION ANIMAL DRUG LABEL" codeSystem="2.16.840.1.113883.6.1"/>
+   <title>
+      <content styleCode="bold">Amoxicillin and clavulanate potassium tablets</content>
+   </title>
+   <effectiveTime value="20210811"/>
+   <setId root="18ae3954-29db-447d-a1e0-b61542228865"/>
+   <versionNumber value="2"/>
+   <author>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="603750329"/>
+            <name>Covetrus</name>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="cca68625-985d-4d5a-ac8f-26d8a363d42f"/>
+               <code code="48780-1" displayName="SPL LISTING DATA ELEMENTS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <effectiveTime value="20210805"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="11695-6991" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxicillin and clavulanate potassium</name>
+                        <formCode code="C42897" displayName="TABLET, COATED" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Amoxicillin and clavulanate potassium</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="50"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMOXICILLIN</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="12.5"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="Q42OMW3AT8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CLAVULANATE POTASSIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="23521W1S24" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CLAVULANIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="14"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" displayName="BLISTER PACK" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="15"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="11695-6991-1" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" displayName="CARTON" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANADA200702" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73583" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20210722"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="6" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="INT" value="1"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="11695-6992" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxicillin and clavulanate potassium</name>
+                        <formCode code="C42897" displayName="TABLET, COATED" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Amoxicillin and clavulanate potassium</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="100"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMOXICILLIN</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="25"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="Q42OMW3AT8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CLAVULANATE POTASSIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="23521W1S24" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CLAVULANIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="14"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" displayName="BLISTER PACK" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="15"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="11695-6992-1" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" displayName="CARTON" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANADA200702" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73583" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20210722"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="9" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="INT" value="1"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="11695-6993" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxicillin and clavulanate potassium</name>
+                        <formCode code="C42897" displayName="TABLET, COATED" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Amoxicillin and clavulanate potassium</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="200"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMOXICILLIN</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="50"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="Q42OMW3AT8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CLAVULANATE POTASSIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="23521W1S24" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CLAVULANIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="14"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" displayName="BLISTER PACK" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="15"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="11695-6993-1" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" displayName="CARTON" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANADA200702" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73583" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20210722"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="11" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="INT" value="1"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="11695-6994" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxicillin and clavulanate potassium</name>
+                        <formCode code="C42897" displayName="TABLET, COATED" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Amoxicillin and clavulanate potassium</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="300"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMOXICILLIN</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="75"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="Q42OMW3AT8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CLAVULANATE POTASSIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="23521W1S24" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CLAVULANIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="14"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" displayName="BLISTER PACK" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="15"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="11695-6994-1" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" displayName="CARTON" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANADA200702" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73583" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20210722"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="13" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="INT" value="1"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_581109c2-0774-48f6-8180-c99911b1a486">
+               <id root="88020c30-cddc-4dc9-a23b-34ed3f4d0d8c"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">For use in dogs and cats</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_ee9ed7ad-4f29-4f35-b3ac-9b010f13bd41">
+               <id root="65e5fd45-a1a5-4180-a162-be43549e9fe9"/>
+               <code code="50741-8" codeSystem="2.16.840.1.113883.6.1" displayName="SAFE HANDLING WARNING SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">CAUTION: </content>
+                     <content>Federal law restricts this drug to use by or on the order of a licensed veterinarian.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_a88a6174-58c5-4f81-bedd-9d6ee57132cd">
+               <id root="aeb36ff2-1de1-4e93-9e28-627c2023bb4b"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">DESCRIPTION:</content> Amoxicillin and clavulanate potassium tablets are an orally administered formulation comprised of the broad-spectrum antibiotic amoxicillin trihydrate and the β-lactamase inhibitor, clavulanate potassium (the potassium salt of clavulanic acid).</paragraph>
+                  <paragraph>Amoxicillin trihydrate is a semisynthetic antibiotic with a broad spectrum of bactericidal activity against many gram-positive and gram-negative, aerobic and anaerobic microorganisms. It does not resist destruction by β-lactamases; therefore, it is not effective against β-lactamase producing bacteria. Chemically, it is D (-)-α-amino-p-hydroxybenzyl penicillin trihydrate.</paragraph>
+                  <paragraph>Clavulanic acid, an inhibitor of β-lactamase enzymes, is produced by the fermentation of <content styleCode="italics">Streptomyces clavuligerus</content>. Clavulanic acid by itself has only weak antibacterial activity. Chemically, clavulanate potassium is potassium z-(3R,5R)-2-β-hydroxyethylidene clavam-3-carboxylate.</paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L913a9dd9-20ed-4d3e-aef2-6d2a21c9260f">
+               <id root="89b81c82-3c47-450c-b521-1ca28c037465"/>
+               <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">ACTIONS:</content> Amoxicillin and clavulanate potassium tablets are stable in the presence of gastric acid and are not significantly influenced by gastric or intestinal contents. The 2 components are rapidly absorbed resulting in amoxicillin and clavulanic acid concentrations in serum, urine, and tissues similar to those produced when each is administered alone.</paragraph>
+                  <paragraph>Amoxicillin and clavulanic acid diffuse readily into most body tissues and fluids with the exception of brain and spinal fluid, which amoxicillin penetrates adequately when meninges are inflamed. Most of the amoxicillin is excreted unchanged in the urine. Clavulanic acid’s penetration into spinal fluid is unknown at this time. Approximately 15% of the administered dose of clavulanic acid is excreted in the urine within the first 6 hours.</paragraph>
+                  <paragraph>Amoxicillin and clavulanate potassium tablets combine the distinctive properties of a broad-spectrum antibiotic and a β-lactamase inhibitor to effectively extend the antibacterial spectrum of amoxicillin to include β- lactamase producing as well as non-β-lactamase-producing aerobic and anaerobic organisms.</paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="La3533994-835e-415a-94aa-56f92ce89bb2">
+               <id root="d4be99e5-fcc6-4259-b6ef-4ab326a519ed"/>
+               <code code="49489-8" codeSystem="2.16.840.1.113883.6.1" displayName="MICROBIOLOGY SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">MICROBIOLOGY:</content> Amoxicillin is bactericidal in action and acts through the inhibition of biosynthesis of cell wall mucopeptide of susceptible organisms. The action of clavulanic acid extends the antimicrobial spectrum of amoxicillin to include organisms resistant to amoxicillin and other β-lactam antibiotics. Amoxicillin/clavulanate has been shown to have a wide range of activity which includes β-lactamase-producing strains of both gram-positive and gram-negative aerobes, facultative anaerobes, and obligate anaerobes. Many strains of the following organisms, including β-lactamase-producing strains, isolated from veterinary sources, were found to be susceptible to amoxicillin/ clavulanate <content styleCode="italics">in vitro</content> but the clinical significance of this activity has not been demonstrated for some of these organisms in animals.</paragraph>
+                  <paragraph>Aerobic bacteria, including <content styleCode="italics">Staphylococcus aureus<sup>1</sup>
+                     </content> , β-lactamase producing <content styleCode="italics">Staphylococcus aureus<sup>1</sup>
+                     </content> (penicillin resistant), <content styleCode="italics">Staphylococcus </content>species<sup>1</sup>,<content styleCode="italics"> Staphylococcus </content>epidermidis, <content styleCode="italics">Staphylococcus intermedius</content>, <content styleCode="italics">Streptococcus faecalis, Streptococcus </content>species<sup>1</sup>
+                     <content styleCode="italics">, Corynebacterium pyogenes, Corynebacterium species, Erysipelothrix rhusiopathiae, Bordetella bronchiseptica, Escherichia coli<sup>1</sup>, Proteus mirabilis, </content>
+                     <content styleCode="italics">Proteus</content> species, Enterobacter species, <content styleCode="italics">Klebsiella pneumoniae, Salmonella dublin, Salmonella typhimurium, Pasteurella multocida, Pasteurella haemolytica, Pasteurella</content> species<sup>1</sup>
+                  </paragraph>
+                  <paragraph>
+                     <sup>1 </sup>The susceptibility of these organisms has also been demonstrated in <content styleCode="italics">in vivo</content> studies.</paragraph>
+                  <paragraph>Studies have demonstrated that both aerobic and anaerobic flora are isolated from gingival cultures of dogs with clinical evidence of peridontal disease. Both gram-positive and gram-negative aerobic and anaerobic subgingival isolates indicate sensitivity to amoxicillin/clavulanic acid during antimicrobial susceptibility testing.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">SUSCEPTIBILITY TEST:</content> The recommended quantitative disc susceptibility method (FEDERAL REGISTER 37:20527-29; Bauer AW, Kirby WMM, Sherris JC,<content styleCode="italics"> et al</content>: Antibiotic susceptibility testing by standardized single disc method. <content styleCode="italics">Am J Clin Path</content> 45:493, 1966) utilized 30 mcg Augmentin<sup>®</sup> (AMC) discs for estimating the susceptibility of bacteria to amoxicillin and clavulanate potassium tablets.</paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L8b0cd52b-4efa-47df-8803-a181fbd460fc">
+               <id root="b08e6caa-f53f-472a-b28c-d7a90379861d"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">INDICATIONS:</content> Amoxicillin and clavulanate potassium tablets are indicated in the treatment of:</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Dogs:</content> Skin and soft tissue infections such as wounds, abscesses, cellulitis, superficial/juvenile and deep pyoderma due to susceptible strains of the following organisms: β-lactamase-producing<content styleCode="italics"> Staphylococcus aureus, </content>non<content styleCode="italics">- </content>β-lactamase-producing<content styleCode="italics"> Staphylococcus aureus, Staphylococcus </content>spp.,<content styleCode="italics"> Streptococcus </content>spp., and<content styleCode="italics"> E. coli.</content>
+                  </paragraph>
+                  <paragraph>Periodontal infections due to susceptible strains of both aerobic and anaerobic bacteria. Amoxicillin and clavulanate potassium tablets have been shown to be clinically effective for treating cases of canine periodontal disease.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Cats:</content> Skin and soft tissue infections such as wounds, abscesses, and cellulitis/dermatitis due to susceptible strains of the following organisms: β-lactamase-producing <content styleCode="italics">Staphylococcus aureus,</content> non- β-lactamase-producing <content styleCode="italics">Staphylococcus aureus, Staphylococcus </content>spp.,<content styleCode="italics"> Streptococcus </content>spp.<content styleCode="italics">, E. coli,</content> and <content styleCode="italics">Pasteurella </content>spp. Urinary tract infections (cystitis) due to susceptible strains of <content styleCode="italics">E. coli.</content>
+                  </paragraph>
+                  <paragraph>Therapy may be initiated with Amoxicillin and clavulanate potassium tablets prior to obtaining results from bacteriological and susceptibility studies. A culture should be obtained prior to treatment to determine susceptibility of the organisms to Amoxicillin and Clavulanate Potassium Tablets. Following determination of susceptibility results and clinical response to medication, therapy may be reevaluated.</paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L728e626c-c300-46ac-9cfc-1d819027d580">
+               <id root="5ebe591e-d4c9-457e-896b-f289ac66514c"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">CONTRAINDICATIONS:</content> The use of this drug is contraindicated in animals with a history of an allergic reaction to any of the penicillins or cephalosporins.</paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lf8551a76-39f9-41fb-be54-b683b81c8afc">
+               <id root="a99a4639-5037-4ad5-bfd6-be6c0dddac9d"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">WARNINGS:</content> Safety of use in pregnant or breeding animals has not been determined. Store at controlled room temperature, 68-77°F (20-25°C).</paragraph>
+                  <paragraph/>
+                  <paragraph>Do not remove from foil strip until ready to use</paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L198e9748-7df3-43b8-a726-1a545aeae5e2">
+               <id root="9151aa18-d980-4baa-8f4f-38c08a558596"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">ADVERSE REACTIONS:</content> Amoxicillin and clavulanate potassium tablets contain a semisynthetic penicillin (amoxicillin) and has the potential for producing allergic reactions. If an allergic reaction occurs, administer epinephrine and/or steroids.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <content styleCode="underline">Post-Approval Experience (July, 2017):</content>
+                     </content>
+                     <br/>The following adverse events are based on the post-approval adverse drug experience reporting. Not all adverse events are reported to FDA/CVM. It is not always possible to reliably estimate the adverse event frequency or establish a casual relationship to product exposure using these data. </paragraph>
+                  <paragraph>The following adverse events reported for dogs and cats are listed in decreasing order of reporting frequency for amoxicillin and clavulanate potassium tablets: Anorexia, lethargy, vomiting and diarrhea.</paragraph>
+                  <paragraph>To report suspected adverse events, for technical assistance or to obtain a copy of the Safety Data Sheet, contact Covetrus at 1-855-724-3461. For additional information about adverse drug experience reporting for animal drugs, contact FDA at 1-888-FDA-VETS or http://www.fda.gov/reportanimalae.</paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L957be7ab-e22e-4844-8df5-1cde606df1e2">
+               <id root="4a061bcc-9344-48e4-b047-8831272841b6"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">DOSAGE AND ADMINISTRATION:</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Dogs:</content> The recommended dosage is 6.25 mg/lb of body weight twice a day.</paragraph>
+                  <paragraph>Skin and soft tissue infections such as abscesses, cellulitis, wounds, superficial/juvenile pyoderma, and periodontal infections should be treated for 5-7 days or for 48 hours after all symptoms have subsided. If no response is seen after 5 days of treatment, therapy should be discontinued and the case reevaluated.</paragraph>
+                  <paragraph>Deep pyoderma may require treatment for 21 days; the maximum duration of treatment should not exceed 30 days.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Cats:</content> The recommended dosage is 62.5 mg twice a day</paragraph>
+                  <paragraph>Skin and soft tissue infections such as abscesses and cellulitis/dermatitis should be treated for 5-7 days or for 48 hours after all symptoms have subsided, not to exceed 30 days. If no response is seen after 3 days of treatment, therapy should be discontinued and the case reevaluated.</paragraph>
+                  <paragraph>Urinary tract infections may require treatment for 10-14 days or longer. The maximum duration of treatment should not exceed 30 days.</paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L05829d78-b089-41c3-ad5b-da1c4a4de801">
+               <id root="71860d85-7cc7-4e40-8ce2-70d9128f9a60"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">HOW SUPPLIED:</content> Amoxicillin and clavulanate potassium tablets in the following strengths are supplied in strip packs. Each carton holds 15 strips with 14 tablets per strip (210 tablets per carton).</paragraph>
+                  <paragraph>Each 62.5-mg tablet contains amoxicillin trihydrate equivalent to 50 mg of amoxicillin activity and 12.5 mg of clavulanic acid as the potassium salt. For use in dogs and cats.</paragraph>
+                  <paragraph>Each 125-mg tablet contains amoxicillin trihydrate equivalent to 100 mg of amoxicillin activity and 25 mg of clavulanic acid as the potassium salt. For use in dogs only.</paragraph>
+                  <paragraph>Each 250-mg tablet contains amoxicillin trihydrate equivalent to 200 mg of amoxicillin activity and 50 mg of clavulanic acid as the potassium salt. For use in dogs only.</paragraph>
+                  <paragraph>Each 375-mg tablet contains amoxicillin trihydrate equivalent to 300 mg of amoxicillin activity and 75 mg of clavulanic acid as the potassium salt. For use in dogs only.</paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lfa8a1a7f-25e6-4205-b216-7f593bf05f3c">
+               <id root="f38f19b5-324c-4cfe-b667-1ba30d2026f6"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Dispense according to recommendations outlined in Dosage and Administration section.<br/>Augmentin is a trademark owned by GlaxoSmithKline.<br/>Approved by FDA under ANADA # 200-702</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Questions?</content>
+                     <br/>(855) 724-3461<br/>Distributed by:<br/>Covetrus North America<br/>400 Metro Place North<br/>Dublin, OH 43017<br/>
+                     <content styleCode="bold">covetrus.com</content>
+                     <br/>Made in India</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L8ce66a9e-fbe6-4744-9826-3554e5da7261"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+               <component>
+                  <observationMedia ID="L8ce66a9e-fbe6-4744-9826-3554e5da7261">
+                     <text>take-time</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="take-time.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L9351d147-f9ac-4fbd-8d9d-392cf6e767fb">
+               <id root="07b5b0af-1eb3-43d8-b8ec-d5fdb3d9d457"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PACKAGE LABEL.PRINCIPAL DISPLAY PANEL</content>
+                  </paragraph>
+                  <paragraph>NDC: 11695-6991-1</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Amoxicillin and clavulanate potassium tablets</content>
+                  </paragraph>
+                  <paragraph>62.5 mg</paragraph>
+                  <paragraph>For use in dogs and cats</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Caution:</content> Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">210 tablets (15 strips, 14 tablets each)</content>
+                  </paragraph>
+                  <paragraph>Each film-coated tablet contains amoxicillin trihydrate equivalent to 50 mg of amoxicillin USP activity and 12.5 mg of clavulanic acid USP as the potassium salt</paragraph>
+                  <paragraph>Approved by FDA under ANADA # 200-702</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Led5705f9-c300-458e-aa7c-16fee435b5f3"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+               <component>
+                  <observationMedia ID="Led5705f9-c300-458e-aa7c-16fee435b5f3">
+                     <text>62.5mg carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="62.5mg carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="La82c8558-c17f-4dcf-8c31-f991813bb155">
+               <id root="711181ff-217c-404e-9f1b-3f081512adb5"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PACKAGE LABEL.PRINCIPAL DISPLAY PANEL</content>
+                  </paragraph>
+                  <paragraph>NDC: 11695-6992-1</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Amoxicillin and clavulanate potassium tablets</content>
+                  </paragraph>
+                  <paragraph>125 mg</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For use in dogs</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Caution:</content> Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+                  <paragraph>Each film-coated tablet contains amoxicillin trihydrate equivalent to 100 mg of amoxicillin USP activity and 25 mg of clavulanic acid USP as the potassium salt</paragraph>
+                  <paragraph>Approved by FDA under ANADA # 200-702</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">210 tablets (15 strips, 14 tablets each)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <renderMultiMedia referencedObject="L2b5cdb7c-de24-4ad2-a3a8-30e516d60c51"/>
+                     </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+               <component>
+                  <observationMedia ID="L2b5cdb7c-de24-4ad2-a3a8-30e516d60c51">
+                     <text>125mg carton.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="125mg carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L955603e1-ceca-4cad-ba52-98733ffddfcd">
+               <id root="a746f336-aa6b-4ab4-9dac-9ba8a447e7b8"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PACKAGE LABEL.PRINCIPAL DISPLAY PANEL</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>NDC: 11695-6993-1</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Amoxicillin and clavulanate potassium tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>250 mg</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For use in dogs</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>
+                     <content styleCode="bold">Caution:</content> Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">210 tablets (15 strips, 14 tablets each)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>Each film-coated tablet contains amoxicillin trihydrate equivalent to 200 mg of amoxicillin USP activity and 50 mg of clavulanic acid USP as the potassium salt</paragraph>
+                  <paragraph>Approved by FDA under ANADA # 200-702</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lf46f7589-2b1c-4a74-b037-a1b78382d1ec"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+               <component>
+                  <observationMedia ID="Lf46f7589-2b1c-4a74-b037-a1b78382d1ec">
+                     <text>250mg carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="250mg carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L543114c8-f171-4800-b524-36070bc28cd4">
+               <id root="4476c49e-31d6-40cc-8db7-5e2d058b0d18"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PACKAGE LABEL.PRINCIPAL DISPLAY PANEL</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>NDC: 11695-6994-1</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Amoxicillin and clavulanate potassium tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>375 mg</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For use in dogs</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>
+                     <content styleCode="bold">Caution:</content> Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+                  <paragraph>Each film-coated tablet contains amoxicillin trihydrate equivalent to 300 mg of amoxicillin USP activity and 75 mg of clavulanic acid USP as the potassium salt</paragraph>
+                  <paragraph>Approved by FDA under ANADA # 200-702</paragraph>
+                  <paragraph>210 tablets (15 strips 14 tablets each)</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L0e992f83-1806-4fbd-96c2-951c9ec9caea"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20210805"/>
+               <component>
+                  <observationMedia ID="L0e992f83-1806-4fbd-96c2-951c9ec9caea">
+                     <text>375mg carton.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="375mg carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="de18b1f7-d919-47b1-8bab-eff03ca5ea8f"/>
+   <code codeSystem="2.16.840.1.113883.6.1" code="34391-3" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title ID="inv-83756c42-c0c7-4bce-8782-32030256a5ee">AMOXICILLIN AND CLAVULANATE POTASSIUM FOR ORAL SUSPENSION, USP, 600 mg/42.9 mg per 5 mL<br/>Rx only</title>
+   <effectiveTime value="20130906"/>
+   <setId root="08a35bfc-3945-4f95-948a-8af36cda715c"/>
+   <versionNumber value="2"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="937890044"/>
+            <name>Ranbaxy Pharmaceuticals Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id extension="937890044" root="1.3.6.1.4.1.519.1"/>
+                  <name>Ranbaxy Pharmaceuticals Inc.</name>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="862358806"/>
+                        <name>Ranbaxy Laboratories Limited- Dewas, India</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code codeSystem="2.16.840.1.113883.3.26.1.1" code="C43360" displayName="manufacture"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="63304-768" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="19726ec8-0366-4a12-9787-3ccdf6242b30"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="48780-1" displayName="SPL LISTING DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20130906"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code codeSystem="2.16.840.1.113883.6.69" code="63304-768"/>
+                        <name>amoxicillin and clavulanate potassium </name>
+                        <formCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C42994" displayName="SUSPENSION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>amoxicillin and clavulanate potassium</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="600"/>
+                              <denominator unit="mL" value="5"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code codeSystem="2.16.840.1.113883.4.9" code="804826J2HU"/>
+                              <name>AMOXICILLIN</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code codeSystem="2.16.840.1.113883.4.9" code="9EM05410Q9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="42.9"/>
+                              <denominator unit="mL" value="5"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code codeSystem="2.16.840.1.113883.4.9" code="Q42OMW3AT8"/>
+                              <name>CLAVULANATE POTASSIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code codeSystem="2.16.840.1.113883.4.9" code="23521W1S24"/>
+                                    <name>CLAVULANIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code codeSystem="2.16.840.1.113883.4.9" code="Z0H242BBR1"/>
+                              <name>ASPARTAME</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code codeSystem="2.16.840.1.113883.4.9" code="ETJ7Z6XBU4"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code codeSystem="2.16.840.1.113883.4.9" code="68538UP9SE"/>
+                              <name>MONOSODIUM CITRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code codeSystem="2.16.840.1.113883.4.9" code="1Q73Q2JULR"/>
+                              <name>SODIUM CITRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code codeSystem="2.16.840.1.113883.4.9" code="TTV12P4NEE"/>
+                              <name>XANTHAN GUM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="50"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="63304-768-03"/>
+                              <formCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C43169" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="75"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="63304-768-01"/>
+                              <formCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C43169" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="100"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="63304-768-04"/>
+                              <formCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C43169" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="125"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="63304-768-07"/>
+                              <formCode codeSystem="2.16.840.1.113883.3.26.1.1" code="C43169" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="150"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="63304-768-50"/>
+                              <formCode codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE" code="C43169"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="200"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="63304-768-02"/>
+                              <formCode codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE" code="C43169"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code codeSystem="2.16.840.1.113883.1.11.19255" code="SPLCOLOR"/>
+                           <value xsi:type="CE" code="C48330" displayName="YELLOW" codeSystem="2.16.840.1.113883.3.26.1.1">
+                              <originalText>white to pale yellow</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id nullFlavor="OTH" root="2.16.840.1.113883.3.150" extension="ANDA065207"/>
+                           <code code="C73584" displayName="ANDA" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20070313"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code codeSystem="2.16.840.1.113883.1.11.19255" code="SPLFLAVOR"/>
+                           <value codeSystem="2.16.840.1.113883.3.26.1.1" code="C73417" displayName="STRAWBERRY" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code codeSystem="2.16.840.1.113883.1.11.19255" code="SPLFLAVOR"/>
+                           <value codeSystem="2.16.840.1.113883.3.26.1.1" code="C73417" displayName="STRAWBERRY" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-e9efdcb9-be92-41b4-be14-446e6dfc0bb9">
+               <id root="a7a46ddc-9663-49a1-9ac3-28a331129ca9"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title ID="inv-068ee987-b405-40db-9dd3-7b1c1084cc2a"/>
+               <text ID="inv-7f6fb679-5173-4a1f-9874-edc66af30ca5">
+                  <paragraph ID="inv-06c044cc-2063-4659-9b98-261cb1d563eb">To reduce the development of drug-resistant bacteria and maintain the effectiveness of amoxicillin and clavulanate potassium for oral suspension, USP, 600 mg/42.9 mg per 5 mL and other antibacterial drugs, amoxicillin and clavulanate potassium for oral suspension, USP, 600 mg/42.9 mg per 5 mL should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria<content styleCode="italics">.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-20346703-e6ee-4ba1-b9c9-6ec04c304178">
+               <id root="bba12476-b722-41a6-b6dd-7b4aa5ba8f4b"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34089-3" displayName="DESCRIPTION SECTION"/>
+               <title ID="inv-3b9c5005-9927-4f1f-8818-9abc78a86765">DESCRIPTION</title>
+               <text ID="inv-824632b2-2b43-4bb3-97ee-66105dcfff53">
+                  <paragraph ID="inv-d13cde2d-e07c-46be-85be-44cd9d501dbb">Amoxicillin and clavulanate potassium for oral suspension, USP, 600 mg/42.9 mg per 5 mL is an oral antibacterial combination consisting of the semisynthetic antibiotic amoxicillin, USP and the β-lactamase inhibitor, clavulanate potassium (the potassium salt of clavulanic acid). Amoxicillin is an analog of ampicillin, derived from the basic penicillin nucleus, 6-aminopenicillanic acid. The amoxicillin molecular formula is C<sub>16</sub>H<sub>1</sub>
+                     <sub>9</sub>N<sub>3</sub>O<sub>5</sub>S•3H<sub>2</sub>O, and the molecular weight is 419.46. Chemically, amoxicillin is (2<content styleCode="italics">S</content>,5<content styleCode="italics">R</content>,6<content styleCode="italics">R</content>)-6-[(<content styleCode="italics">R</content>)-(-)-2-Amino-2-(<content styleCode="italics">p</content>-hydroxyphenyl)acetamido]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid trihydrate and may be represented structurally as:</paragraph>
+                  <renderMultiMedia ID="ID0ETGAC" referencedObject="MM-92773f32-5315-44b4-ab57-65b7ea1adcc8"/>
+                  <paragraph ID="inv-8ec8bd39-e03e-45df-80df-1108e34dcd6f">Clavulanic acid is produced by the fermentation of <content styleCode="italics">Streptomyces clavuligerus</content>. It is a β-lactam structurally related to the penicillins and possesses the ability to inactivate a wide variety of β<content styleCode="italics">-</content>lactamases by blocking the active sites of these enzymes. Clavulanic acid is particularly active against the clinically important plasmid-mediated β-lactamases frequently responsible for transferred drug resistance to penicillins and cephalosporins. The clavulanate potassium molecular formula is C<sub>8</sub>H<sub>8</sub>KNO<sub>5</sub> and the molecular weight is 237.25. Chemically, clavulanate potassium is potassium (<content styleCode="italics">Z</content>)-(2<content styleCode="italics">R</content>,5<content styleCode="italics">R</content>)-3-(2-hydroxyethylidene)-7-oxo-4-oxa-1-azabicyclo[3.2.0]-heptane-2-carboxylate and may be represented structurally as:</paragraph>
+                  <renderMultiMedia ID="ID0EMHAC" referencedObject="MM-cf67ac3b-e94c-425b-9f26-78dc5e293ce0"/>
+                  <paragraph ID="inv-c0ed4306-03b4-4e5b-bcb7-7aafacceede8"/>
+                  <paragraph ID="inv-ca5bc9bd-d34b-42e9-bb34-6994dc777e86">Each 5 mL of reconstituted amoxicillin and clavulanate potassium for oral suspension, USP, 600 mg/42.9 mg per 5 mL contains 600 mg amoxicillin, USP as the trihydrate and 42.9 mg clavulanic acid as the potassium salt (clavulanate potassium). The potassium content per 5 mL is 0.25 mEq.</paragraph>
+                  <paragraph ID="inv-869cc940-1d3d-4878-b38f-5a0f2232bedf">
+                     <content styleCode="bold">Inactive Ingredients:</content> aspartame, colloidal silicon dioxide, monosodium citrate, silicon dioxide, sodium citrate (as dihydrate), strawberry flavor, strawberry guarana flavor, and xanthan gum.</paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>See <content styleCode="bold">PRECAUTIONS–Information for Patient/Phenylketonurics.</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20130906"/>
+               <component>
+                  <observationMedia ID="MM-92773f32-5315-44b4-ab57-65b7ea1adcc8">
+                     <text>fig01</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="fig01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM-cf67ac3b-e94c-425b-9f26-78dc5e293ce0">
+                     <text>fig02</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="fig02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-3b65860d-6e03-43d0-b319-60ff6a0806f1">
+               <id root="0b33ae14-7040-47c2-a1da-c10b271f5258"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34090-1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title ID="inv-8ed955db-a4a7-4020-b5ac-bed0097ad72e">CLINICAL PHARMACOLOGY</title>
+               <text ID="inv-b8ab6653-3b2e-4a1c-913e-f02a8e3c5f70">
+                  <paragraph ID="inv-58e76310-176f-4577-b61b-52dc979a06be">The pharmacokinetics of amoxicillin and clavulanate were determined in a study of 19 pediatric patients, 8 months to 11 years, given amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL at an amoxicillin dose of 45 mg/kg q12h with a snack or meal. The mean plasma amoxicillin and clavulanate pharmacokinetic parameter values are listed in the following table.</paragraph>
+                  <table ID="inv-baad1c0c-a6a5-4bbf-bd09-87e189d4bb98" frame="border" border="1">
+                     <caption ID="inv-fd5b194e-4494-4358-b191-792ae4621c7b">Table 1. Mean (± SD) Plasma Amoxicillin and Clavulanate Pharmacokinetic Parameter Values Following Administration of 45 mg/kg of Amoxicillin and Clavulanate Potassium for Oral Suspension, 600 mg/42.9 mg per 5 mL Every 12 Hours to Pediatric Patients</caption>
+                     <col ID="inv-e614b8fe-c1b1-4576-a1da-1ff70b6b78ee" width="188.00px"/>
+                     <col ID="inv-16cdb6a3-bebb-443a-ad4c-13c2cef0d4bd" width="196.00px"/>
+                     <col ID="inv-93d4222f-867a-4029-9a90-1b2da323c664" width="196.00px"/>
+                     <tbody ID="inv-60c2df1c-1e33-48e4-9d28-d4d67083d167">
+                        <tr ID="inv-cf54f34d-556a-40f4-9198-5d82c3857913">
+                           <td ID="inv-44a03a58-97bc-4a72-b913-b785ccfc0d49">
+                              <content styleCode="bold">Parameter<sup>*</sup>
+                              </content>
+                           </td>
+                           <td align="center" ID="inv-fc3b3a4d-5044-4d89-b36c-9f78bc5b51f5">
+                              <content styleCode="bold">Amoxicillin</content>
+                           </td>
+                           <td align="center" ID="inv-0bdfd392-fd17-402f-8dd2-c29b5d531b72">
+                              <content styleCode="bold">Clavulanate</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-c9c16628-ef38-43f8-9027-4c22af7c2d53">
+                           <td ID="inv-641e6731-7f8f-45c7-ba8a-f836e17995ec">
+ C<sub>max</sub> (mcg/mL) </td>
+                           <td align="center" ID="inv-b40ff1fa-ca88-4e99-8e07-6c18e1000779">
+ 15.7 ± 7.7 </td>
+                           <td align="center" ID="inv-60da5f6e-1afd-468f-831d-accacb891f02">
+ 1.7 ± 0.9 </td>
+                        </tr>
+                        <tr ID="inv-428492f7-8937-4159-8f3f-0e53926b6ef8">
+                           <td ID="inv-5d51584f-5161-471b-821e-0bbe39f0d6e8">
+ T<sub>max</sub> (hr) </td>
+                           <td align="center" ID="inv-58d70f7e-b83c-4f08-a269-323c58208a9e">
+ 2 (1 to 4) </td>
+                           <td align="center" ID="inv-7b3685fa-98ef-454a-ad28-505ee993a825">
+ 1.1 (1 to 4) </td>
+                        </tr>
+                        <tr ID="inv-4eefb9d0-4c71-42d8-800d-5092198e7a67">
+                           <td ID="inv-d672f71b-2c92-4073-9751-a914fcf0257c">
+ AUC<sub>0-t</sub> (mcg•hr/mL) </td>
+                           <td align="center" ID="inv-7e78afff-c4eb-4be2-b84f-62340ce45156">
+ 59.8 ± 20 </td>
+                           <td align="center" ID="inv-3660e652-d017-431a-beb0-3cf2d0d85d63">
+ 4 ± 1.9 </td>
+                        </tr>
+                        <tr ID="inv-73d46eca-45f1-48e6-8462-8c5f4e9f54a5">
+                           <td ID="inv-a3b2bc90-cd6e-4a9a-a031-aecddacc5309">
+ T<sub>1/2</sub>
+                              <sup/>(hr) </td>
+                           <td align="center" ID="inv-b076176f-3e79-414b-b3ad-0e775806f49b">
+ 1.4 ± 0.3 </td>
+                           <td align="center" ID="inv-eab833f9-adba-426d-a563-61bd45778eef">
+ 1.1 ± 0.3 </td>
+                        </tr>
+                        <tr ID="inv-d3392a1e-eab1-4db9-a984-9257284d266e">
+                           <td ID="inv-2b3aa230-c3f7-4cab-a0e9-d008bd424b53">
+ CL/F (L/hr/kg) </td>
+                           <td align="center" ID="inv-ffca3b2f-2002-4728-b285-636149435143">
+ 0.9 ± 0.4 </td>
+                           <td align="center" ID="inv-f34b1707-1648-4a81-99fb-9987649d8d8f">
+ 1.1 ± 1.1 </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph ID="inv-071266c7-d374-4db7-8601-b3073a5bffb9">
+                     <sup>*</sup>Arithmetic mean ± standard deviation, except T<sub>max</sub> values which are medians (ranges).</paragraph>
+                  <paragraph ID="inv-c1a73ee7-0d41-4384-938c-7aa2ca501ad7">The effect of food on the oral absorption of amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL has not been studied.</paragraph>
+                  <paragraph ID="inv-64198710-9ad0-418c-9a20-33730e11ac40">Approximately 50% to 70% of the amoxicillin and approximately 25% to 40% of the clavulanic acid are excreted unchanged in urine during the first 6 hours after administration of 10 mL of 250 mg/62.5 mg per 5 mL suspension of amoxicillin and clavulanate potassium.</paragraph>
+                  <paragraph ID="inv-a6789f17-fcd1-4add-88f2-43a3c35f9c08">Concurrent administration of probenecid delays amoxicillin excretion but does not delay renal excretion of clavulanic acid.</paragraph>
+                  <paragraph ID="inv-82c44228-2798-4dc9-a322-6b59c9612889">Neither component in amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL is highly protein-bound; clavulanic acid has been found to be approximately 25% bound to human serum and amoxicillin approximately 18% bound.</paragraph>
+                  <paragraph ID="inv-08dd570f-953a-4c60-a353-5495fd24b3a1">Oral administration of a single dose of amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL at 45 mg/kg (based on the amoxicillin component) to pediatric patients, 9 months to 8 years, yielded the following pharmacokinetic data for amoxicillin in plasma and middle ear fluid (MEF):</paragraph>
+                  <table ID="inv-138ab4b3-f9aa-49f4-9b5a-584e372bb85b" frame="border" border="1">
+                     <caption ID="inv-a9058f18-dfae-4658-ac68-d4b092293a06">Table 2.  Amoxicillin Concentrations in Plasma and Middle Ear Fluid Following Administration of 45 mg/kg of Amoxicillin and Clavulanate Potassium for Oral Suspension, 600 mg/42.9 mg per 5 mL to Pediatric Patients</caption>
+                     <col ID="inv-a60db09e-68c3-4bf0-be77-ac08c6fc065d" width="140.00px"/>
+                     <col ID="inv-9aa4a6e0-f9a2-4b48-8c6c-229620c153b4" width="148.00px"/>
+                     <col ID="inv-f7d845b2-6c8d-4676-8c3f-1bda8b1fdfef" width="148.00px"/>
+                     <col ID="inv-a72a52fe-5d7f-4d07-ba7c-1e3d56df897e" width="148.00px"/>
+                     <tbody ID="inv-82f2ca4b-43c8-46f0-a43c-198988851ece">
+                        <tr ID="inv-802ad46f-43f6-418b-befc-42cb9e2d21d9">
+                           <td align="center" colspan="2" ID="inv-449f6efa-ecb5-45af-8cac-b4b68138fea5">
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold">Timepoint</content>
+                           </td>
+                           <td align="center" ID="inv-a81a70e7-9be2-4e97-99fc-20478ca6cce0">
+                              <content styleCode="bold">Amoxicillin</content>
+                              <content styleCode="bold">concentration</content>
+                              <content styleCode="bold">in plasma (mcg/mL)</content>
+                           </td>
+                           <td align="center" ID="inv-87599b69-2bd1-4429-b2a0-02380d99b561">
+                              <content styleCode="bold">Amoxicillin</content>
+                              <content styleCode="bold">concentration</content>
+                              <content styleCode="bold">in MEF (mcg/mL)</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-c10bdde9-1f38-4270-9e43-6ab13fc3a80c">
+                           <td ID="inv-526bb046-6ca9-40ff-bbee-beeb5f71498d">
+ 1 hour </td>
+                           <td ID="inv-61176323-f951-4119-9390-945be0b621db">
+ Mean
+ Median
+ Range </td>
+                           <td align="center" ID="inv-3e749550-88c4-45c7-b503-007fab59a439">
+ 7.7
+ 9.3
+ 1.5 to 14
+ (n = 5) </td>
+                           <td align="center" ID="inv-23c5934e-6a5b-4812-9376-ba8f11633420">
+ 3.2
+ 3.5
+ 0.2 to 5.5
+ (n = 4) </td>
+                        </tr>
+                        <tr ID="inv-1db151d6-1587-417d-aa77-92c015ae70cf">
+                           <td ID="inv-4258cf0d-4cac-4f07-bd4b-8636ca69d8f6">
+ 2 hour
+ <content styleCode="bold"> </content>
+                           </td>
+                           <td ID="inv-0915cb9c-47a5-44fe-a416-92daf455e619">
+ Mean
+ Median
+ Range </td>
+                           <td align="center" ID="inv-4dd148fa-9713-425d-8303-2ed2d8a1de9a">
+ 15.7
+ 13
+ 11 to 25
+ (n = 7) </td>
+                           <td align="center" ID="inv-60d6214f-6789-44cc-afe9-fe3cc1fa6e9c">
+ 3.3
+ 2.4
+ 1.9 to 6
+ (n = 5)  </td>
+                        </tr>
+                        <tr ID="inv-de5c409d-e477-47e4-8436-e91b27db112a">
+                           <td ID="inv-a1ce0fd2-e2d9-4e4f-9bbc-469421a861a2">
+ 3 hour </td>
+                           <td ID="inv-f435f0d9-c39d-4365-82b6-6879a273b151">
+ Mean
+ Median
+ Range </td>
+                           <td align="center" ID="inv-2923ff4d-7bf3-4d1b-8716-01f58d564308">
+ 13
+ 12
+ 5.5 to 21
+ (n = 5) </td>
+                           <td align="center" ID="inv-37511635-0118-41c7-b84b-ff520fde5dd8">
+ 5.8
+ 6.5
+ 3.9 to 7.4
+ (n = 5) </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph ID="inv-e76400a5-810b-4e9a-b835-49f24ef1d929">Dose administered immediately prior to eating.</paragraph>
+                  <paragraph ID="inv-01558bfd-cf0f-4fd3-8c3a-be2cd68b2be1">Amoxicillin diffuses readily into most body tissues and fluids with the exception of the brain and spinal fluid. The results of experiments involving the administration of clavulanic acid to animals suggest that this compound, like amoxicillin, is well distributed in body tissues.</paragraph>
+                  <paragraph ID="inv-99771563-2a1b-4b2e-948c-fbaff05bb4ff">
+                     <content styleCode="bold">Microbiology: </content>Amoxicillin is a semisynthetic antibiotic with a broad-spectrum of bactericidal activity against many gram-positive and gram-negative microorganisms. Amoxicillin is, however, susceptible to degradation by β-lactamases, and therefore, its spectrum of activity does not include organisms which produce these enzymes. Clavulanic acid is a β-lactam, structurally related to penicillin, which possesses the ability to inactivate a wide range of β-lactamase enzymes commonly found in microorganisms resistant to penicillins and cephalosporins. In particular, it has good activity against the clinically important plasmid-mediated b-lactamases frequently responsible for transferred drug resistance.</paragraph>
+                  <paragraph ID="inv-c89a55ed-231a-4722-8055-16e4309d974b">The clavulanic acid component of amoxicillin and clavulanate potassium for oral suspension,600 mg/42.9 mg per 5 mL protects amoxicillin from degradation by β-lactamase enzymes and effectively extends the antibiotic spectrum of amoxicillin to include many bacteria normally resistant to amoxicillin and other β-lactam antibiotics. Thus, amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL possesses the distinctive properties of a broad-spectrum antibiotic and a β-lactamase inhibitor.</paragraph>
+                  <paragraph ID="inv-8a0865af-64e2-4b4a-a46e-c338df2b077f">Amoxicillin/clavulanic acid has been shown to be active against most isolates of the following microorganisms, both <content styleCode="italics">in vitro </content>and in clinical infections as described in the <content styleCode="bold">INDICATIONS AND USAGE </content>section.</paragraph>
+                  <paragraph ID="inv-198db54a-6244-43bb-90ff-6c63669cb80b">
+                     <content styleCode="bold">
+                        <content styleCode="italics">Aerobic Gram-Positive Microorganisms:</content>
+                     </content>
+                  </paragraph>
+                  <paragraph ID="inv-3031c194-5717-41f7-9eda-5bbb6dcca615">
+                     <content styleCode="italics">Streptococcus pneumoniae </content>(including isolates with penicillin MICs ≤ 2 mcg/mL)</paragraph>
+                  <paragraph ID="inv-e8f28541-fbde-4cec-9343-41c22cffaa69">
+                     <content styleCode="bold">
+                        <content styleCode="italics">Aerobic Gram</content>
+                     </content>
+                     <content styleCode="italics">-<content styleCode="bold">Negative Microorganisms:</content>
+                     </content>
+                  </paragraph>
+                  <paragraph ID="inv-a751c3d6-14f7-4486-8463-5c2ae21116fd">
+                     <content styleCode="italics">Haemophilus influenzae </content>(including β-lactamase-producing isolates)</paragraph>
+                  <paragraph ID="inv-d5d8eb1e-4c93-473e-ad79-e1c5904154a4">
+                     <content styleCode="italics">Moraxella catarrhalis </content>(including β-lactamase-producing isolates)</paragraph>
+                  <paragraph ID="inv-c82bbd30-83d9-46ad-bcfe-a20a41a5aeeb">The following <content styleCode="italics">in vitro </content>data are available, <content styleCode="bold">but their clinical significance is unknown</content>.</paragraph>
+                  <paragraph ID="inv-97530c53-008c-444a-9e5f-c8e66503d851">At least 90% of the following microorganisms exhibit an <content styleCode="italics">in vitro </content>minimum inhibitory concentrations (MICs) less than or equal to the susceptible breakpoint for amoxicillin/clavulanic acid. However, the safety and efficacy of amoxicillin/clavulanic acid in with the exception of organisms shown to respond to amoxicillin alone, the safety and acid in treating infections due to these microorganisms have not been established in adequate and well-controlled trials.</paragraph>
+                  <paragraph ID="inv-2e50f58e-63ab-4097-9844-ff0c9fedd5de">
+                     <content styleCode="bold">
+                        <content styleCode="italics">Aerobic Gram</content>
+                     </content>
+                     <content styleCode="italics">-<content styleCode="bold">Positive Microorganisms:</content>
+                     </content>
+                  </paragraph>
+                  <paragraph ID="inv-3f51be9e-b997-469d-b0e3-29324c3580d1">
+                     <content styleCode="italics">Staphylococcus aureus </content>(including β-lactamase-producing isolates)</paragraph>
+                  <paragraph ID="inv-ed3a0fb5-31f4-4db3-96de-8c799065fe1a">
+                     <content styleCode="bold">NOTE</content>: <content styleCode="italics">Staphylococci</content> which are resistant to methicillin/oxacillin must be considered resistant to amoxicillin/clavulanic acid.</paragraph>
+                  <paragraph ID="inv-c7d36a8c-7a4e-47c4-bc77-4c0a142fe56a">
+                     <content styleCode="italics">Streptococcus pyogenes</content>
+                  </paragraph>
+                  <paragraph ID="inv-e4def7ad-4349-4bf1-80db-4a7d58e12a7a">
+                     <content styleCode="bold">NOTE</content>: <content styleCode="italics">S. pyogenes </content>do not produce β-lactamase, and therefore, are susceptible to amoxicillin alone. Adequate and well-controlled clinical trials have established the effectiveness of amoxicillin alone in treating certain clinical infections due to <content styleCode="italics">S. pyogenes</content>.</paragraph>
+                  <paragraph ID="inv-361af751-051d-42d9-8f34-17cf8c06db37">
+                     <content styleCode="bold">Susceptibility Test Methods:  </content>When available, the clinical microbiology laboratory should provide cumulative results of <content styleCode="italics">in vitro </content>susceptibility test results for antimicrobial drugs used in local hospitals and practice areas to the physician as periodic reports that describe the susceptibility profile of nosocomial and community-acquired pathogens.  These reports should aid the physician in selecting the most effective antimicrobial.</paragraph>
+                  <paragraph ID="inv-4e3b569e-7460-43a6-bb84-5002f88740c7">
+                     <content styleCode="bold">
+                        <content styleCode="italics">Dilution Techniques:</content>
+                     </content> Quantitative methods are used to determine antimicrobial minimum inhibitory concentrations (MICs). These MICs provide estimates of the susceptibility of bacteria to antimicrobial compounds. The MICs should be determined using a standardized procedure.<sup>1,2  </sup>Standardized procedures are based on dilution methods (broth for <content styleCode="italics">S. pneumoniae </content>and <content styleCode="italics">H. influenzae) </content>or equivalent with standardized inoculum concentration and standardized concentrations of amoxicillin/clavulanate potassium powder.</paragraph>
+                  <paragraph ID="inv-fa47e14c-2517-431f-b0c5-345fb930e121">The recommended dilution pattern utilizes a constant amoxicillin/clavulanate potassium ratio of 2 to 1 in all tubes with varying amounts of amoxicillin. MICs are expressed in terms of the amoxicillin concentration in the presence of clavulanic acid at a constant 2 parts amoxicillin to 1 part clavulanic acid. The MIC values should be interpreted according to criteria provided in Table 3.</paragraph>
+                  <paragraph ID="inv-c96a80d4-ffa3-42a9-9c4c-56efb98d126e">
+                     <content styleCode="bold">
+                        <content styleCode="italics">Diffusion Technique:</content>
+                     </content> Quantitative methods that require measurement of zone diameters also provides reproducible estimates of the susceptibility of bacteria to antimicrobials.  One such standardized technique requires the use of a standardized inoculum concentration. <sup>2,3</sup> This procedure uses paper disks impregnated with 30 mcg amoxicillin/clavulanate potassium (20 mcg amoxicillin plus 10 mcg clavulanate potassium) to test susceptibility of microorganisms to amoxicillin/clavulanate potassium.  Disk diffusion zone sizes should be interpreted according to criteria provided in Table 3.  </paragraph>
+                  <table ID="inv-dec392f3-26de-43a1-b587-7ad09c76531e" frame="border" border="1">
+                     <caption ID="inv-558a4725-2261-46f1-85c1-13e15fe85734">Table 3.  Susceptibility Test Result Interpretive Criteria for Amoxicillin/Clavulanate Potassium</caption>
+                     <col ID="inv-98df6f8b-9b48-48ed-853d-98de66e58b9d" width="104.00px"/>
+                     <col ID="inv-55091e8f-425e-4c06-a884-0d0c0d5cf9f5" width="84.00px"/>
+                     <col ID="inv-e14886f5-108f-4096-84a4-bee79372ebbb" width="84.00px"/>
+                     <col ID="inv-acb86c8b-4004-4363-9649-a4d249af250b" width="84.00px"/>
+                     <col ID="inv-02d8d863-5a54-4111-bb14-0cb5e264a7db" width="84.00px"/>
+                     <col ID="inv-0f3ee128-5b18-4fcd-a2b3-867e34c7866d" width="84.00px"/>
+                     <col ID="inv-c4c52639-6316-41dd-9003-d3f13d24d88c" width="84.00px"/>
+                     <tbody ID="inv-edfd5ecf-9c64-4f6b-b019-2ce531cfb8e2">
+                        <tr ID="inv-9066d29b-9368-4b78-95b5-63beaf04a604">
+                           <td rowspan="2" ID="inv-09ac2779-cbcd-4659-97c5-a9991c19f259">
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold">Pathogen</content>
+                           </td>
+                           <td align="center" colspan="3" ID="inv-3c590a0b-107d-42c8-90cc-3cbebe14a533">
+                              <content styleCode="bold">Minimum Inhibitory Concentration (mcg/mL)</content>
+                           </td>
+                           <td align="center" colspan="3" ID="inv-a04f029c-ad32-4d54-a89f-ba5617f91c07">
+                              <content styleCode="bold">Disk Diffusion</content>
+                              <content styleCode="bold">(Zone Diameter in mm)</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-e6ce4bca-e2a6-4e1c-93c4-f11ecca0a15f">
+                           <td align="center" ID="inv-dc9fbba6-6117-461b-94c5-536fb9323279">
+                              <content styleCode="bold">S</content>
+                           </td>
+                           <td align="center" ID="inv-63b23051-212b-414a-89d7-f884a6ab6472">
+                              <content styleCode="bold">I</content>
+                           </td>
+                           <td align="center" ID="inv-73c8273e-a2d5-4721-80b7-650e585b45a6">
+                              <content styleCode="bold">R</content>
+                           </td>
+                           <td align="center" ID="inv-fcb86b00-b457-4472-849f-afec450cab5c">
+                              <content styleCode="bold">S</content>
+                           </td>
+                           <td align="center" ID="inv-1f54c735-f06c-496a-9d64-0401e59a13b1">
+                              <content styleCode="bold">I</content>
+                           </td>
+                           <td align="center" ID="inv-2c48767e-07df-45cf-9717-5bc7e137396d">
+                              <content styleCode="bold">R</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-27f80641-e368-4078-bd8f-303b63947540">
+                           <td ID="inv-327a5ac6-d5c8-4587-a0f3-ce5c18aaeaaa">
+                              <content styleCode="italics">Streptococcus pneumoniae</content>
+                           </td>
+                           <td align="center" ID="inv-13bb3a49-bf1d-476e-aab7-3528e75a00e8">
+ ≤ 2/1 </td>
+                           <td align="center" ID="inv-24aee0ed-595d-4930-b983-649b0b7641c7">
+ 4/2 </td>
+                           <td align="center" ID="inv-7be3ab19-2f3f-423d-b557-4fb3b3e5b661">
+ ≥ 8/4 </td>
+                           <td align="center" colspan="3" ID="inv-e3e40570-b1bc-49d5-96d9-2771f0ed7b9d">
+ Not applicable (NA) </td>
+                        </tr>
+                        <tr ID="inv-bda9e968-e7a0-4d72-8a4b-bf533367fcaf">
+                           <td ID="inv-54ac97ac-479d-40e5-b5c1-a90a449d8c42">
+                              <content styleCode="italics">Haemophilus influenzae</content>
+                           </td>
+                           <td align="center" ID="inv-b1753365-62fe-4700-a854-3778840663e7">
+ ≤ 4/2 </td>
+                           <td align="center" ID="inv-80284bb6-0b18-470b-8a03-609804d5108b">
+ NA </td>
+                           <td align="center" ID="inv-aa052216-536c-4558-97a8-815b7a2d7f7e">
+ ≥ 8/4 </td>
+                           <td align="center" ID="inv-e0358beb-2405-471a-9807-56d2d25da2ce">
+ ≥ 20 </td>
+                           <td align="center" ID="inv-d58848c0-0ce0-46d4-a514-b5e1718c8e71">
+ NA </td>
+                           <td align="center" ID="inv-9a7d0552-5e69-408e-8c98-f49657cb8cc8">
+ ≤ 19 </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph ID="inv-fcb1f472-75be-4c50-93d6-27404dc83c78">
+                     <content styleCode="bold">NOTE:</content>  Susceptibility of <content styleCode="italics">S</content>. <content styleCode="italics">pneumoniae</content> should be determined using a 1 mcg oxacillin disk.  Isolates with oxacillin zone sizes of ≥ 20 mm are susceptible to amoxicillin/clavulanic acid.  An amoxicillin/clavulanic acid MIC should be determined on isolates of <content styleCode="italics">S</content>. <content styleCode="italics">pneumoniae </content>with oxacillin zone sizes of ≤ 19 mm.</paragraph>
+                  <paragraph ID="inv-2931aada-1da0-4e2e-8503-bb7334df6918">
+                     <content styleCode="bold">NOTE:  </content>β-lactamase-negative, ampicillin-resistant <content styleCode="italics">H. influenzae </content>isolates must be considered resistant to amoxicillin/clavulanic acid.</paragraph>
+                  <paragraph ID="inv-bc336f74-a851-4fb1-90ad-ada8a5490e3b">A report of S (“Susceptible”) indicates that the antimicrobial is likely to inhibit growth of the pathogen if the antimicrobial compound in the blood reaches the concentration usually achievable. A report of I (“Intermediate”) indicates that the result should be considered equivocal, and, if the microorganism is not fully susceptible to alternative, clinically feasible antimicrobials, the test should be repeated. This category implies possible clinical applicability in body sites where the drug is physiologically concentrated or in situations where high doses of antimicrobial can be used. This category also provides a buffer zone that prevents small uncontrolled technical factors from causing major discrepancies in interpretation. A report of R (“Resistant”) indicates that the antimicrobial is not likely to inhibit growth of the pathogen if the antimicrobial compound in the blood reaches the concentration usually achievable; other therapy should be selected.</paragraph>
+                  <paragraph ID="inv-c604975a-9b58-4fc8-ba4f-b901fd181cc3">Standardized susceptibility test procedures require the use of quality microorganisms to determine the performance of the test procedures. <sup>1-3</sup>. Standard amoxicillin/clavulanate potassium powder should provide the MIC ranges for the quality control organisms in Table 4.  For the disk diffusion technique, the 30 mcg–amoxicillin/clavulanate potassium disk should provide the zone diameter ranges for the quality control organisms in Table 4. </paragraph>
+                  <table ID="inv-e0ce4221-fa0b-4c03-9802-9470abf2cbcf" frame="border" border="1">
+                     <caption ID="inv-df536220-31a0-4496-99f4-4265e4bbfd35">Table 4.  Acceptable Quality Control Ranges for Amoxicillin/Clavulanate Potassium </caption>
+                     <col ID="inv-aee23121-b103-4af3-9570-de2aaf46fe82" width="276.00px"/>
+                     <col ID="inv-b3cc657f-87bc-427c-8231-ea648e08e0d0" width="164.00px"/>
+                     <col ID="inv-db01e2dd-b256-4a16-ad01-1a75512ef90a" width="176.00px"/>
+                     <tbody ID="inv-be795ac0-b147-4cb9-bff7-3ff1a026dfff">
+                        <tr ID="inv-020e4764-b839-44d1-8d71-0d7b5562cdd1">
+                           <td ID="inv-ceab15d7-0202-4d50-8aa6-2e5d3f3abd24">
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold">Quality Control Organisms</content>
+                           </td>
+                           <td align="center" ID="inv-3c4b7ef1-d7e2-4a70-aa07-6d6c0d53ee40">
+                              <content styleCode="bold">Minimum Inhibitory</content>
+                              <content styleCode="bold">Concentration</content>
+                              <content styleCode="bold"> Range</content>
+                              <content styleCode="bold"> (mcg/mL)</content>
+                           </td>
+                           <td align="center" ID="inv-2e9f407a-b956-409f-a6cc-a4ccbe8578a6">
+                              <content styleCode="bold">Disk Diffusion</content>
+                              <content styleCode="bold">(Zone Diameter Range</content>
+                              <content styleCode="bold">in mm)</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-1ef6b9cc-50b0-4207-b369-43402be65fea">
+                           <td ID="inv-0d852428-fab4-49ff-a889-6fe3ca73faf1">
+                              <content styleCode="italics">Escherichia coli </content>ATCC<sup>®*</sup> 35218<sup>†</sup>
+ (<content styleCode="italics">H. influenzae </content>quality control) </td>
+                           <td align="center" ID="inv-56033cea-949b-4700-bc7d-4b7fb772e439">
+ 4/2 to 16/8 </td>
+                           <td align="center" ID="inv-c65244c7-a4eb-4730-ace5-783886d4ecda">
+ 17 to 22 </td>
+                        </tr>
+                        <tr ID="inv-b2a31725-e0c4-456d-8b56-c6785a38c0d9">
+                           <td ID="inv-52d0355d-29ae-4417-a72d-7d7598b89167">
+                              <content styleCode="italics">Haemophilus influenzae </content>ATCC 49247  </td>
+                           <td align="center" ID="inv-d0606d35-008d-4aba-89d7-8aa28c72243d">
+ 2/1 to 16/8 </td>
+                           <td align="center" ID="inv-2505a9ae-fa4e-4099-9058-5817f1a3628a">
+ 15 to 23 </td>
+                        </tr>
+                        <tr ID="inv-04fb6e44-5acf-4163-99fa-4527faf36ef6">
+                           <td ID="inv-33fd2027-397a-4857-bd34-6636d9233fe9">
+                              <content styleCode="italics">Streptococcus pneumoniae </content>ATCC 49619  </td>
+                           <td align="center" ID="inv-f9e2758e-d520-4d33-bfb5-649ac12cac8f">
+ 0.03/0.016 to 0.12/0.06 </td>
+                           <td align="center" ID="inv-df62b5bc-2a63-4f7b-b3d5-25f801982163">
+ NA </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph ID="inv-ba8e741b-51f2-4258-ad29-ff7f89ee0e53">
+                     <sup>*</sup>ATCC is a trademark of the American Type Culture Collection.</paragraph>
+                  <paragraph ID="inv-9eec7f4d-6f53-4d34-baf4-ce8d631db72d">
+                     <sup>†</sup>When using <content styleCode="italics">Haemophilus </content>Test Medium (HTM).</paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-5fff2077-df94-4f18-91c9-71ff55a36229">
+               <id root="5a958ec1-17e1-4a2c-8c96-b936393d1ee6"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34067-9" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title ID="inv-52b6b23e-0462-419d-8b91-174faac96373">INDICATIONS AND USAGE</title>
+               <text ID="inv-f9f57c13-08bf-42ff-ba06-0182dbe1dab2">
+                  <paragraph ID="inv-782a91db-feab-4a1a-80dc-eafcc6b3a265">Amoxicillin and clavulanate potassium for oral suspension, USP, 600 mg/42.9 mg per 5 mL is indicated for the treatment of pediatric patients with recurrent or persistent acute otitis media due to <content styleCode="italics">S. pneumoniae </content>(penicillin MICs ≤ 2mcg/mL), <content styleCode="italics">H. influenzae </content>(including β-lactamase-producing strains), or <content styleCode="italics">M. catarrhalis </content>(including b-lactamase-producing strains) characterized by the following risk factors:</paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>antibiotic exposure for acute otitis media within the preceding 3 months, and either of the following:<list listType="unordered" styleCode="Disc">
+                           <item>age ≤ 2 years</item>
+                           <item>daycare attendance</item>
+                        </list>
+                     </item>
+                  </list>
+                  <paragraph ID="inv-326ed148-5c40-4550-86a1-d7e78a02126c">[See <content styleCode="bold">CLINICAL PHARMACOLOGY</content>, <content styleCode="bold">Microbiology</content>].</paragraph>
+                  <paragraph ID="inv-dddee979-b4bf-453c-9ce4-5991381f29f6">
+                     <content styleCode="bold">NOTE:</content> Acute otitis media due to <content styleCode="italics">S. pneumoniae </content>alone can be treated with amoxicillin. Amoxicillin and clavulanate potassium for oral suspension, USP, 600 mg/42.9 mg per 5 mL is not indicated for the treatment of acute otitis media due to <content styleCode="italics">S. pneumoniae </content>with penicillin MIC ≥ 4 mcg/mL.</paragraph>
+                  <paragraph ID="inv-e0531ae1-3be7-4d69-afea-8eec86bb5622">Therapy may be instituted prior to obtaining results from bacteriological studies when there is reason to believe the infection may involve both <content styleCode="italics">S</content>. <content styleCode="italics">pneumoniae</content> (penicillin MIC ≤ 2 mcg/mL) and the b-lactamase-producing organisms that listed above.</paragraph>
+                  <paragraph ID="inv-cd75f4ce-a9b5-46ef-8a5a-bfc5474ac166">To reduce the development of drug-resistant bacteria and maintain the effectiveness of amoxicillin and clavulanate potassium for oral suspension, USP, 600 mg/42.9 mg per 5 mL and other antibacterial drugs, amoxicillin and clavulanate potassium for oral suspension, USP, 600 mg/42.9 mg per 5 mL should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria.  When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy.  In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy.</paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-a1eee3bd-fb15-43ae-be59-720a78bafbc7">
+               <id root="6a949606-b754-4b7d-8558-8e3f0786a518"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34070-3" displayName="CONTRAINDICATIONS SECTION"/>
+               <title ID="inv-6b7d2d66-62e9-4c9a-9d59-0e48f1ff7a59">CONTRAINDICATIONS</title>
+               <text ID="inv-a543593a-1636-465c-ace3-a4aecce17b82">
+                  <paragraph ID="inv-efa85757-ba0e-4fb8-bc11-3d5d6e7f3098">Amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL is contraindicated in patients with a history of allergic reactions to any penicillin. It is also contraindicated in patients with a previous history of cholestatic jaundice/hepatic dysfunction associated with amoxicillin and clavulanate potassium.</paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-c0a97b53-6f0d-4d7c-ae1c-0567872fe5b8">
+               <id root="55755349-bae3-4fd6-8d24-95b5e35f00b2"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34071-1" displayName="WARNINGS SECTION"/>
+               <title ID="inv-50a1a3ad-2848-4813-b502-c7aa5c75259b">WARNINGS</title>
+               <text ID="inv-a9b1cee1-e26b-4474-92bd-754a61bcca97">
+                  <paragraph ID="inv-f474e9f5-9274-48db-9552-afd740502f42">SERIOUS AND OCCASIONALLY FATAL HYPERSENSITIVITY (ANAPHYLACTIC) REACTIONS HAVE BEEN REPORTED IN PATIENTS ON PENICILLIN THERAPY. THESE REACTIONS ARE MORE LIKELY TO OCCUR IN INDIVIDUALS WITH A HISTORY OF PENICILLIN HYPERSENSITIVITY AND/OR A HISTORY OF SENSITIVITY TO MULTIPLE ALLERGENS. THERE HAVE BEEN REPORTS OF INDIVIDUALS WITH A HISTORY OF PENICILLIN HYPERSENSITIVITY WHO HAVE EXPERIENCED SEVERE REACTIONS WHEN TREATED WITH CEPHALOSPORINS. BEFORE INITIATING THERAPY WITH AMOXICILLIN AND CLAVULANATE POTASSIUM FOR ORAL SUSPENSION, 600 MG/42.9 MG PER 5 ML, CAREFUL INQUIRY SHOULD BE MADE CONCERNING PREVIOUS HYPERSENSITIVITY REACTIONS TO PENICILLINS, CEPHALOSPORINS, OR OTHER ALLERGENS. IF AN ALLERGIC REACTION OCCURS, AMOXICILLIN AND CLAVULANATE POTASSIUM FOR ORAL SUSPENSION, 600 MG/42.9 MG PER 5 ML SHOULD BE DISCONTINUED AND THE APPROPRIATE THERAPY INSTITUTED. <content styleCode="bold">SERIOUS ANAPHYLACTIC REACTIONS REQUIRE IMMEDIATE EMERGENCY TREATMENT WITH EPINEPHRINE. OXYGEN, INTRAVENOUS STEROIDS, AND AIRWAY MANAGEMENT, INCLUDING INTUBATION, SHOULD ALSO BE ADMINISTERED AS INDICATED.</content>
+                  </paragraph>
+                  <paragraph ID="inv-ca9a95d4-45df-44c5-9ca9-cf3777c7eeb4">
+                     <content styleCode="bold">Pseudomembranous colitis has been reported with nearly all antibacterial agents, including amoxicillin/clavulanate potassium, and has ranged in severity from mild to life</content>-<content styleCode="bold">threatening. Therefore, it is important to consider this diagnosis in patients who present with diarrhea subsequent to the administration of antibacterial agents.</content>
+                  </paragraph>
+                  <paragraph ID="inv-8b109791-135f-4499-b8f4-29638505f783">Treatment with antibacterial agents alters the normal flora of the colon and may permit overgrowth of <content styleCode="italics">clostridia</content>. Studies indicate that a toxin produced by <content styleCode="italics">Clostridium difficile </content>is one primary cause of “antibiotic-associated colitis.”</paragraph>
+                  <paragraph ID="inv-f6770dcd-17b2-437b-8c1c-cb3195703491">After the diagnosis of pseudomembranous colitis has been established, appropriate therapeutic measures should be initiated. Mild cases of pseudomembranous colitis usually respond to drug discontinuation alone. In moderate to severe cases, consideration should be given to management with fluids and electrolytes, protein supplementation, and treatment with an antibacterial drug clinically effective against <content styleCode="italics">C.  difficile </content>colitis.</paragraph>
+                  <paragraph ID="inv-f293670f-5607-4c45-840f-0657e3ff9013">Amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL should be used with caution in patients with evidence of hepatic dysfunction. Hepatic toxicity associated with the use of amoxicillin/clavulanate potassium is usually reversible. On rare occasions, deaths have been reported (less than 1 death reported per estimated 4 million prescriptions worldwide). These have generally been cases associated with serious underlying diseases or concomitant medications (See <content styleCode="bold">CONTRAINDICATIONS</content> and <content styleCode="bold">ADVERSE REACTIONS-Liver</content>).</paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-6ede52cc-28aa-4dbc-b3f5-1bf7f3ba9f33">
+               <id root="2c854b04-b603-4c0f-b30f-0eabc0474252"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="42232-9" displayName="PRECAUTIONS SECTION"/>
+               <title ID="inv-0c08d1f3-2997-45eb-a21e-f28163df3079">PRECAUTIONS</title>
+               <effectiveTime value="20130906"/>
+               <component>
+                  <section ID="inv-2dab7708-4011-4a54-b101-9aec54d79293">
+                     <id root="bfd8e807-3797-4f31-bbdf-436e9703be4e"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42232-9" displayName="PRECAUTIONS SECTION"/>
+                     <title ID="inv-6734b0ed-15bf-4020-8204-d69a38bd0db4">General: </title>
+                     <text ID="inv-535535f4-1484-48fc-b93c-3ca3b191a3c5">
+                        <paragraph ID="inv-fab57c9d-2e3c-4c7c-ac2f-4b92dec64d6b">While amoxicillin/clavulanate possesses the characteristic low toxicity of the penicillin group of antibiotics, periodic assessment of organ system functions, including renal, hepatic, and hematopoietic function, is advisable if therapy is for longer than the drug is approved for administration.</paragraph>
+                        <paragraph ID="inv-f9799f84-4087-4eba-b130-5a0bd38ebcac">A high percentage of patients with mononucleosis who receive ampicillin develop an erythematous skin rash. Thus, ampicillin-class antibiotics should not be administered to patients with mononucleosis.</paragraph>
+                        <paragraph ID="inv-f0d27712-a3f5-4188-86d3-b1b037718132">The possibility of superinfections with mycotic or bacterial pathogens should be kept in mind during therapy. If superinfections occur (usually involving <content styleCode="italics">Pseudomonas </content>or <content styleCode="italics">Candida</content>), the drug should be discontinued and/or appropriate therapy instituted.</paragraph>
+                        <paragraph ID="inv-c186669c-aa22-483e-a19f-37b6a31798f7">Prescribing amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL in the absence of a proven or strongly suspected bacterial infection or a prophylactic indication is unlikely to provide benefit to the patient and increases the risk of the development of drug-resistant-bacteria.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-1b26f463-84c2-49fa-b0e5-45b2f7edb264">
+                     <id root="93dbc6b9-dc4c-47b0-87d2-ae781a0ce73c"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42232-9" displayName="PRECAUTIONS SECTION"/>
+                     <title ID="inv-de63a58e-8d99-482a-a218-5c05fdda0b66">Information for the Patient: </title>
+                     <text ID="inv-c36648ef-c480-42c1-a15a-fc1735260ace">
+                        <paragraph ID="inv-9e807443-e6e0-47e8-b608-e4352f8c5095">Amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL should be taken every 12 hours with a meal or snack to reduce the possibility of gastrointestinal upset. If diarrhea develops and is severe or lasts more than 2 or 3 days, call your doctor.</paragraph>
+                        <paragraph ID="inv-1ef6314d-20d1-49b1-8efe-859fff4984cd">Keep suspension refrigerated. Shake well before using. When dosing a child with the suspension (liquid) of amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL, use a dosing spoon or medicine dropper. Be sure to rinse the spoon or dropper after each use. Bottles of amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL may contain more liquid than required. Follow your doctor’s instructions about the amount to use and the days of treatment your child requires. Discard any unused medicine.</paragraph>
+                        <paragraph ID="inv-ab174216-02c9-4450-b635-49d6e3dd3be6">Patients should be counseled that antibacterial drugs including amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL should only be used to treat bacterial infections. They do not treat viral infections (e.g., the common cold). When amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL is prescribed to treat a bacterial infection, patients should be told that although it is common to feel better early in the course of therapy, the medication should be taken exactly as directed. Skipping doses or not completing the full course of therapy may: (1) decrease the effectiveness of the immediate treatment, and (2) increase the likelihood that bacteria will develop resistance and will not be treatable by amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL or other antibacterial drugs in the future.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-bd39b638-7a90-4c28-9f1f-09c462780b3f">
+                     <id root="d00a611f-5fc8-4346-a046-5100e2960fbb"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42232-9" displayName="PRECAUTIONS SECTION"/>
+                     <title ID="inv-fd33609b-c2dc-4c48-a641-7ed4e3dc04c0">Phenylketonurics:</title>
+                     <text ID="inv-9b7e8e8a-47e2-4822-ab09-20f8dbb9313b">
+                        <paragraph ID="inv-a87fa61a-8c66-4fa4-9924-e3cd69a1309f">Each 5 mL of the 600 mg/42.9 mg per 5 mL of amoxicillin and clavulanate potassium for oral suspension contains 5.6 mg phenylalanine.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-80b86816-c783-4fbc-ae38-99c37a94ef8b">
+                     <id root="0de467be-7865-4793-b15a-3b55ec9ddf69"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34073-7" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title ID="inv-c19de7e4-f611-4fd8-8c85-5b8ea0afe258">Drug Interactions: </title>
+                     <text ID="inv-056e6096-08f2-43df-8f8e-d81f3ad3358a">
+                        <paragraph ID="inv-c3d9a513-f82e-48e9-b49f-3616e7696e60">Probenecid decreases the renal tubular secretion of amoxicillin. Concurrent use with amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL may result in increased and prolonged blood levels of amoxicillin. Co-administration of probenecid cannot be recommended.</paragraph>
+                        <paragraph ID="inv-67a06595-576b-4144-b2c7-fdde3f921e09">The concurrent administration of allopurinol and ampicillin increases substantially the incidence of rashes in patients receiving both drugs as compared to patients receiving ampicillin alone. It is not known whether this potentiation of ampicillin rashes is due to allopurinol or the hyperuricemia present in these patients. There are no data with amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL and allopurinol administered concurrently.</paragraph>
+                        <paragraph ID="inv-1ae6c3c0-a35f-49bd-ad80-2aad92699b17">In common with other broad-spectrum antibiotics, amoxicillin/clavulanate may reduce the efficacy of oral contraceptives.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-b1db8720-5e7d-41ae-bbb1-192909ccf5eb">
+                     <id root="29f848e8-c413-4b50-b654-15cb18b27771"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34074-5" displayName="DRUG &amp; OR LABORATORY TEST INTERACTIONS SECTION"/>
+                     <title ID="inv-b5496593-311f-4c83-a9ae-096620d874fb">Drug/Laboratory Test Interactions:</title>
+                     <text ID="inv-36c620aa-6dfb-48bf-a631-2f4a81644f1c">
+                        <paragraph ID="inv-7c2266cd-8dac-477f-85e1-57cbc0a3f71b">Oral administration of amoxicillin and clavulanate potassium will result in high urine concentrations of amoxicillin. High urine concentrations of ampicillin may result in false-positive reactions when testing for the presence of glucose in urine using CLINITEST<sup>®</sup>, Benedict’s Solution, or Fehling’s Solution. Since this effect may also occur with amoxicillin and therefore amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL, it is recommended that glucose tests based on enzymatic glucose oxidase reactions (such as CLINISTIX<sup>®</sup>) be used.</paragraph>
+                        <paragraph ID="inv-8481f3ab-b2b5-43cc-ba1b-ca39d75a3a15">Following administration of ampicillin to pregnant women, a transient decrease in plasma concentration of total conjugated estriol, estriol-glucuronide, conjugated estrone, and estradiol has been noted. This effect may also occur with amoxicillin and therefore amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-505df16f-33fd-4918-b6e3-9c7a545523c5">
+                     <id root="976208a7-b6dd-4b93-8fde-0c94a8873d26"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34083-6" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title ID="inv-5c3ed625-f458-40e1-bc42-6847fecef81e">Carcinogenesis, Mutagenesis, Impairment of Fertility: </title>
+                     <text ID="inv-aef9fb4a-58d4-4c0b-8f33-5c4583cf8004">
+                        <paragraph ID="inv-2bf0fdb0-88df-4e28-9459-d832659903a5">Long-term studies in animals have not been performed to evaluate carcinogenic potential. The mutagenic potential of amoxicillin and clavulanate potassium was investigated <content styleCode="italics">in vitro </content>with an Ames test, a human lymphocyte cytogenetic assay, a yeast test, and a mouse lymphoma forward mutation assay, and <content styleCode="italics">in vivo </content>with mouse micronucleus tests and a dominant lethal test. All were negative apart from the <content styleCode="italics">in vitro </content>mouse lymphoma assay where weak activity was found at very high, cytotoxic concentrations. Amoxicillin and clavulanate potassium at oral doses of up to 1,200 mg/kg/day (5.7 times the maximum adult human dose based on body surface area) was found to have no effect on fertility and reproductive performance in rats, dosed with a 2:1 ratio formulation of amoxicillin:clavulanate.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-4a17d274-924f-4399-a622-100c08d2cbf5">
+                     <id root="0356b613-f037-4baa-b402-9f798f3e3922"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34077-8" displayName="TERATOGENIC EFFECTS SECTION"/>
+                     <title ID="inv-b5129738-cb2c-4bc5-b9b6-5dd558d0380e">Teratogenic Effects:</title>
+                     <text ID="inv-749587d0-0d94-4767-a518-425ffa2daa4f">
+                        <paragraph ID="inv-962cd82d-80b3-4c68-848e-08401cfb5de1">Pregnancy (Category B). Reproduction studies performed in pregnant rats and mice given amoxicillin and clavulanate potassium at oral dosages up to 1,200 mg/kg/day (4.9 and 2.8 times the maximum adult human oral dose based on body surface area, respectively), revealed no evidence of harm to the fetus due to amoxicillin and clavulanate potassium. There are, however, no adequate and well-controlled studies in pregnant women. Because animal reproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-c6a2565d-7ccf-46d1-96a8-155c04bdffe6">
+                     <id root="7c3c1503-0b73-4799-919e-6a7bd0777c81"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34079-4" displayName="LABOR &amp; DELIVERY SECTION"/>
+                     <title ID="inv-e1358c84-4d1c-4163-b6cb-bbf908c179ca">Labor and Delivery: </title>
+                     <text ID="inv-d341bc83-4445-49c3-87a6-b9aaad4b1e6d">
+                        <paragraph ID="inv-49405722-b3e5-4827-80ee-eaa8415c3d20">Oral ampicillin-class antibiotics are generally poorly absorbed during labor. Studies in guinea pigs have shown that intravenous administration of ampicillin decreased the uterine tone, frequency of contractions, height of contractions, and duration of contractions. However, it is not known whether the use of amoxicillin and clavulanate potassium in humans during labor or delivery has immediate or delayed adverse effects on the fetus, prolongs the duration of labor, or increases the likelihood that forceps delivery or other obstetrical intervention or resuscitation of the newborn will be necessary. In a single study in women with premature rupture of fetal membranes, it was reported that prophylactic treatment with amoxicillin and clavulanate potassium may be associated with an increased risk of necrotizing enterocolitis in neonates.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-f087a2e2-2059-4758-8f93-460114f856fe">
+                     <id root="657f1a94-9d06-4eac-97e3-c0a096ff4060"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34080-2" displayName="NURSING MOTHERS SECTION"/>
+                     <title ID="inv-ae3b33d1-0f7b-4727-b25a-5de06d075130">Nursing Mothers: </title>
+                     <text ID="inv-64a91d72-7168-4e20-8b3f-645c3d1fe0ed">
+                        <paragraph ID="inv-3226db1d-d918-4e75-a1a5-bdf3936366b0">Ampicillin-class antibiotics are excreted in human milk; therefore, caution should be exercised when amoxicillin and clavulanate potassium is administered to a nursing woman.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="inv-b148b054-45c7-477d-973e-06f2e7dc7ea4">
+                     <id root="cb4ba050-ca5a-4ea8-815c-a4526918d187"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34081-0" displayName="PEDIATRIC USE SECTION"/>
+                     <title ID="inv-2d85e0db-2d43-4d1e-a3b0-5b758714d118">Pediatric Use: </title>
+                     <text ID="inv-85115f1e-c3ff-44f7-9a73-cd71d28bf2c3">
+                        <paragraph ID="inv-16b90104-886b-4ba3-834e-aa28186a51b7">Safety and efficacy of amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL in infants younger than 3 months to 12 years of age have not been established. Safety and efficacy of amoxicillin and clavulanate potassium for oral suspension,600 mg/42.9 mg per 5 mL have been demonstrated for treatment of acute otitis media in infants and children 3 months to 12 years (see <content styleCode="bold">Description of Clinical Studies</content>).</paragraph>
+                        <paragraph ID="inv-b3735be0-4f0e-4c8f-ba5c-25489dca1ed6">The safety and effectiveness of amoxicillin and clavulanate potassium for oral suspension 600 mg/42.9 mg per 5 mL have been established for the treatment of pediatric patients (3 months to 12 years) with acute bacterial sinusitis.  This use is supported by evidence from adequate and well-controlled studies of amoxicillin and clavulanate potassium extended-release tablets in adults with acute bacterial sinusitis, studies of amoxicillin and clavulanate potassium for oral suspension 600 mg/42.9 mg per 5 mL in pediatric patients with acute otitis media, and by similar pharmacokinetics of amoxicillin and clavulanate in pediatric patients taking amoxicillin and clavulanate potassium for oral suspension 600 mg/42.9 mg per 5 mL (see <content styleCode="bold">CLINICAL PHARMACOLOGY</content>) and adults taking amoxicillin and clavulanate potassium extended-release tablets.</paragraph>
+                     </text>
+                     <effectiveTime value="20130906"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-b0050b7e-91fc-4210-befb-4aa131968ca3">
+               <id root="8b9ced11-12e1-42fe-8c49-f86061d9aebc"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34084-4" displayName="ADVERSE REACTIONS SECTION"/>
+               <title ID="inv-7ab4e3b7-99ba-42ca-bc97-8d94a0739f79">ADVERSE REACTIONS</title>
+               <text ID="inv-36ec5b7f-ebe9-41c9-9683-b2725b3891d1">
+                  <paragraph ID="inv-39b74204-3b94-45ff-8bcc-65b2e3400907">Amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL is generally well tolerated. The majority of side effects observed in pediatric clinical trials of acute otitis media were either mild or moderate, and transient in nature; 4.4% of patients discontinued therapy because of drug-related side effects. The most commonly reported side effects with probable or suspected relationship to amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL were contact dermatitis, i.e., diaper rash (3.5%), diarrhea (2.9%), vomiting (2.2%), moniliasis (1.4%), and rash (1.1%). The most common adverse experiences leading to withdrawal that were of probable or suspected relationship to amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL were diarrhea (2.5%) and vomiting (1.4%).</paragraph>
+                  <paragraph ID="inv-3b26114c-66cc-41e5-80fb-82b6357813da">The following adverse reactions have been reported for ampicillin-class antibiotics:</paragraph>
+                  <paragraph ID="inv-5a0ad583-e518-4a36-b4e0-7deab50e7cae">
+                     <content styleCode="bold">Gastrointestinal: </content>Diarrhea, nausea, vomiting, indigestion, gastritis, stomatitis, glossitis, black “hairy” tongue, mucocutaneous candidiasis, enterocolitis, and hemorrhagic/pseudomembranous colitis. Onset of pseudomembranous colitis symptoms may occur during or after antibiotic treatment (See <content styleCode="bold">WARNINGS</content>).</paragraph>
+                  <paragraph ID="inv-dfa9e17d-f9c1-4613-a491-2de7afe8f431">
+                     <content styleCode="bold">Hypersensitivity Reactions: </content>Skin rashes, pruritus, urticaria, angioedema, serum sickness-like reactions (urticaria or skin rash accompanied by arthritis, arthralgia, myalgia, and frequently fever), erythema multiforme (rarely Stevens-Johnson syndrome), acute generalized exanthematous pustulosis, and an occasional case of exfoliative dermatitis (including toxic epidermal necrolysis) have been reported. These reactions may be controlled with antihistamines and, if necessary, systemic corticosteroids. Whenever such reactions occur, the drug should be discontinued, unless the opinion of the physician dictates otherwise. Serious and occasional fatal hypersensitivity (anaphylactic) reactions can occur with oral penicillin (See <content styleCode="bold">WARNINGS</content>).</paragraph>
+                  <paragraph ID="inv-a06a960a-ec53-4f04-b3a2-9a0317aa8136">
+                     <content styleCode="bold">Liver: </content>A moderate rise in AST (SGOT) and/or ALT (SGPT) has been noted in patients treated with ampicillin-class antibiotics, but the significance of these findings is unknown. Hepatic dysfunction, including hepatitis and cholestatic jaundice, (see<content styleCode="bold"> CONTRAINDICATIONS</content>), increases in serum transaminases (AST and/or ALT), serum bilirubin, and/or alkaline phosphatase, has been infrequently reported with amoxicillin and clavulanate potassium. It has been reported more commonly in the elderly, in males, or in patients on prolonged treatment. The histologic findings on liver biopsy have consisted of predominantly cholestatic, hepatocellular, or mixed cholestatic-hepatocellular changes. The onset of signs/symptoms of hepatic dysfunction may occur during or several weeks after therapy has been discontinued. The hepatic dysfunction, which may be severe, is usually reversible. On rare occasions, deaths have been reported (less than 1 death reported per estimated 4 million prescriptions worldwide). These have generally been cases associated with serious underlying diseases or concomitant medications.</paragraph>
+                  <paragraph ID="inv-18eb516e-0f68-446e-86b4-34ccc2d142bd">
+                     <content styleCode="bold">Renal: </content>Interstitial nephritis and hematuria have been reported rarely. Crystalluria has also been reported (see <content styleCode="bold">OVERDOSAGE</content>).</paragraph>
+                  <paragraph ID="inv-27289c7a-4a05-4ead-9014-ff75a294fbdf">
+                     <content styleCode="bold">Hemic and Lymphatic Systems: </content>Anemia, including hemolytic anemia, thrombocytopenia, thrombocytopenic purpura, eosinophilia, leukopenia, and agranulocytosis have been reported during therapy with penicillins. These reactions are usually reversible on discontinuation of therapy and are believed to be hypersensitivity phenomena. A slight thrombocytosis was noted in less than 1% of the patients treated with amoxicillin and clavulanate potassium. There have been reports of increased prothrombin time in patients receiving amoxicillin and clavulanate potassium and anticoagulant therapy concomitantly.</paragraph>
+                  <paragraph ID="inv-79cc1a32-fc43-4307-b551-c25cda880133">
+                     <content styleCode="bold">Central Nervous System:</content> Agitation, anxiety, behavioral changes, confusion, convulsions, dizziness, insomnia, and reversible hyperactivity have been reported rarely.</paragraph>
+                  <paragraph ID="inv-e6ba1622-bed4-4a92-acfe-788b7178fb19">
+                     <content styleCode="bold">Miscellaneous:</content> Tooth discoloration (brown, yellow, or gray staining) has been rarely reported. Most reports occurred in pediatric patients. Discoloration was reduced or eliminated with brushing or dental cleaning in most cases.</paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-5688947f-11de-4cb9-8c02-7bb953182667">
+               <id root="9573c18a-aa65-4891-937e-d97ce9b4405e"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34088-5" displayName="OVERDOSAGE SECTION"/>
+               <title ID="inv-7fe43f20-7e40-4dd2-b100-9666b4336e0a">OVERDOSAGE</title>
+               <text ID="inv-8aa8815e-8e86-4fa7-97cc-cc4f70f5fe82">
+                  <paragraph ID="inv-c357f333-a1d3-486e-87d8-eb6f8050d4c5">Following overdosage, patients have experienced primarily gastrointestinal symptoms including stomach and abdominal pain, vomiting, and diarrhea. Rash, hyperactivity, or drowsiness have also been observed in a small number of patients.</paragraph>
+                  <paragraph ID="inv-c72a1a4f-d442-4754-a437-21b2fac5e76e">In the case of overdosage, discontinue amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL, treat symptomatically, and institute supportive measures as required. If the overdosage is very recent and there is no contraindication, an attempt at emesis or other means of removal of drug from the stomach may be performed. A prospective study of 51 pediatric patients at a poison control center suggested that overdosages of less than 250 mg/kg of amoxicillin are not associated with significant clinical symptoms and do not require gastric emptying.<sup>4</sup>
+                  </paragraph>
+                  <paragraph ID="inv-5f2651d8-f353-4b70-9384-fe9a58b3a2e4">Interstitial nephritis resulting in oliguric renal failure has been reported in a small number of patients after overdosage with amoxicillin. </paragraph>
+                  <paragraph ID="inv-e46658ce-18fc-4414-a2a1-8b1bea3cd1e9">Crystalluria, in some cases leading to renal failure, has also been reported after amoxicillin overdosage in adult and pediatric patients. In case of overdosage, adequate fluid intake and diuresis should be maintained to reduce the risk of amoxicillin crystalluria.</paragraph>
+                  <paragraph ID="inv-36498b71-b612-4521-937d-980cb9d71070">Renal impairment appears to be reversible with cessation of drug administration. High blood levels may occur more readily in patients with impaired renal function because of decreased renal clearance of both amoxicillin and clavulanate. Both amoxicillin and clavulanate are removed from the circulation by hemodialysis.</paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-7b97bc95-d29a-4d9a-be11-deba964969ca">
+               <id root="96028e1f-08dd-40ed-924a-ada99b9e40db"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34068-7" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title ID="inv-12a27234-c4aa-43da-a511-d16e0c03ad59">DOSAGE AND ADMINISTRATION</title>
+               <text ID="inv-edd3818d-44ee-46fe-83d6-4fffe7bdfd04">
+                  <paragraph ID="inv-0e4cfc2c-126a-4f69-9049-eb7107e4d88d">
+                     <content styleCode="bold">Amoxicillin and clavulanate potassium for oral suspension<content styleCode="italics">, </content>600 mg/42.9 mg per 5 mL, does not contain the same amount of clavulanic acid (as the potassium salt) as any of the other suspensions of amoxicillin and clavulanate potassium.</content>
+                  </paragraph>
+                  <paragraph ID="inv-2334ea9c-dd1c-4297-af8c-b680eda14db2">
+                     <content styleCode="bold">Amoxicillin and clavulanate potassium for oral suspension<content styleCode="italics">, </content>600 mg/42.9 mg per 5 mL contains 42.9 mg of clavulanic acid per 5 mL, whereas the 200 mg/5 mL suspension of amoxicillin and clavulanate potassium contains 28.5 mg of clavulanic acid per 5 mL and the 400 mg/5 mL suspension contains 57 mg of clavulanic acid per 5 mL. Therefore, the 200 mg/5 mL and 400 mg/5 mL suspensions of amoxicillin and clavulanate potassium should <content styleCode="italics">not </content>be substituted for amoxicillin and clavulanate potassium for oral suspension<content styleCode="italics">, </content>600 mg/42.9 mg per 5 mL, as they are not interchangeable.</content>
+                  </paragraph>
+                  <paragraph ID="inv-87dbb292-04e9-4053-bb63-8c709c67e797">
+                     <content styleCode="bold">Dosage: <content styleCode="italics">Pediatric patients 3 months and older</content>: </content>Based on the amoxicillin component (600 mg/5 mL), the recommended dose of amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL is 90 mg/kg/day divided every 12 hours, administered for 10 days (see chart below).</paragraph>
+                  <table ID="inv-60bbfc4c-b384-43c2-a687-25af7377f591" frame="border" border="1">
+                     <col ID="inv-8e13bd1a-ec0e-47da-b6c1-2c5228563a70" width="292.00px"/>
+                     <col ID="inv-356e14d1-0db7-4a47-8762-ef16932dcf5a" width="292.00px"/>
+                     <tbody ID="inv-11816ff3-b273-430a-bde0-66d8a27897dd">
+                        <tr ID="inv-7342e4e6-c08d-4c98-a552-0bc4bef07785">
+                           <td align="center" ID="inv-ad508cda-3b06-41ec-bfda-8903baf505dd">
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold"> </content>
+                              <content styleCode="bold">Body Weight (kg)</content>
+                           </td>
+                           <td align="center" ID="inv-56b213ea-63bd-4b2a-b0ff-c3462146bfc4">
+                              <content styleCode="bold">Volume of Amoxicillin and Clavulanate Potassium for Oral Suspension,<content styleCode="italics"/>
+                              </content>
+                              <content styleCode="bold">600 mg/42.9 mg per 5 mL</content>
+                              <content styleCode="bold">providing 90 mg/kg/day</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-c194c996-c9ea-48fe-830b-b6f423aed4c3">
+                           <td align="center" ID="inv-52e722eb-aed2-4312-b37f-628837483cd4">
+ 8 </td>
+                           <td align="center" ID="inv-ea1ce3cf-68dc-41bc-aca5-5943eb39fb7e">
+   3 mL twice daily </td>
+                        </tr>
+                        <tr ID="inv-c146ee8b-6077-46c2-9293-51a0888c7f51">
+                           <td align="center" ID="inv-40ec2526-3f5a-46d9-bf4d-5a7e9f1739a6">
+ 12 </td>
+                           <td align="center" ID="inv-29368473-dc70-44bd-a46a-9759ffa3638c">
+ 4.5 mL twice daily </td>
+                        </tr>
+                        <tr ID="inv-10ae7acc-4173-4b97-88c6-a4e3c66b3587">
+                           <td align="center" ID="inv-6d6d95c4-ca32-4295-9fc8-995bcecb5f47">
+ 16 </td>
+                           <td align="center" ID="inv-3bc2551a-d0c9-4e11-988d-4f97241fe87a">
+   6 mL twice daily </td>
+                        </tr>
+                        <tr ID="inv-f905b5ae-eab0-40bc-9647-bba394a6b783">
+                           <td align="center" ID="inv-f94a24ec-183c-442c-96e1-4ea03287b8a0">
+ 20 </td>
+                           <td align="center" ID="inv-e4eec454-f77f-4801-a5e7-f8774be51257">
+ 7.5 mL twice daily </td>
+                        </tr>
+                        <tr ID="inv-f1313ddb-20eb-43db-afbd-2a5b0d584b08">
+                           <td align="center" ID="inv-aae110be-e626-4e46-9fb0-adb1ba44c827">
+ 24 </td>
+                           <td align="center" ID="inv-0a11c402-205a-4a71-a0ad-a50247c468e7">
+    9 mL twice daily </td>
+                        </tr>
+                        <tr ID="inv-1c731eac-e6ed-4928-a572-af8e80383f9a">
+                           <td align="center" ID="inv-9c3ba441-c015-4664-89e2-ee7ca36cec9c">
+ 28 </td>
+                           <td align="center" ID="inv-00334b36-47b3-4951-a6eb-ade21de8555e">
+ 10.5 mL twice daily </td>
+                        </tr>
+                        <tr ID="inv-b21c7929-aa14-4cbc-8137-85b92ebecca0">
+                           <td align="center" ID="inv-155ebc9f-02c5-45f4-a0aa-2d275259eb13">
+ 32 </td>
+                           <td align="center" ID="inv-6a9e57f7-3f8c-4f9f-ac4c-6d00dbb1bfd4">
+    12 mL twice daily </td>
+                        </tr>
+                        <tr ID="inv-0e78b914-f683-47cd-94a5-8df1e2693f05">
+                           <td align="center" ID="inv-f4534654-0332-41a9-8857-2ec96be0ace4">
+ 36 </td>
+                           <td align="center" ID="inv-f484f2b5-ea6e-4545-b52b-5d54a6b0bc0a">
+ 13.5 mL twice daily </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph ID="inv-86af59fc-c42b-4b24-b0e5-70ce6f748b46">
+                     <content styleCode="bold">
+                        <content styleCode="italics">Pediatric patients weighing 40 kg and more: </content>
+                     </content>Experience with amoxicillin and clavulanate potassium for oral suspension (600 mg/42.9 mg per 5 mL formulation) in this group is not available.</paragraph>
+                  <paragraph ID="inv-45158df6-8074-47cd-bc26-ee0eab34263f">
+                     <content styleCode="bold">
+                        <content styleCode="italics">Adults: </content>
+                     </content>Experience with amoxicillin and clavulanate potassium for oral suspension (600 mg/42.9 mg per 5 mL formulation) in adults is not available and adults who have difficulty swallowing should not be given amoxicillin and clavulanate potassium for oral suspension (600 mg/42.9 mg per 5 mL) in place of the 500 mg or 875 mg tablet of amoxicillin and clavulanate potassium . </paragraph>
+                  <paragraph ID="inv-baef1a20-f1cb-48c1-a4a9-3bccbc85be0e">Hepatically impaired patients should be dosed with caution and hepatic function monitored at regular intervals (See <content styleCode="bold">WARNINGS</content>).</paragraph>
+                  <paragraph ID="inv-30f75b60-0631-43c0-a953-182b6939e78d">
+                     <content styleCode="bold">
+                        <content styleCode="italics">Directions for Mixing Oral Suspension: </content>
+                     </content>Prepare a suspension at time of dispensing as follows: Tap bottle until all the powder flows freely. Add approximately 2/3 of the total amount of water for reconstitution (see table below) and shake vigorously to suspend powder. Add remainder of the water and again shake vigorously.</paragraph>
+                  <table ID="inv-5a93a76d-764f-4f76-92ee-4d4a9076eb05" frame="void">
+                     <col ID="inv-621a0373-0530-475b-8e78-8ede21a032ce" width="280.00px"/>
+                     <col ID="inv-628c7fa3-f747-40dd-89e5-8a0ba642225c" width="340.00px"/>
+                     <tbody ID="inv-cad25f9a-4513-47c6-800d-5d9bbe244b8b">
+                        <tr ID="inv-b881fc1a-028c-4233-a43a-1ec15f7c56a1">
+                           <td colspan="2" ID="inv-00e3b299-8aa1-4a1e-ba2a-9c064e50d867">
+                              <content styleCode="bold">Amoxicillin and Clavulanate Potassium for Oral Suspension (600 mg/42.9 mg per 5 mL)</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-cba5e810-dd4e-40e7-b015-0a930418e0b3">
+                           <td align="center" ID="inv-e3a9170b-0561-48ca-867d-4db66f6b0332">
+ Bottle Size </td>
+                           <td align="center" ID="inv-48329a64-fc5d-4083-8f50-4aba053725a5">
+ Amount of Water
+ Required for Suspension </td>
+                        </tr>
+                        <tr ID="inv-5e755f5b-430b-469a-a30c-e2d02cf683de">
+                           <td align="center" ID="inv-5ddab0ec-1dc3-4630-935d-39085b5860ee">
+ 50 mL </td>
+                           <td align="center" ID="inv-f4c4a846-b5bd-4a84-ad67-8ac11e2d31e5">
+  44 mL </td>
+                        </tr>
+                        <tr ID="inv-5c7cbdd7-24af-4099-bfec-a7990043bcbb">
+                           <td align="center" ID="inv-2731c79b-5c88-444a-9f06-1ff3d7790351">
+ 75 mL </td>
+                           <td align="center" ID="inv-46a70af2-359c-4a1e-aace-bebcd4a778b3">
+  65 mL </td>
+                        </tr>
+                        <tr ID="inv-7b74b236-5b46-481c-928d-476fbe43fd3e">
+                           <td align="center" ID="inv-db1a6cf1-81f9-44f0-8e1c-0ec1360d64cb">
+ 100 mL </td>
+                           <td align="center" ID="inv-49bbced7-b30b-4b3d-9c2f-610674826cc4">
+  87 mL </td>
+                        </tr>
+                        <tr ID="inv-6930daf3-5911-462a-860d-2b2fc3db7239">
+                           <td align="center" ID="inv-33136e40-c53f-46e8-840a-f286c842e47f">
+ 125 mL </td>
+                           <td align="center" ID="inv-4c99d171-9127-42ac-ad05-5c892cdefd8f">
+ 112 mL </td>
+                        </tr>
+                        <tr ID="inv-36568b72-969d-48fa-945d-90e75f07424d">
+                           <td align="center" ID="inv-c3ca3b88-6c0f-4654-b5a6-8c9807d9d701">
+ 150 mL </td>
+                           <td align="center" ID="inv-db07a498-5fd5-4d93-891d-f2d44d996db2">
+ 129 mL </td>
+                        </tr>
+                        <tr ID="inv-cd5064f1-4beb-4185-81c9-b835200a24b0">
+                           <td align="center" ID="inv-fa41e023-ae4b-43cf-aa12-496d699ecb60">
+ 200 mL </td>
+                           <td align="center" ID="inv-8376aa55-79fd-4447-bba8-606aeef1d159">
+ 174 mL </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph ID="inv-2296dc94-4b99-4702-84ac-05fb548e2adf">Each teaspoonful (5 mL) will contain 600 mg amoxicillin as the trihydrate and 42.9 mg of clavulanic acid as the potassium salt.</paragraph>
+                  <paragraph ID="inv-bd7a7005-af78-4641-89c5-cfa627428fef">
+                     <content styleCode="bold">NOTE: </content>SHAKE ORAL SUSPENSION WELL BEFORE USING.</paragraph>
+                  <paragraph ID="inv-a7faf04e-e5f7-4134-bd33-ea5035993976">
+                     <content styleCode="bold">Administration: </content>To minimize the potential for gastrointestinal intolerance, amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL should be taken at the start of a meal. Absorption of clavulanate potassium may be enhanced when amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mLis administered at the start of a meal.</paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-572fb6d3-83e8-4d2e-af3b-941fe9f26652">
+               <id root="ef0cc03f-d568-4d5e-96bc-14f07aea0759"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34069-5" displayName="HOW SUPPLIED SECTION"/>
+               <title ID="inv-fad81e10-bf8a-476b-a3bb-55523ae51b9f">HOW SUPPLIED</title>
+               <text ID="inv-40e1e831-d33b-43f9-9f8c-448f9144159b">
+                  <paragraph ID="inv-3b511e89-51e3-4a9e-9f16-4a678c6e02cd">
+                     <content styleCode="bold">Amoxicillin and Clavulanate Potassium for Oral Suspension, USP, 600 mg/42.9 mg per 5 mL:</content>
+                  </paragraph>
+                  <paragraph ID="inv-3314586a-be81-4926-9f59-35ecc8439868">Each 5 mL of reconstituted white to pale yellow colored, strawberry flavored suspension contains 600 mg of amoxicillin, USP and 42.9 mg of clavulanic acid as the potassium salt and is available as follows:</paragraph>
+                  <table ID="inv-9047e246-68dd-44df-b0b1-fad7e0aaf87f" frame="void">
+                     <col ID="inv-38b17a27-700d-48ff-9bb5-49260b718489" width="168.00px"/>
+                     <col ID="inv-0740e747-85b2-43f4-8b91-22a26fc5e96a" width="180.00px"/>
+                     <tbody ID="inv-f5148a1f-f3c6-4d13-b8df-6b74ecd87cf4">
+                        <tr ID="inv-44602850-9dd5-4dd0-aec0-0fd84ffefeb2">
+                           <td ID="inv-2979ef27-b232-4978-b962-b2709cf5070a">
+ NDC 63304-768-03 </td>
+                           <td ID="inv-d7a12108-b727-4fb1-9620-b5f984fb3ace">
+ 50 mL bottles      </td>
+                        </tr>
+                        <tr ID="inv-09b431ca-327e-471e-9a83-a1f2c7d23c55">
+                           <td ID="inv-34ed8ff4-fec0-4f72-a397-a174768a9a3d">
+ NDC 63304-768-01 </td>
+                           <td ID="inv-68d55962-a135-4056-9227-2e57800e56cd">
+ 75 mL bottles </td>
+                        </tr>
+                        <tr ID="inv-7c7e54d2-7118-4ace-b39d-3705e5443508">
+                           <td ID="inv-9a9b0aac-d144-4e4f-8584-2acfc62c07c0">
+ NDC 63304-768-04 </td>
+                           <td ID="inv-2318144e-ce97-4559-9c11-c8c78d2e0d50">
+ 100 mL bottles    </td>
+                        </tr>
+                        <tr ID="inv-c627b99e-e012-403f-97f4-312984bd93c5">
+                           <td ID="inv-d17a4057-e540-4e0a-b6b2-7e7ac91b05bf">
+ NDC 63304-768-07 </td>
+                           <td ID="inv-bf52f66c-b254-4d48-8eaf-9af8e52b63c6">
+125 mL bottles </td>
+                        </tr>
+                        <tr ID="inv-093db476-cb8b-46e5-89a1-12d3fd0cd495">
+                           <td ID="inv-76ea7303-6fc0-4451-95e0-43e8999ff324">
+ NDC 63304-768-50 </td>
+                           <td ID="inv-1b43a173-ff93-441c-bd9d-d040c501e015">
+ 150 mL bottles </td>
+                        </tr>
+                        <tr ID="inv-e5688608-6909-4f00-a68e-c083004d6310">
+                           <td ID="inv-8742d331-b114-4915-8f7d-a035106a058a">
+ NDC 63304-768-02 </td>
+                           <td ID="inv-3327deb1-a031-47f8-878b-11f0b9960125">
+ 200 mL bottles </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-4c786144-9b3f-432d-839f-20690148d543">
+               <id root="df888cd5-df8b-42b3-8585-5bfa89271ceb"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="44425-7" displayName="STORAGE AND HANDLING SECTION"/>
+               <title ID="inv-8a0cb150-6ee3-405a-b6ac-5822de72f740">STORAGE</title>
+               <text ID="inv-2bd476cb-80a0-450a-be46-7f30d8191dea">
+                  <paragraph ID="inv-6c642d37-dded-493f-876a-6118f985ac48">Store reconstituted suspension under refrigeration. Discard unused suspension after 10 days.</paragraph>
+                  <paragraph ID="inv-54617d59-4d78-42ba-a812-bf38dfb5141c">Store dry powder for oral suspension at 20 – 25° C (68 – 77° F) [See USP Controlled Room Temperature]. Dispense in original container.</paragraph>
+                  <paragraph ID="inv-0c9212a7-005e-4955-ae11-ecd3c0cace18">Call your doctor for medical advice about side effects. You may report side effects to FDA at <content styleCode="bold">1-800-FDA-1088.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-61b99d70-e71a-44ba-92e1-9608132a62f7">
+               <id root="c0e0b21e-eec8-4b7c-88c0-525241c8790d"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title ID="inv-1868f62d-1b27-48fc-9c08-652b44505c39"/>
+               <text ID="inv-22a4ff58-58c3-449b-a5a8-e09c132f19c0">
+                  <paragraph ID="inv-6ef61eb8-e615-4c4e-b922-3e72bc5d8b54">
+                     <content styleCode="bold">Description of Clinical Studies</content>
+                  </paragraph>
+                  <paragraph ID="inv-766ce99b-f445-4b84-a49d-713bc0aecc3e">Two clinical studies were conducted in pediatric patients with acute otitis media.</paragraph>
+                  <paragraph ID="inv-cf41a79c-5585-4094-af7c-a01e258a5112">A non-comparative, open-label study assessed the bacteriologic and clinical efficacy of amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL (90/6.4 mg/kg/day, divided every 12 hours) for 10 days in 521 pediatric patients (3 to 50 months) with acute otitis media. The primary objective was to assess bacteriological response in children with acute otitis media due to <content styleCode="italics">S. pneumoniae </content>with amoxicillin/clavulanic acid MICs of 4 mcg/mL. The study sought the enrollment of patients with the following risk factors: Failure of antibiotic therapy for acute otitis media in the previous 3 months, history of recurrent episodes of acute otitis media, ≤ 2 years, or daycare attendance. Prior to receiving amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL, all patients had tympanocentesis to obtain middle ear fluid for bacteriological evaluation. Patients from whom <content styleCode="italics">S. pneumoniae </content>(alone or in combination with other bacteria) was isolated had a second tympanocentesis 4 to 6 days after the start of therapy. Clinical assessments were planned for all patients during treatment (4 to 6 days after starting therapy), as well as 2 to 4 days post-treatment and 15 to 18 days post-treatment. Bacteriological success was defined as the absence of the pretreatment pathogen from the on-therapy tympanocentesis specimen. Clinical success was defined as improvement or resolution of signs and symptoms. Clinical failure was defined as lack of improvement or worsening of signs and/or symptoms at any time following at least 72 hours of amoxicillin and clavulanate potassium for oral suspension, 600 mg/42.9 mg per 5 mL; patients who received an additional systemic antibacterial drug for otitis media after 3 days of therapy were considered clinical failures. Bacteriological eradication on therapy (days 4 to 6 visit) in the per protocol population is summarized in the following table:</paragraph>
+                  <table ID="inv-0894fe74-bddb-4ebd-9ab2-f59d6127ba07" frame="border" border="1">
+                     <caption ID="inv-5760f472-47cf-4669-9811-907c7219cdb7">Table 5. Bacteriologic Eradication Rates in the Per Protocol Population</caption>
+                     <col ID="inv-bd16002d-d072-41e6-b6bc-97ccb620803b" width="232.00px"/>
+                     <col ID="inv-703182da-3f5d-4d40-b61c-9390bd87089d" width="132.00px"/>
+                     <col ID="inv-27b3b106-af84-412c-8c88-6371cbd68539" width="96.00px"/>
+                     <col ID="inv-39bb0a10-07d6-4326-b41a-b482bb55bbec" width="124.00px"/>
+                     <tbody ID="inv-0dd6cfcd-324c-4f28-82aa-d8df609a975a">
+                        <tr ID="inv-3c12a03a-25a4-4612-b6ae-68eb44e78186">
+                           <td ID="inv-c8b6bd97-0905-4e17-904e-e506317f98e9">
+                              <content styleCode="bold"> </content>
+                           </td>
+                           <td align="center" colspan="3" ID="inv-d37abdc8-2998-4135-ad87-683fc6d97359">
+                              <content styleCode="bold">Bacteriologic Eradication on Therapy</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-3af9890b-8510-4775-9d1d-9238c35ab330">
+                           <td ID="inv-aa2c6b05-dfd8-44a6-afaf-40a24d449347">
+                              <content styleCode="bold">Pathogen</content>
+                           </td>
+                           <td align="center" ID="inv-51634c9d-1cd8-47f6-af73-c1fe5324723a">
+                              <content styleCode="bold">n/N</content>
+                           </td>
+                           <td align="center" ID="inv-508434fe-1855-4b6f-a9e3-bf0f4c594cd1">
+                              <content styleCode="bold">%</content>
+                           </td>
+                           <td align="center" ID="inv-57440fd7-b180-4895-8429-c579e5628b9c">
+                              <content styleCode="bold">95% CI<sup>*</sup>
+                              </content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-d1d6a553-d73b-4922-9754-03dc07fd6144">
+                           <td ID="inv-1b589126-3c3f-472b-9d05-c4fc20b78d5b">
+ All <content styleCode="italics">S. pneumoniae</content>
+                           </td>
+                           <td align="center" ID="inv-6002f4f5-33fa-459f-8166-5aa575591adc">
+ 121/123 </td>
+                           <td align="center" ID="inv-582970c9-a266-4336-98da-a0f53c22cc96">
+ 98.4 </td>
+                           <td align="center" ID="inv-2e087977-2ca9-413c-8cf8-8d90e29cbf2c">
+ (94.3, 99.8) </td>
+                        </tr>
+                        <tr ID="inv-967df284-97e5-4398-897b-5673b98d2728">
+                           <td ID="inv-2ab4753a-4924-4e7c-aa37-97a7ebe990b1">
+                              <content styleCode="italics">S. pneumoniae </content>with penicillin
+ MIC = 2 mcg/mL </td>
+                           <td align="center" ID="inv-d1e4886a-7943-4d1e-b1b7-81ce81cc4ecc">
+ 19/19 </td>
+                           <td align="center" ID="inv-73fd7ebe-f5da-4f78-8dd7-57c0c7fa4882">
+ 100 </td>
+                           <td align="center" ID="inv-7e256e63-c341-447b-ba1b-cf65dbd802d6">
+ (82.4, 100) </td>
+                        </tr>
+                        <tr ID="inv-0d894042-2bba-4ef4-a3ba-fea45352d9e4">
+                           <td ID="inv-2c583279-fdbf-4e0e-9236-46b960f8502d">
+                              <content styleCode="italics">S. pneumoniae </content>with penicillin
+ MIC = 4 mcg/mL </td>
+                           <td align="center" ID="inv-c167b316-4a7f-4f3f-aa1d-e1d252d464c2">
+ 12/14 </td>
+                           <td align="center" ID="inv-d445e8bb-ea01-4fae-b1bc-17eb4cc4f13a">
+ 85.7 </td>
+                           <td align="center" ID="inv-b0ad0a31-b175-475b-adff-084a41facf4f">
+ (57.2, 98.2) </td>
+                        </tr>
+                        <tr ID="inv-65343c92-d5a3-4879-94b4-e9d72b634387">
+                           <td ID="inv-4242cced-9961-4ee2-8364-6d0a3c358f14">
+                              <content styleCode="italics">H. influenzae</content>
+                           </td>
+                           <td align="center" ID="inv-d9c451a8-454e-431d-8d7f-fe91ee7819ea">
+ 75/81 </td>
+                           <td align="center" ID="inv-57f82056-d799-4659-a1c6-e8d818ec6958">
+ 92.6 </td>
+                           <td align="center" ID="inv-65c92b37-ab22-4ce3-8adc-92a560b20e87">
+ (84.6, 97.2) </td>
+                        </tr>
+                        <tr ID="inv-2ef46f00-3cdd-4403-8999-48a978634bdb">
+                           <td ID="inv-cfbd546f-ba3d-4a6e-b664-746f27f3f08d">
+                              <content styleCode="italics">M. catarrhalis</content>
+                           </td>
+                           <td align="center" ID="inv-7e45fd08-d8fa-4232-ba59-8ef9f3fb904c">
+ 11/11 </td>
+                           <td align="center" ID="inv-04a273fd-5d12-4ce1-abe6-797cdf280555">
+ 100 </td>
+                           <td align="center" ID="inv-7377d5f7-5840-413d-9f97-9c6b9e2e986b">
+ (71.5, 100) </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph ID="inv-c81e70db-7b16-4e17-8fa9-3c7de6af99df">
+                     <sup>*</sup>CI = confidence intervals; 95% CIs are not adjusted for multiple comparisons.</paragraph>
+                  <paragraph ID="inv-10d1c721-6c31-4dd2-9064-c25c58ed5684">Clinical assessments were made in the per protocol population 2 to 4 days post-therapy and 15 to 18 days post-therapy. Patients who responded to therapy 2 to 4 days post-therapy were followed for 15 to 18 days post-therapy to assess them for acute otitis media. Nonresponders at 2 to 4 days post-therapy were considered failures at the latter timepoint. </paragraph>
+                  <table ID="inv-7f3ac5a1-1da9-4be8-a6af-5d5122ef2902" frame="border" border="1">
+                     <caption ID="inv-d22d7583-9f40-4a27-95e3-bef4dbd6f33b">Table 6. Clinical Assessments in the Per Protocol Population (Includes S. pneumoniae Patients With Penicillin MICs = 2 or 4 mcg/mL*)</caption>
+                     <col ID="inv-c8835e44-1164-4672-8067-981ad0290ab9" width="232.00px"/>
+                     <col ID="inv-aee1c91b-cc96-491b-adea-592653ee8c67" width="132.00px"/>
+                     <col ID="inv-99eafd8a-8af9-428b-90f5-9718a279158d" width="108.00px"/>
+                     <col ID="inv-5997d74b-b055-461d-aa7f-25a29983dbcb" width="112.00px"/>
+                     <tbody ID="inv-d06f9e2c-f9c0-41ad-a1a4-8074f6b62bc5">
+                        <tr ID="inv-6e9f936e-bfbc-4223-a863-a2cfbf1d540e">
+                           <td ID="inv-86d01640-2f6d-4edd-a192-49209ee9333e">
+                              <content styleCode="bold"> </content>
+                           </td>
+                           <td align="center" colspan="3" ID="inv-dfd8eba5-8394-4600-81cf-2f4ef2504295">
+                              <content styleCode="bold">2 to 4 Days Post-Therapy (Primary Endpoint)</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-f31ed26c-20fa-4b11-a5b5-c17f51da3161">
+                           <td ID="inv-b313c754-1933-41a6-a151-711e8bb622ba">
+                              <content styleCode="bold">Pathogen</content>
+                           </td>
+                           <td align="center" ID="inv-64f93fb6-4b01-4c38-9b57-7466e796bd54">
+                              <content styleCode="bold">n/N</content>
+                           </td>
+                           <td align="center" ID="inv-4597be68-b019-43c7-96a8-9367da47c12c">
+                              <content styleCode="bold">%</content>
+                           </td>
+                           <td align="center" ID="inv-c51cd2f9-e4d3-442b-9556-ffd0a8d18e0d">
+                              <content styleCode="bold">95% CI<sup>†</sup>
+                              </content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-b2a3b931-82df-4bb5-8dbf-e1b0709e28bc">
+                           <td ID="inv-8f34f68b-8baf-48cf-bf03-01df39bb6473">
+ All <content styleCode="italics">S. pneumoniae</content>
+                           </td>
+                           <td align="center" ID="inv-02208dc4-9ac0-47e4-8328-f137cf22f453">
+ 122/137 </td>
+                           <td align="center" ID="inv-262da7c7-83af-4f5b-a13d-6987b670c1cf">
+ 89.1 </td>
+                           <td align="center" ID="inv-201a8fe9-e45c-4b2b-adce-ede94c82da3b">
+ (82.6, 93.7) </td>
+                        </tr>
+                        <tr ID="inv-62596f67-fc44-498d-a666-27150502714d">
+                           <td ID="inv-1430e1f0-4c37-489e-941a-98220b34503a">
+                              <content styleCode="italics">S. pneumoniae </content>with penicillin
+ MIC = 2 mcg/mL </td>
+                           <td align="center" ID="inv-ea965434-9b05-48b9-bda8-9b4715993fa3">
+ 17/20 </td>
+                           <td align="center" ID="inv-00bbda81-11db-4e2b-b5ae-8b8ebc936c65">
+ 85 </td>
+                           <td align="center" ID="inv-eab7c91f-29f3-446a-95ab-2e78b063ab8a">
+ (62.1, 96.8) </td>
+                        </tr>
+                        <tr ID="inv-38f95ab4-f387-4a87-a29c-2479ae3e24d2">
+                           <td ID="inv-87e2bbf6-9539-42ab-b258-620790fd738d">
+                              <content styleCode="italics">S. pneumoniae </content>with penicillin
+ MIC = 4 mcg/mL </td>
+                           <td align="center" ID="inv-43eeb170-abc5-4d7d-8a79-1a9b2bf9bc7a">
+ 11/14 </td>
+                           <td align="center" ID="inv-f25be4e3-b8e2-4095-96cf-3b6455e6eca4">
+ 78.6 </td>
+                           <td align="center" ID="inv-3ba1bc94-c52a-43d2-9eb9-d4511668af04">
+ (49.2, 95.3) </td>
+                        </tr>
+                        <tr ID="inv-8025722d-b9f8-48d4-a50c-9737b144c342">
+                           <td ID="inv-1b270cbc-8bcf-4041-b4a0-f80318ae777d">
+                              <content styleCode="italics">H. influenzae</content>
+                           </td>
+                           <td align="center" ID="inv-92426d10-4dd8-4379-8ed3-4d3f29b1d008">
+ 141/162 </td>
+                           <td align="center" ID="inv-0182b0a8-7cd3-40ec-a39b-378fe195b1a4">
+ 87 </td>
+                           <td align="center" ID="inv-1e0ed5fa-dd92-428e-a527-9219a7649792">
+ (80.9, 91.8) </td>
+                        </tr>
+                        <tr ID="inv-8f656f0d-8e01-4632-8be3-d29159632ed3">
+                           <td ID="inv-7589d298-77bd-4af1-b063-a17a324e8e61">
+                              <content styleCode="italics">M. catarrhalis </content>
+                              <content styleCode="italics">(cont)</content>
+                           </td>
+                           <td align="center" ID="inv-c21d53ac-d820-4e8b-8304-f5982b5d20be">
+ 22/26 </td>
+                           <td align="center" ID="inv-13c4e5f0-03d6-4558-9e50-8c3c0c9ac187">
+ 84.6 </td>
+                           <td align="center" ID="inv-a9a49902-94b4-4e37-b2ce-8f06d58b7c26">
+ (65.1, 95.6) </td>
+                        </tr>
+                        <tr ID="inv-046b819a-d62b-4bcf-bf1b-b8623f37010d">
+                           <td rowspan="2" ID="inv-3c6421f3-b234-4b95-8f74-73134c67ed78">
+                              <content styleCode="bold"> </content>
+                           </td>
+                           <td align="center" colspan="3" ID="inv-6408630e-0cb3-45da-9364-b9758059d51f">
+                              <content styleCode="bold">15 to 18 Days Post-Therapy<sup>‡</sup> (Secondary Endpoint)</content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-ef025bc2-f6fd-48d8-8f54-1433a404d56e">
+                           <td align="center" ID="inv-a2a572e7-1df1-4a4d-b6ec-42e3116554fc">
+                              <content styleCode="bold">n/N</content>
+                           </td>
+                           <td align="center" ID="inv-ea16b0f0-5fa6-43d8-9cd6-c04947f8c926">
+                              <content styleCode="bold">%</content>
+                           </td>
+                           <td align="center" ID="inv-86ee28e6-7c39-4d1b-86f5-50f4e2854f42">
+                              <content styleCode="bold">95% CI<sup>†</sup>
+                              </content>
+                           </td>
+                        </tr>
+                        <tr ID="inv-82c118a0-a3f6-4844-adbe-49e5ac0b0454">
+                           <td ID="inv-98719025-9a50-45a9-a9ee-e5a120b01f67">
+ All <content styleCode="italics">S. pneumoniae</content>
+                           </td>
+                           <td align="center" ID="inv-395f1156-6b09-4cef-96f1-aca0ba1f2756">
+ 95/136 </td>
+                           <td align="center" ID="inv-301b3d2d-f114-4468-915d-3277fead6cfe">
+ 69.9 </td>
+                           <td align="center" ID="inv-a4a4b54f-54e8-4121-b0d6-83075ef7ca2b">
+ (61.4, 77.4) </td>
+                        </tr>
+                        <tr ID="inv-276a6bd7-7581-4a08-a9eb-7cd6d1822435">
+                           <td ID="inv-9a66396e-553f-44fd-ac6b-1f338aeb51fc">
+                              <content styleCode="italics">S. pneumoniae </content>with penicillin
+ MIC = 2 mcg/mL </td>
+                           <td align="center" ID="inv-c69bbbfa-a700-4b9a-85ef-068c3f60f781">
+ 11/20 </td>
+                           <td align="center" ID="inv-0b494951-dc89-452f-b9d5-6307d559150f">
+ 55 </td>
+                           <td align="center" ID="inv-f62306bf-dd27-424c-9eed-fe0021d1b0bc">
+ (31.5, 76.9) </td>
+                        </tr>
+                        <tr ID="inv-b99fb57f-c64c-4431-ba7c-9ef8d95e3066">
+                           <td ID="inv-bcd8993a-1320-41bf-9006-db94e2cc5420">
+                              <content styleCode="italics">S. pneumoniae </content>with penicillin
+ MIC = 4 mcg/mL </td>
+                           <td align="center" ID="inv-0b4b0a37-f32e-4377-85e1-60ebee651a05">
+ 5/14 </td>
+                           <td align="center" ID="inv-9c67521a-bbe4-481a-8e5b-321d3ae3c266">
+ 35.7 </td>
+                           <td align="center" ID="inv-fa58c203-e093-488f-a945-4dd46f7af0b7">
+ (12.8, 64.9) </td>
+                        </tr>
+                        <tr ID="inv-6e46147f-c491-4e5d-8f1d-c66eda37ac83">
+                           <td ID="inv-6d71fc51-21cd-420a-9ce1-e2e301a0d87b">
+                              <content styleCode="italics">H. influenzae</content>
+                           </td>
+                           <td align="center" ID="inv-00843efb-5ea5-4b83-b572-a44403840afc">
+ 106/156 </td>
+                           <td align="center" ID="inv-8eb6916d-83d0-45b7-bc3d-a59f27c648cb">
+ 67.9 </td>
+                           <td align="center" ID="inv-c72543b3-de58-4d25-8841-3e05e5306aa1">
+ (60, 75.2) </td>
+                        </tr>
+                        <tr ID="inv-1f0c0e9e-812f-4904-9b9c-6decfb2a6c7f">
+                           <td ID="inv-3bd95cc6-0c64-4bf4-9663-fd86da11cad3">
+                              <content styleCode="italics">M. catarrhalis</content>
+                           </td>
+                           <td align="center" ID="inv-9efe9f0d-9f24-499d-9532-80bd01daf10f">
+ 14/25 </td>
+                           <td align="center" ID="inv-a37e8a2b-c100-4597-b843-4a67256e650a">
+ 56 </td>
+                           <td align="center" ID="inv-4270f9a9-b4c8-4694-89d8-591c6538e033">
+ (34.9, 75.6) </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph ID="inv-afbc043d-704b-479f-ab9b-cd9dd09ba472">
+                     <sup>*</sup>
+                     <content styleCode="italics">S. pneumoniae </content>strains with penicillin MICs of 2 or 4 mcg/mL are considered resistant to penicillin.</paragraph>
+                  <paragraph ID="inv-0d952504-6149-4af8-86fe-2714b171e78c">
+                     <sup>†</sup> CI = confidence intervals; 95% CIs are not adjusted for multiple comparisons.</paragraph>
+                  <paragraph ID="inv-0e1899a0-cb27-4ca4-af64-53be8d5b6d5c">
+                     <content styleCode="bold">
+                        <sup>‡</sup>
+                     </content>Clinical assessments at 15 to 18 days post-therapy may have been confounded by viral infections and new episodes of acute otitis media with time elapsed post-treatment.</paragraph>
+                  <paragraph ID="inv-ea7b5653-011c-4253-b4dd-745a527e22e9">In the intent-to-treat analysis, overall clinical outcomes at 2 to 4 days and 15 to 18 days post-treatment in patients with <content styleCode="italics">S. pneumoniae </content>with penicillin MIC = 2 mcg/mL and 4 mcg/mL were 29/41 (71%) and 17/41 (41.5%), respectively.</paragraph>
+                  <paragraph ID="inv-25ee1098-03a0-41e7-be9f-030187e08e34">In the intent-to-treat population of 521 patients, the most frequently reported adverse events were vomiting (6.9%), fever (6.1%), contact dermatitis (i.e., diaper rash) (6.1%), upper respiratory tract infection (4%), and diarrhea (3.8%). Protocol-defined diarrhea (i.e., 3 or more watery stools in one day or 2 watery stools per day for 2 consecutive days as recorded on diary cards) occurred in 12.9% of patients.</paragraph>
+                  <paragraph ID="inv-ffe0d22f-3e96-429c-be47-4ce282ced01c">A double-blind, randomized, clinical study compared amoxicillin and clavulanate potassium for oral suspension,600 mg/42.9 mg per 5 mL (90/6.4 mg/kg/day, divided every 12 hours) to amoxicillin and clavulanate potassium (45/6.4 mg/kg/day, divided every 12 hours) for 10 days in 450 pediatric patients (3 months to 12 years) with acute otitis media. The primary objective of the study was to compare the safety of amoxicillin and clavulanate potassium for oral suspension,600 mg/42.9 mg per 5 mLto amoxicillin and clavulanate potassium. There was no statistically significant difference between treatments in the proportion of patients with 1 or more adverse events. The most frequently reported adverse events for amoxicillin and clavulanate potassium for oral suspension,600 mg/42.9 mg per 5 mL and the comparator of amoxicillin and clavulanate potassium were coughing (11.9% versus 6.8%), vomiting (6.5% versus 7.7%), contact dermatitis (i.e., diaper rash, 6% versus 4.8%), fever (5.5% versus 3.9%), and upper respiratory infection (3% versus 9.2%), respectively. The frequencies of protocol-defined diarrhea with amoxicillin and clavulanate potassium for oral suspension,600 mg/42.9 mg per 5 mL (11.1%) and amoxicillin and clavulanate potassium (9.4%) were similar (95% confidence interval on difference: - 4.2% to 7.7%). Only 2 patients in the group treated with amoxicillin and clavulanate potassium for oral suspension,600 mg/42.9 mg per 5 mL group and 1 patient in the group treated with amoxicillin and clavulanate potassium were withdrawn due to diarrhea.</paragraph>
+               </text>
+               <effectiveTime value="20130906"/>
+            </section>
+         </component>
+         <component>
+            <section ID="inv-66d43797-5a8b-4466-b551-4dbc9b2ff0d1">
+               <id root="7563cafe-e65a-48c5-aea2-54ebe9d17bd8"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title ID="inv-cff0c28c-6234-4bd2-84e6-3c9d5bbbd3cd">REFERENCES</title>
+               <text ID="inv-8c625be0-395b-49f3-9dd7-a6d40b24ddd2">
+                  <list listType="ordered" styleCode="Arabic">
+                     <item>National Committee for Clinical Laboratory Standards. Methods for Dilution Antimicrobial Susceptibility Tests for Bacteria That Grow Aerobically – Sixth Edition; Approved Standard. NCCLS Document M7-A6, Vol. 23, No. 2, NCCLS, Wayne, PA, January 2003.</item>
+                     <item>National Committee for Clinical Laboratory Standards for Antimicrobial Susceptibility Testing: Fourteenth Informational Supplement; Edition. Approved Standard. NCCLS Document 100-S-14, Vol. 24 No. 1 NCCLS, Wayne, PA, January 2003.</item>
+                     <item>National Committee for Clinical Laboratory Standards. Performance Standards for Antimicrobial Susceptibility Tests – Eighth Edition; Approved Standard. NCCLS Document M2-A8, Vol. 23, No. 1, NCCLS, Wayne, PA, January 2003.</item>
+                     <item>Swanson-Biearman B, Dean BS, Lopez G, Krenzelok EP. The effects of penicillin and cephalosporin ingestions in children less than six years of age. Vet Hum Toxicol 1988;30:66-67.</item>
+                  </list>
+                  <paragraph ID="inv-6720f2ed-2cc8-4d20-abde-084bcee7f0ea">CLINITEST<sup>®</sup> is a registered trademark of Miles, Inc.</paragraph>
+                  <paragraph ID="inv-0c09cba1-e7a1-42b9-84fc-4ddaaf76d7c3">CLINISTIX<sup>®</sup> is a registered trademark of Bayer Corporation.</paragraph>
+                  <paragraph ID="inv-18e8df28-50d3-4c87-80ef-ef4da1b535d7">Manufactured for:</paragraph>
+                  <paragraph ID="inv-8686abfa-0fd7-4bce-8455-693275bc8b26">Ranbaxy Pharmaceuticals Inc.</paragraph>
+                  <paragraph ID="inv-b0f170cc-110e-4f97-9eca-e8db315d0439">Jacksonville, FL 32257 USA</paragraph>
+                  <paragraph ID="inv-4e87967f-fa04-4721-b08f-266a73a1bfb9">by: Ranbaxy Laboratories Ltd.</paragraph>
+                  <paragraph ID="inv-3857df37-ae6e-4ce5-94a1-88d99f29d37e">New Delhi - 110 019, India</paragraph>
+                  <paragraph ID="inv-ae5bf4be-7acf-41b6-b43e-209a374ba8f5">April 2009			FDA-6</paragraph>
+                  <paragraph ID="inv-dca970b9-0547-419f-b0af-59b976d724db"/>
+                  <renderMultiMedia ID="ID0E3XAG" referencedObject="mm-95464dee-fabd-4d50-bc35-1e94786d8a1f">
+                     <caption ID="inv-a21769fd-ff7b-46d6-9972-31886a187b1c">200 mL bottle label</caption>
+                  </renderMultiMedia>
+               </text>
+               <effectiveTime value="20130906"/>
+               <component>
+                  <observationMedia ID="mm-95464dee-fabd-4d50-bc35-1e94786d8a1f">
+                     <text>label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="label.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

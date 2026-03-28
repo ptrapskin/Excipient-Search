@@ -1,0 +1,13 @@
+<form class="search-form" action="/search" method="get" autocomplete="off">
+    <label for="search-box">Medication or NDC</label>
+    <div class="search-input-row">
+        <input
+            id="search-box"
+            name="q"
+            type="text"
+            value="{{ query }}"
+            placeholder="e.g. metformin or 0002-8215-01"
+        >
+        <button type="submit">Search</button>
+    </div>
+</form>

@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="49a0bc6b-2c71-4171-b27d-c83f8403c4bd"/>
+   <code code="50578-4" codeSystem="2.16.840.1.113883.6.1" displayName="PRESCRIPTION ANIMAL DRUG LABEL"/>
+   <title>Cefpoderm<sup>®</sup>
+      <br/>(cefpodoxime proxetil tablets)</title>
+   <effectiveTime value="20241204"/>
+   <setId root="c856bd55-363f-49dd-9537-12cd9de89189"/>
+   <versionNumber value="4"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="362142734" root="1.3.6.1.4.1.519.1"/>
+            <name>Dechra Veterinary Products LLC</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="DLDE">
+               <id root="7cd85dc1-e827-4d3c-9b3e-57b4f8e982be"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20241204"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="17033-431" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Cefpoderm</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Cefpodoxime proxetil</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="100" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="2TB00A1Z7N" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Cefpodoxime proxetil</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="7R4F94TVGY" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CEFPODOXIME</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="100" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="17033-431-10" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANADA200543" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73583" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20181219"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48330" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="YELLOW" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="2" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48345" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OVAL" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="11" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">PV17</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="17033-432" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Cefpoderm</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Cefpodoxime proxetil</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="200" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="2TB00A1Z7N" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Cefpodoxime proxetil</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="7R4F94TVGY" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CEFPODOXIME</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="100" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="17033-432-10" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANADA200543" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73583" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20181219"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48331" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORANGE" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48345" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OVAL" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="16" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">PV18</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="89559139-6821-4fb0-a45a-fe218baf1c5a"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">For Oral Use in Dogs Only</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="6540eb16-7a6a-4e74-8856-3cda1629d179"/>
+               <code code="50741-8" codeSystem="2.16.840.1.113883.6.1" displayName="SAFE HANDLING WARNING SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">CAUTION:</content> Federal (USA) law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="8b6d13fe-44b4-4962-8a38-6ac3b46bcb69"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">DESCRIPTION:</content>
+                  </paragraph>
+                  <paragraph>Cefpodoxime proxetil is an orally administered, extended spectrum, semi-synthetic cephalosporin antibiotic. The chemical name is: (+/-)-1-Hydroxyethyl(+)-(6R,7R)-7-[2-(2-amino-4-thiazolyl)glyoxylamido]-3-methoxymethyl)-8-oxo-5-thia-1-azabicyclo [4.2.0]oct-2-ene-2-carboxylate, 7<sup>2</sup>-(Z)-(O-methyloxime), isopropyl carbonate (ester) [87239-81-4].</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+               <component>
+                  <section>
+                     <id root="839449ef-e42d-4671-9371-43ccc8e7de5a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Cefpodoxime Proxetil Chemical Structure:</content>
+                        </paragraph>
+                        <renderMultiMedia referencedObject="MM1"/>
+                        <paragraph>Cefpodoxime proxetil is a prodrug; its active metabolite is cefpodoxime. All doses of Cefpoderm (cefpodoxime proxetil tablets) are expressed in terms of the active cefpodoxime moiety. Cefpoderm is available as:</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">100 mg Tablet</content>, each yellow, elliptical, scored tablet contains cefpodoxime proxetil equivalent to 100 mg of cefpodoxime.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">200 mg Tablet</content>, each orange, oblong, tablet contains cefpodoxime proxetil equivalent to 200 mg of cefpodoxime.</paragraph>
+                     </text>
+                     <effectiveTime value="20241204"/>
+                     <component>
+                        <observationMedia ID="MM1">
+                           <text>Chemical Structure</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="cefpoderm-01.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="62aa11f3-c324-493f-a7a7-5483e06e4107"/>
+               <code code="50745-9" codeSystem="2.16.840.1.113883.6.1" displayName="VETERINARY INDICATIONS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">INDICATION:</content>
+                  </paragraph>
+                  <paragraph>Cefpoderm is indicated for the treatment of skin infections (wounds and abscesses) in dogs caused by susceptible strains of <content styleCode="italics">Staphylococcus pseudintermedius</content>, <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus canis </content>(group G, ß hemolytic), <content styleCode="italics">Escherichia coli</content>, <content styleCode="italics">Pasteurella multocida</content>, and <content styleCode="italics">Proteus mirabilis</content>.</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="47fdbd8d-36db-492a-a27e-444afaadf77f"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">DOSAGE AND ADMINISTRATION:</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+               <component>
+                  <section>
+                     <id root="62c66b2e-00dc-4f48-8277-5e4ee2f7686d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Dose range:</content> The dose range of Cefpoderm is 5-10 mg/kg (2.3-4.5 mg/lb) body weight, administered orally, once a day. </paragraph>
+                        <paragraph>The dose may be given with or without food. The determination of dosage for any particular patient must take into consideration such factors as the severity and nature of the infection, the susceptibility of the causative organisms, and the integrity of the patient's host-defense mechanisms. Obtain a sample of the pathogenic organism for culture and sensitivity testing prior to beginning antimicrobial therapy. Once results become available, continue with appropriate therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20241204"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="48efc90f-4d21-45ed-b62f-616c5eaab89b"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Duration:</content> Cefpoderm should be administered once daily for 5-7 days or for 2-3 days beyond the cessation of clinical signs, up to a maximum of 28 days. Treatment of acute infections should not be continued for more than 3-4 days if no response to therapy is seen.</paragraph>
+                     </text>
+                     <effectiveTime value="20241204"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="c730cf54-69dc-41d0-a2d3-c119e44a99f2"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Dosing Charts:</content> For daily oral administration of Cefpoderm at 5 mg/kg (Table 1) and 10 mg/kg (Table 2).</paragraph>
+                        <table width="60%">
+                           <caption>Table 1. Dose Table for Cefpoderm at 5 mg/kg Total Daily Dosage</caption>
+                           <col width="40%" align="left" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="7" align="center">
+                                    <content styleCode="bold">Weight of Dog (lbs)</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Daily Dose</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">22</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">44</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">66</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">88</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">132</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">No. of 100 mg tablets</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">0.5</td>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule">1.5</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">No. of 200 mg tablets</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule">1</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="7" align="center">
+                                    <content styleCode="bold">Weight of Dog (kgs)</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Daily Dose</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">10</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">20</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">30</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">40</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">60</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">No. of 100 mg tablets</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">0.5</td>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule">1.5</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule">No. of 200 mg tablets</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule">1</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table width="60%">
+                           <caption>Table 2. Dose Table for Cefpoderm at 10 mg/kg Total Daily Dosage</caption>
+                           <col width="40%" align="left" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <col width="10%" align="center" valign="middle"/>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="7" align="center">
+                                    <content styleCode="bold">Weight of Dog (lbs)</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Daily Dose</td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">11</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">22</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">44</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">66</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">88</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">132</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">No. of 100 mg tablets</td>
+                                 <td styleCode="Rrule">0.5</td>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">No. of 200 mg tablets</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule">2</td>
+                                 <td styleCode="Rrule">3</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="7" align="center">
+                                    <content styleCode="bold">Weight of Dog (kgs)</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Daily Dose</td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">5</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">10</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">20</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">30</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">40</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">60</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">No. of 100 mg tablets</td>
+                                 <td styleCode="Rrule">0.5</td>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule">No. of 200 mg tablets</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule">1</td>
+                                 <td styleCode="Rrule">2</td>
+                                 <td styleCode="Rrule">3</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20241204"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="e2af6c97-aa5f-408c-af7f-69b991571abb"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">CONTRAINDICATIONS:</content>
+                  </paragraph>
+                  <paragraph>Cefpodoxime proxetil is contraindicated in dogs with known allergy to cefpodoxime or to the ß-lactam (penicillins and cephalosporins) group of antibiotics.</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="b2a2efae-647f-4593-891c-6efcdfaac41f"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">WARNINGS:</content>
+                  </paragraph>
+                  <paragraph>Not for human use. Keep this and all drugs out of reach of children.</paragraph>
+                  <paragraph>Antimicrobial drugs, including penicillins and cephalosporins, can cause allergic reactions in sensitized individuals. To minimize the possibility of allergic reactions, those handling such antimicrobials, including cefpodoxime, are advised to avoid direct contact of the product with the skin and mucous membranes.</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="f032a6a2-7564-4ff2-b98d-25397ee49632"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PRECAUTIONS:</content>
+                  </paragraph>
+                  <paragraph>The safety of cefpodoxime proxetil in dogs used for breeding, pregnant dogs, or lactating bitches has not been demonstrated. As with other cephalosporins, cefpodoxime proxetil may occasionally induce a positive direct Coombs' test.</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="f055f554-8444-4c78-ada7-921bdc9fe648"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">ADVERSE REACTIONS:</content>
+                  </paragraph>
+                  <paragraph>A total of 216 dogs of various breeds and ages ranging from 2 months to 15 years were included in the field study safety analysis. The following table shows the number of dogs displaying each clinical observation.</paragraph>
+                  <table width="60%">
+                     <caption>Table 3. Abnormal Health Findings in the U.S. Field Study<footnote>Dogs may have experienced more than one of the observations during the study.</footnote>
+                     </caption>
+                     <col width="30%" align="left" valign="middle"/>
+                     <col width="35%" align="center" valign="middle"/>
+                     <col width="35%" align="center" valign="middle"/>
+                     <thead>
+                        <tr>
+                           <th styleCode="Lrule Rrule" align="center">Clinical Observation</th>
+                           <th styleCode="Rrule">Cefpodoxime Proxetil (n=118)</th>
+                           <th styleCode="Rrule">Active Control (n=98)</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">Vomiting</td>
+                           <td styleCode="Rrule">2</td>
+                           <td styleCode="Rrule">4</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">Diarrhea</td>
+                           <td styleCode="Rrule">1</td>
+                           <td styleCode="Rrule">1</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">Increased water drinking</td>
+                           <td styleCode="Rrule">0</td>
+                           <td styleCode="Rrule">2</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Rrule">Decreased appetite</td>
+                           <td styleCode="Rrule">1</td>
+                           <td styleCode="Rrule">1</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>To report suspected adverse events, for technical assistance or to obtain a copy of the Safety Data Sheet (SDS) contact Dechra at [866] 933-2472.</paragraph>
+                  <paragraph>For additional information about adverse drug experience reporting for animal drugs, contact FDA at 1-888-FDA-VETS or online at www.fda.gov/reportanimalae</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="020ae18c-ecf4-4b67-9153-a5995ab9fb33"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY:</title>
+               <effectiveTime value="20241204"/>
+               <component>
+                  <section>
+                     <id root="f0916c0a-736d-43b2-b5c7-c4d40f1102a5"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Pharmacokinetics/Pharmacodynamics:</content>
+                        </paragraph>
+                        <paragraph>Cefpodoxime proxetil is a prodrug that is absorbed from and de-esterified in the gastrointestinal tract to its active metabolite, cefpodoxime. Following oral administration to fasting Beagles, oral bioavailability was 63.1 ± 5.3%.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Figure 1. Canine Plasma Concentration of Cefpodoxime After a Single Oral Dose of 10 mg/kg Cefpodoxime Proxetil Tablets</content>
+                        </paragraph>
+                        <paragraph>
+                           <renderMultiMedia referencedObject="MM2"/>
+                        </paragraph>
+                        <paragraph>Cefpodoxime is distributed in the body with an apparent volume of distribution of 151 ± 27 mL/kg. Like other β-lactam antibiotics, cefpodoxime is eliminated from the body primarily in the urine, with an apparent elimination half-life of approximately 5-6 hours after oral administration. This is similar to the 4.7 hour apparent elimination half-life observed after intravenous dosing. Following intravenous administration of 10 mg/kg, the average total body clearance (Cl<sub>B</sub>) was 22.7 ± 4.19 mL/hr/kg.</paragraph>
+                        <table width="60%">
+                           <caption>Table 4. Summary of Pharmacokinetic Parameters Obtained after a Single Oral Dose of 10 mg Cefpodoxime/kg BW, Administered as a Tablet</caption>
+                           <col width="40%" align="left" valign="middle"/>
+                           <col width="30%" align="center" valign="middle"/>
+                           <col width="30%" align="center" valign="middle"/>
+                           <thead>
+                              <tr>
+                                 <th styleCode="Lrule Rrule" align="center">PK Parameter</th>
+                                 <th styleCode="Rrule">Unit</th>
+                                 <th styleCode="Rrule">Tablet (SD)</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">AUC<sub>0-∞</sub>
+                                 </td>
+                                 <td styleCode="Rrule">mcg∙hr/mL</td>
+                                 <td styleCode="Rrule">145 (77.6)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">AUC<sub>0-LOQ</sub>
+                                 </td>
+                                 <td styleCode="Rrule">mcg∙hr/mL</td>
+                                 <td styleCode="Rrule">142 (77.5)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Maximum concentration (C<sub>max</sub>)</td>
+                                 <td styleCode="Rrule">mcg/mL</td>
+                                 <td styleCode="Rrule">16.4 (11.8)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Terminal plasma elimination half-life (t<sub>1/2,z</sub>)</td>
+                                 <td styleCode="Rrule">hr</td>
+                                 <td styleCode="Rrule">5.61 (1.15)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Time of maximum concentration (t<sub>max</sub>)</td>
+                                 <td styleCode="Rrule">hr</td>
+                                 <td styleCode="Rrule">2.21 (0.542)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Mean residence time (MRT<sub>0-∞</sub>)</td>
+                                 <td styleCode="Rrule">hr</td>
+                                 <td styleCode="Rrule">9.21 (1.97)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20241204"/>
+                     <component>
+                        <observationMedia ID="MM2">
+                           <text>Figure 1</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="cefpoderm-02.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="969ee7be-c7d9-433f-9cb7-5e9670f4b10f"/>
+                     <code code="49489-8" codeSystem="2.16.840.1.113883.6.1" displayName="MICROBIOLOGY SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Microbiology:</content> Like other β-lactam antibiotics, cefpodoxime exerts its inhibitory effect by interfering with bacterial cell wall synthesis. This interference is primarily due to its covalently binding to the penicillin-binding proteins (PBPs) (i.e. transpeptidase and/or carboxypeptidase), which are essential for synthesis of the bacterial cell wall. Therefore, cefpodoxime is bactericidal. Cefpodoxime is stable in the presence of many common β-lactamase enzymes. As a result, many organisms resistant to other β-lactam antibiotics (penicillins and some cephalosporins) due to the production of β-lactamases may be susceptible to cefpodoxime.</paragraph>
+                        <paragraph>Cefpodoxime has a broad spectrum of clinically useful antibacterial activity that includes staphylococci, streptococci, and Gram-negative species (including <content styleCode="italics">Pasteurella</content>, <content styleCode="italics">Escherichia</content>, and <content styleCode="italics">Proteus</content>). The compound is not active against most obligate anaerobes, <content styleCode="italics">Pseudomonas</content> spp., or enterococci. The minimum inhibitory concentrations (MICs) for cefpodoxime against Gram-positive and Gram-negative pathogens isolated from canine skin infections (wounds and abscesses) in a 2002 U.S. field study are presented in Table 5. All MICs were determined in accordance with the National Committee for Clinical Laboratory Standards (NCCLS). Appropriate quality control (QC) ranges for <content styleCode="italics">in vitro</content> susceptibility testing are presented in Table 6.</paragraph>
+                        <table width="60%">
+                           <caption>Table 5. Cefpodoxime Minimum Inhibitory Concentration Values (mcg/mL) from a 2002 Field Study Evaluating Skin Infections (wounds and abscesses) of Canines in the United States</caption>
+                           <col width="28%" align="left" valign="middle"/>
+                           <col width="16%" align="center" valign="middle"/>
+                           <col width="14%" align="center" valign="middle"/>
+                           <col width="14%" align="center" valign="middle"/>
+                           <col width="28%" align="center" valign="middle"/>
+                           <thead>
+                              <tr>
+                                 <th styleCode="Lrule Rrule" align="center">Organism<footnote>Veterinary specific interpretive criteria have not been established for the above listed canine pathogens by the NCCLS at this time.</footnote>
+                                 </th>
+                                 <th styleCode="Rrule" align="center"># of Isolates</th>
+                                 <th styleCode="Rrule" align="center">MIC<sub>50</sub>
+                                 </th>
+                                 <th styleCode="Rrule" align="center">MIC<sub>90</sub>
+                                 </th>
+                                 <th styleCode="Rrule" align="center">Range</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Staphylococcus pseudintermedius</content>
+                                 </td>
+                                 <td styleCode="Rrule">118</td>
+                                 <td styleCode="Rrule">0.12</td>
+                                 <td styleCode="Rrule">0.50</td>
+                                 <td styleCode="Rrule">0.12-&gt;32.0</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Streptococcus canis</content> (group G, β hemolytic)</td>
+                                 <td styleCode="Rrule">33</td>
+                                 <td styleCode="Rrule">≤0.03</td>
+                                 <td styleCode="Rrule">≤0.03</td>
+                                 <td styleCode="Rrule">≤0.03<footnote>No Range, all isolates yielded the same value.</footnote>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Escherichia coli</content>
+                                 </td>
+                                 <td styleCode="Rrule">41</td>
+                                 <td styleCode="Rrule">0.25</td>
+                                 <td styleCode="Rrule">0.50</td>
+                                 <td styleCode="Rrule">0.12-&gt;32.0</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Pasteurella multocida</content>
+                                 </td>
+                                 <td styleCode="Rrule">32</td>
+                                 <td styleCode="Rrule">≤0.03</td>
+                                 <td styleCode="Rrule">≤0.03</td>
+                                 <td styleCode="Rrule">≤0.03-0.12</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Proteus mirabilis</content>
+                                 </td>
+                                 <td styleCode="Rrule">14</td>
+                                 <td styleCode="Rrule">≤0.03</td>
+                                 <td styleCode="Rrule">0.06</td>
+                                 <td styleCode="Rrule">≤0.03-0.06</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Staphylococcus aureus</content>
+                                 </td>
+                                 <td styleCode="Rrule">19</td>
+                                 <td styleCode="Rrule">2.0</td>
+                                 <td styleCode="Rrule">2.0</td>
+                                 <td styleCode="Rrule">0.12-2.0</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table width="60%">
+                           <caption>Table 6. Acceptable Quality Control Ranges for Cefpodoxime</caption>
+                           <col width="28%" align="left" valign="middle"/>
+                           <col width="26%" align="center" valign="middle"/>
+                           <col width="20%" align="center" valign="middle"/>
+                           <col width="26%" align="center" valign="middle"/>
+                           <thead>
+                              <tr styleCode="Botrule">
+                                 <th styleCode="Lrule Rrule" align="center">QC ATCC strain</th>
+                                 <th styleCode="Rrule" colspan="2">KB Disk Diffusion Method</th>
+                                 <th styleCode="Rrule">Broth Micro-dilution Method</th>
+                              </tr>
+                              <tr>
+                                 <th styleCode="Lrule Rrule"/>
+                                 <th styleCode="Rrule">Drug concentration</th>
+                                 <th styleCode="Rrule">Zone diameter</th>
+                                 <th styleCode="Rrule">MIC</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Escherichia coli</content> 25922</td>
+                                 <td styleCode="Rrule">10 mcg</td>
+                                 <td styleCode="Rrule">23-28 mm<footnote ID="ft1">These ranges are for quality control strains used to monitor accuracy of minimum inhibitory concentrations (MICs) of non-fastidious organisms using cation-adjusted Mueller-Hinton agar or broth medium. The dilution range should encompass the QC ranges of these strains in the broth micro-dilution method.</footnote>
+                                 </td>
+                                 <td styleCode="Rrule">0.25-1 mcg/mL<footnoteRef IDREF="ft1"/>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Staphylococcus aureus</content> 25923</td>
+                                 <td styleCode="Rrule">10 mcg</td>
+                                 <td styleCode="Rrule">19-25 mm<footnoteRef IDREF="ft1"/>
+                                 </td>
+                                 <td styleCode="Rrule"/>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Staphylococcus aureus</content> 29213</td>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule"/>
+                                 <td styleCode="Rrule">1-8 mcg/mL<footnoteRef IDREF="ft1"/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="italics">Staphylococcus pneumoniae</content> 49619</td>
+                                 <td styleCode="Rrule">10 mcg</td>
+                                 <td styleCode="Rrule">28-34 mm<footnote ID="ft2">These ranges are for quality control strains used to monitor accuracy of minimum inhibitory concentrations (MICs) of fastidious organisms. When susceptibility testing is performed for <content styleCode="italics">Streptococcus canis</content> (group G, β hemolytic), <content styleCode="italics">Streptococcus pneumoniae</content> ATCC 49619 should be included as a QC strain in the presence of 5% lysed sheep blood (KB disk diffusion method) or 2.5% lysed horse blood (broth micro-dilution method).</footnote>
+                                 </td>
+                                 <td styleCode="Rrule">0.03-0.12 mcg/mL<footnoteRef IDREF="ft2"/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20241204"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="fc3488ef-b37c-4476-9f77-ea53efc8b223"/>
+                     <code code="60563-4" codeSystem="2.16.840.1.113883.6.1" displayName="SUMMARY OF SAFETY AND EFFECTIVENESS"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">EFFECTIVENESS:</content>
+                        </paragraph>
+                        <paragraph>The clinical effectiveness of cefpodoxime proxetil tablets was established in a multi-location (23 site) field study. In this study, 216 dogs with infected wounds or abscesses were treated with either cefpodoxime proxetil (n=118) once daily at 5 mg/kg (2.3 mg/lb) body weight or with an active control antibiotic (n=98) administered twice daily for 5-7 days. In this study, cefpodoxime proxetil was considered noninferior to the active control (88.7% versus 88.4% respectively) in the treatment of canine skin infections (wounds and abscesses) caused by susceptible strains of <content styleCode="italics">Staphylococcus pseudintermedius</content>, <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus canis</content> (group G, β hemolytic), <content styleCode="italics">Escherichia coli</content>, <content styleCode="italics">Pasteurella multocida</content>, and <content styleCode="italics">Proteus mirabilis</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20241204"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ef1f4924-f717-4bae-a042-2f9e22bdc556"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">ANIMAL SAFETY:</content>
+                  </paragraph>
+                  <paragraph>In target animal safety studies, cefpodoxime was well tolerated at exaggerated daily oral doses of 100 mg/kg/day (10 times the maximum label dose) for 13 weeks in adult dogs and for 28 days in puppies (18-23 days of age). Therefore, once daily administration of cefpodoxime oral tablets at the maximum labeled dose of 10 mg/kg for up to 28 days was shown to be safe in adult dogs and puppies.</paragraph>
+                  <paragraph>Blood dyscrasia including neutropenias, may be seen following high doses of cephalosporins. Cephalosporin administration should be discontinued in such cases.</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="28e4e10a-5c2b-4f9e-9d1f-a4b0b5188929"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">STORAGE INFORMATION:</content>
+                  </paragraph>
+                  <paragraph>Store at controlled room temperature 68-77°F (20-25°C). Replace cap securely after each opening.</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="77c4d1ef-30a6-4f20-9e87-9d21b7d6ed89"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">HOW SUPPLIED:</content>
+                  </paragraph>
+                  <paragraph>Cefpoderm (cefpodoxime proxetil tablets) is available in the following strengths (cefpodoxime equivalent), colors, and sizes:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">100 mg</content> (yellow, scored, elliptical, debossed with PV on one side, 17 on the other side)<br/>						Bottles of 100<br/>NDC 17033-431-10</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">200 mg</content> (orange, oblong, debossed with PV on one side, 18 on the other side)<br/>Bottles of 100<br/>NDC 17033-432-10</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ad879a75-9b73-453e-a55b-d627732154df"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Approved by FDA under ANADA<br/># 200-543</content>
+                  </paragraph>
+                  <paragraph>Manufactured for:<br/>Dechra Veterinary Products<br/>7015 College Boulevard, Suite 525<br/>Overland Park, KS 66211 USA</paragraph>
+                  <paragraph>Cefpoderm is a registered trademark of Dechra Veterinary Products, LLC.</paragraph>
+                  <paragraph>Rev. January 2023</paragraph>
+               </text>
+               <effectiveTime value="20241204"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ecafb096-cce1-4178-be1b-47710534a45a"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 100 mg Tablet Bottle Label</title>
+               <text>
+                  <paragraph>NDC 17033-431-10</paragraph>
+                  <paragraph>100 mg</paragraph>
+                  <paragraph>Cefpoderm<sup>®</sup>
+                  </paragraph>
+                  <paragraph>(cefpodoxime proxetil tablets)<br/>100 mg<br/>Antimicrobial For Oral Use in<br/>Dogs Only<br/>Caution: Federal (USA) law restricts<br/>this drug to use by or on the order<br/>of a licensed veterinarian.<br/>Approved by FDA<br/>under ANADA # 200-543</paragraph>
+                  <paragraph>100 tablets</paragraph>
+                  <paragraph>Dechra</paragraph>
+                  <renderMultiMedia referencedObject="MM3"/>
+               </text>
+               <effectiveTime value="20241204"/>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>PRINCIPAL DISPLAY PANEL - 100 mg Tablet Bottle Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="cefpoderm-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ddac6531-a4ea-422d-934b-5ca4f5515eef"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 200 mg Tablet Bottle Label</title>
+               <text>
+                  <paragraph>NDC 17033-432-10</paragraph>
+                  <paragraph>200 mg</paragraph>
+                  <paragraph>Cefpoderm<sup>®</sup>
+                  </paragraph>
+                  <paragraph>(cefpodoxime proxetil tablets)<br/>200 mg<br/>Antimicrobial For Oral Use in<br/>Dogs Only<br/>Caution: Federal (USA) law restricts<br/>this drug to use by or on the order<br/>of a licensed veterinarian.<br/>Approved by FDA<br/>under ANADA # 200-543</paragraph>
+                  <paragraph>100 tablets</paragraph>
+                  <paragraph>Dechra</paragraph>
+                  <renderMultiMedia referencedObject="MM4"/>
+               </text>
+               <effectiveTime value="20241204"/>
+               <component>
+                  <observationMedia ID="MM4">
+                     <text>PRINCIPAL DISPLAY PANEL - 200 mg Tablet Bottle Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="cefpoderm-04.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="c4ab8855-43ec-4362-b69f-6426895c304f"/>
+   <code code="50578-4" displayName="PRESCRIPTION ANIMAL DRUG LABEL" codeSystem="2.16.840.1.113883.6.1"/>
+   <title>amoxi❖tabs<sup>®</sup>
+      <br/>(amoxicillin tablets), USP<br/>
+      <br/>Veterinary Tablets<br/>
+      <br/>
+      <content styleCode="italics">For use in dogs and cats<br/>
+      </content>
+      <br/>
+   </title>
+   <effectiveTime value="20241114"/>
+   <setId root="3e7c1569-d19c-4069-bf21-bc5fb9636eb0"/>
+   <versionNumber value="8"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="828851555" root="1.3.6.1.4.1.519.1"/>
+            <name>Zoetis Inc.</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="a6a0dcb7-898b-46d6-8cbf-722b949d1053"/>
+               <code code="48780-1" displayName="SPL listing data elements section" codeSystem="2.16.840.1.113883.6.1"/>
+               <effectiveTime value="20241114"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="54771-8007" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxi-Tabs</name>
+                        <formCode code="C42931" displayName="TABLET, FILM COATED" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>amoxicillin</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="150"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMOXICILLIN</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="500"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="54771-8007-7" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" displayName="BOTTLE" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NADA055078" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73593" displayName="NADA" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="19760204"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48327" displayName="purple" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">BMP208</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" displayName="ROUND" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="10" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="54771-6044" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxi-Tabs</name>
+                        <formCode code="C42931" displayName="TABLET, FILM COATED" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>amoxicillin</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="200"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMOXICILLIN</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="500"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="54771-6044-4" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" displayName="BOTTLE" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NADA055078" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73593" displayName="NADA" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="19760204"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48331" displayName="orange" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV">
+                              <originalText>Coral</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">BMP203</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" displayName="ROUND" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="11" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="54771-6046" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxi-Tabs</name>
+                        <formCode code="C42931" displayName="TABLET, FILM COATED" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>amoxicillin</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="400"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMOXICILLIN</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="250"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="54771-6046-6" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" displayName="BOTTLE" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NADA055078" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73593" displayName="NADA" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="19760204"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48329" displayName="green" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">BMP196</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" displayName="ROUND" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="14" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_09a7f82e-96d2-4850-8974-260a8b12e54f">
+               <id root="d8d93832-21a1-413d-8b34-da0a5da60eba"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>CAUTION</title>
+               <text>
+                  <paragraph>Federal law restricts this drug to use by or on the order of a licensed veterinarian.<br/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_2b0b0430-f351-4ade-9924-1c06296b1452">
+               <id root="07b11bd7-4a06-4946-8066-4f2f77c224fc"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>Amoxi-Tabs (amoxicillin tablets) is a semisynthetic antibiotic with a broad spectrum of activity. It provides bactericidal activity against a wide range of common gram-positive and gram-negative pathogens. Chemically, it is D(-)-α-amino-p-hydroxybenzyl penicillin trihydrate.</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_44db0db8-ea6f-4c1b-af63-8bbb4053e0fb">
+               <id root="6a5a5bdc-74cc-46ec-b7c6-7a617f73d26e"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph>Amoxi-Tabs is stable in the presence of gastric acid and may be given without regard to meals. It is rapidly absorbed after oral administration. It diffuses readily into most body tissues and fluids with the exception of brain and spinal fluid, except when meninges are inflamed. Most of the amoxicillin is excreted unchanged in the urine.</paragraph>
+                  <paragraph>Amoxicillin is similar to ampicillin in its bactericidal action against susceptible organisms. It acts through the inhibition of biosynthesis of cell wall mucopeptide. <content styleCode="italics">In vitro </content>and/or <content styleCode="italics">in vivo </content>studies have demonstrated the susceptibility of most strains of the following gram-positive and gram-negative bacteria: a- and b-haemolytic streptococci, nonpenicillinaseproducing staphylococci, <content styleCode="italics">Streptococcus faecalis</content>, <content styleCode="italics">Escherichia coli</content>, and <content styleCode="italics">Proteus mirabilis</content>. Because it does not resist destruction by penicillinase, it is not effective against penicillinase-producing bacteria, particularly resistant staphylococci. All strains of <content styleCode="italics">Pseudomonas </content>and most strains of <content styleCode="italics">Klebsiella </content>and <content styleCode="italics">Enterobacter </content>are resistant.</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_72949e32-3482-48fb-a5db-9d3cc1e4d58c">
+               <id root="4bebc411-6d52-4103-a879-b0c6cb6c3487"/>
+               <code code="50745-9" codeSystem="2.16.840.1.113883.6.1" displayName="VETERINARY INDICATIONS SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Dogs: </content>
+                     </content>Amoxi-Tabs are indicated in the treatment of susceptible strains of the organisms causing the following infections: </paragraph>
+                  <paragraph>Respiratory tract infections (tonsillitis, tracheobronchitis) due to <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus </content>spp<content styleCode="italics">.</content>, <content styleCode="italics">E. coli</content>, and <content styleCode="italics">Proteus mirabilis. </content>Genitourinary tract infections (cystitis) due to <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus </content>spp<content styleCode="italics">., </content>
+                     <content styleCode="italics">E. coli, </content>and <content styleCode="italics">Proteus mirabilis.</content>
+                  </paragraph>
+                  <paragraph>Genitourinary tract infections(cystitis) due to <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus spp</content>., <content styleCode="italics">E. coli</content>, and <content styleCode="italics">Proteus mirabilis</content>
+                     <content styleCode="italics">.</content>
+                  </paragraph>
+                  <paragraph>Gastrointestinal tract infections (bacterial gastroenteritis) due to <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus </content>spp<content styleCode="italics">.</content>, <content styleCode="italics">E. coli</content>, and <content styleCode="italics">Proteus mirabilis</content>. Bacterial dermatitis due to <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus </content>spp<content styleCode="italics">.</content>, and <content styleCode="italics">Proteus mirabilis</content>.</paragraph>
+                  <paragraph>Bacterial dermatitis due to <content styleCode="italics">Staphylococcus aureus, Streptococcus</content> spp., and <content styleCode="italics">Proteus mirabilis.</content>
+                  </paragraph>
+                  <paragraph>Soft tissue infections (abscesses, lacerations, and wounds) due to <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus </content>spp<content styleCode="italics">.</content>, <content styleCode="italics">E. coli</content>, and <content styleCode="italics">Proteus mirabilis</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Cats:</content>
+                     </content>Amoxi-Tabs are indicated in the treatment of susceptible strains of the organisms causing the following infections:</paragraph>
+                  <paragraph> Upper respiratory tract infections due to <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus </content>spp<content styleCode="italics">.</content>, and <content styleCode="italics">E. coli. </content>
+                  </paragraph>
+                  <paragraph>Genitourinary tract infections (cystitis) due to <content styleCode="italics">Staphylococcus aureus</content>, <content styleCode="italics">Streptococcus </content>spp<content styleCode="italics">.</content>, <content styleCode="italics">E. coli</content>, and <content styleCode="italics">Proteus mirabilis. </content>
+                  </paragraph>
+                  <paragraph>Gastrointestinal tract infections due to <content styleCode="italics">E. coli. </content>Skin and soft tissue infections (abscesses, lacerations, and wounds) due to <content styleCode="italics">Staphylococcus </content>
+                     <content styleCode="italics">aureus, Streptococcus </content>spp., <content styleCode="italics">E. coli</content>, and <content styleCode="italics">Pasteurella </content>
+                     <content styleCode="italics">multocida</content>. </paragraph>
+                  <paragraph>As with all antibiotics, appropriate <content styleCode="italics">in vitro </content>culturing and susceptibility testing of samples taken before treatment should be conducted.</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_a99876dd-8a33-4cfe-b056-162130a568b7">
+               <id root="4af7857e-8207-40e7-a360-da4c0a4882b1"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>The use of this drug is contraindicated in animals with a history of an allergic reaction to penicillin.</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_1d98874f-bbf8-4619-afaf-7777a4943f63">
+               <id root="bfb190dc-b398-4efa-87c8-5fcfbbd3190e"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNING</title>
+               <text>
+                  <paragraph>For use in dogs and cats only.</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_5675b949-7d7b-4246-af25-28f23eb5657c">
+               <id root="d7c4f214-a36e-4169-abfa-02b678a1d1ea"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>Amoxicillin is a semisynthetic penicillin and has the potential for producing allergic reactions. If an allergic reaction occurs, administer epinephrine and/or steroids.</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_bc493559-0f9b-4c15-a269-195b960b3cf0">
+               <id root="4756e03b-3b41-4e05-95b3-db4815faf17f"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>DOSAGE AND ADMINISTRATION:</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Dogs: </content>The recommended dosage is 5 mg/lb of body weight twice a day.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Cats: </content>The recommended dosage is 50 mg (5–10 mg/lb) once a day.</paragraph>
+                  <paragraph>Dosage should be continued for 5–7 days or 48 hours after all symptoms have subsided. If no improvement is seen in 5 days, review diagnosis and change therapy.</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_56a83fa7-a3fd-4f1a-9af3-666563c617cd">
+               <id root="a7813ec2-12a9-412a-9d5f-3cb16790631d"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Do Not Store at Temperatures Above 25°C (77°F)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Keep Bottle Tightly Closed.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_a5fe8ce5-ef8d-45ae-82dc-46b82019a2a2">
+               <id root="46758882-5957-49db-bdf4-d8aa28843bd3"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>Amoxi-Tabs are supplied in 5 strengths: 50 mg, 100 mg, 150 mg, and 200 mg in bottles of 500 tablets; 400 mg in bottles of 250 tablets.</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_36c2fe9d-6879-4f6f-9611-fbca41ad06b4">
+               <id root="a13173bc-f6c6-4fce-9c14-bca6db8b3282"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>Approved by FDA under NADA # 055-078<br/>Approved by FDA under NADA # 055-081<br/>
+                     <br/>
+                     <content styleCode="bold">zoetis</content>
+                     <br/>
+                     <br/>Distributed by:<br/>Zoetis Inc.<br/>Kalamazoo, MI 49007<br/>
+                     <br/>P1523357<br/>Revised: January 2020</paragraph>
+               </text>
+               <effectiveTime value="20241114"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_f00eac48-c816-423a-8d6d-3d302a138273">
+               <id root="c6bec9b3-a746-4535-83fa-aa3d9298cefb"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 150 mg Tablet Bottle Label</title>
+               <text>
+                  <renderMultiMedia referencedObject="MM1"/>
+               </text>
+               <effectiveTime value="20241114"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>150 mg Tablet Bottle Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="amoxi-tabs-1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_f7d2b042-56c9-4591-814a-3965e94a42a8">
+               <id root="5835a2c5-8d49-487a-8b85-819d01b03cc5"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 200 mg Tablet Bottle Label</title>
+               <text>
+                  <renderMultiMedia referencedObject="MM2"/>
+               </text>
+               <effectiveTime value="20241114"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>200 mg Tablet Bottle Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="amoxi-tabs-2.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_25f81c41-9585-4158-aafd-4fd130888b2a">
+               <id root="2faef3e5-c3b0-421d-8d50-bd7da0076fd5"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 400 mg Tablet Bottle Label</title>
+               <text>
+                  <renderMultiMedia referencedObject="MM3"/>
+               </text>
+               <effectiveTime value="20241114"/>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>400 mg Tablet Bottle Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="amoxi-tabs-3.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

@@ -1,0 +1,2195 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="2254915d-44f2-4c8c-9bc9-5929b99eda7f"/>
+   <code code="34391-3" displayName="HUMAN PRESCRIPTION DRUG LABEL" codeSystem="2.16.840.1.113883.6.1"/>
+   <title>Metformin Hydrochloride Tablets USP<br/>
+   </title>
+   <effectiveTime value="20170511"/>
+   <setId root="affda99e-5aa7-4d78-971f-41d9a151b5c5"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="080072003" root="1.3.6.1.4.1.519.1"/>
+            <name>Cambridge Therapeutics Technologies, LLC</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="21a3d5f0-40ff-430d-8976-53491d4de07f"/>
+               <code code="48780-1" displayName="SPL LISTING DATA ELEMENTS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <effectiveTime value="20170516"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="70882-124" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Metformin HCl</name>
+                        <formCode code="C42998" displayName="TABLET" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Metformin HCl</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="67877-561" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="500"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="786Z46389E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>METFORMIN HYDROCHLORIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9100L32L2N" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>METFORMIN</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="U725QWY32X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE K30</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="RDH86HJV5Z" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE K90</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="0WZ8WG20P6" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE 2910 (6 MPA.S)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="B697894SGQ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYETHYLENE GLYCOL 400</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7CVR7L4A2D" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MALTODEXTRIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XHX3C3X673" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRIACETIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="56"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="70882-124-56" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43168" displayName="BLISTER PACK" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20170206"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA090564" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" displayName="ANDA" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20170206"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" displayName="WHITE" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLFLAVOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C73366" displayName="BLACKBERRY" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">G;10</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" displayName="ROUND" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="11" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_b23c0bca-e89a-4451-ba75-471dbbcd182b">
+               <id root="b23c0bca-e89a-4451-ba75-471dbbcd182b"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>Metformin Hydrochloride Tablets USP are oral antihyperglycemic drugs used in the management of type 2 diabetes. Metformin hydrochloride (N,N-dimethylimidodicarbonimidic diamide hydrochloride) is not chemically or pharmacologically related to any other classes of oral antihyperglycemic agents. The structural formula is as shown:</paragraph>
+                  <renderMultiMedia referencedObject="MM1"/>
+                  <paragraph>Metformin hydrochloride is a white to off-white crystalline compound with a molecular formula of C<sub>4</sub>H<sub>11</sub>N<sub>5</sub>• HCl and a molecular weight of 165.63. Metformin hydrochloride is freely soluble in water and is practically insoluble in acetone, ether, and chloroform. The pKa of metformin is 12.4. The pH of a 1% aqueous solution of metformin hydrochloride is 6.68. </paragraph>
+                  <br/>
+                  <br/>
+                  <paragraph>Metformin Hydrochloride Tablets USP contain 500 mg, 850 mg, or 1000 mg of metformin hydrochloride. Each tablet contains the inactive ingredients povidone (K-30), povidone (K-90), pregelatinized starch,and magnesium stearate. In addition, the coating for the tablets contains artificial blackberry flavor, hypromellose and polyethylene glycol.</paragraph>
+               </text>
+               <effectiveTime value="20170207"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Metformin Hydrochloride Structure</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="metformin-hcl-tablets-usp---granules-1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_a036c49c-99ae-4f89-a13a-d31f3cd2bff9">
+               <id root="a036c49c-99ae-4f89-a13a-d31f3cd2bff9"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20170207"/>
+               <component>
+                  <section ID="LINK_80b435d7-9c47-42c3-8846-e128d2a249e4">
+                     <id root="80b435d7-9c47-42c3-8846-e128d2a249e4"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Mechanism of Action</title>
+                     <text>
+                        <paragraph>Metformin is an antihyperglycemic agent which improves glucose tolerance in patients with type 2 diabetes, lowering both basal and postprandial plasma glucose. Its pharmacologic mechanisms of action are different from other classes of oral antihyperglycemic agents. Metformin decreases hepatic glucose production, decreases intestinal absorption of glucose, and improves insulin sensitivity by increasing peripheral glucose uptake and utilization. Unlike sulfonylureas, metformin does not produce hypoglycemia in either patients with type 2 diabetes or normal subjects (except in special circumstances, see PRECAUTIONS) and does not cause hyperinsulinemia. With metformin therapy, insulin secretion remains unchanged while fasting insulin levels and day-long plasma insulin response may actually decrease.</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_ceaa17ce-0ed7-4bb0-a2e4-5c6f476addc7">
+                     <id root="ceaa17ce-0ed7-4bb0-a2e4-5c6f476addc7"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Pharmacokinetics</title>
+                     <text>
+                        <paragraph>Absorption and Bioavailability</paragraph>
+                        <paragraph>The absolute bioavailability of a Metformin Hydrochloride 500 mg tablet given under fasting conditions is approximately 50% to 60%. Studies using single oral doses of Metformin Hydrochloride 500 mg to 1500 mg, and 850 mg to 2550 mg, indicate that there is a lack of dose proportionality with increasing doses, which is due to decreased absorption rather than an alteration in elimination. Food decreases the extent of and slightly delays the absorption of metformin, as shown by approximately a 40% lower mean peak plasma concentration (C<sub>max</sub>), a 25% lower area under the plasma concentration versus time curve (AUC), and a 35-minute prolongation of time to peak plasma concentration (T<sub>max</sub>) following administration of a single 850 mg tablet of metformin with food, compared to the same tablet strength administered fasting. The clinical relevance of these decreases is unknown.</paragraph>
+                        <paragraph>Distribution</paragraph>
+                        <paragraph>The apparent volume of distribution (V/F) of metformin following single oral doses of Metformin Hydrochloride Tablets USP 850 mg averaged 654 ± 358 L. Metformin is negligibly bound to plasma proteins, in contrast to sulfonylureas, which are more than 90% protein bound. Metformin partitions into erythrocytes, most likely as a function of time. At usual clinical doses and dosing schedules of Metformin Hydrochloride Tablets USP, steady state plasma concentrations of metformin are reached within 24 to 48 hours and are generally &lt;1mcg/mL. During controlled clinical trials of Metformin Hydrochloride Tablets USP, maximum metformin plasma levels did not exceed 5 mcg/mL, even at maximum doses.</paragraph>
+                        <paragraph>Metabolism and Elimination</paragraph>
+                        <paragraph>Intravenous single-dose studies in normal subjects demonstrate that metformin is excreted unchanged in the urine and does not undergo hepatic metabolism (no metabolites have been identified in humans) nor biliary excretion. Renal clearance (see Table 1) is approximately 3.5 times greater than creatinine clearance, which indicates that tubular secretion is the major route of metformin elimination. Following oral administration, approximately 90% of the absorbed drug is eliminated via the renal route within the first 24 hours, with a plasma elimination half-life of approximately 6.2 hours. In blood, the elimination half-life is approximately 17.6 hours, suggesting that the erythrocyte mass may be a compartment of distribution.</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_8a2d3f6d-e8e2-4fef-9451-10bb02925c37">
+                     <id root="8a2d3f6d-e8e2-4fef-9451-10bb02925c37"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Special Populations</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Type 2 Diabetes<br/>
+                           </content>In the presence of normal renal function, there are no differences between single- or multiple-dose pharmacokinetics of metformin between patients with type 2 diabetes and normal subjects (see <content styleCode="bold">Table 1</content>), nor is there any accumulation of metformin in either group at usual clinical doses</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">
+                              <br/>Renal  Insufficiency<br/>
+                           </content>In patients with decreased renal function (based on measured creatinine clearance), the plasma and blood half-life of metformin is prolonged and the renal clearance is decreased in proportion to the decrease in creatinine clearance (see <content styleCode="bold">Table 1</content>; also see <content styleCode="bold">WARNINGS</content>).<br/>
+                           <br/>
+                           <content styleCode="italics">Hepatic Insufficiency</content>
+                           <br/>No pharmacokinetic studies of metformin have been conducted in patients with hepatic insufficiency.</paragraph>
+                        <paragraph>
+                           <br/>
+                           <content styleCode="italics">Geriatrics </content>
+                           <br/>Limited data from controlled pharmacokinetic studies of Metformin Hydrochloride Tablets USP in healthy elderly subjects suggest that total plasma clearance of metformin is decreased, the half-life is prolonged, and C<sub>max</sub> is increased, compared to healthy young subjects. From these data, it appears that the change in metformin pharmacokinetics with aging is primarily accounted for by a change in renal function (see <content styleCode="bold">Table 1</content>). Metformin Hydrochloride Tablets USP treatment should not be initiated in patients ≥80 years of age unless measurement of creatinine clearance demonstrates that renal function is not reduced (see <content styleCode="bold">WARNINGS</content> and <content styleCode="bold">DOSAGE AND ADMINISTRATION</content>)<br/>
+                           <br/>
+                        </paragraph>
+                        <table>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" colspan="4" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 1: Select Mean (±S.D.) Metformin            Pharmacokinetic Parameters Following Single or Multiple Oral Doses of Metformin            Hydrochloride Tablets </content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Subject Groups: Metformin Hydrochloride Tablets dose<sup>a</sup>            (number of subjects)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">C<sub>max</sub>
+                                       <sup>b</sup>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">(µg/mL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">T<sub>max</sub>
+                                       <sup>o</sup>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">(hrs)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Renal Clearance (mL/min)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Healthy, nondiabetic adults: </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">   500 mg single dose (24) <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1.03 (±0.33)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 2.75 (±0.81)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 600 (±132)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">   850 mg single dose (74)<sup>d</sup>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1.60 (±0.38)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 2.64 (±0.82)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 552 (±139)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">   850 mg three times daily for 19 doses<sup>e</sup>            (9)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 2.01 (±0.42)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1.79 (±0.94)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 642 (±173)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Adults with type 2 diabetes: </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">   850 mg single dose (23) <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1.48 (±0.5)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 3.32 (±1.08)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 491 (±138)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">   850 mg three times daily for 19 doses<sup>e</sup>            (9)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1.90 (±0.62)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 2.01 (±1.22)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 550 (±160)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Elderly<sup>f</sup> ,  healthy nondiabetic adults: </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/> <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/> <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/> <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">   850 mg single dose (12)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 2.45 (±0.70)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 2.71 (±1.05)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 412 (±98)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Renal-impaired adults: </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">850 mg single dose </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">   <content styleCode="bold">Mild</content>            (CL<sub>cr</sub>
+                                    <sup>g</sup> 61-90 mL/min) (5) <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1.86 (±0.52)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 3.20 (±0.45)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 384 (±122)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">  Moderate</content> (CL<sub>cr</sub> 31-60 mL/ min) (4)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 4.12 (±1.83)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 3.75 (±0.50)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 108 (±57)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">  Severe</content> (CL<sub>cr</sub> 10-30 mL/min) (6) <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 3.93 (±0.92)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 4.01 (±1.10)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 130 (±90)<br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <br/>
+                        <paragraph>
+                           <sup>a</sup> All doses given fasting except the first 18 doses of the multiple dose studies </paragraph>
+                        <paragraph>
+                           <sup>b</sup> Peak plasma concentration </paragraph>
+                        <paragraph>
+                           <sup>c</sup> Time to peak plasma concentration </paragraph>
+                        <paragraph>
+                           <sup>d</sup> Combined results (average means) of five studies: mean age 32 years (range 23-59 years) </paragraph>
+                        <paragraph>
+                           <sup>e</sup> Kinetic study done following dose 19, given fasting </paragraph>
+                        <paragraph>
+                           <sup>f</sup> Elderly subjects, mean age 71 years (range 65-81 years) </paragraph>
+                        <paragraph>
+                           <sup>g</sup> CL<sub>cr</sub> = creatinine clearance normalized to body surface area of 1.73 m<sup>2</sup>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Pediatrics</content>
+                        </paragraph>
+                        <paragraph>After administration of a single oral Metformin Hydrochloride 500 mg tablet with food, geometric mean metformin C<sub>max</sub> and AUC differed less than 5% between pediatric type 2 diabetic patients (12 to 16 years of age) and gender- and weight-matched healthy adults (20 to 45 years of age), all with normal renal function.</paragraph>
+                        <br/>
+                        <paragraph>
+                           <content styleCode="italics">Gender</content>
+                        </paragraph>
+                        <paragraph>Metformin pharmacokinetic parameters did not differ significantly between normal subjects and patients with type 2 diabetes when analyzed according to gender (males = 19, females = 16). Similarly, in controlled clinical studies in patients with type 2 diabetes, the antihyperglycemic effect of Metformin Hydrochloride Tablets USP was comparable in males and females.</paragraph>
+                        <br/>
+                        <paragraph>
+                           <content styleCode="italics">Race</content>
+                        </paragraph>
+                        <paragraph>No studies of metformin pharmacokinetic parameters according to race have been performed. In controlled clinical studies of Metformin Hydrochloride Tablets USP in patients with type 2 diabetes, the antihyperglycemic effect was comparable in whites (n=249), blacks (n=51), and Hispanics (n=24).</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_9a31c2c5-04ac-4a16-80d7-c7a41b2a4d7c">
+                     <id root="9a31c2c5-04ac-4a16-80d7-c7a41b2a4d7c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Clinical Studies</title>
+                     <text>
+                        <paragraph>METFORMIN HYDROCHLORIDE TABLETS USP</paragraph>
+                        <paragraph>In a double-blind, placebo-controlled, multicenter U.S. clinical trial involving obese patients with type 2 diabetes whose hyperglycemia was not adequately controlled with dietary management alone (baseline fasting plasma glucose [FPG] of approximately 240 mg/dL), treatment with Metformin Hydrochloride Tablets USP (up to 2550 mg/day) for 29 weeks resulted in significant mean net reductions in fasting and postprandial plasma glucose (PPG) and hemoglobin A<sub>1c</sub> (HbA<sub>1c </sub>of 59 mg/dL, 83 mg/dL, and 1.8%, respectively, compared to the placebo group (see <content styleCode="bold">Table 2</content>)</paragraph>
+                        <table>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" colspan="4" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 2: Metformin Hydrochloride            Tablets vs Placebo Summary of Mean Changes from Baseline*  in Fasting            Plasma Glucose, HbA<sub>1c</sub>, and Body Weight, at Final Visit (29-week            study)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold"> </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin hydrochloride</content>
+                                    <br/>
+                                    <content styleCode="bold">tablets</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Placebo</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">p–Value</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold"> </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=141)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=145)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">FPG (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 241.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 237.7<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -53.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 6.3<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Hemoglobin A<sub>1c</sub> (%)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 8.4<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 8.2<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -1.4<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.4<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Body Weight (lbs)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 201.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 206.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**t<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -1.4<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -2.4<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>*</sup>All patients on diet therapy at baseline                         <sup>**</sup>Not Statistically significant</paragraph>
+                        <paragraph>
+                           <br/>A 29-week, double-blind, placebo-controlled study of Metformin Hydrochloride Tablets USP and glyburide, alone and in combination, was conducted in obese patients with type 2 diabetes who had failed to achieve adequate glycemic control while on maximum doses of glyburide (baseline FPG of approximately 250 mg/dL) (see <content styleCode="bold">Table 3</content>). Patients randomized to the combination arm started therapy with Metformin Hydrochloride Tablets USP 500 mg and glyburide 20 mg. At the end of each week of the first four weeks of the trial, these patients had their dosages of Metformin Hydrochloride Tablets USP increased by 500 mg if they had failed to reach target fasting plasma glucose. After week four, such dosage adjustments were made monthly, although no patient was allowed to exceed Metformin Hydrochloride Tablets USP 2500 mg. Patients in the Metformin Hydrochloride Tablets USP only arm (metformin plus placebo) followed the same titration schedule. At the end of the trial, approximately 70% of the patients in the combination group were taking Metformin Hydrochloride Tablets USP 2000 mg/glyburide 20 mg or Metformin Hydrochloride Tablets USP 2500 mg/glyburide 20 mg. Patients randomized to continue on glyburide experienced worsening of glycemic control, with mean increases in FPG, PPG, and HbA<sub>1c</sub> of 14 mg/dL, 3 mg/dL, and 0.2%, respectively. In contrast, those randomized to Metformin Hydrochloride Tablets USP (up to 2500 mg/day) experienced a slight improvement, with mean reductions in FPG, PPG, and HbA<sub>1c</sub> of 1 mg/dL, 6 mg/dL, and 0.4%, respectively. The combination of Metformin Hydrochloride Tablets USP and glyburide was effective in reducing FPG, PPG, and HbA<sub>1c</sub> levels by 63 mg/dL, 65 mg/dL, and 1.7%, respectively. Compared to results of glyburide treatment alone, the net differences with combination treatment were -77 mg/dL, - 68 mg/dL, and -1.9%, respectively (see <content styleCode="bold">Table 3</content>)</paragraph>
+                        <br/>
+                        <table>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" colspan="7" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 3: Combined Metformin Hydrochloride Tablets /Glyburide (Comb) vs            Glyburide (Glyb) or Metformin Hydrochloride Tablets (MET) Monotherapy:            Summary of Mean Changes from Baseline* in Fasting Plasma Glucose, HbA<sub>1c</sub>,            and Body Weight, at Final Visit (29-week study)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" rowspan="2" styleCode="    Lrule          Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" rowspan="2" styleCode="     Rrule     "> <content styleCode="bold">Comb</content>
+                                    <br/> <br/>
+                                    <content styleCode="bold">(n=213)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" rowspan="2" styleCode="     Rrule     "> <content styleCode="bold">Glyb</content>
+                                    <br/> <br/>
+                                    <content styleCode="bold">(n=209)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" rowspan="2" styleCode="     Rrule     "> <content styleCode="bold">MET</content>
+                                    <br/> <br/>
+                                    <content styleCode="bold">(n=210)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" colspan="3" styleCode="     Rrule     "> <content styleCode="bold">p-values</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Glyb vs</content>
+                                    <br/> <br/>
+                                    <content styleCode="bold">Comb</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">MET vs</content>
+                                    <br/> <br/>
+                                    <content styleCode="bold">Comb</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">MET vs</content>
+                                    <br/> <br/>
+                                    <content styleCode="bold">Glyb</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Fasting Plasma Glucose (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 250.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 247.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 253.9<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -63.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 13.7<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -0.9<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.025<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Hemoglobin A<sub>1c</sub> (%)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 8.8<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 8.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 8.9<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.007<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -1.7<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.2<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -0.4<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Body Weight (lbs)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">  Baseline <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 202.2<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 203.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 204.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> NS**<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">  Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.9<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -0.7<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -8.4<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.011<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.001<br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>*All patients on glyburide, 20 mg/day, at Baseline                    **Not statistically significant</paragraph>
+                        <paragraph>
+                           <br/>The magnitude of the decline in fasting blood glucose concentration following the institution of Metformin Hydrochloride Tablets USP therapy was proportional to the level of fasting hyperglycemia. Patients with type 2 diabetes with higher fasting glucose concentrations experienced greater declines in plasma glucose and glycosylated hemoglobin. </paragraph>
+                        <paragraph>
+                           <br/>In clinical studies, Metformin Hydrochloride Tablets USP, alone or in combination with a sulfonylurea, lowered mean fasting serum triglycerides, total cholesterol, and LDL cholesterol levels and had no adverse effects on other lipid levels (see <content styleCode="bold">Table 4</content>).</paragraph>
+                        <br/>
+                        <table>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" colspan="6" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 4: Summary of Mean Percent Change From Baseline of Major Serum            Lipid Variables at Final Visit (29-week studies)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold"> </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" colspan="2" styleCode="     Rrule     "> <content styleCode="bold">Metformin hydrochloride tablets vs Placebo</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" colspan="3" styleCode="     Rrule     "> <content styleCode="bold">Combined Metformin hydrochloride Tablets /Glyburide vs             Monotherapy</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold"> </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin hydrochloride tablets</content>
+                                    <br/>
+                                    <content styleCode="bold">(n=141)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Placebo</content>
+                                    <br/>
+                                    <content styleCode="bold"> </content>
+                                    <br/>
+                                    <content styleCode="bold">(n=145)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin hydrochloride tablets</content>
+                                    <br/>
+                                    <content styleCode="bold">(n=210)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin hydrochloride tablets/ Glyburide</content>
+                                    <br/>
+                                    <content styleCode="bold">(n=213)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Glyburide</content>
+                                    <br/>
+                                    <content styleCode="bold">(n=209)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Total Cholesterol (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 211.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 212.3<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 213.1<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 215.6<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 219.6<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Mean % Change at<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -5%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -2%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -4%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1%<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Total Triglycerides (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 236.1<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 203.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 242.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 215.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 266.1<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Mean % Change at<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -16%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -3%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -8%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 4%<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">LDL-Cholesterol (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 135.4<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 138.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 134.3<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 136.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 137.5<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Mean % Change at<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">  FINAL VISIT <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -8%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -4%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -6%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 3%<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">HDL-Cholesterol (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 39.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 40.5<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 37.2<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 39.0<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 37.0<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Mean % Change at <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> FINAL VISIT <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 2%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -1%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 5%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 3%<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 1%<br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <br/>In contrast to sulfonylureas, body weight of individuals on Metformin Hydrochloride Tablets USP tended to remain stable or even decrease somewhat (see <content styleCode="bold">Tables 2 </content>and<content styleCode="bold"> 3</content>). </paragraph>
+                        <paragraph>
+                           <br/>A 24-week, double-blind, placebo-controlled study of Metformin Hydrochloride Tablets USP plus insulin versus insulin plus placebo was conducted in patients with type 2 diabetes who failed to achieve adequate glycemic control on insulin alone (see <content styleCode="bold">Table 5</content>). Patients randomized to receive Metformin Hydrochloride Tablets USP plus insulin achieved a reduction in HbA<sub>1c</sub> of 2.10%, compared to a 1.56% reduction in HbA<sub>1c</sub> achieved by insulin plus placebo. The improvement in glycemic control was achieved at the final study visit with 16% less insulin, 93.0 U/day vs 110.6 U/day, Metformin Hydrochloride Tablets USP plus insulin versus insulin plus placebo, respectively, p=0.04</paragraph>
+                        <br/>
+                        <table>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" colspan="4" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 5: Combined Metformin Hydrochloride Tablets /Insulin vs            Placebo/Insulin  Summary of Mean Changes from Baseline in HbA<sub>1c</sub>            and Daily Insulin Dose</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold"> </content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin Hydrochloride Tablets/            Insulin</content>
+                                    <br/>
+                                    <content styleCode="bold">(n=26)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Placebo/ Insulin</content>
+                                    <br/>
+                                    <content styleCode="bold">(n=28)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Treatment Difference</content>
+                                    <br/>
+                                    <content styleCode="bold">Mean ± SE</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Hemoglobin A<sub>1c</sub> (%)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 8.95<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 9.32<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -2.10<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -1.56<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -0.54 ± 0.43a<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Insulin Dose (U/day)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 93.12<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 94.64<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -0.15<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 15.93<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -16.08 ± 7.77<sup>b</sup>
+                                    <br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup> Statistically significant using analysis of covariance with baseline as covariate (p=0.04)</paragraph>
+                        <paragraph>Not significant using analysis of variance (values shown in table) </paragraph>
+                        <paragraph>
+                           <sup>b</sup> Statistically significant for insulin (p=0.04)</paragraph>
+                        <br/>
+                        <paragraph>A second double-blind, placebo-controlled study (n=51), with 16 weeks of randomized treatment, demonstrated that in patients with type 2 diabetes controlled on insulin for 8 weeks with an average HbA<sub>1c</sub> of 7.46 ± 0.97%, the addition of Metformin Hydrochloride Tablets USP maintained similar glycemic control (HbA<sub>1c</sub> 7.15 ± 0.61 versus 6.97 ± 0.62 for Metformin Hydrochloride Tablets USP plus insulin and placebo plus insulin, respectively) with 19% less insulin versus baseline (reduction of 23.68 ± 30.22 versus an increase of 0.43 ± 25.20 units for Metformin Hydrochloride Tablets USP plus insulin and placebo plus insulin, p&lt;0.01). In addition, this study demonstrated that the combination of Metformin Hydrochloride Tablets USP plus insulin resulted in reduction in body weight of 3.11 ± 4.30 lbs, compared to an increase of 1.30 ± 6.08 lbs for placebo plus insulin, p=0.01. <br/>
+                           <br/>A 24-week, double-blind, randomized study of Metformin Hydrochloride Tablets USP, taken twice daily (with breakfast and evening meal), was conducted in patients with type 2 diabetes who had been treated with Metformin Hydrochloride Tablets USP 500 mg twice daily for at least 8 weeks prior to study entry. The Metformin Hydrochloride Tablets USP dose had not necessarily been titrated to achieve a specific level of glycemic control prior to study entry. Patients qualified for the study if HbA<sub>1c</sub> was ≤8.5% and FPG was ≤200 mg/dL. Changes in glycemic control and body weight are shown in <content styleCode="bold">Table 6</content>
+                        </paragraph>
+                        <br/>
+                        <table>
+                           <col/>
+                           <col/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" colspan="2" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 6: Summary of Mean Changes from            Baseline* in HbA<sub>1c,</sub> Fasting Plasma Glucose, and Body Weight at            Week 12 and at Final Visit (24-week study)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin Hydrochloride Tablets</content>
+                                    <br/>
+                                    <content styleCode="bold">500 mg Twice Daily</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Hemoglobin A<sub>1c</sub> (%)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=67)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 7.06<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at 12 Weeks<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.14<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> (95% CI)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> (-0.03, 0.31)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.14<sup>a</sup>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> (95% CI)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> (-0.04, 0.31)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">FPG (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=69)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 127.2<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at 12 Weeks<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 12.9<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> (95% CI)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> (6.5, 19.4)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 14.0<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> (95% CI)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> (7.0, 21.0)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Body Weight (lbs)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=71)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 210.3<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at 12 Weeks<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.4<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> (95% CI)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> (-0.4, 1.5)<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.9<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> (95% CI)<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> (-0.4, 2.2)<br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>*All patients on Metformin Hydrochloride Tablets 500mg twice daily at Baseline        <sup>a</sup> n=68<br/>
+                           <br/>Changes in lipid parameters in the previously described study of Metformin Hydrochloride Tablets USP are shown in <content styleCode="bold">Table 7</content> </paragraph>
+                        <br/>
+                        <table>
+                           <col/>
+                           <col/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" colspan="2" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 7: Summary of Mean Percent Changes from Baseline*</content>
+                                    <br/>
+                                    <content styleCode="bold">in Major Lipid Variables at Final Visit (24-week study)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin Hydrochloride Tablets 500mg</content>
+                                    <br/>
+                                    <content styleCode="bold">Twice Daily</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Total Cholesterol (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=68)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 199.0<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Mean % Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 0.1%<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Total Triglycerides (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=68)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 178.0<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Mean % Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 6.3%<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">LDL-Cholesterol (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=68)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 122.1<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Mean % Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> -1.3%<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">HDL-Cholesterol (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">(n=68)</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 41.9<br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Mean % Change at FINAL VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> 4.8%<br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>*All patients on Metformin Hydrochloride Tablets 500mg twice daily at Baseline<br/>
+                           <br/>
+                           <content styleCode="bold">Pediatric Clinical Studies</content>
+                           <br/>
+                           <br/>In a double-blind, placebo-controlled study in pediatric patients aged 10 to 16 years with type 2 diabetes (mean FPG 182.2 mg/dL), treatment with Metformin Hydrochloride Tablets USP (up to 2000 mg/day) for up to 16 weeks (mean duration of treatment 11 weeks) resulted in a significant mean net reduction in FPG of 64.3 mg/dL, compared with placebo (see <content styleCode="bold">Table 8</content>)</paragraph>
+                        <table>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <col/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" colspan="4" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 8:            Metformin Hydrochloride Tablets vs Placebo (Pediatricsa) Summary of Mean</content>
+                                    <br/>
+                                    <content styleCode="bold">Changes from            Baseline* in Plasma Glucose and Body Weight at Final Visit</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     ">  <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin            Hydrochloride</content>
+                                    <br/>
+                                    <content styleCode="bold">Tablets</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">Placebo</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <content styleCode="bold">p-Value</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">FPG (mg/dL)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>
+                                    <content styleCode="bold">(n=37)</content>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>
+                                    <content styleCode="bold">(n=36)</content>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>162.4</td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>192.3</td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL            VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>-42.9</td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>21.4</td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>&lt;0.001</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Body Weight (lbs)</content>
+                                    <br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>
+                                    <content styleCode="bold">(n=39)</content>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>
+                                    <content styleCode="bold">(n=38)</content>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Baseline<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>205.3</td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>189.0</td>
+                                 <td valign="top" styleCode="     Rrule     ">  <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="    Lrule          Rrule     "> Change at FINAL            VISIT<br/>
+                                 </td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>-3.3</td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>-2.0</td>
+                                 <td valign="top" styleCode="     Rrule     "> <br/>NS**</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sub>a</sub>Pediatric patients mean age 13.8 years (range 10 to 16 years)</paragraph>
+                        <paragraph>* All patients ondiet therapy at Baseline ** Not statistically significant</paragraph>
+                     </text>
+                     <effectiveTime value="20170206"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_2ccc38df-3c89-4654-8fb7-8d2f252465d1">
+               <id root="2ccc38df-3c89-4654-8fb7-8d2f252465d1"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS &amp; USAGE</title>
+               <text>
+                  <paragraph>Metformin Hydrochloride Tablets USP are indicated as an adjunct to diet and exercise to improve glycemic control in adults and children with type 2 diabetes mellitus.</paragraph>
+               </text>
+               <effectiveTime value="20170207"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_236f50b3-f10f-444b-9be8-dfbf0861a04a">
+               <id root="236f50b3-f10f-444b-9be8-dfbf0861a04a"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Metformin Hydrochloride Tablets USP are contraindicated in patients with:<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>1. Renal disease or renal dysfunction (e.g., as suggested by serum creatinine levels ≥1.5 mg/dL [males], ≥1.4 mg/dL [females] or abnormal creatinine clearance) which may also result from conditions such as cardiovascular collapse (shock), acute myocardial infarction, and septicemia (see <content styleCode="bold">WARNINGS</content> and <content styleCode="bold">PRECAUTIONS</content>).<br/>
+                  </paragraph>
+                  <paragraph>
+                     <br/>2. Known hypersensitivity to metformin hydrochloride<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>3. Acute or chronic metabolic acidosis, including diabetic ketoacidosis, with or without coma. Diabetic ketoacidosis should be treated with insulin. </paragraph>
+                  <paragraph>
+                     <br/>Metformin Hydrochloride Tablets USP should be temporarily discontinued in patients undergoing radiologic studies involving intravascular administration of iodinated contrast materials, because use of such products may result in acute alteration of renal function. (See also <content styleCode="bold">PRECAUTIONS</content>.)</paragraph>
+               </text>
+               <effectiveTime value="20170207"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_8117a556-2ba1-4ecf-83d1-4f4558dc75e6">
+               <id root="8117a556-2ba1-4ecf-83d1-4f4558dc75e6"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <br/>
+                  <table>
+                     <col/>
+                     <tbody>
+                        <tr>
+                           <td align="justify" valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Lactic            Acidosis:</content>
+                              <content styleCode="bold">Lactic            acidosis is a rare, but serious, metabolic complication that can occur due to            metformin accumulation during treatment with Metformin Hydrochloride Tablets            USP; when it occurs, it is fatal in approximately 50% of cases. Lactic acidosis            may also occur in association with a number of pathophysiologic conditions,            including diabetes mellitus, and whenever there is significant tissue            hypoperfusion and hypoxemia. Lactic acidosis is characterized by elevated blood            lactate levels (&gt;5 mmol/L), decreased blood pH, electrolyte disturbances            with an increased anion gap, and an increased lactate/pyruvate ratio. When            metformin is implicated as the cause of lactic acidosis, metformin plasma levels            &gt;5 mcg/mL are generally found.</content>
+                              <br/>
+                              <content styleCode="bold"> </content>
+                              <br/>
+                              <content styleCode="bold">The            reported incidence of lactic acidosis in patients receiving metformin            hydrochloride is very low (approximately 0.03 cases/1000 patient-years, with            approximately 0.015 fatal cases/1000 patient-years). In more than 20,000            patient-years exposure to metformin in clinical trials, there were no reports            of lactic acidosis. Reported cases have occurred primarily in diabetic patients            with significant renal insufficiency, including both intrinsic renal disease            and renal hypoperfusion, often in the setting of multiple concomitant medical/surgical            problems and multiple concomitant medications. Patients with congestive heart failure            requiring pharmacologic management, in particular those with unstable or acute            congestive heart failure who are at risk of hypoperfusion and hypoxemia, are at            increased risk of lactic acidosis. The risk of lactic acidosis increases with            the degree of renal dysfunction and the patient’s age. The risk of lactic acidosis            may, therefore, be significantly decreased by regular monitoring of renal            function in patients taking Metformin Hydrochloride Tablets USP and by use of            the minimum effective dose of Metformin Hydrochloride Tablets USP. In            particular, treatment of the elderly should be accompanied by careful            monitoring of renal function. Metformin Hydrochloride Tablets USP treatment            should not be initiated in patients ≥80 years of age unless measurement of            creatinine clearance demonstrates that renal function is not reduced, as these            patients are more susceptible to developing lactic acidosis. In addition,            Metformin Hydrochloride Tablets USP should be promptly withheld in the presence            of any condition associated with hypoxemia, dehydration, or sepsis. Because            impaired hepatic function may significantly limit the ability to clear lactate,            Metformin Hydrochloride Tablets USP should generally be avoided in patients            with clinical or laboratory evidence of hepatic disease. Patients should be            cautioned against excessive alcohol intake, either acute or chronic, when            taking Metformin Hydrochloride Tablets USP, since alcohol potentiates the            effects of metformin hydrochloride on lactate metabolism. In addition,            Metformin Hydrochloride Tablets USP should be temporarily discontinued prior to            any intravascular radiocontrast study and for any surgical procedure (see also            PRECAUTIONS).<br/>
+                                 <br/>
+                              </content>
+                              <br/>
+                              <content styleCode="bold">The            onset of lactic acidosis often is subtle, and accompanied only by nonspecific            symptoms such as malaise, myalgias, respiratory distress, increasing            somnolence, and nonspecific abdominal distress. There may be associated            hypothermia, hypotension, and resistant bradyarrhythmias with more marked            acidosis. The patient and the patient’s physician must be aware of the possible            importance of such symptoms and the patient should be instructed to notify the physician            immediately if they occur (see also PRECAUTIONS). Metformin Hydrochloride            Tablets USP should be withdrawn until the situation is clarified. Serum            electrolytes, ketones, blood glucose, and if indicated, blood pH, lactate            levels, and even blood metformin levels may be useful. Once a patient is            stabilized on any dose level of Metformin Hydrochloride Tablets USP, gastrointestinal            symptoms, which are common during initiation of therapy, are unlikely to be drug            related. Later occurrence of gastrointestinal symptoms could be due to lactic            acidosis or other serious disease.</content>
+                              <br/>
+                              <content styleCode="bold"> </content>
+                              <br/>
+                              <content styleCode="bold">Levels            of fasting venous plasma lactate above the upper limit of normal but less than            5 mmol/L in patients taking Metformin Hydrochloride Tablets USP do not            necessarily indicate impending lactic acidosis and may be explainable by other            mechanisms, such as poorly controlled diabetes or obesity, vigorous physical            activity, or technical problems in sample handling. (See also PRECAUTIONS.)</content>
+                              <br/>
+                              <content styleCode="bold"> </content>
+                              <br/>
+                              <content styleCode="bold">Lactic            acidosis should be suspected in any diabetic patient with metabolic acidosis            lacking </content>
+                              <content styleCode="bold">evidence            of ketoacidosis (ketonuria and ketonemia).</content>
+                              <br/>
+                              <content styleCode="bold"> </content>
+                              <br/>
+                              <content styleCode="bold">Lactic acidosis is a medical emergency that must            be treated in a hospital setting. In a patient with lactic acidosis who is            taking Metformin Hydrochloride Tablets USP, the drug should be discontinued immediately            and general supportive measures promptly instituted. Because metformin hydrochloride            is dialyzable (with a clearance of up to 170 mL/min under good hemodynamic conditions),            prompt hemodialysis is recommended to correct the acidosis and remove the accumulated            metformin. Such management often results in prompt reversal of symptoms and recovery.            (See also CONTRAINDICATIONS and PRECAUTIONS.)</content>
+                              <content styleCode="bold">
+                                 <br/>
+                              </content>
+                              <br/>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <effectiveTime value="20170207"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_3d06e8e0-00c8-41f4-a6e5-5a6fd80a866e">
+               <id root="3d06e8e0-00c8-41f4-a6e5-5a6fd80a866e"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <effectiveTime value="20170207"/>
+               <component>
+                  <section ID="LINK_438b562e-7872-4962-b509-d2fad9adc34d">
+                     <id root="438b562e-7872-4962-b509-d2fad9adc34d"/>
+                     <code code="34072-9" codeSystem="2.16.840.1.113883.6.1" displayName="GENERAL PRECAUTIONS SECTION"/>
+                     <title>GENERAL PRECAUTIONS</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">Macrovascular Outcomes</content>—There have been no clinical studies establishing conclusive evidence of macrovascular risk reduction with Metformin Hydrochloride Tablets USP for any other anti-diabetic drug.</paragraph>
+                        <br/>
+                        <paragraph>
+                           <content styleCode="italics">Monitoring of renal function</content>—Metformin is known to be substantially excreted by the kidney, and the risk of metformin accumulation and lactic acidosis increases with the degree of impairment of renal function. Thus, patients with serum creatinine levels above the upper limit of normal for their age should not receive Metformin Hydrochloride Tablets USP. In patients with advanced age, Metformin Hydrochloride Tablets USP should be carefully titrated to establish the minimum dose for adequate glycemic effect, because aging is associated with reduced renal function. In elderly patients, particularly those ≥80 years of age, renal function should be monitored regularly and, generally, Metformin Hydrochloride Tablets USP should not be titrated to the maximum dose (see <content styleCode="bold">WARNINGS</content> and <content styleCode="bold">DOSAGE AND ADMINISTRATION</content>).<br/>
+                           <br/>Before initiation of Metformin Hydrochloride Tablets USP therapy and at least annually thereafter, renal function should be assessed and verified as normal. In patients in whom development of renal dysfunction is anticipated, renal function should be assessed more frequently and Metformin Hydrochloride Tablets USP discontinued if evidence of renal impairment is present.<br/>
+                           <br/>
+                           <content styleCode="italics">Use of concomitant medications that may affect renal function or metformin disposition</content>—Concomitant medication(s) that may affect renal function or result in significant hemodynamic change or may interfere with the disposition of metformin, such as cationic drugs that are eliminated by renal tubular secretion (see <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>), should be used with caution.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Radiologic studies involving the use of intravascular iodinated contrast materials (for example, intravenous urogram, intravenous cholangiography, angiography, and computed tomography (CT) scans with intravascular contrast materials)</content>—Intravascular contrast studies with iodinated materials can lead to acute alteration of renal function and have been associated with lactic acidosis in patients receiving metformin (see <content styleCode="bold">CONTRAINDICATIONS</content>). Therefore, in patients in whom any such study is planned, Metformin Hydrochloride Tablets USP should be temporarily discontinued at the time of or prior to the procedure, and withheld for 48 hours subsequent to the procedure and reinstituted only after renal function has been re-evaluated and found to be normal.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hypoxic states</content>—Cardiovascular collapse (shock) from whatever cause, acute congestive heart failure, acute myocardial infarction and other conditions characterized by hypoxemia have been associated with lactic acidosis and may also cause prerenal azotemia. When such events occur in patients on Metformin Hydrochloride Tablets USP therapy, the drug should be promptly discontinued.<br/>
+                           <br/>
+                           <content styleCode="italics">Surgical procedures</content>—Metformin Hydrochloride Tablets USP therapy should be temporarily suspended for any surgical procedure (except minor procedures not associated with restricted intake of food and fluids) and should not be restarted until the patient’s oral intake has resumed and renal function has been evaluated as normal.<br/>
+                           <br/>
+                           <content styleCode="italics">Alcohol intake</content>—Alcohol is known to potentiate the effect of metformin on lactate metabolism. Patients, therefore, should be warned against excessive alcohol intake, acute or chronic, while receiving Metformin Hydrochloride Tablets USP.<br/>
+                           <br/>
+                           <content styleCode="italics">Impaired hepatic function</content>—Since impaired hepatic function has been associated with some cases of lactic acidosis, Metformin Hydrochloride Tablets USP should generally be avoided in patients with clinical or laboratory evidence of hepatic disease. <br/>
+                           <br/>
+                           <content styleCode="italics">Vitamin B<sub>12</sub> levels</content>—In controlled clinical trials of Metformin Hydrochloride Tablets USP of 29 weeks duration, a decrease to subnormal levels of previously normal serum vitamin B<sub>12</sub> levels, without clinical manifestations, was observed in approximately 7% of patients. Such decrease, possibly due to interference with B<sub>12</sub> absorption from the B<sub>12</sub>-intrinsic factor complex, is, however, very rarely associated with anemia and appears to be rapidly reversible with discontinuation of Metformin Hydrochloride Tablets USP or vitamin B<sub>12</sub> supplementation. Measurement of hematologic parameters on an annual basis is advised in patients on Metformin Hydrochloride Tablets USP and any apparent abnormalities should be appropriately investigated and managed (see <content styleCode="bold">PRECAUTIONS: Laboratory Tests</content>).<br/>
+                           <br/>Certain individuals (those with inadequate vitamin B<sub>12</sub> or calcium intake or absorption) appear to be predisposed to developing subnormal vitamin B<sub>12</sub> levels. In these patients, routine serum vitamin B<sub>12</sub> measurements at two- to three-year intervals may be useful. <br/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Change in clinical status of patients with previously controlled type 2 diabetes</content>—A patient with type 2 diabetes previously well controlled on Metformin Hydrochloride Tablets USP who develops laboratory abnormalities or clinical illness (especially vague and poorly defined illness) should be evaluated promptly for evidence of ketoacidosis or lactic acidosis. Evaluation should include serum electrolytes and ketones, blood glucose and, if indicated, blood pH, lactate, pyruvate, and metformin levels. If acidosis of either form occurs, Metformin Hydrochloride Tablets USP must be stopped immediately and other appropriate corrective measures initiated (see also <content styleCode="bold">WARNINGS</content>).</paragraph>
+                        <paragraph>
+                           <br/>
+                           <content styleCode="italics">Hypoglycemia</content>—Hypoglycemia does not occur in patients receiving Metformin Hydrochloride Tablets USP alone under usual circumstances of use, but could occur when caloric intake is deficient, when strenuous exercise is not compensated by caloric supplementation, or during concomitant use with other glucose-lowering agents (such as sulfonylureas and insulin) or ethanol. <br/>
+                           <br/>Elderly, debilitated, or malnourished patients, and those with adrenal or pituitary insufficiency or alcohol intoxication are particularly susceptible to hypoglycemic effects. Hypoglycemia may be difficult to recognize in the elderly, and in people who are taking beta-adrenergic blocking drugs.<br/>
+                           <br/>
+                           <content styleCode="italics">Loss of control of blood glucose</content>—When a patient stabilized on any diabetic regimen is exposed to stress such as fever, trauma, infection, or surgery, a temporary loss of glycemic control may occur. At such times, it may be necessary to withhold Metformin Hydrochloride Tablets USP and temporarily administer insulin. Metformin Hydrochloride Tablets USP may be reinstituted after the acute episode is resolved.<br/>
+                           <br/>The effectiveness of oral antidiabetic drugs in lowering blood glucose to a targeted level decreases in many patients over a period of time. This phenomenon, which may be due to progression of the underlying disease or to diminished responsiveness to the drug, is known as secondary failure, to distinguish it from primary failure in which the drug is ineffective during initial therapy. Should secondary failure occur with either Metformin Hydrochloride Tablets USP or sulfonylurea monotherapy, combined therapy with Metformin Hydrochloride Tablets USP and sulfonylurea may result in a response. Should secondary failure occur with combined Metformin Hydrochloride Tablets USP/sulfonylurea therapy, it may be necessary to consider therapeutic alternatives including initiation of insulin therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_16e7f913-585c-45f4-983a-20de8836f818">
+                     <id root="16e7f913-585c-45f4-983a-20de8836f818"/>
+                     <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+                     <title>INFORMATION FOR PATIENTS</title>
+                     <text>
+                        <paragraph>Patients should be informed of the potential risks and benefits of Metformin Hydrochloride Tablets USP and of alternative modes of therapy. They should also be informed about the importance of adherence to dietary instructions, of a regular exercise program, and of regular testing of blood glucose, glycosylated hemoglobin, renal function, and hematologic parameters.</paragraph>
+                        <paragraph>The risks of lactic acidosis, its symptoms, and conditions that predispose to its development, as noted in the <content styleCode="bold">WARNINGS</content> and <content styleCode="bold">PRECAUTIONS</content> sections, should be explained to patients. Patients should be advised to discontinue Metformin Hydrochloride Tablets USP immediately and to promptly notify their health practitioner if unexplained hyperventilation, myalgia, malaise, unusual somnolence, or other nonspecific symptoms occur. Once a patient is stabilized on any dose level of Metformin Hydrochloride Tablets USP, gastrointestinal symptoms, which are common during initiation of metformin therapy, are unlikely to be drug related. Later occurrence of gastrointestinal symptoms could be due to lactic acidosis or other serious disease.</paragraph>
+                        <paragraph>Patients should be counselled against excessive alcohol intake, either acute or chronic, while receiving Metformin Hydrochloride Tablets USP.<br/>
+                           <br/>
+                        </paragraph>
+                        <paragraph>Metformin Hydrochloride Tablets USP alone do not usually cause hypoglycemia, although it may occur when Metformin Hydrochloride Tablets USP are used in conjunction with oral sulfonylureas and insulin. When initiating combination therapy, the risks of hypoglycemia, its symptoms and treatment, and conditions that predispose to its development should be explained to patients and responsible family members. (See <content styleCode="bold">Patient Information</content> printed below.)</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_547f1593-f997-4a55-b13a-184783ea301b">
+                     <id root="547f1593-f997-4a55-b13a-184783ea301b"/>
+                     <code code="34075-2" codeSystem="2.16.840.1.113883.6.1" displayName="LABORATORY TESTS SECTION"/>
+                     <title>LABORATORY TESTS</title>
+                     <text>
+                        <paragraph>Response to all diabetic therapies should be monitored by periodic measurements of fasting blood glucose and glycosylated hemoglobin levels, with a goal of decreasing these levels toward the normal range. During initial dose titration, fasting glucose can be used to determine the therapeutic response. Thereafter, both glucose and glycosylated hemoglobin should be monitored. Measurements of glycosylated hemoglobin may be especially useful for evaluating long-term control (see also <content styleCode="bold">DOSAGE AND</content>
+                           <content styleCode="bold">ADMINISTRATION</content>)<br/>
+                           <br/>Initial and periodic monitoring of hematologic parameters (e.g., hemoglobin/hematocrit and red blood cell indices) and renal function (serum creatinine) should be performed, at least on an annual basis. While megaloblastic anemia has rarely been seen with Metformin Hydrochloride Tablets USP therapy, if this is suspected, vitamin B<sub>12</sub> deficiency should be excluded.</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_78b0ef2f-456c-400a-86cd-753bdd670457">
+                     <id root="78b0ef2f-456c-400a-86cd-753bdd670457"/>
+                     <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title>DRUG INTERACTIONS</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">(Clinical Evaluation of Drug Interactions Conducted with Metformin Hydrochloride Tablets USP)<br/>
+                              <br/>
+                           </content>
+                        </paragraph>
+                        <br/>
+                        <paragraph>
+                           <content styleCode="italics">Glyburide</content>—In a single-dose interaction study in type 2 diabetes patients, coadministration of metformin and glyburide did not result in any changes in either metformin pharmacokinetics or pharmacodynamics. Decreases in glyburide AUC and C<sub>max</sub> were observed, but were highly variable. The single-dose nature of this study and the lack of correlation between glyburide blood levels and pharmacodynamic effects, makes the clinical significance of this interaction uncertain (see <content styleCode="bold">DOSAGE AND ADMINISTRATION: Concomitant Metformin Hydrochloride Tablets USP and Oral Sulfonylurea Therapy in Adult Patients</content>).<br/>
+                           <br/>
+                           <content styleCode="italics">Furosemide</content>—A single-dose, metformin-furosemide drug interaction study in healthy subjects demonstrated that pharmacokinetic parameters of both compounds were affected by coadministration. Furosemide increased the metformin plasma and blood C<sub>max</sub> by 22% and blood AUC by 15%, without any significant change in metformin renal clearance. When administered with metformin, the C<sub>max</sub> and AUC of furosemide were 31% and 12% smaller, respectively, than when administered alone, and the terminal half-life was decreased by 32%, without any significant change in furosemide renal clearance. No information is available about the interaction of metformin and furosemide when coadministered chronically.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Nifedipine</content>—A single-dose, metformin-nifedipine drug interaction study in normal healthy volunteers demonstrated that coadministration of nifedipine increased plasma metformin C<sub>max</sub> and AUC by 20% and 9%, respectively, and increased the amount excreted in the urine. T<sub>max </sub>and half-life were unaffected. Nifedipine appears to enhance the absorption of metformin. Metformin had minimal effects on nifedipine.<br/>
+                           <br/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cationic drugs</content>—Cationic drugs (e.g., amiloride, digoxin, morphine, procainamide, quinidine, quinine, ranitidine, triamterene, trimethoprim, or vancomycin) that are eliminated by renal tubular secretion theoretically have the potential for interaction with metformin by competing for common renal tubular transport systems. Such interaction between metformin and oral cimetidine has been observed in normal healthy volunteers in both single- and multiple-dose, metformin-cimetidine drug interaction studies, with a 60% increase in peak metformin plasma and whole blood concentrations and a 40% increase in plasma and whole blood metformin AUC. There was no change in elimination half-life in the single-dose study. Metformin had no effect on cimetidine pharmacokinetics. Although such interactions remain theoretical (except for cimetidine), careful patient monitoring and dose adjustment of Metformin Hydrochloride Tablets USP and/or the interfering drug is recommended in patients who are taking cationic medications that are excreted via the proximal renal tubular secretory system.</paragraph>
+                        <paragraph>
+                           <br/>
+                           <content styleCode="italics">Other</content>—Certain drugs tend to produce hyperglycemia and may lead to loss of glycemic control. These drugs include the thiazides and other diuretics, corticosteroids, phenothiazines, thyroid products, estrogens, oral contraceptives, phenytoin, nicotinic acid, sympathomimetics, calcium channel blocking drugs, and isoniazid. When such drugs are administered to a patient receiving Metformin Hydrochloride Tablets USP, the patient should be closely observed for loss of blood glucose control. When such drugs are withdrawn from a patient receiving Metformin Hydrochloride Tablets USP, the patient should be observed closely for hypoglycemia.<br/>
+                           <br/>In healthy volunteers, the pharmacokinetics of metformin and propranolol, and metformin and ibuprofen were not affected when coadministered in single-dose interaction studies.<br/>
+                           <br/>
+                        </paragraph>
+                        <paragraph>Metformin is negligibly bound to plasma proteins and is, therefore, less likely to interact with highly protein-bound drugs such as salicylates, sulfonamides, chloramphenicol, and probenecid, as compared to the sulfonylureas, which are extensively bound to serum proteins.</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_8acd03d3-e9a0-4787-91af-02c5558472d4">
+                     <id root="8acd03d3-e9a0-4787-91af-02c5558472d4"/>
+                     <code code="34074-5" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG &amp; OR LABORATORY TEST INTERACTIONS SECTION"/>
+                     <title>DRUG &amp; OR LABORATORY TEST INTERACTIONS</title>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_3fd9e3c3-d39c-48d2-9b71-6bef5b99ec66">
+                     <id root="3fd9e3c3-d39c-48d2-9b71-6bef5b99ec66"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY</title>
+                     <text>
+                        <paragraph>Long-term carcinogenicity studies have been performed in rats (dosing duration of 104 weeks) and mice (dosing duration of 91 weeks) at doses up to and including 900 mg/kg/day and 1500 mg/kg/day, respectively. These doses are both approximately four times the maximum recommended human daily dose of 2000 mg based on body surface area comparisons. No evidence of carcinogenicity with metformin was found in either male or female mice. Similarly, there was no tumorigenic potential observed with metformin in male rats. There was, however, an increased incidence of benign stromal uterine polyps in female rats treated with 900 mg/kg/day.</paragraph>
+                        <paragraph>There was no evidence of a mutagenic potential of metformin in the following in vitro tests: Ames test (S. typhimurium), gene mutation test (mouse lymphoma cells), or chromosomal aberrations test (human lymphocytes). Results in the in vivo mouse micronucleus test were also negative.<br/>
+                           <br/>
+                        </paragraph>
+                        <paragraph>Fertility of male or female rats was unaffected by metformin when administered at doses as high as 600 mg/kg/day, which is approximately three times the maximum recommended human daily dose based on body surface area comparisons.</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_e553a787-80ef-4ab4-be97-fca58b0d05fc">
+                     <id root="e553a787-80ef-4ab4-be97-fca58b0d05fc"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>PREGNANCY</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">Teratogenic Effects: Pregnancy Category B<br/>
+                           </content>
+                        </paragraph>
+                        <paragraph>Recent information strongly suggests that abnormal blood glucose levels during pregnancy are associated with a higher incidence of congenital abnormalities. Most experts recommend that insulin be used during pregnancy to maintain blood glucose levels as close to normal as possible. Because animal reproduction studies are not always predictive of human response, Metformin Hydrochloride Tablets USP should not be used during pregnancy unless clearly needed.<br/>
+                           <br/>
+                        </paragraph>
+                        <paragraph>There are no adequate and well-controlled studies in pregnant women with Metformin Hydrochloride Tablets USP. Metformin was not teratogenic in rats and rabbits at doses up to 600 mg/kg/day. This represents an exposure of about two and six times the maximum recommended human daily dose of 2000 mg based on body surface area comparisons for rats and rabbits, respectively. Determination of fetal concentrations demonstrated a partial placental barrier to metformin.</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_185d1c42-fd83-4689-a868-f7abe2b52296">
+                     <id root="185d1c42-fd83-4689-a868-f7abe2b52296"/>
+                     <code code="34079-4" codeSystem="2.16.840.1.113883.6.1" displayName="LABOR &amp; DELIVERY SECTION"/>
+                     <title>LABOR &amp; DELIVERY</title>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_0289c058-4334-4cf6-b2ef-9f3ef973be30">
+                     <id root="0289c058-4334-4cf6-b2ef-9f3ef973be30"/>
+                     <code code="34080-2" codeSystem="2.16.840.1.113883.6.1" displayName="NURSING MOTHERS SECTION"/>
+                     <title>NURSING MOTHERS</title>
+                     <text>
+                        <paragraph>Studies in lactatingrats show that metformin is excreted into milk and reaches levels comparable tothose in plasma. Similar studies have not been conducted in nursing mothers.Because the potential for hypoglycemia in nursing infants may exist, a decisionshould be made whether to discontinue nursing or to discontinue the drug,taking into account the importance of the drug to the mother. If Metformin HydrochlorideTablets USP are discontinued, and if diet alone is inadequate for controllingblood glucose, insulin therapy should be considered.</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_940996a4-3a76-4a4b-a5b0-8bb2b174e02a">
+                     <id root="940996a4-3a76-4a4b-a5b0-8bb2b174e02a"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>PEDIATRIC USE</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of Metformin Hydrochloride Tablets USP for the treatment of type 2 diabetes have been established in pediatric patients ages 10 to 16 years (studies have not been conducted in pediatric patients below the age of 10 years). Use of Metformin Hydrochloride Tablets USP in this age group is supported by evidence from adequate and well-controlled studies of Metformin Hydrochloride Tablets USP in adults with additional data from a controlled clinical study in pediatric patients ages 10 to 16 years with type 2 diabetes, which demonstrated a similar response in glycemic control to that seen in adults. (See <content styleCode="bold">CLINICAL PHARMACOLOGY: Pediatric Clinical Studies</content>.) In this study, adverse effects were similar to those described in adults. (See <content styleCode="bold">ADVERSE REACTIONS: Pediatric Patients.</content>) A maximum daily dose of 2000 mg is recommended. (See <content styleCode="bold">DOSAGE AND ADMINISTRATION: Recommended Dosing Schedule: Pediatrics.</content>)</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_3750cdea-8759-4bf1-badf-67b393f68ff4">
+                     <id root="3750cdea-8759-4bf1-badf-67b393f68ff4"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>GERIATRIC USE</title>
+                     <text>
+                        <paragraph>Controlled clinical studies of Metformin Hydrochloride Tablets USP did not include sufficient numbers of elderly patients to determine whether they respond differently from younger patients, although other reported clinical experience has not identified differences in responses between the elderly and younger patients. Metformin is known to be substantially excreted by the kidney and because the risk of serious adverse reactions to the drug is greater in patients with impaired renal function, Metformin Hydrochloride Tablets USP should only be used in patients with normal renal function (see <content styleCode="bold">CONTRAINDICATIONS, WARNINGS</content>, and <content styleCode="bold">CLINICAL PHARMACOLOGY: Pharmacokinetics</content>). Because aging is associated with reduced renal function, Metformin Hydrochloride Tablets USP should be used with caution as age increases. Care should be taken in dose selection and should be based on careful and regular monitoring of renal function. Generally, elderly patients should not be titrated to the maximum dose of Metformin Hydrochloride Tablets USP (see also <content styleCode="bold">WARNINGS and DOSAGE AND ADMINISTRATION</content>).</paragraph>
+                     </text>
+                     <effectiveTime value="20170207"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_93e98cfe-f3ba-44e7-acf9-6cf3f3ef579e">
+               <id root="93e98cfe-f3ba-44e7-acf9-6cf3f3ef579e"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>In a US double-blind clinical study of Metformin Hydrochloride Tablets USP in patients with type 2 diabetes, a total of 141 patients received Metformin Hydrochloride Tablets USP therapy (up to 2550 mg per day) and 145 patients received placebo. Adverse reactions reported in greater than 5% of the Metformin Hydrochloride Tablets USP patients, and that were more common in Metformin Hydrochloride Tablets USP- than placebo-treated patients, are listed in <content styleCode="bold">Table 9</content>.<br/>
+                     <br/>
+                  </paragraph>
+                  <table>
+                     <col/>
+                     <col/>
+                     <col/>
+                     <tbody>
+                        <tr>
+                           <td align="center" valign="top" colspan="3" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Table 9: Most Common Adverse            Reactions (&gt;5.0 Percent) in a Placebo-Controlled Clinical Study of Metformin            Hydrochloride Tablets Monotherapy<sup>*</sup>
+                              </content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" rowspan="2" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Adverse            Reaction</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">Metformin Hydrochloride Tablets            Monotherapy</content>
+                              <br/>
+                              <content styleCode="bold">(n=141)</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">Placebo</content>
+                              <br/>
+                              <content styleCode="bold">(n=145)</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" colspan="2" styleCode="    Lrule          Rrule     "> <content styleCode="bold">% of Patients</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Diarrhea             </content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">53.2</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">11.7</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Nausea/Vomiting             </content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">25.5</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">8.3</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Flatulence             </content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">12.1</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">5.5</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Asthenia             </content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">9.2</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">5.5</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Indigestion             </content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">7.1</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">4.1</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Abdominal            Discomfort </content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">6.4</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">4.8</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="    Lrule          Rrule     "> <content styleCode="bold">Headache             </content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">5.7</content>
+                              <br/>
+                           </td>
+                           <td align="center" valign="top" styleCode="     Rrule     "> <content styleCode="bold">4.8</content>
+                              <br/>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>    <sup>*</sup> Reactions that were more common in metformin hydrochloride tablets than placebo-treated patients.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Diarrhea led to discontinuation of study medication in 6% of patients treated with Metformin Hydrochloride Tablets USP. Additionally, the following adverse reactions were reported in ≥1.0 to ≤5.0% of Metformin Hydrochloride Tablets USP patients and were more commonly reported with Metformin Hydrochloride Tablets USP than placebo: abnormal stools, hypoglycemia, myalgia, lightheaded, dyspnea, nail disorder, rash, sweating increased, taste disorder, chest discomfort, chills, flu syndrome, flushing, palpitation.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pediatric Patients<br/>
+                     </content>In clinical trials with Metformin Hydrochloride Tablets USP in pediatric patients with type 2 diabetes, the profile of adverse reactions was similar to that observed in adults.</paragraph>
+               </text>
+               <effectiveTime value="20170207"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_fdc59b91-5f80-4585-8b99-dd7bae1b8800">
+               <id root="fdc59b91-5f80-4585-8b99-dd7bae1b8800"/>
+               <code code="42227-9" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG ABUSE AND DEPENDENCE SECTION"/>
+               <title>DRUG ABUSE AND DEPENDENCE</title>
+               <effectiveTime value="20170207"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_de634e5f-3bbd-457d-9a8d-be15c6c21400">
+               <id root="de634e5f-3bbd-457d-9a8d-be15c6c21400"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph>Overdose of metformin hydrochloride has occurred, including ingestion of amounts greater than 50 grams. Hypoglycemia was reported in approximately 10% of cases, but no causal association with metformin hydrochloride has been established. Lactic acidosis has been reported in approximately 32% of metformin overdose cases (see <content styleCode="bold">WARNINGS</content>). Metformin is dialyzable with a clearance of up to 170 mL/min under good hemodynamic conditions. Therefore, hemodialysis may be useful for removal of accumulated drug from patients in whom metformin overdosage is suspected.</paragraph>
+               </text>
+               <effectiveTime value="20170207"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_be76f1e7-50b5-4fce-92a9-9b02deab62c4">
+               <id root="be76f1e7-50b5-4fce-92a9-9b02deab62c4"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE &amp; ADMINISTRATION</title>
+               <text>
+                  <paragraph>There is no fixed dosage regimen for the management of hyperglycemia in patients with type 2 diabetes with metformin hydrochloride or any other pharmacologic agent. Dosage of metformin hydrochloride must be individualized on the basis of both effectiveness and tolerance, while not exceeding the maximum recommended daily doses. The maximum recommended daily dose of metformin hydrochloride is 2550 mg in adults and 2000 mg in pediatric patients (10 to 16 years of age).<br/>
+                     <br/>Metformin hydrochloride should be given in divided doses with meals. Metformin hydrochloride should be started at a low dose, with gradual dose escalation, both to reduce gastrointestinal side effects and to permit identification of the minimum dose required for adequate glycemic control of the patient.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>During treatment initiation and dose titration (see <content styleCode="bold">Recommended Dosing Schedule</content>), fasting plasma glucose should be used to determine the therapeutic response to metformin hydrochloride and identify the minimum effective dose for the patient. Thereafter, glycosylated hemoglobin should be measured at intervals of approximately three months. <content styleCode="bold">The therapeutic goal should be to decrease both fasting plasma glucose and glycosylated hemoglobin levels to normal or near normal by using the lowest effective dose of metformin hydrochloride, either when used as monotherapy or in combination with sulfonylurea or insulin.<br/>
+                        <br/>
+                     </content>Monitoring of blood glucose and glycosylated hemoglobin will also permit detection of primary failure, i.e., inadequate lowering of blood glucose at the maximum recommended dose of medication, and secondary failure, i.e., loss of an adequate blood glucose lowering response after an initial period of effectiveness.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Short-term administration of metformin hydrochloride may be sufficient during periods of transient loss of control in patients usually well-controlled on diet alone.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Recommended Dosing Schedule</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Adults</content> – In general, clinically significant responses are not seen at doses below 1500 mg per day. However, a lower recommended starting dose and gradually increased dosage is advised to minimize gastrointestinal symptoms.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>The usual starting dose of metformin hydrochloride is 500 mg twice a day or 850 mg once a day, given with meals. Dosage increases should be made in increments of 500 mg weekly or 850 mg every 2 weeks, up to a total of 2000 mg per day, given in divided doses. Patients can also be titrated from 500 mg twice a day to 850 mg twice a day after 2 weeks. For those patients requiring additional glycemic control, metformin hydrochloride may be given to a maximum daily dose of 2550 mg per day. Doses above 2000 mg may be better tolerated given three times a day with meals.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>If higher doses of metformin are required, metformin hydrochloride should be used at total daily doses up to 2550 mg administered in divided daily doses, as described above. (See <content styleCode="bold">CLINICAL PHARMACOLOGY: Clinical Studies</content>.)<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pediatrics</content> – The usual starting dose of metformin hydrochloride is 500 mg twice a day, given with meals. Dosage increases should be made in increments of 500 mg weekly up to a maximum of 2000 mg per day, given in divided doses.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Transfer From Other Antidiabetic Therapy</content>
+                  </paragraph>
+                  <paragraph>When transferring patients from standard oral hypoglycemic agents other than chlorpropamide to metformin hydrochloride, no transition period generally is necessary. When transferring patients from chlorpropamide, care should be exercised during the first two weeks because of the prolonged retention of chlorpropamide in the body, leading to overlapping drug effects and possible hypoglycemia.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Concomitant Metformin Hydrochloride and Oral Sulfonylurea Therapy in Adult Patients</content>
+                  </paragraph>
+                  <paragraph>If patients have not responded to four weeks of the maximum dose of metformin hydrochloride monotherapy, consideration should be given to gradual addition of an oral sulfonylurea while continuing metformin hydrochloride at the maximum dose, even if prior primary or secondary failure to a sulfonylurea has occurred. Clinical and pharmacokinetic drug-drug interaction data are currently available only for metformin plus glyburide (glibenclamide).<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>With concomitant metformin hydrochloride and sulfonylurea therapy, the desired control of blood glucose may be obtained by adjusting the dose of each drug. In a clinical trial of patients with type 2 diabetes and prior failure on glyburide, patients started on metformin hydrochloride 500 mg and glyburide 20 mg were titrated to 1000/20 mg, 1500/20 mg, 2000/20 mg or 2500/20 mg of metformin hydrochloride and glyburide, respectively, to reach the goal of glycemic control as measured by FPG, HbA<sub>1c</sub> and plasma glucose response (see <content styleCode="bold">CLINICAL PHARMACOLOGY: Clinical Studies</content>). However, attempts should be made to identify the minimum effective dose of each drug to achieve this goal. With concomitant metformin hydrochloride and sulfonylurea therapy, the risk of hypoglycemia associated with sulfonylurea therapy continues and may be increased. Appropriate precautions should be taken. (See Package Insert of the respective sulfonylurea.)<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>If patients have not satisfactorily responded to one to three months of concomitant therapy with the maximum dose of metformin hydrochloride and the maximum dose of an oral sulfonylurea, consider therapeutic alternatives including switching to insulin with or without metformin hydrochloride. <br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Concomitant Metformin Hydrochloride and Insulin Therapy in Adult Patients <br/>
+                        <br/>
+                     </content>
+                  </paragraph>
+                  <paragraph>The current insulin dose should be continued upon initiation of metformin hydrochloride therapy. Metformin hydrochloride therapy should be initiated at 500 mg once daily in patients on insulin therapy. For patients not responding adequately, the dose of metformin hydrochloride should be increased by 500 mg after approximately 1 week and by 500 mg every week thereafter until adequate glycemic control is achieved. The maximum recommended daily dose is 2500 mg for metformin hydrochloride. It is recommended that the insulin dose be decreased by 10% to 25% when fasting plasma glucose concentrations decrease to less than 120 mg/dL in patients receiving concomitant insulin and metformin hydrochloride. Further adjustment should be individualized based on glucose-lowering response.<br/>
+                     <content styleCode="bold">
+                        <br/>
+                     </content>
+                     <content styleCode="bold">Specific Patient Populations</content>
+                     <br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Metformin hydrochloride is not recommended for use in pregnancy. Metformin hydrochloride is not recommended in patients below the age of 10 years.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>The initial and maintenance dosing of metformin hydrochloride should be conservative in patients with advanced age, due to the potential for decreased renal function in this population. Any dosage adjustment should be based on a careful assessment of renal function. Generally, elderly, debilitated, and malnourished patients should not be titrated to the maximum dose of metformin hydrochloride.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Monitoring of renal function is necessary to aid in prevention of lactic acidosis, particularly in the elderly. (See <content styleCode="bold">WARNINGS</content>.)</paragraph>
+               </text>
+               <effectiveTime value="20170207"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_b57cbe27-1e11-41fa-a3e2-b626b1899d98">
+               <id root="1fbdeda1-19c4-4e7f-83f2-f43caf388edc"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>Metformin Hydrochloride Tablets, USP</paragraph>
+                  <paragraph>500 mg - White to off-white, round, biconvex, film coated tablets debossed with G;10 on one side and plain on the other side.</paragraph>
+                  <paragraph>NDC 70882-124-56, Package of 56 tablets (4 x 14 unit-of-dose blisters)<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Storage</content>
+                  </paragraph>
+                  <paragraph>Store at 20°–25° C (68°–77° F); excursions permitted to 15°–30° C (59°–86° F). [See USP Controlled Room Temperature.]<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Dispense in tight, light-resistant containers with child-resistant closure.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Manufactured by:<br/>Granules India Limited,<br/>Hyderabad-500081, INDIA</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">MADE IN INDIA<br/>
+                     </content>
+                  </paragraph>
+                  <paragraph>Distributed by Cambridge Therapeutic Technologies, LLC<br/>Teaneck, NJ 07666</paragraph>
+                  <paragraph>Packaged by Legacy Pharmaceutical Packaging, LLC<br/>Earth City, MO 63045</paragraph>
+                  <paragraph>Revised: April 2017<br/>20654</paragraph>
+               </text>
+               <effectiveTime value="20170511"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_df6ecc25-caaf-4027-9c48-f4480ee26609">
+               <id root="9ad1194f-28e8-4031-aee8-b10eb9d6b3af"/>
+               <code code="42230-3" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PATIENT PACKAGE INSERT SECTION"/>
+               <title>PATIENT INFORMATION</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Metformin Hydrochloride Tablets USP</content>
+                  </paragraph>
+                  <paragraph>Read this information carefully before you start taking this medicine and each time you refill your prescription. There may be new information. This information does not take the place of your doctor’s advice. Ask your doctor or pharmacist if you do not understand some of this information or if you want to know more about this medicine.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are Metformin Hydrochloride Tablets USP?</content>
+                  </paragraph>
+                  <paragraph>Metformin Hydrochloride Tablets USP are used to treat type 2 diabetes. This is also known as non-insulin-dependent diabetes mellitus. People with type 2 diabetes are not able to make enough insulin or respond normally to the insulin their bodies make. When this happens, sugar (glucose) builds up in the blood. This can lead to serious medical problems including kidney damage, amputations, and blindness. Diabetes is also closely linked to heart disease. The main goal of treating diabetes is to lower your blood sugar to a normal level.<br/>
+                     <br/>High blood sugar can be lowered by diet and exercise, by a number of medicines taken by mouth, and by insulin shots. Before you take Metformin Hydrochloride Tablets USP, try to control your diabetes by exercise and weight loss. While you take your diabetes medicine, continue to exercise and follow the diet advised for your diabetes. No matter what your recommended diabetes management plan is, studies have shown that maintaining good blood sugar control can prevent or delay complications of diabetes, such as blindness.</paragraph>
+                  <paragraph>Metformin Hydrochloride Tablets USP can help control your blood sugar in a number of ways. These include helping your body respond better to the insulin it makes naturally, decreasing the amount of sugar your liver makes, and decreasing the amount of sugar your intestines absorb. Metformin Hydrochloride Tablets USP do not cause your body to make more insulin. Because of this, when taken alone, it rarely cause hypoglycemia (low blood sugar), and usually do not cause weight gain. However, when it is taken with a sulfonylurea or with insulin, hypoglycemia is more likely to occur, as is weight gain.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">WARNING: A small number of people who have taken Metformin Hydrochloride Tablets USP have developed a serious condition called lactic acidosis. Lactic acidosis is caused by a buildup of lactic acid in the blood. This happens more often in people with kidney problems. Most people with kidney problems should not take Metformin Hydrochloride Tablets USP. (See "What are the side effects of Metformin Hydrochloride Tablets USP?")<br/>
+                        <br/>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Who should not take Metformin Hydrochloride Tablets USP?</content>
+                  </paragraph>
+                  <paragraph>Some conditions increase your chance of getting lactic acidosis, or cause other problems if you take either of these medicines. Most of the conditions listed below canincrease your chance of getting lactic acidosis.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not take Metformin Hydrochloride Tablets USP if you:</content>
+                  </paragraph>
+                  <paragraph>• have kidney problems</paragraph>
+                  <paragraph>• have liver problems</paragraph>
+                  <paragraph>• have heart failure that is treated with medicines, such as Lanoxin® (digoxin) or Lasix® (furosemide)</paragraph>
+                  <paragraph>• drink a lot of alcohol. This means you binge drink for short periods or drink all the time</paragraph>
+                  <paragraph>• are seriously dehydrated (have lost a lot of water from your body)</paragraph>
+                  <paragraph>• are going to have an x-ray procedure with injection of dyes (contrast agents)</paragraph>
+                  <paragraph>• are going to have surgery</paragraph>
+                  <paragraph>• develop a serious condition, such as heart attack, severe infection, or a stroke</paragraph>
+                  <paragraph>• are 80 years or older and you have NOT had your kidney function tested<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Tell your doctor if you are pregnant or plan to become pregnant. Metformin Hydrochloride Tablets USP may not be right for you. Talk with your doctor about your choices. You should also discuss your choices with your doctor if you are nursing a child.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Can Metformin Hydrochloride Tablets USP be used in children?</content>
+                  </paragraph>
+                  <paragraph>Metformin Hydrochloride Tablets USP have been shown to effectively lower glucose levels in children (ages 10 to 16 years) with type 2 diabetes. Metformin Hydrochloride Tablets USP have not been studied in children younger than 10 years old. Metformin Hydrochloride Tablets USP have not been studied in combination with other oral glucose-control medicines or insulin in children. If you have any questions about the use of Metformin Hydrochloride Tablets USP in children, talk with your doctor or other healthcare provider.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I take Metformin Hydrochloride Tablets USP?</content>
+                  </paragraph>
+                  <paragraph>Your doctor will tell you how much medicine to take and when to take it. You will probably start out with a low dose of the medicine. Your doctor may slowly increase your dose until your blood sugar is better controlled. You should take Metformin Hydrochloride Tablets USP with meals.</paragraph>
+                  <paragraph>Your doctor may have you take other medicines along with Metformin Hydrochloride Tablets USP to control your blood sugar. These medicines may include insulin shots. Taking Metformin Hydrochloride Tablets USP with insulin may help you better control your blood sugar while reducing the insulin dose. </paragraph>
+                  <paragraph>Continue your exercise and diet program and test your blood sugar regularly while taking Metformin Hydrochloride Tablets USP. Your doctor will monitor your diabetes and may perform blood tests on you from time to time to make sure your kidneys and your liver are functioning normally. There is no evidence that Metformin Hydrochloride Tablets USP causes harm to the liver or kidneys.</paragraph>
+                  <paragraph>Tell your doctor if you:</paragraph>
+                  <paragraph>• have an illness that causes severe vomiting, diarrhea or fever, or if you drink a much lower amount of liquid than normal. These conditions can lead to severe dehydration (loss of water in your body). You may need to stop taking Metformin Hydrochloride Tablets USP for a short time.</paragraph>
+                  <paragraph>• plan to have surgery or an x-ray procedure with injection of dye (contrast agent). You may need to stop taking Metformin Hydrochloride Tablets USP for a short time.</paragraph>
+                  <paragraph>• start to take other medicines or change how you take a medicine. Metformin Hydrochloride Tablets USP can affect how well other drugs work, and some drugs can affect how well Metformin Hydrochloride Tablets USP work. Some medicines may cause high blood sugar.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What should I avoid while taking Metformin Hydrochloride Tablets USP?</content>
+                  </paragraph>
+                  <paragraph>Do not drink a lot of alcoholic drinks while taking Metformin Hydrochloride Tablets USP. This means you should not binge drink for short periods, and you should not drink a lot of alcohol on a regular basis. Alcohol can increase the chance of getting lactic acidosis.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are the side effects of Metformin Hydrochloride Tablets USP?</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <content styleCode="italics">Lactic Acidosis</content>
+                     </content>
+                     <content styleCode="bold">. In rare cases, Metformin Hydrochloride Tablets USP can cause a serious side effect called lactic acidosis. This is caused by a buildup of lactic acid in your blood. This buildup can cause serious damage.</content> Lactic acidosis caused by Metformin Hydrochloride Tablets USP is rare and has occurred mostly in people whose kidneys were not working normally. Lactic acidosis has been reported in about one in 33,000 patients taking Metformin Hydrochloride Tablets USP over the course of a year. Although rare, if lactic acidosis does occur, it can be fatal in up to half the people who develop it.</paragraph>
+                  <paragraph>It is also important for your liver to be working normally when you take Metformin Hydrochloride Tablets USP. Your liver helps remove lactic acid from your blood.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Make sure you tell your doctor before you use Metformin Hydrochloride Tablets USP if you have kidney or liver problems. You should also <content styleCode="bold">stop using Metformin Hydrochloride Tablets USP and call your doctor right away if you have signs of lactic acidosis. Lactic acidosis is a medical emergency that must be treated in a hospital.<br/>
+                        <br/>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Signs of lactic acidosis are:</content>
+                  </paragraph>
+                  <paragraph>• feeling very weak, tired, or uncomfortable</paragraph>
+                  <paragraph>• unusual muscle pain</paragraph>
+                  <paragraph>• trouble breathing</paragraph>
+                  <paragraph>• unusual or unexpected stomach discomfort</paragraph>
+                  <paragraph>• feeling cold</paragraph>
+                  <paragraph>• feeling dizzy or lightheaded</paragraph>
+                  <paragraph>• suddenly developing a slow or irregular heartbeat<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>If your medical condition suddenly changes, stop taking Metformin Hydrochloride Tablets USP and call your doctor right away. This may be a sign of lactic acidosis or another serious side effect.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Other Side Effects</content>. Common side effects of Metformin Hydrochloride Tablets USP include diarrhea, nausea, and upset stomach. These side effects generally go away after you take the medicine for a while. Taking your medicine with meals can help reduce these side effects. Tell your doctor if the side effects bother you a lot, last for more than a few weeks, come back after they’ve gone away, or start later in therapy. You may need a lower dose or need to stop taking the medicine for a short period or for good.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>About 3 out of every 100 people who take Metformin Hydrochloride Tablets USP have an unpleasant metallic taste when they start taking the medicine. It lasts for a short time.<br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Metformin Hydrochloride Tablets USP rarely cause hypoglycemia (low blood sugar) by themselves. However, hypoglycemia can happen if you do not eat enough, if you drink alcohol, or if you take other medicines to lower blood sugar.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">General advice about prescription medicines</content>
+                  </paragraph>
+                  <paragraph>If you have questions or problems, talk with your doctor or other healthcare provider. You can ask your doctor or pharmacist for the information about Metformin Hydrochloride Tablets USP that is written for healthcare professionals. Medicines are sometimes prescribed for purposes other than those listed in a patient information leaflet. Do not use Metformin Hydrochloride Tablets USP for a condition for which it was not prescribed. Do not share your medicine with other people.</paragraph>
+                  <paragraph>Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.</paragraph>
+                  <paragraph>Manufactured by:<br/>Granules India Limited,<br/>Hyderabad-500081, INDIA</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">MADE IN INDIA</content>
+                  </paragraph>
+                  <paragraph>Distributed by Cambridge Therapeutic Technologies, LLC<br/>Teaneck, NJ 07666</paragraph>
+                  <paragraph>Packaged by Legacy Pharmaceutical Packaging, LLC<br/>Earth City, MO 63045</paragraph>
+                  <paragraph>Revised: April 2017<br/>20654</paragraph>
+               </text>
+               <effectiveTime value="20170511"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_8e795d2f-eb73-4266-b6d8-7b3fa0a32af1">
+               <id root="7d505560-d750-4dda-b674-272dc5b64eb5"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PACKAGE LABEL.PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <paragraph>Metformin Hydrochloride Tablets, USP 500 mg</paragraph>
+                  <renderMultiMedia referencedObject="MM2"/>
+                  <paragraph>
+                     <br/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20170511"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>Metformin Hydrochloride Tablets, USP 500 mg</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="metformin-hcl-tablets-usp---granules-2.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

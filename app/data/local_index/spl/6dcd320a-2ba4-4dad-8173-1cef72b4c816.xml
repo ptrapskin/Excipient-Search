@@ -1,0 +1,1957 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="e8c2f6fc-ccc4-47c8-9091-0a9ee553ef22"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>Amoxicillin Tablets</title>
+   <effectiveTime value="20110708"/>
+   <setId root="6dcd320a-2ba4-4dad-8173-1cef72b4c816"/>
+   <versionNumber value="2"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="008039641" root="1.3.6.1.4.1.519.1"/>
+            <name>RedPharm Drug Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="300220969" root="1.3.6.1.4.1.519.1"/>
+                        <name>Sandoz GmbH</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="manufacture"/>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="0ccaf6e5-bf54-4972-b064-f750da35b6eb"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL listing data elements section"/>
+               <effectiveTime value="20110708"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="67296-0220" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Amoxicillin<suffix/>
+                        </name>
+                        <formCode code="C25158" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Amoxicillin</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="0781-2613" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="500" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Amoxicillin</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EX438O2MRT" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERRIC OXIDE YELLOW</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>titanium dioxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2G86QN327L" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>gelatin</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CELLULOSE, MICROCRYSTALLINE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>magnesium stearate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="40" unit="1">
+                                 <translation code="C48480" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="67296-0220-5" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20071101"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA065291" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48330" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="yellow" xsi:type="CE">
+                              <originalText>opaque</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">AMOX;500;GG;849</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="22" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="5edcd791-7c86-4495-bb97-06c6e83d2432"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Rx only</content>
+                  </paragraph>
+                  <paragraph>To reduce the development of drug-resistant bacteria and maintain the 
+effectiveness of amoxicillin and other antibacterial drugs, amoxicillin should 
+be used only to treat or prevent infections that are proven or strongly 
+suspected to be caused by bacteria.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="e768025c-3c07-4455-9fd3-880e31fc737a"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>Formulations of amoxicillin contain amoxicillin, a semisynthetic antibiotic, an 
+analog of ampicillin, with a broad spectrum of bactericidal activity against 
+many gram-positive and gram-negative microorganisms. Chemically it is (2<content styleCode="italics">S</content>,5<content styleCode="italics">R</content>,6<content styleCode="italics">R</content>)-6-[(<content styleCode="italics">R</content>)-(-)-2-amino-2-(<content styleCode="italics">p</content>-hydroxyphenyl)acetamido]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo 
+[3.2.0]heptane-2-carboxylic acid trihydrate. It may be represented structurally 
+as:<renderMultiMedia referencedObject="MM1"/>
+                  <paragraph>The amoxicillin molecular formula is C<sub>16</sub>H<sub>19</sub>N<sub>3</sub>O<sub>5</sub>S • 3H<sub>2</sub>O, and the molecular weight is 419.45.</paragraph>
+                  <paragraph>Capsules, tablets and powder for oral suspension of amoxicillin are intended 
+for oral administration.</paragraph>
+                  <linkHtml href="#section-"/>Capsules<paragraph>Each amoxicillin capsule, with yellow opaque cap and body, 
+contains 250 mg or 500 mg amoxicillin as the trihydrate. The 250 mg capsule is 
+imprinted AMOX 250 on one side and GG 848 on the other side; the 500 mg capsule 
+is imprinted AMOX 500 on one side and GG 849 on the other side. Inactive 
+ingredients: Capsule shells - yellow ferric oxide, titanium dioxide, gelatin, 
+black ferric oxide; Capsule contents - cellulose microcrystalline and magnesium 
+stearate.</paragraph>
+                  <paragraph>Meets USP Dissolution Test 2.</paragraph>
+                  <br/>
+               </text>
+               <effectiveTime value="20110708"/>
+               <component>
+                  <observationMedia classCode="OBS" moodCode="EVN" ID="MM1">
+                     <text>structural formula</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="image1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="3b1f2b2c-8d8e-4231-bcd3-5bacad46dcd7"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <table ID="id02555f8-ab08-471f-886f-f7dd6d59ad0d" width="100%">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Dose</content>*</td>
+                           <td>
+                              <content styleCode="bold">AUC<sub>0-∞</sub> (mcg.hr./mL)</content>
+                           </td>
+                           <td>
+                              <content styleCode="bold">C<sub>max</sub> (mcg/mL)</content>
+                              <sub/>†</td>
+                        </tr>
+                     </tbody>
+                     <tbody>
+                        <tr>
+                           <td>Amoxicillin</td>
+                           <td>amoxicillin<br/>(±S.D.)</td>
+                           <td>amoxicillin<br/>(±S.D.)</td>
+                        </tr>
+                        <tr>
+                           <td>400 mg (5 mL of suspension)</td>
+                           <td>17.1 (3.1)</td>
+                           <td>5.92 (1.62)</td>
+                        </tr>
+                        <tr>
+                           <td>400 mg (chewable tablet)</td>
+                           <td>17.9 (2.4)</td>
+                           <td>5.18 (1.64)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <linkHtml href="#section-"/>
+                  <br/>* Administered at the start of a light meal.<br/>† Mean values of 24 normal volunteers. Peak concentrations occurred 
+approximately 1 hour after the dose.<paragraph>Amoxicillin is stable in the presence of gastric acid and is 
+rapidly absorbed after oral administration. The effect of food on the absorption 
+of amoxicillin from the tablets and suspension has been partially investigated. 
+The 400 mg and 875 mg formulations have been studied only when administered at 
+the start of a light meal. However, food effect studies have not been performed 
+with the 200 mg and 500 mg formulations. Amoxicillin diffuses readily into most 
+body tissues and fluids, with the exception of brain and spinal fluid, except 
+when meninges are inflamed. The half-life of amoxicillin is 61.3 minutes. Most 
+of the amoxicillin is excreted unchanged in the urine; its excretion can be 
+delayed by concurrent administration of probenecid. In blood serum, amoxicillin 
+is approximately 20% protein-bound.</paragraph>
+                  <paragraph>Orally administered doses of 250 mg and 500 mg of amoxicillin capsules result 
+in average peak blood levels 1 to 2 hours after administration in the range of 
+3.5 mcg/mL to 5 mcg/mL and 5.5 mcg/mL to 7.5 mcg/mL, respectively.</paragraph>
+                  <paragraph>Mean amoxicillin pharmacokinetic parameters from an open, two-part, 
+single-dose crossover bioequivalence study in 27 adults comparing 875 mg of 
+Amoxicillin tablets with 875 mg of amoxicillin and clavulanate potassium showed 
+that the 875 mg tablet of amoxicillin produces an AUC<sub>0-∞</sub> 
+of 35.4 ± 8.1 mcg∙hr/mL and a C<sub>max</sub> of 13.8 ± 4.1 mcg/mL. 
+Dosing was at the start of a light meal following an overnight fast.</paragraph>
+                  <paragraph>Oral administration of single doses of amoxicillin 400 mg chewable tablets 
+and 400 mg/5 mL suspension to 24 adult volunteers yielded the following 
+pharmacokinetic data:</paragraph>
+                  <paragraph>Orally administered doses of amoxicillin suspension, 125 mg/5 mL and 250 mg/5 
+mL, result in average peak blood levels 1 to 2 hours after administration in the 
+range of 1.5 mcg/mL to 3 mcg/mL and 3.5 mcg/mL to 5 mcg/ mL, respectively.</paragraph>
+                  <paragraph>Detectable serum levels are observed up to 8 hours after an orally 
+administered dose of amoxicillin. Following a 1 gram dose and utilizing a 
+special skin window technique to determine levels of the antibiotic, it was 
+noted that therapeutic levels were found in the interstitial fluid. 
+Approximately 60% of an orally administered dose of amoxicillin is excreted in 
+the urine within 6 to 8 hours.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="155d618e-b501-46ba-bd96-4371d8ceeb4c"/>
+               <code code="49489-8" codeSystem="2.16.840.1.113883.6.1" displayName="MICROBIOLOGY SECTION"/>
+               <title>Microbiology</title>
+               <text>
+                  <paragraph>Amoxicillin is similar to ampicillin in its bactericidal action 
+against susceptible organisms during the stage of active multiplication. It acts 
+through the inhibition of biosynthesis of cell wall mucopeptide. Amoxicillin has 
+been shown to be active against most strains of the following microorganisms, 
+both <content styleCode="italics">in vitro </content>and in clinical infections as described 
+in the <content styleCode="bold">
+                        <linkHtml href="#section-">      INDICATIONS AND USAGE</linkHtml>
+                     </content> 
+section.</paragraph>
+                  <paragraph>
+                     <content>Aerobic Gram-Positive Microorganisms:</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Enterococcus faecalis</content>
+                     <br/>
+                     <content styleCode="italics">Staphylococcus </content>spp. <linkHtml href="#section-">      1</linkHtml> (β-lactamase-negative strains only)<br/>
+                     <content styleCode="italics">Streptococcus pneumoniae</content>
+                     <br/>
+                     <content styleCode="italics">Streptococcus </content>spp. (α- and β-hemolytic strains only)</paragraph>
+                  <paragraph>
+                     <content>Aerobic Gram-Negative Microorganisms:</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Escherichia coli </content>(β-lactamase-negative strains 
+only)<br/>
+                     <content styleCode="italics">Haemophilus influenzae </content>(β-lactamase-negative 
+strains only)<br/>
+                     <content styleCode="italics">Neisseria gonorrhoeae 
+</content>(β-lactamase-negative strains only)<br/>
+                     <content styleCode="italics">Proteus 
+mirabilis </content>(β-lactamase-negative strains only)</paragraph>
+                  <paragraph>
+                     <content>Helicobacter:</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Helicobacter pylori</content>
+                  </paragraph>
+                  <linkHtml href="#section-">      1</linkHtml>Staphylococci which are susceptible to amoxicillin but resistant to 
+methicillin/oxacillin should be considered as resistant to 
+amoxicillin.<linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Susceptibility Tests<linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Dilution Techniques<paragraph>Quantitative methods are used to determine antimicrobial minimum 
+inhibitory concentrations (MICs). These MICs provide estimates of the 
+susceptibility of bacteria to antimicrobial compounds. The MICs should be 
+determined using a standardized procedure. Standardized procedures are based on 
+a dilution method<sup>1</sup> (broth or agar) or equivalent with 
+standardized inoculum concentrations and standardized concentrations of <content styleCode="bold">ampicillin </content>powder. Ampicillin is sometimes used to predict 
+susceptibility of <content styleCode="italics">S. pneumoniae </content>to amoxicillin; 
+however, some intermediate strains have been shown to be susceptible to 
+amoxicillin. Therefore, <content styleCode="italics">S. pneumoniae </content>susceptibility 
+should be tested using amoxicillin powder. The MIC values should be interpreted 
+according to the following criteria:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For Gram-Positive Aerobes:</content>
+                     <br/>
+                     <content styleCode="italics">Enterococcus</content>
+                  </paragraph>
+                  <table ID="ib9ed3e04-f678-4e87-8072-d3126113b1ee" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>MIC (mcg/mL)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≤ 8</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>≥ 16</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="italics">Staphylococcus </content>
+                     <linkHtml href="#section-">      2</linkHtml>
+                  </paragraph>
+                  <table ID="id0936df5-8b0e-4d3c-863a-b930fa87e9bb" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>MIC (mcg/mL)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≤ 0.25</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>≥ 0.5</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="italics">Streptococcus (</content>except <content styleCode="italics">S. 
+pneumoniae)</content>
+                     <br/>
+                  </paragraph>
+                  <table ID="ie5548f0f-80c9-4915-82c7-46746b633f8e" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>MIC (mcg/mL)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≤ 0.25</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>0.5 to 4</td>
+                           <td>Intermediate (I)</td>
+                        </tr>
+                        <tr>
+                           <td>≥ 8</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="italics">S. pneumoniae </content>
+                     <linkHtml href="#section-">      3</linkHtml> from non-meningitis sources.<br/>(<content styleCode="bold">Amoxicillin</content> powder should be used to determine 
+susceptibility.)</paragraph>
+                  <table ID="i0302be4d-d6eb-4414-8ae5-277db8112833" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>MIC (mcg/mL)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≤ 2</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>4</td>
+                           <td>Intermediate (I)</td>
+                        </tr>
+                        <tr>
+                           <td>≥ 8</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="bold">NOTE:</content> These interpretive criteria are based on the 
+recommended doses for respiratory tract infections.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For Gram-Negative Aerobes:</content>
+                  </paragraph>
+                  <paragraph>Enterobacteriaceae</paragraph>
+                  <table ID="i1651b2ec-c5d2-4ff4-84e4-a373337ff80d" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>MIC (mcg/mL)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≤ 8</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>16</td>
+                           <td>Intermediate (I)</td>
+                        </tr>
+                        <tr>
+                           <td>≥ 32</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="italics">H. influenzae </content>
+                     <linkHtml href="#section-">      4</linkHtml>
+                  </paragraph>
+                  <table ID="i03f3715c-dfaf-44ef-84be-f5e61ffc056e" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>MIC (mcg/mL)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≤ 1</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>2</td>
+                           <td>Intermediate (I)</td>
+                        </tr>
+                        <tr>
+                           <td>≥ 4</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>A report of "Susceptible" indicates that the pathogen is likely to be 
+inhibited if the antimicrobial compound in the blood reaches the concentrations 
+usually achievable. A report of "Intermediate" indicates that the result should 
+be considered equivocal, and, if the microorganism is not fully susceptible to 
+alternative, clinically feasible drugs, the test should be repeated. This 
+category implies possible clinical applicability in body sites where the drug is 
+physiologically concentrated or in situations where high dosage of drug can be 
+used. This category also provides a buffer zone, which prevents small 
+uncontrolled technical factors from causing major discrepancies in 
+interpretation. A report of "Resistant" indicates that the pathogen is not 
+likely to be inhibited if the antimicrobial compound in the blood reaches the 
+concentrations usually achievable; other therapy should be selected.</paragraph>
+                  <paragraph>Standardized susceptibility test procedures require the use of laboratory 
+control microorganisms to control the technical aspects of the laboratory 
+procedures. Standard <content styleCode="bold">ampicillin </content>powder should provide 
+the following MIC values:</paragraph>
+                  <table ID="i6c68936f-dd55-464f-8089-1b07b493c6d6" width="100%">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Microorganism</content>
+                           </td>
+                           <td>
+                              <content styleCode="bold">MIC Range (mcg/mL)</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">E. coli</content>
+                           </td>
+                           <td>ATCC 25922</td>
+                           <td>2 to 8<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">E. faecalis</content>
+                           </td>
+                           <td>ATCC 29212</td>
+                           <td>0.5 to 2<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">H. influenzae</content>
+                           </td>
+                           <td>ATCC 49247*</td>
+                           <td>2 to 8<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">S. aureus</content>
+                           </td>
+                           <td>ATCC 29213</td>
+                           <td>.25 to 1<br/>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>*This quality control range is applicable to only <content styleCode="italics">H. 
+influenzae</content> ATCC 49247 tested by a broth microdilution procedure using 
+HTM.<sup>1</sup>
+                  <paragraph>Using <content styleCode="bold">amoxicillin</content> to determine susceptibility:</paragraph>
+                  <table ID="i0a495602-a9c9-428f-89b6-68bdf4eefef1" width="100%">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Microorganism</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">MIC Range (mcg/ml)</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">S. pneumoniae</content>
+                              <br/>
+                           </td>
+                           <td>ATCC 49619<sup>*</sup>
+                              <br/>
+                           </td>
+                           <td>0.03 to .12<br/>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <sup>*</sup>This quality control range is applicable to only <content styleCode="italics">S. 
+pneumoniae</content> ATCC 49619 tested by the broth microdilution procedure using 
+cation-adjusted Mueller-Hinton broth with 2-5% lysed horse blood.<br/>
+                  <br/>2 Staphylococci which are susceptible to amoxicillin but resistant to 
+methicillin/oxacillin should be considered as resistant to amoxicillin. 3 These interpretive standards are applicable only to broth microdilution 
+susceptibility tests using cation-adjusted Mueller-Hinton broth with 2-5% lysed 
+horse blood.4 These interpretive standards are applicable only to broth microdilution test 
+with <content styleCode="italics">H. influenzae</content> using <content styleCode="italics">Haemophilus</content> Test Medium (HTM).<sup>1</sup>
+                  <br/>Diffusion Techniques<paragraph>Quantitative methods that require measurement of zone diameters 
+also provide reproducible estimates of the susceptibility of bacteria to 
+antimicrobial compounds. One such standardized procedure<sup>2</sup> 
+requires the use of standardized inoculum concentrations. This procedure uses 
+paper disks impregnated with 10 mcg ampicillin to test the susceptibility of 
+microorganisms, except <content styleCode="italics">S. pneumoniae</content>, to amoxicillin. 
+Interpretation involves correlation of the diameter obtained in the disk test 
+with the MIC for <content styleCode="bold">ampicillin</content>.</paragraph>
+                  <paragraph>Reports from the laboratory providing results of the standard single-disk 
+susceptibility test with a 10 mcg ampicillin disk should be interpreted 
+according to the following criteria:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For Gram-Positive Aerobes:</content>
+                     <br/>
+                     <content styleCode="italics">Enterococcus</content>
+                  </paragraph>
+                  <table ID="i95414af0-0468-491a-8d1f-2b4cbccfe5ef" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>Zone Diameter (mm)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≥ 17</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>≤ 16</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="italics">Staphylococcus </content>
+                     <linkHtml href="#section-">     5</linkHtml>
+                  </paragraph>
+                  <table ID="ib2992b5c-26b2-458f-8d6e-3ea836242733" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>Zone Diameter (mm)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≥ 29</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>≤ 28</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>β-hemolytic streptococci</paragraph>
+                  <table ID="ia4385d86-9d70-4f58-81c6-ae78303a8799" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>Zone Diameter (mm)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≥ 26</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>19 to 25</td>
+                           <td>Intermediate (I)</td>
+                        </tr>
+                        <tr>
+                           <td>≤ 18</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="bold">NOTE:</content> For streptococci (other than β-hemolytic 
+streptococci and <content styleCode="italics">S. pneumoniae</content>), an ampicillin MIC 
+should be determined.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">S. pneumoniae</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">S. pneumoniae</content> should be tested using a 1 mcg 
+oxacillin disk. Isolates with oxacillin zone sizes of ≥ 20 mm are susceptible to 
+amoxicillin. An amoxicillin MIC should be determined on isolates of <content styleCode="italics">S. pneumoniae</content> with oxacillin zone sizes of ≤ 19 mm. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For Gram-Negative Aerobes:</content>
+                  </paragraph>
+                  <paragraph>Enterobacteriaceae</paragraph>
+                  <table ID="i679bdad7-ac20-46fe-8ae0-051657058dee" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>Zone Diameter (mm)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≥ 17</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>14 to 16</td>
+                           <td>Intermediate (I)</td>
+                        </tr>
+                        <tr>
+                           <td>≤ 13</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="italics">H. influenzae </content>
+                     <linkHtml href="#section-">     6</linkHtml>
+                  </paragraph>
+                  <table ID="i7a190eaa-adf6-47e0-8ff3-2742fa7ec453" width="50%">
+                     <col align="center" valign="top" width="50%"/>
+                     <col align="left" valign="top" width="50%"/>
+                     <thead>
+                        <tr>
+                           <th>Zone Diameter (mm)</th>
+                           <th>Interpretation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>≥ 22</td>
+                           <td>Susceptible (S)</td>
+                        </tr>
+                        <tr>
+                           <td>19 to 21</td>
+                           <td>Intermediate (I)</td>
+                        </tr>
+                        <tr>
+                           <td>≤ 18</td>
+                           <td>Resistant (R)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>Interpretation should be as stated above for results using dilution 
+techniques.</paragraph>
+                  <paragraph>As with standard dilution techniques, disk diffusion susceptibility test 
+procedures require the use of laboratory control microorganisms. The 10 mcg 
+<content styleCode="bold">ampicillin </content>disk should provide the following zone 
+diameters in these laboratory test quality control strains:</paragraph>
+                  <table ID="i34a2d3cc-b054-4217-8571-72f7e3ebd89f" width="100%">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Microorganism</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Zone Diameter (mm)</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">E. coli</content>
+                              <br/>
+                           </td>
+                           <td>ATCC 25922<br/>
+                           </td>
+                           <td>16 to 22<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">H. influenzae</content>
+                              <br/>
+                           </td>
+                           <td>ATCC 49247<sup>*</sup>
+                              <br/>
+                           </td>
+                           <td>13 to 21<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">S. aureus</content>
+                              <br/>
+                           </td>
+                           <td>ATCC 25923<br/>
+                           </td>
+                           <td>27 to 35<br/>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>*This quality control range is applicable to only <content styleCode="italics">H. 
+influenzae</content> ATCC 49247 tested by a disk diffusion procedure using 
+HTM.<sup>2</sup>
+                  <paragraph>Using 1 mcg <content styleCode="bold">oxacillin</content> disk:</paragraph>
+                  <table ID="i5e58ef20-127e-4973-8a0b-af7122cdb93d" width="100%">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Microorganism</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Zone Diameter (mm)</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="italics">S. pneumoniae</content>
+                              <br/>
+                           </td>
+                           <td>ATCC 49619<sup>*</sup>
+                              <br/>
+                           </td>
+                           <td>8 to 12<br/>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <linkHtml href="#section-"/>
+                  <br/>
+                  <sup>*</sup>This quality control range is applicable to only <content styleCode="italics">S. 
+pneumoniae </content>ATCC 49619 tested by a disk diffusion procedure using 
+Mueller-Hinton agar supplemented with 5% sheep blood and incubated in 5% CO<sub>2</sub>.<br/>5 Staphylococci which are susceptible to amoxicillin but resistant to 
+methicillin/oxacillin should be considered as resistant to amoxicillin. 6 These interpretive standards are applicable only to disk diffusion 
+susceptibility tests with <content styleCode="italics">H. influenzae</content> using <content styleCode="italics">Haemophilus</content> Test Medium (HTM).<sup>2</sup>
+                  <br/>
+                  <br/>
+                  <br/>Susceptibility Testing for <content styleCode="italics">Helicobacter pylori</content>
+                  <paragraph>
+                     <content styleCode="italics">In vitro </content>susceptibility testing 
+methods and diagnostic products currently available for determining minimum 
+inhibitory concentrations (MICs) and zone sizes have not been standardized, 
+validated, or approved for testing <content styleCode="italics">H. pylori 
+</content>microorganisms.</paragraph>
+                  <paragraph>Culture and susceptibility testing should be obtained in patients who fail 
+triple therapy. If clarithromycin resistance is found, a 
+nonclarithromycin-containing regimen should be used.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="1b561f00-1773-4982-bec0-4e09b02a58fc"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>Amoxicillin is indicated in the treatment of infections due to 
+susceptible (ONLY β-lactamase-negative) strains of the designated microorganisms 
+in the conditions listed below:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Infections of the ear, nose, and throat </content>- due to 
+<content styleCode="italics">Streptococcus </content>spp. (α- and β-hemolytic strains only), 
+<content styleCode="italics">S. pneumoniae, Staphylococcus </content>spp., or <content styleCode="italics">H. influenzae.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Infections of the genitourinary tract </content>- due to <content styleCode="italics">E. coli, P. mirabilis, </content>or <content styleCode="italics">E. 
+faecalis.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Infections of the skin and skin structure </content>- due to 
+<content styleCode="italics">Streptococcus </content>spp. (α- and β-hemolytic strains only), 
+<content styleCode="italics">Staphylococcus spp., </content>or <content styleCode="italics">E. 
+coli</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Infections of the lower respiratory tract </content>- due to 
+<content styleCode="italics">Streptococcus </content>spp. (α- and β-hemolytic strains only), 
+<content styleCode="italics">S. pneumoniae, Staphylococcus </content>spp., or <content styleCode="italics">H. influenzae.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Gonorrhea, acute uncomplicated (ano-genital and urethral 
+infections) </content>- due to <content styleCode="italics">N. gonorrhoeae </content>(males and 
+females).</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">H. pylori </content>eradication to reduce the risk of 
+duodenal ulcer recurrence</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Triple Therapy<linkHtml href=""/>
+                  <linkHtml href=""/>Amoxicillin/clarithromycin/lansoprazole<paragraph>Amoxicillin, in combination with clarithromycin plus lansoprazole 
+as triple therapy, is indicated for the treatment of patients with <content styleCode="italics">H. pylori </content>infection and duodenal ulcer disease (active or 1 
+year history of a duodenal ulcer) to eradicate <content styleCode="italics">H. 
+pylori</content>. Eradication of <content styleCode="italics">H. pylori </content>has been 
+shown to reduce the risk of duodenal ulcer recurrence. (See <content styleCode="bold">
+                        <linkHtml href="#section-13">CLINICAL STUDIES</linkHtml>
+                     </content> and <content styleCode="bold">
+                        <linkHtml href="#section-11">DOSAGE AND ADMINISTRATION</linkHtml>
+                     </content>.)</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Dual Therapy<linkHtml href=""/>
+                  <linkHtml href=""/>Amoxicillin/lansoprazole<paragraph>Amoxicillin, in combination with lansoprazole delayed-release 
+capsules as dual therapy, is indicated for the treatment of patients with <content styleCode="italics">H. pylori </content>infection and duodenal ulcer disease (active or 1 
+year history of a duodenal ulcer) <content styleCode="bold">who are either allergic or 
+intolerant to clarithromycin or in whom resistance to clarithromycin is known or 
+suspected. </content>(See the clarithromycin package insert, <content styleCode="bold">MICROBIOLOGY</content>.) Eradication of <content styleCode="italics">H. pylori 
+</content>has been shown to reduce the risk of duodenal ulcer recurrence. (See 
+<content styleCode="bold">
+                        <linkHtml href="#section-13">CLINICAL STUDIES</linkHtml>
+                     </content> and <content styleCode="bold">
+                        <linkHtml href="#section-11">DOSAGE AND ADMINISTRATION</linkHtml>
+                     </content>.)</paragraph>
+                  <paragraph>To reduce the development of drug-resistant bacteria and maintain the 
+effectiveness of amoxicillin and other antibacterial drugs, amoxicillin should 
+be used only to treat or prevent infections that are proven or strongly 
+suspected to be caused by susceptible bacteria. When culture and susceptibility 
+information are available, they should be considered in selecting or modifying 
+antibacterial therapy. In the absence of such data, local epidemiology and 
+susceptibility patterns may contribute to the empiric selection of therapy.</paragraph>
+                  <paragraph>Indicated surgical procedures should be performed.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="9ae898af-0952-40b6-a6f2-e113c676a88f"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>A history of allergic reaction to any of the penicillins is a contraindication.</text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="473f6ca2-30b2-4f83-9e8b-0a87f48fc64e"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph>SERIOUS AND OCCASIONALLY FATAL HYPERSENSITIVITY (ANAPHYLACTIC) 
+REACTIONS HAVE BEEN REPORTED IN PATIENTS ON PENICILLIN THERAPY. ALTHOUGH 
+ANAPHYLAXIS IS MORE FREQUENT FOLLOWING PARENTERAL THERAPY, IT HAS OCCURRED IN 
+PATIENTS ON ORAL PENICILLINS. THESE REACTIONS ARE MORE LIKELY TO OCCUR IN 
+INDIVIDUALS WITH A HISTORY OF PENICILLIN HYPERSENSITIVITY AND/OR A HISTORY OF 
+SENSITIVITY TO MULTIPLE ALLERGENS. THERE HAVE BEEN REPORTS OF INDIVIDUALS WITH A 
+HISTORY OF PENICILLIN HYPERSENSITIVITY WHO HAVE EXPERIENCED SEVERE REACTIONS 
+WHEN TREATED WITH CEPHALOSPORINS. BEFORE INITIATING THERAPY WITH AMOXICILLIN, 
+CAREFUL INQUIRY SHOULD BE MADE CONCERNING PREVIOUS HYPERSENSITIVITY REACTIONS TO 
+PENICILLINS, CEPHALOSPORINS, OR OTHER ALLERGENS. IF AN ALLERGIC REACTION OCCURS, 
+AMOXICILLIN SHOULD BE DISCONTINUED AND APPROPRIATE THERAPY INSTITUTED. <content styleCode="bold">SERIOUS ANAPHYLACTIC REACTIONS REQUIRE IMMEDIATE EMERGENCY TREATMENT 
+WITH EPINEPHRINE. OXYGEN, INTRAVENOUS STEROIDS, AND AIRWAY MANAGEMENT, INCLUDING 
+INTUBATION, SHOULD ALSO BE ADMINISTERED AS INDICATED.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pseudomembranous colitis has been reported with nearly all 
+antibacterial agents, including amoxicillin, and may range in severity from mild 
+to life-threatening. Therefore, it is important to consider this diagnosis in 
+patients who present with diarrhea subsequent to the administration of 
+antibacterial agents.</content>
+                  </paragraph>
+                  <paragraph>Treatment with antibacterial agents alters the normal flora of the colon and 
+may permit overgrowth of clostridia. Studies indicate that a toxin produced by 
+<content styleCode="italics">Clostridium difficile </content>is a primary cause of 
+"antibiotic-associated colitis."</paragraph>
+                  <paragraph>After the diagnosis of pseudomembranous colitis has been established, 
+appropriate therapeutic measures should be initiated. Mild cases of 
+pseudomembranous colitis usually respond to drug discontinuation alone. In 
+moderate-to-severe cases, consideration should be given to management with 
+fluids and electrolytes, protein supplementation, and treatment with an 
+antibacterial drug clinically effective against <content styleCode="italics">C. difficile 
+</content>colitis.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="8b5065be-4e2b-4a5b-928d-5d38a2346f13"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <text>
+                  <linkHtml href=""/>General<paragraph>The possibility of superinfections with mycotic or bacterial 
+pathogens should be kept in mind during therapy. If superinfections occur, 
+amoxicillin should be discontinued and appropriate therapy instituted.</paragraph>
+                  <paragraph>Prescribing amoxicillin in the absence of a proven or strongly suspected 
+bacterial infection or a prophylactic indication is unlikely to provide benefit 
+to the patient and increases the risk of the development of drug-resistant 
+bacteria.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ab01f346-bed3-4ce6-b26f-ebf19f7653ac"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>Information for Patients</title>
+               <text>
+                  <paragraph>Amoxicillin may be taken every 8 hours or every 12 hours, 
+depending on the strength of the product prescribed.</paragraph>
+                  <paragraph>Patients should be counseled that antibacterial drugs including amoxicillin 
+should only be used to treat bacterial infections. They do not treat viral 
+infections (e.g., the common cold). When amoxicillin is prescribed to treat a 
+bacterial infection, patients should be told that although it is common to feel 
+better early in the course of therapy, the medication should be taken exactly as 
+directed. Skipping doses or not completing the full course of therapy may: (1) 
+decrease the effectiveness of the immediate treatment, and (2) increase the 
+likelihood that bacteria will develop resistance and will not be treatable by 
+amoxicillin or other antibacterial drugs in the future.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="d92d1876-a446-433c-9714-c1d6eb73a55f"/>
+               <code code="34075-2" codeSystem="2.16.840.1.113883.6.1" displayName="LABORATORY TESTS SECTION"/>
+               <title>Laboratory Tests</title>
+               <text>
+                  <paragraph>As with any potent drug, periodic assessment of renal, hepatic, 
+and hematopoietic function should be made during prolonged therapy.</paragraph>
+                  <paragraph>All patients with gonorrhea should have a serologic test for syphilis at the 
+time of diagnosis. Patients treated with amoxicillin should have a follow-up 
+serologic test for syphilis after 3 months.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="5ed1d3bd-13d6-4985-851d-feb876bb0a21"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>Drug Interactions</title>
+               <text>
+                  <paragraph>Probenecid decreases the renal tubular secretion of amoxicillin. 
+Concurrent use of amoxicillin and probenecid may result in increased and 
+prolonged blood levels of amoxicillin.</paragraph>
+                  <paragraph>Chloramphenicol, macrolides, sulfonamides, and tetracyclines may interfere 
+with the bactericidal effects of penicillin. This has been demonstrated <content styleCode="italics">in vitro</content>; however, the clinical significance of this 
+interaction is not well documented.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="233cc544-043c-4340-91eb-af8b50e8e734"/>
+               <code code="34074-5" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG &amp; OR LABORATORY TEST INTERACTIONS SECTION"/>
+               <title>Drug/Laboratory Test Interactions</title>
+               <text>
+                  <paragraph>High urine concentrations of ampicillin may result in 
+false-positive reactions when testing for the presence of glucose in urine using 
+Clinitest<sup>®</sup>, Benedict's Solution, or Fehling's Solution. 
+Since this effect may also occur with amoxicillin, it is recommended that 
+glucose tests based on enzymatic glucose oxidase reactions (such as 
+Clinistix<sup>®</sup>) be used.</paragraph>
+                  <paragraph>Following administration of ampicillin to pregnant women, a transient 
+decrease in plasma concentration of total conjugated estriol, 
+estriol-glucuronide, conjugated estrone, and estradiol has been noted. This 
+effect may also occur with amoxicillin.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ba7ccb22-689b-4d0a-9f3f-a0377e61881c"/>
+               <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+               <title>Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+               <text>Longterm studies in animals have not been performed to evaluate carcinogenic 
+potential. Studies to detect mutagenic potential of amoxicillin alone have not 
+been conducted; however, the following information is available from tests on a 
+4:1 mixture of amoxicillin and potassium clavulanate. Amoxicillin and potassium 
+clavulanate was non-mutagenic in the Ames bacterial mutation assay, and the 
+yeast gene conversion assay. Amoxicillin and potassium clavulanate was weakly 
+positive in the mouse lymphoma assay, but the trend toward increased mutation 
+frequencies in this assay occurred at doses that were also associated with 
+decreased cell survival. Amoxicillin and potassium clavulanate was negative in 
+the mouse micronucleus test, and in the dominant lethal assay in mice. Potassium 
+clavulanate alone was tested in the Ames bacterial mutation assay and in the 
+mouse micronucleus test, and was negative in each of these assays. In a 
+multi-generation reproduction study in rats, no impairment of fertility or other 
+adverse reproductive effects were seen at doses up to 500 mg/kg (approximately 3 
+times the human dose in mg/m<sup>2</sup>).</text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="60915d9c-371b-46ac-8200-586ccdc27ae7"/>
+               <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+               <title>Pregnancy</title>
+               <text>
+                  <linkHtml href=""/>Teratogenic Effects<linkHtml href=""/>
+                  <linkHtml href=""/>Pregnancy Category B<paragraph>Reproduction studies have been performed in mice and rats at 
+doses up to 10 times the human dose and have revealed no evidence of impaired 
+fertility or harm to the fetus due to amoxicillin. There are, however, no 
+adequate and well-controlled studies in pregnant women. Because animal 
+reproduction studies are not always predictive of human response, this drug 
+should be used during pregnancy only if clearly needed.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="f911dc09-49f7-41fd-a16b-6224d13e8be0"/>
+               <code code="34079-4" codeSystem="2.16.840.1.113883.6.1" displayName="LABOR &amp; DELIVERY SECTION"/>
+               <title>Labor and Delivery</title>
+               <text>
+                  <paragraph>Oral ampicillin-class antibiotics are poorly absorbed during labor. Studies in 
+guinea pigs showed that intravenous administration of ampicillin slightly 
+decreased the uterine tone and frequency of contractions but moderately 
+increased the height and duration of contractions. However, it is not known 
+whether use of amoxicillin in humans during labor or delivery has immediate or 
+delayed adverse effects on the fetus, prolongs the duration of labor, or 
+increases the likelihood that forceps delivery or other obstetrical intervention 
+or resuscitation of the newborn will be necessary.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="6e8d4ac8-3102-452b-b474-8360024d7669"/>
+               <code code="34080-2" codeSystem="2.16.840.1.113883.6.1" displayName="NURSING MOTHERS SECTION"/>
+               <title>Nursing Mothers</title>
+               <text>Penicillins have been shown to be excreted in human milk. Amoxicillin use by 
+nursing mothers may lead to sensitization of infants. Caution should be 
+exercised when amoxicillin is administered to a nursing woman.</text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="8ecfb09b-a75d-4859-99de-a76ff4ee2829"/>
+               <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+               <title>Pediatric Use</title>
+               <text>Because of incompletely developed renal function in neonates and young infants, 
+the elimination of amoxicillin may be delayed. Dosing of amoxicillin should be 
+modified in pediatric patients 12 weeks or younger (≤3 months). (See <content styleCode="bold">
+                     <linkHtml href="#section-11.1">DOSAGE AND ADMINISTRATION: Neonates and 
+Infants</linkHtml>.</content>)</text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="50cf2cec-ae13-43d6-ba47-c58d54b5ee69"/>
+               <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+               <title>Geriatric Use</title>
+               <text>
+                  <paragraph>An analysis of clinical studies of amoxicillin was conducted to 
+determine whether subjects aged 65 and over respond differently from younger 
+subjects. Of the 1,811 subjects treated with capsules of amoxicillin, 85% were less than 60 years old, 15% were ≥ 61 years old and 7% were ≥ 71 years old. This 
+analysis and other reported clinical experience have not identified differences 
+in responses between the elderly and younger patients, but a greater sensitivity 
+of some older individuals cannot be ruled out.</paragraph>
+                  <paragraph>This drug is known to be substantially excreted by the kidney, and the risk 
+of toxic reactions to this drug may be greater in patients with impaired renal 
+function. Because eldery patients are more likely to have decreased renal 
+function, care should be taken in dose selection, and it may be useful to 
+monitor renal function.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="35b70896-5528-4511-ae39-1e2bf8c19e3c"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>have previously demonstrated hypersensitivity to penicillins and in those with a 
+history of allergy, asthma, hay fever, or urticaria. The following adverse 
+reactions have been reported as associated with the use of penicillins:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Gastrointestinal: </content>Nausea, vomiting, diarrhea, and 
+hemorrhagic/pseudomembranous colitis.</paragraph>
+                  <paragraph>Onset of pseudomembranous colitis symptoms may occur during or after 
+antibiotic treatment. (See <content styleCode="bold">
+                        <linkHtml href="#section-7">WARNINGS</linkHtml>.</content>)</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Hypersensitivity Reactions: </content>Serum sickness-like 
+reactions, erythematous maculopapular rashes, erythema multiforme, 
+Stevens-Johnson syndrome, exfoliative dermatitis, toxic epidermal necrolysis, 
+acute generalized exanthematous pustulosis, hypersensitivity vasculitis and 
+urticaria have been reported.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">NOTE: </content>These hypersensitivity reactions may be 
+controlled with antihistamines and, if necessary, systemic corticosteroids. 
+Whenever such reactions occur, amoxicillin should be discontinued unless, in the 
+opinion of the physician, the condition being treated is lifethreatening and 
+amenable only to amoxicillin therapy.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Liver: </content>A moderate rise in AST (SGOT) and/or ALT 
+(SGPT) has been noted, but the significance of this finding is unknown. Hepatic 
+dysfunction including cholestatic jaundice, hepatic cholestasis and acute 
+cytolytic hepatitis have been reported.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Renal: </content>Crystalluria has also been reported (See <content styleCode="bold">
+                        <linkHtml href="#section-10">OVERDOSAGE</linkHtml>
+                     </content>).</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Hemic and Lymphatic Systems: </content>Anemia, including 
+hemolytic anemia, thrombocytopenia, thrombocytopenic purpura, eosinophilia, 
+leukopenia, and agranulocytosis have been reported during therapy with 
+penicillins. These reactions are usually reversible on discontinuation of 
+therapy and are believed to be hypersensitivity phenomena.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Central Nervous System: </content>Reversible hyperactivity, 
+agitation, anxiety, insomnia, confusion, convulsions, behavioral changes, and/or 
+dizziness have been reported rarely.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Miscellaneous: </content>Tooth discoloration (brown, yellow, or 
+gray staining) has been rarely reported. Most reports occurred in pediatric 
+patients. Discoloration was reduced or eliminated with brushing or dental 
+cleaning in most cases.</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Combination Therapy with Clarithromycin and 
+Lansoprazole<paragraph>In clinical trials using combination therapy with amoxicillin 
+plus clarithromycin and lansoprazole, and amoxicillin plus lansoprazole, no 
+adverse reactions peculiar to these drug combinations were observed. Adverse 
+reactions that have occurred have been limited to those that had been previously 
+reported with amoxicillin, clarithromycin, or lansoprazole.</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Triple Therapy<linkHtml href=""/>
+                  <linkHtml href=""/>Amoxicillin/Clarithromycin/Lansoprazole<paragraph>The most frequently reported adverse events for patients who 
+received triple therapy were diarrhea (7%), headache (6%), and taste perversion 
+(5%). No treatment-emergent adverse events were observed at significantly higher 
+rates with triple therapy than with any dual therapy regimen.</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Dual Therapy<linkHtml href=""/>
+                  <linkHtml href=""/>Amoxicillin/Lansoprazole<paragraph>The most frequently reported adverse events for patients who 
+received amoxicillin three times daily plus lansoprazole three times daily dual 
+therapy were diarrhea (8%) and headache (7%). No treatment-emergent adverse 
+events were observed at significantly higher rates with amoxicillin three times 
+daily plus lansoprazole three times daily dual therapy than with lansoprazole 
+alone.</paragraph>
+                  <paragraph>For more information on adverse reactions with clarithromycin or 
+lansoprazole, refer to their package inserts, <content styleCode="bold">ADVERSE 
+REACTIONS</content>.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="4a575c51-6df8-44e0-bacb-890280190457"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph>In case of overdosage, discontinue medication, treat 
+symptomatically, and institute supportive measures as required. If the 
+overdosage is very recent and there is no contraindication, an attempt at emesis 
+or other means of removal of drug from the stomach may be performed. A 
+prospective study of 51 pediatric patients at a poison-control center suggested 
+that overdosages of less than 250 mg/kg of amoxicillin are not associated with 
+significant clinical symptoms and do not require gastric emptying.<sup>3 </sup>
+                  </paragraph>
+                  <paragraph>Interstitial nephritis resulting in oliguric renal failure has been reported 
+in a small number of patients after overdosage with amoxicillin.</paragraph>
+                  <paragraph>Crystalluria, in some cases leading to renal failure, has also been reported 
+after amoxicillin overdosage in adult and pediatric patients. In case of 
+overdosage, adequate fluid intake and diuresis should be maintained to reduce 
+the risk of amoxicillin crystalluria. </paragraph>
+                  <paragraph>Renal impairment appears to be reversible with cessation of drug 
+administration. High blood levels may occur more readily in patients with 
+impaired renal function because of decreased renal clearance of amoxicillin. 
+Amoxicillin may be removed from circulation by hemodialysis.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="1b1ce4cb-8570-4952-ba14-2c5f40bdaf52"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>Capsules, tablets and oral suspensions of amoxicillin may be 
+given without regard to meals. The 400 mg suspension and the 875 mg tablet have 
+been studied only when administered at the start of a light meal. However, food 
+effect studies have not been performed with the 200 mg and 500 mg 
+formulations.</paragraph>
+                  <linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Neonates and Infants Aged ≤12 Weeks (≤3 Months)<paragraph>Due to incompletely developed renal function affecting 
+elimination of amoxicillin in this age group, the recommended upper dose of 
+amoxicillin is 30 mg/kg/day divided q12h.</paragraph>
+                  <table ID="if7e607a3-095d-434d-8f54-3cd0b0497607" width="100%">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Infection</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Severity*</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Usual Adult Dose</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Usual Dose for children over 3 months</content>†</td>
+                        </tr>
+                        <tr>
+                           <td>Ear/Nose/Throat<br/>
+                           </td>
+                           <td>Mild/Moderate<br/>
+                           </td>
+                           <td>500 mg every 12 hours or 250 mg every 8 hours<br/>
+                           </td>
+                           <td>25 mg/kg/day in divided doses every 12 hours<br/>
+                              <content styleCode="bold">or<br/>
+                              </content>20 mg/kg/day in divided doses every 8 hours<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>Severe<br/>
+                           </td>
+                           <td>875 mg every 12 hours or 500 mg every 8 hours<br/>
+                           </td>
+                           <td>45 mg/kg/day in divided doses every 12 hours<br/>
+                              <content styleCode="bold">or</content>
+                              <br/>40 mg/kg/day in divided doses every 8 hours<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Lover Respiratory Tract<br/>
+                           </td>
+                           <td>Mild/Moderate or Severe<br/>
+                           </td>
+                           <td>875 mg every 12 hours or 500 mg every 8 hours<br/>
+                           </td>
+                           <td>45 mg/kg/day in divided doses every 12 hours<br/>
+                              <content styleCode="bold">or<br/>
+                              </content>40 mg/kg/day in divided doses every 8 hours<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Skin/Skin Structure<br/>
+                           </td>
+                           <td>Mild/Moderate<br/>
+                           </td>
+                           <td>500 mg every 12 hours or 250 mg every 8 hours<br/>
+                           </td>
+                           <td>25 mg/kg/day in divided doses every 12 hours<br/>
+                              <content styleCode="bold">or</content>
+                              <br/>20 mg/kg/day in divided doses every 8 hours<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>Severe<br/>
+                           </td>
+                           <td>875 mg every 12 hours or 500 mg every 8 hours<br/>
+                           </td>
+                           <td>45 mg/kg/day in divided doses every 12 hours<br/>
+                              <content styleCode="bold">or<br/>
+                              </content>40 mg/kg/day in divided doses every 8 hours<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Genitourinary Tract<br/>
+                           </td>
+                           <td>Mild/Moderate<br/>
+                           </td>
+                           <td>500 mg every 12 hours or 250 mg every 8 hours<br/>
+                           </td>
+                           <td>25 mg/kg/day in divided doses every 12 hours<br/>
+                              <content styleCode="bold">or<br/>
+                              </content>20 mg/kg/day in divided doses every 8 hours<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>Severe<br/>
+                           </td>
+                           <td>875 mg every 12 hours or 250 mg every 8 hours<br/>
+                           </td>
+                           <td>45 mg/kg/day in divided doses every 12 hours<br/>
+                              <content styleCode="bold">or</content>
+                              <br/>40mg/kg/day in divided doses every 8 hours<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Gonorrhea Acute, uncomplicated ano-genital and <br/>urethral infections in males and females<br/>
+                           </td>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>3 grams as single oral dose<br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">NOTE: SINCE PROBENECID IS <br/>CONTRAINDICATED IN CHILDREN UNDER<br/>2 YEARS, DO NOT USE THIS REGIMINE IN <br/>THESE CASES.<br/>
+                              </content>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>*Dosing for infections caused by less susceptible organisms should follow the 
+recommendations for severe infections.<br/>† The children's dosage is intended for individuals whose weight is less than 
+40 kg. Children weighing 40 kg or more should be dosed according to the adult 
+recommendations<paragraph>After reconstitution, the required amount of suspension should be 
+placed directly on the child's tongue for swallowing. Alternate means of 
+administration are to add the required amount of suspension to formula, milk, 
+fruit juice, water, ginger ale, or cold drinks. These preparations should then 
+be taken immediately. To be certain the child is receiving full dosage, such 
+preparations should be consumed in entirety.</paragraph>
+                  <paragraph>All patients with gonorrhea should be evaluated for syphilis. (See <content styleCode="bold">
+                        <linkHtml href="#section-">    PRECAUTIONS – Laboratory 
+Tests</linkHtml>.</content>)</paragraph>
+                  <paragraph>Larger doses may be required for stubborn or severe infections.</paragraph>
+                  <linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>General<paragraph>It should be recognized that in the treatment of chronic urinary 
+tract infections, frequent bacteriological and clinical appraisals are 
+necessary. Smaller doses than those recommended above should not be used. Even 
+higher doses may be needed at times. In stubborn infections, therapy may be 
+required for several weeks. It may be necessary to continue clinical and/or 
+bacteriological followup for several months after cessation of therapy. Except 
+for gonorrhea, treatment should be continued for a minimum of 48 to 72 hours 
+beyond the time that the patient becomes asymptomatic or evidence of bacterial 
+eradication has been obtained. It is recommended that there be at least 10 days' 
+treatment for any infection caused by <content styleCode="italics">Streptococcus pyogenes 
+</content>to prevent the occurrence of acute rheumatic fever.</paragraph>
+                  <linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>
+                  <content styleCode="italics">H. pylori</content> Eradication to 
+Reduce the Risk of Duodenal Ulcer Recurrence<linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Triple Therapy<linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Amoxicillin/clarithromycin/lansoprazole<paragraph>The recommended adult oral dose is 1 gram amoxicillin, 500 mg 
+clarithromycin, and 30 mg lansoprazole, all given twice daily (q12h) for 14 
+days. (See <content styleCode="bold">
+                        <linkHtml href="#section-">    INDICATIONS AND 
+USAGE</linkHtml>
+                     </content>.)</paragraph>
+                  <linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Dual Therapy<linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Amoxicillin/lansoprazole<paragraph>The recommended adult oral dose is 1 gram amoxicillin and 30 mg 
+lansoprazole, each given three times daily (q8h) for 14 days. (See <content styleCode="bold">
+                        <linkHtml href="#section-">    INDICATIONS AND USAGE</linkHtml>
+                     </content>.)</paragraph>
+                  <paragraph>Please refer to clarithromycin and lansoprazole full prescribing information 
+for <content styleCode="bold">
+                        <linkHtml href="#section-">    CONTRAINDICATIONS</linkHtml>
+                     </content> and <content styleCode="bold">
+                        <linkHtml href="#section-">    WARNINGS</linkHtml>
+                     </content>, and for information 
+regarding dosing in elderly and renally impaired patients.</paragraph>
+                  <linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Dosing Recommendations for Adults with Impaired Renal 
+Function<paragraph>Patients with impaired renal function do not generally require a 
+reduction in dose unless the impairment is severe. Severely impaired patients 
+with a glomerular filtration rate of less than 30 mL/minute should not receive the 875 
+mg tablet. Patients with a glomerular filtration rate of 10 to 30 mL/minute 
+should receive 500 mg or 250 mg every 12 hours, depending on the severity of the 
+infection. Patients with a less than 10 mL/minute glomerular filtration rate 
+should receive 500 mg or 250 mg every 24 hours, depending on severity of the 
+infection.</paragraph>
+                  <paragraph>Hemodialysis patients should receive 500 mg or 250 mg every 24 hours, 
+depending on severity of the infection. They should receive an additional dose 
+both during and at the end of dialysis.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">There are currently no dosing recommendations for pediatric 
+patients with impaired renal function.</content>
+                  </paragraph>
+                  <linkHtml href="#section-"/>
+                  <linkHtml href="#section-"/>Directions for Mixing Oral Suspension<paragraph>Prepare suspension at time of dispensing as follows: Tap bottle 
+until all powder flows freely. Add approximately 1/3 of the total amount of 
+water for reconstitution (see <linkHtml href="#section-">    table</linkHtml> below) and shake 
+vigorously to wet powder. Add remainder of the water and again shake 
+vigorously.</paragraph>
+                  <linkHtml href="#section-"/>
+                  <table ID="i26a6e943-f25d-457a-82ce-9205e42eb702" width="60%">
+                     <col align="left" valign="top" width="40%"/>
+                     <col align="center" valign="top" width="60%"/>
+                     <thead>
+                        <tr>
+                           <th colspan="2">125 mg/5 mL</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="underline">Bottle Size</content>
+                           </td>
+                           <td>
+                              <content styleCode="underline">Amount of Water Required for 
+Reconstitution</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>80 mL</td>
+                           <td>55 mL</td>
+                        </tr>
+                        <tr>
+                           <td>100 mL</td>
+                           <td>68 mL</td>
+                        </tr>
+                        <tr>
+                           <td>150 mL</td>
+                           <td>102 mL</td>
+                        </tr>
+                        <tr>
+                           <td>  Each teaspoonful (5 mL) will contain 125 mg 
+amoxicillin.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table ID="i9155af68-9e97-4328-87ba-cf9ae4f9f7f8" width="60%">
+                     <col align="left" valign="top" width="40%"/>
+                     <col align="center" valign="top" width="60%"/>
+                     <thead>
+                        <tr>
+                           <th colspan="2">200 mg/5 mL</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="underline">Bottle Size</content>
+                           </td>
+                           <td>
+                              <content styleCode="underline">Amount of Water Required for 
+Reconstitution</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>50 mL</td>
+                           <td>34 mL</td>
+                        </tr>
+                        <tr>
+                           <td>75 mL</td>
+                           <td>51 mL</td>
+                        </tr>
+                        <tr>
+                           <td>100 mL</td>
+                           <td>68 mL</td>
+                        </tr>
+                        <tr>
+                           <td>  Each teaspoonful (5 mL) will contain 200 mg 
+amoxicillin.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table ID="id16276e0-04de-4637-8bb9-9e5e848d0583" width="60%">
+                     <col align="left" valign="top" width="40%"/>
+                     <col align="center" valign="top" width="60%"/>
+                     <thead>
+                        <tr>
+                           <th colspan="2">250 mg/5 mL</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="underline">Bottle Size</content>
+                           </td>
+                           <td>
+                              <content styleCode="underline">Amount of Water Required for 
+Reconstitution</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>80 mL</td>
+                           <td>55 mL</td>
+                        </tr>
+                        <tr>
+                           <td>100 mL</td>
+                           <td>68 mL</td>
+                        </tr>
+                        <tr>
+                           <td>150 mL</td>
+                           <td>102 mL</td>
+                        </tr>
+                        <tr>
+                           <td>  Each teaspoonful (5 mL) will contain 250 mg 
+amoxicillin.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table ID="id95d24ce-cc26-4047-81da-2910aa889647" width="60%">
+                     <col align="left" valign="top" width="40%"/>
+                     <col align="center" valign="top" width="60%"/>
+                     <thead>
+                        <tr>
+                           <th colspan="2">400 mg/5 mL</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="underline">Bottle Size</content>
+                           </td>
+                           <td>
+                              <content styleCode="underline">Amount of Water Required for 
+Reconstitution</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>50 mL</td>
+                           <td>34 mL</td>
+                        </tr>
+                        <tr>
+                           <td>75 mL</td>
+                           <td>51 mL</td>
+                        </tr>
+                        <tr>
+                           <td>100 mL</td>
+                           <td>68 mL</td>
+                        </tr>
+                        <tr>
+                           <td>  Each teaspoonful (5 mL) will contain 400 mg 
+amoxicillin.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="bold">NOTE: </content>SHAKE ORAL SUSPENSION WELL BEFORE USING. Keep 
+bottle tightly closed. Any unused portion of the reconstituted suspension must 
+be discarded after 14 days. Refrigeration preferable, but not required.</paragraph>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="e458dd0f-ca47-4f25-8f21-f12d59ff7fb5"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <content styleCode="bold">Amoxicillin Capsules, USP, </content>for oral administration, 
+contain 250 mg or 500 mg amoxicillin as the trihydrate and are supplied as:<br/>
+                  <paragraph>
+                     <content styleCode="bold">500 mg: </content>yellow, opaque, hard gelatin capsules 
+imprinted AMOX 500 on one side and GG 849 on the other side.<br/>NDC 67296-0220-5.................................................... 
+bottles of 40</paragraph>
+                  <paragraph>Store capsules at 
+20°-25°C (68°-77°F). [See USP Controlled Room Temperature]. Dispense in a tight 
+container.</paragraph>
+                  <br/>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="2c561fbb-54b1-41c1-b15a-8e2fb4f196e3"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>CLINICAL STUDIES</title>
+               <text>
+                  <linkHtml href="#section-"/>
+                  <content styleCode="italics">H. pylori</content> Eradication to 
+Reduce the Risk of Duodenal Ulcer Recurrence<paragraph>Randomized, double-blind clinical studies performed in the United 
+States in patients with <content styleCode="italics">H. pylori </content>and duodenal ulcer 
+disease (defined as an active ulcer or history of an ulcer within 1 year) 
+evaluated the efficacy of lansoprazole in combination with amoxicillin capsules 
+and clarithromycin tablets as triple 14 day therapy, or in combination with 
+amoxicillin capsules as dual 14 day therapy, for the eradication of <content styleCode="italics">H. pylori</content>. Based on the results of these studies, the 
+safety and efficacy of 2 different eradication regimen were established:</paragraph>
+                  <paragraph>
+                     <content>Triple Therapy:</content> Amoxicillin 1 gram twice 
+daily/clarithromycin 500 mg twice daily/lansoprazole 30 mg twice daily.</paragraph>
+                  <paragraph>
+                     <content>Dual Therapy:</content> Amoxicillin 1 gram three 
+times daily/lansoprazole 30 mg three times daily.</paragraph>
+                  <paragraph>All treatments were for 14 days. <content styleCode="italics">H. pylori 
+</content>eradication was defined as 2 negative tests (culture and histology) at 4 
+to 6 weeks following the end of treatment.</paragraph>
+                  <paragraph>Triple therapy was shown to be more effective than all possible dual therapy 
+combinations. Dual therapy was shown to be more effective than both 
+monotherapies. Eradication of <content styleCode="italics">H. pylori </content>has been 
+shown to reduce the risk of duodenal ulcer recurrence.</paragraph>
+                  <table ID="i353cdede-77fd-4fd6-86b4-c1aa9e687cbd" width="100%">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">
+                                 <br/>
+                              </content>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Triple Therapy</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Triple Therapy</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Study</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">valuable Analysis*</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Intent-to-Treat Analysis</content>†</td>
+                        </tr>
+                        <tr>
+                           <td>Study 1<br/>
+                           </td>
+                           <td>92‡</td>
+                           <td>86‡</td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>[80.0-97.7]<br/>
+                           </td>
+                           <td>[73.3-93.5]<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>(n=48)</td>
+                           <td>(n=55)<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Study 2<br/>
+                           </td>
+                           <td>86§</td>
+                           <td>83§</td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>[75.7-93.5]<br/>
+                           </td>
+                           <td>[72.0-90.8]<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>(n=66)<br/>
+                           </td>
+                           <td>(n=70)<br/>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <br/>
+                  <br/>* This analysis was based on evaluable patients with confirmed duodenal ulcer 
+(active or within 1 year) and <content styleCode="italics">H. pylori</content> infection at 
+baseline defined as at least 2 of 3 positive endoscopic tests from CLOtest<sup>®</sup>, (Delta West Ltd., Bentley, Australia), histology and/or 
+culture. Patients were included in the analysis if they completed the study. 
+Additionally, if patients dropped out of the study due to an adverse event 
+related to the study drug, they were included in the analysis as failures of 
+therapy.<br/>† Patients were included in the analysis if they had documented <content styleCode="italics">H. pylori</content> infection at baseline as defined above and had a 
+confirmed duodenal ulcer (active or within 1 year). All dropouts were included 
+as failures of therapy.<br/>‡ (p less than 0.05) versus lansoprazole/amoxicillin and lansoprazole/clarithromycin 
+dual therapy.<br/>§ (p less than 0.05) versus clarithromycin/amoxicillin dual therapy.<br/>
+                  <br/>
+                  <table ID="if9c82d05-d4b9-467e-8ea1-ea96dc654894" width="100%">
+                     <caption>H. pylori Eradication Rates – Dual Therapy (amoxicillin/lansoprazole) Percent of Patients Cured [95% Confidence Interval] (Number of Patients)</caption>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Dual Therapy</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Dual Therapy</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Study</content>
+                           </td>
+                           <td>
+                              <content styleCode="bold">valuable Analysis*</content>
+                              <br/>
+                           </td>
+                           <td>
+                              <content styleCode="bold">
+                                 <content styleCode="bold">Intent-to-Treat Analysis</content>†</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Study 1<br/>
+                           </td>
+                           <td>77‡</td>
+                           <td>70‡</td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>[62.5-77.5]<br/>
+                           </td>
+                           <td>[56.8-81.2]<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>(n=51)<br/>
+                           </td>
+                           <td>(n=60)<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Study 2<br/>
+                           </td>
+                           <td>86§</td>
+                           <td>61§</td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>[51.9-77.5]<br/>
+                           </td>
+                           <td>[48.5-72.9]<br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <br/>
+                           </td>
+                           <td>(n=58)<br/>
+                           </td>
+                           <td>(n=67)<br/>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <br/>*This analysis was based on evaluable patients with confirmed duodenal ulcer 
+(active or within 1 year) and <content styleCode="italics">H. pylori</content> infection at 
+baseline defined as at least 2 of 3 positive endoscopic tests from CLOtest<sup>®</sup>, histology and/or culture. Patients were included in the 
+analysis if they completed the study. Additionally, if patients dropped out of 
+the study due to an adverse event related to the study drug, they were included 
+in the analysis as failures of therapy.<br/>† Patients were included in the analysis if they had documented <content styleCode="italics">H. pylori</content> infection at baseline as defined above and had a 
+confirmed duodenal ulcer (active or within 1 year). All dropouts were included 
+as failures of therapy.<br/>‡ (p less than 0.05) versus lansoprazole alone.<br/>§ (p less than 0.05) versus lansoprazole alone or amoxicillin alone.<br/>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="cc4d4d6d-6148-412e-ba7c-260fab968f54"/>
+               <code code="34093-5" codeSystem="2.16.840.1.113883.6.1" displayName="REFERENCES SECTION"/>
+               <title>REFERENCES</title>
+               <text>
+                  <list listType="ordered" ID="i6a051bb6-c7ba-4ce6-83ab-87aeb316ba35">
+                     <item>National Committee for Clinical Laboratory Standards. Methods for Dilution 
+Antimicrobial Susceptibility Tests for Bacteria that Grow Aerobically – Fourth 
+Edition; Approved Standard. NCCLS Document M7-A4, Vol. 17, No. 2. NCCLS, Wayne, 
+PA, January 1997.</item>
+                     <item>National Committee for Clinical Laboratory Standards. Performance Standards 
+for Antimicrobial Disk Susceptibility Tests – Sixth Edition; Approved Standard. 
+NCCLS Document M2-A6, Vol. 17, No. 1. NCCLS, Wayne, PA, January 1997.</item>
+                     <item>Swanson-Biearman B, Dean BS, Lopez G, Krenzelok EP. The effects of 
+penicillin and cephalosporin ingestions in children less than six years of age. 
+<content styleCode="italics">Vet Hum Toxicol. </content>1988;30:66-67.</item>
+                  </list>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>
+                  <paragraph>CLINITEST<sup>®</sup> is a registered trademark of 
+Miles, Inc.<br/>CLINISTIX<sup>®</sup> is a registered trademark of 
+Bayer Corporation.<br/>CLOtest<sup>®</sup> is a registered trademark 
+of Kimberly-Clark Corporation.</paragraph>
+                  <paragraph>Revised 02-2007</paragraph>
+                  <paragraph>Manufactured in Austria by Sandoz GmbH<br/>for Sandoz Inc., Princeton, NJ 
+08540</paragraph>
+                  <br/>
+               </text>
+               <effectiveTime value="20110708"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="dcee3510-ee6c-483b-a828-8f7d05e21bf7"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>copy of label<renderMultiMedia referencedObject="MM10"/>
+               </text>
+               <effectiveTime value="20110708"/>
+               <component>
+                  <observationMedia classCode="OBS" moodCode="EVN" ID="MM10">
+                     <text>copy of label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="6729602205.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

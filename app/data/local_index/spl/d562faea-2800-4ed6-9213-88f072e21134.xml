@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="b116f624-85d5-472a-8209-c80eae8204a6"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>FUROSEMIDE TABLETS, USP<br/>Rx only</title>
+   <effectiveTime value="20100928"/>
+   <setId root="d562faea-2800-4ed6-9213-88f072e21134"/>
+   <versionNumber value="3"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="118802834" root="1.3.6.1.4.1.519.1"/>
+            <name>Rebel Distirbutors Corp</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="118802834" root="1.3.6.1.4.1.519.1"/>
+                        <name>Rebel Distirbutors Corp</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73607" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="RELABEL"/>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73606" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="REPACK"/>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="c3008b8f-cf23-9259-800a-eaa95c359b1a"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL listing data elements section"/>
+               <effectiveTime value="20070417"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code codeSystem="2.16.840.1.113883.6.69" code="21695-490"/>
+                        <name>Furosemide</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Furosemide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="63304-624" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="20" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Furosemide</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>Furosemide</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LACTOSE MONOHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>magnesium stearate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="5856J3G2A2" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM STARCH GLYCOLATE TYPE A POTATO</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="21695-490-30" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="90" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="21695-490-90" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="7" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="21695-490-07" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="10" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="21695-490-10" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="100" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="21695-490-00" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA078010" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20060918"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="CE" code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE">
+                              <originalText>white to off-white</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="6" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="CE" code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">RE22</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code codeSystem="2.16.840.1.113883.6.69" code="21695-491"/>
+                        <name>Furosemide</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Furosemide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="63304-625" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="40" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Furosemide</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>Furosemide</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LACTOSE MONOHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>magnesium stearate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="5856J3G2A2" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM STARCH GLYCOLATE TYPE A POTATO</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="21695-491-30" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="90" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="21695-491-90" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="100" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="21695-491-00" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA078010" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20060918"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="CE" code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE">
+                              <originalText>white to off-white</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="8" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="CE" code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="2" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">RE23</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="id_7c9fdd51-3389-4ff8-8c3e-d635347cb20f">
+               <id root="c3594ac8-237f-4bc0-9966-0d434c1632cd"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="Boxed Warning section"/>
+               <title>WARNING</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Furosemide is a potent diuretic which, if given in excessive amounts, can lead to a profound diuresis with water and electrolyte depletion. Therefore, careful medical supervision is required and dose and dose schedule must be adjusted to the individual patient’s needs. (See “DOSAGE AND ADMINISTRATION”.)</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20070417"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_description_id_16d51908-df4e-4daa-b959-0209872dec03">
+               <id root="e7c22c30-63ba-4562-8575-b22049ab4f66"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34089-3" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>Furosemide is a diuretic which is an anthranilic acid derivative. Furosemide tablets, USP for oral administration contain furosemide, USP as the active ingredient and the following inactive ingredients: corn starch NF, lactose monohydrate NF, magnesium stearate NF, pregelatinized starch NF and sodium starch glycolate NF. Chemically, it is 4-chloro-N-furfuryl-5-sulfamoylanthranilic acid. Furosemide is available as white to off white round tablets for oral administration in dosage strengths of 20, 40 and 80 mg. Furosemide is a white to off-white granular powder. It is practically insoluble in water, sparingly soluble in alcohol, freely soluble in dilute alkali solutions and insoluble in dilute acids.</paragraph>
+                  <paragraph>The CAS Registry Number is 54-31-9.</paragraph>
+                  <paragraph>It has a molecular formula of C<sub>12</sub>H<sub>11</sub>ClN<sub>2</sub>O<sub>5</sub>S and a molecular weight of 330.75.</paragraph>
+                  <paragraph>The structural formula is as follows:</paragraph>
+                  <renderMultiMedia referencedObject="id_a828d156-9cf4-4839-8b9e-4805c8249e71"/>
+               </text>
+               <effectiveTime value="20070417"/>
+               <component>
+                  <observationMedia ID="id_a828d156-9cf4-4839-8b9e-4805c8249e71">
+                     <text>Chemical Structure</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="b116f624-85d5-472a-8209-c80eae8204a6-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_clinical_pharmacology_id_5c322e0f-2e8b-4784-906f-68c99e6e9a7b">
+               <id root="18fdd6b7-5fdd-48f0-b3ff-5fb7351c7a98"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34090-1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph>Investigations into the mode of action of furosemide have utilized micropuncture studies in rats, stop flow experiments in dogs and various clearance studies in both humans and experimental animals. It has been demonstrated that furosemide inhibits primarily the absorption of sodium and chloride not only in the proximal and distal tubules but also in the loop of Henle. The high degree of efficacy is largely due to the unique site of action. The action on the distal tubule is independent of any inhibitory effect on carbonic anhydrase and aldosterone.</paragraph>
+                  <paragraph>Recent evidence suggests that furosemide glucuronide is the only or at least the major biotransformation product of furosemide in man. Furosemide is extensively bound to plasma proteins, mainly to albumin. Plasma concentrations ranging from 1 to 400 mcg/mL are 91 to 99% bound in healthy individuals. The unbound fraction averages 2.3 to 4.1% at therapeutic concentrations.</paragraph>
+                  <paragraph>The onset of diuresis following oral administration is within 1 hour. The peak effect occurs within the first or second hour. The duration of diuretic effect is 6 to 8 hours.</paragraph>
+                  <paragraph>In fasted normal men, the mean bioavailability of furosemide from furosemide tablets and furosemide oral solution is 64% and 60%, respectively, of that from an intravenous injection of the drug. Although furosemide is more rapidly absorbed from the oral solution (50 minutes) than from the tablet (87 minutes), peak plasma levels and area under the plasma concentration-time curves do not differ significantly. Peak plasma concentrations increase with increasing dose but times-to-peak do not differ among doses. The terminal half-life of furosemide is approximately 2 hours.</paragraph>
+                  <paragraph>Significantly more furosemide is excreted in urine following the IV injection than after the tablet or oral solution. There are no significant differences between the two oral formulations in the amount of unchanged drug excreted in urine.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">
+                        <content styleCode="bold">Geriatric Population</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>Furosemide binding to albumin may be reduced in elderly patients. Furosemide is predominantly excreted unchanged in the urine. The renal clearance of furosemide alter intravenous administration in older healthy male subjects (60 to 70 years of age) is statistically significantly smaller than in younger healthy male subjects (20 to 35 years of age). The initial diuretic effect of furosemide in older subjects is decreased relative to younger subjects. (See <content styleCode="bold">PRECAUTIONS: Geriatric Use.)</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20070417"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_indications_id_4e7905dc-06c6-45d2-a46d-3daa2429b26c">
+               <id root="9650cabe-a0aa-4681-a75c-1e7edf85f826"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34067-9" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="underline">
+                        <content styleCode="bold">Edema</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>Furosemide tablets are indicated in adults and pediatric patients for the treatment of edema associated with congestive heart failure, cirrhosis of the liver, and renal disease, including the nephrotic syndrome. Furosemide is particularly useful when an agent with greater diuretic potential is desired.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">
+                        <content styleCode="bold">Hypertension</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>Furosemide tablets may be used in adults for the treatment of hypertension alone or in combination with other antihypertensive agents. Hypertensive patients who cannot be adequately controlled with thiazides will probably also not be adequately controlled with furosemide alone.</paragraph>
+               </text>
+               <effectiveTime value="20070417"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_contraindications_id_fb8653a7-1a1e-4a96-8d09-9a6d8a12d4be">
+               <id root="5a69b7b3-9f0a-44d9-924d-6dac38931ee4"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34070-3" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Furosemide tablets are contraindicated in patients with anuria and in patients with a history of hypersensitivity to furosemide.</paragraph>
+               </text>
+               <effectiveTime value="20070417"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_warnings_id_1655ff0b-94e3-49f9-bd98-08197beefcde">
+               <id root="c42f7910-a0f5-4cd5-a289-9ded833db965"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34071-1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph>In patients with hepatic cirrhosis and ascites, furosemide tablets therapy is best initiated in the hospital. In hepatic coma and in states of electrolyte depletion, therapy should not be instituted until the basic condition is improved. Sudden alterations of fluid and electrolyte balance in patients with cirrhosis may precipitate hepatic coma; therefore, strict observation is necessary during the period of diuresis. Supplemental potassium chloride and, if required, an aldosterone antagonist are helpful in preventing hypokalemia and metabolic alkalosis.</paragraph>
+                  <paragraph>If increasing azotemia and oliguria occur during treatment of severe progressive renal disease, furosemide tablets should be discontinued.</paragraph>
+                  <paragraph>Cases of tinnitus and reversible or irreversible hearing impairment have been reported. Usually, reports indicate that furosemide ototoxicity is associated with rapid injection, severe renal impairment, doses exceeding several times the usual recommended dose, or concomitant therapy with aminoglycoside antibiotics, ethacrynic acid, or other ototoxic drugs. If the physician elects to use high dose parenteral therapy, controlled intravenous infusion is advisable (for adults, an infusion rate not exceeding 4 mg furosemide per minute has been used).</paragraph>
+               </text>
+               <effectiveTime value="20070417"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_precautions_id_1e192624-df41-41c7-aedd-be8289c893c3">
+               <id root="d8a2fb79-f190-40df-858b-899e65e68923"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="42232-9" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <effectiveTime value="20070417"/>
+               <component>
+                  <section ID="i4i_precautions_id_1e9c3af0-45ad-4c15-8a16-946bc072f3bb">
+                     <id root="4f380585-e398-4e84-bbd8-3ca23a0037b4"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42232-9" displayName="PRECAUTIONS SECTION"/>
+                     <title>General</title>
+                     <text>
+                        <paragraph>Excessive diuresis may cause dehydration and blood volume reduction with circulatory collapse and possibly vascular thrombosis and embolism, particularly in elderly patients. As with any effective diuretic, electrolyte depletion may occur during furosemide tablets therapy, especially in patients receiving higher doses and a restricted salt intake. Hypokalemia may develop with furosemide tablets, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids or ACTH. Digitalis therapy may exaggerate metabolic effects of hypokalemia, especially myocardial effects.</paragraph>
+                        <paragraph>All patients receiving furosemide tablets therapy should be observed for these signs or symptoms of fluid or electrolyte imbalance (hyponatremia, hypochloremic alkalosis, hypokalemia, hypomagnesemia or hypocalcemia): dryness of mouth, thirst, weakness, lethargy, drowsiness, restlessness, muscle pains or cramps, muscular fatigue, hypotension, oliguria, tachycardia, arrhythmia, or gastrointestinal disturbances such as nausea and vomiting. Increases in blood glucose and alterations in glucose tolerance tests (with abnormalities of the fasting and 2-hour postprandial sugar) have been observed, and rarely, precipitation of diabetes mellitus has been reported.</paragraph>
+                        <paragraph>Asymptomatic hyperuricemia can occur and gout may rarely be precipitated.</paragraph>
+                        <paragraph>Patients allergic to sulfonamides may also be allergic to furosemide. The possibility exists of exacerbation or activation of systemic lupus erythematosus.</paragraph>
+                        <paragraph>As with many other drugs, patients should be observed regularly for the possible occurrence of blood dyscrasias, liver or kidney damage, or other idiosyncratic reactions.</paragraph>
+                     </text>
+                     <effectiveTime value="20070417"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_info_patients_id_3987ddea-a4a2-4fff-9e64-7589bf20d1ee">
+                     <id root="658ace5a-0378-40a7-ac7d-8fab4bf8524a"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34076-0" displayName="INFORMATION FOR PATIENTS SECTION"/>
+                     <title>
+                        <content styleCode="underline">Information for Patients</content>
+                     </title>
+                     <text>
+                        <paragraph>Patients receiving furosemide tablets should be advised that they may experience symptoms from excessive fluid and/or electrolyte losses. The postural hypotension that sometimes occurs can usually be managed by getting up slowly. Potassium supplements and/or dietary measures may be needed to control or avoid hypokalemia.</paragraph>
+                        <paragraph>Patients with diabetes mellitus should be told that furosemide may increase blood glucose levels and thereby affect urine glucose tests. The skin of some patients may be more sensitive to the effects of sunlight while taking furosemide.</paragraph>
+                        <paragraph>Hypertensive patients should avoid medications that may increase blood pressure, including over-the-counter products for appetite suppression and cold symptoms.</paragraph>
+                     </text>
+                     <effectiveTime value="20070417"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_lab_tests_id_1c6b3afb-0e6f-4e52-989f-9d48e2b9d6cf">
+                     <id root="4cf282bb-06e9-4145-a437-77617e4a8c36"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34075-2" displayName="LABORATORY TESTS SECTION"/>
+                     <title>
+                        <content styleCode="underline">Laboratory Tests</content>
+                     </title>
+                     <text>
+                        <paragraph>Serum electrolytes (particularly potassium), CO<sub>2</sub>, creatinine and BUN should be determined frequently during the first few months of furosemide tablets therapy and periodically thereafter. Serum and urine electrolyte determinations are particularly important when the patient is vomiting profusely or receiving parenteral fluids. Abnormalities should be corrected or the drug temporarily withdrawn. Other medications may also influence serum electrolytes.</paragraph>
+                        <paragraph>Reversible elevations of BUN may occur and are associated with dehydration, which should be avoided, particularly in patients with renal insufficiency.</paragraph>
+                        <paragraph>Urine and blood glucose should be checked periodically in diabetics receiving furosemide tablets, even in those suspected of latent diabetes.</paragraph>
+                        <paragraph>Furosemide tablets may lower serum levels of calcium (rarely cases of tetany have been reported) and magnesium. Accordingly, serum levels of these electrolytes should be determined periodically.</paragraph>
+                     </text>
+                     <effectiveTime value="20070417"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_interactions_id_b243e292-8d96-43b5-8d04-e2789b20f3cd">
+                     <id root="ca7ceeaa-afba-4da6-bd7f-d5da089af932"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34073-7" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title>
+                        <content styleCode="underline">Drug Interactions</content>
+                     </title>
+                     <text>
+                        <paragraph>Furosemide tablets may increase the ototoxic potential of aminoglycoside antibiotics, especially in the presence of impaired renal function. Except in life-threatening situations, avoid this combination.</paragraph>
+                        <paragraph>Furosemide tablets should not be used concomitantly with ethacrynic acid because of the possibility of ototoxicity. Patients receiving high doses of salicylates concomitantly with furosemide, as in rheumatic disease, may experience salicylate toxicity at lower doses because of competitive renal excretory sites.</paragraph>
+                        <paragraph>Furosemide tablets have a tendency to antagonize the skeletal muscle relaxing effect of tubocurarine and may potentiate the action of succinylcholine.</paragraph>
+                        <paragraph>Lithium generally should not be given with diuretics because they reduce lithium’s renal clearance and add a high risk of lithium toxicity.</paragraph>
+                        <paragraph>Furosemide tablets may add to or potentiate the therapeutic effect of other antihypertensive drugs. Potentiation occurs with ganglionic or peripheral adrenergic blocking drugs.</paragraph>
+                        <paragraph>Furosemide may decrease arterial responsiveness to norepinephrine. However, norepinephrine may still be used effectively.</paragraph>
+                        <paragraph>Simultaneous administration of sucralfate and furosemide tablets may reduce the natriuretic and antihypertensive effects of furosemide. Patients receiving both drugs should be observed closely to determine if the desired diuretic and/or antihypertensive effect of furosemide is achieved. The intake of furosemide and sucralfate should be separated by at least two hours.</paragraph>
+                        <paragraph>One study in six subjects demonstrated that the combination of furosemide and acetylsalicylic acid temporarily reduced creatinine clearance in patients with chronic renal insufficiency. There are case reports of patients who developed increased BUN, serum creatinine and serum potassium levels, and weight gain when furosemide was used in conjunction with NSAIDs.</paragraph>
+                        <paragraph>Literature reports indicate that coadministration of indomethacin may reduce the natriuretic and antihypertensive effects of furosemide in some patients by inhibiting prostaglandin synthesis. Indomethacin may also affect plasma renin levels, aldosterone excretion, and renin profile evaluation. Patients receiving both indomethacin and furosemide should be observed closely to determine if the desired diuretic and/or antihypertensive effect of furosemide is achieved.</paragraph>
+                     </text>
+                     <effectiveTime value="20070417"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_carcinogenesis_mutagenesis_fertility_id_242e67cf-beab-426f-aef9-eafe7f1e1bbf">
+                     <id root="e907413e-1c59-4c72-a93e-d8ecd673a578"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34083-6" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>
+                        <content styleCode="underline">Carcinogenesis, Mutagenesis, Impairment of Fertility</content>
+                     </title>
+                     <text>
+                        <paragraph>Furosemide was tested for carcinogenicity by oral administration in one strain of mice and one strain of rats. A small but significantly increased incidence of mammary gland carcinomas occurred in female mice at a dose 17.5 times the maximum human dose of 600 mg. There were marginal increases in uncommon tumors in male rats at a dose of 15 mg/kg (slightly greater than the maximum human dose) but not at 30 mg/kg.</paragraph>
+                        <paragraph>Furosemide was devoid of mutagenic activity in various strains of <content styleCode="italics">Salmonella typhimurium </content>when tested in the presence or absence of an <content styleCode="italics">in vitro </content>metabolic activation system, and questionably positive for gene mutation in mouse lymphoma cells in the presence of rat liver S9 at the highest dose tested. Furosemide did not induce sister chromatid exchange in human cells <content styleCode="italics">in vitro</content>, but other studies on chromosomal aberrations in human cells <content styleCode="italics">in vitro </content>gave conflicting results. In Chinese hamster cells it induced chromosomal damage but was questionably positive for sister chromatid exchange. Studies on the induction by furosemide of chromosomal aberrations in mice were inconclusive. The urine of rats treated with this drug did not induce gene conversion in <content styleCode="italics">Saccharomyces cerevisiae</content>.</paragraph>
+                        <paragraph>Furosemide produced no impairment of fertility in male or female rats, at 100 mg/kg/day (the maximum effective diuretic dose in the rat and 8 times the maximal human dose of 600 mg/day).</paragraph>
+                     </text>
+                     <effectiveTime value="20070417"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_pregnancy_id_8e902fc7-ebbe-4859-a680-eed0474d4c70">
+                     <id root="0180d947-a8fb-4038-8f90-1960bbf1aad6"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42228-7" displayName="PREGNANCY SECTION"/>
+                     <title>
+                        <content styleCode="underline">Pregnancy</content>
+                     </title>
+                     <text>
+                        <paragraph>PREGNANCY CATEGORY C - Furosemide has been shown to cause unexplained maternal deaths and abortions in rabbits at 2, 4 and 8 times the maximal recommended human dose. There are no adequate and well-controlled studies in pregnant women. Furosemide tablets should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.</paragraph>
+                        <paragraph>The effects of furosemide on embryonic and fetal development and on pregnant dams were studied in mice, rats and rabbits.</paragraph>
+                        <paragraph>Furosemide caused unexplained maternal deaths and abortions in the rabbit at the lowest dose of 25 mg/kg (2 times the maximal recommended human dose of 600 mg/day). In another study, a dose of 50 mg/kg (4 times the maximal recommended human dose of 600 mg/day) also caused maternal deaths and abortions when administered to rabbits between Days 12 and 17 of gestation. In a third study, none of the pregnant rabbits survived a dose of 100 mg/kg. Data from the above studies indicate fetal lethality that can precede maternal deaths.</paragraph>
+                        <paragraph>The results of the mouse study and one of the three rabbit studies also showed an increased incidence and severity of hydronephrosis (distention of the renal pelvis and, in some cases, of the ureters) in fetuses derived from the treated dams as compared with the incidence in fetuses from the control group.</paragraph>
+                     </text>
+                     <effectiveTime value="20070417"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_nursing_mothers_id_454804d6-200a-4e46-ad0d-bcb18b269795">
+                     <id root="64831d68-3b87-4f1b-b42e-a72d2ec9c35a"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34080-2" displayName="NURSING MOTHERS SECTION"/>
+                     <title>
+                        <content styleCode="underline">Nursing Mothers</content>
+                     </title>
+                     <text>
+                        <paragraph>Because it appears in breast milk, caution should be exercised when furosemide tablets are administered to a nursing mother.</paragraph>
+                     </text>
+                     <effectiveTime value="20070417"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_geriatric_use_id_a1ad2c1f-9005-42b6-ba25-1114604367f4">
+                     <id root="692b66c3-6e4b-467d-b589-50ed50ca924a"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34082-8" displayName="GERIATRIC USE SECTION"/>
+                     <title>
+                        <content styleCode="underline">Geriatric Use</content>
+                     </title>
+                     <text>
+                        <paragraph>Controlled clinical studies of furosemide did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger patients. In general, dose selection for the elderly patient should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of decreased hepatic, renal or cardiac function, and of concomitant disease or other drug therapy.</paragraph>
+                        <paragraph>This drug is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug may be greater in patients with impaired renal function. Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection and it may be useful to monitor renal function. (See <content styleCode="bold">PRECAUTIONS: General</content> and <content styleCode="bold">DOSAGE AND ADMINISTRATION</content>.)</paragraph>
+                     </text>
+                     <effectiveTime value="20070417"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_adverse_effects_id_d5b7e708-8484-4507-a132-d47f72a10299">
+               <id root="8bfa3731-ec1a-4edf-89cc-77fad3d66aef"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34084-4" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Gastrointestinal System Reactions</content>
+                  </paragraph>
+                  <paragraph>1. pancreatitis</paragraph>
+                  <paragraph>2. jaundice (intrahepatic cholestatic jaundice)</paragraph>
+                  <paragraph>3. anorexia</paragraph>
+                  <paragraph>4. oral and gastric irritation</paragraph>
+                  <paragraph>5. cramping</paragraph>
+                  <paragraph>6. diarrhea</paragraph>
+                  <paragraph>7. constipation</paragraph>
+                  <paragraph>8. nausea</paragraph>
+                  <paragraph>9. vomiting</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Systemic Hypersensitivity Reactions</content>
+                  </paragraph>
+                  <paragraph>1. systemic vasculitis</paragraph>
+                  <paragraph>2. interstitial nephritis</paragraph>
+                  <paragraph>3. necrotizing angiitis</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Central Nervous System Reactions</content>
+                  </paragraph>
+                  <paragraph>1. tinnitus and hearing loss</paragraph>
+                  <paragraph>2. paresthesias</paragraph>
+                  <paragraph>3. vertigo</paragraph>
+                  <paragraph>4. dizziness</paragraph>
+                  <paragraph>5. headache</paragraph>
+                  <paragraph>6. blurred vision</paragraph>
+                  <paragraph>7. xanthopsia</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Hematologic Reactions</content>
+                  </paragraph>
+                  <paragraph>1. aplastic anemia (rare)</paragraph>
+                  <paragraph>2. thrombocytopenia</paragraph>
+                  <paragraph>3. agranulocytosis (rare)</paragraph>
+                  <paragraph>4. hemolytic anemia</paragraph>
+                  <paragraph>5. leukopenia</paragraph>
+                  <paragraph>6. anemia</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Dermatologic-Hypersensitivity Reactions</content>
+                  </paragraph>
+                  <paragraph>1. exfoliative dermatitis</paragraph>
+                  <paragraph>2. erythema multiforme</paragraph>
+                  <paragraph>3. purpura</paragraph>
+                  <paragraph>4. photosensitivity</paragraph>
+                  <paragraph>5. urticaria</paragraph>
+                  <paragraph>6. rash</paragraph>
+                  <paragraph>7. pruritus</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Cardiovascular Reaction</content>
+                  </paragraph>
+                  <paragraph>Orthostatic hypotension may occur and be aggravated by alcohol, barbiturates or narcotics.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Other Reactions</content>
+                  </paragraph>
+                  <paragraph>1. hyperglycemia</paragraph>
+                  <paragraph>2. glycosuria</paragraph>
+                  <paragraph>3. hyperuricemia</paragraph>
+                  <paragraph>4. muscle spasm</paragraph>
+                  <paragraph>5. weakness</paragraph>
+                  <paragraph>6. restlessness</paragraph>
+                  <paragraph>7. urinary bladder spasm</paragraph>
+                  <paragraph>8. thrombophlebitis</paragraph>
+                  <paragraph>9. fever</paragraph>
+                  <paragraph>Whenever adverse reactions are moderate or severe, furosemide dosage should be reduced or therapy withdrawn.</paragraph>
+               </text>
+               <effectiveTime value="20070417"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_overdosage_id_d494caaa-f5ce-4a52-a146-d3321c655989">
+               <id root="94898837-6e70-44da-ab42-8fd8f52294ee"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34088-5" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph>The principal signs and symptoms of overdose with furosemide are dehydration, blood volume reduction, hypotension, electrolyte imbalance, hypokalemia and hypochloremic alkalosis, and are extensions of its diuretic action.</paragraph>
+                  <paragraph>The acute toxicity of furosemide has been determined in mice, rats and dogs. In all three, the oral LD<sub>50</sub> exceeded 1000 mg/kg body weight, while the intravenous LD<sub>50</sub> ranged from 300 to 680 mg/kg. The acute intragastric toxicity in neonatal rats is 7 to 10 times that of adult rats.</paragraph>
+                  <paragraph>The concentration of furosemide in biological fluids associated with toxicity or death is not known.</paragraph>
+                  <paragraph>Treatment of overdosage is supportive and consists of replacement of excessive fluid and electrolyte losses. Serum electrolytes, carbon dioxide level and blood pressure should be determined frequently. Adequate drainage must be assured in patients with urinary bladder outlet obstruction (such as prostatic hypertrophy).</paragraph>
+                  <paragraph>Hemodialysis does not accelerate furosemide elimination.</paragraph>
+               </text>
+               <effectiveTime value="20070417"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_dosage_admin_id_28a8346a-487e-4502-9dac-fabbe756cd03">
+               <id root="66e1695b-5051-4a9f-ac1b-cd97bf5b249e"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34068-7" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="underline">
+                        <content styleCode="bold">Edema</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>Therapy should be individualized according to patient response to gain maximal therapeutic response and to determine the minimal dose needed to maintain that response.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Adults -- </content>The usual initial dose of furosemide is 20 to 80 mg given as a single dose. Ordinarily a prompt diuresis ensues. If needed, the same dose can be administered 6 to 8 hours later or the dose may be increased. The dose may be raised by 20 or 40 mg and given not sooner than 6 to 8 hours after the previous dose until the desired diuretic effect has been obtained. The individually determined single dose should then be given once or twice daily (e.g., at 8 am and 2 pm). The dose of furosemide tablets may be carefully titrated up to 600 mg/day in patients with clinically severe edematous states.</paragraph>
+                  <paragraph>Edema may be most efficiently and safely mobilized by giving furosemide on 2 to 4 consecutive days each week.</paragraph>
+                  <paragraph>When doses exceeding 80 mg/day are given for prolonged periods, careful clinical observation and laboratory monitoring are particularly advisable. (See <content styleCode="bold">PRECAUTIONS: Laboratory Tests.)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Geriatric patients –</content>In general, dose selection for the elderly patient should be cautious, usually starting at the low end of the dosing range (see <content styleCode="bold">PRECAUTIONS: Geriatric Use</content>).</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pediatric patients -- </content>The usual initial dose of furosemide in pediatric patients is 2 mg/kg body weight, given as a single dose. If the diuretic response is not satisfactory after the initial dose, dosage may be increased by 1 or 2 mg/kg no sooner than 6 to 8 hours after the previous dose. Doses greater than 6 mg/kg body weight are not recommended. For maintenance therapy in pediatric patients, the dose should be adjusted to the minimum effective level.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">
+                        <content styleCode="bold">Hypertension</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>Therapy should be individualized according to the patient’s response to gain maximal therapeutic response and to determine the minimal dose needed to maintain the therapeutic response.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Adults</content> -- The usual initial dose of furosemide tablets for hypertension is 80 mg, usually divided into 40 mg twice a day. Dosage should then be adjusted according to response. If response is not satisfactory, add other antihypertensive agents.</paragraph>
+                  <paragraph>Changes in blood pressure must be carefully monitored when furosemide tablets are used with other antihypertensive drugs, especially during initial therapy. To prevent excessive drop in blood pressure, the dosage of other agents should be reduced by at least 50 percent when furosemide tablets are added to the regimen. As the blood pressure falls under the potentiating effect of furosemide tablets, a further reduction in dosage or even discontinuation of other antihypertensive drugs may be necessary.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Geriatric patients –</content>In general, dose selection and dose adjustment for the elderly patient should be cautious, usually starting at the low end of the dosing range (see <content styleCode="bold">PRECAUTIONS: Geriatric Use</content>).</paragraph>
+               </text>
+               <effectiveTime value="20070417"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_how_supplied_id_5dc5c41e-c599-48ab-ad6b-60c42417f50e">
+               <id root="8edb5457-a6a1-4254-9b71-9f773f452dd1"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34069-5" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>Furosemide Tablets, USP 20 mg and 40 mg are supplied as white to off-white, round tablets.</paragraph>
+                  <paragraph>Furosemide Tablets, USP 20 mg are debossed with ‘RE22’ on one side and plain on the other side.</paragraph>
+                  <paragraph>NDC 21695-490-07 Bottles of 7</paragraph>
+                  <paragraph>NDC 21695-490-10 Bottles of 10</paragraph>
+                  <paragraph>NDC 21695-490-30 Bottles of 30</paragraph>
+                  <paragraph>NDC 21695-490-90 Bottles of 90</paragraph>
+                  <paragraph>NDC 21695-490-00 Bottles of 100</paragraph>
+                  <paragraph>Furosemide Tablets, USP 40 mg are debossed with ‘RE23’ on one side and break-line on the other side.</paragraph>
+                  <paragraph>NDC 21695-491-30 Bottles of 30</paragraph>
+                  <paragraph>NDC 21695-491-90 Bottles of 90</paragraph>
+                  <paragraph>NDC 21695-491-00 Bottles of 100</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Note: </content>Dispense in well-closed, light-resistant containers. Exposure to light might cause a slight discoloration. Discolored tablets should not be dispensed.</paragraph>
+                  <paragraph>Tested by USP Dissolution Test 1</paragraph>
+                  <paragraph>Store at 20 – 25° C (68 – 77° F). (See USP Controlled Room Temperature).</paragraph>
+                  <paragraph>Manufactured for:</paragraph>
+                  <paragraph>Ranbaxy Pharmaceuticals Inc.</paragraph>
+                  <paragraph>Jacksonville, FL 32257 USA</paragraph>
+                  <paragraph>by: Ohm Laboratories Inc.</paragraph>
+                  <paragraph>North Brunswick, NJ 08902 USA</paragraph>
+                  <paragraph>March 2007</paragraph>
+                  <paragraph>Repackaged by:</paragraph>
+                  <paragraph>Rebel Distributors Corp</paragraph>
+                  <paragraph>Thousand Oaks, CA 91320</paragraph>
+               </text>
+               <effectiveTime value="20100928"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_Principal_display_panel_id_7e8a7dc4-f49f-4aa1-9e32-64f29c9550d0">
+               <id root="70a3ff41-2faa-4ee0-9abf-9a5685c7cc9c"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Principal Display Panel</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="id_5f8a588f-12c4-4ae8-afed-e0887fd57422"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100928"/>
+               <component>
+                  <observationMedia ID="id_5f8a588f-12c4-4ae8-afed-e0887fd57422">
+                     <text>Furosemide 20mg</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="b116f624-85d5-472a-8209-c80eae8204a6-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_Principal_display_panel_id_097156a4-1864-4564-b67a-631821720f34">
+               <id root="04850575-52ff-42a6-9489-b8706816c11e"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Principal Display Panel</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="id_22652820-513d-4421-9a6f-29e4ead57d54"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100928"/>
+               <component>
+                  <observationMedia ID="id_22652820-513d-4421-9a6f-29e4ead57d54">
+                     <text>Furosemide 40mg</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="b116f624-85d5-472a-8209-c80eae8204a6-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

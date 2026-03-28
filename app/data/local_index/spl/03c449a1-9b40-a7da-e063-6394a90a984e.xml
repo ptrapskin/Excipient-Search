@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="2c4e5941-7089-8be7-e063-6394a90a92e3"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>Levetiracetam ER</title>
+   <effectiveTime value="20250122"/>
+   <setId root="03c449a1-9b40-a7da-e063-6394a90a984e"/>
+   <versionNumber value="2"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="079254320"/>
+            <name>Direct_Rx</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id root="1.3.6.1.4.1.519.1" extension="079254320"/>
+                  <name>Direct_Rx</name>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="079254320"/>
+                        <name>Direct_Rx</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73606" displayName="repack" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="72189-510" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="2c4e57f0-a4d8-c701-e063-6394a90aa5d8"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20250122"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="72189-510" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Levetiracetam ER</name>
+                        <formCode code="C42930" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET, FILM COATED, EXTENDED RELEASE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Levetiracetam ER</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="43547-345" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="G2M7P15E5P" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYETHYLENE GLYCOL 3350</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TALC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="RFW2ET671P" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROXYPROPYL CELLULOSE (1600000 WAMW)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="532B59J990" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYVINYL ALCOHOL, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="500"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="44YRR34555" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LEVETIRACETAM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="44YRR34555" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>LEVETIRACETAM</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72189-510-60" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20230825"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA203468" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20230825"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="18" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48345" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OVAL" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">HH;172</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c45826-34b8-e9c5-e063-6394a90a82cb">
+               <id root="03c45826-34b7-e9c5-e063-6394a90a82cb"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <text>
+                  <paragraph>Levetiracetam extended-release tablets are indicated for the treatment of partial-onset in patients 12 years of age and older.</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c466ea-5918-30bb-e063-6294a90a44fe">
+               <id root="03c466ea-5917-30bb-e063-6294a90a44fe"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <text>
+                  <paragraph>2.1 Recommended Dosing</paragraph>
+                  <paragraph>For adults and adolescent patients, the recommended dosing for monotherapy and adjunctive therapy is the same; as outlined below.</paragraph>
+                  <paragraph>Adults and Adolescents 12 Years of Age and Older Weighing 50 kg or More</paragraph>
+                  <paragraph>Initiate treatment with a dose of 1,000 mg once daily. The once daily dosage may be adjusted in increments of 1,000 mg every 2 weeks to a maximum recommended daily dose of 3,000 mg/day once daily.</paragraph>
+                  <paragraph>Administration</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets are administered once daily. Levetiracetam extended-release tablets should be swallowed whole. The tablets should not be chewed, broken, or crushed.</paragraph>
+                  <paragraph>2.2 Dosage Adjustments in Adult Patients with Renal Impairment</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets dosing must be individualized according to the patient's renal function status. Recommended dosage adjustments for adults are shown in Table 1. In order to calculate the dose recommended for patients with renal impairment, creatinine clearance adjusted for body surface area must be calculated. To do this, an estimate of the patient's creatinine clearance (CLcr) in mL/min must first be calculated using the following formula:</paragraph>
+                  <paragraph>[clcr 2]
+  <br/>
+[clcr 2]
+ </paragraph>
+                  <paragraph>Table 1: Dosage Adjustment Regimen For Adult Patients With Impaired Renal Function
+  <br/>
+Group Creatinine
+  <br/>
+Clearance
+  <br/>
+(mL/min/1.73m2) Dosage
+  <br/>
+(mg) Frequency
+ </paragraph>
+                  <paragraph>Normal</paragraph>
+                  <paragraph>&gt; 80</paragraph>
+                  <paragraph>1,000 to 3,000</paragraph>
+                  <paragraph>Every 24 hours</paragraph>
+                  <paragraph>Mild</paragraph>
+                  <paragraph>50 – 80</paragraph>
+                  <paragraph>1,000 to 2,000</paragraph>
+                  <paragraph>Every 24 hours</paragraph>
+                  <paragraph>Moderate</paragraph>
+                  <paragraph>30 – 50</paragraph>
+                  <paragraph>500 to 1500</paragraph>
+                  <paragraph>Every 24 hours</paragraph>
+                  <paragraph>Severe</paragraph>
+                  <paragraph>&lt; 30</paragraph>
+                  <paragraph>500 to 1,000</paragraph>
+                  <paragraph>Every 24 hours</paragraph>
+                  <paragraph>2.3 Discontinuation of Levetiracetam Extended-release Tablets</paragraph>
+                  <paragraph>Avoid abrupt withdrawal from levetiracetam extended-release tablets in order to reduce the risk of increased seizure frequency and status epilepticus [see Warnings and Precautions (5.7)].</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c46823-0b09-4101-e063-6294a90aaf94">
+               <id root="03c46823-0b08-4101-e063-6294a90aaf94"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <text>
+                  <paragraph>Levetiracetam extended-release tablets USP are white, oval, biconvex film-coated extended-release tablets debossed with "HH" on one side, “172” on the other side and contain 500 mg levetiracetam.</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets USP are white, oval, biconvex film-coated extended-release tablets debossed with "HH" on one side, “173” on the other side and contain 750 mg levetiracetam.</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c46823-0b0b-4101-e063-6294a90aaf94">
+               <id root="03c46823-0b0a-4101-e063-6294a90aaf94"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <text>
+                  <paragraph>Levetiracetam extended-releasetablets are contraindicated in patients with a hypersensitivity to levetiracetam. Reactions have included anaphylaxis and angioedema [see Warnings and Precautions (5.4)].</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c46a50-d966-448f-e063-6394a90af00f">
+               <id root="03c46a50-d965-448f-e063-6394a90af00f"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <text>
+                  <paragraph>5.1 Behavioral Abnormalities and Psychotic Symptoms</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets may cause behavioral abnormalities and psychotic symptoms. Patients treated with levetiracetam extended-release tablets should be monitored for psychiatric signs and symptoms.</paragraph>
+                  <paragraph>Behavioral abnormalities</paragraph>
+                  <paragraph>Levetiracetam Extended-Release Tablets</paragraph>
+                  <paragraph>A total of 7% of levetiracetam extended-release tablets-treated patients experienced non-psychotic behavioral disorders (reported as irritability and aggression) compared to 0% of placebo-treated patients. Irritability was reported in 7% of levetiracetam extended-release tablets-treated patients. Aggression was reported in 1% of levetiracetam extended-release tablets-treated patients.</paragraph>
+                  <paragraph>No patient discontinued treatment or had a dose reduction as a result of these adverse reactions.</paragraph>
+                  <paragraph>The number of patients exposed to levetiracetam extended-release tablets was considerably smaller than the number of patients exposed to immediate-release levetiracetam tablets in controlled trials. Therefore, certain adverse reactions observed in the immediate-release levetiracetam tablets controlled trials will likely occur in patients receiving levetiracetam extended-release tablets.</paragraph>
+                  <paragraph>Immediate-Release Levetiracetam Tablets</paragraph>
+                  <paragraph>A total of 13% of adult patients and 38% of pediatric patients (4 to 16 years of age) treated with immediate-release levetiracetam tablets experienced non-psychotic behavioral symptoms (reported as aggression, agitation, anger, anxiety, apathy, depersonalization, depression, emotional lability, hostility, hyperkinesias, irritability, nervousness, neurosis, and personality disorder), compared to 6% and 19% of adult and pediatric patients on placebo. A randomized, double-blind, placebo-controlled study was performed to assess the neurocognitive and behavioral effects of immediate-release levetiracetam tablets as adjunctive therapy in pediatric patients (4 to 16 years of age). An exploratory analysis suggested a worsening in aggressive behavior in patients treated with immediate-release levetiracetam tablets in that study [see Use in Specific Populations (8.4)].</paragraph>
+                  <paragraph>A total of 1.7% of adult patients treated with immediate-release levetiracetam tablets discontinued treatment due to behavioral adverse reactions, compared to 0.2% of placebo-treated patients. The treatment dose was reduced in 0.8% of adult patients treated with immediate-release levetiracetam tablets, compared to 0.5% of placebo-treated patients. Overall, 11% of pediatric patients treated with immediate-release levetiracetam tablets experienced behavioral symptoms associated with discontinuation or dose reduction, compared to 6.2% of placebo-treated pediatric patients.</paragraph>
+                  <paragraph>One percent of adult patients and 2% of pediatric patients (4 to 16 years of age) treated with immediate-release levetiracetam tablets experienced psychotic symptoms, compared to 0.2% and 2%, respectively, in adult and placebo-treated pediatric patients. In the controlled study that assessed the neurocognitive and behavioral effects of immediate-release levetiracetam tablets in pediatric patients 4 to 16 years of age, 1.6% levetiracetam tablets-treated patients experienced paranoia, compared to no placebo-treated patients. There were 3.1% patients treated with immediate-release levetiracetam tablets who experienced confusional state, compared to no placebo-treated patients [see Use in Specific Populations (8.4)].</paragraph>
+                  <paragraph>Psychotic symptoms</paragraph>
+                  <paragraph>Immediate-Release Levetiracetam Tablets</paragraph>
+                  <paragraph>One percent of levetiracetam tablets-treated adult patients experienced psychotic symptoms compared to 0.2% of placebo-treated patients.</paragraph>
+                  <paragraph>Two (0.3%) levetiracetam tablets-treated adult patients were hospitalized and their treatment was discontinued due to psychosis. Both events, reported as psychosis, developed within the first week of treatment and resolved within 1 to 2 weeks following treatment discontinuation. There was no difference between drug and placebo-treated patients in the incidence of pediatric patients who discontinued treatment due to psychotic and non-psychotic adverse reactions.</paragraph>
+                  <paragraph>5.2 Suicidal Behavior and Ideation</paragraph>
+                  <paragraph>Antiepileptic drugs (AEDs), including levetiracetam extended-release tablets, increase the risk of suicidal thoughts or behavior in patients taking these drugs for any indication. Patients treated with any AED for any indication should be monitored for the emergence or worsening of depression, suicidal thoughts or behavior, and/or any unusual changes in mood or behavior.</paragraph>
+                  <paragraph>Pooled analyses of 199 placebo-controlled clinical trials (mono- and adjunctive therapy) of 11 different AEDs showed that patients randomized to one of the AEDs had approximately twice the risk (adjusted Relative Risk 1.8, 95% CI:1.2, 2.7) of suicidal thinking or behavior compared to patients randomized to placebo. In these trials, which had a median treatment duration of 12 weeks, the estimated incidence rate of suicidal behavior or ideation among 27,863 AED-treated patients was 0.43%, compared to 0.24% among 16,029 placebo-treated patients, representing an increase of approximately one case of suicidal thinking or behavior for every 530 patients treated. There were four suicides in drug-treated patients in the trials and none in placebo-treated patients, but the number is too small to allow any conclusion about drug effect on suicide.</paragraph>
+                  <paragraph>The increased risk of suicidal thoughts or behavior with AEDs was observed as early as one week after starting drug treatment with AEDs and persisted for the duration of treatment assessed. Because most trials included in the analysis did not extend beyond 24 weeks, the risk of suicidal thoughts or behavior beyond 24 weeks could not be assessed.</paragraph>
+                  <paragraph>The risk of suicidal thoughts or behavior was generally consistent among drugs in the data analyzed. The finding of increased risk with AEDs of varying mechanisms of action and across a range of indications suggests that the risk applies to all AEDs used for any indication. The risk did not vary substantially by age (5-100 years) in the clinical trials analyzed. Table 2 shows absolute and relative risk by indication for all evaluated AEDs.</paragraph>
+                  <paragraph>Table 2: Risk by Indication for Antiepileptic Drugs in the Pooled Analysis
+  <br/>
+Indication Placebo Patients with Events Per 1,000 Patients Drug Patients with Events Per 1,000 Patients Relative Risk: Incidence of Events in Drug Patients/Incidence in Placebo Patients Risk Difference: Additional Drug Patients with Events Per 1,000 Patients
+ </paragraph>
+                  <paragraph>Epilepsy</paragraph>
+                  <paragraph>1.0</paragraph>
+                  <paragraph>3.4</paragraph>
+                  <paragraph>3.5</paragraph>
+                  <paragraph>2.4</paragraph>
+                  <paragraph>Psychiatric</paragraph>
+                  <paragraph>5.7</paragraph>
+                  <paragraph>8.5</paragraph>
+                  <paragraph>1.5</paragraph>
+                  <paragraph>2.9</paragraph>
+                  <paragraph>Other</paragraph>
+                  <paragraph>1.0</paragraph>
+                  <paragraph>1.8</paragraph>
+                  <paragraph>1.9</paragraph>
+                  <paragraph>0.9</paragraph>
+                  <paragraph>Total</paragraph>
+                  <paragraph>2.4</paragraph>
+                  <paragraph>4.3</paragraph>
+                  <paragraph>1.8</paragraph>
+                  <paragraph>1.9</paragraph>
+                  <paragraph>The relative risk for suicidal thoughts or behavior was higher in clinical trials for epilepsy than in clinical trials for psychiatric or other conditions, but the absolute risk differences were similar for the epilepsy and psychiatric indications.</paragraph>
+                  <paragraph>Anyone considering prescribing levetiracetam extended-release tablets or any other AED must balance the risk of suicidal thoughts or behavior with the risk of untreated illness. Epilepsy and many other illnesses for which AEDs are prescribed are themselves associated with morbidity and mortality and an increased risk of suicidal thoughts and behavior. Should suicidal thoughts and behavior emerge during treatment, the prescriber needs to consider whether the emergence of these symptoms in any given patient may be related to the illness being treated.</paragraph>
+                  <paragraph>5.3 Somnolence and Fatigue</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets may cause somnolence and fatigue. Patients should be monitored for these signs and symptoms and advised not to drive or operate machinery until they have gained sufficient experience on levetiracetam extended-release tablets to gauge whether it adversely affects their ability to drive or operate machinery.</paragraph>
+                  <paragraph>Somnolence</paragraph>
+                  <paragraph>Levetiracetam Extended-Release Tablets</paragraph>
+                  <paragraph>In the levetiracetam extended-release tablets double-blind, controlled trial in patients experiencing partial-onset seizures, 8% of levetiracetam extended-release tablets-treated patients experienced somnolence compared to 3% of placebo-treated patients.</paragraph>
+                  <paragraph>No patient discontinued treatment or had a dose reduction as a result of these adverse reactions.</paragraph>
+                  <paragraph>The number of patients exposed to levetiracetam extended-release tablets was considerably smaller than the number of patients exposed to immediate-release levetiracetam tablets in controlled trials. Therefore, certain adverse reactions observed in the immediate-release levetiracetam tablets controlled trials will likely occur in patients receiving levetiracetam extended-release tablets. </paragraph>
+                  <paragraph>Immediate-Release Levetiracetam Tablets</paragraph>
+                  <paragraph>In controlled trials of adult patients with epilepsy experiencing partial-onset seizures, 15% of levetiracetam tablets-treated patients reported somnolence, compared to 8% of placebo-treated patients. There was no clear dose response up to 3,000 mg/day. In a study where there was no titration, about 45% of patients receiving 4,000 mg/day reported somnolence. The somnolence was considered serious in 0.3% of the levetiracetam tablets-treated patients, compared to 0% in the placebo group. About 3% of levetiracetam tablets-treated patients discontinued treatment due to somnolence, compared to 0.7% of placebo-treated patients. In 1.4% of levetiracetam tablets-treated patients and in 0.9% of placebo-treated patients the dose was reduced, while 0.3% of the treated patients were hospitalized due to somnolence.</paragraph>
+                  <paragraph>Asthenia</paragraph>
+                  <paragraph>Immediate-Release Levetiracetam Tablets</paragraph>
+                  <paragraph>In controlled trials of adult patients with epilepsy experiencing partial-onset seizures, 15% of levetiracetam tablets-treated patients reported asthenia, compared to 9% of placebo-treated patients. Treatment was discontinued due to asthenia in 0.8% of levetiracetam tablets-treated patients as compared to 0.5% of placebo-treated patients. In 0.5% of levetiracetam tablets-treated patients and in 0.2% of placebo-treated patients, the dose was reduced due to asthenia.</paragraph>
+                  <paragraph>Somnolence and asthenia occurred most frequently within the first 4 weeks of treatment.</paragraph>
+                  <paragraph>5.4 Anaphylaxis and Angioedema</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets can cause anaphylaxis or angioedema after the first dose or at any time during treatment. Signs and symptoms in cases reported in the postmarketing setting in patients treated with levetiracetam have included hypotension, hives, rash, respiratory distress, and swelling of the face, lip, mouth, eye, tongue, throat, and feet. In some reported cases, reactions were life-threatening and required emergency treatment. If a patient develops signs or symptoms of anaphylaxis or angioedema, levetiracetam extended-release tablets should be discontinued and the patient should seek immediate medical attention. Levetiracetam extended-release tablets should be discontinued permanently if a clear alternative etiology for the reaction cannot be established [see Contraindications (4)].</paragraph>
+                  <paragraph>5.5 Serious Dermatological Reactions</paragraph>
+                  <paragraph>Serious dermatological reactions, including Stevens-Johnson syndrome (SJS) and toxic epidermal necrolysis (TEN), have been reported in patients treated with levetiracetam. The median time of onset is reported to be 14 to 17 days, but cases have been reported at least four months after initiation of treatment. Recurrence of the serious skin reactions following rechallenge with levetiracetam has also been reported. Levetiracetam extended-release tablets should be discontinued at the first sign of a rash, unless the rash is clearly not drug-related. If signs or symptoms suggest SJS/TEN, use of this drug should not be resumed and alternative therapy should be considered. </paragraph>
+                  <paragraph>5.6 Coordination Difficulties</paragraph>
+                  <paragraph>Coordination difficulties were not observed in the levetiracetam extended-release tablets controlled trial, however, the number of patients exposed to levetiracetam extended-release tablets was considerably smaller than the number of patients exposed to immediate-release levetiracetam tablets in controlled trials. However, adverse reactions observed in the immediate-release levetiracetam tablets controlled trials may also occur in patients receiving levetiracetam extended-release tablets.</paragraph>
+                  <paragraph>Immediate-Release Levetiracetam Tablets</paragraph>
+                  <paragraph>A total of 3.4% of adult levetiracetam tablets-treated patients experienced coordination difficulties, (reported as either ataxia, abnormal gait, or incoordination) compared to 1.6% of placebo-treated patients. A total of 0.4% of patients in controlled trials discontinued levetiracetam tablets treatment due to ataxia, compared to 0% of placebo-treated patients. In 0.7% of levetiracetam tablets-treated patients and in 0.2% of placebo-treated patients, the dose was reduced due to coordination difficulties, while one of the levetiracetam tablets-treated patients was hospitalized due to worsening of pre-existing ataxia. These events occurred most frequently within the first 4 weeks of treatment.</paragraph>
+                  <paragraph>Patients should be monitored for these signs and symptoms and advised not to drive or operate machinery until they have gained sufficient experience on levetiracetam tablets to gauge whether it could adversely affect their ability to drive or operate machinery.</paragraph>
+                  <paragraph>5.7 Withdrawal Seizures</paragraph>
+                  <paragraph>As with most antiepileptic drugs, levetiracetam extended-release tablets should generally be withdrawn gradually because of the risk of increased seizure frequency and status epilepticus. If withdrawal is needed because of a serious adverse reaction, rapid discontinuation can be considered.</paragraph>
+                  <paragraph>5.8 Hematologic Abnormalities</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets can cause hematologic abnormalities. Hematologic abnormalities occurred in clinical trials and included decreases in white blood cell (WBC), neutrophil, and red blood cell (RBC) counts; decreases in hemoglobin and hematocrit; and increases in eosinophil counts. Cases of agranulocytosis, pancytopenia, and thrombocytopenia have also been reported in the postmarketing setting. A complete blood count is recommended in patients experiencing significant weakness, pyrexia, recurrent infections, or coagulation disorders.</paragraph>
+                  <paragraph>In controlled trials of immediate-release levetiracetam tablets in patients experiencing partial-onset seizures, minor, but statistically significant, decreases compared to placebo in total mean RBC count (0.03 × 106/mm3), mean hemoglobin (0.09 g/dL), and mean hematocrit (0.38%), were seen in immediate-release levetiracetam tablets-treated patients.</paragraph>
+                  <paragraph>A total of 3.2% of levetiracetam tablets-treated and 1.8% of placebo-treated patients had at least one possibly significant (≤2.8 × 109/L) decreased WBC, and 2.4% of levetiracetam tablets-treated and 1.4% of placebo-treated patients had at least one possibly significant (≤1.0 × 109/L) decreased neutrophil count. Of the levetiracetam tablets-treated patients with a low neutrophil count, all but one rose towards or to baseline with continued treatment. No patient was discontinued secondary to low neutrophil counts.</paragraph>
+                  <paragraph>In pediatric patients (4 to &lt;16 years of age), statistically significant decreases in WBC and neutrophil counts were seen in patients treated with immediate-release levetiracetam tablets, as compared to placebo. The mean decreases from baseline in the immediate-release levetiracetam tablets group were -0.4 × 109/L and -0.3 × 109/L, respectively, whereas there were small increases in the placebo group. A significant increase in mean relative lymphocyte counts was observed in 1.7% of patients treated with immediate-release levetiracetam tablets compared to a decrease of 4% in patients on placebo.</paragraph>
+                  <paragraph>In the controlled pediatric trial, a possibly clinically significant abnormal low WBC value was observed in 3% of patients treated with immediate-release levetiracetam tablets, compared to no patients on placebo. However, there was no apparent difference between treatment groups with respect to neutrophil count. No patient was discontinued secondary to low WBC or neutrophil counts.</paragraph>
+                  <paragraph>In the controlled pediatric cognitive and neuropsychological safety study, two subjects (6.1%) in the placebo group and 5 subjects (8.6%) in the immediate-release levetiracetam tablets-treated group had high eosinophil count values that were possibly clinically significant (≥10% or ≥0.7 × 109/L). </paragraph>
+                  <paragraph>5.9 Seizure Control During Pregnancy</paragraph>
+                  <paragraph>Physiological changes may gradually decrease plasma levels of levetiracetam throughout pregnancy. This decrease is more pronounced during the third trimester. It is recommended that patients be monitored carefully during pregnancy. Close monitoring should continue through the postpartum period especially if the dose was changed during pregnancy.</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c45661-28e8-922e-e063-6394a90a3e9c">
+               <id root="03c45661-28e7-922e-e063-6394a90a3e9c"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <text>
+                  <paragraph>The following adverse reactions are discussed in more details in other sections of labeling:</paragraph>
+                  <paragraph>•
+  <br/>
+Behavioral abnormalities and Psychotic Symptoms [see Warnings and Precautions (5.1)]
+  <br/>
+•
+  <br/>
+Suicidal Behavior and Ideation [see Warnings and Precautions (5.2)]
+  <br/>
+•
+  <br/>
+Somnolence and Fatigue [see Warnings and Precautions (5.3)]
+  <br/>
+•
+  <br/>
+Anaphylaxis and Angioedema [see Warnings and Precautions (5.4)]
+  <br/>
+•
+  <br/>
+Serious Dermatological Reactions [see Warnings and Precautions (5.5)]
+  <br/>
+•
+  <br/>
+Coordination Difficulties [see Warnings and Precautions (5.6)]
+  <br/>
+•
+  <br/>
+Hematologic Abnormalities [see Warnings and Precautions (5.8)]
+ </paragraph>
+                  <paragraph>6.1 Clinical Trials Experience</paragraph>
+                  <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                  <paragraph>Levetiracetam Extended-Release Tablets</paragraph>
+                  <paragraph>In the controlled clinical study in patients with partial-onset seizures [see CLINICAL STUDIES (14.1)], the most common adverse reactions in patients receiving levetiracetam extended-release tablets in combination with other AEDs, for events with rates greater than placebo, were irritability and somnolence.</paragraph>
+                  <paragraph>Table 3 lists adverse reactions that occurred in at least 5% of epilepsy patients receiving levetiracetam extended-release tablets in the placebo-controlled study and were numerically more common than in patients treated with placebo. In this study, either levetiracetam extended-release tablets or placebo was added to concurrent AED therapy. </paragraph>
+                  <paragraph>Table 3: Adverse Reactions in the Placebo-Controlled, Adjunctive Study in Patients Experiencing Partial-Onset Seizures
+  <br/>
+Levetiracetam Extended-Release Tablets
+  <br/>
+(N=77)
+  <br/>
+% Placebo
+  <br/>
+(N=79)
+  <br/>
+%
+ </paragraph>
+                  <paragraph>Influenza</paragraph>
+                  <paragraph>8</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>Somnolence</paragraph>
+                  <paragraph>8</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>Irritability</paragraph>
+                  <paragraph>7</paragraph>
+                  <paragraph>0</paragraph>
+                  <paragraph>Nasopharyngitis</paragraph>
+                  <paragraph>7</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>Dizziness</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>Nausea</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>Discontinuation or Dose Reduction in the Levetiracetam Extended-Release Tablets Controlled Clinical Study</paragraph>
+                  <paragraph>In the controlled clinical study, 5% of patients receiving levetiracetam extended-release tablets and 3% receiving placebo discontinued as a result of an adverse reaction. The adverse reactions that resulted in discontinuation and that occurred more frequently in levetiracetam extended-release tablets-treated patients than in placebo-treated patients were asthenia, epilepsy, mouth ulceration, rash, and respiratory failure. Each of these adverse reactions led to discontinuation in a levetiracetam extended-release tablets-treated patient and no placebo-treated patients.</paragraph>
+                  <paragraph>Immediate-Release Levetiracetam Tablets</paragraph>
+                  <paragraph>Table 4 lists the adverse reactions in the controlled studies of immediate-release levetiracetam tablets in adult patients experiencing partial-onset seizures [see CLINICAL STUDIES (14.2)]. Although the pattern of adverse reactions in the levetiracetam extended-release tablets study seems somewhat different from that seen in partial-onset seizure controlled studies for immediate-release levetiracetam tablets, this is possibly due to the much smaller number of patients in this study compared to the immediate-release tablet studies. The adverse reactions for levetiracetam extended-release tablets are expected to be similar to those seen with immediate-release levetiracetam tablets. </paragraph>
+                  <paragraph>Adults</paragraph>
+                  <paragraph>In controlled clinical studies of immediate-release levetiracetam tablets as adjunctive therapy to other AEDs in adults with partial-onset seizures, the most common adverse reactions, for events with rates greater than placebo, were somnolence, asthenia, infection, and dizziness.</paragraph>
+                  <paragraph>Table 4 lists adverse reactions that occurred in at least 1% of adult epilepsy patients receiving immediate-release levetiracetam tablets in placebo-controlled studies and were numerically more common than in patients treated with placebo. In these studies, either immediate-release levetiracetam tablets or placebo was added to concurrent AED therapy.</paragraph>
+                  <paragraph>Table 4: Adverse Reactions in Pooled Placebo-Controlled, Adjunctive Studies in Adults Experiencing Partial-Onset Seizures
+  <br/>
+Levetiracetam Tablets
+  <br/>
+(N=769)
+  <br/>
+% Placebo
+  <br/>
+(N=439)
+  <br/>
+%
+ </paragraph>
+                  <paragraph>    Asthenia</paragraph>
+                  <paragraph>15</paragraph>
+                  <paragraph>9</paragraph>
+                  <paragraph>    Somnolence</paragraph>
+                  <paragraph>15</paragraph>
+                  <paragraph>8</paragraph>
+                  <paragraph>    Headache</paragraph>
+                  <paragraph>14</paragraph>
+                  <paragraph>13</paragraph>
+                  <paragraph>    Infection</paragraph>
+                  <paragraph>13</paragraph>
+                  <paragraph>8</paragraph>
+                  <paragraph>    Dizziness</paragraph>
+                  <paragraph>9</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>    Pain</paragraph>
+                  <paragraph>7</paragraph>
+                  <paragraph>6</paragraph>
+                  <paragraph>    Pharyngitis</paragraph>
+                  <paragraph>6</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>    Depression</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>    Nervousness</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>    Rhinitis</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>    Anorexia</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>    Ataxia</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Vertigo</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Amnesia</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Anxiety</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Cough Increased</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Paresthesia</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Sinusitis</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Diplopia</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Emotional Lability</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>0</paragraph>
+                  <paragraph>    Hostility</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Paresthesia</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Sinusitis</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>Pediatric Patients 4 Years to &lt;16 Years</paragraph>
+                  <paragraph>In a pooled analysis of two controlled pediatric clinical studies in children 4 to 16 years of age with partial-onset seizures [see CLINICAL STUDIES (14.3)], the adverse reactions most frequently reported with the use of immediate-release levetiracetam tablets in combination with other AEDs, and with greater frequency than in patients on placebo, were fatigue, aggression, nasal congestion, decreased appetite, and irritability.</paragraph>
+                  <paragraph>Table 5 lists adverse reactions that occurred in at least 2% of pediatric patients treated with immediate-release levetiracetam tablets and were more common than in pediatric patients on placebo. In these studies, either immediate-release levetiracetam tablets or placebo was added to concurrent AED therapy. Adverse reactions were usually mild to moderate in intensity.</paragraph>
+                  <paragraph>Table 5: Adverse Reactions in Pooled Placebo-Controlled, Adjunctive Studies in Pediatric Patients Ages 4 to 16 Years Experiencing Partial-onset Seizures
+  <br/>
+Levetiracetam Tablets
+  <br/>
+(N=165)
+  <br/>
+% Placebo
+  <br/>
+(N=131)
+  <br/>
+%
+ </paragraph>
+                  <paragraph>    Headache</paragraph>
+                  <paragraph>19</paragraph>
+                  <paragraph>15</paragraph>
+                  <paragraph>    Nasopharyngitis</paragraph>
+                  <paragraph>15</paragraph>
+                  <paragraph>12</paragraph>
+                  <paragraph>    Vomiting</paragraph>
+                  <paragraph>15</paragraph>
+                  <paragraph>12</paragraph>
+                  <paragraph>    Somnolence</paragraph>
+                  <paragraph>13</paragraph>
+                  <paragraph>9</paragraph>
+                  <paragraph>    Fatigue</paragraph>
+                  <paragraph>11</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>    Aggression</paragraph>
+                  <paragraph>10</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>   Upper Abdominal Pain</paragraph>
+                  <paragraph>9</paragraph>
+                  <paragraph>8</paragraph>
+                  <paragraph>    Cough</paragraph>
+                  <paragraph>9</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>    Nasal Congestion</paragraph>
+                  <paragraph>9</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>    Decreased Appetite</paragraph>
+                  <paragraph>8</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>    Abnormal Behavior</paragraph>
+                  <paragraph>7</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>    Dizziness</paragraph>
+                  <paragraph>7</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>    Irritability</paragraph>
+                  <paragraph>7</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Pharyngolaryngeal Pain</paragraph>
+                  <paragraph>7</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>    Diarrhea</paragraph>
+                  <paragraph>6</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>    Lethargy</paragraph>
+                  <paragraph>6</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>    Insomnia</paragraph>
+                  <paragraph>5</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>    Agitation</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Anorexia</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>    Head Injury</paragraph>
+                  <paragraph>4</paragraph>
+                  <paragraph>0</paragraph>
+                  <paragraph>    Constipation</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Contusion</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Depression</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Fall</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>    Influenza</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Mood Altered</paragraph>
+                  <paragraph>3</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Affect Lability</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Anxiety</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Arthralgia</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>0</paragraph>
+                  <paragraph>    Confusional State</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>0</paragraph>
+                  <paragraph>    Conjunctivitis</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>0</paragraph>
+                  <paragraph>    Ear Pain</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Gastroenteritis</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>0</paragraph>
+                  <paragraph>    Joint Sprain</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Mood Swings</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Neck Pain</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>    Rhinitis</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>0</paragraph>
+                  <paragraph>    Sedation</paragraph>
+                  <paragraph>2</paragraph>
+                  <paragraph>1</paragraph>
+                  <paragraph>In controlled pediatric clinical studies in patients 4-16 years of age, 7% of patients treated with immediate-release levetiracetam tablets and 9% of patients on placebo discontinued as a result of an adverse event.</paragraph>
+                  <paragraph>In addition, the following adverse reactions were seen in other controlled studies of immediate-release levetiracetam tablets: balance disorder, disturbance in attention, eczema, hyperkinesia, memory impairment, myalgia, personality disorders, pruritus, and blurred vision.</paragraph>
+                  <paragraph>Comparison of Gender, Age and Race</paragraph>
+                  <paragraph>There are insufficient data for levetiracetam extended-release tablets to support a statement regarding the distribution of adverse reactions by gender, age, and race.</paragraph>
+                  <paragraph>6.2 Postmarketing Experience</paragraph>
+                  <paragraph>The following adverse reactions have been identified during postapproval use of immediate-release levetiracetam tablets. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                  <paragraph>The listing is alphabetized: abnormal liver function test, acute kidney injury, anaphylaxis, angioedema, agranulocytosis, choreoathetosis, drug reaction with eosinophilia and systemic symptoms (DRESS), dyskinesia, erythema multiforme, hepatic failure, hepatitis, hyponatremia, muscular weakness, pancreatitis, pancytopenia (with bone marrow suppression identified in some of these cases), panic attack, thrombocytopenia, weight loss, and worsening of seizures.. Alopecia has been reported with immediate-release levetiracetam tablets use; recovery was observed in majority of cases where immediate-release levetiracetam tablets was discontinued.</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c45826-34ba-e9c5-e063-6394a90a82cb">
+               <id root="03c45826-34b9-e9c5-e063-6394a90a82cb"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <text>
+                  <paragraph>8.1 Pregnancy</paragraph>
+                  <paragraph>Pregnancy Exposure Registry</paragraph>
+                  <paragraph>There is a pregnancy exposure registry that monitors pregnancy outcomes in women exposed to antiepileptic drugs (AEDs), including levetiracetam extended-release tablets, during pregnancy. Encourage women who are taking levetiracetam extended-release tablets during pregnancy to enroll in the North American Antiepileptic Drug (NAAED) pregnancy registry by calling 1-888-233-2334 or visiting HTTP://WWW.AEDPREGNANCYREGISTRY.ORG/.</paragraph>
+                  <paragraph>Risk Summary</paragraph>
+                  <paragraph>Prolonged experience with levetiracetam tablets in pregnant women has not identified a drug-associated risk of major birth defects or miscarriage, based on published literature, which includes data from pregnancy registries and reflects experience over two decades [see Human Data]. In animal studies, levetiracetam produced developmental toxicity (increased embryofetal and offspring mortality, increased incidences of fetal structural abnormalities, decreased embryofetal and offspring growth, neurobehavioral alterations in offspring) at doses similar to human therapeutic doses [see Animal Data].</paragraph>
+                  <paragraph>In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2-4% and 15-20%, respectively. The background risk of major birth defects and miscarriage for the indicated population is unknown.</paragraph>
+                  <paragraph>Clinical Considerations</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets levels may decrease during pregnancy [see Warnings and Precautions (5.9)].</paragraph>
+                  <paragraph>Physiological changes during pregnancy may affect levetiracetam concentration. Decrease in levetiracetam plasma concentrations has been observed during pregnancy. This decrease is more pronounced during the third trimester. Dose adjustments may be necessary to maintain clinical response.</paragraph>
+                  <paragraph>Data</paragraph>
+                  <paragraph>Human Data</paragraph>
+                  <paragraph>While available studies cannot definitively establish the absence of risk, data from the published literature and pregnancy registries have not established an association with levetiracetam use during pregnancy and major birth defects or miscarriage.</paragraph>
+                  <paragraph>Animal Data</paragraph>
+                  <paragraph>When levetiracetam (0, 400, 1200, or 3600 mg/kg/day) was administered orally to pregnant rats during the period of organogenesis, reduced fetal weights and increased incidence of fetal skeletal variations were observed at the highest dose tested. There was no evidence of maternal toxicity. The no-effect dose for adverse effects on embryofetal developmental in rats (1200 mg/kg/day) is approximately 4 times the maximum recommended human dose (MRHD) of 3,000 mg on a body surface area (mg/m2) basis.</paragraph>
+                  <paragraph>Oral administration of levetiracetam (0, 200, 600, or 1800 mg/kg/day) to pregnant rabbits during the period of organogenesis resulted in increased embryofetal mortality and incidence of fetal skeletal variations at the mid and high dose and decreased fetal weights and increased incidence of fetal malformations at the high dose, which was associated with maternal toxicity. The no-effect dose for adverse effects on embryofetal development in rabbits (200 mg/kg/day) is approximately equivalent to the MRHD on a mg/m2 basis.</paragraph>
+                  <paragraph>Oral administration of levetiracetam (0, 70, 350, or 1800 mg/kg/day) to female rats throughout pregnancy and lactation led to an increased incidence of fetal skeletal variations, reduced fetal body weight, and decreased growth in offspring at the mid and high doses and increased pup mortality and neurobehavioral alterations in offspring at the highest dose tested. There was no evidence of maternal toxicity. The no-effect dose for adverse effects on pre-and postnatal development in rats (70 mg/kg/day) is less than the MRHD on a mg/m2 basis.</paragraph>
+                  <paragraph>Oral administration of levetiracetam to rats during the latter part of gestation and throughout lactation produced no adverse developmental or maternal effects at doses of up to 1800 mg/kg/day (6 times the MRHD on a mg/m2 basis).</paragraph>
+                  <paragraph>8.2 Lactation</paragraph>
+                  <paragraph>Risk Summary</paragraph>
+                  <paragraph>Levetiracetam is excreted in human milk. There are no data on the effects of levetiracetam extended-release tablets on the breastfed infant, or the effects on milk production.</paragraph>
+                  <paragraph>The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for levetiracetam extended-release tablets and any potential adverse effects on the breastfed infant from levetiracetam extended-release tablets or from the underlying maternal condition.</paragraph>
+                  <paragraph>8.4 Pediatric Use</paragraph>
+                  <paragraph>Safety and effectiveness in patients 12 years of age and older have been established based on pharmacokinetic data in adults and adolescents using levetiracetam extended-release tablets and efficacy and safety data in controlled pediatric studies using immediate-release levetiracetam tablets [see ADVERSE REACTIONS (6.1), CLINICAL PHARMACOLOGY (12.3), and CLINICAL STUDIES (14.1)].</paragraph>
+                  <paragraph>Safety and effectiveness in pediatric patients below the age of 12 have not been established.</paragraph>
+                  <paragraph>A 3-month, randomized, double-blind, placebo-controlled study was performed to assess the neurocognitive and behavioral effects of immediate-release levetiracetam tablets as adjunctive therapy in 98 pediatric patients with inadequately controlled partial seizures, ages 4 to 16 years (levetiracetam tablets N=64; placebo N=34). The target dose of immediate-release levetiracetam tablets was 60 mg/kg/day. Neurocognitive effects were measured by the Leiter-R Attention and Memory (AM) Battery, which assesses various aspects of a child's memory and attention. Although no substantive differences were observed between the placebo- and levetiracetam tablets-treated groups in the median change from baseline in this battery, the study was not adequate to assess formal statistical non-inferiority between the drug and placebo. The Achenbach Child Behavior Checklist (CBCL/6-18), a standardized validated tool used to assess a child’s competencies and behavioral/emotional problems, was also assessed in this study. An analysis of the CBCL/6-18 indicated a worsening in aggressive behavior, one of the eight syndrome scores, in patients treated with levetiracetam tablets [see WARNINGS AND PRECAUTIONS (5.1)].</paragraph>
+                  <paragraph>Juvenile Animal Toxicity Data</paragraph>
+                  <paragraph>Studies of levetiracetam in juvenile rats (dosed on postnatal days 4 through 52) and dogs ( dosed from postnatal weeks 3 through 7) at doses of up to 1800 mg/kg/day (approximately 7 and 24 times, respectively, the maximum recommended pediatric dose of 60 mg/kg/day on a mg/m2 basis) did not demonstrate adverse effects on postnatal development.</paragraph>
+                  <paragraph>8.5 Geriatric Use</paragraph>
+                  <paragraph>There were insufficient numbers of elderly subjects in controlled trials of epilepsy to adequately assess the effectiveness of levetiracetam extended-release tablets in these patients. It is expected that the safety of levetiracetam extended-release tablets in elderly patients 65 and over would be comparable to the safety observed in clinical studies of immediate-release levetiracetam tablets.</paragraph>
+                  <paragraph>There were 347 subjects in clinical studies of immediate-release levetiracetam tablets that were 65 and over. No overall differences in safety were observed between these subjects and younger subjects. There were insufficient numbers of elderly subjects in controlled trials of epilepsy to adequately assess the effectiveness of immediate-release levetiracetam tablets in these patients.</paragraph>
+                  <paragraph>Levetiracetam is known to be substantially excreted by the kidney, and the risk of adverse reactions to this drug may be greater in patients with impaired renal function. Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection, and it may be useful to monitor renal function [see CLINICAL PHARMACOLOGY (12.3)].</paragraph>
+                  <paragraph>8.6 Renal Impairment</paragraph>
+                  <paragraph>The effect of levetiracetam extended-release tablets on renally impaired patients was not assessed in the controlled study. However, it is expected that the effect on levetiracetam extended-release tablets-treated patients would be similar to the effect seen in controlled studies of immediate-release levetiracetam tablets. Clearance of levetiracetam is decreased in patients with renal impairment and is correlated with creatinine clearance [see CLINICAL PHARMACOLOGY (12.3)]. Dose adjustment is recommended for patients with impaired renal function [SEE DOSAGE AND ADMINISTRATION (2.2)].</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c46a50-d968-448f-e063-6394a90af00f">
+               <id root="03c46a50-d967-448f-e063-6394a90af00f"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <text>
+                  <paragraph>10.1 Signs, Symptoms and Laboratory Findings of Acute Overdosage in Humans</paragraph>
+                  <paragraph>The signs and symptoms for levetiracetam extended-release tablets overdose are expected to be similar to those seen with immediate-release levetiracetam tablets.</paragraph>
+                  <paragraph>The highest known dose of oral immediate-release levetiracetam tablets received in the clinical development program was 6,000 mg/day. Other than drowsiness, there were no adverse reactions in the few known cases of overdose in clinical trials. Cases of somnolence, agitation, aggression, depressed level of consciousness, respiratory depression and coma were observed with immediate-release levetiracetam tablets overdoses in postmarketing use.</paragraph>
+                  <paragraph>10.2 Management of Overdose</paragraph>
+                  <paragraph>There is no specific antidote for overdose with levetiracetam extended-release tablets. If indicated, elimination of unabsorbed drug should be attempted by emesis or gastric lavage; usual precautions should be observed to maintain airway. General supportive care of the patient is indicated including monitoring of vital signs and observation of the patient's clinical status. A Certified Poison Control Center should be contacted for up to date information on the management of overdose with levetiracetam extended-release tablets.</paragraph>
+                  <paragraph>10.3 Hemodialysis</paragraph>
+                  <paragraph>Standard hemodialysis procedures result in significant clearance of levetiracetam (approximately 50% in 4 hours) and should be considered in cases of overdose. Although hemodialysis has not been performed in the few known cases of overdose, it may be indicated by the patient's clinical state or in patients with significant renal impairment.</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c46a50-d96a-448f-e063-6394a90af00f">
+               <id root="03c46a50-d969-448f-e063-6394a90af00f"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <text>
+                  <paragraph>Levetiracetam extended-release tablets USP are an antiepileptic drug available as 500 mg and 750 mg (white) extended-release tablets for oral administration.</paragraph>
+                  <paragraph>The chemical name of levetiracetam, a single enantiomer, is (-)-(S)-α-ethyl-2-oxo-1-pyrrolidine acetamide, its molecular formula is C8H14N2O2 and its molecular weight is 170.21. Levetiracetam is chemically unrelated to existing antiepileptic drugs (AEDs). It has the following structural formula:</paragraph>
+                  <paragraph>[Levetiracretam structural formula]</paragraph>
+                  <paragraph>Levetiracetam is a white to off-white crystalline powder with a faint odor and a bitter taste. It is very soluble in water (104.0 g/100 mL). It is freely soluble in chloroform (65.3 g/100 mL) and in methanol (53.6 g/100 mL), soluble in ethanol (16.5 g/100 mL), sparingly soluble in acetonitrile (5.7 g/100 mL) and practically insoluble in n-hexane. (Solubility limits are expressed as g/100 mL solvent.)</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets USP contain the labeled amount of levetiracetam, USP. Inactive ingredients: hypromellose, hydroxypropylcellulose, colloidal silicon dioxide, magnesium stearate, polyvinyl alcohol-partially hydrolyzed, macrogol/peg 3350, talc, and titanium dioxide.</paragraph>
+                  <paragraph>FDA approved dissolution test specifications differ from USP.</paragraph>
+                  <paragraph>The medication is combined with a drug release controlling polymer that provides a drug release at a controlled rate. The biologically inert components of the tablet may occasionally remain intact during GI transit and will be eliminated in the feces as a soft, hydrated mass.</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c45661-28ea-922e-e063-6394a90a3e9c">
+               <id root="03c45661-28e9-922e-e063-6394a90a3e9c"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <text>
+                  <paragraph>12.1 Mechanism of Action</paragraph>
+                  <paragraph>The precise mechanism(s) by which levetiracetam exerts its antiepileptic effect is unknown.</paragraph>
+                  <paragraph>A saturable and stereoselective neuronal binding site in rat brain tissue has been described for levetiracetam. Experimental data indicate that this binding site is the synaptic vesicle protein SV2A, thought to be involved in the regulation of vesicle exocytosis. Although the molecular significance of levetiracetam binding to synaptic vesicle protein SV2A is not understood, levetiracetam and related analogs showed a rank order of affinity for SV2A which correlated with the potency of their antiseizure activity in audiogenic seizure-prone mice. These findings suggest that the interaction of levetiracetam with the SV2A protein may contribute to the antiepileptic mechanism of action of the drug.</paragraph>
+                  <paragraph>12.2 Pharmacodynamics</paragraph>
+                  <paragraph>Effects on QTc Interval</paragraph>
+                  <paragraph>The effects of levetiracetam extended-release tablets on QTc prolongation is expected to be the same as that of immediate-release levetiracetam tablets. The effect of immediate-release levetiracetam tablets on QTc prolongation was evaluated in a randomized, double-blind, positive-controlled (moxifloxacin 400 mg) and placebo-controlled crossover study of levetiracetam tablets (1,000 mg or 5,000 mg) in 52 healthy subjects. The upper bound of the 90% confidence interval for the largest placebo-adjusted, baseline-corrected QTc was below 10 milliseconds. Therefore, there was no evidence of significant QTc prolongation in this study.</paragraph>
+                  <paragraph>12.3 Pharmacokinetics</paragraph>
+                  <paragraph>Overview</paragraph>
+                  <paragraph>Bioavailability of Levetiracetam extended-release tablets is similar to that of the immediate-release levetiracetam tablets. The pharmacokinetics (AUC and Cmax) were shown to be dose proportional after single dose administration of 1,000 mg, 2,000 mg, and 3,000 mg extended-release levetiracetam. Plasma half-life of extended-release levetiracetam is approximately 7 hours.</paragraph>
+                  <paragraph>Levetiracetam is almost completely absorbed after oral administration. The pharmacokinetics of levetiracetam are linear and time-invariant, with low intra- and inter-subject variability. Levetiracetam is not significantly protein-bound (&lt;10% bound) and its volume of distribution is close to the volume of intracellular and extracellular water. Sixty-six percent (66%) of the dose is renally excreted unchanged. The major metabolic pathway of levetiracetam (24% of dose) is an enzymatic hydrolysis of the acetamide group. It is not liver cytochrome P450 dependent. The metabolites have no known pharmacological activity and are renally excreted. Plasma half-life of levetiracetam across studies is approximately 6-8 hours. The half-life is increased in the elderly (primarily due to impaired renal clearance) and in subjects with renal impairment.</paragraph>
+                  <paragraph>The pharmacokinetics of levetiracetam are similar when used as monotherapy or as adjunctive therapy for the treatment of partial-onset seizures.</paragraph>
+                  <paragraph>Absorption and Distribution</paragraph>
+                  <paragraph>Extended-release levetiracetam peak plasma concentrations occur in about 4 hours. The time to peak plasma concentrations is about 3 hours longer with extended-release levetiracetam than with immediate-release tablets.</paragraph>
+                  <paragraph>Single administration of two 500 mg extended-release levetiracetam tablets once daily produced comparable maximal plasma concentrations and area under the plasma concentration versus time as did the administration of one 500 mg immediate-release tablet twice daily in fasting conditions. After multiple dose extended-release levetiracetam tablets intake, extent of exposure (AUC0-24) was similar to extent of exposure after multiple dose immediate-release tablets intake. Cmax and Cmin were lower by 17% and 26% after multiple dose extended-release levetiracetam tablets intake in comparison to multiple dose immediate-release tablets intake. Intake of a high fat, high calorie breakfast before the administration of extended-release levetiracetam tablets resulted in a higher peak concentration, and longer median time to peak. The median time to peak (Tmax) was 2 hours longer in the fed state.</paragraph>
+                  <paragraph>Two 750 mg extended-release levetiracetam tablets were bioequivalent to a single administration of three 500 mg extended-release levetiracetam tablets.</paragraph>
+                  <paragraph>Metabolism</paragraph>
+                  <paragraph>Levetiracetam is not extensively metabolized in humans. The major metabolic pathway is the enzymatic hydrolysis of the acetamide group, which produces the carboxylic acid metabolite, ucb L057 (24% of dose) and is not dependent on any liver cytochrome P450 isoenzymes. The major metabolite is inactive in animal seizure models. Two minor metabolites were identified as the product of hydroxylation of the 2-oxo-pyrrolidine ring (2% of dose) and opening of the 2-oxo-pyrrolidine ring in position 5 (1% of dose). There is no enantiomeric interconversion of levetiracetam or its major metabolite.</paragraph>
+                  <paragraph>Elimination</paragraph>
+                  <paragraph>Levetiracetam plasma half-life in adults is 7 ± 1 hour and is unaffected by either dose or repeated administration. Levetiracetam is eliminated from the systemic circulation by renal excretion as unchanged drug which represents 66% of administered dose. The total body clearance is 0.96 mL/min/kg and the renal clearance is 0.6 mL/min/kg. The mechanism of excretion is glomerular filtration with subsequent partial tubular reabsorption. The metabolite ucb L057 is excreted by glomerular filtration and active tubular secretion with a renal clearance of 4 mL/min/kg. Levetiracetam elimination is correlated to creatinine clearance. Levetiracetam clearance is reduced in patients with impaired renal function [see DOSAGE AND ADMINISTRATION (2.2) and USE IN SPECIFIC POPULATIONS (8.6)].</paragraph>
+                  <paragraph>Specific Populations</paragraph>
+                  <paragraph>Elderly</paragraph>
+                  <paragraph>There are insufficient pharmacokinetic data to specifically address the use of extended-release levetiracetam in the elderly population.</paragraph>
+                  <paragraph>Pharmacokinetics of immediate-release levetiracetam were evaluated in 16 elderly subjects (age 61-88 years) with creatinine clearance ranging from 30 to 74 mL/min. Following oral administration of twice-daily dosing for 10 days, total body clearance decreased by 38% and the half-life was 2.5 hours longer in the elderly compared to healthy adults. This is most likely due to the decrease in renal function in these subjects.</paragraph>
+                  <paragraph>Pediatric Patients</paragraph>
+                  <paragraph>An open label, multicenter, parallel-group, two-arm study was conducted to evaluate the pharmacokinetics of levetiracetam extended-release tablets in pediatric patients (13 to 16 years old) and in adults (18 to 55 years old) with epilepsy. Levetiracetam extended-release oral tablets (1,000 mg to 3,000 mg) were administered once daily with a minimum of 4 days and a maximum of 7 days of treatment to 12 pediatric patients and 13 adults in the study. Dose-normalized steady-state exposure parameters, Cmax and AUC, were comparable between pediatric and adult patients.</paragraph>
+                  <paragraph>Pregnancy</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets levels may decrease during pregnancy [see WARNINGS AND PRECAUTIONS (5.9) and USE IN SPECIFIC POPULATIONS (8.1)].</paragraph>
+                  <paragraph>Gender</paragraph>
+                  <paragraph>Extended-release levetiracetam Cmax was 21-30% higher and AUC was 8-18% higher in women (N=12) compared to men (N=12). However, clearances adjusted for body weight were comparable.</paragraph>
+                  <paragraph>Race</paragraph>
+                  <paragraph>Formal pharmacokinetic studies of the effects of race have not been conducted with extended-release or immediate-release levetiracetam. Cross study comparisons involving Caucasians (N=12) and Asians (N=12), however, show that pharmacokinetics of immediate-release levetiracetam were comparable between the two races. Because levetiracetam is primarily renally excreted and there are no important racial differences in creatinine clearance, pharmacokinetic differences due to race are not expected.</paragraph>
+                  <paragraph>Renal Impairment</paragraph>
+                  <paragraph>The effect of levetiracetam extended-release tablets on renally impaired patients was not assessed in the controlled study. However, it is expected that the effect on levetiracetam extended-release tablets-treated patients would be similar to that seen in controlled studies of immediate-release levetiracetam tablets. In patients with end stage renal disease on dialysis, it is recommended that immediate-release levetiracetam tablets be used instead of levetiracetam extended-release tablets.</paragraph>
+                  <paragraph>The disposition of immediate-release levetiracetam was studied in adult subjects with varying degrees of renal function. Total body clearance of levetiracetam is reduced in patients with impaired renal function by 40% in the mild group (CLcr = 50-80 mL/min), 50% in the moderate group (CLcr = 30-50 mL/min) and 60% in the severe renal impairment group (CLcr &lt;30 mL/min). Clearance of levetiracetam is correlated with creatinine clearance.</paragraph>
+                  <paragraph>In anuric (end stage renal disease) patients, the total body clearance decreased 70% compared to normal subjects (CLcr &gt;80mL/min). Approximately 50% of the pool of levetiracetam in the body is removed during a standard 4- hour hemodialysis procedure [see DOSAGE AND ADMINISTRATION (2.2)].</paragraph>
+                  <paragraph>Hepatic Impairment</paragraph>
+                  <paragraph>In subjects with mild (Child-Pugh A) to moderate (Child-Pugh B) hepatic impairment, the pharmacokinetics of levetiracetam were unchanged. In patients with severe hepatic impairment (Child-Pugh C), total body clearance was 50% that of normal subjects, but decreased renal clearance accounted for most of the decrease. No dose adjustment is needed for patients with hepatic impairment.</paragraph>
+                  <paragraph>Drug Interactions</paragraph>
+                  <paragraph>In vitro data on metabolic interactions indicate that levetiracetam is unlikely to produce, or be subject to, pharmacokinetic interactions. Levetiracetam and its major metabolite, at concentrations well above Cmax levels achieved within the therapeutic dose range, are neither inhibitors of, nor high affinity substrates for, human liver cytochrome P450 isoforms, epoxide hydrolase or UDP-glucuronidation enzymes. In addition, levetiracetam does not affect the in vitro glucuronidation of valproic acid.</paragraph>
+                  <paragraph>Potential pharmacokinetic interactions of or with levetiracetam were assessed in clinical pharmacokinetic studies (phenytoin, valproate, warfarin, digoxin, oral contraceptive, probenecid) and through pharmacokinetic screening with immediate-release levetiracetam tablets in the placebo-controlled clinical studies in epilepsy patients. The potential for drug interactions for levetiracetam extended-release tablets is expected to be essentially the same as that with immediate-release levetiracetam tablets.</paragraph>
+                  <paragraph>Phenytoin</paragraph>
+                  <paragraph>Immediate-release levetiracetam tablets (3,000 mg daily) had no effect on the pharmacokinetic disposition of phenytoin in patients with refractory epilepsy. Pharmacokinetics of levetiracetam were also not affected by phenytoin.</paragraph>
+                  <paragraph>Valproate</paragraph>
+                  <paragraph>Immediate-release levetiracetam tablets (1500 mg twice daily) did not alter the pharmacokinetics of valproate in healthy volunteers. Valproate 500 mg twice daily did not modify the rate or extent of levetiracetam absorption or its plasma clearance or urinary excretion. There also was no effect on exposure to and the excretion of the primary metabolite, ucb L057.</paragraph>
+                  <paragraph>Other Antiepileptic Drugs</paragraph>
+                  <paragraph>Potential drug interactions between immediate-release levetiracetam tablets and other AEDs (carbamazepine, gabapentin, lamotrigine, phenobarbital, phenytoin, primidone and valproate) were also assessed by evaluating the serum concentrations of levetiracetam and these AEDs during placebo-controlled clinical studies. These data indicate that levetiracetam does not influence the plasma concentration of other AEDs and that these AEDs do not influence the pharmacokinetics of levetiracetam.</paragraph>
+                  <paragraph>Oral Contraceptives</paragraph>
+                  <paragraph>Immediate-release levetiracetam tablets (500 mg twice daily) did not influence the pharmacokinetics of an oral contraceptive containing 0.03 mg ethinyl estradiol and 0.15 mg levonorgestrel, or of the luteinizing hormone and progesterone levels, indicating that impairment of contraceptive efficacy is unlikely. Coadministration of this oral contraceptive did not influence the pharmacokinetics of levetiracetam.</paragraph>
+                  <paragraph>Digoxin</paragraph>
+                  <paragraph>Immediate-release levetiracetam tablets (1,000 mg twice daily) did not influence the pharmacokinetics and pharmacodynamics (ECG) of digoxin given as a 0.25 mg dose every day. Coadministration of digoxin did not influence the pharmacokinetics of levetiracetam.</paragraph>
+                  <paragraph>Warfarin</paragraph>
+                  <paragraph>Immediate-release levetiracetam tablets (1,000 mg twice daily) did not influence the pharmacokinetics of R and S warfarin. Prothrombin time was not affected by levetiracetam. Coadministration of warfarin did not affect the pharmacokinetics of levetiracetam.</paragraph>
+                  <paragraph>Probenecid</paragraph>
+                  <paragraph>Probenecid, a renal tubular secretion blocking agent, administered at a dose of 500 mg four times a day, did not change the pharmacokinetics of levetiracetam 1,000 mg twice daily. Cssmax of the metabolite, ucb L057, was approximately doubled in the presence of probenecid while the fraction of drug excreted unchanged in the urine remained the same. Renal clearance of ucb L057 in the presence of probenecid decreased 60%, probably related to competitive inhibition of tubular secretion of ucb L057. The effect of immediate-release levetiracetam tablets on probenecid was not studied.</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c452dc-b3cb-10b9-e063-6394a90aede9">
+               <id root="03c452dc-b3ca-10b9-e063-6394a90aede9"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <text>
+                  <paragraph>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</paragraph>
+                  <paragraph>Carcinogenesis</paragraph>
+                  <paragraph>Rats were dosed with levetiracetam in the diet for 104 weeks at doses of 50, 300, and 1800 mg/kg/day. Plasma exposure (AUC) at the highest dose was approximately 6 times that in humans at the maximum recommended daily human dose (MRHD) of 3,000 mg. There was no evidence of carcinogenicity. In mice, oral administration of levetiracetam for 80 weeks (doses up to 960 mg/kg/day) or 2 years (doses up to 4,000 mg/kg/day, lowered to 3,000 mg/kg/day after 45 weeks due to intolerability) was not associated with an increase in tumors. The highest dose tested in mice for 2 years (3,000 mg/kg/day) is approximately 5 times the MRHD on a body surface area (mg/m2) basis.</paragraph>
+                  <paragraph>Mutagenesis</paragraph>
+                  <paragraph>Levetiracetam was negative in in vitro (Ames, chromosomal aberration in mammalian cells) and in vivo (mouse micronucleus) assays. The major human metabolite of levetiracetam (ucb L057) was negative in in vitro (Ames, mouse lymphoma) assays.</paragraph>
+                  <paragraph>Impairment of Fertility</paragraph>
+                  <paragraph>No adverse effects on male or female fertility or reproductive performance were observed in rats at oral doses up to 1800 mg/kg/day, which were associated with plasma exposures (AUC) up to approximately 6 times that in humans at the MRHD.</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c45826-34bc-e9c5-e063-6394a90a82cb">
+               <id root="03c45826-34bb-e9c5-e063-6394a90a82cb"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <text>
+                  <paragraph>The effectiveness of levetiracetam extended-release tablets for the treatment of partial-onset seizures in adults was established in one multicenter, randomized, double-blind, placebo-controlled clinical study in patients who had refractory partial-onset seizures with or without secondary generalization. This was supported by the demonstration of efficacy of immediate-release levetiracetam tablets (see below) in partial seizures in three multicenter, randomized, double-blind, placebo-controlled clinical studies in adults, as well as a demonstration of comparable bioavailability between the XR and immediate-release formulations [see CLINICAL PHARMACOLOGY (12.3)] in adults. The effectiveness for levetiracetam extended-release tablets for the treatment of partial-onset in pediatric patients, 12 years of age and older, was based upon a single pharmacokinetic study showing comparable pharmacokinetics of levetiracetam extended-release tablets in adults and adolescents [see CLINICAL PHARMACOLOGY (12.3)]. All studies are described below.</paragraph>
+                  <paragraph>14.1 Levetiracetam Extended-Release in Adults</paragraph>
+                  <paragraph>The effectiveness of levetiracetam extended-release tablets for the treatment of partial-onset seizures in adults was established in one multicenter, randomized, double-blind, placebo-controlled clinical study across 7 countries in patients who had refractory partial-onset seizures with or without secondary generalization (Study 1).</paragraph>
+                  <paragraph>Study 1</paragraph>
+                  <paragraph>Patients enrolled in Study 1 had at least eight partial seizures with or without secondary generalization during the 8-week baseline period and at least two partial seizures in each 4-week interval of the baseline period. Patients were taking a stable dose regimen of at least one AED and could take a maximum of three AEDs. After a prospective baseline period of 8 weeks, 158 patients were randomized to placebo (N=79) or 1,000 mg (two 500 mg tablets) of levetiracetam extended-release tablets (N=79), given once daily over a 12-week treatment period.</paragraph>
+                  <paragraph>The primary efficacy endpoint in Study 1 was the percent reduction over placebo in mean weekly frequency of partial-onset seizures. The median percent reduction in weekly partial-onset seizure frequency from baseline over the treatment period was 46.1% in the levetiracetam extended-release tablets 1,000 mg treatment group (N=74) and 33.4% in the placebo group (N=78). The estimated percent reduction over placebo in weekly partial-onset seizure frequency over the treatment period was 14.4% (statistically significant).</paragraph>
+                  <paragraph>The relationship between the effectiveness of the same daily dose of levetiracetam extended-release tablets and immediate-release levetiracetam tablets has not been studied and is unknown. </paragraph>
+                  <paragraph>14.2 Immediate-Release Levetiracetam in Adults</paragraph>
+                  <paragraph>The effectiveness of immediate-release levetiracetam tablets for the treatment of partial-onset seizures in adults was established in three multicenter, randomized, double-blind, placebo-controlled clinical studies in patients who had refractory partial-onset seizures with or without secondary generalization (Studies 2, 3, and 4). The tablet formulation was used in all three studies. In these studies, 904 patients were randomized to placebo, levetiracetam tablets 1,000 mg, levetiracetam tablets 2,000 mg, or levetiracetam tablets 3,000 mg/day. Patients enrolled in Study 2 or Study 3 had refractory partial-onset seizures for at least two year and had taken two or more AEDs. Patients enrolled in Study 4 had refractory partial-onset seizures for at least 1 year and had taken one AED. At the time of the study, patients were taking a stable dose regimen of at least one AED and could take a maximum of two AEDs. During the baseline period, patients had to have experienced at least two partial-onset seizures during each 4-week period. </paragraph>
+                  <paragraph>Study 2</paragraph>
+                  <paragraph>Study 2 was a double-blind, placebo-controlled, parallel-group study conducted at 41 sites in the United States, comparing immediate-release levetiracetam tablets 1,000 mg/day (N=97), immediate-release levetiracetam tablets 3,000 mg/day (N=101), and placebo (N=95), given in equally divided doses twice daily. After a prospective baseline period of 12 weeks, patients in Study 2 were randomized to one of the three treatment groups described above. The 18-week treatment period consisted of a 6-week titration period, followed by a 12-week fixed dose evaluation period, during which concomitant AED regimens were held constant. The primary measure of effectiveness in Study 2 was a between-group comparison of the percent reduction in weekly partial seizure frequency relative to placebo over the entire randomized treatment period (titration + evaluation period). Secondary outcome variables included the responder rate (incidence of patients with ≥50% reduction from baseline in partial-onset seizure frequency). The results of Study 2 are displayed in Table 6.</paragraph>
+                  <paragraph>Table 6: Reduction in Mean Over Placebo in Weekly Frequency of Partial-Onset Seizures in Study 2
+  <br/>
+Placebo
+  <br/>
+(N=95) Immediate-release Levetiracetam Tablets
+  <br/>
+1,000 mg/day
+  <br/>
+(N=97) Immediate-release Levetiracetam Tablets
+  <br/>
+3,000 mg/day
+  <br/>
+(N=101)
+ </paragraph>
+                  <paragraph>*
+  <br/>
+statistically significant versus placebo
+ </paragraph>
+                  <paragraph>Percent reduction in partial seizure frequency over placebo</paragraph>
+                  <paragraph>
+                     <br/>
+–
+ </paragraph>
+                  <paragraph>
+                     <br/>
+26.1%*
+ </paragraph>
+                  <paragraph>
+                     <br/>
+30.1%*
+ </paragraph>
+                  <paragraph>The percentage of patients (y-axis) who achieved ≥50% reduction from baseline in weekly partial-onset seizure frequency over the entire randomized treatment period (titration + evaluation period) within the three treatment groups (x-axis) in Study 2 is presented in Figure 1.</paragraph>
+                  <paragraph>Figure 1: Responder Rate (≥50% Reduction From Baseline) in Study 2</paragraph>
+                  <paragraph>[figure 1]</paragraph>
+                  <paragraph>Study 3</paragraph>
+                  <paragraph>Study 3 was a double-blind, placebo-controlled, crossover study conducted at 62 centers in Europe, comparing immediate-release levetiracetam tablets 1,000 mg/day (N=106), immediate-release levetiracetam tablets 2,000 mg/day (N=105), and placebo (N=111), given in equally divided doses twice daily. </paragraph>
+                  <paragraph>The first period of the study (Period A) was designed to be analyzed as a parallel-group study. After a prospective baseline period of up to 12 weeks, patients in Study 3 were randomized to one of the three treatment groups described above. The 16-week treatment period consisted of the 4-week titration period followed by a 12-week fixed dose evaluation period, during which concomitant AED regimens were held constant. The primary measure of effectiveness in Study 3 was a between group comparison of the percent reduction in weekly partial seizure frequency relative to placebo over the entire randomized treatment period (titration + evaluation period). Secondary outcome variables included the responder rate (incidence of patients with ≥50% reduction from baseline in partial-onset seizure frequency). The results of the analysis of Period A are displayed in Table 7.</paragraph>
+                  <paragraph>Table 7: Reduction in Mean Over Placebo in Weekly Frequency of Partial-Onset Seizures in Study 3: Period A
+  <br/>
+Placebo
+  <br/>
+(N=111) Immediate-release Levetiracetam Tablets
+  <br/>
+1,000 mg/day
+  <br/>
+(N=106) Immediate-release Levetiracetam Tablets
+  <br/>
+2,000 mg/day
+  <br/>
+(N=105)
+ </paragraph>
+                  <paragraph>*
+  <br/>
+statistically significant versus placebo
+ </paragraph>
+                  <paragraph>Percent reduction in partial seizure frequency over placebo</paragraph>
+                  <paragraph>
+                     <br/>
+–
+ </paragraph>
+                  <paragraph>
+                     <br/>
+17.1%*
+ </paragraph>
+                  <paragraph>
+                     <br/>
+21.4%*
+ </paragraph>
+                  <paragraph>The percentage of patients (y-axis) who achieved ≥50% reduction from baseline in weekly partial-onset seizure frequency over the entire randomized treatment period (titration + evaluation period) within the three treatment groups (x-axis) in Study 3 is presented in Figure 2.</paragraph>
+                  <paragraph>Figure 2: Responder Rate (≥50% Reduction From Baseline) in Study 3: Period A</paragraph>
+                  <paragraph>[figure 2]</paragraph>
+                  <paragraph>The comparison of immediate-release levetiracetam tablets 2,000 mg/day to immediate-release levetiracetam tablets 1,000 mg/day for responder rate in Study 3 was statistically significant (P=0.02). Analysis of the trial as a cross-over study yielded similar results.</paragraph>
+                  <paragraph>Study 4</paragraph>
+                  <paragraph>Study 4 was a double-blind, placebo-controlled, parallel-group study conducted at 47 centers in Europe comparing immediate-release levetiracetam tablets 3,000 mg/day (N=180) and placebo (N=104) in patients with refractory partial-onset seizures, with or without secondary generalization, receiving only one concomitant AED. Study drug was given in two divided doses. After a prospective baseline period of 12 weeks, patients in Study 4 were randomized to one of two treatment groups described above. The 16-week treatment period consisted of a 4-week titration period, followed by a 12-week fixed dose evaluation period, during which concomitant AED doses were held constant. The primary measure of effectiveness in Study 4 was a between group comparison of the percent reduction in weekly seizure frequency relative to placebo over the entire randomized treatment period (titration + evaluation period). Secondary outcome variables included the responder rate (incidence of patients with ≥50% reduction from baseline in partial-onset seizure frequency). Table 8 displays the results of Study 4.</paragraph>
+                  <paragraph>Table 8: Reduction in Mean Over Placebo in Weekly Frequency of Partial-Onset Seizures in Study 4
+  <br/>
+Placebo
+  <br/>
+(N=104) Immediate-release Levetiracetam Tablets
+  <br/>
+3,000 mg/day
+  <br/>
+(N=180)
+ </paragraph>
+                  <paragraph>*
+  <br/>
+statistically significant versus placebo
+ </paragraph>
+                  <paragraph>Percent reduction in partial seizure frequency over placebo</paragraph>
+                  <paragraph>
+                     <br/>
+–
+ </paragraph>
+                  <paragraph>
+                     <br/>
+23.0%*
+ </paragraph>
+                  <paragraph>The percentage of patients (y-axis) who achieved ≥50% reduction from baseline in weekly partial-onset seizure frequency over the entire randomized treatment period (titration + evaluation period) within the two treatment groups (x-axis) in Study 4 is presented in Figure 3.</paragraph>
+                  <paragraph>Figure 3: Responder Rate (≥50% Reduction From Baseline) In Study 4</paragraph>
+                  <paragraph>[figure 3]</paragraph>
+                  <paragraph>14.3 Immediate-Release Levetiracetam in Pediatric Patients</paragraph>
+                  <paragraph>The use of levetiracetam extended-release tablets in pediatric patients 12 years of age and older is supported by Study 5, which was conducted using immediate-release levetiracetam tablets. Levetiracetam extended-release tablets are not indicated in children below 12 years of age. </paragraph>
+                  <paragraph>Study 5</paragraph>
+                  <paragraph>The effectiveness of immediate-release levetiracetam tablets for the treatment of partial-onset seizures in pediatric patients was established in a multicenter, randomized double-blind, placebo-controlled study, conducted at 60 sites in North America, in children 4 to 16 years of age with partial seizures uncontrolled by standard antiepileptic drugs (Study 5). Eligible patients on a stable dose of 1-2 AEDs, who still experienced at least 4 partial-onset seizures during the 4 weeks prior to screening, as well as at least 4 partial-onset seizures in each of the two 4-week baseline periods, were randomized to receive either immediate-release levetiracetam tablets or placebo. The enrolled population included 198 patients (levetiracetam tablets N=101; placebo N=97) with refractory partial-onset seizures, with or without secondarily generalization. Study 5 consisted of an 8-week baseline period and 4-week titration period followed by a 10-week evaluation period. Dosing was initiated at a dose of 20 mg/kg/day in two divided doses. During the treatment period, the immediate-release levetiracetam tablets doses were adjusted in 20 mg/kg/day increments, at 2-week intervals to the target dose of 60 mg/kg/day. The primary measure of effectiveness in Study 5 was a between group comparison of the percent reduction in weekly partial seizure frequency relative to placebo over the entire 14-week randomized treatment period (titration + evaluation period). Secondary outcome variables included the responder rate (incidence of patients with ≥ 50% reduction from baseline in partial-onset seizure frequency per week). Table 9 displays the results of this study.</paragraph>
+                  <paragraph>Table 9: Reduction in Mean Over Placebo in Weekly Frequency of Partial-Onset Seizures in Study 5
+  <br/>
+Placebo
+  <br/>
+(N=97) Immediate-release Levetiracetam Tablets
+  <br/>
+(N=101)
+ </paragraph>
+                  <paragraph>*
+  <br/>
+statistically significant versus placebo
+ </paragraph>
+                  <paragraph>Percent reduction in partial seizure frequency over placebo</paragraph>
+                  <paragraph>-</paragraph>
+                  <paragraph>26.8%*</paragraph>
+                  <paragraph>The percentage of patients (y-axis) who achieved ≥ 50% reduction in weekly partial-onset seizure frequency over the entire randomized treatment period (titration + evaluation period) within the two treatment groups (x-axis) in Study 5 is presented in Figure 4.</paragraph>
+                  <paragraph>Figure 4: Responder Rate (≥ 50% Reduction From Baseline) in Study 5</paragraph>
+                  <paragraph>[figure 4]</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c452dc-b3cd-10b9-e063-6394a90aede9">
+               <id root="03c452dc-b3cc-10b9-e063-6394a90aede9"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <text>
+                  <paragraph>16.1 How Supplied</paragraph>
+                  <paragraph>Levetiracetam extended-release 500 mg tablets, USP, are white, oval, biconvex film-coated extended-release tablets debossed with "HH" on one side and “172” on the other side. They are supplied in white HDPE bottles as follows:</paragraph>
+                  <paragraph>NDC 43547-345-06: bottles of 60
+  <br/>
+NDC 43547-345-50: bottles of 500
+ </paragraph>
+                  <paragraph>Levetiracetam extended-release 750 mg tablets, USP, are white, oval, biconvex film-coated extended-release tablets debossed with "HH" on one side and “173” on the other side. They are supplied in white HDPE bottles as follows:</paragraph>
+                  <paragraph>NDC 72189-510-60: bottles of 60
+  <br/>
+NDC 43547-346-50: bottles of 500
+ </paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c466ea-591a-30bb-e063-6294a90a44fe">
+               <id root="03c466ea-5919-30bb-e063-6294a90a44fe"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <text>
+                  <paragraph>16.2 Storage</paragraph>
+                  <paragraph>Store at 20°C to 25°C (68°F to 77°F); excursions permitted between 15°C and 30°C (59°F and 86°F) [see USP Controlled Room Temperature].</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c45fd3-b44f-d836-e063-6394a90ad42f">
+               <id root="03c45fd3-b44e-d836-e063-6394a90ad42f"/>
+               <code code="88436-1" codeSystem="2.16.840.1.113883.6.1" displayName="PATIENT COUNSELING INFORMATION"/>
+               <text>
+                  <paragraph>Advise the patient to read the FDA-approved patient labeling (Medication Guide).</paragraph>
+                  <paragraph>Psychiatric Reactions and Changes in Behavior</paragraph>
+                  <paragraph>Advise patients that levetiracetam extended-release tablets may cause changes in behavior (e.g. irritability and aggression). In addition, patients should be advised that they may experience changes in behavior that have been seen with other formulations of levetiracetam extended-release tablets, which include agitation, anger, anxiety, apathy, depression, hostility, and psychotic symptoms [see WARNINGS AND PRECAUTIONS (5.1)].</paragraph>
+                  <paragraph>Suicidal Behavior and Ideation</paragraph>
+                  <paragraph>Counsel patients, their caregivers, and/or families that antiepileptic drugs (AEDs), including levetiracetam extended-release tablets, may increase the risk of suicidal thoughts and behavior and advise patients to be alert for the emergence or worsening of symptoms of depression; unusual changes in mood or behavior; or suicidal thoughts, behavior, or thoughts about self-harm. Advise patients, their caregivers, and/or families to immediately report behaviors of concern to a healthcare provider [see WARNINGS AND PRECAUTIONS (5.2)].</paragraph>
+                  <paragraph>Effects on Driving or Operating Machinery</paragraph>
+                  <paragraph>Inform patients that levetiracetam extended-release tablets may cause dizziness and somnolence. Inform patients not to drive or operate machinery until they have gained sufficient experience on levetiracetam extended-release tablets to gauge whether it adversely affects their ability to drive or operate machinery [see WARNINGS AND PRECAUTIONS (5.3)].</paragraph>
+                  <paragraph>Anaphylaxis and Angioedema</paragraph>
+                  <paragraph>Advise patients to discontinue levetiracetam extended-release tablets and seek medical care if they develop signs and symptoms of anaphylaxis or angioedema [see WARNINGS AND PRECAUTIONS (5.4)].</paragraph>
+                  <paragraph>Dermatological Adverse Reactions</paragraph>
+                  <paragraph>Advise patients that serious dermatological adverse reactions have occurred in patients treated with levetiracetam and instruct them to call their physician immediately if a rash develops [see WARNINGS AND PRECAUTIONS (5.5)].</paragraph>
+                  <paragraph>Dosing and Administration</paragraph>
+                  <paragraph>Patients should be instructed to only take levetiracetam extended-release tablets once daily and to swallow the tablets whole. They should not be chewed, broken, or crushed. Inform patients that they should not be concerned if they occasionally notice something that looks like swollen pieces of the original tablet in their stool.</paragraph>
+                  <paragraph>Withdrawal of Levetiracetam</paragraph>
+                  <paragraph>Advise patients and caregivers not to discontinue use of levetiracetam extended-release tablets without consulting with their healthcare provider. Levetiracetam extended-release tablets should normally be gradually withdrawn to reduce the potential of increased seizure frequency and status epilepticus [see WARNINGS AND PRECAUTIONS (5.7)].</paragraph>
+                  <paragraph>Pregnancy</paragraph>
+                  <paragraph>Advise patients to notify their healthcare provider if they become pregnant or intend to become pregnant during levetiracetam therapy. Encourage patients to enroll in the North American Antiepileptic Drug (NAAED) pregnancy registry if they become pregnant [see USE IN SPECIFIC POPULATIONS (8.1)].</paragraph>
+                  <paragraph>Dispense with Medication Guide available at: www.solcohealthcare.com/medguide/levetiracetam-er-tablets.pdf</paragraph>
+                  <paragraph>Manufactured by:</paragraph>
+                  <paragraph>Zhejiang Huahai Pharmaceutical Co., Ltd</paragraph>
+                  <paragraph>Xunqiao, Linhai, Zhejiang 317024, China</paragraph>
+                  <paragraph>Prinston Laboratories</paragraph>
+                  <paragraph>Charlotte, NC 28206, USA</paragraph>
+                  <paragraph>Distributed by:</paragraph>
+                  <paragraph>Solco Healthcare US, LLC</paragraph>
+                  <paragraph>Somerset, NJ 08873, USA</paragraph>
+                  <paragraph>Revised: 06/2023</paragraph>
+                  <paragraph>200257-05 (Zhejiang Huahai)</paragraph>
+                  <paragraph>9040492-04 (Prinston)</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c45fd3-b451-d836-e063-6394a90ad42f">
+               <id root="03c45fd3-b450-d836-e063-6394a90ad42f"/>
+               <code code="42231-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL MEDGUIDE SECTION"/>
+               <text>
+                  <paragraph>Levetiracetam Extended-Release Tablets USP, for oral use
+  <br/>
+(LEE-ve-tye-RA-se-tam)
+ </paragraph>
+                  <paragraph>Dispense with Medication Guide available at: www.solcohealthcare.com/medguide/levetiracetam-er-tablets.pdf</paragraph>
+                  <paragraph>Read this Medication Guide before you start taking levetiracetam extended-release tablets and each time you get a refill. There may be new information. This information does not take the place of talking to your healthcare provider about your medical condition or treatment.</paragraph>
+                  <paragraph>What is the most important information I should know about levetiracetam extended-release tablets?</paragraph>
+                  <paragraph>Like other antiepileptic drugs, levetiracetam extended-release tablets may cause suicidal thoughts or actions in a very small number of people, about 1 in 500 people taking it.</paragraph>
+                  <paragraph>Call a healthcare provider right away if you have any of these symptoms, especially if they are new, worse, or worry you:</paragraph>
+                  <paragraph>•
+  <br/>
+thoughts about suicide or dying
+  <br/>
+•
+  <br/>
+attempts to commit suicide
+  <br/>
+•
+  <br/>
+new or worse depression
+  <br/>
+•
+  <br/>
+new or worse anxiety
+  <br/>
+•
+  <br/>
+feeling agitated or restless
+  <br/>
+•
+  <br/>
+panic attacks
+  <br/>
+•
+  <br/>
+trouble sleeping (insomnia)
+  <br/>
+•
+  <br/>
+new or worse irritability
+  <br/>
+•
+  <br/>
+acting aggressive, being angry, or violent
+  <br/>
+•
+  <br/>
+acting on dangerous impulses
+  <br/>
+•
+  <br/>
+an extreme increase in activity and talking (mania)
+  <br/>
+•
+  <br/>
+other unusual changes in behavior or mood
+ </paragraph>
+                  <paragraph>Do not stop levetiracetam extended-release tablets without first talking to a healthcare provider.</paragraph>
+                  <paragraph>•
+  <br/>
+Stopping levetiracetam extended-release tablets suddenly can cause serious problems. Stopping a seizure medicine suddenly can cause seizures that will not stop (status epilepticus).
+  <br/>
+•
+  <br/>
+Suicidal thoughts or actions can be caused by things other than medicines. If you have suicidal thoughts or actions, your healthcare provider may check for other causes.
+ </paragraph>
+                  <paragraph>How can I watch for early symptoms of suicidal thoughts and actions?</paragraph>
+                  <paragraph>•
+  <br/>
+Pay attention to any changes, especially sudden changes, in mood, behaviors, thoughts, or feelings.
+  <br/>
+•
+  <br/>
+Keep all follow-up visits with your healthcare provider as scheduled.
+ </paragraph>
+                  <paragraph>Call your healthcare provider between visits as needed, especially if you are worried about symptoms.</paragraph>
+                  <paragraph>What are levetiracetam extended-release tablets?</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets are a prescription medicine taken by mouth that is used to treat partial-onset seizures in people 12 years of age and older.</paragraph>
+                  <paragraph>It is not known if levetiracetam extended-release tablets are safe or effective in people under 12 years of age.</paragraph>
+                  <paragraph>Before taking your medicine, make sure you have received the correct medicine. Compare the name above with the name on your bottle and the appearance of your medicine with the description of levetiracetam extended-release tablets provided below. Tell your pharmacist immediately if you think you have been given the wrong medicine.</paragraph>
+                  <paragraph>Who should not take levetiracetam extended-release tablets?</paragraph>
+                  <paragraph>Do not take levetiracetam extended-release tablets if you are allergic to levetiracetam.</paragraph>
+                  <paragraph>What should I tell my healthcare provider before starting levetiracetam extended-release tablets?
+  <br/>
+Before taking levetiracetam extended-release tablets, tell your healthcare provider about all of your medical conditions, including if you:
+ </paragraph>
+                  <paragraph>•
+  <br/>
+have or have had depression, mood problems or suicidal thoughts or behavior
+  <br/>
+•
+  <br/>
+have kidney problems
+  <br/>
+•
+  <br/>
+are pregnant or planning to become pregnant. It is not known if levetiracetam extended-release tablets will harm your unborn baby. You and your healthcare provider will have to decide if you should take levetiracetam extended-release tablets while you are pregnant. If you become pregnant while taking levetiracetam extended-release tablets, talk to your healthcare provider about registering with the North American Antiepileptic Drug Pregnancy Registry. You can enroll in this registry by calling 1-888-233-2334 or go to http://www.aedpregnancyregistry.org. The purpose of this registry is to collect information about the safety of levetiracetam extended-release tablets and other antiepileptic medicine during pregnancy.
+  <br/>
+•
+  <br/>
+are breastfeeding or plan to breastfeed. Levetiracetam can pass into your breast milk. It is not known if the levetiracetam that passes into your breast milk can harm your baby. Talk to your doctor about the best way to feed your baby while you receive levetiracetam.
+ </paragraph>
+                  <paragraph>Tell your healthcare provider about all the medicines you take, including prescription and over-the counter medicines, vitamins, and herbal supplements. Do not start a new medicine without first talking with your healthcare provider.</paragraph>
+                  <paragraph>Know the medicines you take. Keep a list of them to show your healthcare provider and pharmacist each time you get a new medicine.</paragraph>
+                  <paragraph>How should I take levetiracetam extended-release tablets?</paragraph>
+                  <paragraph>•
+  <br/>
+Take levetiracetam extended-release tablets exactly as your healthcare provider tells you to take it.
+  <br/>
+•
+  <br/>
+Your healthcare provider will tell you how many levetiracetam extended-release tablets to take and when to take it. levetiracetam extended-release tablets are usually taken 1 time each day.
+  <br/>
+•
+  <br/>
+Your healthcare provider may change your dose. Do not change your dose without talking to your healthcare provider.
+  <br/>
+•
+  <br/>
+Take levetiracetam extended-release tablets with or without food.
+  <br/>
+•
+  <br/>
+Swallow the tablets whole. Do not chew, break, or crush tablets.
+  <br/>
+•
+  <br/>
+The inactive part of levetiracetam extended-release tablets may not dissolve after all the medicine has been released in your body. You may sometimes notice something in your bowel movement that looks like swollen pieces of the original tablet. This is normal.
+  <br/>
+•
+  <br/>
+If you take too many levetiracetam extended-release tablets, call your local Poison Control Center or go to the nearest emergency room right away.
+ </paragraph>
+                  <paragraph>What should I avoid while taking levetiracetam extended-release tablets?</paragraph>
+                  <paragraph>Do not drive, operate machinery or do other dangerous activities until you know how levetiracetam extended-release tablets affect you. levetiracetam extended-release tablets may make you dizzy or sleepy.</paragraph>
+                  <paragraph>What are the possible side effects of levetiracetam extended-release tablets?</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets can cause serious side effects including:</paragraph>
+                  <paragraph>•
+  <br/>
+See “What is the most important information I should know about levetiracetam extended-release tablets?”
+ </paragraph>
+                  <paragraph>Call your healthcare provider right away if you have any of these symptoms:</paragraph>
+                  <paragraph>•
+  <br/>
+mood and behavior changes such as aggression, agitation, anger, anxiety, apathy, mood swings, depression, hostility, and irritability. A few people may get psychotic symptoms such as hallucinations (seeing or hearing things that are really not there), delusions (false or strange thoughts or beliefs) and unusual behavior.
+  <br/>
+•
+  <br/>
+extreme sleepiness, tiredness, and weakness
+  <br/>
+•
+  <br/>
+allergic reactions such as swelling of the face, lips, eyes, tongue, and throat, trouble swallowing or breathing, and hives.
+  <br/>
+•
+  <br/>
+a skin rash. Serious skin rashes can happen after you start taking levetiracetam extended-release tablets. There is no way to tell if a mild rash will become a serious reaction.
+  <br/>
+•
+  <br/>
+problems with muscle coordination (problems walking and moving).
+ </paragraph>
+                  <paragraph>The most common side effects seen in people who take levetiracetam extended-release tablets include:</paragraph>
+                  <paragraph>•
+  <br/>
+sleepiness
+  <br/>
+•
+  <br/>
+irritability
+ </paragraph>
+                  <paragraph>Tell your healthcare provider if you have any side effect that bothers you or that does not go away.</paragraph>
+                  <paragraph>These are not all the possible side effects of levetiracetam extended-release tablets. For more information, ask your healthcare provider or pharmacist.</paragraph>
+                  <paragraph>Call your doctor for medical advice about side effects. You may report side effects to Solco Healthcare US, LLC at 1-866-257-2597 or FDA at 1-800-FDA-1088.</paragraph>
+                  <paragraph>How should I store levetiracetam extended-release tablets?</paragraph>
+                  <paragraph>•
+  <br/>
+Store levetiracetam extended-release tablets at room temperature, between 59°F to 86°F (15°C to 30°C) away from heat and light.
+  <br/>
+•
+  <br/>
+Keep levetiracetam extended-release tablets and all medicines out of the reach of children.
+ </paragraph>
+                  <paragraph>General information about the safe and effective use of levetiracetam extended-release tablets.</paragraph>
+                  <paragraph>Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use levetiracetam extended-release tablets for a condition for which it was not prescribed. Do not give levetiracetam extended-release tablets to other people, even if they have the same symptoms that you have. It may harm them. You can ask your pharmacist or healthcare provider for information about levetiracetam extended-release tablets that is written for health professionals.</paragraph>
+                  <paragraph>What are the ingredients of levetiracetam extended-release tablets?</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets active ingredient: levetiracetam USP</paragraph>
+                  <paragraph>Inactive ingredients: hypromellose, hydroxypropylcellulose, colloidal silicon dioxide, magnesium stearate, polyvinyl alcohol-partially hydrolyzed, macrogol/peg 3350, talc, and titanium dioxide.</paragraph>
+                  <paragraph>Levetiracetam extended-release tablets do not contain lactose or gluten.</paragraph>
+                  <paragraph>This Medication Guide has been approved by the U.S. Food and Drug Administration.</paragraph>
+                  <paragraph>Manufactured by:
+  <br/>
+Zhejiang Huahai Pharmaceutical Co., Ltd
+  <br/>
+Xunqiao, Linhai, Zhejiang 317024, China
+ </paragraph>
+                  <paragraph>Prinston Laboratories</paragraph>
+                  <paragraph>Charlotte, NC 28206, USA</paragraph>
+                  <paragraph>Distributed by:
+  <br/>
+Solco Healthcare US, LLC
+  <br/>
+Somerset, NJ 08873, USA
+ </paragraph>
+                  <paragraph>Rev. 12/2021</paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_03c452dc-b3c9-10b9-e063-6394a90aede9">
+               <id root="03c452dc-b3c8-10b9-e063-6394a90aede9"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_03c452a0-0ab4-f84c-e063-6394a90aa511"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20230825"/>
+               <component>
+                  <observationMedia ID="img_03c452a0-0ab4-f84c-e063-6394a90aa511">
+                     <text>72189-510-60</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="72189-510-60.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

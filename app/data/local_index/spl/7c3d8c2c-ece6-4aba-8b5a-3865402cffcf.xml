@@ -1,0 +1,2157 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="30425296-6515-4eca-9207-6886806a389c"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>PREVPAC<sup>®</sup>
+      <br/> (lansoprazole 30 mg capsules, amoxicillin 500 mg capsules, USP, and clarithromycin 500 mg tablets, USP)</title>
+   <effectiveTime value="20100315"/>
+   <setId root="7c3d8c2c-ece6-4aba-8b5a-3865402cffcf"/>
+   <versionNumber value="2"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="194123980" root="1.3.6.1.4.1.519.1"/>
+            <name>Physicians Total Care, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="194123980" root="1.3.6.1.4.1.519.1"/>
+                        <name>Physicians Total Care, Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73607" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="relabel"/>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="DLDE">
+               <id root="c1106045-7de3-42e0-8258-f2ba5c1461e4"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL LISTING DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20110408"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="54868-4909" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>PREVPAC<suffix/>
+                        </name>
+                        <formCode code="C47916" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="KIT"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>lansoprazole, amoxicillin and clarithromycin</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="64764-702" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <asContent>
+                           <quantity>
+                              <numerator value="1" unit="1">
+                                 <translation code="C48504" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="KIT"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="14" unit="1">
+                                       <translation code="C61569" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                                    </numerator>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="54868-4909-0" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43178" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOX"/>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <part>
+                           <quantity>
+                              <numerator value="2" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <partProduct>
+                              <name>lansoprazole<suffix/>
+                              </name>
+                              <formCode code="C25158" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE"/>
+                              <asEntityWithGeneric>
+                                 <genericMedicine>
+                                    <name>lansoprazole</name>
+                                 </genericMedicine>
+                              </asEntityWithGeneric>
+                              <ingredient classCode="ACTIB">
+                                 <quantity>
+                                    <numerator value="30" unit="mg"/>
+                                    <denominator value="1" unit="1"/>
+                                 </quantity>
+                                 <ingredientSubstance>
+                                    <code code="0K5C5T2QPG" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>LANSOPRAZOLE</name>
+                                    <activeMoiety>
+                                       <activeMoiety>
+                                          <code code="0K5C5T2QPG" codeSystem="2.16.840.1.113883.4.9"/>
+                                          <name>LANSOPRAZOLE</name>
+                                       </activeMoiety>
+                                    </activeMoiety>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="C151H8M554" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>SUCROSE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="2165RE0K14" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>HYDROXYPROPYL CELLULOSE, LOW SUBSTITUTED</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="0E53J927NA" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>MAGNESIUM CARBONATE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>TALC</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="3WJQ0SDW1A" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>POLYETHYLENE GLYCOL</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>TITANIUM DIOXIDE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="6OZP39ZG8H" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>POLYSORBATE 80</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="RFW2ET671P" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>HYDROXYPROPYL CELLULOSE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>SILICON DIOXIDE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="767IP0Y5NH" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>D&amp;C RED NO. 28</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="H3R47K3TBD" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FD&amp;C BLUE NO. 1</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="WZB9127XOA" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FD&amp;C RED NO. 40</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="NX76LV5T8J" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>METHACRYLIC ACID - ETHYL ACRYLATE COPOLYMER (1:1) TYPE A</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>STARCH, CORN</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                           </partProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20050520"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <approval>
+                                 <id extension="NDA050757" root="2.16.840.1.113883.3.150"/>
+                                 <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                                 <author>
+                                    <territorialAuthority>
+                                       <territory>
+                                          <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                       </territory>
+                                    </territorialAuthority>
+                                 </author>
+                              </approval>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C48323" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="black" xsi:type="CE">
+                                    <originalText>opaque</originalText>
+                                 </value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C48328" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="pink" xsi:type="CE">
+                                    <originalText>opaque</originalText>
+                                 </value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value value="1" xsi:type="INT"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                                    <originalText/>
+                                 </value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value xsi:type="ST">TAP;PREVACID;30</value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value unit="mm" value="19" xsi:type="PQ"/>
+                              </characteristic>
+                           </subjectOf>
+                           <consumedIn>
+                              <substanceAdministration>
+                                 <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                              </substanceAdministration>
+                           </consumedIn>
+                        </part>
+                        <part>
+                           <quantity>
+                              <numerator value="4" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <partProduct>
+                              <name>amoxicillin<suffix/>
+                              </name>
+                              <formCode code="C25158" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE"/>
+                              <asEntityWithGeneric>
+                                 <genericMedicine>
+                                    <name>amoxicillin</name>
+                                 </genericMedicine>
+                              </asEntityWithGeneric>
+                              <ingredient classCode="ACTIB">
+                                 <quantity>
+                                    <numerator value="500" unit="mg"/>
+                                    <denominator value="1" unit="1"/>
+                                 </quantity>
+                                 <ingredientSubstance>
+                                    <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN</name>
+                                    <activeMoiety>
+                                       <activeMoiety>
+                                          <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                                          <name>AMOXICILLIN</name>
+                                       </activeMoiety>
+                                    </activeMoiety>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="EX438O2MRT" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FERRIC OXIDE YELLOW</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>TITANIUM DIOXIDE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="2G86QN327L" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>GELATIN</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FERROSOFERRIC OXIDE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CELLULOSE, MICROCRYSTALLINE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>MAGNESIUM STEARATE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                           </partProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20050520"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <approval>
+                                 <id extension="NDA050757" root="2.16.840.1.113883.3.150"/>
+                                 <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                                 <author>
+                                    <territorialAuthority>
+                                       <territory>
+                                          <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                       </territory>
+                                    </territorialAuthority>
+                                 </author>
+                              </approval>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C48330" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="yellow" xsi:type="CE">
+                                    <originalText>opaque</originalText>
+                                 </value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value value="1" xsi:type="INT"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                                    <originalText/>
+                                 </value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value xsi:type="ST">AMOX;500;GG;849</value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value unit="mm" value="22" xsi:type="PQ"/>
+                              </characteristic>
+                           </subjectOf>
+                           <consumedIn>
+                              <substanceAdministration>
+                                 <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                              </substanceAdministration>
+                           </consumedIn>
+                        </part>
+                        <part>
+                           <quantity>
+                              <numerator value="2" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <partProduct>
+                              <name>clarithromycin<suffix/>
+                              </name>
+                              <formCode code="C42931" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET, FILM COATED"/>
+                              <asEntityWithGeneric>
+                                 <genericMedicine>
+                                    <name>clarithromycin</name>
+                                 </genericMedicine>
+                              </asEntityWithGeneric>
+                              <ingredient classCode="ACTIB">
+                                 <quantity>
+                                    <numerator value="500" unit="mg"/>
+                                    <denominator value="1" unit="1"/>
+                                 </quantity>
+                                 <ingredientSubstance>
+                                    <code code="H1250JIK0A" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CLARITHROMYCIN</name>
+                                    <activeMoiety>
+                                       <activeMoiety>
+                                          <code code="H1250JIK0A" codeSystem="2.16.840.1.113883.4.9"/>
+                                          <name>CLARITHROMYCIN</name>
+                                       </activeMoiety>
+                                    </activeMoiety>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>HYPROMELLOSES</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="RFW2ET671P" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>HYDROXYPROPYL CELLULOSE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>SILICON DIOXIDE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="M28OL1HH48" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CROSCARMELLOSE SODIUM</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="35SW5USQ3G" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>D&amp;C YELLOW NO. 10</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>MAGNESIUM STEARATE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CELLULOSE, MICROCRYSTALLINE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="FZ989GH94E" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>POVIDONE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="6DC9Q167V3" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>PROPYLENE GLYCOL</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="X045WJ989B" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>SORBIC ACID</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="06XEA2VD56" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>SORBITAN MONOOLEATE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>TITANIUM DIOXIDE</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <ingredient classCode="IACT">
+                                 <ingredientSubstance>
+                                    <code code="CHI530446X" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>VANILLIN</name>
+                                 </ingredientSubstance>
+                              </ingredient>
+                           </partProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20050520"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <approval>
+                                 <id extension="NDA050757" root="2.16.840.1.113883.3.150"/>
+                                 <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                                 <author>
+                                    <territorialAuthority>
+                                       <territory>
+                                          <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                       </territory>
+                                    </territorialAuthority>
+                                 </author>
+                              </approval>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C48330" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="yellow" xsi:type="CE">
+                                    <originalText/>
+                                 </value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value value="1" xsi:type="INT"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C48345" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OVAL" xsi:type="CE">
+                                    <originalText>Capsule Shaped</originalText>
+                                 </value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value xsi:type="ST">KL</value>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value unit="mm" value="18" xsi:type="PQ"/>
+                              </characteristic>
+                           </subjectOf>
+                           <consumedIn>
+                              <substanceAdministration>
+                                 <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                              </substanceAdministration>
+                           </consumedIn>
+                        </part>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20050520"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA050757" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="dbd7cf64-9696-413b-8a8a-57001055f452"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="Rx only"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="c39ce2fc-97d7-4d24-a01c-21c4e17b7d5f"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>To reduce the development of drug-resistant bacteria and maintain the effectiveness of PREVPAC and other antibacterial drugs, PREVPAC should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria.</paragraph>
+                  <paragraph>THESE PRODUCTS ARE INTENDED ONLY FOR USE AS DESCRIBED.  The individual products contained in this package should not be used alone or in combination for other purposes.  The information described in this labeling concerns only the use of these products as indicated in this daily administration pack.  For information on use of the individual components when dispensed as individual medications outside this combined use for treating <content styleCode="Italics">Helicobacter pylori (H. pylori)</content>, please see the package inserts for each individual product.</paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="30790bc5-0ef3-4de7-a87b-9af1ea1caa10"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>PREVPAC consists of a daily administration card containing two PREVACID 30 mg capsules, four amoxicillin 500-mg capsules, USP, and two clarithromycin 500 mg tablets, USP, for oral administration.</paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+               <component>
+                  <section>
+                     <id root="918209a3-3951-4062-84cc-3a653e704858"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>PREVACID<sup>®</sup> (lansoprazole) Delayed-Release Capsules</title>
+                     <text>
+                        <paragraph>The active ingredient in PREVACID delayed release capsules is lansoprazole, a substituted benzimidazole, 2-[[[3-methyl-4-(2,2,2-trifluoroethoxy)-2-pyridyl] methyl] sulfinyl] benzimidazole, a compound that inhibits gastric acid secretion. Its empirical formula is C<sub>16</sub>H<sub>14</sub>F<sub>3</sub>N<sub>3</sub>O<sub>2</sub>S with a molecular weight of 369.37. PREVACID has the following structure:  </paragraph>
+                        <renderMultiMedia referencedObject="MM1"/>
+                        <paragraph>Lansoprazole is a white to brownish-white odorless crystalline powder which melts with decomposition at approximately 166°C. Lansoprazole is freely soluble in dimethylformamide; soluble in methanol; sparingly soluble in ethanol; slightly soluble in ethyl acetate, dichloromethane and acetonitrile; very slightly soluble in ether; and practically insoluble in hexane and water.</paragraph>
+                        <paragraph>Each delayed-release capsule contains enteric-coated granules consisting of 30 mg of lansoprazole (active ingredient) and the following inactive ingredients:  sugar sphere, sucrose, methacrylic acid copolymer, low substituted hydroxypropyl cellulose, starch, magnesium carbonate, talc, polyethylene glycol, titanium dioxide, polysorbate 80, hydroxypropyl cellulose, colloidal silicon dioxide, D&amp;C Red No. 28, FD&amp;C Blue No. 1, and FD&amp;C Red No. 40.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="8fa91531-cd11-4a62-bd18-c9d915d7d6dc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Amoxicillin Capsules, USP</title>
+                     <text>
+                        <paragraph>Amoxicillin is a semi synthetic antibiotic, an analogue of ampicillin, with a broad spectrum of bactericidal activity against many gram-positive and gram-negative microorganisms. Chemically it is (2<content styleCode="italics">S</content>, 5<content styleCode="italics">R</content>, 6<content styleCode="italics">R</content>)-6-[(<content styleCode="italics">R</content>)-(-)-2-amino-2-(<content styleCode="italics">p</content>-hydroxyphenyl)acetamido]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0] heptane-2-carboxylic acid trihydrate.  Its empirical formula is C<sub>16</sub>H<sub>19</sub>N<sub>3</sub>O<sub>5</sub>S • 3H<sub>2</sub>O with a molecular weight of 419.45.  Amoxicillin has the following structure:</paragraph>
+                        <renderMultiMedia referencedObject="MM2"/>
+                        <paragraph>Amoxicillin capsules are intended for oral administration.  Each yellow opaque capsule contains amoxicillin trihydrate equivalent to 500 mg of amoxicillin.</paragraph>
+                        <paragraph>Inactive ingredients: Capsule shells - yellow ferric oxide, titanium dioxide, gelatin, black ferric oxide; Capsule contents – cellulose microcrystalline and magnesium stearate. Meets USP Dissolution Test 2.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Chemical Structure</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="prevpac-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>Chemical Structure</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="prevpac-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <section>
+                     <id root="de999d39-24c8-49a5-a085-0be0c477ff1a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>BIAXIN<sup>®</sup> Filmtab<sup>®</sup> (clarithromycin tablets, USP)</title>
+                     <text>
+                        <paragraph>Clarithromycin is a semi-synthetic macrolide antibiotic.  Chemically, it is 6-<content styleCode="Italics">0</content>-methylerythromycin.  The molecular formula is C<sub>38</sub>H<sub>69</sub>NO<sub>13</sub>, and the molecular weight is 747.96. Clarithromycin has the following structure:</paragraph>
+                        <renderMultiMedia referencedObject="MM3"/>
+                        <paragraph>Clarithromycin is a white to off-white crystalline powder.  It is soluble in acetone, slightly soluble in methanol, ethanol, and acetonitrile, and practically insoluble in water. Each yellow oval film-coated immediate-release tablet contains 500 mg of clarithromycin and the following inactive ingredients: hypromellose, hydroxypropyl cellulose, colloidal silicon dioxide, croscarmellose sodium, D&amp;C Yellow No. 10, magnesium stearate, microcrystalline cellulose, povidone, propylene glycol, sorbic acid, sorbitan monooleate, titanium dioxide, and vanillin.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                     <component>
+                        <observationMedia ID="MM3">
+                           <text>Chemical Structure</text>
+                           <value mediaType="image/jpeg" xsi:type="ED">
+                              <reference value="prevpac-03.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="b14f3c28-7c89-481f-9ba4-d9523ecd51cc"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20100315"/>
+               <component>
+                  <section>
+                     <id root="ad771172-dd2c-4ea3-b39c-6e557f2dd77a"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>Pharmacokinetics</title>
+                     <text>
+                        <paragraph>Pharmacokinetics when all three of the PREVPAC components (PREVACID capsules, amoxicillin capsules, clarithromycin tablets) were coadministered has not been studied. Studies have shown no clinically significant interactions of PREVACID and amoxicillin or PREVACID and clarithromycin when administered together.  There is no information about the gastric mucosal concentrations of PREVACID, amoxicillin and clarithromycin after administration of these agents concomitantly.  The systemic pharmacokinetic information presented below is based on studies in which each product was administered alone.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                     <component>
+                        <section>
+                           <id root="9ed2069f-2dc8-45db-a8bf-ee06ae0210d0"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>PREVACID</title>
+                           <text>
+                              <paragraph>PREVACID capsules contain an enteric-coated granule formulation of lansoprazole. Absorption of lansoprazole begins only after the granules leave the stomach.  Absorption is rapid, with mean peak plasma levels of lansoprazole occurring after approximately 1.7 hours.  After a single-dose administration of 15 mg to 60 mg of oral lansoprazole, the peak plasma concentrations (C<sub>max</sub>) of lansoprazole and the area under the plasma concentration curves (AUCs) of lansoprazole were approximately proportional to the administered dose. Lansoprazole does not accumulate and its pharmacokinetics are unaltered by multiple dosing.</paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                           <component>
+                              <section>
+                                 <id root="fab74742-84c5-4073-b235-99950a615d51"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Absorption</title>
+                                 <text>
+                                    <paragraph>The absorption of lansoprazole is rapid, with the mean C<sub>max</sub> occurring approximately 1.7 hours after oral dosing, and the absolute bioavailability is over 80%.  In healthy subjects, the mean (± SD) plasma half-life was 1.5 (± 1.0) hours. Both the C<sub>max</sub> and AUC are diminished by about 50 to 70% if lansoprazole is given 30 minutes after food, compared to the fasting condition.  There is no significant food effect if lansoprazole is given before meals.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="db836a79-7819-4334-a791-bbdd758a2543"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Distribution</title>
+                                 <text>
+                                    <paragraph>Lansoprazole is 97% bound to plasma proteins.  Plasma protein binding is consistent over the concentration range of 0.05 to 5.0 mcg/mL.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="792ab886-8290-411e-9ab0-fe1c7369a032"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Metabolism</title>
+                                 <text>
+                                    <paragraph>Lansoprazole is extensively metabolized in the liver.  Two metabolites have been identified in measurable quantities in plasma (the hydroxylated sulfinyl and sulfone derivatives of lansoprazole).  These metabolites have very little or no antisecretory activity.  Lansoprazole is thought to be transformed into two active species which inhibit acid secretion by blocking the proton pump [(H<sup>+</sup>,K<sup>+</sup>)-ATPase enzyme system] at the secretory surface of the gastric parietal cell. The two active species are not present in the systemic circulation. The plasma elimination half-life of lansoprazole is less than 2 hours while the acid inhibitory effect lasts more than 24 hours. Therefore, the plasma elimination half-life of lansoprazole does not reflect its duration of suppression of gastric acid secretion.  </paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="ca1f828c-d2b7-43b5-ac8f-7fef2d40b33c"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Elimination</title>
+                                 <text>
+                                    <paragraph>Following single-dose oral administration of PREVACID, virtually no unchanged lansoprazole was excreted in the urine. In one study, after a single oral dose of <sup>14</sup>C-lansoprazole, approximately one-third of the administered radiation was excreted in the urine and two-thirds was recovered in the feces. This implies a significant biliary excretion of the lansoprazole metabolites.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="78ce23ad-0b6d-4cb7-b0dd-095ab32ab41c"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>Amoxicillin</title>
+                           <text>
+                              <paragraph>Amoxicillin is stable in the presence of gastric acid and may be given without regard to meals.  It is rapidly absorbed after oral administration.  It diffuses readily into most body tissues and fluids, with the exception of brain and spinal fluid, except when meninges are inflamed.  The half-life of amoxicillin is 61.3 minutes. Most of the amoxicillin is excreted unchanged in the urine; its excretion can be delayed by concurrent administration of probenecid.  In blood serum, amoxicillin is approximately 20% protein-bound.</paragraph>
+                              <paragraph>Orally administered doses of 500 mg amoxicillin capsules result in average peak blood levels 1 to 2 hours after administration in the range of 5.5 mcg/mL to 7.5 mcg/mL.</paragraph>
+                              <paragraph>Detectable serum levels are observed up to 8 hours after an orally administered dose of amoxicillin.  Approximately 60% of an orally administered dose of amoxicillin is excreted in the urine within 6 to 8 hours.</paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="64fcf594-81bd-4a56-8421-17f0c44160bb"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>Clarithromycin</title>
+                           <text>
+                              <paragraph>Clarithromycin is rapidly absorbed from the gastrointestinal tract after oral administration.  The absolute bioavailability of 250 mg clarithromycin tablets was approximately 50%.  For a single 500 mg dose of clarithromycin, food slightly delays the onset of clarithromycin absorption, increasing the peak time from approximately 2 to 2.5 hours.  Food also increases the clarithromycin peak plasma concentration by about 24%, but does not affect the extent of clarithromycin bioavailability.  Food does not affect the onset of formation of the antimicrobially active metabolite, 14-OH clarithromycin or its peak plasma concentration but does slightly decrease the extent of metabolite formation, indicated by an 11% decrease in area under the plasma concentration-time curve (AUC).  Therefore, clarithromycin tablets may be given without regard to food. </paragraph>
+                              <paragraph>In nonfasting healthy human subjects (males and females), peak plasma concentrations were attained within 2 to 3 hours after oral dosing.  Steady-state peak plasma clarithromycin concentrations were attained within 3 days and were approximately 3 to 4 mcg/mL with a 500 mg dose administered every 8 to 12 hours.  The elimination half-life of clarithromycin was 5 to 7 hours with 500 mg administered every 8 to 12 hours.  The nonlinearity of clarithromycin pharmacokinetics is slight at the recommended dose of 500 mg administered every 8 to 12 hours.  With a 500 mg every 8 to 12 hours dosing, the peak steady-state concentration of 14-OH clarithromycin is up to 1 mcg/mL, and its elimination half-life is about 7 to 9 hours.  The steady-state concentration of this metabolite is generally attained within 3 to 4 days.</paragraph>
+                              <paragraph>After a 500 mg tablet every 12 hours, the urinary excretion of clarithromycin is approximately 30%.  The renal clearance of clarithromycin approximates the normal glomerular filtration rate.  The major metabolite found in urine is 14-OH clarithromycin, which accounts for an additional 10% to 15% of the dose with a 500 mg tablet administered every 12 hours.</paragraph>
+                              <paragraph>The steady-state concentrations of clarithromycin in subjects with impaired hepatic function did not differ from those in normal subjects; however, the 14-OH clarithromycin concentrations were lower in the hepatically impaired subjects.  The decreased formation of 14-OH clarithromycin was at least partially offset by an increase in renal clearance of clarithromycin in the subjects with impaired hepatic function when compared to healthy subjects.</paragraph>
+                              <paragraph>The pharmacokinetics of clarithromycin was also altered in subjects with impaired renal function (<content styleCode="bold"/>see <content styleCode="bold">
+                                    <linkHtml href="#Precautions">PRECAUTIONS</linkHtml>
+                                 </content> and <content styleCode="bold">
+                                    <linkHtml href="#Dosage_And_Admin">DOSAGE AND ADMINISTRATION</linkHtml>
+                                 </content>).</paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="0f616411-dd0c-44ec-a21c-da71fa1b7d50"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>Special Populations</title>
+                           <effectiveTime value="20100315"/>
+                           <component>
+                              <section>
+                                 <id root="e4989a8e-aa40-4534-a686-00bc413e73ac"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Geriatric Use </title>
+                                 <text>
+                                    <paragraph>The clearance of lansoprazole is decreased in the elderly, with elimination half-life increased approximately 50% to 100%.  Because the mean half-life in the elderly remains between 1.9 to 2.9 hours, repeated once daily dosing does not result in accumulation of lansoprazole.  Peak plasma levels were not increased in the elderly.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="bd2bc817-0b03-4e68-a812-472e363a4377"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Renal Impairment</title>
+                                 <text>
+                                    <paragraph>In patients with severe renal impairment, plasma protein binding decreased by 1.0% to 1.5% after administration of 60 mg of lansoprazole.  Patients with renal impairment had a shortened elimination half-life and decreased total AUC (free and bound).  The AUC for free lansoprazole in plasma, however, was not related to the degree of renal impairment; and the C<sub>max</sub> and T<sub>max</sub> (time to reach the maximum concentration) were not different than the C<sub>max</sub> and T<sub>max</sub> from subjects with normal renal function.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="c98111e4-a6e7-4025-9501-dda837062c57"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Hepatic Impairment</title>
+                                 <text>
+                                    <paragraph>In patients with various degrees of chronic hepatic impairment, the mean plasma half-life of lansoprazole was prolonged from 1.5 hours to 3.2 to 7.2 hours.  An increase in the mean AUC of up to 500% was observed at steady state in hepatically-impaired patients compared to healthy subjects.  Consider dose reduction in patients with severe hepatic impairment.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="de1682be-54e7-41de-99bf-8d7b889dd5a4"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Gender</title>
+                                 <text>
+                                    <paragraph>In a study comparing 12 male and 6 female human subjects who received lansoprazole, no gender differences were found in pharmacokinetics and intragastric pH results (see <content styleCode="bold">PRECAUTIONS,</content> PREVACID, <content styleCode="bold">Use in Women</content>).</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="7671afaf-d9af-4ddd-b84e-3f9dbf4a6a00"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Race</title>
+                                 <text>
+                                    <paragraph>The pooled pharmacokinetic parameters of PREVACID from twelve U.S. Phase I studies (N=513) were compared to the mean pharmacokinetic parameters from two Asian studies (N=20).  The mean AUCs of PREVACID in Asian subjects were approximately twice those seen in pooled U.S. data; however, the inter-individual variability was high.  The C<sub>max</sub> values were comparable.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="18e4ebca-4007-4e99-a0b7-f20fedbefe73"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>Pharmacodynamics</title>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="56395a01-3686-4204-9fc6-3c34276a3b6f"/>
+               <code code="49489-8" codeSystem="2.16.840.1.113883.6.1" displayName="MICROBIOLOGY SECTION"/>
+               <title>Microbiology</title>
+               <text>
+                  <paragraph>Lansoprazole, clarithromycin and/or amoxicillin have been shown to be active against most strains of <content styleCode="Italics">Helicobacter pylori in vitro</content> and in clinical infections as described in the <content styleCode="bold">
+                        <linkHtml href="#Indications_And_Usage">INDICATIONS AND USAGE</linkHtml>
+                     </content> section.</paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+               <component>
+                  <section>
+                     <id root="28515b17-a6af-4a76-9e35-8f767cb118da"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>
+                        <content styleCode="Italics">Helicobacter pylori</content>
+                     </title>
+                     <text/>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="e7f2bd7e-21ee-4532-9d83-0dfcc2d51c14"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Pretreatment Resistance</title>
+                     <text>
+                        <paragraph>Clarithromycin pretreatment resistance rates (≥2.0 mcg/mL)  were 9.5% (91/960) by E-test and 11.3% (12/106) by agar dilution in the dual and triple therapy clinical trials (M93-125, M93-130, M93-131, M95-392, and M95-399).</paragraph>
+                        <paragraph>Amoxicillin pretreatment susceptible isolates (≤0.25 mcg/mL) occurred in 97.8% (936/957) and 98.0% (98/100) of the patients in the dual and triple therapy clinical trials by E-test and agar dilution, respectively. Twenty-one of 957 patients (2.2%) by E-test, and 2 of 100 patients (2.0%) by agar dilution, had amoxicillin pretreatment MICs of greater than 0.25 mcg/mL. One patient on the 14-day triple therapy regimen had an unconfirmed pretreatment amoxicillin minimum inhibitory concentration (MIC) of greater than 256 mcg/mL by E-test and the patient was eradicated of <content styleCode="Italics">H. pylori</content>.</paragraph>
+                        <table width="100%" ID="if56206ed-6f60-4896-83b0-a8bbcac8f4af">
+                           <caption>Table 1: Clarithromycin Susceptibility Test Results and Clinical/Bacteriological Outcomes<footnote>Includes only patients with pretreatment clarithromycin susceptibility test results</footnote>
+                           </caption>
+                           <col width="20%" align="left" valign="top"/>
+                           <col width="20%" align="center" valign="top"/>
+                           <col width="20%" align="center" valign="top"/>
+                           <col width="10%" align="center" valign="top"/>
+                           <col width="10%" align="center" valign="top"/>
+                           <col width="10%" align="center" valign="top"/>
+                           <col width="10%" align="center" valign="top"/>
+                           <thead>
+                              <tr styleCode="Botrule">
+                                 <th align="center" colspan="2" styleCode="Lrule">Clarithromycin Pretreatment Results</th>
+                                 <th colspan="5" styleCode="Lrule Rrule Botrule">Clarithromycin Post-treatment Results</th>
+                              </tr>
+                              <tr>
+                                 <th styleCode="Lrule"/>
+                                 <th/>
+                                 <th valign="top" styleCode="Lrule">
+                                    <content styleCode="italics">H. pylori</content> negative - eradicated</th>
+                                 <th colspan="4" styleCode="Lrule Rrule Botrule">
+                                    <content styleCode="italics">H. pylori</content> positive – not eradicated<br/>Post-treatment susceptibility results</th>
+                              </tr>
+                              <tr>
+                                 <th styleCode="Lrule"/>
+                                 <th/>
+                                 <th styleCode="Lrule"/>
+                                 <th styleCode="Lrule">S<footnote ID="footnoteb">Susceptible (S) MIC ≤0.25 mcg/mL, Intermediate (I) MIC 0.5 to 1.0 mcg/mL, Resistant (R) MIC ≥2 mcg/mL</footnote>
+                                 </th>
+                                 <th styleCode="Lrule">I<footnoteRef IDREF="footnoteb"/>
+                                 </th>
+                                 <th styleCode="Lrule">R<footnoteRef IDREF="footnoteb"/>
+                                 </th>
+                                 <th styleCode="Lrule Rrule">No MIC</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td colspan="7" styleCode="Lrule Rrule">Triple Therapy 14-Day (lansoprazole 30 mg twice daily/amoxicillin 1 g twice daily/clarithromycin 500 mg twice daily) (M95-399, M93-131, M95-392)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">Susceptible<footnoteRef IDREF="footnoteb"/>
+                                 </td>
+                                 <td styleCode="Lrule">112</td>
+                                 <td styleCode="Lrule">105</td>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule Rrule">7</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">Intermediate<footnoteRef IDREF="footnoteb"/>
+                                 </td>
+                                 <td styleCode="Lrule">3</td>
+                                 <td styleCode="Lrule">3</td>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule Rrule"/>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">Resistant<footnoteRef IDREF="footnoteb"/>
+                                 </td>
+                                 <td styleCode="Lrule">17</td>
+                                 <td styleCode="Lrule">6</td>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule">7</td>
+                                 <td styleCode="Lrule Rrule">4</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td colspan="7" styleCode="Lrule Rrule">Triple Therapy 10-Day (lansoprazole 30 mg twice daily/amoxicillin 1 g twice daily/clarithromycin 500 mg twice daily) (M95-399)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">Susceptible<footnoteRef IDREF="footnoteb"/>
+                                 </td>
+                                 <td styleCode="Lrule">42</td>
+                                 <td styleCode="Lrule">40</td>
+                                 <td styleCode="Lrule">1</td>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule">1</td>
+                                 <td styleCode="Lrule Rrule"/>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">Intermediate<footnoteRef IDREF="footnoteb"/>
+                                 </td>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">Resistant<footnoteRef IDREF="footnoteb"/>
+                                 </td>
+                                 <td styleCode="Lrule">4</td>
+                                 <td styleCode="Lrule">1</td>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule">3</td>
+                                 <td styleCode="Lrule Rrule"/>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Patients not eradicated of <content styleCode="italics">H. pylori</content> following lansoprazole/amoxicillin/clarithromycin triple therapy will likely have clarithromycin resistant <content styleCode="italics">H. pylori</content> isolates.  Therefore, for those patients who fail therapy, clarithromycin susceptibility testing should be done if possible.  Patients with clarithromycin resistant <content styleCode="italics">H. pylori</content> should not be treated with lansoprazole/amoxicillin/clarithromycin triple therapy or other regimens which include clarithromycin as the sole antimicrobial agent.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="3e05b198-8e38-4527-a1c5-41a8baee2757"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Amoxicillin Susceptibility Test Results and Clinical/Bacteriological Outcomes</title>
+                     <text>
+                        <paragraph>In the dual and triple therapy clinical trials, 82.6% (195/236) of the patients that had pretreatment amoxicillin susceptible MICs (≤0.25 mcg/mL) were eradicated of <content styleCode="italics">H. pylori</content>.  Of those with pretreatment amoxicillin MICs of greater than 0.25 mcg/mL, three of six had the <content styleCode="italics">H. pylori</content> eradicated.  A total of 30% (21/70) of the patients failed lansoprazole 30 mg three times daily per amoxicillin 1 g three times daily dual therapy and a total of 12.8% (22/172) of the patients failed the 10- and 14-day triple therapy regimens.  Post-treatment susceptibility results were not obtained on 11 of the patients who failed therapy.  Nine of the 11 patients with amoxicillin post-treatment MICs that failed the triple therapy regimen also had clarithromycin resistant <content styleCode="italics">H. pylori</content> isolates.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                     <component>
+                        <section>
+                           <id root="e7b9ec9a-96ce-49cc-9870-4597518fd868"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>Susceptibility Test for Helicobacter pylori</title>
+                           <text>
+                              <paragraph>The reference methodology for susceptibility testing of <content styleCode="Italics">H. pylori</content> is agar dilution MICs.<sup>1</sup> One to three microliters of an inoculum equivalent to a No. 2 McFarland standard (1 × 10<sup>7</sup> – 1 × 10<sup>8</sup> CFU/mL for <content styleCode="Italics">H. pylori</content>) are inoculated directly onto freshly prepared antimicrobial containing Mueller-Hinton agar plates with 5% aged defibrinated sheep blood (≥ 2 weeks old). The agar dilution plates are incubated at 35°C in a microaerobic environment produced by a gas generating system suitable for <content styleCode="Italics">Campylobacter</content> species. After 3 days of incubation, the MICs are recorded as the lowest concentration of antimicrobial agent required to inhibit growth of the organism. The clarithromycin and amoxicillin MIC values should be interpreted according to the following criteria:</paragraph>
+                              <table width="75%" ID="i0748acdc-6334-4b6e-88a4-594f2b1dad74">
+                                 <col align="center" valign="top" width="60%"/>
+                                 <col align="left" valign="top" width="40%"/>
+                                 <tbody>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule">
+                                          <content styleCode="bold">Clarithromycin MIC (mcg/mL)<footnote ID="fn3">These are tentative breakpoints for the agar dilution methodology and they should not be used to interpret results obtained using alternative methods.</footnote>
+                                          </content>
+                                       </td>
+                                       <td styleCode="Lrule Rrule">
+                                          <content styleCode="bold">Interpretation</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Toprule Lrule">≤0.25</td>
+                                       <td styleCode="Toprule Lrule Rrule">Susceptible (S)</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule">0.5-1.0</td>
+                                       <td styleCode="Lrule Rrule">Intermediate (I)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule">≥2.0</td>
+                                       <td styleCode="Lrule Rrule">Resistant (R)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule Toprule">
+                                       <td colspan="2"> </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Toprule Lrule">
+                                          <content styleCode="bold">Amoxicillin MIC (mcg/mL)<footnoteRef IDREF="fn3"/>
+                                             <sup>,</sup>
+                                          </content>
+                                       </td>
+                                       <td styleCode="Toprule Lrule Rrule">
+                                          <content styleCode="bold">Interpretation</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule">≤0.25</td>
+                                       <td styleCode="Lrule Rrule">Susceptible (S)</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <paragraph>Standardized susceptibility test procedures require the use of laboratory control microorganisms to control the technical aspects of the laboratory procedures. Standard clarithromycin and amoxicillin powders should provide the following MIC values:</paragraph>
+                              <table width="75%" ID="ia169dcc8-2cc9-479d-877d-8e1a4ec3f17e">
+                                 <col align="left" valign="top" width="34%"/>
+                                 <col align="left" valign="top" width="33%"/>
+                                 <col align="left" valign="top" width="33%"/>
+                                 <thead>
+                                    <tr>
+                                       <th styleCode="Lrule">Microorganisms</th>
+                                       <th styleCode="Lrule">Antimicrobial Agent</th>
+                                       <th styleCode="Lrule Rrule">MIC (mcg/mL)<footnote>These are quality control ranges for the agar dilution methodology and they should not be used to control test results obtained using alternative methods.</footnote>
+                                       </th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td styleCode="Lrule">
+                                          <content styleCode="Italics">H. pylori</content> ATCC 43504</td>
+                                       <td styleCode="Lrule">Clarithromycin</td>
+                                       <td styleCode="Lrule Rrule">0.015-0.12</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule">
+                                          <content styleCode="Italics">H. pylori</content> ATCC 43504</td>
+                                       <td styleCode="Lrule">Amoxicillin</td>
+                                       <td styleCode="Lrule Rrule">0.015-0.12</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="b4863486-1f56-4e8d-96da-6a054cd0a534"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>Antisecretory activity</title>
+                           <text>
+                              <paragraph>After oral administration, lansoprazole was shown to significantly decrease the basal acid output and significantly increase the mean gastric pH and percent of time the gastric pH was greater than 3 and greater than 4.  Lansoprazole also significantly reduced meal-stimulated gastric acid output and secretion volume, as well as pentagastrin-stimulated acid output.  In patients with hypersecretion of acid, lansoprazole significantly reduced basal and pentagastrin-stimulated gastric acid secretion.  Lansoprazole inhibited the normal increases in secretion volume, acidity and acid output induced by insulin.</paragraph>
+                              <paragraph>The intragastric pH results of a five-day, pharmacodynamic, crossover study of 15 mg and 30 mg of once daily lansoprazole are presented in Table 2.</paragraph>
+                              <table width="75%" ID="i03fb7ad1-5b59-4a6b-89f5-fbe779f82f48">
+                                 <caption>Table 2: Mean Antisecretory Effects After Single and Multiple Daily PREVACID Dosing</caption>
+                                 <col align="left" valign="top" width="30%"/>
+                                 <col align="center" valign="top" width="14%"/>
+                                 <col align="center" valign="top" width="14%"/>
+                                 <col align="center" valign="top" width="14%"/>
+                                 <col align="center" valign="top" width="14%"/>
+                                 <col align="center" valign="top" width="14%"/>
+                                 <thead>
+                                    <tr styleCode="Botrule">
+                                       <th colspan="2" styleCode="Lrule"/>
+                                       <th colspan="4" styleCode="Lrule Rrule">PREVACID</th>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <th styleCode="Lrule" valign="bottom">Parameter</th>
+                                       <th styleCode="Lrule">Baseline Value</th>
+                                       <th colspan="2" styleCode="Lrule">15 mg</th>
+                                       <th colspan="2" styleCode="Lrule Rrule">30 mg</th>
+                                    </tr>
+                                    <tr>
+                                       <th styleCode="Lrule"/>
+                                       <th styleCode="Lrule"/>
+                                       <th styleCode="Lrule">Day 1</th>
+                                       <th styleCode="Lrule">Day 5</th>
+                                       <th styleCode="Lrule">Day 1</th>
+                                       <th styleCode="Lrule Rrule">Day 5</th>
+                                    </tr>
+                                 </thead>
+                                 <tfoot>
+                                    <tr>
+                                       <td colspan="6" align="left">NOTE:  An intragastric pH of  greater than 4 reflects a reduction in gastric acid by 99%.</td>
+                                    </tr>
+                                 </tfoot>
+                                 <tbody>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule">Mean 24 Hour pH</td>
+                                       <td styleCode="Lrule">2.1</td>
+                                       <td styleCode="Lrule">2.7<footnote ID="fn5">(p&lt;0.05) versus baseline only.</footnote>
+                                       </td>
+                                       <td styleCode="Lrule">4.0<footnoteRef IDREF="fn5"/>
+                                       </td>
+                                       <td styleCode="Lrule">3.6<footnote ID="fn6">(p&lt;0.05) versus baseline and lansoprazole 15 mg.</footnote>
+                                       </td>
+                                       <td styleCode="Lrule Rrule">4.9<footnoteRef IDREF="fn6"/>
+                                       </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule">Mean Nighttime Hour pH</td>
+                                       <td styleCode="Lrule">1.9</td>
+                                       <td styleCode="Lrule">2.4</td>
+                                       <td styleCode="Lrule">3.0<footnoteRef IDREF="fn5"/>
+                                       </td>
+                                       <td styleCode="Lrule">2.6</td>
+                                       <td styleCode="Lrule Rrule">3.8<footnoteRef IDREF="fn6"/>
+                                       </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule">% Time Gastric pH&gt;3</td>
+                                       <td styleCode="Lrule">18</td>
+                                       <td styleCode="Lrule">33<footnoteRef IDREF="fn5"/>
+                                       </td>
+                                       <td styleCode="Lrule">59<footnoteRef IDREF="fn5"/>
+                                       </td>
+                                       <td styleCode="Lrule">51<footnoteRef IDREF="fn6"/>
+                                       </td>
+                                       <td styleCode="Lrule Rrule">72<footnoteRef IDREF="fn6"/>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule">% Time Gastric pH&gt;4</td>
+                                       <td styleCode="Lrule">12</td>
+                                       <td styleCode="Lrule">22<footnoteRef IDREF="fn5"/>
+                                       </td>
+                                       <td styleCode="Lrule">49<footnoteRef IDREF="fn5"/>
+                                       </td>
+                                       <td styleCode="Lrule">41<footnoteRef IDREF="fn6"/>
+                                       </td>
+                                       <td styleCode="Lrule Rrule">66<footnoteRef IDREF="fn6"/>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <paragraph>After the initial dose in this study, increased gastric pH was seen within 1 to 2 hours with 30 mg of lansoprazole and 2 to 3 hours with 15 mg of  lansoprazole.  After multiple daily dosing, increased gastric pH was seen within the first hour post-dosing with 30 mg of lansoprazole and within 1 to 2 hours post-dosing with 15 mg of lansoprazole.</paragraph>
+                              <paragraph>Acid suppression may enhance the effect of antimicrobials in eradicating <content styleCode="Italics">Helicobacter pylori (H. pylori)</content>.  The percentage of time gastric pH was elevated above 5 and 6 was evaluated in a crossover study of PREVACID given daily, twice daily  and three times daily.</paragraph>
+                              <table width="75%" ID="i147e3e3d-4197-4701-8256-f7ba63972bea">
+                                 <caption>Table 3: Mean Antisecretory Effects After 5 Days of Twice Daily and Three Times Daily Dosing</caption>
+                                 <col align="left" valign="top" width="28%"/>
+                                 <col align="center" valign="top" width="18%"/>
+                                 <col align="center" valign="top" width="18%"/>
+                                 <col align="center" valign="top" width="18%"/>
+                                 <col align="center" valign="top" width="18%"/>
+                                 <thead>
+                                    <tr>
+                                       <th align="center" colspan="5" styleCode="Lrule Rrule">PREVACID</th>
+                                    </tr>
+                                    <tr>
+                                       <th styleCode="Toprule Rrule Lrule" valign="middle">Parameter</th>
+                                       <th styleCode="Toprule Rrule" valign="bottom">30 mg daily</th>
+                                       <th styleCode="Toprule Rrule">15 mg twice daily</th>
+                                       <th styleCode="Toprule Rrule">30 mg twice daily</th>
+                                       <th styleCode="Toprule Rrule">30 mgthree time daily</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Rrule Lrule">% Time Gastric pH&gt;5</td>
+                                       <td styleCode="Rrule">43</td>
+                                       <td styleCode="Rrule">47</td>
+                                       <td styleCode="Rrule">59
+                                       </td>
+                                       <td styleCode="Rrule Lrule">77<footnote ID="fn8">(p&lt;0.05) versus PREVACID 30 mg daily, 15 mg twice daily and 30 mg twice daily</footnote>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Rrule Lrule">% Time Gastric pH&gt;6</td>
+                                       <td styleCode="Rrule">20</td>
+                                       <td styleCode="Rrule">23</td>
+                                       <td styleCode="Rrule">28</td>
+                                       <td styleCode="Rrule Lrule">45<footnoteRef IDREF="fn8"/>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <paragraph>The inhibition of gastric acid secretion as measured by intragastric pH gradually returned  to normal over two to four days after multiple doses.  There was no indication of rebound gastric acidity.</paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Clinical_Studies">
+               <id root="7f526618-2968-4631-9640-12190eb8ee10"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>CLINICAL STUDIES</title>
+               <effectiveTime value="20100315"/>
+               <component>
+                  <section>
+                     <id root="920eb074-bf77-4da0-bd30-470ccd0712da"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>
+                        <content styleCode="italics">H. pylori</content> Eradication to Reduce the Risk of Duodenal Ulcer Recurrence</title>
+                     <text>
+                        <paragraph>Randomized, double-blind clinical studies performed in the U.S. in patients with <content styleCode="Italics">H. pylori</content> and duodenal ulcer disease (defined as an active ulcer or history of an ulcer within one year) evaluated the efficacy of PREVPAC as triple 14-day therapy for the eradication of <content styleCode="Italics">H. pylori</content>.  The triple therapy regimen (PREVACID 30 mg twice daily/amoxicillin 1 g twice daily/clarithromycin 500 mg twice daily) produced statistically significantly higher eradication rates than PREVACID plus amoxicillin, PREVACID plus clarithromycin, and amoxicillin plus clarithromycin dual therapies.</paragraph>
+                        <paragraph>
+                           <content styleCode="Italics">H. pylori</content> eradication was defined as two negative tests (culture and histology) at 4 to 6 weeks following the end of treatment.</paragraph>
+                        <paragraph>Triple therapy was shown to be more effective than all possible dual therapy combinations.  The combination of PREVACID plus amoxicillin and clarithromycin as triple therapy was effective in eradicating <content styleCode="Italics">H. pylori</content>.  Eradication of <content styleCode="Italics">H. pylori</content> has been shown to reduce the risk of duodenal ulcer recurrence.</paragraph>
+                        <paragraph>A randomized, double-blind clinical study performed in the U.S. in patients with <content styleCode="Italics">H. pylori</content> and duodenal ulcer disease (defined as an active ulcer or history of an ulcer within one year) compared the efficacy of PREVACID triple therapy for 10 and 14 days. This study established that the 10-day triple therapy was equivalent to the 14-day triple therapy in eradicating <content styleCode="Italics">H. pylori</content>.</paragraph>
+                        <table width="80%" ID="iaf00bc98-d898-479b-8fd2-a70179acb501">
+                           <caption>Table 4 H. pylori Eradication Rates – Triple  Therapy</caption>
+                           <col align="center" valign="top" width="25%"/>
+                           <col align="center" valign="top" width="25%"/>
+                           <col align="center" valign="top" width="25%"/>
+                           <col align="center" valign="top" width="25%"/>
+                           <thead>
+                              <tr styleCode="Toprule">
+                                 <th colspan="4">(PREVACID/amoxicillin/clarithromycin)<br/>Percent of Patients Cured <br/>[95% Confidence Interval]<br/>(Number of patients)</th>
+                              </tr>
+                              <tr>
+                                 <th align="center" valign="middle" styleCode="Lrule Toprule">Study</th>
+                                 <th valign="middle" styleCode="Lrule Toprule">Duration</th>
+                                 <th styleCode="Lrule Toprule" valign="middle">Triple Therapy Evaluable Analysis
+                                 </th>
+                                 <th styleCode="Lrule Rrule Toprule">Triple Therapy Intent-to-Treat Analysis
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">M93-131</td>
+                                 <td styleCode="Lrule">14 days</td>
+                                 <td styleCode="Lrule">92<footnote ID="fn11">(p&lt;0.05) versus PREVACID/amoxicillin and PREVACID/clarithromycin dual therapy</footnote>
+                                    <br/>[80.0-97.7]<br/>(N=48)</td>
+                                 <td styleCode="Lrule Rrule">86<footnoteRef IDREF="fn11"/>
+                                    <br/>[73.3-93.5]<br/>(N=55)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">M95-392</td>
+                                 <td styleCode="Lrule">14 days</td>
+                                 <td styleCode="Lrule">86<footnote ID="fn12">		(p&lt;0.05) versus clarithromycin/amoxicillin dual therapy</footnote>
+                                    <br/>[75.7-93.6]<br/>(N=66)</td>
+                                 <td styleCode="Lrule Rrule">83<footnoteRef IDREF="fn12"/>
+                                    <br/>[72.0-90.8]<br/>(N=70)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">M95-399
+                                 </td>
+                                 <td styleCode="Lrule Botrule">14 days</td>
+                                 <td styleCode="Lrule Botrule">85<br/>[77.0-91.0]<br/>(N=113)</td>
+                                 <td styleCode="Lrule Rrule Botrule">82<br/>[73.9-88.1]<br/>(N=126)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule">10 days</td>
+                                 <td styleCode="Lrule">84<br/>[76.0-89.8]<br/>(N=123)</td>
+                                 <td styleCode="Lrule Rrule">81<br/>[73.9-87.6]<br/>(N=135)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Indications_And_Usage">
+               <id root="bbd6c8a3-626e-4e32-9150-9fda4570cc37"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <effectiveTime value="20100315"/>
+               <component>
+                  <section>
+                     <id root="5027b9b4-c8c9-47ea-9b82-b4195900a94e"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>
+                        <content styleCode="italics">H. pylori</content> Eradication to Reduce the Risk of Duodenal Ulcer Recurrence</title>
+                     <text>
+                        <paragraph>The components in PREVPAC (PREVACID, amoxicillin, and clarithromycin) are indicated for the treatment of patients with <content styleCode="Italics">H. pylori</content> infection and duodenal ulcer disease (active or one-year history of a duodenal ulcer) to eradicate <content styleCode="Italics">H. pylori</content>.  Eradication of <content styleCode="Italics">H. pylori</content> has been shown to reduce the risk of duodenal ulcer recurrence (see <content styleCode="bold">
+                              <linkHtml href="#Clinical_Studies">CLINICAL STUDIES</linkHtml>
+                           </content> and <content styleCode="bold">
+                              <linkHtml href="#Dosage_And_Admin">DOSAGE AND ADMINISTRATION</linkHtml>)</content>.</paragraph>
+                        <paragraph>To reduce the development of drug-resistant bacteria and maintain the effectiveness of PREVPAC and other antibacterial drugs, PREVPAC should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy.</paragraph>
+                        <paragraph>Please refer to the full prescribing information for amoxicillin and clarithromycin.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Contraindications">
+               <id root="19bad41e-5012-4aa6-ba76-25d07fcf5e37"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>PREVPAC is contraindicated in patients with known severe hypersensitivity to any component of the formulation of PREVACID.</paragraph>
+                  <paragraph>A history of allergic reaction to any of the penicillins is a contraindication.</paragraph>
+                  <paragraph>Clarithromycin is contraindicated in patients with a known hypersensitivity to clarithromycin, erythromycin, or any of the macrolide antibiotics.</paragraph>
+                  <paragraph>Concomitant administration of PREVPAC and any of the following drugs is contraindicated: cisapride, pimozide, astemizole, terfenadine, ergotamine or dihydroergotamine (see <content styleCode="bold">
+                        <linkHtml href="#Precautions_Drug_Interactions">Drug Interactions</linkHtml>
+                     </content>).  There have been post-marketing reports of drug interactions when clarithromycin and/or erythromycin are co-administered with cisapride, pimozide, astemizole, or terfenadine resulting in cardiac arrhythmias (QT prolongation, ventricular tachycardia, ventricular fibrillation, and torsades de pointes) most likely due to inhibition of metabolism of these drugs by erythromycin and clarithromycin.  Fatalities have been reported.</paragraph>
+                  <paragraph>For information about contraindications of other drugs that may be used in combination with amoxicillin or clarithromycin, refer to the <content styleCode="bold">CONTRAINDICATIONS</content> section of their package inserts.</paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Warnings">
+               <id root="2b06cae8-9b55-442e-8c76-28f6466f7936"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph>SERIOUS AND OCCASIONALLY FATAL HYPERSENSITIVITY (ANAPHYLACTIC) REACTIONS HAVE BEEN REPORTED IN PATIENTS ON PENICILLIN THERAPY.  ALTHOUGH ANAPHYLAXIS IS MORE FREQUENT FOLLOWING PARENTERAL THERAPY, IT HAS OCCURRED IN PATIENTS ON ORAL PENICILLINS.  THESE REACTIONS ARE MORE LIKELY TO OCCUR IN INDIVIDUALS WITH A HISTORY OF PENICILLIN HYPERSENSITIVITY AND/OR A HISTORY OF SENSITIVITY TO MULTIPLE ALLERGENS. THERE HAVE BEEN REPORTS OF INDIVIDUALS WITH A HISTORY OF PENICILLIN HYPERSENSITIVITY WHO HAVE EXPERIENCED SEVERE REACTIONS WHEN TREATED WITH CEPHALOSPORINS.  BEFORE INITIATING THERAPY WITH AMOXICILLIN, CAREFUL INQUIRY SHOULD BE MADE CONCERNING PREVIOUS HYPERSENSITIVITY REACTIONS TO PENICILLINS, CEPHALOSPORINS, OR OTHER ALLERGENS.  IF AN ALLERGIC REACTION OCCURS, AMOXICILLIN SHOULD BE DISCONTINUED AND APPROPRIATE THERAPY INSTITUTED.  <content styleCode="bold">SERIOUS ANAPHYLACTIC REACTIONS REQUIRE IMMEDIATE EMERGENCY TREATMENT WITH EPINEPHRINE. OXYGEN, INTRAVENOUS STEROIDS, AND AIRWAY MANAGEMENT, INCLUDING INTUBATION, SHOULD ALSO BE ADMINISTERED AS INDICATED.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">CLARITHROMYCIN SHOULD NOT BE USED IN PREGNANT WOMEN EXCEPT IN CLINICAL CIRCUMSTANCES WHERE NO ALTERNATIVE THERAPY IS APPROPRIATE.  IF PREGNANCY OCCURS WHILE TAKING CLARITHROMYCIN, THE PATIENT SHOULD BE APPRISED OF THE POTENTIAL HAZARD TO THE FETUS.  CLARITHROMYCIN HAS DEMONSTRATED ADVERSE EFFECTS OF PREGNANCY OUTCOME AND/OR EMBRYO-FETAL DEVELOPMENT IN MONKEYS, RATS, MICE, AND RABBITS AT DOSES THAT PRODUCED PLASMA LEVELS 2 TO 17 TIMES THE SERUM LEVELS ACHIEVED IN HUMANS TREATED AT THE MAXIMUM RECOMMENDED HUMAN DOSES (</content>see <content styleCode="bold">
+                        <linkHtml href="#Precautions_Pregnancy">PRECAUTIONS - Pregnancy</linkHtml>).</content>
+                  </paragraph>
+                  <paragraph>There have been post-marketing reports of colchicine toxicity with concomitant use of clarithromycin and colchicine, especially in the elderly, some of which occurred in patients with renal insufficiency.  Deaths have been reported in some such patients (see <content styleCode="bold">
+                        <linkHtml href="#Precautions">PRECAUTIONS</linkHtml>
+                     </content>).</paragraph>
+                  <paragraph>For information about warnings of other drugs that may be used in combination with amoxicillin or clarithromycin, refer to the <content styleCode="bold">WARNINGS</content> section of their package inserts.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Clostridium difficile</content> associated diarrhea (CDAD) has been reported with use of nearly all antibacterial agents, including clarithromycin and/or amoxicillin, and may range in severity from mild diarrhea to fatal colitis.  Treatment with antibacterial agents alters the normal flora of the colon leading to overgrowth of <content styleCode="italics">C. difficile</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">C. difficile</content> produces toxins A and B which contribute to the development of CDAD.  Hypertoxin producing strains of <content styleCode="italics">C. difficile</content> cause increased morbidity and mortality, as these infections can be refractory to antimicrobial therapy and may require colectomy.  CDAD must be considered in all patients who present with diarrhea following antibiotic use.  Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents.</paragraph>
+                  <paragraph>If CDAD is suspected or confirmed, ongoing antibiotic use not directed against <content styleCode="italics">C. difficile</content> may need to be discontinued.  Appropriate fluid and electrolyte management, protein supplementation, antibiotic treatment of <content styleCode="italics">C. difficile</content>, and surgical evaluation should be instituted as clinically indicated.</paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Precautions">
+               <id root="07c6d8e1-0c15-45a5-946b-f27478e6dbf9"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <text>
+                  <paragraph>Symptomatic response to therapy with PREVPAC does not preclude the presence of gastric malignancy.</paragraph>
+                  <paragraph>The possibility of superinfections with mycotic or bacterial pathogens should be kept in mind during therapy. If superinfections occur, PREVPAC should be discontinued and appropriate therapy instituted.</paragraph>
+                  <paragraph>Prescribing PREVPAC in the absence of a proven or strongly suspected bacterial infection or a prophylactic indication is unlikely to provide benefit to the patient and increases the risk of the development of drug-resistant bacteria.</paragraph>
+                  <paragraph>Clarithromycin is principally excreted via the liver and kidney.  Clarithromycin may be administered without dosage adjustment to patients with hepatic impairment and normal renal function.  However, in the presence of severe renal impairment with or without coexisting hepatic impairment, decreased dosage or prolonged dosing intervals may be appropriate.</paragraph>
+                  <paragraph>Exacerbation of symptoms of myasthenia gravis and new onset of symptoms of myasthenic syndrome has been reported in patients receiving clarithromycin therapy.</paragraph>
+                  <paragraph>For information about precautions of other drugs that may be used in combination with PREVPAC, refer to the <content styleCode="bold">PRECAUTIONS</content> section of their package inserts.</paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+               <component>
+                  <section>
+                     <id root="f10d88c3-6fc8-445a-8f7b-3909cb7e696f"/>
+                     <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+                     <title>Information for Patients</title>
+                     <text>
+                        <paragraph>Each dose of PREVPAC contains four pills:  one pink and black capsule (PREVACID), two opaque, yellow capsules (amoxicillin) and one yellow tablet (clarithromycin).  Each dose should be taken twice per day before eating. Patients should be instructed to swallow each pill whole.</paragraph>
+                        <paragraph>PREVPAC  may interact with some drugs; therefore patients should be advised to report to their doctor the use of any other medications.</paragraph>
+                        <paragraph>Patients should be counseled that antibacterial drugs including PREVPAC should only be used to treat bacterial infections. They do not treat viral infections (e.g., the common cold). When PREVPAC is prescribed to treat a bacterial infection, patients should be told that although it is common to feel better early in the course of therapy, the medication should be taken exactly as directed. Skipping doses or not completing the full course of therapy may (1) decrease the effectiveness of the immediate treatment and (2) increase the likelihood that bacteria will develop resistance and will not be treatable by PREVPAC or other antibacterial drugs in the future.</paragraph>
+                        <paragraph>Diarrhea is a common problem caused by antibiotics which usually ends when the antibiotic is discontinued. Sometimes after starting treatment with antibiotics, patients can develop watery and bloody stools (with or without stomach cramps and fever) even as late as two or more months after having taken the last dose of the antibiotic. If this occurs, patients should contact their physician as soon as possible.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="badc30b3-8586-4ea9-9cf9-1b0a1e4d1192"/>
+                     <code code="34075-2" codeSystem="2.16.840.1.113883.6.1" displayName="LABORATORY TESTS SECTION"/>
+                     <title>Laboratory Tests</title>
+                     <effectiveTime value="20100315"/>
+                     <component>
+                        <section>
+                           <id root="f58af707-c72d-4630-ac24-6df7e0f3d6bf"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>Amoxicillin</title>
+                           <text>
+                              <paragraph>As with any potent drug, periodic assessment of renal, hepatic, and hematopoietic function should be made during prolonged therapy.</paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Precautions_Drug_Interactions">
+                     <id root="ca2dfbc2-b042-434b-a048-207d7beeb7ce"/>
+                     <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title>Drug Interactions</title>
+                     <text>
+                        <paragraph>No drug interaction studies have been conducted specifically with PREVPAC. The following drug interactions are for the individual drug components: PREVACID (lansoprazole), amoxicillin, and clarithromycin.  Therefore, the decision to adjust dosage should depend on the clinician's assessment of among other things, the cumulative or net effect of the drug components of PREVPAC. </paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                     <component>
+                        <section>
+                           <id root="95c02f71-8664-489f-949a-d748c2b4f194"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>PREVACID</title>
+                           <text>
+                              <paragraph>PREVACID causes long-lasting inhibition of gastric acid secretion. PREVACID substantially decreases the systemic concentrations of the HIV protease inhibitor atazanavir, which is dependent upon the presence of gastric acid for absorption, and may result in a loss of therapeutic effect of atazanavir and the development of HIV resistance. Therefore, PREVACID, or other proton pump inhibitors, should not be co-administered with atazanavir.</paragraph>
+                              <paragraph>It is theoretically possible that PREVACID may also interfere with the absorption of other drugs where gastric pH is an important determinant of bioavailability (e.g., ampicillin esters, digoxin, iron salts, ketoconazole).</paragraph>
+                              <paragraph>PREVACID is metabolized through the cytochrome P<sub>450</sub> system, specifically through the CYP3A and CYP2C19 isozymes.  Studies have shown that PREVACID does not have clinically significant interactions with other drugs metabolized by the cytochrome P<sub>450</sub> system, such as warfarin, antipyrine, indomethacin, ibuprofen, phenytoin, propranolol, prednisone, diazepam, or clarithromycin in healthy subjects.  These compounds are metabolized through various cytochrome P<sub>450</sub> isozymes including CYP1A2, CYP2C9, CYP2C19, CYP2D6, and CYP3A.  </paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                           <component>
+                              <section>
+                                 <id root="43ec4923-b60c-43a4-9631-d33d53395f07"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Theophylline</title>
+                                 <text>
+                                    <paragraph>When PREVACID was administered concomitantly with theophylline (CYP1A2, CYP3A), a minor increase (10%) in the clearance of theophylline was seen.  Because of the small magnitude and the direction of the effect on theophylline clearance, this interaction is unlikely to be of clinical concern.  Nonetheless, individual patients may require additional titration of their theophylline dosage when PREVACID is started or stopped to ensure clinically effective blood levels.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="cadb1b29-c5f7-488a-940c-85a522e20fc6"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Tacrolimus</title>
+                                 <text>
+                                    <paragraph>Concomitant administration of lansoprazole and tacrolimus may increase whole blood levels of tacrolimus, especially in transplant patients who are intermediate or poor metabolizers of CYP2C19.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="2f17b84a-f13d-4721-a431-2a90a7c84e28"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Warfarin</title>
+                                 <text>
+                                    <paragraph>In a study of healthy subjects, neither the pharmacokinetics of warfarin enantiomers nor prothrombin time were affected following single or multiple 60 mg doses of lansoprazole.  However, there have been reports of increased International Normalized Ratio (INR) and prothrombin time in patients receiving proton pump inhibitors, including PREVACID, and warfarin concomitantly.  Increases in INR and prothrombin time may lead to abnormal bleeding and even death.  Patients treated with proton pump inhibitors and warfarin concomitantly may need to be monitored for increases in INR and prothrombin time.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="4530559d-7e51-46c1-92e0-8e10ddf656be"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Sucralfate</title>
+                                 <text>
+                                    <paragraph>In a single-dose crossover study examining PREVACID 30 mg and omeprazole 20 mg each administered alone and concomitantly with sucralfate 1 gram, absorption of the proton pump inhibitors was delayed and their bioavailability was reduced by 17% and 16%, respectively, when administered concomitantly with sucralfate. Therefore, proton pump inhibitors should be taken at least 30 minutes prior to sucralfate. In clinical trials, antacids were administered concomitantly with PREVACID and there was no evidence of a change in the efficacy of PREVACID.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="2e6d6dc5-ad2b-4e06-ab5b-f75ea84b2598"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>Amoxicillin</title>
+                           <text>
+                              <paragraph>Probenecid decreases the renal tubular secretion of amoxicillin.  Concurrent use of amoxicillin and probenecid may result in increased and prolonged blood levels of amoxicillin.</paragraph>
+                              <paragraph>Chloramphenicol, macrolides, sulfonamides, and tetracyclines may interfere with bactericidal effects of penicillin.  This has been demonstrated <content styleCode="Italics">in vitro</content>; however, the clinical significance of this interaction is not well documented.</paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="8b185fe3-70db-4dec-8daa-581315e378ec"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>Clarithromycin</title>
+                           <text>
+                              <paragraph>Clarithromycin use in patients who are receiving theophylline may be associated with an increase of serum theophylline concentrations.  Monitoring of serum theophylline concentrations should be considered for patients receiving high doses of theophylline or with baseline concentrations in the upper therapeutic range.  In two studies in which theophylline was administered with clarithromycin (a theophylline sustained-release formulation was dosed at either 6.5 mg/kg  or 12 mg/kg  together with 250 or 500 mg q12h clarithromycin), the steady-state levels of C<sub>max</sub>, C<sub>min</sub>, and the area under the serum concentration time curve (AUC) of theophylline increased about 20%.</paragraph>
+                              <paragraph>Concomitant administration of single doses of clarithromycin and carbamazepine has been shown to result in increased plasma concentrations of carbamazepine.  Blood level monitoring of carbamazepine may be considered.</paragraph>
+                              <paragraph>When clarithromycin and terfenadine were coadministered, plasma concentrations of the active acid metabolite of terfenadine were threefold higher, on average, than the values observed when terfenadine was administered alone.  The pharmacokinetics of clarithromycin and the 14-OH-clarithromycin were not significantly affected by coadministration of terfenadine once clarithromycin reached steady-state conditions. Concomitant administration of clarithromycin with terfenadine is contraindicated (see <content styleCode="bold">
+                                    <linkHtml href="#Contraindications">CONTRAINDICATIONS</linkHtml>
+                                 </content>).</paragraph>
+                              <paragraph>Simultaneous oral administration of clarithromycin tablets and zidovudine to HIV-infected adult patients resulted in decreased steady-state zidovudine concentrations. When 500 mg of clarithromycin were administered twice daily, steady-state zidovudine AUC was reduced by a mean of 12% (n = 4). Individual values ranged from a decrease of 34% to an increase of 14%. Based on limited data in 24 patients, when clarithromycin tablets were administered two to four hours prior to oral zidovudine, the steady-state zidovudine C<sub>max</sub> was increased by approximately 2-fold, whereas the AUC was unaffected.</paragraph>
+                              <paragraph>Simultaneous administration of clarithromycin tablets and didanosine to 12 HIV-infected adult patients resulted in no statistically significant change in didanosine pharmacokinetics.</paragraph>
+                              <paragraph>Concomitant administration of fluconazole 200 mg daily and clarithromycin 500 mg twice daily to 21 healthy volunteers led to increases in the mean steady-state clarithromycin C<sub>min</sub> and AUC of 33% and 18%, respectively. Steady-state concentrations of 14-OH clarithromycin were not significantly affected by concomitant administration of fluconazole.</paragraph>
+                              <paragraph>Concomitant administration of clarithromycin and ritonavir (n = 22) resulted in a 77% increase in clarithromycin AUC and a 100% decrease in the AUC of 14-OH clarithromycin. Clarithromycin may be administered without dosage adjustment to patients with normal renal function taking ritonavir. However, for patients with renal impairment and receiving  ritonavir, the dose of clarithromycin should be reduced.  Refer to the clarithromycin package insert for complete information.   </paragraph>
+                              <paragraph>Spontaneous reports in the post-marketing period suggest that concomitant administration of clarithromycin and oral anticoagulants may potentiate the effects of the oral anticoagulants.  Prothrombin times should be carefully monitored while patients are receiving clarithromycin and oral anticoagulants simultaneously.</paragraph>
+                              <paragraph>Elevated digoxin serum concentrations in patients receiving clarithromycin and digoxin concomitantly have also been reported in post-marketing surveillance.  Some patients have shown clinical signs consistent with digoxin toxicity, including potentially fatal arrhythmias. Serum digoxin levels should be carefully monitored while patients are receiving digoxin and clarithromycin simultaneously.</paragraph>
+                              <paragraph>Colchicine is a substrate for both CYP3A and the efflux transporter, P-glycoprotein (Pgp).  Clarithromycin and other macrolides are known to inhibit CYP3A and Pgp.  When clarithromycin and colchicine are administered together, inhibition of Pgp and/or CYP3A by clarithromycin may lead to increased exposure to colchicine.  Patients should be monitored for clinical symptoms of colchicine toxicity (see <content styleCode="bold">
+                                    <linkHtml href="#Warnings">WARNINGS</linkHtml>
+                                 </content>).</paragraph>
+                              <paragraph>Erythromycin and clarithromycin are substrates and inhibitors of the 3A isoform subfamily of the cytochrome P450 enzyme system (CYP3A).  Coadministration of erythromycin or clarithromycin and a drug primarily metabolized by CYP3A may be associated with elevations in drug concentrations that could increase or prolong both the therapeutic and adverse effects of the concomitant drug.  Dosage adjustments may be considered, and when possible, serum concentrations of drugs primarily metabolized by CYP3A should be monitored closely in patients concurrently receiving clarithromycin or erythromycin.</paragraph>
+                              <paragraph>The following are examples of some clinically significant CYP3A based drug interactions.  Interactions with other drugs metabolized by the CYP3A isoform are also possible.  Increased serum concentrations of carbamazepine and the active acid metabolite of terfenadine were observed in clinical trials with clarithromycin.</paragraph>
+                              <paragraph>The following CYP3A based drug interactions have been observed with erythromycin products and/or with clarithromycin in post-marketing experience:</paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                           <component>
+                              <section>
+                                 <id root="d9ef096b-24fe-4f01-ad69-2a5d7a38cd68"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Antiarrhythmics</title>
+                                 <text>
+                                    <paragraph>There have been post-marketing reports of torsades de pointes occurring with concurrent use of clarithromycin and quinidine or disopyramide. Electrocardiograms should be monitored for QTc prolongation during coadministration of clarithromycin with these drugs.  Serum concentrations of these medications should also be monitored.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="4a20d934-fcd4-47d9-8909-a5c67fe579c9"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Ergotamine/Dihydroergotamine</title>
+                                 <text>
+                                    <paragraph>Post-marketing reports indicate that coadministration of clarithromycin with ergotamine or dihydroergotamine has been associated with acute ergot toxicity characterized by vasospasm and ischemia of the extremities and other tissues including the central nervous system.  Concomitant administration of clarithromycin with ergotamine or dihydroergotamine is contraindicated (see <content styleCode="bold">
+                                          <linkHtml href="#Contraindications">CONTRAINDICATIONS</linkHtml>
+                                       </content>). 												</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="f70d0dc2-7d82-4d7b-b61f-3bf24c6584fe"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Triazolobenziodidiazepines (such as triazolam and alprazolam) and Related Benzodiazepines (such as midazolam)</title>
+                                 <text>
+                                    <paragraph>Erythromycin has been reported to decrease the clearance of triazolam and midazolam, and thus, may increase the pharmacologic effect of these benzodiazepines.  There have been postmarketing reports of drug interactions and CNS effects (e.g., somnolence and confusion) with the concomitant use of clarithromycin and triazolam.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="e8f2dd40-6884-4820-b112-6625b6035f4d"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>HMG-CoA Reductase Inhibitors</title>
+                                 <text>
+                                    <paragraph>As with other macrolides, clarithromycin has been reported to increase concentrations of HMG-CoA reductase inhibitors (e.g., lovastatin and simvastatin).  Rare reports of rhabdomyolysis have been reported in patients taking these drugs concomitantly.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="e916607e-a800-4ec0-84bd-ad692b2d357d"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Sildenafil (Viagra)</title>
+                                 <text>
+                                    <paragraph>Erythromycin has been reported to increase the systemic exposure (AUC) of sildenafil.  A similar interaction may occur with clarithromycin; reduction of sildenafil dosage should be considered (see Viagra package insert). </paragraph>
+                                    <paragraph>There have been spontaneous or published reports of CYP3A based interactions of erythromycin and/or clarithromycin with cyclosporine, carbamazepine, tacrolimus, alfentanil, disopyramide, rifabutin, quinidine, methylprednisolone, cilostazol, and bromocriptine.</paragraph>
+                                    <paragraph>Concomitant administration of clarithromycin with cisapride, pimozide, astemizole, or terfenadine is contraindicated (see <content styleCode="bold">
+                                          <linkHtml href="#Contraindications">CONTRAINDICATIONS</linkHtml>
+                                       </content>).</paragraph>
+                                    <paragraph>In addition, there have been reports of interactions of erythromycin or clarithromycin with drugs not thought to be metabolized by CYP3A, including hexobarbital, phenytoin, and valproate.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="615b58f4-ead8-470e-9ccb-5ad34bef6cc1"/>
+                     <code code="34074-5" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG &amp; OR LABORATORY TEST INTERACTIONS SECTION"/>
+                     <title>Drug/Laboratory Test Interactions</title>
+                     <text>
+                        <paragraph>High urine concentrations of ampicillin may result in false-positive reactions when testing for the presence of glucose in urine using CLINITEST<sup>®</sup>, Benedict's Solution or Fehling's Solution. Since this effect may also occur with amoxicillin, it is recommended that glucose tests based on enzymatic glucose oxidase reactions (such as CLINISTIX<sup>®</sup>) be used. </paragraph>
+                        <paragraph>Following administration of ampicillin to pregnant women, a transient decrease in plasma concentration of total conjugated estriol, estriol-glucuronide, conjugated estrone, and estradiol has been noted. This effect may also occur with amoxicillin.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="f38b4a6e-09b4-4cae-97ce-6d7d9d9a76e8"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <effectiveTime value="20100315"/>
+                     <component>
+                        <section>
+                           <id root="3c2f8354-c5c4-4093-98d8-52c94b68f562"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title/>
+                           <text>
+                              <paragraph>In two 24-month carcinogenicity studies, Sprague-Dawley rats were treated with oral lansoprazole doses of 5 to 150 mg/kg/day, about 1 to 40 times the exposure on a body surface (mg/m<sup>2</sup>) basis of a 50 kg person of average height [1.46 m<sup>2</sup> body surface area (BSA)] given the recommended human dose of 30 mg/day.  Lansoprazole produced dose-related gastric enterochromaffin-like (ECL) cell hyperplasia and ECL cell carcinoids in both male and female rats.  It also increased the incidence of intestinal metaplasia of the gastric epithelium in both sexes.  In male rats, lansoprazole produced a dose-related increase of testicular interstitial cell adenomas.  The incidence of these adenomas in rats receiving doses of 15 to 150 mg/kg/day (4 to 40 times the recommended human dose based on BSA) exceeded the low background incidence (range = 1.4 to 10%) for this strain of rat.</paragraph>
+                              <paragraph>In a 24-month carcinogenicity study, CD-1 mice were treated with oral lansoprazole doses of 15 to 600 mg/kg/day, 2 to 80 times the recommended human dose based on BSA.  Lansoprazole produced a dose-related increased incidence of gastric ECL cell hyperplasia.  It also produced an increased incidence of liver tumors (hepatocellular adenoma plus carcinoma).  The tumor incidences in male mice treated with 300 and 600 mg/kg/day (40 to 80 times the recommended human dose based on BSA) and female mice treated with 150 to 600 mg/kg/day (20 to 80 times the recommended human dose based on BSA) exceeded the ranges of background incidences in historical controls for this strain of mice.  Lansoprazole treatment produced adenoma of rete testis in male mice receiving 75 to 600 mg/kg/day (10 to 80 times the recommended human dose based on BSA).</paragraph>
+                              <paragraph>A 26 week p53 (+/-) transgenic mouse carcinogenicity study was not positive.</paragraph>
+                              <paragraph>Lansoprazole was not genotoxic in the Ames test, the <content styleCode="Italics">ex vivo</content> rat hepatocyte unscheduled DNA synthesis (UDS) test, the <content styleCode="Italics">in vivo</content> mouse micronucleus test, or the rat bone marrow cell chromosomal aberration test.  It was positive in <content styleCode="Italics">in vitro</content> human lymphocyte chromosomal aberration assays.</paragraph>
+                              <paragraph>Lansoprazole at oral doses up to 150 mg/kg/day (40 times the recommended human dose based on BSA) was found to have no effect on fertility and reproductive performance of male and female rats.</paragraph>
+                              <paragraph>Long-term studies in animals have not been performed  to evaluate carcinogenic potential.  Studies to detect mutagenic potential of amoxicillin alone have not been conducted; however, the following information is available from tests on a 4:1 mixture of amoxicillin and potassium clavulanate. Amoxicillin and potassium clavulanate was non-mutagenic in the Ames bacterial mutation assay, and the yeast gene conversion assay. Amoxicillin and potassium clavulanate was weakly positive in the mouse lymphoma assay, but the trend toward increased mutation frequencies in this assay occurred at doses that were also associated with decreased cell survival. Amoxicillin and potassium clavulanate was negative in the mouse micronucleus test, and in the dominant lethal assay in mice. Potassium clavulanate alone was tested in the Ames bacterial mutation assay and in the mouse micronucleus test, and was negative in each of these assays. In a multi-generation reproduction study in rats, no impairment of fertility or other adverse reproductive effects were seen at doses up to 500 mg/kg (approximately 3 times the human dose in mg/m<sup>2</sup>).</paragraph>
+                              <paragraph>The following <content styleCode="Italics">in vitro</content> mutagenicity tests have been conducted with clarithromycin:</paragraph>
+                              <paragraph>     <content styleCode="Italics">Salmonella</content>/Mammalian Microsomes Test</paragraph>
+                              <paragraph>     Bacterial Induced Mutation Frequency Test</paragraph>
+                              <paragraph>     <content styleCode="Italics">In Vitro</content> Chromosome Aberration Test</paragraph>
+                              <paragraph>     Rat Hepatocyte DNA Synthesis Assay</paragraph>
+                              <paragraph>     Mouse Lymphoma Assay</paragraph>
+                              <paragraph>     Mouse Dominant Lethal Study</paragraph>
+                              <paragraph>     Mouse Micronucleus Test</paragraph>
+                              <paragraph>All tests had negative results except the <content styleCode="Italics">In Vitro</content> Chromosome Aberration Test which was weakly positive in one test and negative in another.</paragraph>
+                              <paragraph>In addition, a Bacterial Reverse-Mutation Test (Ames Test) has been performed on clarithromycin metabolites with negative results.</paragraph>
+                              <paragraph>Fertility and reproduction studies have shown that daily doses of up to 160 mg/kg/day (1.3 times the recommended maximum human dose based on mg/m<sup>2</sup>) to male and female rats caused no adverse effects on the estrous cycle, fertility, parturition, or number and viability of offspring.  Plasma levels in rats after 150 mg/kg/day were 2 times the human serum levels.</paragraph>
+                              <paragraph>In the 150 mg/kg/day monkey studies, plasma levels were 3 times the human serum levels.  When given orally at 150 mg/kg/day (2.4 times the recommended maximum human dose based on mg/m<sup>2</sup>), clarithromycin was shown to produce embryonic loss in monkeys.  This effect has been attributed to marked maternal toxicity of the drug at this high dose.</paragraph>
+                              <paragraph>In rabbits, <content styleCode="Italics">in utero</content> fetal loss occurred at an intravenous dose of 33 mg/m<sup>2</sup>, which is 17 times less than the maximum proposed human oral daily dose of 618 mg/m<sup>2</sup>.</paragraph>
+                              <paragraph>Long-term studies in animals have not been performed to evaluate the carcinogenic potential of clarithromycin.</paragraph>
+                           </text>
+                           <effectiveTime value="20100315"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Precautions_Pregnancy">
+                     <id root="b89b64ff-9f13-4443-9c50-af8eec474d3c"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>Pregnancy</title>
+                     <effectiveTime value="20100315"/>
+                     <component>
+                        <section>
+                           <id root="f11ac58d-6ba1-4cd6-a804-6681e1144dab"/>
+                           <code code="34077-8" codeSystem="2.16.840.1.113883.6.1" displayName="TERATOGENIC EFFECTS SECTION"/>
+                           <title>Teratogenic Effects</title>
+                           <effectiveTime value="20100315"/>
+                           <component>
+                              <section>
+                                 <id root="4a6d1a6a-a458-4b13-bda8-e1b48e489c94"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <title>Pregnancy Category C</title>
+                                 <text>
+                                    <paragraph>Category C is based on the pregnancy category for clarithromycin.</paragraph>
+                                    <paragraph>Four teratogenicity studies in rats (three with oral doses and one with intravenous doses up to 160 mg/kg/day administered during the period of major organogenesis) and two in rabbits at oral doses up to 125 mg/kg/day (approximately 2 times the recommended maximum human dose based on mg/m<sup>2</sup>) or intravenous doses of 30 mg/kg/day administered during gestation days 6 to 18 failed to demonstrate any teratogenicity from clarithromycin.  Two additional oral studies in a different rat strain at similar doses and similar conditions demonstrated a low incidence of cardiovascular anomalies at doses of 150 mg/kg/day administered during gestation days 6 to 15.  Plasma levels after 150 mg/kg/day were 2 times the human serum levels.  Four studies in mice revealed a variable incidence of cleft palate following oral doses of 1000 mg/kg/day (2 and 4 times the recommended maximum human dose based on mg/m<sup>2</sup>, respectively) during gestation days 6 to 15. Cleft palate was also seen at 500 mg/kg/day.  The 1000 mg/kg/day exposure resulted in plasma levels 17 times the human serum levels.  In monkeys, an oral dose of 70 mg/kg/day (an approximate equidose of the recommended maximum human dose based on mg/m<sup>2</sup>) produced fetal growth retardation at plasma levels that were 2 times the human serum levels.</paragraph>
+                                    <paragraph>There were no adequate and well-controlled studies of PREVPAC in pregnant women.  PREVPAC should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus (see <content styleCode="bold">
+                                          <linkHtml href="#Warnings">WARNINGS</linkHtml>
+                                       </content>).</paragraph>
+                                 </text>
+                                 <effectiveTime value="20100315"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="1e844ec7-5061-4764-9e3d-38697da6b78b"/>
+                     <code code="34079-4" codeSystem="2.16.840.1.113883.6.1" displayName="LABOR &amp; DELIVERY SECTION"/>
+                     <title>Labor and Delivery</title>
+                     <text>
+                        <paragraph>Oral ampicillin-class antibiotics are poorly absorbed during labor.  Studies in guinea pigs showed that intravenous administration of ampicillin slightly decreased the uterine tone and frequency of contractions, but moderately increased the height and duration of contractions.  However, it is not known whether use of these drugs in humans during labor or delivery has immediate or delayed adverse effects on the fetus, prolongs the duration of labor, or increases the likelihood that forceps delivery or other obstetrical intervention or resuscitation of the newborn will be necessary.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="129ab2e2-14c5-4f93-b5f6-cdfdc7eb44e6"/>
+                     <code code="34080-2" codeSystem="2.16.840.1.113883.6.1" displayName="NURSING MOTHERS SECTION"/>
+                     <title>Nursing Mothers</title>
+                     <text>
+                        <paragraph>Lansoprazole or its metabolites are excreted in the milk of rats.  It is not known whether lansoprazole is excreted in human milk.     </paragraph>
+                        <paragraph>Penicillins have been shown to be excreted in human milk. Amoxicillin use by nursing mothers may lead to sensitization of infants.  Caution should be exercised when amoxicillin is administered to a nursing woman.</paragraph>
+                        <paragraph>It is not known whether clarithromycin is excreted in human milk. It is known that clarithromycin is excreted in the milk of lactating animals and that other drugs of this class are excreted in human milk.</paragraph>
+                        <paragraph>Due to the potential for serious adverse reactions in nursing infants from PREVPAC, and the potential for tumorigenicity shown for lansoprazole in rat carcinogenicity studies, a decision should be made whether to discontinue nursing or to discontinue PREVPAC, taking into account the importance of the therapy to the mother.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="b8f62040-ab82-49c9-baf3-c9347d953cce"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>Pediatric Use</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of PREVPAC in pediatric patients infected with <content styleCode="Italics">H. pylori</content> have not been established (see <content styleCode="bold">
+                              <linkHtml href="#Contraindications">CONTRAINDICATIONS</linkHtml>
+                           </content> and <content styleCode="bold">
+                              <linkHtml href="#Warnings">WARNINGS</linkHtml>
+                           </content>). 								</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="132e15dd-d4af-4548-8b78-7612fcdd41f6"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>Geriatric Use </title>
+                     <text>
+                        <paragraph>Elderly patients may suffer from asymptomatic renal and hepatic dysfunction.  Care should be taken when administering PREVPAC to this patient population.</paragraph>
+                        <paragraph>An analysis of clinical studies of amoxicillin was conducted to determine whether subjects aged 65 and over respond differently from younger subjects. Of the 1,811 subjects treated with capsules of amoxicillin, 85% were less than 60 years old, 15% were ≥ 61 years old and 7% were ≥ 71 years old. This analysis and other reported clinical experience have not identified differences in responses between the elderly and younger patients, but a greater sensitivity of some older individuals cannot be ruled out.</paragraph>
+                        <paragraph>This drug is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug may be greater in patients with impaired renal function. Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection, and it may be useful to monitor renal function.</paragraph>
+                        <paragraph>In a steady-state study in which healthy elderly subjects (age 65 to 81 years old) were given 500 mg every 12 hours, the maximum serum concentrations and area under the curves of clarithromycin and 14-OH clarithromycin were increased compared to those achieved in healthy young adults. These changes in pharmacokinetics parallel known age-related decreases in renal function. In clinical trials, elderly patients did not have an increased incidence of adverse events when compared to younger patients. Dosage adjustment should be considered in elderly patients with severe renal impairment (see <content styleCode="bold">
+                              <linkHtml href="#Warnings">WARNINGS</linkHtml>
+                           </content> and <content styleCode="bold">
+                              <linkHtml href="#Precautions">PRECAUTIONS</linkHtml>
+                           </content>).</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="25aa829c-d100-4df7-beb1-1ce94edc9bf3"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The most common adverse reactions (≥3%) reported in clinical trials when all three components of this therapy were given concomitantly for 14 days are listed in Table 5.</paragraph>
+                  <table width="40%" ID="ic7c9458e-2105-4900-80e1-05173bb2ab34">
+                     <caption>Table 5: Adverse Reactions Most Frequently Reported in Clinical Trials (≥ 3%)</caption>
+                     <col align="left" width="50%" valign="middle"/>
+                     <col align="center" width="50%" valign="middle"/>
+                     <thead>
+                        <tr>
+                           <th styleCode="Lrule"/>
+                           <th styleCode="Rrule">Triple Therapy</th>
+                        </tr>
+                        <tr>
+                           <th styleCode="Lrule"/>
+                           <th styleCode="Toprule Rrule">n=138</th>
+                        </tr>
+                        <tr>
+                           <th styleCode="Lrule">Adverse Reaction</th>
+                           <th styleCode="Rrule">(%)</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Lrule">Diarrhea</td>
+                           <td styleCode="Rrule">7.0</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">Headache</td>
+                           <td styleCode="Rrule">6.0</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">Taste Perversion</td>
+                           <td styleCode="Rrule">5.0</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>The additional adverse reactions which were reported as possibly or probably related to treatment (less than 3%) in clinical trials when all three components of this therapy were given concomitantly are listed below and divided by body system:</paragraph>
+                  <paragraph>
+                     <content styleCode="Italics">Body as a Whole</content> - abdominal pain<br/>
+                     <content styleCode="Italics">Digestive System</content> - dark stools, dry mouth/thirst, glossitis, rectal itching, nausea, oral moniliasis, stomatitis, tongue discoloration, tongue disorder, vomiting<br/>
+                     <content styleCode="Italics">Musculoskeletal System</content> - myalgia<br/>
+                     <content styleCode="Italics">Nervous System</content> - confusion, dizziness<br/>
+                     <content styleCode="Italics">Respiratory System</content> - respiratory disorders<br/>
+                     <content styleCode="Italics">Skin and Appendages</content> - skin reactions<br/>
+                     <content styleCode="Italics">Urogenital System</content> - vaginitis, vaginal moniliasis.</paragraph>
+                  <paragraph>There were no statistically significant differences in the frequency of reported adverse events between the 10- and 14-day triple therapy regimens.</paragraph>
+                  <paragraph/>
+                  <paragraph>The following adverse reactions from the labeling for PREVACID are provided for information:</paragraph>
+                  <paragraph>Worldwide, over 10,000 patients have been treated with PREVACID in Phase 2 or Phase 3 clinical trials involving various dosages and durations of treatment.  In general, PREVACID treatment has been well-tolerated in both short-term and long-term trials.</paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+               <component>
+                  <section>
+                     <id root="a7406337-2eb4-4dec-8e02-0c30790b20c9"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Incidence in Clinical Trials</title>
+                     <text>
+                        <paragraph>The following adverse events were reported by the treating physician to have a possible or probable relationship to drug in 1% or more of PREVACID-treated patients and occurred at a greater rate in PREVACID-treated patients than placebo-treated patients:</paragraph>
+                        <table width="75%" ID="i55708b5c-22b1-4c04-824a-b2e6723a5595">
+                           <caption>Table 6: Incidence of Possibly or Probably Treatment-Related Adverse Reactions in Short-Term, Placebo-Controlled PREVACID Studies</caption>
+                           <col align="left" width="50%" valign="middle"/>
+                           <col align="center" width="25%" valign="middle"/>
+                           <col align="center" width="25%" valign="middle"/>
+                           <thead>
+                              <tr>
+                                 <th styleCode="Lrule"/>
+                                 <th styleCode="Lrule">PREVACID</th>
+                                 <th styleCode="Lrule Rrule">Placebo</th>
+                              </tr>
+                              <tr>
+                                 <th styleCode="Lrule">Body System/Adverse Event</th>
+                                 <th styleCode="Lrule">(N= 2768)</th>
+                                 <th styleCode="Lrule Rrule">(N= 1023)</th>
+                              </tr>
+                              <tr>
+                                 <th styleCode="Lrule" valign="middle"/>
+                                 <th styleCode="Lrule">%</th>
+                                 <th styleCode="Lrule Rrule">%</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td styleCode="Lrule">Body as a Whole</td>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule Rrule"/>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">  Abdominal Pain</td>
+                                 <td styleCode="Lrule">2.1</td>
+                                 <td styleCode="Lrule Rrule">1.2</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">Digestive System</td>
+                                 <td styleCode="Lrule"/>
+                                 <td styleCode="Lrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">  Constipation</td>
+                                 <td styleCode="Lrule">1.0</td>
+                                 <td styleCode="Lrule Rrule">0.4</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">  Diarrhea</td>
+                                 <td styleCode="Lrule">3.8</td>
+                                 <td styleCode="Lrule Rrule">2.3</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">  Nausea</td>
+                                 <td styleCode="Lrule">1.3</td>
+                                 <td styleCode="Lrule Rrule">1.2</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Headache was also seen at greater than 1% incidence but was more common on placebo. The incidence of diarrhea was similar between patients who received placebo and patients who received 15 mg and 30 mg of PREVACID, but higher in the patients who received 60 mg of PREVACID (2.9%, 1.4%, 4.2%, and 7.4%, respectively).</paragraph>
+                        <paragraph>The most commonly reported possibly or probably treatment-related adverse event during maintenance therapy was diarrhea.</paragraph>
+                        <paragraph>Additional adverse experiences occurring in less than 1% of patients or subjects who received PREVACID in domestic trials are shown below:</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Body as a Whole</content> – abdomen enlarged, allergic reaction, asthenia, back pain, candidiasis, carcinoma, chest pain (not otherwise specified), chills, edema, fever, flu syndrome, halitosis, infection (not otherwise specified), malaise, neck pain, neck rigidity, pain, pelvic pain </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cardiovascular System</content> – angina, arrhythmia, bradycardia, cerebrovascular accident/cerebral infarction, hypertension/hypotension, migraine, myocardial infarction, palpitations, shock (circulatory failure), syncope, tachycardia, vasodilation</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Digestive System</content> – abnormal stools, anorexia, bezoar, cardiospasm, cholelithiasis, colitis, dry mouth, dyspepsia, dysphagia, enteritis, eructation, esophageal stenosis, esophageal ulcer, esophagitis, fecal discoloration, flatulence, gastric nodules/fundic gland polyps, gastritis, gastroenteritis, gastrointestinal anomaly, gastrointestinal disorder, gastrointestinal hemorrhage, glossitis, gum hemorrhage, hematemesis, increased appetite, increased salivation, melena, mouth ulceration, nausea and vomiting, nausea and vomiting and diarrhea, gastrointestinal moniliasis, rectal disorder,  rectal hemorrhage, stomatitis, tenesmus, thirst, tongue disorder, ulcerative colitis, ulcerative stomatitis </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Endocrine System</content> – diabetes mellitus, goiter, hypothyroidism</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hemic and Lymphatic System</content> – anemia, hemolysis, lymphadenopathy</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolic and Nutritional Disorders</content> – avitaminosis, gout, dehydration, hyperglycemia/hypoglycemia, peripheral edema, weight gain/loss</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Musculoskeletal System</content> – arthralgia, arthritis, bone disorder, joint disorder, leg cramps, musculoskeletal pain, myalgia, myasthenia, ptosis, synovitis</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Nervous System</content> – abnormal dreams, agitation, amnesia, anxiety, apathy, confusion, convulsion, dementia,  depersonalization, depression, diplopia, dizziness, emotional lability, hallucinations, hemiplegia, hostility aggravated, hyperkinesia, hypertonia, hypesthesia, insomnia, libido decreased/increased, nervousness, neurosis, paresthesia, sleep disorder, somnolence, thinking abnormality, tremor, vertigo</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Respiratory System</content> – asthma, bronchitis, cough increased, dyspnea, epistaxis, hemoptysis, hiccup, laryngeal neoplasia, lung fibrosis, pharyngitis, pleural disorder, pneumonia, respiratory disorder, upper respiratory inflammation/infection, rhinitis, sinusitis, stridor</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin and Appendages</content> – acne, alopecia, contact dermatitis, dry skin, fixed eruption, hair disorder, maculopapular rash, nail disorder, pruritus, rash, skin carcinoma, skin disorder, sweating, urticaria</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Special Senses</content> – abnormal vision, amblyopia, blepharitis, blurred vision, cataract, conjunctivitis, deafness, dry eyes, ear/eye disorder, eye pain, glaucoma, otitis media, parosmia, photophobia, retinal degeneration/disorder, taste loss, taste perversion, tinnitus, visual field defect</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Urogenital System</content> – abnormal menses, breast enlargement, breast pain, breast tenderness, dysmenorrhea, dysuria, gynecomastia, impotence, kidney calculus, kidney pain, leukorrhea, menorrhagia, menstrual disorder, penis disorder, polyuria, testis disorder, urethral pain, urinary frequency, urinary retention, urinary tract infection, urinary urgency, urination impaired, vaginitis</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Postmarketing">
+                     <id root="a751de0e-5705-4ad7-af38-ca58dfdbf92c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Postmarketing</title>
+                     <text>
+                        <paragraph>Additional adverse experiences have been reported since PREVACID has been marketed. The majority of these cases are foreign-sourced and a relationship to PREVACID has not been established. Because these events were reported voluntarily from a population of unknown size, estimates of frequency cannot be made. These events are listed below by COSTART body system:</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Body as a Whole</content> – anaphylactic/anaphylactoid reactions</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Digestive System</content> – hepatotoxicity, pancreatitis, vomiting</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hemic and Lymphatic System</content> – agranulocytosis, aplastic anemia, hemolytic anemia, leukopenia, neutropenia, pancytopenia, thrombocytopenia, and thrombotic thrombocytopenic purpura</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Musculoskeletal System</content> – myositis</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin and Appendages</content> – severe dermatologic reactions including erythema multiforme, Stevens-Johnson syndrome, toxic epidermal necrolysis, (some fatal)</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Special Senses</content> – speech disorder</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Urogenital System</content> – interstitial nephritis, urinary retention</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="5e4c43fc-e028-4fbf-a840-208ebf1f3b7a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Laboratory Values</title>
+                     <text>
+                        <paragraph>The following changes in laboratory parameters in patients who received PREVACID were reported as adverse events:</paragraph>
+                        <paragraph>Abnormal liver function tests, increased SGOT (AST), increased SGPT (ALT), increased creatinine, increased alkaline phosphatase, increased globulins, increased GGTP, increased/decreased/abnormal WBC, abnormal AG ratio, abnormal RBC, bilirubinemia, blood potassium increased, blood urea increased, crystal urine present, eosinophilia, hemoglobin decreased, hyperlipemia, increased/decreased electrolytes, increased/decreased cholesterol, increased glucocorticoids, increased LDH, increased/decreased/abnormal platelets, increased gastrin levels and positive fecal occult blood.  Urine abnormalities such as albuminuria, glycosuria, and hematuria were also reported.  Additional isolated laboratory abnormalities were reported.</paragraph>
+                        <paragraph>In the placebo-controlled studies, when SGOT (AST) and SGPT (ALT) were evaluated, 0.4% (4/978) and 0.4% (11/2677) patients, who received placebo and PREVACID, respectively, had enzyme elevations greater than three times the upper limit of normal range at the final treatment visit.  None of these patients who received PREVACID reported jaundice at any time during the study.</paragraph>
+                        <paragraph>The following adverse reactions from the labeling for amoxicillin are provided for information:</paragraph>
+                        <paragraph>As with other penicillins, it may be expected that untoward reactions will be essentially limited to sensitivity phenomena.  They are more likely to occur in individuals who have previously demonstrated hypersensitivity to penicillins and in those with a history of allergy, asthma, hay fever, or urticaria.</paragraph>
+                        <paragraph>The following adverse reactions have been reported as associated with the use of penicillins:</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Gastrointestinal</content> - Nausea, vomiting, diarrhea, and hemorrhagic/pseudomembranous colitis.</paragraph>
+                        <paragraph>Onset of pseudomembranous colitis symptoms may occur during or after antibiotic treatment (see <content styleCode="bold">
+                              <linkHtml href="#Warnings">WARNINGS</linkHtml>
+                           </content>).</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hypersensitivity Reactions</content> – Serum sickness-like reactions, erythematous maculopapular rashes, erythema multiforme, Stevens-Johnson Syndrome, exfoliative dermatitis, toxic epidermal necrolysis, acute generalized exanthematous pustulosis, hypersensitivity vasculitis and urticaria have been reported.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Note:</content> These hypersensitivity reactions may be controlled with antihistamines and, if necessary, systemic corticosteroids.  Whenever such reactions occur, amoxicillin should be discontinued unless, in the opinion of the physician, the condition being treated is life-threatening and amenable only to amoxicillin therapy. </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Liver</content> – A moderate rise in AST (SGOT) and/or ALT (SGPT) has been noted, but the significance of this finding is unknown. Hepatic dysfunction including cholestatic jaundice, hepatic cholestasis and acute cytolytic hepatitis have been reported.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Renal</content> – Crystalluria has also been reported (see <content styleCode="bold">
+                              <linkHtml href="#Overdosage">OVERDOSAGE</linkHtml>
+                           </content>).</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hemic and Lymphatic Systems</content> – Anemia, including hemolytic anemia, thrombocytopenia, thrombocytopenic purpura, eosinophilia, leukopenia and agranulocytosis have been reported during therapy with penicillins.  These reactions are usually reversible on discontinuation of therapy and are believed to be hypersensitivity phenomena.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Central Nervous System</content> – Reversible hyperactivity, agitation, anxiety, insomnia, confusion, behavioral changes, and/or dizziness have been reported rarely.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Miscellaneous</content> – Tooth discoloration (brown, yellow, or gray staining) has been rarely reported. Most reports occurred in pediatric patients. Discoloration was reduced or eliminated with brushing or dental cleaning in most cases.</paragraph>
+                        <paragraph>The following adverse reactions from the labeling for clarithromycin are provided for information.</paragraph>
+                        <paragraph>The majority of side effects observed in clinical trials were of a mild and transient nature. Fewer than 3% of adult patients without mycobacterial infections discontinued therapy because of drug-related side effects.</paragraph>
+                        <paragraph>The most frequently reported events in adults were diarrhea (3%), nausea (3%), abnormal taste (3%), dyspepsia (2%), abdominal pain/discomfort (2%), and headache (2%).  Most of these events were described as mild or moderate in severity.  Of the reported adverse events, only 1% was described as severe.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="9258e275-c38e-4c9c-99a0-eae49094532c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Postmarketing Experience</title>
+                     <text>
+                        <paragraph>Allergic reactions ranging from urticaria and mild skin eruptions to rare cases of anaphylaxis,  Stevens-Johnson syndrome, and toxic epidermal necrolysis have occurred.  Other spontaneously reported adverse events include glossitis, stomatitis, oral moniliasis, anorexia, vomiting, pancreatitis, tongue discoloration, thrombocytopenia, leukopenia, neutropenia, and dizziness.  There have been reports of tooth discoloration in patients treated with clarithromycin.  Tooth discoloration is usually reversible with professional dental cleaning.  There have been isolated reports of hearing loss, which is usually reversible, occurring chiefly in elderly women.  Reports of alterations of the sense of smell including smell loss, usually in conjunction with taste perversion or taste loss have also been reported.</paragraph>
+                        <paragraph>Transient CNS events including anxiety, behavioral changes, confusional states, convulsions, depersonalization, disorientation, hallucinations, insomnia, manic behavior, nightmares, psychosis, tinnitus, tremor, and vertigo have been reported during postmarketing surveillance.  Events usually resolve with discontinuation of the drug.</paragraph>
+                        <paragraph>Hepatic dysfunction, including increased liver enzymes, and hepatocellular and/or cholestatic hepatitis, with or without jaundice, has been infrequently reported with clarithromycin.  This hepatic dysfunction may be severe and is usually reversible.  In very rare instances, hepatic failure with fatal outcome has been reported and generally has been associated with serious underlying diseases and/or concomitant medications.</paragraph>
+                        <paragraph>There have been rare reports of hypoglycemia, some of which have occurred in patients taking oral hypoglycemic agents or insulin.</paragraph>
+                        <paragraph>As with other macrolides, clarithromycin has been associated with QT prolongation and ventricular arrhythmias, including ventricular tachycardia and torsades de pointes.</paragraph>
+                        <paragraph>There have been reports of interstitial nephritis coincident with clarithromycin use.</paragraph>
+                        <paragraph>There have been post-marketing reports of colchicine toxicity with concomitant use of clarithromycin and colchicine, especially in the elderly, some of which occurred in patients with renal insufficiency.  Deaths have been reported in some such patients (see <content styleCode="bold">
+                              <linkHtml href="#Warnings">WARNINGS</linkHtml> and <linkHtml href="#Precautions">PRECAUTIONS</linkHtml>
+                           </content>).</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="93372ad7-10f4-4ba0-8b60-5f7a3769a92a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Changes in Laboratory Values</title>
+                     <text>
+                        <paragraph>Changes in laboratory values with possible clinical significance were as follows:  <content styleCode="italics">Hepatic</content> – elevated SGPT (ALT) less than 1%, SGOT (AST) less than 1%, GGT less than 1%, alkaline phosphatase less than 1%, LDH less than 1%, total bilirubin less than 1%; <content styleCode="italics">Hematologic</content> – decreased WBC less than 1%, elevated prothrombin time 1%; <content styleCode="italics">Renal</content> – elevated BUN 4%, elevated serum creatinine less than 1%.  GGT, alkaline phosphatase, and prothrombin time data are from adult studies only.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Overdosage">
+               <id root="8e1fedf8-2e0d-46d4-b346-8469baa3ae3e"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph>In case of an overdose, patients should contact a physician, poison control center, or emergency room.  There is neither a pharmacologic basis nor data suggesting an increased toxicity of the combination compared to individual components.</paragraph>
+                  <paragraph>PREVACID is not removed from the circulation by hemodialysis.  In one reported overdose, a patient consumed 600 mg of PREVACID with no adverse reaction.Oral PREVACID doses up to 5000 mg/kg in rats [approximately 1300 times the 30 mg human dose based on (BSA)] and in mice (about 675.7 times the 30 mg human dose based on BSA) did not produce deaths or any clinical signs.</paragraph>
+                  <paragraph>In case of overdosage, discontinue medication, treat symptomatically and institute supportive measures as required.  If the overdosage is very recent and there is no contraindication, an attempt at emesis or other means of removal of drug from the stomach may be performed. A prospective study of 51 pediatric patients at a poison-control center suggested that overdosages of less than 250 mg/kg of amoxicillin are not associated with significant clinical symptoms and do not require gastric emptying.<sup>2</sup>
+                  </paragraph>
+                  <paragraph>Interstitial nephritis resulting in oliguric renal failure has been reported in a small number of patients after overdosage with amoxicillin.</paragraph>
+                  <paragraph>Crystalluria, in some cases leading to renal failure, has also been reported after amoxicillin overdosage in adult and pediatric patients. In case of overdosage, adequate fluid intake and diuresis should be maintained to reduce the risk of amoxicillin crystalluria. Renal impairment appears to be reversible with cessation of drug administration.  High blood levels may occur more readily in patients with impaired renal function because of decreased renal clearance of amoxicillin.  Amoxicillin can be removed from circulation by hemodialysis.</paragraph>
+                  <paragraph>Overdosage of clarithromycin can cause gastrointestinal symptoms such as abdominal pain, vomiting, nausea, and diarrhea.</paragraph>
+                  <paragraph>Adverse reactions accompanying overdosage should be treated by the prompt elimination of unabsorbed drug and supportive measures. As with other macrolides, clarithromycin serum levels are not expected to be appreciably affected by hemodialysis or peritoneal dialysis.</paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Dosage_And_Admin">
+               <id root="605f91d2-1fab-4d1b-86b2-f55da9b3195c"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20100315"/>
+               <component>
+                  <section>
+                     <id root="d25e8874-24c6-413e-9fe2-510a7a8e1d3c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>
+                        <content styleCode="italics">H. pylori</content> Eradication to Reduce the Risk of Duodenal Ulcer Recurrence</title>
+                     <text>
+                        <paragraph>The recommended adult oral dose is 30 mg PREVACID, 1 g amoxicillin, and 500 mg clarithromycin administered together twice daily (morning and evening) for 10 or 14 days (see <content styleCode="bold">
+                              <linkHtml href="#Indications_And_Usage">INDICATIONS AND USAGE</linkHtml>
+                           </content>).</paragraph>
+                        <paragraph>PREVPAC is not recommended in patients with creatinine clearance less than 30 mL/min.</paragraph>
+                     </text>
+                     <effectiveTime value="20100315"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ad6fa9a3-12e8-40c4-8954-cdbc885eb3e3"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>PREVPAC is supplied as an individual daily administration card, each containing:</paragraph>
+                  <paragraph>PREVACID:</paragraph>–Two opaque, hard gelatin, black and pink PREVACID 30-mg capsules, with "TAP" and "PREVACID 30" imprinted on the capsules.<paragraph>Amoxicillin Capsules, USP:</paragraph>–Four yellow, opaque, hard gelatin amoxicillin 500-mg capsules, USP, imprinted AMOX 500 on one side and GG 849 on the other side. <paragraph>BIAXIN Filmtab:</paragraph>–Two yellow oval film-coated clarithromycin 500-mg tablets, USP, debossed with the Abbott logo on one side and "KL" on the other side of the tablets.<paragraph>
+                     <content styleCode="bold">
+                        <br/>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">NDC  </content>
+                     <content styleCode="bold">54868-4909-0</content>        Carton containing 14 daily administration cards</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <br/>
+                     </content>
+                  </paragraph>
+                  <paragraph>Store between 20°C and 25°C (68°F and 77°F)[see USP Controlled Room Temperature]. Protect from light and moisture.</paragraph>
+               </text>
+               <effectiveTime value="20100802"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="5834a87b-ccf6-4ab6-b543-5379ac065433"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Rx only</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100315"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="6b83f0e4-642d-4cbd-99f7-d207e579b887"/>
+               <code code="34093-5" codeSystem="2.16.840.1.113883.6.1" displayName="REFERENCES SECTION"/>
+               <title>REFERENCE</title>
+               <text>
+                  <list listType="ordered" ID="i32b71e8a-d3fa-4125-84cb-9a2d88fa0b2c">
+                     <item>National Committee for Clinical Laboratory Standards. Summary Minutes, Subcommittee on Antimicrobial Susceptibility Testing, Tampa, FL, January 11-13, 1998.</item>
+                     <item>Swanson Biearman B, Dean BS, Lopez G, Krenzelok EP.  The effects of penicillin and cephalosporin ingestions in children less than six years of age. <content styleCode="Italics">Vet Hum Toxicol.</content> 1988; 30:66-67.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20100315"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="702f3d42-8cd0-4da7-9ea4-6b048f00a7a2"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title/>
+               <text>
+                  <paragraph>U.S. Patent No. 5,013,743</paragraph>
+                  <paragraph>PREVPAC is distributed by <content styleCode="bold">Takeda Pharmaceuticals America, Inc.</content>
+                  </paragraph>
+                  <paragraph>PREVACID<sup>®</sup> (lansoprazole) Delayed-Release Capsules<br/>Distributed by Takeda Pharmaceuticals America, Inc.<br/>Deerfield, IL 60015, U.S.A. </paragraph>
+                  <paragraph>Amoxicillin Capsules, USP<br/>Manufactured in Austria by Sandoz GmbH<br/>for Sandoz Inc., Princeton, NJ 08540, U.S.A.</paragraph>
+                  <paragraph>BIAXIN<sup>®</sup> Filmtab<sup>®</sup> (clarithromycin tablets, USP)<br/>Manufactured by Abbott Pharmaceuticals PR, Ltd. <br/>Barceloneta, PR 00617</paragraph>
+                  <paragraph>PREVACID<sup>®</sup> and PREVPAC<sup>®</sup> are registered trademarks of Takeda Pharmaceuticals North America, Inc. and used under license by Takeda Pharmaceuticals America, Inc.</paragraph>
+                  <paragraph>All other trademark names are the property of their respective owners.</paragraph>
+                  <paragraph>© 1997-2009 Takeda Pharmaceuticals America, Inc.</paragraph>
+                  <paragraph>PAC0909 R14, October 2009</paragraph>
+                  <br/>
+                  <paragraph>
+                     <br/>
+                  </paragraph>
+                  <paragraph>Relabeling of "Additional Barcode Label" by:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Physicians Total Care, Inc.</content>
+                     <br/>Tulsa, OK      74146<br/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100802"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="e34e3d6a-f376-4241-a694-6ff8b5133d10"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - Carton</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">triple therapy<br/>
+                        <content styleCode="bold">PREVPAC<sup>®</sup>
+                        </content>
+                        <br/>						LANSOPRAZOLE<br/>						AMOXICILLIN<br/>						CLARITHROMYCIN</content>
+                  </paragraph>
+                  <paragraph>
+                     <content>14 DAILY PATIENT CARDS</content>
+                  </paragraph>
+                  <paragraph>
+                     <content>EACH DAILY PATIENT<br/>						CARD CONTAINS:</content>
+                     <br/>
+                     <content styleCode="bold">2 PREVACID<sup>®</sup>
+                     </content> (lansoprazole) 30-mg capsules; <br/>
+                     <content styleCode="bold">4 AMOXICILLIN CAPSULES, USP</content>, 500 mg; and<br/>
+                     <content styleCode="bold">2 BIAXIN<sup>®</sup> Filmtab<sup>®</sup>
+                     </content>	 (clarithromycin tablets, USP) 500 mg 					 						</paragraph>
+                  <paragraph>
+                     <content>
+                        <br/>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Rx only</content>
+                  </paragraph>
+                  <renderMultiMedia referencedObject="MM4"/>
+               </text>
+               <effectiveTime value="20100802"/>
+               <component>
+                  <observationMedia ID="MM4">
+                     <text>PRINCIPAL DISPLAY PANEL - Carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="package label.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

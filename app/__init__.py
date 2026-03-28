@@ -1,0 +1,1 @@
+"""Excipient Search application package."""

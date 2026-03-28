@@ -1,0 +1,2881 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="e150632a-d379-4a7a-9fd9-b4cb34fa3179"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <effectiveTime value="20100315"/>
+   <setId root="8cbcee12-3eb1-4726-9212-5dddc39a3b0f"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="194123980" root="1.3.6.1.4.1.519.1"/>
+            <name>Physicians Total Care, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="194123980" root="1.3.6.1.4.1.519.1"/>
+                        <name>Physicians Total Care, Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73607" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="relabel"/>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73606" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="repack"/>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="6594606d-7dd9-4a58-894f-ccfa293ecdb0"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL listing data elements section"/>
+               <effectiveTime value="20100305"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="54868-5558" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Fortamet<suffix/>
+                        </name>
+                        <formCode code="C42927" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET, EXTENDED RELEASE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>metformin hydrochloride</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="59630-574" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="500" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="786Z46389E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>METFORMIN HYDROCHLORIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9100L32L2N" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>METFORMIN</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WL0328HX19" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CANDELILLA WAX</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3J2P07GVB6" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CELLULOSE ACETATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3WJQ0SDW1A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYETHYLENE GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6OZP39ZG8H" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYSORBATE 80</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="FZ989GH94E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM LAURYL SULFATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XHX3C3X673" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRIACETIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="54868-5558-0" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="90" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="54868-5558-1" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20060324"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA021574" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText>white</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText>round</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">574</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="12" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="54868-2894" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Fortamet<suffix/>
+                        </name>
+                        <formCode code="C42927" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET, EXTENDED RELEASE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>metformin hydrochloride</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="59630-575" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="1000" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="786Z46389E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>METFORMIN HYDROCHLORIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9100L32L2N" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>METFORMIN</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WL0328HX19" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CANDELILLA WAX</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3J2P07GVB6" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CELLULOSE ACETATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3WJQ0SDW1A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYETHYLENE GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6OZP39ZG8H" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYSORBATE 80</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM LAURYL SULFATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XHX3C3X673" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRIACETIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="FZ989GH94E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1">
+                                 <translation code="C48542" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                              </numerator>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="54868-2894-0" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20100218"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA021574" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText>white</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText>round</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">575</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="13" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="4d63c34b-5bc1-4af0-be9b-282653387b73"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="BOXED WARNING SECTION"/>
+               <text>
+                  <linkHtml href=""/>WARNINGS <paragraph>
+                     <content styleCode="bold">Lactic Acidosis:</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Lactic acidosis is a rare, but serious, metabolic 
+complication that can occur due to metformin accumulation during treatment with 
+FORTAMET<sup>®</sup> (metformin hydrochloride) Extended-Release 
+Tablets; when it occurs, it is fatal in approximately 50% of cases. Lactic 
+acidosis may also occur in association with a number of pathophysiologic 
+conditions, including diabetes mellitus, and whenever there is significant 
+tissue hypoperfusion and hypoxemia. Lactic acidosis is characterized by elevated 
+blood lactate levels (&gt;5 mmol/ L), decreased blood pH, electrolyte 
+disturbances with an increased anion gap, and an increased lactate/pyruvate 
+ratio. When metformin is implicated as the cause of lactic acidosis, metformin 
+plasma levels &gt;5 μg/mL are generally found.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The reported incidence of lactic acidosis in patients 
+receiving metformin hydrochloride is very low (approximately 0.03 cases/1000 
+patient-years, with approximately 0.015 fatal cases/1000 patient-years). 
+Reported cases have occurred primarily in diabetic patients with significant 
+renal insufficiency, including both intrinsic renal disease and renal 
+hypoperfusion, often in the setting of multiple concomitant medical/ surgical 
+problems and multiple concomitant medications. Patients with congestive heart 
+failure requiring pharmacologic management, in particular those with unstable or 
+acute congestive heart failure who are at risk of hypoperfusion and hypoxemia, 
+are at increased risk of lactic acidosis. The risk of lactic acidosis increases 
+with the degree of renal dysfunction and the patient's age. The risk of lactic 
+acidosis may, therefore, be significantly decreased by regular monitoring of 
+renal function in patients taking FORTAMET<sup>®</sup> (metformin 
+hydrochloride) Extended-Release Tablets and by use of the minimum effective dose 
+of FORTAMET<sup>®</sup>. In particular, treatment of the elderly 
+should be accompanied by careful monitoring of renal function. FORTAMET<sup>®</sup> treatment should not be initiated in patients ≥80 years of 
+age unless measurement of creatinine clearance demonstrates that renal function 
+is not reduced, as these patients are more susceptible to developing lactic 
+acidosis. In addition, FORTAMET<sup>®</sup> should be promptly 
+withheld in the presence of any condition associated with hypoxemia, 
+dehydration, or sepsis. Because impaired hepatic function may significantly 
+limit the ability to clear lactate, FORTAMET<sup>®</sup> should 
+generally be avoided in patients with clinical or laboratory evidence of hepatic 
+disease. Patients should be cautioned against excessive alcohol intake, either 
+acute or chronic, when taking FORTAMET<sup>®</sup>, since alcohol 
+potentiates the effects of metformin hydrochloride on lactate metabolism. In 
+addition, FORTAMET<sup>®</sup> should be temporarily discontinued 
+prior to any intravascular radiocontrast study and for any surgical procedure 
+(see also <linkHtml href="#section-8">PRECAUTIONS</linkHtml>).</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The onset of lactic acidosis often is subtle, and 
+accompanied only by nonspecific symptoms such as malaise, myalgias, respiratory 
+distress, increasing somnolence, and nonspecific abdominal distress. There may 
+be associated hypothermia, hypotension, and resistant bradyarrhythmias with more 
+marked acidosis. The patient and the patient's physician must be aware of the 
+possible importance of such symptoms and the patient should be instructed to 
+notify the physician immediately if they occur (see also <linkHtml href="#section-8">PRECAUTIONS</linkHtml>). FORTAMET<sup>®</sup> should be 
+withdrawn until the situation is clarified. Serum electrolytes, ketones, blood 
+glucose and, if indicated, blood pH, lactate levels, and even blood metformin 
+levels may be useful. Once a patient is stabilized on any dose level of 
+FORTAMET<sup>®</sup>, gastrointestinal symptoms, which are common 
+during initiation of therapy, are unlikely to be drug related. Later occurrence 
+of gastrointestinal symptoms could be due to lactic acidosis or other serious 
+disease.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Levels of fasting venous plasma lactate above the upper 
+limit of normal but less than 5 mmol/L in patients taking FORTAMET<sup>®</sup> do not necessarily indicate impending lactic acidosis and may 
+be explainable by other mechanisms, such as poorly controlled diabetes or 
+obesity, vigorous physical activity, or technical problems in sample handling 
+(see also <linkHtml href="#section-8">PRECAUTIONS</linkHtml>).</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Lactic acidosis should be suspected in any diabetic patient 
+with metabolic acidosis lacking evidence of ketoacidosis (ketonuria and 
+ketonemia).</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Lactic acidosis is a medical emergency that must be treated 
+in a hospital setting. In a patient with lactic acidosis who is taking 
+FORTAMET<sup>®</sup>, the drug should be discontinued immediately 
+and general supportive measures promptly instituted. Because metformin 
+hydrochloride is dialyzable (with a clearance of up to 170 mL/min under good 
+hemodynamic conditions), prompt hemodialysis is recommended to correct the 
+acidosis and remove the accumulated metformin. Such management often results in 
+prompt reversal of symptoms and recovery (see also <linkHtml href="#section-6">CONTRAINDICATIONS</linkHtml> and <linkHtml href="#section-8">PRECAUTIONS</linkHtml>).</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="7d592abf-102c-4ca5-96e4-30219db2a20c"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>FORTAMET<sup>®</sup> (metformin hydrochloride) Extended-Release 
+Tablets contain an oral antihyperglycemic drug used in the management of type 2 
+diabetes. Metformin hydrochloride (N, N-dimethylimidodicarbonimidic diamide 
+hydrochloride) is a member of the biguanide class of oral antihyperglycemics and 
+is not chemically or pharmacologically related to any other class of oral 
+antihyperglycemic agents. The empirical formula of metformin hydrochloride is 
+C<sub>4</sub>H<sub>11</sub>N<sub>5</sub>•HCl 
+and its molecular weight is 165.63. Its structural formula is:</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM1"/>
+                  </paragraph>
+                  <paragraph>Metformin hydrochloride is a white to off-white crystalline powder that is 
+freely soluble in water and is practically insoluble in acetone, ether, and 
+chloroform. The pKa of metformin is 12.4. The pH of a 1% aqueous solution of 
+metformin hydrochloride is 6.68.</paragraph>
+                  <paragraph>FORTAMET<sup>®</sup> Extended-Release Tablets are designed for 
+once-a-day oral administration and deliver 500 mg or 1000 mg of metformin 
+hydrochloride. In addition to the active ingredient metformin hydrochloride, 
+each tablet contains the following inactive ingredients: candellila wax, 
+cellulose acetate, hypromellose, magnesium stearate, polyethylene glycols (PEG 
+400, PEG 8000), polysorbate 80, povidone, sodium lauryl sulfate, synthetic black 
+iron oxides, titanium dioxide, and triacetin.</paragraph>
+                  <paragraph>FORTAMET<sup>®</sup> meets USP Dissolution Test 5.</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+               <component>
+                  <observationMedia classCode="OBS" moodCode="EVN" ID="MM1">
+                     <text>image of chemical structure</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="chemical structure.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="90555c6d-cb40-4514-8530-5c2f3a26b7fe"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>SYSTEM COMPONENTS AND PERFORMANCE</title>
+               <text>
+                  <paragraph>FORTAMET<sup>®</sup> was developed as an extended-release 
+formulation of metformin hydrochloride and designed for once-a-day oral 
+administration using the patented single-composition osmotic technology (SCOT™). 
+The tablet is similar in appearance to other film-coated oral administered 
+tablets but it consists of an osmotically active core formulation that is 
+surrounded by a semipermeable membrane. Two laser drilled exit ports exist in 
+the membrane, one on either side of the tablet. The core formulation is composed 
+primarily of drug with small concentrations of excipients. The semipermeable 
+membrane is permeable to water but not to higher molecular weight components of 
+biological fluids. Upon ingestion, water is taken up through the membrane, which 
+in turn dissolves the drug and excipients in the core formulation. The dissolved 
+drug and excipients exit through the laser drilled ports in the membrane. The 
+rate of drug delivery is constant and dependent upon the maintenance of a 
+constant osmotic gradient across the membrane. This situation exists so long as 
+there is undissolved drug present in the core tablet. Following the dissolution 
+of the core materials, the rate of drug delivery slowly decreases until the 
+osmotic gradient across the membrane falls to zero at which time delivery 
+ceases. The membrane coating remains intact during the transit of the dosage 
+form through the gastrointestinal tract and is excreted in the feces.</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="3e0eaca1-0a0d-4409-a859-9c359b3ca8d1"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <linkHtml href="#section-"/>
+               </text>
+               <effectiveTime value="20100305"/>
+               <component>
+                  <section>
+                     <id root="5691e78a-da5d-4a14-9d00-943f50d40839"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>Mechanism of Action</title>
+                     <text>
+                        <paragraph>Metformin is an antihyperglycemic agent which improves glucose tolerance in 
+patients with type 2 diabetes, lowering both basal and postprandial plasma 
+glucose. Its pharmacologic mechanisms of action are different from other classes 
+of oral antihyperglycemic agents. Metformin decreases hepatic glucose 
+production, decreases intestinal absorption of glucose, and improves insulin 
+sensitivity by increasing peripheral glucose uptake and utilization. Unlike 
+sulfonylureas, metformin does not produce hypoglycemia in either patients with 
+type 2 diabetes or normal subjects (except in special circumstances, see <content styleCode="bold">
+                              <linkHtml href="#section-8">PRECAUTIONS</linkHtml>
+                           </content>) and does not cause 
+hyperinsulinemia. With metformin therapy, insulin secretion remains unchanged 
+while fasting plasma insulin levels and day-long plasma insulin response may 
+actually decrease.</paragraph>
+                     </text>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="b390b091-2ff0-436d-972c-594a07da629a"/>
+               <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+               <title>PHARMACOKINETICS AND DRUG METABOLISM</title>
+               <text>
+                  <paragraph>Enter section text here</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+               <component>
+                  <section>
+                     <id root="2ef4ea05-0e46-417b-bee1-470533e1a3f9"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Absorption and Bioavailability</title>
+                     <text>
+                        <paragraph>The appearance of metformin in plasma from a FORTAMET<sup>®</sup> Extended-Release Tablet is slower and more prolonged compared 
+to immediate-release metformin.</paragraph>
+                        <paragraph>In a multiple-dose crossover study, 23 patients with type 2 diabetes mellitus 
+were administered either FORTAMET<sup>®</sup> 2000 mg once a day 
+(after dinner) or immediate-release (IR) metformin hydrochloride 1000 mg twice a 
+day (after breakfast and after dinner). After 4 weeks of treatment, steady-state 
+pharmacokinetic parameters, area under the concentration-time curve (AUC), time 
+to peak plasma concentration (T<sub>max</sub>), and maximum 
+concentration (C<sub>max</sub>) were evaluated. Results are 
+presented in <content styleCode="bold">
+                              <linkHtml href="#t1">Table 1</linkHtml>
+                           </content>.</paragraph>
+                        <table width="100%" ID="i4932d253-1654-48e5-880d-3096e01d54ed">
+                           <caption>Table 1 FORTAMET<sup>®</sup> vs. Immediate-Release 
+Metformin Steady-State Pharmacokinetic Parameters at 4 Weeks</caption>
+                           <col align="left" width="23%"/>
+                           <col align="left" width="23%"/>
+                           <col align="left" width="53%"/>
+                           <thead>
+                              <tr>
+                                 <th>
+                                    <content styleCode="bold">Pharmacokinetic Parameters (mean ±SD)</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">FORTAMET<sup>®</sup>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">2000 
+mg</content>
+                                    <br/>
+                                    <content styleCode="bold">(administered q.d.after dinner)</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Immediate-Release Metformin</content>
+                                    <br/>
+                                    <content styleCode="bold">2000 
+mg</content>
+                                    <br/>
+                                    <content styleCode="bold">(1000 mg b.i.d.)</content>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>AUC <sub>0-</sub>
+                                    <sub>24</sub>
+                                    <sub>hr</sub> 
+(ng•hr/mL)</td>
+                                 <td>26,811 ± 7055</td>
+                                 <td>27,371 ± 5,781</td>
+                              </tr>
+                              <tr>
+                                 <td>T<sub>max</sub> (hr)</td>
+                                 <td>6 (3-10)</td>
+                                 <td>3 (1-8)</td>
+                              </tr>
+                              <tr>
+                                 <td>C<sub>max</sub> (ng/mL)</td>
+                                 <td>2849 ± 797</td>
+                                 <td>1820 ± 
+370</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>In four single-dose studies and one multiple-dose study, the bioavailability 
+of FORTAMET<sup>®</sup> 2000 mg given once daily, in the evening, 
+under fed conditions [as measured by the area under the plasma concentration 
+versus time curve (AUC)] was similar to the same total daily dose administered 
+as immediate-release metformin 1000 mg given twice daily. The geometric mean 
+ratios (FORTAMET<sup>®</sup>/ immediate-release metformin) of 
+AUC<sub>0-24hr</sub>, AUC<sub>0-72hr</sub>, and AUC<sub>0-inf.</sub> for these five studies ranged from 0.96 to 1.08.</paragraph>
+                        <paragraph>In a single-dose, four-period replicate crossover design study, comparing two 
+500 mg FORTAMET<sup>®</sup> tablets to one 1000 mg FORTAMET<sup>®</sup> tablet administered in the evening with food to 29 healthy 
+male subjects, two 500 mg FORTAMET<sup>®</sup> tablets were found to 
+be equivalent to one 1000 mg FORTAMET<sup>®</sup> tablet.</paragraph>
+                        <paragraph>In a study carried out with FORTAMET<sup>®</sup>, there was a 
+dose-associated increase in metformin exposure over 24 hours following oral 
+administration of 1000, 1500, 2000, and 2500 mg.</paragraph>
+                        <paragraph>In three studies with FORTAMET<sup>®</sup> using different 
+treatment regimens (2000 mg after dinner; 1000 mg after breakfast and after 
+dinner; and 2500 mg after dinner), the pharmacokinetics of metformin as measured 
+by AUC appeared linear following multiple-dose administration.</paragraph>
+                        <paragraph>The extent of metformin absorption (as measured by AUC) from FORTAMET<sup>®</sup> increased by approximately 60% when given with food. When 
+FORTAMET<sup>®</sup> was administered with food, C<sub>max</sub> was increased by approximately 30% and T<sub>max</sub> was more prolonged compared with the fasting state (6.1 
+versus 4.0 hours).</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="8385719a-324e-4e04-a787-be2383a4b1a5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Distribution</title>
+                     <text>
+                        <paragraph>Distribution studies with FORTAMET<sup>®</sup> have not been 
+conducted. However, the apparent volume of distribution (V/F) of metformin 
+following single oral doses of immediate-release metformin 850 mg averaged 654 ± 
+358 L. Metformin is negligibly bound to plasma proteins, in contrast to 
+sulfonylureas, which are more than 90% protein bound. Metformin partitions into 
+erythrocytes, most likely as a function of time. At usual clinical doses and 
+dosing schedules of immediate-release metformin, steady state plasma 
+concentrations of metformin are reached within 24-48 hours and are generally 
+less than 1 μg/mL. During controlled clinical trials of immediate-release metformin, 
+maximum metformin plasma levels did not exceed 5 μg/mL, even at maximum doses.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="c8dc4a5a-1a31-4369-bf00-9831f8046fc7"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Metabolism and Excretion</title>
+                     <text>
+                        <paragraph>Metabolism studies with FORTAMET<sup>®</sup> have not 
+been conducted. Intravenous single-dose studies in normal subjects demonstrate 
+that metformin is excreted unchanged in the urine and does not undergo hepatic 
+metabolism (no metabolites have been identified in humans) nor biliary 
+excretion.</paragraph>
+                        <paragraph>In healthy nondiabetic adults (N=18) receiving 2500 mg q.d. FORTAMET<sup>®</sup>, the percent of the metformin dose excreted in urine over 24 
+hours was 40.9% and the renal clearance was 542 ± 310 mL/min. After repeated 
+administration of FORTAMET<sup>®</sup>, there is little or no 
+accumulation of metformin in plasma, with most of the drug being eliminated via 
+renal excretion over a 24-hour dosing interval. The t<sub>1/2</sub> 
+was 5.4 hours for FORTAMET<sup>®</sup>.</paragraph>
+                        <paragraph>Renal clearance of metformin (<content styleCode="bold">
+                              <linkHtml href="#t2">Table 
+2</linkHtml>
+                           </content>) is approximately 3.5 times greater than creatinine clearance, 
+which indicates that tubular secretion is the major route of metformin 
+elimination. Following oral administration, approximately 90% of the absorbed 
+drug is eliminated via the renal route within the first 24 hours, with a plasma 
+elimination half-life of approximately 6.2 hours. In blood, the elimination 
+half-life is approximately 17.6 hours, suggesting that the erythrocyte mass may 
+be a compartment of distribution.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="fbea01fe-7e59-4e4c-91be-97fb853588d8"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Special Populations</title>
+                     <text>
+                        <paragraph>Enter section text here</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="bc6fcf04-a033-4d5e-a778-b3968a4915b2"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>Geriatrics</title>
+                     <text>
+                        <paragraph>Limited data from controlled pharmacokinetic studies of immediate-release 
+metformin in healthy elderly subjects suggest that total plasma clearance of 
+metformin is decreased, the half-life is prolonged, and C<sub>max</sub> is increased, compared to healthy young subjects. From 
+these data, it appears that the change in metformin pharmacokinetics with aging 
+is primarily accounted for by a change in renal function (<content styleCode="bold">
+                              <linkHtml href="#t2">Table 2</linkHtml>
+                           </content>). FORTAMET<sup>®</sup> treatment 
+should not be initiated in patients ≥80 years of age unless measurement of 
+creatinine clearance demonstrates that renal function is not reduced (see <content styleCode="bold">
+                              <linkHtml href="#section-7">WARNINGS, </linkHtml>
+                              <linkHtml href="#section-8">PRECAUTIONS</linkHtml>
+                           </content> and <content styleCode="bold">
+                              <linkHtml href="#section-11">DOSAGE AND ADMINISTRATION</linkHtml>
+                           </content>).</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="07716d56-6556-4c03-97b8-e46ce0b56072"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>Pediatrics</title>
+                     <text>
+                        <paragraph>No pharmacokinetic data from studies of pediatric patients are currently 
+available (see <content styleCode="bold">
+                              <linkHtml href="#section-8">PRECAUTIONS</linkHtml>
+                           </content>).</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="9ba375fc-95de-45ef-aecd-ea639a5bd580"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Gender</title>
+                     <text>
+                        <paragraph>Five studies indicated that with FORTAMET<sup>®</sup> treatment, the 
+pharmacokinetic results for males and females were comparable.</paragraph>
+                        <table width="100%" ID="i28f2fa5d-3659-4ce9-8c6d-428390f329a2">
+                           <caption>Table 2 Select Mean (±SD) Metformin Pharmacokinetic Parameters 
+Following Single or Multiple Oral Doses of Immediate-Release Metformin</caption>
+                           <col align="left" width="33%"/>
+                           <col align="left" width="20%"/>
+                           <col align="left" width="16%"/>
+                           <col align="left" width="29%"/>
+                           <thead>
+                              <tr>
+                                 <th>
+                                    <content styleCode="bold">Subject Groups: 
+Immediate-Release</content>
+                                    <br/>
+                                    <content styleCode="bold">Metformin dose</content>
+                                    <sup>a</sup>
+                                    <content styleCode="bold">(number of subjects)</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">C</content>
+                                    <sub>max</sub>
+                                    <content styleCode="bold">b</content>
+                                    <br/>
+                                    <content styleCode="bold">(</content>μ<content styleCode="bold">g/mL)</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">T</content>
+                                    <sub>max</sub>
+                                    <content styleCode="bold">c</content>
+                                    <br/>
+                                    <content styleCode="bold">(hrs)</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Renal</content>
+                                    <br/>
+                                    <content styleCode="bold">Clearance</content>
+                                    <br/>
+                                    <content styleCode="bold">(mL/min)</content>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Healthy, 
+nondiabetic adults:</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>500 mg single dose (24)</td>
+                                 <td>1.03 (±0.33)</td>
+                                 <td>2.75 (±0.81)</td>
+                                 <td>600 (±132)</td>
+                              </tr>
+                              <tr>
+                                 <td>850 mg single dose (74)<sup>d</sup>
+                                 </td>
+                                 <td>1.60 (±0.38)</td>
+                                 <td>2.64 (±0.82)</td>
+                                 <td>552 (±139)</td>
+                              </tr>
+                              <tr>
+                                 <td>850 mg three times daily for 19 
+doses<sup>e</sup> (9) </td>
+                                 <td>2.01 (±0.42)</td>
+                                 <td>1.79 (±0.94)</td>
+                                 <td>642 (±173)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Adults with 
+type 2 diabetes:</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>850 mg single dose (23)</td>
+                                 <td>1.48 (±0.5)</td>
+                                 <td>3.32 (±1.08)</td>
+                                 <td>491 (±138)</td>
+                              </tr>
+                              <tr>
+                                 <td>850 mg three times daily for 19 
+doses<sup>e</sup> (9)</td>
+                                 <td>1.90 (±0.62)</td>
+                                 <td>2.01 (±1.22)</td>
+                                 <td>550 (±160)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Elderly</content>
+                                    <sup>f</sup>
+                                    <content styleCode="bold">, healthy 
+nondiabetic adults:</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>850 mg single dose (12)</td>
+                                 <td>2.45 (±0.70)</td>
+                                 <td>2.71 (±1.05)</td>
+                                 <td>412 (±98)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Renal-impaired 
+adults:</content>850 mg single dose</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Mild</content> 
+(CL<sub>cr</sub>
+                                    <sup>g</sup> 61-90 mL/min) (5)</td>
+                                 <td>1.86 (±0.52)</td>
+                                 <td>3.20 (±0.45)</td>
+                                 <td>384 (±122)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Moderate</content> 
+(CL<sub>cr</sub> 31-60 mL/min) (4)</td>
+                                 <td>4.12 (±1.83)</td>
+                                 <td>3.75 (±0.50)</td>
+                                 <td>108 (±57)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Severe</content> 
+(CL<sub>cr</sub> 10-30 mL/min) (6)</td>
+                                 <td>3.93 (±0.92)</td>
+                                 <td>4.01 (±1.10)</td>
+                                 <td>130 (±90)</td>
+                              </tr>
+                           </tbody>
+                        </table>a  All doses given fasting except the first 18 doses of the multiple dose studies<br/>b  Peak plasma concentration<br/>c  Time to peak plasma concentration<br/>d  Combined results (average means) of five studies: mean age 32 years (range 23-59 years)<br/>e  Kinetic study done following dose 19, given fasting<br/>f  Elderly subjects, mean age 71 years (range 65-81 years)<br/>g  CL<sub>cr</sub> = creatinine clearance normalized to body surface 
+area of 1.73 m<sup>2</sup>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="cee08cfa-ced9-4218-8d1e-597dc0f9a219"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Renal Insufficiency</title>
+                     <text>
+                        <paragraph>In patients with decreased renal function (based on measured creatinine 
+clearance), the plasma and blood half-life of metformin is prolonged and the 
+renal clearance is decreased in proportion to the decrease in creatinine 
+clearance (<content styleCode="bold">
+                              <linkHtml href="#t2">Table 2</linkHtml>
+                           </content>; also see <content styleCode="bold">
+                              <linkHtml href="#section-7">WARNINGS</linkHtml>
+                           </content>).</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="092cb669-6c92-4711-9dc6-085aa8952ffb"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Hepatic Insufficiency</title>
+                     <text>
+                        <paragraph>No pharmacokinetic studies of metformin have been conducted in patients with 
+hepatic insufficiency.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="6766d396-45e4-409e-afa7-28f1a82a40c9"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Race</title>
+                     <text>
+                        <paragraph>No studies of metformin pharmacokinetic parameters according to race have been 
+performed. In controlled clinical studies of immediate-release metformin in 
+patients with type 2 diabetes, the antihyperglycemic effect was comparable in 
+whites (n=249), blacks (n=51), and Hispanics (n=24).</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="eb9b6517-7006-4d47-a137-1a27448b2aa4"/>
+                     <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+                     <title>Clinical Studies</title>
+                     <text>
+                        <paragraph>In a double-blind, randomized, active-controlled, multicenter 
+U.S. clinical study, which compared FORTAMET<sup>®</sup> q.d. to 
+immediate-release metformin b.i.d., 680 patients with type 2 diabetes who had 
+been taking metformin-containing medication at study entry were randomly 
+assigned in equal numbers to double-blind treatment with either FORTAMET<sup>®</sup> or immediate-release metformin. Doses were adjusted during 
+the first six weeks of treatment with study medication based on patients' FPG 
+levels and were then held constant over a period of 20 weeks. The primary 
+efficacy endpoint was the change in HbA<sub>1c</sub> from baseline 
+to endpoint. The primary objective was to demonstrate the clinical 
+non-inferiority of FORTAMET<sup>®</sup> compared to 
+immediate-release metformin on the primary endpoint.</paragraph>
+                        <paragraph>FORTAMET<sup>®</sup> and metformin patients had mean HbA<sub>1c</sub> changes from baseline to endpoint equal to +0.40 and +0.14, 
+respectively (<content styleCode="bold">
+                              <linkHtml href="#t3">Table 3</linkHtml>
+                           </content>). The 
+least-square (LS) mean treatment difference was 0.25 (95% CI = 0.14, 0.37) 
+demonstrating that FORTAMET<sup>®</sup> was clinically similar to 
+metformin according to the pre-defined criterion to establish efficacy.</paragraph>
+                        <linkHtml href=""/>
+                        <table width="100%" ID="ic58699c5-59d5-4f8f-839d-9e65d583951d">
+                           <caption>Table 3 FORTAMET<sup>®</sup> vs. Immediate-Release 
+Metformin Switch Study: Summary of Mean Changes in HbA<sub>1c</sub>, 
+Fasting Plasma Glucose, Body Weight, Body Mass Index, and Plasma 
+Insulin</caption>
+                           <col align="left" width="36%"/>
+                           <col align="left" width="15%"/>
+                           <col align="left" width="19%"/>
+                           <col align="left" width="36%"/>
+                           <thead>
+                              <tr>
+                                 <th>
+                                    <br/>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">FORTAMET</content>
+                                    <sup>®</sup>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Immediate-Release Metformin</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Treatment difference for</content>
+                                    <br/>
+                                    <content styleCode="bold">change from 
+baseline</content>
+                                    <br/>
+                                    <content styleCode="bold">(FORTAMET</content>
+                                    <sup>®</sup>
+                                    <content styleCode="bold">minus</content>
+                                    <br/>
+                                    <content styleCode="bold">Immediate-Release</content>
+                                    <br/>
+                                    <content styleCode="bold">Metformin)</content>
+                                    <br/>
+                                    <content styleCode="bold">LS mean</content>
+                                    <br/>
+                                    <content styleCode="bold">(2 sided 95% 
+CI</content>
+                                    <sup>a</sup>
+                                    <content styleCode="bold">)</content>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">HbA</content>
+                                    <sub>1c</sub>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">N</content>
+                                 </td>
+                                 <td>327</td>
+                                 <td>332</td>
+                                 <td>0.25</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Baseline (mean ± 
+SD)</content>
+                                 </td>
+                                 <td>7.04 ± 0.88</td>
+                                 <td>7.07 ± 0.76</td>
+                                 <td>(0.14,0.37)<sup>b</sup>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Change 
+from baseline (mean ± SD)</content>
+                                 </td>
+                                 <td>0.40 ± 0.75</td>
+                                 <td>0.14 ± 0.75</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Fasting Plasma 
+Glucose (mg/dL)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">N</content>
+                                 </td>
+                                 <td>329</td>
+                                 <td>333</td>
+                                 <td>6.43</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Baseline (mean ± 
+SD)</content>
+                                 </td>
+                                 <td>146.8 ± 32.1</td>
+                                 <td>145.6 ± 29.5</td>
+                                 <td>(0.57, 12.29)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Change 
+from baseline (mean ± SD)</content>
+                                 </td>
+                                 <td>10.0 ± 40.8</td>
+                                 <td>4.2 ± 35.9</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Plasma Insulin 
+(μu/mL)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">N</content>
+                                 </td>
+                                 <td>304</td>
+                                 <td>316</td>
+                                 <td>0.02</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Baseline (mean ± 
+SD)</content>
+                                 </td>
+                                 <td>17.9 ± 15.1</td>
+                                 <td>17.3 ± 10.5</td>
+                                 <td>(-1.47, 1.50)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Change 
+from baseline (mean ± SD)</content>
+                                 </td>
+                                 <td>-3.6 ± 13.8</td>
+                                 <td>-3.2 ± 8.6</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Body Weight 
+(kg)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">N</content>
+                                 </td>
+                                 <td>313</td>
+                                 <td>320</td>
+                                 <td>0.30</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Baseline (mean ± 
+SD)</content>
+                                 </td>
+                                 <td>94.1 ± 17.8</td>
+                                 <td>93.3 ± 17.4</td>
+                                 <td>(-0.22, 0.81)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Change 
+from baseline(mean ± SD)</content>
+                                 </td>
+                                 <td>0.3 ± 2.9</td>
+                                 <td>0.0 ± 3.7</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Body Mass Index 
+(kg/m</content>
+                                    <sup>2</sup>
+                                    <content styleCode="bold">)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">N</content>
+                                 </td>
+                                 <td>313</td>
+                                 <td>320</td>
+                                 <td>0.08</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Baseline (mean ± 
+SD)</content>
+                                 </td>
+                                 <td>31.1 ±4.7</td>
+                                 <td>31.4 ± 4.5</td>
+                                 <td>(-0.11, 0.26)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Change 
+from baseline(mean ± SD)</content>
+                                 </td>
+                                 <td>0.1 ± 1.1</td>
+                                 <td>0.0 ± 1.3</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>a  CI=Confidence Interval</paragraph>
+                        <paragraph>b  FORTAMET<sup>®</sup> was clinically similar to immediate-release 
+metformin based on the pre-defined criterion to establish efficacy. While 
+demonstrating clinical similarity, the response to FORTAMET<sup>®</sup> compared to immediate-release metformin was also shown to be 
+statistically smaller as seen by the 95% CI for the treatment difference which 
+did not include zero.</paragraph>
+                        <paragraph>Footnote:  Patients were taking metformin-containing medications at baseline that were prescribed by their personal physicians.<br/>
+                        </paragraph>
+                        <paragraph>
+                           <br/>The mean changes for FPG (<content styleCode="bold">
+                              <linkHtml href="#t3">Table 3</linkHtml>
+                           </content>) 
+and plasma insulin (<content styleCode="bold">
+                              <linkHtml href="#t3">Table 3</linkHtml>
+                           </content>) were 
+small for both FORTAMET<sup>®</sup> and immediate-release metformin, 
+and were not clinically meaningful. Seventy-six (22%) and 49 (14%) of the 
+FORTAMET<sup>®</sup> and immediate-release patients, respectively, 
+discontinued prematurely from the trial. Eighteen (5%) patients on FORTAMET<sup>®</sup> withdrew because of a stated lack of efficacy, as compared 
+with 8 patients (2%) on immediate-release metformin (p=0.047).</paragraph>
+                        <paragraph>Results from this study also indicated that neither FORTAMET<sup>®</sup> nor immediate-release metformin were associated with weight 
+gain or increases in body mass index.</paragraph>
+                        <paragraph>A 24-week, double blind, placebo-controlled study of immediate-release 
+metformin plus insulin, versus insulin plus placebo, was conducted in patients 
+with type 2 diabetes who failed to achieve adequate glycemic control on insulin 
+alone (<content styleCode="bold">
+                              <linkHtml href="#t4">Table 4</linkHtml>
+                           </content>). Patients randomized 
+to receive immediate-release metformin plus insulin achieved a reduction in 
+HbA<sub>1c</sub> of 2.10%, compared to a 1.56% reduction in HbA<sub>1c</sub> achieved by insulin plus placebo. The improvement in 
+glycemic control was achieved at the final study visit with 16% less insulin, 
+93.0 U/day versus 110.6 U/day, immediate-release metformin plus insulin versus 
+insulin plus placebo, respectively, p=0.04.</paragraph>
+                        <linkHtml href=""/>
+                        <table width="100%" ID="ic8688907-7272-4352-8b92-64f2f71ac077">
+                           <caption>Table 4 Combined Immediate-Release Metformin/lnsulin vs. 
+Placebo/Insulin: Summary of Mean Changes from Baseline in HbA<sub>1c</sub> and Daily Insulin Dose</caption>
+                           <col align="left" width="39%"/>
+                           <col align="left" width="24%"/>
+                           <col align="left" width="12%"/>
+                           <col align="left" width="23%"/>
+                           <thead>
+                              <tr>
+                                 <th>
+                                    <br/>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Immediate-Release</content>
+                                    <br/>
+                                    <content styleCode="bold">Metformin 
+/Insulin</content>
+                                    <br/>
+                                    <content styleCode="bold">(n = 26)</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Placebo/Insulin<br/>(n 
+= 28)</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Treatment 
+difference Mean ± SE</content>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">HbA</content>
+                                    <sub>1c</sub>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content>Baseline</td>
+                                 <td>8.95</td>
+                                 <td>9.32</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content>Change at FINAL VISIT</td>
+                                 <td>-2.10</td>
+                                 <td>-1.56</td>
+                                 <td>-0.54 ± 0.43<sup>a</sup>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Insulin Dose 
+(U/day)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content>Baseline</td>
+                                 <td>93.12</td>
+                                 <td>94.64</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content>Change at FINAL VISIT</td>
+                                 <td>-0.15</td>
+                                 <td>15.93</td>
+                                 <td>-16.08 ± 7.77<sup>b</sup>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup>  Statistically significant using analysis of covariance with baseline as covariate (p=0.04). 
+Not significant using analysis of variance (values shown in table)<br/>
+                           <sup>b</sup>  Statistically significant for insulin (p=0.04)</paragraph>
+                        <paragraph>A second double-blind, placebo-controlled study (n=51), with 16 weeks of 
+randomized treatment, demonstrated that in patients with type 2 diabetes 
+controlled on insulin for 8 weeks with an average HbA<sub>1c</sub> 
+of 7.46 ± 0.97%, the addition of immediate-release metformin maintained similar 
+glycemic control (HbA<sub>1c</sub> 7.15 ± 0.61 versus 6.97 ± 0.62 
+for immediate-release metformin plus insulin and placebo plus insulin, 
+respectively) with 19% less insulin versus baseline (reduction of 23.68 ± 30.22 
+versus an increase of 0.43 ± 25.20 units for immediate-release metformin plus 
+insulin and placebo plus insulin, p less than 0.01). In addition, this study 
+demonstrated that the combination of immediate-release metformin plus insulin 
+resulted in reduction in body weight of 3.11 ± 4.30 lbs, compared to an increase 
+of 1.30 ± 6.08 lbs for placebo plus insulin, p=0.01.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="773c06e8-a986-4de1-9877-a8e0773a921d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Pediatric Clinical Studies</title>
+                     <text>
+                        <paragraph>No pediatric clinical studies have been conducted with 
+FORTAMET<sup>®</sup>. In a double-blind, placebo-controlled study in 
+pediatric patients aged 10 to 16 years with type 2 diabetes (mean FPG 182.2 
+mg/dL), treatment with immediate-release metformin (up to 2000 mg/day) for up to 
+16 weeks (mean duration of treatment 11 weeks) resulted in a significant mean 
+net reduction in FPG of 64.3 mg/dL compared with placebo (<content styleCode="bold">
+                              <linkHtml href="#t5">Table 5</linkHtml>
+                           </content>).</paragraph>
+                        <linkHtml href=""/>
+                        <table width="100%" ID="i793ce546-eac0-4afa-83be-5f6fa9e37c74">
+                           <caption>Table 5 Immediate-Release Metformin vs. Placebo (Pediatrics<sup>a</sup>): Summary of Mean Changes from Baseline* in Plasma Glucose 
+and Body Weight at Final Visit</caption>
+                           <col align="left" width="25%"/>
+                           <col align="left" width="24%"/>
+                           <col align="left" width="24%"/>
+                           <col align="left" width="25%"/>
+                           <thead>
+                              <tr>
+                                 <th>
+                                    <br/>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Immediate-Release 
+Metformin</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">Placebo</content>
+                                 </th>
+                                 <th>
+                                    <content styleCode="bold">p-Value</content>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">FPG (mg/dL)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">(n = 37)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">(n = 36)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold"/>Baseline</td>
+                                 <td>162.4</td>
+                                 <td>192.3</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Change at FINAL VISIT</td>
+                                 <td>-42.9</td>
+                                 <td>21.4</td>
+                                 <td>less than 0.001</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Body Weight 
+(lbs)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">(n = 39)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">(n = 38)</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Baseline</td>
+                                 <td>205.3</td>
+                                 <td>189.0</td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Change at FINAL VISIT</td>
+                                 <td>-3.3</td>
+                                 <td>-2.0</td>
+                                 <td>NS**</td>
+                              </tr>
+                           </tbody>
+                        </table>a  Pediatric patients mean age 13.8 years (range 10-16 years)<br/>*  All patients on diet therapy at Baseline<br/>**  Not statistically significant<br/>
+                     </text>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="1cdfafb7-18ac-4e87-a692-4f83f0dd8a64"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>FORTAMET® is indicated as an adjunct to diet and exercise to improve glycemic 
+control in adults with type 2 diabetes mellitus.</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="983fe658-d444-4350-ac84-968d18e08071"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>FORTAMET<sup>®</sup> is contraindicated in patients 
+with:</paragraph>
+                  <list listType="ordered" ID="i68131082-1b85-45d4-8a31-676f84cdfa6d">
+                     <item>Renal disease or renal dysfunction (e.g., as suggested by serum creatinine 
+levels ≥1.5 mg/dL [males], ≥1.4 mg/dL [females] or abnormal creatinine 
+clearance) which may also result from conditions such as cardiovascular collapse 
+(shock), acute myocardial infarction, and septicemia (see <content styleCode="bold">
+                           <linkHtml href="#section-7">WARNINGS</linkHtml>
+                        </content> and <content styleCode="bold">
+                           <linkHtml href="#section-8">PRECAUTIONS</linkHtml>
+                        </content>).</item>
+                     <item>Known hypersensitivity to metformin.</item>
+                     <item>Acute or chronic metabolic acidosis, including diabetic ketoacidosis, with 
+or without coma. Diabetic ketoacidosis should be treated with insulin.</item>
+                  </list>
+                  <paragraph>FORTAMET<sup>®</sup> should be temporarily discontinued in 
+patients undergoing radiologic studies involving intravascular administration of 
+iodinated contrast materials, because use of such products may result in acute 
+alteration of renal function (see also <content styleCode="bold">
+                        <linkHtml href="#section-8">PRECAUTIONS</linkHtml>
+                     </content>).</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="b95ada7b-848f-4140-80d2-ca2615372678"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Lactic Acidosis:</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Lactic acidosis is a rare, but serious, metabolic 
+complication that can occur due to metformin accumulation during treatment with 
+FORTAMET<sup>®</sup> (metformin hydrochloride) Extended-Release 
+Tablets; when it occurs, it is fatal in approximately 50% of cases. Lactic 
+acidosis may also occur in association with a number of pathophysiologic 
+conditions, including diabetes mellitus, and whenever there is significant 
+tissue hypoperfusion and hypoxemia. Lactic acidosis is characterized by elevated 
+blood lactate levels (&gt;5 mmol/ L), decreased blood pH, electrolyte 
+disturbances with an increased anion gap, and an increased lactate/pyruvate 
+ratio. When metformin is implicated as the cause of lactic acidosis, metformin 
+plasma levels &gt;5 μg/mL are generally found.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The reported incidence of lactic acidosis in patients 
+receiving metformin hydrochloride is very low (approximately 0.03 cases/1000 
+patient-years, with approximately 0.015 fatal cases/1000 patient-years). 
+Reported cases have occurred primarily in diabetic patients with significant 
+renal insufficiency, including both intrinsic renal disease and renal 
+hypoperfusion, often in the setting of multiple concomitant medical/ surgical 
+problems and multiple concomitant medications. Patients with congestive heart 
+failure requiring pharmacologic management, in particular those with unstable or 
+acute congestive heart failure who are at risk of hypoperfusion and hypoxemia, 
+are at increased risk of lactic acidosis. The risk of lactic acidosis increases 
+with the degree of renal dysfunction and the patient's age. The risk of lactic 
+acidosis may, therefore, be significantly decreased by regular monitoring of 
+renal function in patients taking FORTAMET<sup>®</sup> (metformin 
+hydrochloride) Extended-Release Tablets and by use of the minimum effective dose 
+of FORTAMET<sup>®</sup>. In particular, treatment of the elderly 
+should be accompanied by careful monitoring of renal function. FORTAMET<sup>®</sup> treatment should not be initiated in patients ≥80 years of 
+age unless measurement of creatinine clearance demonstrates that renal function 
+is not reduced, as these patients are more susceptible to developing lactic 
+acidosis. In addition, FORTAMET<sup>®</sup> should be promptly 
+withheld in the presence of any condition associated with hypoxemia, 
+dehydration, or sepsis. Because impaired hepatic function may significantly 
+limit the ability to clear lactate, FORTAMET<sup>®</sup> should 
+generally be avoided in patients with clinical or laboratory evidence of hepatic 
+disease. Patients should be cautioned against excessive alcohol intake, either 
+acute or chronic, when taking FORTAMET<sup>®</sup>, since alcohol 
+potentiates the effects of metformin hydrochloride on lactate metabolism. In 
+addition, FORTAMET<sup>®</sup> should be temporarily discontinued 
+prior to any intravascular radiocontrast study and for any surgical procedure 
+(see also <linkHtml href="#section-8">PRECAUTIONS</linkHtml>).</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The onset of lactic acidosis often is subtle, and 
+accompanied only by nonspecific symptoms such as malaise, myalgias, respiratory 
+distress, increasing somnolence, and nonspecific abdominal distress. There may 
+be associated hypothermia, hypotension, and resistant bradyarrhythmias with more 
+marked acidosis. The patient and the patient's physician must be aware of the 
+possible importance of such symptoms and the patient should be instructed to 
+notify the physician immediately if they occur (see also <linkHtml href="#section-8">PRECAUTIONS</linkHtml>). FORTAMET<sup>®</sup> should be 
+withdrawn until the situation is clarified. Serum electrolytes, ketones, blood 
+glucose and, if indicated, blood pH, lactate levels, and even blood metformin 
+levels may be useful. Once a patient is stabilized on any dose level of 
+FORTAMET<sup>®</sup>, gastrointestinal symptoms, which are common 
+during initiation of therapy, are unlikely to be drug related. Later occurrence 
+of gastrointestinal symptoms could be due to lactic acidosis or other serious 
+disease.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Levels of fasting venous plasma lactate above the upper 
+limit of normal but less than 5 mmol/L in patients taking FORTAMET<sup>®</sup> do not necessarily indicate impending lactic acidosis and may 
+be explainable by other mechanisms, such as poorly controlled diabetes or 
+obesity, vigorous physical activity, or technical problems in sample handling 
+(see also <linkHtml href="#section-8">PRECAUTIONS</linkHtml>).</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Lactic acidosis should be suspected in any diabetic patient 
+with metabolic acidosis lacking evidence of ketoacidosis (ketonuria and 
+ketonemia).</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Lactic acidosis is a medical emergency that must be treated 
+in a hospital setting. In a patient with lactic acidosis who is taking 
+FORTAMET<sup>®</sup>, the drug should be discontinued immediately 
+and general supportive measures promptly instituted. Because metformin 
+hydrochloride is dialyzable (with a clearance of up to 170 mL/min under good 
+hemodynamic conditions), prompt hemodialysis is recommended to correct the 
+acidosis and remove the accumulated metformin. Such management often results in 
+prompt reversal of symptoms and recovery (see also <linkHtml href="#section-6">CONTRAINDICATIONS</linkHtml> and <linkHtml href="#section-8">PRECAUTIONS</linkHtml>).</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="ca1686c5-0d9f-4837-a9a1-c51dabff4f8a"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <text>
+                  <paragraph>Enter section text here</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+               <component>
+                  <section>
+                     <id root="4d674f31-fed9-407e-9137-830c1eb3916c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>General</title>
+                     <text>
+                        <paragraph>
+                           <content>Monitoring of renal function 
+</content>
+                           <content styleCode="italics">-</content> Metformin is known to be substantially 
+excreted by the kidney, and the risk of metformin accumulation and lactic 
+acidosis increases with the degree of impairment of renal function. Thus, 
+patients with serum creatinine levels above the upper limit of normal for their 
+age should not receive FORTAMET<sup>®</sup>. In patisents with 
+advanced age, FORTAMET<sup>®</sup> should be carefully titrated to 
+establish the minimum dose for adequate glycemic effect, because aging is 
+associated with reduced renal function. In elderly patients, particularly those 
+≥80 years of age, renal function should be monitored regularly and, generally, 
+FORTAMET<sup>®</sup> should not be titrated to the maximum dose (see 
+<content styleCode="bold">
+                              <linkHtml href="#section-7">WARNINGS</linkHtml>
+                           </content> and <content styleCode="bold">
+                              <linkHtml href="#section-11">DOSAGE AND ADMINISTRATION</linkHtml>
+                           </content>).</paragraph>
+                        <paragraph>Before initiation of FORTAMET<sup>®</sup> therapy and at least 
+annually thereafter, renal function should be assessed and verified as normal. 
+In patients in whom development of renal dysfunction is anticipated, renal 
+function should be assessed more frequently and FORTAMET<sup>®</sup> 
+discontinued if evidence of renal impairment is present.</paragraph>
+                        <linkHtml href=""/>
+                        <linkHtml href=""/>Macrovascular Outcomes -<paragraph>There have been no clinical studies establishing conclusive 
+evidence of macrovascular risk reduction with FORTAMET® or any other 
+anti-diabetic drug.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Use of concomitant medications that 
+may affect renal function or metformin disposition </content>
+                           <content styleCode="italics">-</content> Concomitant medication(s) that may affect renal function 
+or result in significant hemodynamic change or may interfere with the 
+disposition of metformin, such as cationic drugs that are eliminated by renal 
+tubular secretion (see <content styleCode="bold">
+                              <linkHtml href="#section-8.4">PRECAUTIONS: Drug 
+Interactions</linkHtml>
+                           </content>), should be used with caution.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Radiologic studies involving the use 
+of intravascular iodinated contrast materials (for example, intravenous urogram, 
+intravenous cholangiography, angiography, and computed tomography (CT) scans 
+with intravascular contrast materials) –</content> Intravascular contrast studies 
+with iodinated materials can lead to acute alteration of renal function and have 
+been associated with lactic acidosis in patients receiving metformin (see <content styleCode="bold">
+                              <linkHtml href="#section-6">CONTRAINDICATIONS</linkHtml>
+                           </content>). Therefore, in 
+patients in whom any such study is planned, FORTAMET<sup>®</sup> 
+should be temporarily discontinued at the time of or prior to the procedure, and 
+withheld for 48 hours subsequent to the procedure and reinstituted only after 
+renal function has been re-evaluated and found to be normal.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Hypoxic states –</content> Cardiovascular 
+collapse (shock) from whatever cause, acute congestive heart failure, acute 
+myocardial infarction and other conditions characterized by hypoxemia have been 
+associated with lactic acidosis and may also cause prerenal azotemia. When such 
+events occur in patients on FORTAMET<sup>®</sup> therapy, the drug 
+should be promptly discontinued.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Surgical procedures –</content> 
+FORTAMET<sup>®</sup> therapy should be temporarily suspended for any 
+surgical procedure (except minor procedures not associated with restricted 
+intake of food and fluids) and should not be restarted until the patient's oral 
+intake has resumed and renal function has been evaluated as normal.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Alcohol intake –</content> Alcohol is 
+known to potentiate the effect of metformin on lactate metabolism. Patients, 
+therefore, should be warned against excessive alcohol intake, acute or chronic, 
+while receiving FORTAMET<sup>®</sup>.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Impaired hepatic function –</content> 
+Since impaired hepatic function has been associated with some cases of lactic 
+acidosis, FORTAMET<sup>®</sup> should generally be avoided in 
+patients with clinical or laboratory evidence of hepatic disease.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Vitamin B<sub>12 
+</sub> levels –</content> In controlled clinical trials of immediate-release 
+metformin of 29 weeks duration, a decrease to subnormal levels of previously 
+normal serum Vitamin <content>B<sub>12 
+</sub>
+                           </content> levels, without clinical manifestations, was observed in 
+approximately 7% of patients. Such decrease, possibly due to interference with 
+<content>B<sub>12 </sub>
+                           </content> absorption from 
+the <content>B<sub>12 </sub>
+                           </content>-intrinsic 
+factor complex, is, however, very rarely associated with anemia and appears to 
+be rapidly reversible with discontinuation of immediate-release metformin or 
+Vitamin <content>B<sub>12 
+</sub>
+                           </content> supplementation. Measurement of hematologic parameters on an 
+annual basis is advised in patients on FORTAMET<sup>®</sup> and any 
+apparent abnormalities should be appropriately investigated and managed (see 
+<content styleCode="bold">
+                              <linkHtml href="#section-8.3">PRECAUTIONS: Laboratory 
+Tests</linkHtml>
+                           </content>). Certain individuals (those with inadequate Vitamin <content>B<sub>12 </sub>
+                           </content> or calcium intake or 
+absorption) appear to be predisposed to developing subnormal Vitamin <content>B<sub>12 </sub>
+                           </content> levels. In these 
+patients, routine serum Vitamin <content>B<sub>12 
+</sub>
+                           </content> measurements at two- to three-year intervals may be useful.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Change in clinical status of patients 
+with previously controlled type 2 diabetes –</content> A patient with type 2 
+diabetes previously well controlled on FORTAMET<sup>®</sup> who 
+develops laboratory abnormalities or clinical illness (especially vague and 
+poorly defined illness) should be evaluated promptly for evidence of 
+ketoacidosis or lactic acidosis. Evaluation should include serum electrolytes 
+and ketones, blood glucose and, if indicated, blood pH, lactate, pyruvate, and 
+metformin levels. If acidosis of either form occurs, FORTAMET<sup>®</sup> must be stopped immediately and other appropriate corrective 
+measures initiated (see also <content styleCode="bold">
+                              <linkHtml href="#section-7">WARNINGS</linkHtml>
+                           </content>).</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Hypoglycemia –</content> Hypoglycemia 
+does not occur in patients receiving FORTAMET<sup>®</sup> alone 
+under usual circumstances of use, but could occur when caloric intake is 
+deficient, when strenuous exercise is not compensated by caloric 
+supplementation, or during concomitant use with other glucose-lowering agents 
+(such as sulfonylureas and insulin) or ethanol. Elderly, debilitated, or 
+malnourished patients, and those with adrenal or pituitary insufficiency or 
+alcohol intoxication are particularly susceptible to hypoglycemic effects. 
+Hypoglycemia may be difficult to recognize in the elderly, and in people who are 
+taking beta-adrenergic blocking drugs.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content>Loss of control of blood glucose 
+–</content> When a patient stabilized on any diabetic regimen is exposed to stress 
+such as fever, trauma, infection, or surgery, a temporary loss of glycemic 
+control may occur. At such times, it may be necessary to withhold FORTAMET<sup>®</sup> and temporarily administer insulin. FORTAMET<sup>®</sup> may be reinstituted after the acute episode is resolved.</paragraph>
+                        <paragraph>The effectiveness of oral antidiabetic drugs in lowering blood glucose to a 
+targeted level decreases in many patients over a period of time. This 
+phenomenon, which may be due to progression of the underlying disease or to 
+diminished responsiveness to the drug, is known as secondary failure, to 
+distinguish it from primary failure in which the drug is ineffective during 
+initial therapy. Should secondary failure occur with FORTAMET<sup>®</sup> or sulfonylurea monotherapy, combined therapy with 
+FORTAMET<sup>®</sup> and sulfonylurea may result in a response. 
+Should secondary failure occur with combined FORTAMET<sup>®</sup>/sulfonylurea therapy, it may be necessary to consider 
+therapeutic alternatives including initiation of insulin therapy.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="3a288acb-5a47-4d35-bb15-6e452ab5b945"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Information for Patients</title>
+                     <text>
+                        <paragraph>Patients should be informed of the potential risks and benefits 
+of FORTAMET<sup>®</sup> and of alternative modes of therapy. They 
+should also be informed about the importance of adherence to dietary 
+instructions, of a regular exercise program, and of regular testing of blood 
+glucose, glycosylated hemoglobin, renal function, and hematologic 
+parameters.</paragraph>
+                        <paragraph>The risks of lactic acidosis, its symptoms, and conditions that predispose to 
+its development, as noted in the <content styleCode="bold">
+                              <linkHtml href="#section-7">WARNINGS</linkHtml>
+                           </content> and <content styleCode="bold">
+                              <linkHtml href="#section-8">PRECAUTIONS</linkHtml>
+                           </content> sections, should be explained to 
+patients. Patients should be advised to discontinue FORTAMET<sup>®</sup> immediately and to promptly notify their health practitioner 
+if unexplained hyperventilation, myalgia, malaise, unusual somnolence, or other 
+nonspecific symptoms occur. Once a patient is stabilized on any dose level of 
+FORTAMET<sup>®</sup>, gastrointestinal symptoms, which are common 
+during initiation of metformin therapy, are unlikely to be drug related. Later 
+occurrence of gastrointestinal symptoms could be due to lactic acidosis or other 
+serious disease.</paragraph>
+                        <paragraph>Patients should be counseled against excessive alcohol intake, either acute 
+or chronic, while receiving FORTAMET<sup>®</sup>.</paragraph>
+                        <paragraph>FORTAMET<sup>®</sup> alone does not usually cause hypoglycemia, 
+although it may occur when FORTAMET<sup>®</sup> is used in 
+conjunction with oral sulfonylureas and insulin. When initiating combination 
+therapy, the risks of hypoglycemia, its symptoms and treatment, and conditions 
+that predispose to its development should be explained to patients and 
+responsible family members (see <content styleCode="bold">
+                              <linkHtml href="#section-14.1">Patient 
+Information</linkHtml>
+                           </content> Printed Below).</paragraph>
+                        <paragraph>Patients should be informed that FORTAMET<sup>®</sup> must be 
+swallowed whole and not chewed, cut, or crushed, and that the inactive 
+ingredients may occasionally be eliminated in the feces as a soft mass that may 
+resemble the original tablet (see <content styleCode="bold">
+                              <linkHtml href="#section-14.1">Patient Information</linkHtml>
+                           </content>).</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="cf37fb1b-c948-4944-b2a2-55b21e4ff53a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Laboratory Tests</title>
+                     <text>
+                        <paragraph>Response to all diabetic therapies should be monitored by 
+periodic measurements of fasting blood glucose and glycosylated hemoglobin 
+levels, with a goal of decreasing these levels toward the normal range. During 
+initial dose titration, fasting glucose can be used to determine the therapeutic 
+response. Thereafter, both glucose and glycosylated hemoglobin should be 
+monitored. Measurements of glycosylated hemoglobin may be especially useful for 
+evaluating long-term control (see also <content styleCode="bold">
+                              <linkHtml href="#section-11">DOSAGE AND ADMINISTRATION</linkHtml>
+                           </content>).</paragraph>
+                        <paragraph>Initial and periodic monitoring of hematologic parameters (e.g., 
+hemoglobin/hematocrit and red blood cell indices) and renal function (serum 
+creatinine) should be performed, at least on an annual basis. While 
+megaloblastic anemia has rarely been seen with immediate-release metformin 
+therapy, if this is suspected, Vitamin B<sub>12</sub> deficiency 
+should be excluded.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="5c4fa044-4a12-4d38-9f32-bd5c78ad6896"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Drug Interactions (Clinical Evaluation of Drug Interactions Conducted with Immediate-Release Metformin)</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Glyburide</content>
+                           <content>–</content> In a single-dose interaction study in type 2 
+diabetes patients, co-administration of metformin and glyburide did not result 
+in any changes in either metformin pharmacokinetics or pharmacodynamics. 
+Decreases in glyburide AUC and C<sub>max</sub> were observed, but 
+were highly variable. The single-dose nature of this study and the lack of 
+correlation between glyburide blood levels and pharmacodynamic effects, makes 
+the clinical significance of this interaction uncertain (see <content styleCode="bold">
+                              <linkHtml href="#section-11.1.3">DOSAGE AND ADMINISTRATION: Concomitant FORTAMET® and Oral 
+Sulfonylurea Therapy in Adult Patients</linkHtml>
+                           </content>).</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content styleCode="bold">Furosemide</content>
+                           <content>–</content> A single-dose, metformin-furosemide drug 
+interaction study in healthy subjects demonstrated that pharmacokinetic 
+parameters of both compounds were affected by co-administration. Furosemide 
+increased the metformin plasma and blood C<sub>max</sub> by 22% and 
+blood AUC by 15%, without any significant change in metformin renal clearance. 
+When administered with metformin, the C<sub>max</sub> and AUC of 
+furosemide were 31% and 12% smaller, respectively, than when administered alone, 
+and the terminal half-life was decreased by 32%, without any significant change 
+in furosemide renal clearance. No information is available about the interaction 
+of metformin and furosemide when co-administered chronically.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content styleCode="bold">Nifedipine</content>
+                           <content>–</content> A single-dose, metformin-nifedipine drug 
+interaction study in normal healthy volunteers demonstrated that 
+co-administration of nifedipine increased plasma metformin C<sub>max</sub> and AUC by 20% and 9%, respectively, and increased the 
+amount excreted in the urine. T<sub>max</sub> and half-life were 
+unaffected. Nifedipine appears to enhance the absorption of metformin. Metformin 
+had minimal effects on nifedipine.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content styleCode="bold">Cationic drugs</content>
+                           <content>–</content> Cationic drugs (e.g., amiloride, digoxin, 
+morphine, procainamide, quinidine, quinine, ranitidine, triamterene, 
+trimethoprim, or vancomycin) that are eliminated by renal tubular secretion 
+theoretically have the potential for interaction with metformin by competing for 
+common renal tubular transport systems. Such interaction between metformin and 
+oral cimetidine has been observed in normal healthy volunteers in both single- 
+and multiple-dose, metformin-cimetidine drug interaction studies, with a 60% 
+increase in peak metformin plasma and whole blood concentrations and a 40% 
+increase in plasma and whole blood metformin AUC. There was no change in 
+elimination half-life in the single-dose study. Metformin had no effect on 
+cimetidine pharmacokinetics. Although such interactions remain theoretical 
+(except for cimetidine), careful patient monitoring and dose adjustment of 
+FORTAMET<sup>®</sup> and/or the interfering drug is recommended in 
+patients who are taking cationic medications that are excreted via the proximal 
+renal tubular secretory system.</paragraph>
+                        <linkHtml href=""/>
+                        <paragraph>
+                           <content styleCode="bold">Other</content>
+                           <content>–</content> 
+Certain drugs tend to produce hyperglycemia and may lead to loss of glycemic 
+control. These drugs include the thiazides and other diuretics, corticosteroids, 
+phenothiazines, thyroid products, estrogens, oral contraceptives, phenytoin, 
+nicotinic acid, sympathomimetics, calcium channel blocking drugs, and isoniazid. 
+When such drugs are administered to a patient receiving FORTAMET<sup>®</sup>, the patient should be closely observed for loss of blood 
+glucose control. When such drugs are withdrawn from a patient receiving 
+FORTAMET<sup>®</sup>, the patient should be observed closely for 
+hypoglycemia.</paragraph>
+                        <paragraph>In healthy volunteers, the pharmacokinetics of metformin and propranolol, and 
+metformin and ibuprofen were not affected when co-administered in single-dose 
+interaction studies.</paragraph>
+                        <paragraph>Metformin is negligibly bound to plasma proteins and is, therefore, less 
+likely to interact with highly protein-bound drugs such as salicylates, 
+sulfonamides, chloramphenicol, and probenecid, as compared to the sulfonylureas, 
+which are extensively bound to serum proteins.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="3015340d-1cba-47f2-842e-e7befd8aee4b"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>Long-term carcinogenicity studies with metformin have been 
+performed in rats (dosing duration of 104 weeks) and mice (dosing duration of 91 
+weeks) at doses up to and including 900 mg/kg/day and 1500 mg/kg/day, 
+respectively. These doses are both approximately four times the maximum 
+recommended human daily dose of 2000 mg based on body surface area comparisons. 
+No evidence of carcinogenicity with metformin was found in either male or female 
+mice. Similarly, there was no tumorigenic potential observed with metformin in 
+male rats. There was, however, an increased incidence of benign stromal uterine 
+polyps in female rats treated with 900 mg/kg/day.</paragraph>
+                        <paragraph>There was no evidence of mutagenic potential of metformin in the following 
+<content styleCode="italics">in vitro</content> tests: Ames test (<content styleCode="italics">S. 
+typhimurium</content>), gene mutation test (mouse lymphoma cells), or chromosomal 
+aberrations test (human lymphocytes). Results in the <content styleCode="italics">in 
+vivo</content> mouse micronucleus test were also negative.</paragraph>
+                        <paragraph>Fertility of male or female rats was unaffected by metformin when 
+administered at doses as high as 600 mg/kg/day, which is approximately three 
+times the maximum recommended human daily dose based on body surface area 
+comparisons.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="3ca86d8f-4320-4f7e-8c14-2b8d245a0d5f"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>Pregnancy</title>
+                     <text>
+                        <linkHtml href=""/>Teratogenic Effects: Pregnancy Category B<paragraph>Recent information strongly suggests that abnormal blood glucose 
+levels during pregnancy are associated with a higher incidence of congenital 
+abnormalities. Most experts recommend that insulin be used during pregnancy to 
+maintain blood glucose levels as close to normal as possible. Because animal 
+reproduction studies are not always predictive of human response, FORTAMET<sup>®</sup> should not be used during pregnancy unless clearly 
+needed.</paragraph>
+                        <paragraph>There are no adequate and well-controlled studies in pregnant women with 
+immediate-release metformin or FORTAMET<sup>®</sup>. Metformin was 
+not teratogenic in rats and rabbits at doses up to 600 mg/kg/day. This 
+represents an exposure of about two and six times the maximum recommended human 
+daily dose of 2000 mg based on body surface area comparisons for rats and 
+rabbits, respectively. Determination of fetal concentrations demonstrated a 
+partial placental barrier to metformin.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="ae0a9079-15b6-4c19-aa01-c028d15d49d4"/>
+                     <code code="34080-2" codeSystem="2.16.840.1.113883.6.1" displayName="NURSING MOTHERS SECTION"/>
+                     <title>Nursing Mothers</title>
+                     <text>
+                        <paragraph>Studies in lactating rats show that metformin is excreted into milk and reaches 
+levels comparable to those in plasma. Similar studies have not been conducted in 
+nursing mothers. Because the potential for hypoglycemia in nursing infants may 
+exist, a decision should be made whether to discontinue nursing or to 
+discontinue the drug, taking into account the importance of the drug to the 
+mother. If FORTAMET<sup>®</sup> is discontinued, and if diet alone 
+is inadequate for controlling blood glucose, insulin therapy should be 
+considered.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="c5f3fe19-31c6-4a7d-babb-c4fa16bffbbf"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>Pediatric Use</title>
+                     <text>
+                        <paragraph>No pediatric clinical studies have been conducted with 
+FORTAMET<sup>®</sup>. The safety and effectiveness of 
+immediate-release metformin for the treatment of type 2 diabetes have been 
+established in pediatric patients ages 10 to 16 years (studies have not been 
+conducted in pediatric patients below the age of 10 years). Use of 
+immediate-release metformin in this age group is supported by evidence from 
+adequate and well-controlled studies of immediate-release metformin in adults 
+with additional data from a controlled clinical study in pediatric patients ages 
+10-16 years with type 2 diabetes, which demonstrated a similar response in 
+glycemic control to that seen in adults (see <content styleCode="bold">
+                              <linkHtml href="#section-4.2.12">CLINICAL PHARMACOLOGY: Pediatric Clinical 
+Studies</linkHtml>
+                           </content>). In this study, adverse effects were similar to those 
+described in adults (see <content styleCode="bold">
+                              <linkHtml href="#section-9.3">ADVERSE 
+REACTIONS: Pediatric Patients</linkHtml>
+                           </content>). A maximum daily dose of 2000 mg of 
+immediate-release metformin is recommended.</paragraph>
+                        <paragraph>The safety and efficacy of FORTAMET<sup>®</sup> has not been 
+evaluated in pediatric patients.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="96e511a0-7a8a-4eec-bd14-cccea8ea011f"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>Geriatric Use</title>
+                     <text>
+                        <paragraph>Of the 389 patients who received FORTAMET<sup>®</sup> 
+in controlled Phase III clinical studies, 26.5% [103/389] were 65 years and 
+older. No overall differences in effectiveness or safety were observed between 
+these patients and younger patients.</paragraph>
+                        <paragraph>Controlled clinical studies of immediate-release metformin did not include 
+sufficient numbers of elderly patients to determine whether they respond 
+differently from younger patients, although other reported clinical experience 
+has not identified differences in responses between the elderly and younger 
+patients. Metformin is known to be substantially excreted by the kidney and 
+because of the risk of serious adverse reactions to the drug is greater in 
+patients with impaired renal function, immediate-release metformin should only 
+be used in patients with normal renal function (see <content styleCode="bold">
+                              <linkHtml href="#section-6">CONTRAINDICATIONS</linkHtml>
+                           </content>, <content styleCode="bold">
+                              <linkHtml href="#section-7">WARNINGS</linkHtml>
+                           </content>, and <content styleCode="bold">
+                              <linkHtml href="#section-4.2">CLINICAL PHARMACOLOGY: Pharmacokinetics</linkHtml>
+                           </content>). Because 
+aging is associated with reduced renal function, immediate-release metformin 
+should be used with caution as age increases. Care should be taken in dose 
+selection and should be based on careful and regular monitoring of renal 
+function. Generally, elderly patients should not be titrated to the maximum dose 
+of immediate-release metformin (see also <content styleCode="bold">
+                              <linkHtml href="#section-7">WARNINGS</linkHtml>
+                           </content> and <content styleCode="bold">
+                              <linkHtml href="#section-11">DOSAGE AND ADMINISTRATION</linkHtml>
+                           </content>).</paragraph>
+                     </text>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="4f6f1848-e39e-4c68-9de9-dbf983c87020"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>Enter section text here</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+               <component>
+                  <section>
+                     <id root="1bb65b9d-9ddc-42c6-b617-b33c545da2a8"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>FORTAMET® Clinical Studies</title>
+                     <text>
+                        <paragraph>In the controlled clinical studies of FORTAMET<sup>®</sup> in patients with type 2 diabetes, a total of 424 patients 
+received FORTAMET<sup>®</sup> therapy (up to 2500 mg/day) and 430 
+patients received immediate-release metformin. Adverse reactions reported in ≥5% 
+of the FORTAMET<sup>®</sup> or immediate-release metformin patients 
+are listed in <content styleCode="bold">
+                              <linkHtml href="#t6">Table 6</linkHtml>
+                           </content>. These pooled 
+results show that the most frequently reported adverse reactions in the 
+FORTAMET<sup>®</sup> group were infection, diarrhea, and nausea. 
+Similar incidences of these adverse reactions were seen in the immediate-release 
+metformin group.</paragraph>
+                        <linkHtml href=""/>
+                        <table width="100%" ID="i90c2941b-6ea4-4bfa-8bdc-9b50dbff17ee">
+                           <caption>Table 6 Number and Percentage of Patients With the Most Common 
+(Incidence ≥5%)Treatment-Emergent Signs or Symptoms by Body System and Preferred 
+Term - Pooled Phase II and III Studies</caption>
+                           <col align="left" width="38%"/>
+                           <col align="left" width="12%"/>
+                           <col align="left" width="13%"/>
+                           <col align="left" width="14%"/>
+                           <col align="left" width="21%"/>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">FORTAMET<sup>®</sup>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">(N=424)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Immediate-Release Metformin</content>
+                                    <br/>
+                                    <content styleCode="bold">(N=430)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Body 
+System</content>
+                                    <br/>
+                                    <content styleCode="bold">    Preferred Term</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">n</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">n</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Body as a 
+Whole</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content> Accidental Injury</td>
+                                 <td>31</td>
+                                 <td>(7.3)</td>
+                                 <td>24</td>
+                                 <td>(5.6)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content> Headache</td>
+                                 <td>20</td>
+                                 <td>(4.7)</td>
+                                 <td>22</td>
+                                 <td>(5.1)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content> Infection</td>
+                                 <td>87</td>
+                                 <td>(20.5)</td>
+                                 <td>90</td>
+                                 <td>(20.9)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Digestive 
+System</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content> Diarrhea</td>
+                                 <td>71</td>
+                                 <td>(16.7)</td>
+                                 <td>51</td>
+                                 <td>(11.9)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content> Dyspepsia</td>
+                                 <td>18</td>
+                                 <td>(4.2)</td>
+                                 <td>22</td>
+                                 <td>(5.1)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content> Nausea</td>
+                                 <td>36</td>
+                                 <td>(8.5)</td>
+                                 <td>32</td>
+                                 <td>(7.4)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Respiratory System</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">   </content> Rhinitis</td>
+                                 <td>18</td>
+                                 <td>(4.2)</td>
+                                 <td>24</td>
+                                 <td>(5.6)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>The most frequent adverse events thought to be related to FORTAMET<sup>®</sup> were diarrhea, nausea, dyspepsia, flatulence, and abdominal 
+pain. The frequency of dyspepsia was 4.2% in the FORTAMET<sup>®</sup> group compared to 5.1% in the immediate-release group, the 
+frequency of flatulence was 3.5% in the FORTAMET<sup>®</sup> group 
+compared to 3.7% in the immediate-release group, and the frequency of abdominal 
+pain was 3.3% in the FORTAMET<sup>®</sup> group compared to 4.4% in 
+the immediate-release group.</paragraph>
+                        <paragraph>In the controlled studies, 4.7% of patients treated with FORTAMET<sup>®</sup> and 4.9% of patients treated with immediate-release metformin 
+were discontinued due to adverse events.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="7f4919a9-b044-4b27-a0ee-a68b83c452a7"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Immediate-Release Metformin</title>
+                     <text>
+                        <paragraph>Immediate-Release Metformin Phase III Clinical Studies</paragraph>
+                        <paragraph>In a U.S. double-blind clinical study of immediate-release metformin in 
+patients with type 2 diabetes, a total of 141 patients received 
+immediate-release metformin therapy (up to 2550 mg per day) and 145 patients 
+received placebo. Adverse reactions reported in greater than 5% of the 
+immediate-release metformin patients, and that were more common in 
+immediate-release metformin than placebo-treated patients, are listed in <content styleCode="bold">
+                              <linkHtml href="#section-"> Table 7.</linkHtml>
+                           </content>
+                        </paragraph>
+                        <linkHtml href="#section-"/>
+                        <table ID="ife82bef8-4cfc-4bca-89db-2af8239a784e" width="100%">
+                           <caption>Table 7 Most Common Adverse Reactions (&gt;5.0%) in a 
+Placebo-Controlled Clinical Study of Immediate-Release Metformin 
+Monotherapy*</caption>
+                           <col align="left" width="29%"/>
+                           <col align="left" width="45%"/>
+                           <col align="left" width="24%"/>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <br/>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Immediate-Release Metformin<br/>Monotherapy<br/>(n = 141)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">
+                                       <br/>Placebo<br/>(n = 145)<br/>
+                                    </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Adverse 
+Reaction</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">                                                                     % of 
+Patients</content>
+                                 </td>
+                                 <td>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Diarrhea</td>
+                                 <td>53.2</td>
+                                 <td>11.7</td>
+                              </tr>
+                              <tr>
+                                 <td>Nausea/Vomiting</td>
+                                 <td>25.5</td>
+                                 <td>8.3</td>
+                              </tr>
+                              <tr>
+                                 <td>Flatulence</td>
+                                 <td>12.1</td>
+                                 <td>5.5</td>
+                              </tr>
+                              <tr>
+                                 <td>Asthenia</td>
+                                 <td>9.2</td>
+                                 <td>5.5</td>
+                              </tr>
+                              <tr>
+                                 <td>Indigestion</td>
+                                 <td>7.1</td>
+                                 <td>4.1</td>
+                              </tr>
+                              <tr>
+                                 <td>Abdominal Discomfort</td>
+                                 <td>6.4</td>
+                                 <td>4.8</td>
+                              </tr>
+                              <tr>
+                                 <td>Headache</td>
+                                 <td>5.7</td>
+                                 <td>4.8</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>*  Reactions that were more common in immediate-release metformin that placebo-treated patients<br/>
+                        </paragraph>
+                        <paragraph>Diarrhea led to discontinuation of study medication in 6% of patients treated 
+with immediate-release metformin. Additionally, the following adverse reactions 
+were reported in ≥1.0 - ≤5.0% of immediate-release metformin patients and were 
+more commonly reported with immediate-release metformin than placebo: abnormal 
+stools, hypoglycemia, myalgia, lightheaded, dyspnea, nail disorder, rash, 
+sweating increased, taste disorder, chest discomfort, chills, flu syndrome, 
+flushing, palpitation.</paragraph>
+                     </text>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="fcf515af-62c6-48cd-9d5d-188a8abb4bdc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Pediatric Patients</title>
+                     <text>
+                        <paragraph>No pediatric clinical studies have been conducted with FORTAMET<sup>®</sup>. In clinical trials with immediate-release metformin in 
+pediatric patients with type 2 diabetes, the profile of adverse reactions was 
+similar to that observed in adults.</paragraph>
+                     </text>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="817a5b04-5d8c-446a-94e0-34dc1b6c5445"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph>Hypoglycemia has not been seen even with ingestion of up to 85 grams of 
+immediate-release metformin, although lactic acidosis has occurred in such 
+circumstances (see <content styleCode="bold">
+                        <linkHtml href="#section-7">WARNINGS</linkHtml>
+                     </content>). 
+Metformin is dialyzable with a clearance of up to 170 mL/min under good 
+hemodynamic conditions. Therefore, hemodialysis may be useful for removal of 
+accumulated drug from patients in whom metformin over-dosage is suspected.</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="3a5fc631-aa8b-4b00-8dce-bf18f43b596c"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>There is no fixed dosage regimen for the management of 
+hyperglycemia in patients with type 2 diabetes with FORTAMET<sup>®</sup> or any other pharmacologic agent. Dosage of FORTAMET<sup>®</sup> must be individualized on the basis of both effectiveness and 
+tolerance, while not exceeding the maximum recommended daily dose. The maximum 
+recommended daily dose of FORTAMET<sup>®</sup> Extended-Release 
+Tablets in adults is 2500 mg.</paragraph>
+                  <paragraph>FORTAMET<sup>®</sup> should be taken with a full glass of water 
+once daily with the evening meal. FORTAMET<sup>®</sup> should be 
+started at a low dose, with gradual dose escalation, both to reduce 
+gastrointestinal side effects and to permit identification of the minimum dose 
+required for adequate glycemic control of the patient.</paragraph>
+                  <paragraph>During treatment initiation and dose titration (see <content styleCode="bold">
+                        <linkHtml href="#section-11.1">Recommended Dosing Schedule</linkHtml>
+                     </content>), fasting plasma 
+glucose should be used to determine the therapeutic response to FORTAMET<sup>®</sup> and identify the minimum effective dose for the patient. 
+Thereafter, glycosylated hemoglobin should be measured at intervals of 
+approximately three months. The therapeutic goal should be to decrease both 
+fasting plasma glucose and glycosylated hemoglobin levels to normal or near 
+normal by using the lowest effective dose of FORTAMET<sup>®</sup>, 
+either when used as monotherapy or in combination with sulfonylurea or 
+insulin.</paragraph>
+                  <paragraph>Monitoring of blood glucose and glycosylated hemoglobin will also permit 
+detection of primary failure, i.e., inadequate lowering of blood glucose at the 
+maximum recommended dose of medication, and secondary failure, i.e., loss of an 
+adequate blood glucose lowering response after an initial period of 
+effectiveness.</paragraph>
+                  <paragraph>Short-term administration of FORTAMET<sup>®</sup> may be 
+sufficient during periods of transient loss of control in patients usually 
+well-controlled on diet alone.</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Recommended Dosing Schedule<paragraph>The usual starting dose of FORTAMET<sup>®</sup> 
+(metformin hydrochloride) Extended-Release Tablets is 1000 mg taken with a full 
+glass of water once daily with the evening meal, although 500 mg may be utilized 
+when clinically appropriate. Dosage increases should be made in increments of 
+500 mg weekly, up to a maximum of 2500 mg once daily with the evening meal (see 
+<content styleCode="bold">
+                        <linkHtml href="#section-4.2.11">CLINICAL PHARMACOLOGY, Clinical 
+Studies</linkHtml>
+                     </content>).</paragraph>
+                  <paragraph>In randomized trials, patients currently treated with immediate-release 
+metformin were switched to FORTAMET<sup>®</sup>. Results of this 
+trial suggest that patients receiving immediate-release metformin treatment may 
+be safely switched to FORTAMET<sup>®</sup> once daily at the same 
+total daily dose, up to 2500 mg once daily. Following a switch from 
+immediate-release metformin to FORTAMET<sup>®</sup>, glycemic 
+control should be closely monitored and dosage adjustments made accordingly (see 
+<content styleCode="bold">
+                        <linkHtml href="#section-4.2.11">CLINICAL PHARMACOLOGY, Clinical 
+Studies</linkHtml>
+                     </content>).</paragraph>
+                  <linkHtml href=""/>
+                  <paragraph>
+                     <content styleCode="bold">Pediatrics </content>– There is no pediatric 
+information available for FORTAMET<sup>®</sup>.</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Transfer From Other Antidiabetic Therapy<paragraph>When transferring patients from standard oral hypoglycemic agents 
+other than chlorpropamide to FORTAMET<sup>®</sup>, no transition 
+period generally is necessary. When transferring patients from chlorpropamide, 
+care should be exercised during the first two weeks because of the prolonged 
+retention of chlorpropamide in the body, leading to overlapping drug effects and 
+possible hypoglycemia.</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Concomitant FORTAMET<sup>®</sup> and Oral 
+Sulfonylurea Therapy in Adult Patients<paragraph>If patients have not responded to four weeks of the maximum dose 
+of FORTAMET<sup>®</sup> monotherapy, consideration should be given 
+to gradual addition of an oral sulfonylurea while continuing FORTAMET<sup>®</sup> at the maximum dose, even if prior primary or secondary 
+failure to a sulfonylurea has occurred. Clinical and pharmacokinetic drug-drug 
+interaction data are currently available only for metformin plus glyburide (also 
+known as glibenclamide). With concomitant FORTAMET<sup>®</sup> and 
+sulfonylurea therapy, the desired control of blood glucose may be obtained by 
+adjusting the dose of each drug. However, attempts should be made to identify 
+the minimum effective dose of each drug to achieve this goal. With concomitant 
+FORTAMET<sup>®</sup> and sulfonylurea therapy, the risk of 
+hypoglycemia associated with sulfonylurea therapy continues and may be 
+increased. Appropriate precautions should be taken (see Package Insert of the 
+respective sulfonylurea).</paragraph>
+                  <paragraph>If patients have not satisfactorily responded to one to three months of 
+concomitant therapy with the maximum dose of FORTAMET<sup>®</sup> 
+and the maximum dose of an oral sulfonylurea, consider therapeutic alternatives 
+including switching to insulin with or without FORTAMET<sup>®</sup>.</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Concomitant FORTAMET<sup>®</sup> and 
+Insulin Therapy in Adult Patients<paragraph>The current insulin dose should be continued upon initiation of 
+FORTAMET<sup>®</sup> therapy. FORTAMET<sup>®</sup> 
+therapy should be initiated at 500 mg once daily in patients on insulin therapy. 
+For patients not responding adequately, the dose of FORTAMET<sup>®</sup> should be increased by 500 mg after approximately 1 week and 
+by 500 mg every week thereafter until adequate glycemic control is achieved. The 
+maximum recommended daily dose for FORTAMET<sup>®</sup> 
+Extended-Release Tablets is 2500 mg. It is recommended that the insulin dose be 
+decreased by 10% to 25% when fasting plasma glucose concentrations decrease to 
+less than 120 mg/dL in patients receiving concomitant insulin and FORTAMET<sup>®</sup>. Further adjustment should be individualized based on 
+glucose-lowering response.</paragraph>
+                  <linkHtml href=""/>
+                  <linkHtml href=""/>Specific Patient Populations<paragraph>FORTAMET<sup>®</sup> is not recommended for use in 
+pregnancy, and is not recommended in patients below the age of 17 years.</paragraph>
+                  <paragraph>The initial and maintenance dosing of FORTAMET<sup>®</sup> should 
+be conservative in patients with advanced age, due to the potential for 
+decreased renal function in this population. Any dosage adjustment should be 
+based on a careful assessment of renal function. Generally, elderly, 
+debilitated, and malnourished patients should not be titrated to the maximum 
+dose of FORTAMET<sup>®</sup>.</paragraph>
+                  <paragraph>Monitoring of renal function is necessary to aid in prevention of lactic 
+acidosis, particularly in the elderly (see <content styleCode="bold">
+                        <linkHtml href="#section-7">WARNINGS</linkHtml>
+                     </content>).</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="d79afbae-9381-4a3b-a885-103e914b50ea"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>FORTAMET<sup>®</sup> (metformin hydrochloride) 
+Extended-Release Tablets are supplied as biconvex-shaped, film-coated 
+extended-release tablets containing 500 mg or 1000 mg of metformin 
+hydrochloride.</paragraph>
+                  <paragraph>500 mg extended-release, white-colored tablets imprinted 
+with Andrx logo and 574 on one side: bottles of 60 (<content styleCode="bold">NDC 54868-5558-0</content>); and in bottles of 90 (<content styleCode="bold">NDC 54868-5558-1</content>).</paragraph>
+                  <paragraph>1000 mg extended-release, white-colored tablets imprinted 
+with Andrx logo and 575 on one side: bottles of 30 (<content styleCode="bold">NDC 54868-2894-0</content>).</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="336b69c8-b7af-44ec-baea-972e2fe03bc3"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <title>STORAGE</title>
+               <text>
+                  <paragraph>Store at 20-25°C (68-77°F) - Excursions permitted to 15° - 30°C (59° - 86°F) 
+[See USP Controlled Room Temperature]. Keep tightly closed (protect from 
+moisture). Protect from light. Avoid excessive heat and humidity.</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+               <component>
+                  <section>
+                     <id root="bad69cd4-ef83-44ac-a34f-7eb403eb7085"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>Distributed by:<br/>Sciele Pharma, Inc.<br/>Atlanta, GA 30328</paragraph>
+                        <paragraph>Manufactured by:<br/>Watson Laboratories - Florida<br/>Ft. Lauderdale, FL 33314</paragraph>
+                        <br/>
+                        <paragraph>
+                           <br/>
+                        </paragraph>
+                        <paragraph>Relabeling and Repackaging by:<br/>Physicians Total Care, Inc.<br/>Tulsa, OK      74146<br/>
+                        </paragraph>
+                     </text>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="f366b70a-bf9f-4de0-b2d7-bfc7702bd781"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>PATIENT INFORMATION ABOUT FORTAMET® 
+(metformin hydrochloride) Extended-Release Tablets</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Q1. Why do I need to take FORTAMET<sup>®</sup>?</content>
+                  </paragraph>
+                  <paragraph>Your doctor has prescribed FORTAMET<sup>®</sup> to treat your 
+type 2 diabetes, a condition in which blood sugar (blood glucose) is elevated. 
+There are two types of diabetes. FORTAMET<sup>®</sup> is indicated 
+for the most common type, known as type 2 diabetes.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q2. Why is it important to control type 2 diabetes?</content>
+                  </paragraph>
+                  <paragraph>Type 2 diabetes has multiple possible complications, including blindness, 
+kidney failure, and circulatory and heart problems. Lowering your blood sugar to 
+a normal level may prevent or delay these complications.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q3. How is type 2 diabetes usually controlled?</content>
+                  </paragraph>
+                  <paragraph>High blood sugar can be lowered by diet and exercise, by a number of oral 
+medications and by insulin injections. Your doctor may recommend that you try 
+lifestyle modifications such as improved diet and exercise before initiating 
+drug treatment for type 2 diabetes. Each patient will be treated individually by 
+his or her physician, and should follow all treatment recommendations.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q4. Does FORTAMET<sup>®</sup> work differently 
+from other glucose control medications?</content>
+                  </paragraph>
+                  <paragraph>Yes. FORTAMET<sup>®</sup>, as well as other formulations of 
+metformin, lowers the amount of sugar in your blood by controlling how much 
+sugar is released by the liver. FORTAMET<sup>®</sup> (metformin 
+hydrochloride) does not cause your body to produce more insulin. FORTAMET<sup>®</sup> rarely causes hypoglycemia (low blood sugar) and it does not 
+usually cause weight gain when taken alone. However, if you do not eat enough, 
+if you take other medications to lower blood sugar, or if you drink alcohol, you 
+can develop hypoglycemia. Specifically, when FORTAMET<sup>®</sup> is 
+taken together with a sulfonylurea or with insulin, hypoglycemia and weight gain 
+are more likely to occur.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q5. What happens if my blood sugar is still too high?</content>
+                  </paragraph>
+                  <paragraph>If your blood sugar is high, consult your physician. When blood sugar cannot 
+be lowered enough by either FORTAMET<sup>®</sup> (metformin 
+hydrochloride) Extended-Release Tablets or a sulfonylurea, the two medications 
+can be effective when taken together. Other alternatives involve switching to 
+other oral antidiabetic drugs (e.g., alpha glucoside inhibitors or glitazones). 
+FORTAMET<sup>®</sup> may be stopped and replaced with other drugs 
+and/or insulin. If you are unable to maintain your blood sugar with diet, 
+exercise and glucose-control medications taken orally, then your doctor may 
+prescribe injectable insulin to control your diabetes.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q6. Why should I take FORTAMET<sup>®</sup> in 
+addition to insulin if I am already on insulin alone?</content>
+                  </paragraph>
+                  <paragraph>Adding FORTAMET<sup>®</sup> to insulin can help you better 
+control your blood sugar while reducing the insulin dose and possibly reducing 
+your weight.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q7. Can FORTAMET<sup>®</sup> cause side 
+effects?</content>
+                  </paragraph>
+                  <paragraph>FORTAMET<sup>®</sup>, like all blood sugar-lowering medications, 
+can cause side effects in some patients. Most of these side effects are minor 
+and will go away after you've taken FORTAMET<sup>®</sup> for a 
+while. However, there are also serious but rare side effects related to 
+FORTAMET<sup>®</sup> (see below).</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q8. What kind of side effects can FORTAMET<sup>®</sup> cause?</content>
+                  </paragraph>
+                  <paragraph>If side effects occur, they usually occur during the first few weeks of 
+therapy. They are normally minor ones such as diarrhea, nausea, abdominal pain 
+and upset stomach. FORTAMET<sup>®</sup> is generally taken with 
+meals, which reduce these side effects.</paragraph>
+                  <paragraph>Although these side effects are likely to go away, call your doctor if you 
+have severe discomfort or if these effects last for more than a few weeks. Some 
+patients may need to have their doses lowered or stop taking FORTAMET<sup>®</sup>, either temporarily or permanently. You should tell your 
+doctor if the problems come back or start later on during the therapy.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">WARNING: A rare number of people who have taken metformin 
+have developed a serious condition called lactic acidosis. Properly functioning 
+kidneys are needed to help prevent lactic acidosis. You should not take 
+FORTAMET<sup>®</sup> if you have impaired kidney function, as 
+measured by a blood test (see <linkHtml href="#section-14.1">Q9-13</linkHtml>).</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q9. Are there any serious side effects that FORTAMET<sup>®</sup> can cause?</content>
+                  </paragraph>
+                  <paragraph>FORTAMET<sup>®</sup> rarely causes serious side effects. The most 
+serious side effect that FORTAMET<sup>®</sup> can cause is called 
+lactic acidosis.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q10. What is lactic acidosis and can it happen to me?</content>
+                  </paragraph>
+                  <paragraph>Lactic acidosis is caused by a build-up of lactic acid in the blood. Lactic 
+acidosis associated with metformin is rare and has occurred mostly in people 
+whose kidneys were not working normally. Lactic acidosis has been reported in 
+about one in 33,000 patients taking metformin over the course of a year. 
+Although rare, if lactic acidosis does occur, it can be fatal in up to half the 
+cases.</paragraph>
+                  <paragraph>It is also important for your liver to be working normally when you take 
+FORTAMET<sup>®</sup>. Your liver helps to remove lactic acid from 
+your bloodstream. Your doctor will monitor your diabetes and may perform blood 
+tests on you from time to time to make sure your kidneys and your liver are 
+functioning normally. There is no evidence that FORTAMET<sup>®</sup> 
+causes harm to the kidneys or liver.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q11. Are there other risk factors for lactic 
+acidosis?</content>
+                  </paragraph>
+                  <paragraph>Your risk of developing lactic acidosis from taking FORTAMET<sup>®</sup> is very low as long as your kidneys and liver are healthy. 
+However, some factors can increase your risk because they can affect kidney and 
+liver function. You should discuss your risk with your physician. You should not 
+take FORTAMET<sup>®</sup> if:</paragraph>
+                  <list listType="unordered" ID="ie2ce25b2-7563-46e8-8417-adc244b8c8a1">
+                     <item>You have some forms of kidney or liver problems</item>
+                     <item>You have congestive heart failure which is treated with medications, e.g., 
+digoxin (Lanoxin®) or furosemide (Lasix®)</item>
+                     <item>You drink alcohol excessively (all the time or short-term “binge” 
+drinking)</item>
+                     <item>You are seriously dehydrated (have lost a large amount of body fluids)</item>
+                     <item>You are going to have, within a few days, certain x-ray tests with 
+injectable contrast agents</item>
+                     <item>You are going to have surgery</item>
+                     <item>You develop a serious condition such as a heart attack, severe infection, or 
+a stroke</item>
+                     <item>You are 80 years of age or older and have NOT had your kidney function 
+tested</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Q12. What are the symptoms of lactic acidosis?</content>
+                  </paragraph>
+                  <paragraph>Some of the symptoms include feeling very weak, tired or uncomfortable, 
+unusual muscle pain, trouble breathing, unusual or unexpected stomach 
+discomfort, feeling cold, feeling dizzy or lightheaded, or suddenly developing a 
+slow or irregular heartbeat. If you notice these symptoms, or if your medical 
+condition has suddenly changed, stop taking FORTAMET<sup>®</sup> and 
+call your doctor right away. Lactic acidosis is a medical emergency that must be 
+treated in a hospital.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q13. What does my doctor need to know to decrease my risk of 
+lactic acidosis?</content>
+                  </paragraph>
+                  <paragraph>Tell your doctor if you have an illness that results in severe vomiting, 
+diarrhea and/or fever, or if your intake of fluids is generally reduced. These 
+situations can lead to severe dehydration, and it may be necessary to stop 
+taking FORTAMET<sup>®</sup> temporarily. You should let your doctor 
+know if you are going to have any surgery or specialized x-ray procedures that 
+require injection of contrast agents. FORTAMET<sup>®</sup> therapy 
+will need to be stopped temporarily in such instances.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q14. Can I take FORTAMET<sup>®</sup> with other 
+medications?</content>
+                  </paragraph>
+                  <paragraph>Remind your doctor and/or pharmacist that you are taking FORTAMET<sup>®</sup> when any new drug is prescribed or a change is made in how 
+you take a drug already prescribed. FORTAMET<sup>®</sup> may 
+interfere with the way some drugs work and some drugs may interfere with the 
+action of FORTAMET<sup>®</sup>.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q15. What if I become pregnant while taking FORTAMET<sup>®</sup>?</content>
+                  </paragraph>
+                  <paragraph>Tell your doctor if you plan to become pregnant or have become pregnant. As 
+with other oral glucose-control medications, you should not take FORTAMET<sup>®</sup> during pregnancy. Usually your doctor will prescribe insulin 
+while you are pregnant.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q16. How do I take FORTAMET<sup>®</sup>?</content>
+                  </paragraph>
+                  <paragraph>FORTAMET<sup>®</sup> tablets should not be cut, crushed, or 
+chewed and should be taken whole with a full glass of water once daily with the 
+evening meal. Occasionally, the inactive ingredients of FORTAMET<sup>®</sup> may be eliminated as a soft mass in your stool that may look 
+like the original tablet; this is not harmful and will not effect the way 
+FORTAMET<sup>®</sup> works to control diabetes. FORTAMET<sup>®</sup> should be taken once a day with food. You will be started on 
+a low dose of FORTAMET<sup>®</sup> and your dosage will be increased 
+gradually until your blood sugar is controlled.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Q17. Where can I get more information about FORTAMET<sup>®</sup>?</content>
+                  </paragraph>
+                  <paragraph>This leaflet is a summary of the most important information about 
+FORTAMET<sup>®</sup>. If you have any questions or problems, you 
+should talk to your doctor or other healthcare provider about type 2 diabetes as 
+well as FORTAMET<sup>®</sup> and its side effects.</paragraph>
+                  <paragraph>Distributed by:<br/>Sciele Pharma, Inc.<br/>Atlanta, GA 30328</paragraph>
+                  <paragraph>Manufactured by:<br/>Watson Laboratories - Florida<br/>Ft. Lauderdale, FL 
+33314</paragraph>
+                  <paragraph>www.Fortamet.com</paragraph>
+                  <paragraph>FORT-PI-08 Rev. 07/08             74200708</paragraph>
+                  <paragraph>U.S. patent numbers 6,495,162; 6,866,866; 6,790,459; 6,099,859 - additional 
+patents pending.</paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="c84338db-ad6c-4b6a-bd36-f5cb1805308c"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <paragraph>FORTAMET<sup>®</sup> (metformin hydrochloride) Extended-Release 
+Tablets <br/>
+                  </paragraph>
+                  <paragraph>500 mg</paragraph>
+                  <renderMultiMedia referencedObject="MM2"/>
+                  <paragraph>
+                     <br/>
+                  </paragraph>
+                  <paragraph>1000 mg</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM3"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100305"/>
+               <component>
+                  <observationMedia classCode="OBS" moodCode="EVN" ID="MM2">
+                     <text>image of 500 mg package label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="500mg package label.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia classCode="OBS" moodCode="EVN" ID="MM3">
+                     <text>image of 1000 mg package label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="1000mg package label.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

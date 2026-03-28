@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="6bb89430-4e09-424e-8bc5-0c001ad9c8b9"/>
+   <code code="50578-4" codeSystem="2.16.840.1.113883.6.1" displayName="PRESCRIPTION ANIMAL DRUG LABEL"/>
+   <title>
+      <content styleCode="bold">Disal® (furosemide injection) 50 mg/mL</content>
+   </title>
+   <effectiveTime value="20250428"/>
+   <setId root="88f58baf-4ec5-4d6f-a447-68af4b239318"/>
+   <versionNumber value="10"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="007134091" root="1.3.6.1.4.1.519.1"/>
+            <name>Boehringer Ingelheim Animal Health USA Inc.</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="a0e71af1-30ab-432e-816f-0ee0b4e7835d"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20250428"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="0010-6737" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Disal</name>
+                        <formCode code="C42946" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Furosemide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="50"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FUROSEMIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="7LXU5N7ZO5" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FUROSEMIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator unit="mg" value="0.2"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="3D6CWI0P23" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MIRIPIRIUM CHLORIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator unit="mg" value="1"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7FLD91C86K" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>EDETATE DISODIUM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator unit="mg" value="1"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="VTK01UQK3G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM SULFITE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator unit="mg" value="2"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM CHLORIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator unit="mg" value="10"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="5KV86114PT" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>2-AMINOETHANOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WATER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="100"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0010-6737-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43210" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, MULTI-DOSE"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NADA131538" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73593" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20071029"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C28161" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAMUSCULAR"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_section_id_36809512-58c0-4567-bf39-e8ff6ab71379">
+               <id root="fa8e63e8-c666-43f6-b486-8887f063bd2f"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Approved by FDA under NADA # 131-538</paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_section_id_da571476-0358-4c1e-8b78-af335976602c">
+               <id root="b7080206-a717-492f-b2ab-1ece8f80a02c"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>Caution:</title>
+               <text>
+                  <paragraph>Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+               </text>
+               <effectiveTime value="20140303"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_description_id_0c11f92c-83ce-44a2-8978-c5b6ad7f9ac9">
+               <id root="45414fea-62df-4c10-b590-b6ab708b21a4"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>Description:</title>
+               <text>
+                  <paragraph>Furosemide is a potent loop diuretic which is a derivative of anthranilic acid. The structure is:</paragraph>
+                  <renderMultiMedia ID="id248" referencedObject="id_549a105e-3352-48ce-926e-84fbfa028429"/>
+                  <paragraph>Chemical Name: 4-Chloro-N-furfuryl-5-sulfamoylanthranilic acid. Furosemide is pharmacodynamically characterized by the following:</paragraph>
+                  <paragraph>1) Administered intramuscularly, it begins to act in about 30 minutes, and diuretic response is produced. When administered intravenously, the response is in about 5 minutes. <sup>1 2</sup>
+                  </paragraph>
+                  <paragraph>2) Is a loop diuretic which inhibits reabsorption of sodium and chloride at the ascending loop of Henle in the kidneys, enhancing water excretion. <sup>3</sup>
+                  </paragraph>
+                  <paragraph>3) A dose-response relationship and a ratio of minimum to maximum effective dose range greater than tenfold. <sup>1 </sup>
+                  </paragraph>
+                  <paragraph>4) A high degree of efficacy, low inherent toxicity and a high therapeutic index.</paragraph>
+               </text>
+               <effectiveTime value="20160415"/>
+               <component>
+                  <observationMedia ID="id_549a105e-3352-48ce-926e-84fbfa028429">
+                     <text>Picture of chemical structure of furosemide.</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_description_id_e4bcc70f-ed8b-42e4-840e-7ec5ac8bb614">
+               <id root="643b5113-bd47-48d7-b9bd-6d655c27503f"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Each mL contains: </content>50 mg furosemide as a monoethanolamine salt, myristyl-gamma-picolinium chloride 0.02%, EDTA sodium 0.1%, sodium sulfite 0.1% with sodium chloride 0.2% in water for injection, pH adjusted with sodium hydroxide and/or hydrochloric acid.</paragraph>
+               </text>
+               <effectiveTime value="20110610"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_clinical_pharmacology_id_0f09a5ef-b13f-4e5e-9c33-1eb1865e5c55">
+               <id root="b842d5e2-2a71-4f4b-9934-836a338e7e11"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>Actions:</title>
+               <text>
+                  <paragraph>The therapeutic efficacy of DISAL Injection is from the activity of the intact and unaltered molecule throughout the nephron, inhibiting the reabsorption of sodium not only in the proximal and distal tubule but also in the ascending limb of the loop of Henle. The prompt onset of action is a result of the drug’s rapid absorption and a poor lipid solubility. The low lipid solubility and a rapid renal excretion minimize the possibility of its accumulation in tissues and organs or crystalluria. Furosemide has no inhibitory effect on carbonic anhydrase or aldosterone activity in the distal tubule. The drug possesses diuretic activity either in the presence of acidosis or alkalosis. <sup>1 3 4 5 6</sup>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_veterinary_indications_id_94f19a27-bd28-4065-b1e4-097544b7ae1d">
+               <id root="ed40f26c-eb4a-4384-a0c1-4d2c7808d1b1"/>
+               <code code="50745-9" codeSystem="2.16.840.1.113883.6.1" displayName="VETERINARY INDICATIONS SECTION"/>
+               <title>Indications:</title>
+               <text>
+                  <paragraph>Dogs and Horses: DISAL Injection is an effective diuretic-saluretic for use in the treatment of acute noninflammatory tissue edema in dogs and horses, and for use in the treatment of edema (pulmonary congestion, ascites) associated with cardiac insufficiency in the dog. </paragraph>
+                  <paragraph>In cases of edema involving cardiac insufficiency, the continued use of heart stimulants such as digitalis or its glycosides is indicated.</paragraph>
+                  <paragraph>The rationale for efficacious use of diuretic therapy in either dogs or horses is determined by the clinical pathology producing the edema.</paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_dosage_admin_id_caed3c47-0540-453b-b59e-5cc894cde9ef">
+               <id root="60d0bf7a-1661-4476-ac5b-7afba2c54042"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>Dosage and Administration:</title>
+               <text>
+                  <paragraph>Dogs—Administer intravenously or intramuscularly 0.25 to 0.50 mL per 10 pounds body weight once or twice daily at 6 to 8 hour intervals.</paragraph>
+                  <paragraph>The dosage should be adjusted to the individual’s response. In severe edematous or refractory cases, the dose may be doubled or increased by increments of 1.0 mg per pound of body weight. </paragraph>
+                  <paragraph>The established effective dose should be administered once or twice daily. </paragraph>
+                  <paragraph>Discontinue diuretic therapy with DISAL Injection, 50 mg/mL after initiation of acute fluid mobilization or stabilization of patient; when necessary DISAL Tablets may be used for maintenance therapy (see DISAL Tablets insert for details). Do not exceed treatment with DISAL Injection, 50 mg/mL for more than 3 days. The daily schedule of administration can be timed to control the period of micturition for the convenience of the client or veterinarian. </paragraph>
+                  <paragraph>Mobilization of the edema may be most efficiently and safely accomplished by utilizing an intermittent daily dose schedule, i.e., every other day or 2 to 4 consecutive days weekly.</paragraph>
+                  <paragraph>Horses—The usual parenteral dosage of furosemide in horses is approximately 0.5 mg/lb body weight (1.0 mg/kg). See dosage schedule below. A prompt diuresis usually ensues from the initial treatment. Administer once or twice daily at 6 to 8 hour intervals either intravenously or intramuscularly until desired results are achieved. </paragraph>
+                  <paragraph>The dosage should be adjusted to the individual’s response. In severe edematous or refractory cases, the dose may be doubled or increased by increments of 0.5 mg per pound of body weight. </paragraph>
+                  <paragraph>The established effective dose should be administered once or twice daily. The daily schedule of administration can be timed to control the period of micturition for the convenience of the client or veterinarian. </paragraph>
+                  <paragraph>Mobilization of the edema may be most efficiently and safely accomplished by utilizing an intermittent daily dose schedule, i.e., every other day or 2 to 4 consecutive days weekly.</paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_dosage_admin_id_830b64bf-626b-46ad-aaaf-6bbeec7c2802">
+               <id root="111c5539-b7fc-427d-9372-9813308f9095"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>Recommended Dosage Schedule:</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Horses: </content>Administer IV or IM once or twice daily at 6-8 hour intervals until desired results are achieved.</paragraph>
+                  <table styleCode="Noautorules" width="100%">
+                     <col width="29%"/>
+                     <col width="31%"/>
+                     <tbody>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Body Weight </content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">(lbs)</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">DISAL Injection </content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">(50 mg/mL)</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>500</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>4.6 mL</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>600</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>5.5 mL</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>700</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>6.4 mL</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>800</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>7.3 mL</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>900</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>8.2 mL</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>1000</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>9.1 mL</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>1100</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>10.0 mL</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>1200</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>10.9 mL</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>Diuretic therapy for both dogs and horses should be discontinued after reduction of the edema, or maintained after determining a carefully programmed dosage schedule to prevent recurrence of edema. For long-term treatment, the dose can generally be lowered after the edema has once been reduced. Re-examination and consultations with the client will enhance the establishment of a satisfactorily programmed dosage schedule. Clinical examination and serum BUN, CO<sub>2</sub> and electrolyte determinations should be performed during the early period of therapy and periodically thereafter, especially in refractory cases. Abnormalities should be corrected or the drug temporarily withdrawn.</paragraph>
+               </text>
+               <effectiveTime value="20250428"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_contraindications_id_d269fa2e-4271-417b-8000-5cc257a9fafa">
+               <id root="54d55bbf-431f-480e-8773-1ad00b08c8c1"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>Contraindications:</title>
+               <text>
+                  <paragraph>Animal reproductive studies have shown that furosemide may cause fetal abnormality and the drug is contraindicated in pregnant bitches, mares and stallions at stud.</paragraph>
+                  <paragraph>Furosemide is contraindicated in anuria, furosemide hypersensitivity, hepatic coma, or during electrolytic imbalances. Monitor serum electrolytes, BUN and CO<sub>2</sub> frequently. Monitor serum potassium levels and watch for signs of hypocalcemia.</paragraph>
+                  <paragraph>Corticosteroids cause an additive potassium-depletion effect.</paragraph>
+               </text>
+               <effectiveTime value="20140303"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_warnings_id_0403322f-4ac3-4864-8dcb-0d6016cf06e5">
+               <id root="3d431bda-c665-4e6d-b8fc-a10283c8fadf"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>Warnings:</title>
+               <text>
+                  <paragraph>DISAL Injection is a highly effective diuretic and, if given in excessive amounts, as with any diuretic, may lead to excessive diuresis which could result in electrolyte imbalance, dehydration and reduction of plasma volume, enhancing the risk of circulatory collapse, thrombosis and embolism. Therefore, the animal should be observed for early signs of fluid depletion with electrolyte imbalance, and corrective measures administered. Excessive loss of potassium in patients receiving digitalis or its glycosides may precipitate digitalis toxicity. </paragraph>
+                  <paragraph>Caution should be exercised in animals administered potassium-depleting steroids. Correct potassium deficiency with proper dietary supplementation. If animal needs potassium supplements, use oral liquid form; do not use enteric-coated potassium tablets.</paragraph>
+                  <paragraph>The concurrent use of furosemide with some antibiotics may be inadvisable. There is evidence that the drug enhances the nephrotoxic potential of aminoglycosides, cephalosporins and polymyxins and increases the ototoxic effects of all aminoglycosides.</paragraph>
+                  <paragraph>Sulfonamide diuretics have been reported to decrease arterial responsiveness to pressor amines and to enhance the effect of tubocurarine. </paragraph>
+                  <paragraph>Caution should be exercised in administering curare or its derivatives to patients undergoing therapy with DISAL Injection and it is advisable to discontinue DISAL Injection for one day prior to any elective surgery.</paragraph>
+                  <paragraph>Do not use in horses intended for human consumption.</paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_precautions_id_5750e120-575f-425b-b010-3269d6ea36f2">
+               <id root="e751ed6a-0b10-415a-85c6-548ba2b5eaa8"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>Precautions:</title>
+               <text>
+                  <paragraph>DISAL Injection is a highly effective diuretic-saluretic which, if given in excessive amounts, may result in dehydration and have to be adjusted to the patient’s needs. The animal should be observed for early signs of electrolyte imbalance, and corrective measures administered. Early signs of electrolyte imbalance are increased thirst, lethargy, drowsiness or restlessness, fatigue, oliguria, gastro-intestinal disturbances and tachycardia. </paragraph>
+                  <paragraph>Special attention should be given to potassium levels. </paragraph>
+                  <paragraph>DISAL Injection may lower serum calcium levels and cause tetany in rare cases of animals having an existing hypocalcemic tendency. <sup>7 8 9 10 11</sup>
+                  </paragraph>
+                  <paragraph>DISAL Injection is contraindicated in anuria. Therapy should be discontinued in cases of progressive renal disease if increasing azotemia and oliguria occur during the treatment. Sudden alterations of fluid and electrolyte imbalance in an animal with cirrhosis may precipitate hepatic coma, therefore, observation during period of therapy is necessary. In hepatic coma and in states of electrolyte depletion, therapy should not be instituted until the basic condition is improved or corrected. </paragraph>
+                  <paragraph>Potassium supplementation may be necessary in cases routinely treated with potassium-depleting steroids.</paragraph>
+                  <paragraph>Active or latent diabetes mellitis may on rare occasions be exacerbated by furosemide. Transient loss of auditory capacity has been experimentally produced in cats following intravenous injections of excessive doses of furosemide at a very rapid rate. <sup>12 13 14</sup>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_animal_pharmacology_id_5187923b-1b29-4134-9915-89457c1db529">
+               <id root="433c6dbf-e5dd-4e73-a47d-9f754ab7f7d3"/>
+               <code code="34091-9" codeSystem="2.16.840.1.113883.6.1" displayName="ANIMAL PHARMACOLOGY &amp; OR TOXICOLOGY SECTION"/>
+               <title>Animal Safety:</title>
+               <text>
+                  <paragraph>Furosemide demonstrates a very low order of either acute or chronic toxicity. The drug is rapidly absorbed and excreted by both glomerular filtration and tubular secretion. The rates of excretion are of such magnitude that cumulation of furosemide does not occur despite repeated administrations. <sup>15</sup>
+                  </paragraph>
+                  <paragraph>The main effect observed in clinical toxicity is an abnormality of fluid and electrolyte imbalances. Ototoxicity resulting in transient loss of hearing has been reported with furosemide. <sup>15</sup>
+                  </paragraph>
+                  <paragraph>A safety study was performed in dogs to determine the effects of DISAL Injection at increasing dosages and time elements. The dosage levels were 1.5 mg/lb body weight (recommended dosage), 4.5 mg/lb body weight (3X recommended dosage) and 7.5 mg/lb body weight (5X recommended dosage). The treatment period ranged up to nine days in length. Results demonstrate very slight tubular nephrosis at the higher dosage levels.</paragraph>
+                  <paragraph>In addition, serum levels of potassium and chloride were slightly lowered in the higher dosage groups. Cumulative evaluation of the data demonstrates that DISAL Injection is safe when administered at the recommended dosage for a duration of nine consecutive days.</paragraph>
+                  <paragraph>To report suspected adverse events, for technical assistance, or to obtain a copy of the Safety Data Sheet, contact Boehringer Ingelheim Animal Health USA Inc. at 1-888-637-4251.</paragraph>
+                  <paragraph>For additional information about adverse drug experience reporting for animal drugs, contact FDA by telephone at 1-888-FDA-VETS or online at <linkHtml href="http://www.fda.gov/reportanimalae">www.fda.gov/reportanimalae</linkHtml>.</paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_storage_id_a656375f-2fd5-4511-aad4-b66be557c56e">
+               <id root="d2e4d266-72f7-4449-9fca-304830781086"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <title>Storage:</title>
+               <text>
+                  <paragraph>Store at controlled room temperature, 59 - 77°F (15 - 25°C). When used as labeled, there is no limit on the number of punctures throughout the full expiry period. </paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_how_supplied_id_670bd26a-357d-45c2-ad25-07b72126e87d">
+               <id root="f8de7943-c88d-4e67-b65a-5dd3d1caabdc"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>How Supplied:</title>
+               <text>
+                  <paragraph>DISAL Injection, 50 mg/mL is supplied in 100 mL multi-dose vials.</paragraph>
+                  <paragraph>NDC 0010-6737-01 – 100 mL</paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_references_id_4f019f4d-b58c-4124-91bd-0a7ec7a7bb0d">
+               <id root="acf5c747-5fa6-4b8e-89cd-cf26e7aaddf2"/>
+               <code code="34093-5" codeSystem="2.16.840.1.113883.6.1" displayName="REFERENCES SECTION"/>
+               <title>References:</title>
+               <text>
+                  <paragraph>1. Timmerman, R.J., F.R. Springman and R.K. Thoms, 1964. Evaluation of Furosemide, a New Diuretic Agent. Current Therapeutic Research, 6(2): 88-94.</paragraph>
+                  <paragraph>2. Martindale, The Extra Pharmacopoeia, 27th ed., 1977. The Pharmaceutical Press, London, 556.</paragraph>
+                  <paragraph>3. Suki, W., F.C. Rector, Jr. and D.W. Seldin, 1965. The Site of Action of Furosemide and Other Sulfonamide Diuretics in the Dog. Journal of Clinical Investigation, 44(9):1458-1469.</paragraph>
+                  <paragraph>4. Berman, L.B. and A. Ebrahimi, 1965. Experiences with Furosemide in Renal Disease. Proc. Society for Experimental Biological Medicine, 118:333-336.</paragraph>
+                  <paragraph>5. Schmidt, H.A.E. Animal Experiments with S35 Tagged Lasix® in Canine and Ovine. Radio-chemical Pharmacological Laboratory, Farbwerke Hoechst, Frankfurt, West Germany.</paragraph>
+                  <paragraph>6. Haussler, A. and P. Hajdu. Methods Biological Identification and Results of Studies on Absorption, Elimination and Metabolism. Research Laboratories, Farbwerke Hoechst, Frankfurt, West Germany.</paragraph>
+                  <paragraph>7. Antoniou, L.D., G.M. Eisner, L.M. Slotkoff and L.S. Lilienfield, 1967. Sodium and Calcium Transport in the Kidney. Clinical Research, 15(2):476.</paragraph>
+                  <paragraph>8. Duarte, C.G., 1967. Effects of Furosemide (F) and Ethacrynic Acid (ETA) on the Renal Clearance of Phosphate (Cp), Ultrafilterable Calcium (CUfCa) and Magnesium (CUfMg). Clinical Research, 15(2):357.</paragraph>
+                  <paragraph>9. Duarte, C.G., 1968. Effects of Ethacrynic Acid and Furosemide on Urinary Calcium, Phosphate and Magnesium. Metabolism, 17:867-876. </paragraph>
+                  <paragraph>10. Nielsen, S.P., O. Andersen and K.E. Steven, 1969. Magnesium and Calcium Metabolism during Prolonged Furosemide (Lasix®) Administration to Normal Rats. Acta Pharmacol. et. Toxicol., 27:469-479.</paragraph>
+                  <paragraph>11. Reimold, E.W., 1972. The Effect of Furosemide on Hypercalcemia Due to Dihydrotachysterol. Metabolism, 21(7): 593-598.</paragraph>
+                  <paragraph>12. Brown, R.D., and T.W. McElwee, Jr., 1972. Effects of Intra-Arterially and Intravenously Administered Ethacrynic Acid and Furosemide on Cochlear N1 in Cats. Toxicology and Applied Pharmacology, 22:589-594.</paragraph>
+                  <paragraph>13. Mathog, R.H., W.G. Thomas and W.R. Hudson, 1970. Ototoxicity of New and Potent Diuretics. Archives of Otolaryngology, 92(1):7-13.</paragraph>
+                  <paragraph>14. Mathog, R.H. and G.J. Matz, 1972. Ototoxic Effects of Ethacrynic Acid. Annals of Otolaryngology, Vol. 81.</paragraph>
+                  <paragraph>15. Gilman, A.G., L.S. Goodman and A. Gilman, 1980. The Pharmacological Basis of Therapeutics, Sixth ed., MacMillan Publishing Co., Inc., New York, NY, 903-907.</paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_section_id_2c63389a-d77d-4e5f-9262-4880513ef5f6">
+               <id root="42c5de69-5a85-48e8-8906-bd3c167e627c"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>DISAL is a registered trademark of Boehringer Ingelheim Vetmedica GmbH, used under license.</paragraph>
+                  <paragraph>© 2019 Boehringer Ingelheim Animal Health USA Inc. All Rights Reserved.</paragraph>
+                  <paragraph>673703-06</paragraph>
+                  <paragraph>87018377</paragraph>
+                  <paragraph>Rev. 08/19</paragraph>
+               </text>
+               <effectiveTime value="20200608"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_51d758aa-c776-4215-b0a4-f4c83bfa0a0c">
+               <id root="76dbd67b-b9fc-42cd-9d61-a10d533d7203"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Principal Display Panel – Container Label, 100 mL  </title>
+               <text>
+                  <paragraph>NDC 0010-6737-01<content styleCode="bold"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Disal® </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">(furosemide injection)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">50 mg/mL</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Caution:</content> Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+                  <paragraph>A diuretic-saluretic for prompt relief of edema</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Net Contents: 100 mL</content>
+                  </paragraph>
+                  <paragraph>Approved by FDA under NADA # 131-538</paragraph>
+                  <renderMultiMedia ID="id-2090373170" referencedObject="F65BB4EA-E3BF-44BF-AB86-81D830E82FDC"/>
+               </text>
+               <effectiveTime value="20200608"/>
+               <component>
+                  <observationMedia ID="F65BB4EA-E3BF-44BF-AB86-81D830E82FDC">
+                     <text>Picture of 100 mL container label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

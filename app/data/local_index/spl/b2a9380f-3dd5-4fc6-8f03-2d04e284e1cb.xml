@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="2b643dfa-43ca-4755-b3c1-b70dae20e5c3"/>
+   <code code="50578-4" codeSystem="2.16.840.1.113883.6.1" displayName="PRESCRIPTION ANIMAL DRUG LABEL"/>
+   <title>Approved by FDA under NADA # 065-495<br/>BIOMOX®<br/>(amoxicillin)</title>
+   <effectiveTime value="20220105"/>
+   <setId root="b2a9380f-3dd5-4fc6-8f03-2d04e284e1cb"/>
+   <versionNumber value="5"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="131568396"/>
+            <name>Virbac AH, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="915793457"/>
+                        <name>Medispray Laboratories Private Ltd</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="860184986"/>
+                        <name>Centrient Pharmaceuticals Netherlands</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C82401" displayName="api manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="117877975"/>
+                        <name>Alcami Missouri Corporation</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" displayName="analysis" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="831351445"/>
+                        <name>Alcami Carolinas Corporation</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" displayName="analysis" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="73139ba2-1e4e-43cd-8224-427bc8b31040"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <title/>
+               <text/>
+               <effectiveTime value="20220104"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="51311-300" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Biomox</name>
+                        <formCode code="C42994" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUSPENSION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>amoxicillin</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="0.75" unit="g"/>
+                              <denominator value="15" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="804826J2HU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>amoxicillin</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="9EM05410Q9" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AMOXICILLIN ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="15" unit="mL"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="51311-300-15" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43171" displayName="BOTTLE, DROPPER" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="mL"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="51311-300-30" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43171" displayName="BOTTLE, DROPPER" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20100524"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NADA065495" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73593" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NADA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText>off-white to pinkish</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLFLAVOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C73375" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CHERRY" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="La26240b7-c096-4b09-b7de-27ab18048123">
+               <id root="17af731c-a197-40df-86a8-a61144015b6c"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Veterinary For Oral Suspension</content>
+                     <br/>
+                     <content styleCode="bold">For use in DOGS only.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L178a6781-7763-49ec-8edd-ab47e86cee6f">
+               <id root="7cd4e8f5-6b16-4d66-830c-8b39868cb2df"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>BIOMOX® (amoxicillin) is a broad-spectrum, semisynthetic antibiotic which provides bactericidal activity against a wide range of common gram-positive and gram-negative pathogens. Amoxicillin chemically is D-(-)α-amino-p-hydroxybenzyl penicillin trihydrate.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lb75fb0e3-eb0b-45fc-afef-219e359df612">
+               <id root="d343a733-41c8-4f28-ac65-76caa77f08bc"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>Inactive Ingredients</title>
+               <text>
+                  <paragraph>Cherry Flavor, Silicon Dioxide NF, FD&amp;C Red #40, Polyoxyethylene-Polyoxypropylene Glycol, Sodium Benozate, Sodium Citrate, Sodium Saccharin, and Sucrose</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L5e6cb9b9-dab5-418b-a339-f249513a28c4">
+               <id root="d9bf6390-d438-469e-a834-eb8675df4343"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>ACTION</title>
+               <text>
+                  <paragraph>Amoxicillin has bactericidal activity against susceptible organisms similar to that of ampicillin. It acts by inhibiting the biosynthesis of bacterial<br/>wall mucopeptides. Most strains of the following gram-positive and gramnegative bacteria have demonstrated susceptibility to: amoxicillin, both <content styleCode="italics">in vitro </content>and<content styleCode="italics"> in vivo</content>: nonpenicillinase-producing staphylococci, alpha- and betahemolytic streptococci, <content styleCode="italics">Streptococcus faecalis, Escherichia coli </content>and<content styleCode="italics"> Proteus mirabilis</content>. Amoxicillin does not resist destruction by penicillinase; therefore, it is not effective against penicillinase-producing bacteria, particularly resistant staphylococci. Most strains of Enterobacter and klebsiella and all strains of Pseudomonas are resistant.</paragraph>
+                  <paragraph>Amoxicillin may be given without regard to meals because it is stable in gastric acid. It is rapidly absorbed following oral administration and diffuses readily into most body fluids and tissues. It diffuses poorly into the brain and spinal fluid except when the meninges are inflamed. Most of the amoxicillin is excreted in the urine unchanged.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L52a8b7f9-420b-47a9-b0ce-962e9d1ede5d">
+               <id root="7ff7e9d8-6fea-4ca0-a554-41bd82f6ae71"/>
+               <code code="50745-9" codeSystem="2.16.840.1.113883.6.1" displayName="VETERINARY INDICATIONS SECTION"/>
+               <title>INDICATIONS</title>
+               <text>
+                  <paragraph>BIOMOX® (amoxicillin) for oral suspension is indicated in the treatment of the following infections in dogs when caused by susceptible strains of organisms:</paragraph>
+                  <paragraph>BACTERIAL DERMATITIS due to <content styleCode="italics">Staphylococcus aureus, Streptococcus spp.; Staphylococcus spp.; </content>and<content styleCode="italics"> E. coli.</content>
+                  </paragraph>
+                  <paragraph>SOFT TISSUE INFECTIONS (abscesses, wounds, lacerations) due to<content styleCode="italics"> Staphylococcus aureus, Streptococcus spp.; E. coli, Proteus mirabilis </content>and<br/>
+                     <content styleCode="italics">Staphylococcus spp.</content>
+                  </paragraph>
+                  <paragraph>As is true with all antibiotic therapy, appropriate <content styleCode="italics">in vitro</content> cultures and sensitivities should be conducted prior to treatment.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L459f15dc-f2ff-4d7d-979f-1f8c7140a037">
+               <id root="ec5632cc-b4f5-42d3-86b4-94ddeddad59f"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Use of amoxicillin is contraindicated in animals with a history of an allergic reaction to penicillin.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L151acd19-e765-4882-b402-f549e1eca08f">
+               <id root="9201633d-ee64-43f4-97b4-c5f58db17db3"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>Amoxicillin is a semisynthetic penicillin and, therefore, has the potential for producing allergic reactions. Epinephrine and/or steroids should be administered if an allergic reaction occurs.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lc6fb39bc-8a5c-4d7a-b255-414ea569ff69">
+               <id root="ac22a21b-6988-4bcc-95b1-4699b79b3aa7"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph>For use in dogs only.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lb79d7b0a-c22a-496e-8dc4-c16a09415e1b">
+               <id root="0a593aaf-f50d-4bfb-91ba-2dd4eaacc7c6"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <text>
+                  <paragraph>Until adequate reproductive studies are accomplished, Biomox (amoxicillin) for oral suspension should not be used in pregnant or breeding<br/>animals.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L68713568-ad74-4e80-acde-1824569a32af">
+               <id root="b6635685-80a7-4259-bf56-4c691ad077d8"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>CAUTION</title>
+               <text>
+                  <paragraph>Federal law restricts this drug to use by or on the order of a licensed veterinarian.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lfe3f52a5-49e1-424a-b88b-e5555b6600d9">
+               <id root="3cc547cc-8609-4f63-8ea2-ba28e85aca86"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>The recommended dosage is 5 mg per pound of body weight administered twice daily for 5 to 7 days. Continue for 48 hours after all symptoms have subsided. If no improvment is noted in 5 days, the diagnosis should be reconsidered and therapy changed.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L6f496b7c-d887-4e15-8be8-5bdf7cb23184">
+               <id root="60c23583-83c3-4ebe-ba3d-9402ccfbd50e"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>DIRECTIONS FOR MIXING ORAL SUSPENSION</title>
+               <text>
+                  <paragraph>Add sufficient water to the bottle as indicated in the table below and shake vigorously. Each mL of suspension will contain 50 mg of amoxicillin as the trihydrate.</paragraph>
+                  <paragraph>
+                     <content>
+                        <renderMultiMedia referencedObject="L03b12210-d9ea-466b-872c-e8adcf762389"/>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content>Note: When stored at room temperature or in refrigerator, discard unused portion of reconstituted suspension after 14 days.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20220105"/>
+               <component>
+                  <observationMedia ID="L03b12210-d9ea-466b-872c-e8adcf762389">
+                     <text>image description</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Table 3.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="La6a54077-60a2-484a-9570-d464e0aeb9bb">
+               <id root="1d9acef4-6d95-47de-ae9a-3fed723953fd"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>SUPPLY</title>
+               <text>
+                  <paragraph>Bimox® (amoxicillin) for oral suspension is supplied in bottles containing 0.75 g of amoxicillin activity in bottles of 15 mL or 1.5 g of amoxicillin<br/>activity in bottles of 30 mL. After reconstitution with the required amount of water, each mL will contain 50 mg of amoxicillin as the trihydrate.</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L9844d48e-6043-454f-9125-baa50f1989ef">
+               <id root="088a0a2d-90b2-4ee0-8884-982eb7c97f1d"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Manufactured for:<br/>
+                     <content styleCode="bold">Virbac AH, Inc.</content>
+                     <br/>P.O. Box 162059<br/>Fort Worth, TX 76161<br/>1-800-338-3659</paragraph>
+                  <paragraph>92515 07/19 Rev.-03</paragraph>
+               </text>
+               <effectiveTime value="20211220"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L0ba3d3c7-42a6-443f-bdda-02fa3bfc2036">
+               <id root="94d3d8af-7d13-42a3-982d-0ba365f9c662"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L09856c8c-6d69-43d4-8b6e-e652244daa74"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20220105"/>
+               <component>
+                  <observationMedia ID="L09856c8c-6d69-43d4-8b6e-e652244daa74">
+                     <text>image description</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Label 15 ml 3.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L88572497-0006-48c9-bf31-a091dcc49a8f">
+               <id root="f3f7f534-67aa-47a1-b053-8aafaad42913"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lec672dcc-769d-473e-a31f-ecd54d94046e"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20220105"/>
+               <component>
+                  <observationMedia ID="Lec672dcc-769d-473e-a31f-ecd54d94046e">
+                     <text>image description</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Label 30 ml 3.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>
