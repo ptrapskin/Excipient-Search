@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
+from pathlib import Path
 
 import httpx
 from fastapi import FastAPI
@@ -106,7 +107,7 @@ def create_app() -> FastAPI:
     app.include_router(search_router)
     app.include_router(products_router)
     app.include_router(rxnorm_router)
-    app.mount("/static", StaticFiles(directory="app/static"), name="static")
+    app.mount("/static", StaticFiles(directory=str(Path(__file__).resolve().parent / "static")), name="static")
     return app
 
 
