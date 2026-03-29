@@ -1,26 +1,4 @@
-const QUICK_CHOICES = [
-  {
-    category: "Osmotic Agents",
-    items: [
-      { label: "Glycerin", aliases: ["glycerin", "glycerol", "anhydrous glycerin", "glycerin solution"] },
-      { label: "Propylene Glycol", aliases: ["propylene glycol", "propylene glycol solution"] },
-      { label: "Polyethylene Glycol", aliases: ["polyethylene glycol", "peg", "peg 3350", "peg 400", "peg 300", "peg 1450", "macrogol"] },
-    ],
-  },
-  {
-    category: "Osmotic Salts",
-    items: [
-      { label: "Magnesium Salts", aliases: ["magnesium citrate", "magnesium sulfate", "magnesium hydroxide", "magnesium chloride"] },
-      { label: "Phosphate Salts", aliases: ["sodium phosphate", "dibasic sodium phosphate", "monobasic sodium phosphate", "phosphoric acid"] },
-    ],
-  },
-  {
-    category: "Osmotic Sugars",
-    items: [
-      { label: "High Sugar", aliases: ["fructose", "high fructose corn syrup", "hfcs", "corn syrup", "sucrose", "invert sugar", "dextrose", "glucose syrup"] },
-    ],
-  },
-];
+const QUICK_CHOICES = [];
 
 const quickContainer = document.querySelector("[data-quick-include]");
 const includeInput = document.getElementById("include-filter");
