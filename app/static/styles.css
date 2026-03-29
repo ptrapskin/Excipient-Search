@@ -525,3 +525,406 @@ main.container {
         text-align: center;
     }
 }
+
+/* ── Site navigation ── */
+.site-nav {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.site-nav a {
+    font-size: 0.92rem;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-nav a:hover {
+    color: var(--accent);
+}
+
+/* ── Osmotic risk page ── */
+.osmotic-panel .tagline {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+    font-size: 0.97rem;
+}
+
+.osmotic-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.osmotic-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tag {
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #f2eee3;
+    font-size: 0.85rem;
+}
+
+.tag-risk {
+    background: rgba(139, 47, 37, 0.09);
+    border-color: rgba(139, 47, 37, 0.25);
+    color: var(--error);
+}
+
+.tag-sm {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.78rem;
+}
+
+.unii-code {
+    display: inline-block;
+    margin-left: 0.25rem;
+    font-size: 0.68rem;
+    font-family: monospace;
+    opacity: 0.6;
+    letter-spacing: 0.02em;
+}
+
+.osmotic-run-form {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.osmotic-run-btn {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+}
+
+.osmotic-run-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.osmotic-hint {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--muted);
+    max-width: 480px;
+}
+
+.osmotic-summary {
+    margin-top: 1rem;
+}
+
+.osmotic-results {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ingredient-group {
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ingredient-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.ingredient-summary::-webkit-details-marker {
+    display: none;
+}
+
+.ingredient-summary::before {
+    content: "▶";
+    font-size: 0.7rem;
+    color: var(--muted);
+    transition: transform 0.15s;
+    flex-shrink: 0;
+}
+
+details[open] > .ingredient-summary::before {
+    transform: rotate(90deg);
+}
+
+.ingredient-name {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.ingredient-count {
+    font-size: 0.85rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.ingredient-products {
+    padding: 0 1rem 1rem;
+    overflow-x: auto;
+}
+
+.ingredient-products .data-table th,
+.ingredient-products .data-table td {
+    font-size: 0.86rem;
+    padding: 0.55rem 0.6rem;
+}
+
+.sugar-alcohol-cell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding-top: 0.6rem;
+}
+
+.ndc-cell {
+    font-size: 0.8rem;
+    color: var(--muted);
+    max-width: 180px;
+    word-break: break-all;
+}
+
+.index-status {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.index-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(31, 92, 74, 0.12);
+    color: var(--accent-strong);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 0.4rem;
+}
+
+.tier-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.tier-high {
+    background: #fde8e6;
+    color: #7a1f18;
+    border: 1px solid #f5c6c2;
+}
+
+.tier-moderate {
+    background: #fef3e2;
+    color: #7a4a0a;
+    border: 1px solid #f5ddb0;
+}
+
+.tier-review {
+    background: #eef2fb;
+    color: #1e3a6e;
+    border: 1px solid #c2d0f0;
+}
+
+.index-status code {
+    font-family: monospace;
+    font-size: 0.85em;
+    background: #f2eee3;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+}
+
+/* Sugar Alcohol Risk page */
+.sa-panel {}
+
+.sa-stat-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.sa-stat-card {
+    flex: 1 1 100px;
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--panel);
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+}
+
+.sa-stat-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 8px rgba(31, 92, 74, 0.12);
+}
+
+.sa-stat-card.active {
+    border-color: var(--accent);
+    background: rgba(31, 92, 74, 0.06);
+}
+
+.sa-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent-strong);
+}
+
+.sa-stat-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-top: 0.3rem;
+}
+
+.sa-stat-desc {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+    text-align: center;
+}
+
+.sa-updated {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+}
+
+.sa-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+}
+
+.sa-search {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+}
+
+.sa-search:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(31, 92, 74, 0.15);
+}
+
+.sa-search-count {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    /* Header & nav */
+    .site-header .container {
+        padding: 1rem 0;
+    }
+
+    .brand {
+        font-size: 1.3rem;
+    }
+
+    .site-nav {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    /* Search */
+    .search-input-row {
+        flex-direction: column;
+    }
+
+    .search-input-row button,
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Detail metadata grid — single column */
+    .details-list,
+    .summary-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Sugar alcohol toolbar — stack search and count */
+    .sa-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .sa-search-count {
+        text-align: center;
+        white-space: normal;
+    }
+
+    /* Stat cards — two per row minimum */
+    .sa-stat-card {
+        flex: 1 1 80px;
+    }
+
+    .sa-stat-number {
+        font-size: 1.5rem;
+    }
+
+    /* Tables — scroll horizontally */
+    .ingredient-products,
+    .content-block .data-table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* Ingredient group summary — allow wrapping */
+    .ingredient-summary {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* Panel padding */
+    .panel {
+        padding: 1rem;
+    }
+
+    main.container {
+        padding: 1rem 0 2rem;
+    }
+}

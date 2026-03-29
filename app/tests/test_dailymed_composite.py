@@ -59,7 +59,7 @@ class FakeApiRepository:
 async def test_composite_repository_caches_live_product_candidates_locally(tmp_path: Path):
     local_repository = DailyMedZipRepository(tmp_path, ParsingService())
     api_repository = FakeApiRepository()
-    repository = CompositeDailyMedRepository(local_repository, api_repository, result_limit=1)
+    repository = CompositeDailyMedRepository(local_repository, api_repository)
 
     query = DrugQuery(raw_text="metformin", normalized_text="metformin")
     first = await repository.find_products(query, [])
@@ -74,7 +74,7 @@ async def test_composite_repository_caches_live_product_candidates_locally(tmp_p
 async def test_composite_repository_caches_spl_locally(tmp_path: Path):
     local_repository = DailyMedZipRepository(tmp_path, ParsingService())
     api_repository = FakeApiRepository()
-    repository = CompositeDailyMedRepository(local_repository, api_repository, result_limit=10)
+    repository = CompositeDailyMedRepository(local_repository, api_repository)
 
     first = await repository.get_spl("set-123")
     second = await repository.get_spl("set-123")

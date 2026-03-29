@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.product_name }} | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel">
+    {%- macro dailymed_url() -%}
+        {%- if product.ndcs -%}
+            https://dailymed.nlm.nih.gov/dailymed/search.cfm?query={{ product.ndcs[0] | urlencode }}
+        {%- else -%}
+            https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query={{ product.product_name | urlencode }}
+        {%- endif -%}
+    {%- endmacro -%}
+
+    <div class="back-nav">
+        <a href="javascript:history.back()" class="button secondary">&larr; Back to results</a>
+    </div>
+
+    <div class="meta-row">
+        <div>
+            <h1>{{ product.product_name }}</h1>
+        </div>
+    </div>
+
+    <dl class="details-list summary-grid">
+        <div>
+            <dt>Labeler</dt>
+            <dd>{{ product.labeler or "Unknown" }}</dd>
+        </div>
+        <div>
+            <dt>Dosage Form</dt>
+            <dd>{{ product.dosage_form or "Unknown" }}</dd>
+        </div>
+        <div>
+            <dt>Route</dt>
+            <dd>{{ product.route or "Unknown" }}</dd>
+        </div>
+        <div>
+            <dt>NDCs</dt>
+            <dd>{{ product.ndcs | join(", ") if product.ndcs else "Unavailable" }}</dd>
+        </div>
+        <div>
+            <dt>DailyMed</dt>
+            <dd><a href="{{ dailymed_url() }}" target="_blank" rel="noreferrer">Find on DailyMed</a></dd>
+        </div>
+    </dl>
+
+    <section class="content-block">
+        <h2>Active Ingredients</h2>
+        {% if product.active_ingredients_raw %}
+        {% set names = product.active_ingredients_raw.split('; ') %}
+        {% set strengths = product.active_strength.split('; ') if product.active_strength else [] %}
+        {% set uniis = product.active_ingredients_unii.split('; ') if product.active_ingredients_unii else [] %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>UNII</th>
+                    <th>Strength</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(names | length) %}
+                <tr>
+                    <td>{{ names[i] | title }}</td>
+                    <td>{{ uniis[i] if i < uniis | length and uniis[i] else "&mdash;" }}</td>
+                    <td>{{ strengths[i] if i < strengths | length and strengths[i] else "&mdash;" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="message empty">No active ingredient data in local index.</p>
+        {% endif %}
+    </section>
+
+    <section class="content-block">
+        <h2>Matched Sugar Alcohols</h2>
+        {% if product.matched_sugar_alcohols %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Substance</th>
+                    <th>UNII</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(product.matched_sugar_alcohols | length) %}
+                <tr>
+                    <td>{{ product.matched_sugar_alcohols[i] | title }}</td>
+                    <td>
+                        {% if product.matched_sugar_alcohol_uniis and i < product.matched_sugar_alcohol_uniis | length and product.matched_sugar_alcohol_uniis[i] %}
+                        {{ product.matched_sugar_alcohol_uniis[i] }}
+                        {% else %}
+                        &mdash;
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="message empty">No sugar alcohol excipients matched in local index.</p>
+        {% endif %}
+    </section>
+
+    <section class="content-block">
+        <h2>Inactive Ingredients</h2>
+        {% if product.inactive_ingredients_raw %}
+        {% set inactive = product.inactive_ingredients_raw.split('; ') %}
+        {% set inact_uniis = product.inactive_ingredients_unii.split('; ') if product.inactive_ingredients_unii else [] %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>UNII</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(inactive | length) %}
+                <tr>
+                    <td>{{ inactive[i] | title }}</td>
+                    <td>{{ inact_uniis[i] if i < inact_uniis | length and inact_uniis[i] else "&mdash;" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="message empty">No inactive ingredient data in local index.</p>
+        {% endif %}
+    </section>
+</section>
+{% endblock %}

@@ -15,21 +15,19 @@ class CompositeDailyMedRepository:
         self,
         local_repository: DailyMedZipRepository,
         api_repository: DailyMedRepository,
-        result_limit: int = 100,
     ) -> None:
         self._local_repository = local_repository
         self._api_repository = api_repository
-        self._result_limit = result_limit
 
     async def find_products(self, query: DrugQuery, concepts: list) -> list[ProductCandidate]:
         """Return product candidates, preferring local cache and falling back to the live API."""
 
         local = await self._local_repository.find_products(query, concepts)
         if local:
-            return local[: self._result_limit]
+            return local
         api = await self._api_repository.find_products(query, concepts)
         self._local_repository.save_products(api)
-        return api[: self._result_limit]
+        return api
 
     async def search_spls(self, query: DrugQuery) -> list[ProductSearchResult]:
         """Return all matching SPLs, merging local cache with live API results."""

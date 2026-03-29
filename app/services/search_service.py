@@ -13,24 +13,22 @@ from app.services.normalize_query import build_query_key, normalize_query
 
 
 class SearchService:
-    """Orchestrate product search: resolver + expander pipeline with DailyMed as source of truth."""
+    """Orchestrate product search: DailyMed direct search with RxNorm alias enrichment."""
 
     def __init__(
         self,
         cache_service: CacheService,
         dailymed_repository,
-        product_expander,
         rxnorm_resolver,
         excipient_filter_service: ExcipientFilterService,
     ) -> None:
         self._cache_service = cache_service
         self._dailymed_repository = dailymed_repository
-        self._product_expander = product_expander
         self._rxnorm_resolver = rxnorm_resolver
         self._excipient_filter_service = excipient_filter_service
 
     async def search(self, raw_query: str) -> tuple[DrugQuery, list[ProductSearchResult], bool]:
-        """Search via RxNorm resolver → product expander → DailyMed SPL lookup."""
+        """Search DailyMed directly for all results, then enrich with RxNorm ingredient aliases."""
 
         query = normalize_query(raw_query)
         query_key = build_query_key(query)
@@ -39,12 +37,17 @@ class SearchService:
         if not query.normalized_text and not query.ndc:
             raise ValueError("Please enter a medication name or NDC.")
 
-        concepts = await self._rxnorm_resolver.resolve(query)
-        results = await self._product_expander.expand_from_concepts(query, concepts)
+        # Primary search: hit DailyMed directly with full pagination — no result cap.
+        results = await self._dailymed_repository.search_spls(query)
 
-        # When a brand name is searched, also search by generic ingredient names so that
-        # e.g. "Keppra" returns levetiracetam products (not just Keppra-branded ones).
-        # Use search_spls (always hits local + live API) so generic products not yet cached are found.
+        # Secondary search: resolve RxNorm concepts to find ingredient aliases.
+        # This ensures brand searches (e.g. "Keppra") also return generic products
+        # (levetiracetam) that DailyMed wouldn't return under the brand name alone.
+        try:
+            concepts = await self._rxnorm_resolver.resolve(query)
+        except Exception:
+            concepts = []
+
         for ingredient_name in self._extract_ingredient_names(concepts, query.normalized_text):
             ingredient_query = DrugQuery(
                 raw_text=ingredient_name,

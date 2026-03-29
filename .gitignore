@@ -28,6 +28,20 @@ coverage.xml
 *.sqlite
 *.sqlite3
 
+# Local DailyMed cache (generated at runtime)
+app/data/local_index/
+
+# Bulk SPL zip downloads and generated index (large files, machine-local)
+app/data/osmotic_risk_index.json
+
+# Pipeline output files (generated at runtime)
+*.csv
+logs/
+qa/
+
+# Claude Code
+.claude/
+
 # Environment
 .env
 .env.*

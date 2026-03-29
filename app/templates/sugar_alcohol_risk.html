@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}Sugar Alcohol List | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel sa-panel">
+    <h1>Sugar Alcohol Excipient List</h1>
+    <p class="tagline">
+        Oral and enteral liquid drug products containing sugar alcohol excipients,
+        sourced from DailyMed Rx labels.
+    </p>
+
+    {% if stats %}
+    <div class="sa-stats content-block">
+        <div class="sa-stat-grid">
+            <a href="?sa=all" class="sa-stat-card {% if selected_sa == 'all' %}active{% endif %}">
+                <span class="sa-stat-number">{{ stats.total_high + stats.total_moderate + stats.total_review }}</span>
+                <span class="sa-stat-label">All</span>
+            </a>
+            {% for sa_name, sa_count in sa_counts.items() %}
+            <a href="?sa={{ sa_name }}" class="sa-stat-card {% if selected_sa == sa_name %}active{% endif %}">
+                <span class="sa-stat-number">{{ sa_count }}</span>
+                <span class="sa-stat-label">{{ sa_name | title }}</span>
+            </a>
+            {% endfor %}
+            <a href="?sa=multiple" class="sa-stat-card {% if selected_sa == 'multiple' %}active{% endif %}">
+                <span class="sa-stat-number">{{ multiple_count }}</span>
+                <span class="sa-stat-label">Multiple</span>
+            </a>
+        </div>
+        {% if stats.last_processed %}
+        <p class="sa-updated">Last updated {{ stats.last_processed[:10] | datetimeformat }}</p>
+        {% endif %}
+    </div>
+
+    {% else %}
+    <div class="content-block">
+        <p class="message empty">
+            No data found. Run the ingestion pipeline first:
+            <br><code>python -m excipient_finder.main --input-root "C:/path/to/spl_zips"</code>
+        </p>
+    </div>
+    {% endif %}
+
+    {% if groups %}
+    <div class="sa-toolbar content-block">
+        <input
+            type="search"
+            id="sa-search"
+            class="sa-search"
+            placeholder="Search by drug or product name&hellip;"
+            autocomplete="off"
+        >
+        <span class="sa-search-count" id="sa-match-count">
+            {{ total }} product{{ "s" if total != 1 else "" }} across {{ groups | length }} ingredient{{ "s" if groups | length != 1 else "" }}
+        </span>
+    </div>
+
+    <div class="sa-results" id="sa-results">
+        {% for group in groups %}
+        <details class="ingredient-group content-block" data-group="{{ group.ingredient_name | lower }}">
+            <summary class="ingredient-summary">
+                <span class="ingredient-name">{{ group.ingredient_name }}</span>
+                <span class="ingredient-count">{{ group.product_count }} product{{ "s" if group.product_count != 1 else "" }}</span>
+            </summary>
+            <div class="ingredient-products">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Form</th>
+                            <th>Strength</th>
+                            <th>Labeler</th>
+                            <th>Sugar Alcohols</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in group.products %}
+                        <tr data-product="{{ product.product_name | lower }}">
+                            <td>
+                                {% if product.setid %}
+                                <a href="/products/{{ product.setid }}{% if product.ndcs %}?ndc={{ product.ndcs[0] }}{% endif %}">
+                                    {{ product.product_name | product_name }}
+                                </a>
+                                {% else %}
+                                {{ product.product_name | product_name }}
+                                {% endif %}
+                            </td>
+                            <td>{{ product.dosage_form or "Unknown" }}</td>
+                            <td>{{ product.strength or "&mdash;" }}</td>
+                            <td>{{ product.labeler or "Unknown" }}</td>
+                            <td class="sugar-alcohol-cell">
+                                {% for sa in product.sugar_alcohols %}
+                                <span class="tag tag-risk tag-sm">{{ sa }}</span>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </details>
+        {% endfor %}
+    </div>
+
+    {% elif stats %}
+    <div class="content-block">
+        <p class="message empty">No products found.</p>
+    </div>
+    {% endif %}
+</section>
+
+<script>
+(function () {
+    const searchInput = document.getElementById("sa-search");
+    const matchCount  = document.getElementById("sa-match-count");
+    const groups      = document.querySelectorAll("[data-group]");
+
+    if (!searchInput) return;
+
+    searchInput.addEventListener("input", function () {
+        const q = this.value.trim().toLowerCase();
+        let visibleProducts = 0;
+        let visibleGroups = 0;
+
+        groups.forEach(function (group) {
+            const groupName = group.dataset.group || "";
+            const rows = group.querySelectorAll("tr[data-product]");
+            let groupVisible = 0;
+
+            rows.forEach(function (row) {
+                const productName = row.dataset.product || "";
+                const matches = !q || groupName.includes(q) || productName.includes(q);
+                row.style.display = matches ? "" : "none";
+                if (matches) groupVisible++;
+            });
+
+            const hide = q && groupVisible === 0;
+            group.style.display = hide ? "none" : "";
+            if (!hide) {
+                visibleProducts += groupVisible;
+                visibleGroups++;
+                // Auto-open groups with matches when searching
+                if (q && groupVisible > 0) group.open = true;
+            }
+        });
+
+        if (q) {
+            matchCount.textContent =
+                visibleProducts + " product" + (visibleProducts !== 1 ? "s" : "") +
+                " across " + visibleGroups + " ingredient" + (visibleGroups !== 1 ? "s" : "");
+        } else {
+            const totalProducts = Array.from(groups).reduce(
+                (n, g) => n + g.querySelectorAll("tr[data-product]").length, 0
+            );
+            matchCount.textContent =
+                totalProducts + " product" + (totalProducts !== 1 ? "s" : "") +
+                " across " + groups.length + " ingredient" + (groups.length !== 1 ? "s" : "");
+        }
+    });
+}());
+</script>
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Osmotic Risk Analysis | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel osmotic-panel">
+    <h1>Osmotic Diarrhea Risk Analysis</h1>
+    <p class="tagline">
+        Identifies liquid drug products that contain sugar alcohol excipients — ingredients that can cause
+        osmotic diarrhea in sensitive patients. Results are grouped by active ingredient.
+    </p>
+
+    <div class="osmotic-meta content-block">
+        <div class="osmotic-meta-grid">
+            <div>
+                <p class="osmotic-label">Sugar alcohols detected</p>
+                <div class="tag-list">
+                    {% for sa in sugar_alcohols %}<span class="tag tag-risk">{{ sa }}</span>{% endfor %}
+                </div>
+            </div>
+            <div>
+                <p class="osmotic-label">Liquid forms included</p>
+                <div class="tag-list">
+                    {% for kw in liquid_keywords %}<span class="tag">{{ kw }}</span>{% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% if built_at %}
+        <div class="index-status">
+            <span class="index-badge">Local index</span>
+            Built {{ built_at.strftime("%B %d, %Y") }}
+            {% if source_files %}
+            from {{ source_files | length }} DailyMed zip file{{ "s" if source_files | length != 1 else "" }}
+            {% endif %}
+            &mdash; to refresh, re-run <code>scripts/build_osmotic_index.py</code>.
+        </div>
+        {% else %}
+        <form class="osmotic-run-form" action="/osmotic-risk" method="get" id="osmotic-form">
+            <input type="hidden" name="run" value="true">
+            <button type="submit" class="button osmotic-run-btn" id="run-btn">
+                Run Live Analysis
+            </button>
+            <p class="subtle osmotic-hint">
+                No local index found. Searches DailyMed live across {{ ingredient_count }}
+                drug ingredients — may take a minute or two.<br>
+                For complete results, download the DailyMed bulk files and run
+                <code>scripts/build_osmotic_index.py</code>.
+            </p>
+        </form>
+        {% endif %}
+    </div>
+
+    {% if error %}
+    <p class="message error">{{ error }}</p>
+
+    {% elif groups is not none %}
+    <div class="osmotic-summary content-block">
+        {% if groups %}
+        <p>
+            Found <strong>{{ total }}</strong> liquid product variant{{ "s" if total != 1 else "" }}
+            containing sugar alcohols across <strong>{{ groups | length }}</strong>
+            active ingredient{{ "s" if groups | length != 1 else "" }}.
+        </p>
+        {% else %}
+        <p class="message empty">No matching products found. DailyMed may have returned limited results for these search terms.</p>
+        {% endif %}
+    </div>
+
+    {% if groups %}
+    <div class="osmotic-results">
+        {% for group in groups %}
+        <details class="ingredient-group content-block">
+            <summary class="ingredient-summary">
+                <span class="ingredient-name">{{ group.ingredient_name }}</span>
+                <span class="ingredient-count">{{ group.product_count }} product{{ "s" if group.product_count != 1 else "" }}</span>
+            </summary>
+            <div class="ingredient-products">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Labeler</th>
+                            <th>Form</th>
+                            <th>Route</th>
+                            <th>Strength</th>
+                            <th>Sugar Alcohols</th>
+                            <th>Tier</th>
+                            <th>NDCs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in group.products %}
+                        <tr>
+                            <td>
+                                {% if product.setid %}
+                                <a href="/products/{{ product.setid }}{% if product.ndcs %}?ndc={{ product.ndcs[0] }}{% endif %}">{{ product.product_name }}</a>
+                                {% else %}
+                                {{ product.product_name }}
+                                {% endif %}
+                            </td>
+                            <td>{{ product.labeler or "Unknown" }}</td>
+                            <td>{{ product.dosage_form or "Unknown" }}</td>
+                            <td>{{ product.route or "Unknown" }}</td>
+                            <td>{{ product.strength or "Unavailable" }}</td>
+                            <td class="sugar-alcohol-cell">
+                                {% for sa in product.sugar_alcohols_found %}
+                                <span class="tag tag-risk tag-sm">{{ sa }}</span>
+                                {% endfor %}
+                            </td>
+                            <td>
+                                <span class="tier-badge tier-{{ product.concern_tier }}">{{ product.concern_tier }}</span>
+                            </td>
+                            <td class="ndc-cell">{{ product.ndcs | join(", ") if product.ndcs else "Unavailable" }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </details>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endif %}
+</section>
+
+<script>
+(function () {
+    const form = document.getElementById("osmotic-form");
+    const btn = document.getElementById("run-btn");
+    if (form && btn) {
+        form.addEventListener("submit", function () {
+            btn.textContent = "Running analysis\u2026";
+            btn.disabled = true;
+        });
+    }
+}());
+</script>
+{% endblock %}
