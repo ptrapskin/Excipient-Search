@@ -28,9 +28,6 @@
     <div class="meta-row">
         <div>
             <h1>{{ product.product_name }}</h1>
-            <p class="subtle">
-                <a href="{{ dailymed_page_url(product.setid) }}" target="_blank" rel="noreferrer">Open official DailyMed label</a>
-            </p>
         </div>
         {% if cached %}
         <p class="message info">Loaded from cache.</p>
