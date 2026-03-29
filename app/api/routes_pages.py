@@ -14,7 +14,6 @@ from app.api.dependencies import get_container
 from app.domain.models import ExcipientFilter
 from app.repositories import excipient_db
 from app.repositories.dailymed_api import DailyMedAPIError
-from app.services.osmotic_risk_service import LIQUID_DRUG_INGREDIENTS, SUGAR_ALCOHOLS, _LIQUID_LOWER
 
 logger = logging.getLogger(__name__)
 
@@ -164,82 +163,6 @@ async def search_results_page(
                 "exclude": exclude,
                 "cached": False,
                 "error": "DailyMed is temporarily unavailable. Please try again shortly.",
-            },
-            status_code=502,
-        )
-
-
-_OSMOTIC_BASE_CONTEXT = {
-    "liquid_keywords": sorted(_LIQUID_LOWER),
-    "sugar_alcohols": SUGAR_ALCOHOLS,
-    "ingredient_count": len(LIQUID_DRUG_INGREDIENTS),
-}
-
-
-@router.get("/osmotic-risk", response_class=HTMLResponse)
-async def osmotic_risk_page(request: Request, run: bool = False) -> HTMLResponse:
-    """Render the osmotic diarrhea risk analysis page."""
-
-    container = get_container(request)
-    service = container.osmotic_risk_service
-
-    # Always show pre-built index if it exists — instant load, no API calls.
-    prebuilt = service.get_prebuilt_index()
-    if prebuilt is not None:
-        return templates.TemplateResponse(
-            request=request,
-            name="osmotic_risk.html",
-            context={
-                **_OSMOTIC_BASE_CONTEXT,
-                "groups": prebuilt.groups,
-                "total": prebuilt.total,
-                "built_at": prebuilt.built_at,
-                "source_files": prebuilt.source_files,
-                "error": None,
-            },
-        )
-
-    # No pre-built index — show landing page or run live analysis.
-    if not run:
-        return templates.TemplateResponse(
-            request=request,
-            name="osmotic_risk.html",
-            context={
-                **_OSMOTIC_BASE_CONTEXT,
-                "groups": None,
-                "total": 0,
-                "built_at": None,
-                "source_files": [],
-                "error": None,
-            },
-        )
-
-    try:
-        groups, total = await service.run()
-        return templates.TemplateResponse(
-            request=request,
-            name="osmotic_risk.html",
-            context={
-                **_OSMOTIC_BASE_CONTEXT,
-                "groups": groups,
-                "total": total,
-                "built_at": None,
-                "source_files": [],
-                "error": None,
-            },
-        )
-    except Exception:
-        logger.exception("Osmotic risk analysis failed")
-        return templates.TemplateResponse(
-            request=request,
-            name="osmotic_risk.html",
-            context={
-                **_OSMOTIC_BASE_CONTEXT,
-                "groups": None,
-                "total": 0,
-                "built_at": None,
-                "source_files": [],
-                "error": "Analysis failed. DailyMed may be temporarily unavailable.",
             },
             status_code=502,
         )

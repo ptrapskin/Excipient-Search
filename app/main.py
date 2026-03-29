@@ -26,7 +26,6 @@ from app.repositories.dailymed_zip import DailyMedZipRepository
 from app.services.cache_service import CacheService
 from app.services.excipient_filter import ExcipientFilterService
 from app.services.parsing_service import ParsingService
-from app.services.osmotic_risk_service import OsmoticRiskService
 from app.services.rxnorm_resolver import RxNormResolver
 from app.services.search_service import SearchService
 
@@ -39,7 +38,6 @@ class AppContainer:
     http_client: httpx.AsyncClient
     search_service: SearchService
     rxnorm_resolver: RxNormResolver
-    osmotic_risk_service: OsmoticRiskService
 
 
 @asynccontextmanager
@@ -74,10 +72,6 @@ async def lifespan(app: FastAPI):
         candidate_limit=settings.rxnorm_candidate_limit,
     )
     excipient_filter_service = ExcipientFilterService()
-    osmotic_risk_service = OsmoticRiskService(
-        dailymed_api_repository,
-        data_root=settings.project_root / "app" / "data",
-    )
     search_service = SearchService(
         cache_service=cache_service,
         dailymed_repository=dailymed_repository,
@@ -90,7 +84,6 @@ async def lifespan(app: FastAPI):
         http_client=http_client,
         search_service=search_service,
         rxnorm_resolver=rxnorm_resolver,
-        osmotic_risk_service=osmotic_risk_service,
     )
 
     try:
