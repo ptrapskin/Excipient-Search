@@ -60,6 +60,7 @@ logs/
   - `sqlite3` for database writes
   - `csv` for CSV export
   - `argparse`, `logging`, `dataclasses`, `pathlib`, `re`, `datetime`
+  - `urllib.request`, `tempfile`, `shutil` for `--fetch` mode
 
 ---
 
@@ -83,50 +84,88 @@ or XML files are logged as warnings and skipped; processing continues with the n
 
 ## How to run
 
-### Basic run
+### Recommended: stream directly from DailyMed (no ZIPs saved to disk)
+
+```bash
+# Rx labels only
+python -m excipient_finder.main --fetch rx --write-qa-reports
+
+# OTC labels only
+python -m excipient_finder.main --fetch otc --write-qa-reports
+
+# Both Rx and OTC
+python -m excipient_finder.main --fetch all --write-qa-reports
+
+# Resume an interrupted fetch run
+python -m excipient_finder.main --fetch all --resume
+```
+
+Each ZIP is downloaded to a temporary directory, processed, and deleted immediately
+after a successful `processing_log` entry is written. Only the SQLite database and
+CSV exports are retained (in `--output-root`, which defaults to OneDrive).
+
+If a ZIP fails processing it is moved to `--output-root` for inspection rather than
+silently deleted.
+
+### Alternative: process pre-downloaded ZIPs from a local folder
 
 ```bash
 python -m excipient_finder.main --input-root "C:/Data/DailyMed"
 ```
 
-### Resume a previous run (skip already-processed outer ZIPs)
+By default, ZIPs are deleted from `--input-root` after successful processing.
+Pass `--keep-zips` to retain them (e.g. for debugging or re-running without re-downloading).
+
+### Resume a previous run (skip already-processed ZIPs)
 
 ```bash
+python -m excipient_finder.main --fetch rx --resume
+# or
 python -m excipient_finder.main --input-root "C:/Data/DailyMed" --resume
 ```
 
 ### Test with a small sample
 
 ```bash
-python -m excipient_finder.main --input-root "C:/Data/DailyMed" --limit 5 --debug
+python -m excipient_finder.main --fetch rx --limit 2 --debug
 ```
 
-### Write excluded products to DB and CSV (for auditing filters)
+### Keep ZIPs for debugging
 
 ```bash
-python -m excipient_finder.main \
-    --input-root "C:/Data/DailyMed" \
-    --write-excluded-debug
-```
-
-### Custom output location
-
-```bash
-python -m excipient_finder.main \
-    --input-root "C:/Data/DailyMed" \
-    --output-root "D:/Results/ExcipientFinder"
+python -m excipient_finder.main --fetch rx --keep-zips
 ```
 
 ### All options
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--input-root PATH` | (required) | Directory containing DailyMed outer ZIP files |
+| `--fetch {rx,otc,all}` | — | Stream-download ZIPs from DailyMed one at a time (mutually exclusive with `--input-root`) |
+| `--input-root PATH` | — | Directory of pre-downloaded DailyMed ZIPs (mutually exclusive with `--fetch`) |
 | `--output-root PATH` | `C:\Users\traps\OneDrive\Apps\Excipient Finder` | Directory for DB, logs, and CSVs |
+| `--keep-zips` | False | Retain ZIP files after processing (default: delete after success) |
 | `--limit N` | None | Process at most N outer ZIPs (useful for testing) |
 | `--debug` | False | Enable DEBUG-level logging |
 | `--write-excluded-debug` | False | Also write excluded records to DB and CSV |
-| `--resume` | False | Skip outer ZIPs already logged as successful |
+| `--resume` | False | Skip ZIPs already logged as successful |
+| `--broad-recall` | False | Write all form/route-passing records to CSV regardless of sugar alcohol match |
+| `--write-qa-reports` | False | Write extended QA reports to the `qa/` directory |
+| `--write-qa-samples` | False | Write random QA samples per tier to `qa/` |
+| `--qa-sample-size N` | 25 | Rows per tier for QA samples |
+| `--known-positives PATH` | None | CSV of known-positive products to validate after processing |
+
+### ZIP lifecycle
+
+```
+--fetch mode (recommended):
+  DailyMed URL → temp dir → process → delete (on success)
+                                     → move to --output-root (on failure)
+
+--input-root mode:
+  local folder → process → delete (on success, default)
+                          → retain in folder (on failure, always)
+                          → retain in folder (--keep-zips, always)
+```
 
 ---
 
@@ -238,10 +277,13 @@ log entry) to reprocess that file.
 
 ## Adding OTC or other DailyMed files
 
-The pipeline is agnostic about which DailyMed ZIPs are in `--input-root`. To include
-OTC products, simply download the relevant DailyMed bulk ZIPs (e.g.
-`dm_spl_release_human_otc_part*.zip`) and place them alongside the Rx ZIPs in your
-`--input-root` directory, or point `--input-root` at a folder that contains all of them.
-The filter for `"HUMAN"` in `product_type` already handles mixed Rx/OTC content.
-Veterinary labels are automatically skipped because their `product_type` does not
-contain the word "HUMAN".
+```bash
+python -m excipient_finder.main --fetch otc --resume
+```
+
+`--fetch otc` downloads all 11 OTC parts (~22–33 GB) one at a time, processes each,
+and deletes it before moving to the next. `--resume` skips any parts already processed.
+`--fetch all` processes Rx + OTC in a single run.
+
+The pipeline is label-set agnostic — the filter for `"HUMAN"` in `product_type` already
+handles mixed Rx/OTC content. Veterinary labels are automatically skipped.

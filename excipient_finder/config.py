@@ -7,7 +7,7 @@ DEFAULT_OUTPUT_ROOT = Path(r"C:\Users\traps\OneDrive\Apps\Excipient Finder")
 
 @dataclass
 class Config:
-    input_root: Path
+    input_root: Path | None          # None when using --fetch
     output_root: Path = field(default_factory=lambda: DEFAULT_OUTPUT_ROOT)
     db_path: Path = field(default=None)
     log_dir: Path = field(default=None)
@@ -21,6 +21,8 @@ class Config:
     write_qa_samples: bool = False
     write_qa_reports: bool = False
     qa_sample_size: int = 25
+    keep_zips: bool = False          # retain ZIP files after processing (default: delete)
+    fetch: str | None = None         # "rx" | "otc" | "all" — stream-download then process
 
     def __post_init__(self) -> None:
         if self.db_path is None:

@@ -26,7 +26,10 @@ import argparse
 import csv
 import dataclasses
 import logging
+import shutil
 import sys
+import tempfile
+import urllib.request
 from pathlib import Path
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -76,6 +79,62 @@ _BROAD_RECALL_HEADER = [
     "matched_sugar_alcohol_terms", "concern_tier", "in_strict_output",
     "source_file",
 ]
+
+# DailyMed bulk download URLs (used by --fetch mode)
+_BASE_URL = "https://dailymed-data.nlm.nih.gov/public-release-files"
+_RX_URLS = [f"{_BASE_URL}/dm_spl_release_human_rx_part{i}.zip" for i in range(1, 7)]
+_OTC_URLS = [f"{_BASE_URL}/dm_spl_release_human_otc_part{i}.zip" for i in range(1, 12)]
+_FETCH_URLS: dict[str, list[str]] = {
+    "rx":  _RX_URLS,
+    "otc": _OTC_URLS,
+    "all": _RX_URLS + _OTC_URLS,
+}
+
+
+# ---------------------------------------------------------------------------
+# ZIP lifecycle helpers
+# ---------------------------------------------------------------------------
+
+def _safe_delete_zip(zip_path: Path, logger: logging.Logger) -> None:
+    """Delete a ZIP file after successful processing."""
+    try:
+        zip_path.unlink()
+        logger.info("  Deleted zip: %s", zip_path.name)
+    except Exception as exc:
+        logger.warning("  Could not delete zip %s: %s", zip_path.name, exc)
+
+
+def _download_zip(url: str, dest_path: Path, logger: logging.Logger) -> bool:
+    """Download one ZIP from *url* to *dest_path* with MB-level progress.
+
+    Returns True on success, False on any error (partial file is removed).
+    Uses only the stdlib urllib.request — no third-party dependencies.
+    """
+    filename = url.rsplit("/", 1)[-1]
+    try:
+        with urllib.request.urlopen(url) as response:
+            total = int(response.headers.get("Content-Length") or 0)
+            total_mb = total / 1e6 if total else 0
+            size_str = f" ({total_mb:.0f} MB)" if total_mb else ""
+            logger.info("  Downloading%s: %s", size_str, filename)
+            downloaded = 0
+            with open(dest_path, "wb") as f:
+                while True:
+                    chunk = response.read(1024 * 1024)  # 1 MB chunks
+                    if not chunk:
+                        break
+                    f.write(chunk)
+                    downloaded += len(chunk)
+                    if total:
+                        pct = downloaded / total * 100
+                        logger.debug("    %.1f%%  %.0f / %.0f MB", pct, downloaded / 1e6, total_mb)
+        logger.info("  Downloaded %.0f MB: %s", downloaded / 1e6, filename)
+        return True
+    except Exception as exc:
+        logger.error("  Download failed for %s: %s", filename, exc)
+        if dest_path.exists():
+            dest_path.unlink()
+        return False
 
 
 def build_output_row(
@@ -327,7 +386,80 @@ def process_outer_zip(
     return counts, funnel, broad_recall_rows, parse_failures
 
 
+def _finalize(
+    cfg: Config,
+    conn,
+    logger: logging.Logger,
+    total_counts: dict[str, int],
+    total_funnel: FunnelCounts,
+    all_parse_failures: list[dict],
+    all_broad_recall: list[dict],
+) -> None:
+    """Write QA reports, CSV exports, and log the final summary."""
+    total_funnel.log_summary(logger)
+    cfg.qa_dir.mkdir(parents=True, exist_ok=True)
+    write_funnel_summary(total_funnel, cfg.qa_dir / "qa_funnel_summary.csv")
+    write_funnel_to_db(conn, dataclasses.asdict(total_funnel))
+
+    write_parse_failures_csv(all_parse_failures, cfg.qa_dir / "qa_parse_failures.csv")
+
+    logger.info("Running static QA tests...")
+    qa_matcher_path = cfg.qa_dir / "qa_matcher_results.csv" if cfg.write_qa_reports else None
+    qa_form_path    = cfg.qa_dir / "qa_form_results.csv"    if cfg.write_qa_reports else None
+    qa_route_path   = cfg.qa_dir / "qa_route_results.csv"   if cfg.write_qa_reports else None
+
+    matcher_ok = run_matcher_qa(logger, csv_path=qa_matcher_path)
+    form_ok    = run_form_qa(logger, csv_path=qa_form_path)
+    route_ok   = run_route_qa(logger, csv_path=qa_route_path)
+
+    if not (matcher_ok and form_ok and route_ok):
+        logger.warning("One or more static QA tests FAILED — review logs above.")
+
+    if cfg.write_qa_reports:
+        logger.info("Writing extended QA reports...")
+        write_excipient_summary(conn, cfg.qa_dir / "qa_excipient_summary.csv", logger=logger)
+        write_form_summary(conn, cfg.qa_dir / "qa_form_summary.csv", logger=logger)
+        write_route_summary(conn, cfg.qa_dir / "qa_route_summary.csv", logger=logger)
+
+    if cfg.write_qa_samples:
+        logger.info("Writing QA samples...")
+        write_qa_samples(conn, cfg.qa_dir, sample_size=cfg.qa_sample_size, logger=logger)
+
+    if cfg.broad_recall and all_broad_recall:
+        broad_path = cfg.csv_dir / "broad_recall_products.csv"
+        broad_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(broad_path, "w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=_BROAD_RECALL_HEADER, extrasaction="ignore")
+            w.writeheader()
+            w.writerows(all_broad_recall)
+        logger.info("  Broad recall: wrote %d rows -> %s", len(all_broad_recall), broad_path.name)
+
+    if cfg.known_positives_path:
+        validate_known_positives(
+            conn,
+            cfg.known_positives_path,
+            cfg.qa_dir / "qa_known_positives_validation.csv",
+            logger,
+        )
+
+    logger.info("=" * 60)
+    logger.info("Pipeline complete.")
+    logger.info("  Total SPLs     : %d", total_counts["spls"])
+    logger.info("  HIGH           : %d", total_counts["high"])
+    logger.info("  MODERATE       : %d", total_counts["moderate"])
+    logger.info("  REVIEW         : %d", total_counts["review"])
+    logger.info("  Excluded       : %d", total_counts["excluded"])
+    logger.info("  Parse errors   : %d", total_counts["parse_errors"])
+
+    logger.info("Writing CSV exports...")
+    write_csvs(conn, cfg.csv_dir, write_excluded_debug=cfg.write_excluded_debug, logger=logger)
+
+    conn.close()
+    logger.info("Done. DB at: %s", cfg.db_path)
+
+
 def run(cfg: Config) -> None:
+    """Process ZIPs from a local --input-root directory."""
     cfg.log_dir.mkdir(parents=True, exist_ok=True)
     cfg.output_root.mkdir(parents=True, exist_ok=True)
 
@@ -338,6 +470,7 @@ def run(cfg: Config) -> None:
     logger.info("  output_root     : %s", cfg.output_root)
     logger.info("  db_path         : %s", cfg.db_path)
     logger.info("  resume          : %s", cfg.resume)
+    logger.info("  keep_zips       : %s", cfg.keep_zips)
     logger.info("  debug           : %s", cfg.debug)
     logger.info("  broad_recall    : %s", cfg.broad_recall)
     logger.info("  write_qa_reports: %s", cfg.write_qa_reports)
@@ -376,10 +509,12 @@ def run(cfg: Config) -> None:
         except KeyboardInterrupt:
             logger.warning("Interrupted by user. Partial results saved.")
             log_file_failure(conn, zip_path.name, "Interrupted by user")
+            logger.info("  Retained zip (interrupted): %s", zip_path.name)
             break
         except Exception as exc:
             logger.error("  FAILED: %s", exc, exc_info=True)
             log_file_failure(conn, zip_path.name, str(exc))
+            logger.info("  Retained zip due to processing error: %s", zip_path.name)
             continue
 
         log_file_success(conn, zip_path.name, counts)
@@ -388,110 +523,135 @@ def run(cfg: Config) -> None:
             counts["spls"], counts["high"], counts["moderate"],
             counts["review"], counts["excluded"], counts["parse_errors"],
         )
+
+        # Delete ZIP after successful processing unless --keep-zips
+        if not cfg.keep_zips:
+            _safe_delete_zip(zip_path, logger)
+        else:
+            logger.debug("  Retained zip (--keep-zips): %s", zip_path.name)
+
         for k in total_counts:
             total_counts[k] += counts.get(k, 0)
-
         total_funnel.add(zip_funnel)
         all_parse_failures.extend(zip_failures)
         all_broad_recall.extend(broad_rows)
 
-        # Flush parse failures to DB as we go (if QA reporting enabled)
         if cfg.write_qa_reports:
             for failure in zip_failures:
                 insert_parse_failure_to_db(conn, failure)
             conn.commit()
 
-    # -----------------------------------------------------------------------
-    # Post-processing: QA reports, CSV exports, funnel summary
-    # -----------------------------------------------------------------------
+    _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall)
 
-    # Always log and write funnel summary
-    total_funnel.log_summary(logger)
-    cfg.qa_dir.mkdir(parents=True, exist_ok=True)
-    write_funnel_summary(total_funnel, cfg.qa_dir / "qa_funnel_summary.csv")
-    write_funnel_to_db(conn, dataclasses.asdict(total_funnel))
 
-    # Always write parse failures CSV
-    write_parse_failures_csv(all_parse_failures, cfg.qa_dir / "qa_parse_failures.csv")
+def run_fetch(cfg: Config) -> None:
+    """Download ZIPs one at a time from DailyMed, process each, then delete.
 
-    # Always run static QA tests and log results
-    logger.info("Running static QA tests...")
-    qa_matcher_path = cfg.qa_dir / "qa_matcher_results.csv" if cfg.write_qa_reports else None
-    qa_form_path = cfg.qa_dir / "qa_form_results.csv" if cfg.write_qa_reports else None
-    qa_route_path = cfg.qa_dir / "qa_route_results.csv" if cfg.write_qa_reports else None
+    Uses a temporary directory so nothing persists to disk beyond the SQLite
+    output.  Failed ZIPs are moved to --output-root for manual inspection.
+    """
+    cfg.log_dir.mkdir(parents=True, exist_ok=True)
+    cfg.output_root.mkdir(parents=True, exist_ok=True)
 
-    matcher_ok = run_matcher_qa(logger, csv_path=qa_matcher_path)
-    form_ok = run_form_qa(logger, csv_path=qa_form_path)
-    route_ok = run_route_qa(logger, csv_path=qa_route_path)
-
-    if not (matcher_ok and form_ok and route_ok):
-        logger.warning("One or more static QA tests FAILED — review logs above.")
-
-    # Extended QA reports (DB-backed summaries)
-    if cfg.write_qa_reports:
-        logger.info("Writing extended QA reports...")
-        write_excipient_summary(
-            conn, cfg.qa_dir / "qa_excipient_summary.csv", logger=logger
-        )
-        write_form_summary(
-            conn, cfg.qa_dir / "qa_form_summary.csv", logger=logger
-        )
-        write_route_summary(
-            conn, cfg.qa_dir / "qa_route_summary.csv", logger=logger
-        )
-
-    # QA samples
-    if cfg.write_qa_samples:
-        logger.info("Writing QA samples...")
-        write_qa_samples(
-            conn,
-            cfg.qa_dir,
-            sample_size=cfg.qa_sample_size,
-            logger=logger,
-        )
-
-    # Broad recall output
-    if cfg.broad_recall and all_broad_recall:
-        broad_path = cfg.csv_dir / "broad_recall_products.csv"
-        broad_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(broad_path, "w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=_BROAD_RECALL_HEADER, extrasaction="ignore")
-            w.writeheader()
-            w.writerows(all_broad_recall)
-        logger.info(
-            "  Broad recall: wrote %d rows -> %s",
-            len(all_broad_recall), broad_path.name,
-        )
-
-    # Known-positive validation
-    if cfg.known_positives_path:
-        validate_known_positives(
-            conn,
-            cfg.known_positives_path,
-            cfg.qa_dir / "qa_known_positives_validation.csv",
-            logger,
-        )
-
-    # Final summary
+    logger = setup_logging(cfg.log_dir, debug=cfg.debug)
     logger.info("=" * 60)
-    logger.info("Pipeline complete.")
-    logger.info("  Total SPLs     : %d", total_counts["spls"])
-    logger.info("  HIGH           : %d", total_counts["high"])
-    logger.info("  MODERATE       : %d", total_counts["moderate"])
-    logger.info("  REVIEW         : %d", total_counts["review"])
-    logger.info("  Excluded       : %d", total_counts["excluded"])
-    logger.info("  Parse errors   : %d", total_counts["parse_errors"])
+    logger.info("excipient_finder pipeline starting (fetch mode: %s)", cfg.fetch)
+    logger.info("  output_root     : %s", cfg.output_root)
+    logger.info("  db_path         : %s", cfg.db_path)
+    logger.info("  resume          : %s", cfg.resume)
+    logger.info("  keep_zips       : %s", cfg.keep_zips)
+    logger.info("  debug           : %s", cfg.debug)
+    logger.info("  broad_recall    : %s", cfg.broad_recall)
+    logger.info("  write_qa_reports: %s", cfg.write_qa_reports)
+    logger.info("  write_qa_samples: %s", cfg.write_qa_samples)
+    logger.info("=" * 60)
 
-    logger.info("Writing CSV exports...")
-    write_csvs(
-        conn,
-        cfg.csv_dir,
-        write_excluded_debug=cfg.write_excluded_debug,
-        logger=logger,
-    )
+    conn = init_db(cfg.db_path)
+    urls = _FETCH_URLS[cfg.fetch]
 
-    conn.close()
-    logger.info("Done. DB at: %s", cfg.db_path)
+    if cfg.limit:
+        urls = urls[: cfg.limit]
+        logger.info("Limiting to %d ZIP file(s)", cfg.limit)
+
+    total_counts: dict[str, int] = {
+        "high": 0, "moderate": 0, "review": 0, "excluded": 0,
+        "spls": 0, "parse_errors": 0,
+    }
+    total_funnel = FunnelCounts()
+    all_parse_failures: list[dict] = []
+    all_broad_recall: list[dict] = []
+
+    tmpdir = Path(tempfile.mkdtemp(prefix="excipient_finder_"))
+    logger.info("Temporary download directory: %s", tmpdir)
+
+    try:
+        for i, url in enumerate(urls, 1):
+            filename = url.rsplit("/", 1)[-1]
+            zip_path = tmpdir / filename
+            logger.info("[%d/%d] %s", i, len(urls), filename)
+
+            if cfg.resume and is_already_processed(conn, filename):
+                logger.info("  -> skipping (already processed successfully)")
+                continue
+
+            # Download
+            if not _download_zip(url, zip_path, logger):
+                logger.error("  Skipping %s — download failed", filename)
+                continue
+
+            # Process
+            log_file_start(conn, filename)
+            try:
+                counts, zip_funnel, broad_rows, zip_failures = process_outer_zip(
+                    zip_path, conn, cfg, logger
+                )
+            except KeyboardInterrupt:
+                logger.warning("Interrupted by user. Partial results saved.")
+                log_file_failure(conn, filename, "Interrupted by user")
+                logger.info("  Retained zip (interrupted): %s", filename)
+                break
+            except Exception as exc:
+                logger.error("  FAILED: %s", exc, exc_info=True)
+                log_file_failure(conn, filename, str(exc))
+                # Move failed zip to output_root for debugging
+                retained = cfg.output_root / filename
+                try:
+                    shutil.move(str(zip_path), str(retained))
+                    logger.info("  Moved failed zip to: %s", retained)
+                except Exception as move_exc:
+                    logger.warning("  Could not move failed zip: %s", move_exc)
+                continue
+
+            log_file_success(conn, filename, counts)
+            logger.info(
+                "  -> SPLs=%d  high=%d  moderate=%d  review=%d  excluded=%d  parse_errors=%d",
+                counts["spls"], counts["high"], counts["moderate"],
+                counts["review"], counts["excluded"], counts["parse_errors"],
+            )
+
+            # Delete after success unless --keep-zips (keep in tmpdir means temp cleanup handles it)
+            if not cfg.keep_zips:
+                _safe_delete_zip(zip_path, logger)
+            else:
+                logger.debug("  Retained zip (--keep-zips): %s", zip_path.name)
+
+            for k in total_counts:
+                total_counts[k] += counts.get(k, 0)
+            total_funnel.add(zip_funnel)
+            all_parse_failures.extend(zip_failures)
+            all_broad_recall.extend(broad_rows)
+
+            if cfg.write_qa_reports:
+                for failure in zip_failures:
+                    insert_parse_failure_to_db(conn, failure)
+                conn.commit()
+
+    finally:
+        # Remove temp directory (should be empty if all ZIPs were processed successfully)
+        shutil.rmtree(tmpdir, ignore_errors=True)
+        logger.info("Cleaned up temporary directory: %s", tmpdir)
+
+    _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall)
 
 
 def parse_args() -> Config:
@@ -500,17 +660,36 @@ def parse_args() -> Config:
         description="Ingest DailyMed SPL zip files and identify oral/enteral liquid "
                     "products containing sugar alcohol excipients.",
     )
-    parser.add_argument(
+
+    # --- Data source (mutually exclusive: provide local files OR stream from DailyMed) ---
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument(
         "--input-root",
-        required=True,
         type=Path,
-        help="Root directory containing DailyMed outer ZIP files.",
+        metavar="PATH",
+        help="Directory containing pre-downloaded DailyMed outer ZIP files.",
     )
+    source.add_argument(
+        "--fetch",
+        choices=["rx", "otc", "all"],
+        help="Stream-download ZIPs from DailyMed one at a time and delete after processing. "
+             "Choices: rx (Rx labels only), otc (OTC labels only), all (both).",
+    )
+
+    # --- Output ---
     parser.add_argument(
         "--output-root",
         type=Path,
         default=DEFAULT_OUTPUT_ROOT,
         help=f"Directory for DB, logs, and CSV output (default: {DEFAULT_OUTPUT_ROOT})",
+    )
+
+    # --- Behaviour flags ---
+    parser.add_argument(
+        "--keep-zips",
+        action="store_true",
+        help="Retain ZIP files after processing instead of deleting them. "
+             "By default ZIPs are deleted immediately after successful processing.",
     )
     parser.add_argument(
         "--limit",
@@ -579,9 +758,14 @@ def parse_args() -> Config:
         write_qa_samples=args.write_qa_samples,
         write_qa_reports=args.write_qa_reports,
         qa_sample_size=args.qa_sample_size,
+        keep_zips=args.keep_zips,
+        fetch=args.fetch,
     )
 
 
 if __name__ == "__main__":
     cfg = parse_args()
-    run(cfg)
+    if cfg.fetch:
+        run_fetch(cfg)
+    else:
+        run(cfg)
