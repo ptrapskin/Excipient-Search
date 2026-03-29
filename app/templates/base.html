@@ -9,16 +9,32 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <a class="brand" href="/">Excipient Search</a>
             <nav class="site-nav">
-                <a href="/">Search</a>
-<a href="/sugar-alcohol-risk">Sugar Alcohol List</a>
+                <a href="https://www.catylstrx.com">CatylstRx Home</a>
+                <a href="/">Excipient Search</a>
+                <a href="/sugar-alcohol-risk">Sugar Alcohol Screener</a>
+                <a href="https://www.catylstrx.com/taper-calendar.html">TaperCal</a>
             </nav>
         </div>
     </header>
     <main class="container">
         {% block content %}{% endblock %}
     </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-brand">&copy; 2026 CatylstRx</span>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="https://www.catylstrx.com/about">About</a>
+                    <a href="https://www.catylstrx.com/disclaimer">Disclaimer</a>
+                    <a href="https://www.catylstrx.com/terms">Terms of Use</a>
+                    <a href="https://www.catylstrx.com/privacy">Privacy Policy</a>
+                    <a href="mailto:admin@catylstrx.com">Contact</a>
+                </nav>
+                <a class="footer-email" href="mailto:admin@catylstrx.com">admin@catylstrx.com</a>
+            </div>
+        </div>
+    </footer>
     <script src="{{ url_for('static', path='/app.js') }}" defer></script>
 </body>
 </html>

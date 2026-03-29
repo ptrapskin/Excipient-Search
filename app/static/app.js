@@ -1,16 +1,5 @@
 const QUICK_CHOICES = [
   {
-    category: "Sugar Alcohols",
-    items: [
-      { label: "Sorbitol", aliases: ["sorbitol", "sorbitol solution", "noncrystallizing sorbitol solution", "non-crystallizing sorbitol solution", "d-sorbitol", "sorbitol liquid", "sorbitol 70%", "sorbitol syrup"] },
-      { label: "Mannitol", aliases: ["mannitol", "d-mannitol"] },
-      { label: "Xylitol", aliases: ["xylitol"] },
-      { label: "Maltitol", aliases: ["maltitol", "maltitol solution", "maltitol syrup", "hydrogenated maltose syrup"] },
-      { label: "Lactitol", aliases: ["lactitol", "lactitol monohydrate"] },
-      { label: "Isomalt", aliases: ["isomalt", "isomaltitol"] },
-    ],
-  },
-  {
     category: "Osmotic Agents",
     items: [
       { label: "Glycerin", aliases: ["glycerin", "glycerol", "anhydrous glycerin", "glycerin solution"] },

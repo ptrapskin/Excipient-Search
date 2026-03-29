@@ -54,11 +54,11 @@
             <thead>
                 <tr>
                     <th><button type="button" class="table-sort-button" data-sort-key="product">Product</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="form">Form</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="strength">Strength</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="route">Route</button></th>
                     <th><button type="button" class="table-sort-button" data-sort-key="ndcs">NDCs</button></th>
                     <th><button type="button" class="table-sort-button" data-sort-key="labeler">Labeler</button></th>
-                    <th><button type="button" class="table-sort-button" data-sort-key="strength">Strength</button></th>
-                    <th><button type="button" class="table-sort-button" data-sort-key="form">Form</button></th>
-                    <th><button type="button" class="table-sort-button" data-sort-key="route">Route</button></th>
                     <th><button type="button" class="table-sort-button" data-sort-key="include">Matched Include</button></th>
                     <th><button type="button" class="table-sort-button" data-sort-key="exclude">Matched Exclude</button></th>
                 </tr>
@@ -83,11 +83,11 @@
                         {{ row.product_name }}
                         {% endif %}
                     </td>
+                    <td>{{ row.dosage_form or "Unknown" }}</td>
+                    <td>{{ row.dailymed_strength or "Unavailable" }}</td>
+                    <td>{{ row.route or "Unknown" }}</td>
                     <td>{{ row.ndcs | join(", ") if row.ndcs else "Unavailable" }}</td>
                     <td>{{ row.labeler or "Unknown" }}</td>
-                    <td>{{ row.dailymed_strength or "Unavailable" }}</td>
-                    <td>{{ row.dosage_form or "Unknown" }}</td>
-                    <td>{{ row.route or "Unknown" }}</td>
                     <td>{{ row.matched_include_terms | join(", ") if row.matched_include_terms else "None" }}</td>
                     <td>{{ row.matched_exclude_terms | join(", ") if row.matched_exclude_terms else "None" }}</td>
                 </tr>
