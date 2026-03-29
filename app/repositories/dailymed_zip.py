@@ -150,7 +150,10 @@ class DailyMedZipRepository:
     def save_products(self, products: list[ProductCandidate]) -> None:
         """Persist merged product candidates into the local index."""
 
-        self._index_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            self._index_dir.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            return  # read-only filesystem (e.g. Vercel deployment)
         existing = self._load_index()
         merged: dict[str, dict] = {}
 
@@ -189,8 +192,11 @@ class DailyMedZipRepository:
         xml_text = str(spl_payload.get("xml_text") or "")
         if not xml_text:
             return
-        self._spl_dir.mkdir(parents=True, exist_ok=True)
-        (self._spl_dir / f"{setid}.xml").write_text(xml_text, encoding="utf-8")
+        try:
+            self._spl_dir.mkdir(parents=True, exist_ok=True)
+            (self._spl_dir / f"{setid}.xml").write_text(xml_text, encoding="utf-8")
+        except OSError:
+            return  # read-only filesystem (e.g. Vercel deployment)
 
     def _load_index(self) -> list[dict]:
         """Load local index records when present."""
