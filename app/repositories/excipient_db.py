@@ -91,7 +91,7 @@ def get_stats(db_path: Path) -> ExcipientIndexStats | None:
     if not db_path.exists():
         return None
 
-    with sqlite3.connect(f"file:{db_path}?mode=ro", uri=True) as conn:
+    with sqlite3.connect(f"file:{db_path}?immutable=1", uri=True) as conn:
         conn.row_factory = sqlite3.Row
         counts = {
             row["concern_tier"]: row["cnt"]
@@ -118,7 +118,7 @@ def get_sugar_alcohol_counts(db_path: Path) -> tuple[dict[str, int], int]:
         return {}, 0
     counts: dict[str, int] = {}
     multiple = 0
-    with sqlite3.connect(f"file:{db_path}?mode=ro", uri=True) as conn:
+    with sqlite3.connect(f"file:{db_path}?immutable=1", uri=True) as conn:
         rows = conn.execute(
             "SELECT matched_sugar_alcohols FROM products WHERE inclusion_decision = 'included'"
         ).fetchall()
@@ -157,7 +157,7 @@ def get_groups(
 
     where = "WHERE " + " AND ".join(where_clauses)
 
-    with sqlite3.connect(f"file:{db_path}?mode=ro", uri=True) as conn:
+    with sqlite3.connect(f"file:{db_path}?immutable=1", uri=True) as conn:
         conn.row_factory = sqlite3.Row
         cols = _table_columns(conn, "products")
         # Optional columns added after the initial schema — select with fallback NULL.
@@ -226,7 +226,7 @@ def get_product_by_setid(db_path: Path, setid: str) -> LocalProductDetail | None
     if not db_path.exists():
         return None
 
-    with sqlite3.connect(f"file:{db_path}?mode=ro", uri=True) as conn:
+    with sqlite3.connect(f"file:{db_path}?immutable=1", uri=True) as conn:
         conn.row_factory = sqlite3.Row
         cols = _table_columns(conn, "products")
         strength_col = "active_strength" if "active_strength" in cols else "NULL AS active_strength"
