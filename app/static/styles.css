@@ -501,7 +501,7 @@ main.container {
 /* 1=Product 2=Form 3=Strength 4=Route 5=NDCs 6=Labeler 7=Include Match 8=Exclude Match */
 .matching-products-table th:nth-child(1),
 .matching-products-table td:nth-child(1) {
-    width: 19%;
+    width: 17%;
 }
 
 .matching-products-table th:nth-child(2),
@@ -516,7 +516,7 @@ main.container {
 
 .matching-products-table th:nth-child(4),
 .matching-products-table td:nth-child(4) {
-    width: 9%;
+    width: 11%;
 }
 
 .matching-products-table th:nth-child(5),
@@ -536,10 +536,7 @@ main.container {
     width: 11%;
 }
 
-/* Route (4) nowrap; NDCs (5) small text */
-.matching-products-table td:nth-child(4) {
-    white-space: nowrap;
-}
+/* NDCs (5) small text */
 
 .matching-products-table td:nth-child(5) {
     font-size: 0.82rem;
