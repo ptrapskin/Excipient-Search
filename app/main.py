@@ -25,7 +25,6 @@ from app.repositories.rxnorm_api import RxNormApiRepository
 from app.repositories.dailymed_zip import DailyMedZipRepository
 from app.services.cache_service import CacheService
 from app.services.excipient_filter import ExcipientFilterService
-from app.services.label_changes_service import LabelChangesService
 from app.services.parsing_service import ParsingService
 from app.services.rxnorm_resolver import RxNormResolver
 from app.services.search_service import SearchService
@@ -39,7 +38,7 @@ class AppContainer:
     http_client: httpx.AsyncClient
     search_service: SearchService
     rxnorm_resolver: RxNormResolver
-    label_changes_service: LabelChangesService
+    # label_changes_service: LabelChangesService  # sequestered
 
 
 @asynccontextmanager
@@ -81,14 +80,11 @@ async def lifespan(app: FastAPI):
         excipient_filter_service=excipient_filter_service,
     )
 
-    label_changes_service = LabelChangesService(http_client=http_client, settings=settings)
-
     app.state.container = AppContainer(
         settings=settings,
         http_client=http_client,
         search_service=search_service,
         rxnorm_resolver=rxnorm_resolver,
-        label_changes_service=label_changes_service,
     )
 
     try:

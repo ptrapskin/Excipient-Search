@@ -1,11 +1,13 @@
-"""Service for fetching and diffing recent DailyMed Rx label updates."""
+"""Service for fetching recent DailyMed Rx label updates filtered by Recent Major Changes."""
 
 from __future__ import annotations
 
 import asyncio
 import difflib
+import html as html_mod
 import io
 import logging
+import re
 import zipfile
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
@@ -19,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 _NS = "urn:hl7-org:v3"
 
-# LOINC codes → human-readable section names (Rx SPL sections)
+# LOINC codes → human-readable section names
 _SECTION_NAMES: dict[str, str] = {
     "60561-8": "Recent Major Changes",
     "34066-1": "Boxed Warning",
@@ -46,24 +48,29 @@ _SECTION_NAMES: dict[str, str] = {
     "34093-5": "Patient Information",
 }
 
-# Rx document code — used to filter out OTC/cosmetic labels
+# Rx document code
 _RX_DOC_CODE = "34391-3"
 
-# Max concurrent ZIP download pairs
+# Max concurrent ZIP downloads
 _MAX_CONCURRENT = 5
 
-# How many version>1 candidates to process before stopping
-_MAX_RECORDS = 50
+# Max version>1 candidates collected from API
+_MAX_CANDIDATES = 300
 
-# DailyMed base URL for ZIP downloads (different from API base)
+# Max records returned after filtering
+_MAX_DISPLAYED = 100
+
+# DailyMed base URL for ZIP downloads
 _DAILYMED_WEB_BASE = "https://dailymed.nlm.nih.gov/dailymed"
+
+# Match MM/YYYY dates in Recent Major Changes text
+_DATE_RE = re.compile(r"\b(\d{1,2})/(\d{4})\b")
 
 
 @dataclass
 class SectionDiff:
     section_name: str
-    removed: list[str]
-    added: list[str]
+    inline_html: str  # word-level inline diff with <del> and <ins>
 
 
 @dataclass
@@ -74,16 +81,15 @@ class LabelChangeRecord:
     previous_version: int
     published_date: str
     dailymed_url: str
+    # Rows from the Recent Major Changes table: [(section_name, date_string), ...]
+    rmc_entries: list[tuple[str, str]] = field(default_factory=list)
+    # Inline diffs for sections listed in rmc_entries only
     section_diffs: list[SectionDiff] = field(default_factory=list)
     fetch_error: str | None = None
 
     @property
     def has_changes(self) -> bool:
         return bool(self.section_diffs)
-
-    @property
-    def changed_section_names(self) -> list[str]:
-        return [s.section_name for s in self.section_diffs]
 
 
 class LabelChangesService:
@@ -95,30 +101,29 @@ class LabelChangesService:
     # Public API
     # ------------------------------------------------------------------
 
-    async def get_recent_changes(self, days: int = 7) -> list[LabelChangeRecord]:
-        """Return up to _MAX_RECORDS Rx label updates from the last `days` days."""
+    async def get_recent_changes(self, days: int = 60) -> list[LabelChangeRecord]:
+        """Return Rx labels whose Recent Major Changes section has entries within `days` days."""
         end = date.today()
         start = end - timedelta(days=days)
         candidates = await self._fetch_candidates(start, end)
-        logger.info("Label changes: %d candidates found, processing up to %d", len(candidates), _MAX_RECORDS)
+        logger.info("Label changes: %d candidates, filtering by Recent Major Changes within %d days",
+                    len(candidates), days)
 
         sem = asyncio.Semaphore(_MAX_CONCURRENT)
-        tasks = [self._process_candidate(c, sem) for c in candidates[:_MAX_RECORDS]]
+        tasks = [self._process_candidate(c, sem, days) for c in candidates]
         results = await asyncio.gather(*tasks, return_exceptions=False)
-
-        # Sort by published_date descending (already in order from API, but be explicit)
-        return [r for r in results if r is not None]
+        return [r for r in results if r is not None][:_MAX_DISPLAYED]
 
     # ------------------------------------------------------------------
     # Candidate fetching
     # ------------------------------------------------------------------
 
     async def _fetch_candidates(self, start: date, end: date) -> list[dict]:
-        """Page through DailyMed SPL list, collecting version>1 Rx label entries."""
+        """Page through DailyMed SPL list, collecting version>1 entries."""
         candidates: list[dict] = []
         page = 1
 
-        while len(candidates) < _MAX_RECORDS:
+        while len(candidates) < _MAX_CANDIDATES:
             url = (
                 f"{self._settings.dailymed_base_url}/spls.json"
                 f"?published_date_start={start.strftime('%Y-%m-%d')}"
@@ -140,7 +145,7 @@ class LabelChangesService:
             for spl in spls:
                 if spl.get("spl_version", 1) > 1:
                     candidates.append(spl)
-                if len(candidates) >= _MAX_RECORDS:
+                if len(candidates) >= _MAX_CANDIDATES:
                     break
 
             meta = data.get("metadata", {})
@@ -151,10 +156,12 @@ class LabelChangesService:
         return candidates
 
     # ------------------------------------------------------------------
-    # Per-record processing
+    # Per-record processing (two-phase)
     # ------------------------------------------------------------------
 
-    async def _process_candidate(self, spl: dict, sem: asyncio.Semaphore) -> LabelChangeRecord | None:
+    async def _process_candidate(
+        self, spl: dict, sem: asyncio.Semaphore, lookback_days: int
+    ) -> LabelChangeRecord | None:
         setid = spl["setid"]
         current_version = spl["spl_version"]
         published_date = spl.get("published_date", "")
@@ -163,22 +170,28 @@ class LabelChangesService:
 
         async with sem:
             try:
-                previous_version = await self._get_previous_version(setid, current_version)
-                if previous_version is None:
-                    return None
+                # Phase 1: current XML only — filter by Rx + recent RMC dates
+                xml_current = await self._fetch_spl_xml(setid)
 
-                xml_current, xml_previous = await asyncio.gather(
-                    self._fetch_spl_xml(setid),
-                    self._fetch_spl_xml(setid, version=previous_version),
-                )
-
-                # Filter to Rx labels only
                 if not self._is_rx_label(xml_current):
                     return None
 
                 sections_current = self._extract_sections(xml_current)
+                rmc_entries = self._extract_rmc_entries(sections_current)
+
+                if not rmc_entries:
+                    return None
+
+                # Phase 2: fetch previous version and diff only RMC-listed sections
+                previous_version = await self._get_previous_version(setid, current_version)
+                if previous_version is None:
+                    return None
+
+                xml_previous = await self._fetch_spl_xml(setid, version=previous_version)
                 sections_previous = self._extract_sections(xml_previous)
-                diffs = self._diff_sections(sections_previous, sections_current)
+
+                rmc_section_names = {entry[0] for entry in rmc_entries}
+                diffs = self._diff_sections(sections_previous, sections_current, rmc_section_names)
 
                 return LabelChangeRecord(
                     setid=setid,
@@ -187,22 +200,15 @@ class LabelChangesService:
                     previous_version=previous_version,
                     published_date=published_date,
                     dailymed_url=dailymed_url,
+                    rmc_entries=rmc_entries,
                     section_diffs=diffs,
                 )
+
             except Exception as exc:
                 logger.warning("Label changes: failed to process %s: %s", setid, exc)
-                return LabelChangeRecord(
-                    setid=setid,
-                    product_name=product_name,
-                    current_version=current_version,
-                    previous_version=0,
-                    published_date=published_date,
-                    dailymed_url=dailymed_url,
-                    fetch_error=str(exc),
-                )
+                return None
 
     async def _get_previous_version(self, setid: str, current_version: int) -> int | None:
-        """Return the version number immediately before current_version."""
         url = f"{self._settings.dailymed_base_url}/spls/{setid}/history.json"
         try:
             resp = await self._client.get(url, timeout=10)
@@ -218,7 +224,6 @@ class LabelChangesService:
         return versions[idx + 1]
 
     async def _fetch_spl_xml(self, setid: str, version: int | None = None) -> str:
-        """Download the ZIP for a setid (and optional version) and return the XML text."""
         url = f"{_DAILYMED_WEB_BASE}/getFile.cfm?setid={setid}&type=zip"
         if version is not None:
             url += f"&version={version}"
@@ -243,14 +248,12 @@ class LabelChangesService:
         try:
             root = ET.fromstring(xml_str)
             code_el = root.find(f"{{{_NS}}}code")
-            if code_el is None:
-                return False
-            return code_el.get("code") == _RX_DOC_CODE
+            return code_el is not None and code_el.get("code") == _RX_DOC_CODE
         except Exception:
             return False
 
     def _extract_sections(self, xml_str: str) -> dict[str, list[str]]:
-        """Return {section_name: [paragraph texts]} for all named sections."""
+        """Return {section_name: [text lines]} for all known LOINC sections."""
         try:
             root = ET.fromstring(xml_str)
         except Exception:
@@ -261,13 +264,11 @@ class LabelChangesService:
             code_el = section.find(f"{{{_NS}}}code")
             if code_el is None:
                 continue
-            code = code_el.get("code", "")
-            name = _SECTION_NAMES.get(code)
+            name = _SECTION_NAMES.get(code_el.get("code", ""))
             if name is None:
                 continue
             texts = self._extract_text_from_section(section)
             if texts:
-                # If section seen twice, append (some labels repeat section codes)
                 if name in sections:
                     sections[name].extend(texts)
                 else:
@@ -275,7 +276,6 @@ class LabelChangesService:
         return sections
 
     def _extract_text_from_section(self, section_el: ET.Element) -> list[str]:
-        """Extract cleaned paragraph/item/td strings from a section element."""
         texts: list[str] = []
         for elem in section_el.iter():
             if elem.tag in (
@@ -289,6 +289,42 @@ class LabelChangesService:
                     texts.append(cleaned)
         return texts
 
+    def _extract_rmc_entries(self, sections: dict[str, list[str]]) -> list[tuple[str, str]]:
+        """Parse Recent Major Changes table into [(section_name, date_string), ...].
+
+        DailyMed stores the RMC table as alternating td cells: section name, then date.
+        """
+        lines = sections.get("Recent Major Changes", [])
+        entries: list[tuple[str, str]] = []
+        # Pair up consecutive lines: odd = section name, even = date
+        i = 0
+        while i + 1 < len(lines):
+            section_name = lines[i].strip()
+            date_str = lines[i + 1].strip()
+            if _DATE_RE.search(date_str):
+                entries.append((section_name, date_str))
+                i += 2
+            else:
+                i += 1
+        return entries
+
+    # ------------------------------------------------------------------
+    # Date filtering
+    # ------------------------------------------------------------------
+
+    def _has_recent_dates(
+        self, rmc_entries: list[tuple[str, str]], lookback_days: int
+    ) -> bool:
+        cutoff = date.today() - timedelta(days=lookback_days)
+        for _, date_str in rmc_entries:
+            for m, y in _DATE_RE.findall(date_str):
+                try:
+                    if date(int(y), int(m), 1) >= cutoff:
+                        return True
+                except ValueError:
+                    pass
+        return False
+
     # ------------------------------------------------------------------
     # Diffing
     # ------------------------------------------------------------------
@@ -297,33 +333,45 @@ class LabelChangesService:
         self,
         old: dict[str, list[str]],
         new: dict[str, list[str]],
+        rmc_section_names: set[str],
     ) -> list[SectionDiff]:
+        """Compute inline diffs only for sections listed in Recent Major Changes."""
         diffs: list[SectionDiff] = []
-        # Preserve section order: Recent Major Changes first, then others
-        priority = {"Recent Major Changes"}
-        all_names = list(priority & (set(old) | set(new))) + [
-            n for n in list(old) + [n for n in new if n not in old]
-            if n not in priority
-        ]
-        seen: set[str] = set()
-        for name in all_names:
-            if name in seen:
+        for name in new:
+            if name == "Recent Major Changes":
                 continue
-            seen.add(name)
+            # Match if the section name appears inside an RMC entry
+            # e.g. "Warnings and Precautions" matches "Warnings and Precautions (5.2, 5.3)"
+            if not any(name in rmc_entry for rmc_entry in rmc_section_names):
+                continue
             old_lines = old.get(name, [])
             new_lines = new.get(name, [])
             if old_lines == new_lines:
                 continue
-            diff = list(difflib.ndiff(old_lines, new_lines))
-            removed = [line[2:] for line in diff if line.startswith("- ")]
-            added = [line[2:] for line in diff if line.startswith("+ ")]
-            if removed or added:
-                diffs.append(SectionDiff(
-                    section_name=name,
-                    removed=removed,
-                    added=added,
-                ))
+            inline_html = self._inline_diff(old_lines, new_lines)
+            if inline_html:
+                diffs.append(SectionDiff(section_name=name, inline_html=inline_html))
         return diffs
+
+    def _inline_diff(self, old_lines: list[str], new_lines: list[str]) -> str:
+        """Word-level inline diff HTML with <del> (removed) and <ins> (added) tags."""
+        old_words = " ".join(old_lines).split()
+        new_words = " ".join(new_lines).split()
+        matcher = difflib.SequenceMatcher(None, old_words, new_words, autojunk=False)
+        parts: list[str] = []
+        for op, i1, i2, j1, j2 in matcher.get_opcodes():
+            if op == "equal":
+                parts.append(html_mod.escape(" ".join(old_words[i1:i2])))
+            elif op == "delete":
+                parts.append(f'<del>{html_mod.escape(" ".join(old_words[i1:i2]))}</del>')
+            elif op == "insert":
+                parts.append(f'<ins>{html_mod.escape(" ".join(new_words[j1:j2]))}</ins>')
+            elif op == "replace":
+                parts.append(
+                    f'<del>{html_mod.escape(" ".join(old_words[i1:i2]))}</del>'
+                    f'<ins>{html_mod.escape(" ".join(new_words[j1:j2]))}</ins>'
+                )
+        return " ".join(parts)
 
     # ------------------------------------------------------------------
     # Helpers
@@ -331,8 +379,6 @@ class LabelChangesService:
 
     @staticmethod
     def _clean_title(title: str) -> str:
-        """Strip labeler bracket suffix and apply title case."""
         if "[" in title:
             title = title[: title.rindex("[")].strip()
-        # Title case but preserve common all-caps drug names reasonably
         return title.title()

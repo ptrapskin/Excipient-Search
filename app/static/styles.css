@@ -1017,23 +1017,55 @@ details[open] > .lc-summary::before { transform: rotate(90deg); }
     margin: 0 0 0.4rem;
 }
 
-.diff-block {
-    border-radius: 8px;
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 0.4rem;
-}
-
-.diff-removed-block { background: rgba(139, 47, 37, 0.06); }
-.diff-added-block   { background: rgba(47, 108, 143, 0.07); }
-
-.diff-line {
-    margin: 0.25rem 0;
+.rmc-table {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 0.87rem;
-    line-height: 1.55;
+    margin-bottom: 1rem;
 }
 
-.diff-removed { color: #8b2f25; }
-.diff-added   { color: #1d5070; }
+.rmc-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    padding: 0.3rem 0.75rem 0.3rem 0;
+}
+
+.rmc-table td {
+    padding: 0.35rem 0.75rem 0.35rem 0;
+    border-bottom: 1px solid var(--border-light, #ede8e1);
+    vertical-align: top;
+}
+
+.rmc-date {
+    white-space: nowrap;
+    color: var(--muted);
+    width: 6rem;
+}
+
+.lc-diffs { margin-top: 0.5rem; }
+
+.diff-inline {
+    font-size: 0.87rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.diff-inline del {
+    color: #c0392b;
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.diff-inline ins {
+    color: #c0392b;
+    font-weight: 700;
+    text-decoration: none;
+}
 
 .sugar-alcohol-cell {
     display: flex;
@@ -1104,6 +1136,15 @@ details[open] > .lc-summary::before { transform: rotate(90deg); }
 
 /* Sugar Alcohol Risk page */
 .sa-panel {}
+
+.sa-disclaimer {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.sa-disclaimer p { margin: 0 0 0.5rem; }
+.sa-disclaimer p:last-child { margin-bottom: 0; }
 
 .sa-stat-grid {
     display: flex;

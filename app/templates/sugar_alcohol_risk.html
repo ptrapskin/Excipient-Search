@@ -7,8 +7,13 @@
     <h1>Osmotic Excipient Screener</h1>
     <p class="tagline">
         Oral and enteral liquid drug products containing osmotically active excipients,
-        sourced from DailyMed Rx labels.
+        identified from FDA-approved Rx prescribing information via DailyMed.
+        Intended to support clinical screening &mdash; not a substitute for direct label review.
     </p>
+    <div class="content-block sa-disclaimer">
+        <p><strong>Data Limitations:</strong> This screener identifies osmotically active excipients based on inactive ingredient text parsed from FDA-approved labeling submitted to DailyMed. Results may be incomplete due to variability in how manufacturers report inactive ingredients, products not yet submitted to DailyMed, or labels updated after the last database refresh. Excipient identity and quantity are not always disclosed in labeling; absence from this list does not confirm a product is free of osmotically active ingredients.</p>
+        <p><strong>Clinical Use:</strong> This tool is intended to support &mdash; not replace &mdash; clinical judgment. Always verify excipient content directly with the manufacturer or current prescribing information before making clinical decisions. CatylstRx makes no warranty regarding the accuracy or completeness of the information presented.</p>
+    </div>
 
     {% if stats %}
     <div class="sa-stats content-block">

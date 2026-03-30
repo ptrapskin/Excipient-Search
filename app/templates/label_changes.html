@@ -6,8 +6,8 @@
 <section class="panel lc-panel">
     <h1>Recent Label Changes</h1>
     <p class="tagline">
-        Rx prescription drug label updates from the last 7 days, sourced from DailyMed.
-        Showing section-by-section differences between the current and previous version.
+        Rx prescription drug labels with FDA-declared major changes in the last 60 days,
+        sourced from DailyMed. Only labels with a Recent Major Changes section are shown.
     </p>
 
     {% if error %}
@@ -37,42 +37,38 @@
                 <span class="lc-meta">
                     <span class="lc-version">v{{ record.previous_version }} &rarr; v{{ record.current_version }}</span>
                     <span class="lc-date">{{ record.published_date }}</span>
-                    {% if record.has_changes %}
-                    <span class="lc-sections-changed">{{ record.section_diffs | length }} section{{ "s" if record.section_diffs | length != 1 else "" }} changed</span>
-                    {% elif not record.fetch_error %}
-                    <span class="lc-no-changes subtle">No text changes detected</span>
+                    {% if record.rmc_entries %}
+                    <span class="lc-sections-changed">{{ record.rmc_entries | length }} section{{ "s" if record.rmc_entries | length != 1 else "" }} changed</span>
                     {% endif %}
                     <a class="lc-dailymed-link" href="{{ record.dailymed_url }}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">DailyMed &nearr;</a>
                 </span>
             </summary>
 
             <div class="lc-body">
-                {% if record.fetch_error %}
-                <p class="message error subtle">Could not load diff: {{ record.fetch_error }}</p>
-
-                {% elif not record.has_changes %}
-                <p class="message empty">No text differences detected between v{{ record.previous_version }} and v{{ record.current_version }}. Changes may be formatting only.</p>
-
-                {% else %}
-                {% for diff in record.section_diffs %}
-                <div class="lc-section">
-                    <h4 class="diff-section-heading">{{ diff.section_name }}</h4>
-                    {% if diff.removed %}
-                    <div class="diff-block diff-removed-block">
-                        {% for line in diff.removed %}
-                        <p class="diff-line diff-removed">{{ line }}</p>
+                {% if record.rmc_entries %}
+                <table class="rmc-table">
+                    <thead>
+                        <tr><th>Section Changed</th><th>Date</th></tr>
+                    </thead>
+                    <tbody>
+                        {% for section_name, date_str in record.rmc_entries %}
+                        <tr><td>{{ section_name }}</td><td class="rmc-date">{{ date_str }}</td></tr>
                         {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+
+                {% if record.section_diffs %}
+                <div class="lc-diffs">
+                    {% for diff in record.section_diffs %}
+                    <div class="lc-section">
+                        <h4 class="diff-section-heading">{{ diff.section_name }}</h4>
+                        <p class="diff-inline">{{ diff.inline_html | safe }}</p>
                     </div>
-                    {% endif %}
-                    {% if diff.added %}
-                    <div class="diff-block diff-added-block">
-                        {% for line in diff.added %}
-                        <p class="diff-line diff-added">{{ line }}</p>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                {% elif record.rmc_entries %}
+                <p class="message empty subtle">Section text unchanged — change may be structural or formatting only.</p>
                 {% endif %}
             </div>
         </details>
@@ -81,7 +77,7 @@
 
     {% else %}
     <div class="content-block">
-        <p class="message empty">No Rx label updates found for the last 7 days.</p>
+        <p class="message empty">No Rx label updates with a Recent Major Changes section found for the last 60 days.</p>
     </div>
     {% endif %}
 </section>

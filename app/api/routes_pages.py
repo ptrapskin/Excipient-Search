@@ -205,25 +205,9 @@ async def product_page(request: Request, setid: str, ndc: str = "") -> HTMLRespo
         )
 
 
-@router.get("/label-changes", response_class=HTMLResponse)
-async def label_changes_page(request: Request) -> HTMLResponse:
-    """Render the recent Rx label changes page."""
-    container = get_container(request)
-    try:
-        changes = await container.label_changes_service.get_recent_changes(days=7)
-        return templates.TemplateResponse(
-            request=request,
-            name="label_changes.html",
-            context={"changes": changes, "error": None},
-        )
-    except Exception:
-        logger.exception("Label changes fetch failed")
-        return templates.TemplateResponse(
-            request=request,
-            name="label_changes.html",
-            context={"changes": [], "error": "Unable to fetch label changes from DailyMed."},
-            status_code=502,
-        )
+# Label Changes route disabled — sequestered for future rework
+# @router.get("/label-changes", response_class=HTMLResponse)
+# async def label_changes_page(request: Request) -> HTMLResponse: ...
 
 
 _VALID_TIERS = {"high", "moderate", "review", "all"}
