@@ -164,6 +164,31 @@ SUGAR_ALCOHOL_CONCEPTS: dict[str, list[str]] = {
     "isomalt": [
         "isomalt",
     ],
+    "glycerin": [
+        "2-propanol, 1,3-dihydroxy-",
+        "1,2,3-trihydroxypropane",
+        "synthetic glycerine",
+        "1,2,3-propanetriol",
+        "vegetable glycerin",
+        "vegetable glycerol",
+        "synthetic glycerol",
+        "trihydroxypropane",
+        "glycerin [hsdb]",
+        "glycerin [usp]",
+        "glycerin [jan]",
+        "glycerol [inn]",
+        "fema no. 2525",
+        "glycerine",
+        "fema 2525",
+        "glycerol",
+        "glycerin",
+        "e-422",
+        "e422",
+    ],
+    "polyethylene glycol": [
+        "polyethylene glycol",
+        "macrogol",
+    ],
 }
 
 _HIGH_SUGAR_ALCOHOLS: frozenset[str] = frozenset(["sorbitol", "mannitol"])

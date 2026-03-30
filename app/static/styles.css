@@ -806,11 +806,234 @@ details[open] > .ingredient-summary::before {
     overflow-x: auto;
 }
 
-.ingredient-products .data-table th,
+.th-filter-btn {
+    background: none;
+    border: none;
+    padding: 0.55rem 0.6rem;
+    font: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+}
+
+.th-filter-btn:hover {
+    color: var(--accent);
+}
+
+.th-filter-btn.th-filter-active,
+.th-filter-btn.th-filter-open {
+    color: var(--accent);
+}
+
+.th-filter-indicator {
+    font-size: 0.65rem;
+    opacity: 0.45;
+}
+
+.th-filter-btn.th-filter-active .th-filter-indicator,
+.th-filter-btn.th-filter-open .th-filter-indicator {
+    opacity: 1;
+}
+
+.th-filterable {
+    padding: 0;
+}
+
+.col-filter-popover {
+    position: absolute;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
+    z-index: 9999;
+    padding: 0.4rem 0;
+}
+
+.col-filter-popover-search {
+    display: block;
+    width: calc(100% - 1rem);
+    margin: 0.3rem 0.5rem 0.4rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.col-filter-popover-search:focus {
+    border-color: var(--accent);
+}
+
+.col-filter-popover-list {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.col-filter-popover-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.28rem 0.65rem;
+    font-size: 0.82rem;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-filter-popover-item:hover {
+    background: var(--surface);
+}
+
+.col-filter-popover-item input[type="checkbox"] {
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.col-filter-popover-clear {
+    display: block;
+    width: 100%;
+    padding: 0.32rem 0.65rem;
+    margin-top: 0.25rem;
+    font-size: 0.78rem;
+    color: var(--accent);
+    border: none;
+    border-top: 1px solid var(--border);
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+}
+
+.col-filter-popover-clear:hover {
+    background: var(--surface);
+}
+
+.alternatives-section {
+    margin-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+}
+
+.alternatives-heading {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.ingredient-products .data-table th {
+    font-size: 0.86rem;
+    padding: 0;
+}
+
 .ingredient-products .data-table td {
     font-size: 0.86rem;
     padding: 0.55rem 0.6rem;
 }
+
+/* ── Label Changes tool ─────────────────────────────────────── */
+
+.lc-record {
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.lc-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+    padding: 0.9rem 1rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.lc-summary::-webkit-details-marker { display: none; }
+
+.lc-summary::before {
+    content: "▶";
+    font-size: 0.7rem;
+    color: var(--muted);
+    transition: transform 0.15s;
+    flex-shrink: 0;
+}
+
+details[open] > .lc-summary::before { transform: rotate(90deg); }
+
+.lc-name {
+    font-weight: 700;
+    font-size: 1rem;
+    flex: 1 1 auto;
+}
+
+.lc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    font-size: 0.83rem;
+    color: var(--muted);
+}
+
+.lc-version { font-variant-numeric: tabular-nums; }
+
+.lc-sections-changed {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.lc-dailymed-link {
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.lc-dailymed-link:hover { text-decoration: underline; }
+
+.lc-body {
+    padding: 0 1rem 1.25rem;
+}
+
+.lc-section { margin-top: 0.75rem; }
+
+.diff-section-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.4rem;
+}
+
+.diff-block {
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.4rem;
+}
+
+.diff-removed-block { background: rgba(139, 47, 37, 0.06); }
+.diff-added-block   { background: rgba(47, 108, 143, 0.07); }
+
+.diff-line {
+    margin: 0.25rem 0;
+    font-size: 0.87rem;
+    line-height: 1.55;
+}
+
+.diff-removed { color: #8b2f25; }
+.diff-added   { color: #1d5070; }
 
 .sugar-alcohol-cell {
     display: flex;

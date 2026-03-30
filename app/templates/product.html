@@ -89,6 +89,16 @@
         {% endif %}
     </section>
 
+    {% if sugar_alcohols %}
+    <section class="content-block alternatives-panel">
+        <h2>Sugar-Alcohol-Free Alternatives</h2>
+        <p>This product contains the following sugar alcohol(s):
+            <strong>{{ sugar_alcohols | map(attribute='canonical_name') | join(', ') | title }}</strong>.
+            These may cause GI intolerance in patients receiving enteral nutrition.
+        </p>
+    </section>
+    {% endif %}
+
     <section class="content-block">
         <h2>Parsed Inactive Ingredients</h2>
         {% if product.inactive_ingredients %}
@@ -126,10 +136,7 @@
                         <dt>SETID</dt>
                         <dd>{{ product.setid }}</dd>
                     </div>
-                    <div>
-                        <dt>SPL XML</dt>
-                        <dd><a href="{{ product.spl_source }}" target="_blank" rel="noreferrer">Open raw XML</a></dd>
-                    </div>
+
                 </dl>
             </div>
 

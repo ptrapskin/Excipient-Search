@@ -32,11 +32,27 @@ class ExcipientProduct:
 
 
 @dataclass
+class AlternativeProduct:
+    """A liquid oral product with no sugar alcohols, alternative to SA-containing products."""
+
+    product_name: str
+    setid: str
+    labeler: str | None
+    dosage_form: str | None
+    route: str | None
+    active_ingredient: str
+    strength: str | None
+    ndcs: list[str]
+    avoids_sugar_alcohols: list[str]   # canonical SA names the SA counterparts contain
+
+
+@dataclass
 class ExcipientGroup:
     """Products sharing a primary active ingredient."""
 
     ingredient_name: str
     products: list[ExcipientProduct] = field(default_factory=list)
+    alternatives: list[AlternativeProduct] = field(default_factory=list)
 
     @property
     def product_count(self) -> int:
@@ -146,7 +162,7 @@ def get_groups(
     if not db_path.exists():
         return [], 0
 
-    where_clauses = ["inclusion_decision = 'included'"]
+    where_clauses = ["inclusion_decision = 'included'", "concern_tier != 'alternative'"]
     params: list[str] = []
 
     if sugar_alcohol == "multiple":
@@ -163,6 +179,7 @@ def get_groups(
         # Optional columns added after the initial schema — select with fallback NULL.
         strength_col = "active_strength" if "active_strength" in cols else "NULL AS active_strength"
         sa_unii_col = "matched_sugar_alcohol_uniis" if "matched_sugar_alcohol_uniis" in cols else "NULL AS matched_sugar_alcohol_uniis"
+        alt_sa_col = "alternative_sugar_alcohols" if "alternative_sugar_alcohols" in cols else "NULL AS alternative_sugar_alcohols"
         rows = conn.execute(
             f"""
             SELECT spl_setid, product_name, labeler, dosage_form, route,
@@ -174,6 +191,19 @@ def get_groups(
             ORDER BY active_ingredients_raw, product_name
             """,
             params,
+        ).fetchall()
+
+        # Always fetch alternatives regardless of the SA filter —
+        # they are linked to SA products by active ingredient, not by which SA they avoid.
+        alt_rows = conn.execute(
+            f"""
+            SELECT spl_setid, product_name, labeler, dosage_form, route,
+                   active_ingredients_raw, {strength_col},
+                   {alt_sa_col}, ndcs
+            FROM   products
+            WHERE  concern_tier = 'alternative'
+            ORDER BY active_ingredients_raw, product_name
+            """,
         ).fetchall()
 
     groups: dict[str, ExcipientGroup] = {}
@@ -194,6 +224,23 @@ def get_groups(
             sugar_alcohol_uniis=_split_semicolon(row["matched_sugar_alcohol_uniis"]) if row["matched_sugar_alcohol_uniis"] else [],
             concern_tier=row["concern_tier"],
             ndcs=_split_semicolon(row["ndcs"]),
+        ))
+
+    for row in alt_rows:
+        active = _primary_active(row["active_ingredients_raw"])
+        key = active.casefold()
+        if key not in groups:
+            continue   # only attach alternatives to groups that have SA products
+        groups[key].alternatives.append(AlternativeProduct(
+            product_name=row["product_name"] or "Unknown",
+            setid=row["spl_setid"],
+            labeler=row["labeler"],
+            dosage_form=row["dosage_form"],
+            route=row["route"],
+            active_ingredient=active,
+            strength=row["active_strength"],
+            ndcs=_split_semicolon(row["ndcs"]),
+            avoids_sugar_alcohols=_split_semicolon(row["alternative_sugar_alcohols"]),
         ))
 
     sorted_groups = sorted(groups.values(), key=lambda g: g.ingredient_name.casefold())

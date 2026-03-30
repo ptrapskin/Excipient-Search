@@ -38,9 +38,11 @@ sys.path.insert(0, str(_PROJECT_ROOT))
 from excipient_finder.config import Config, DEFAULT_OUTPUT_ROOT
 from excipient_finder.db import (
     BATCH_SIZE,
+    clear_liquid_candidates,
     get_tier_counts,
     init_db,
     insert_excipients,
+    insert_liquid_candidate,
     insert_parse_failure_to_db,
     insert_product,
     insert_qa_audit_record,
@@ -48,6 +50,7 @@ from excipient_finder.db import (
     log_file_failure,
     log_file_start,
     log_file_success,
+    promote_alternatives,
     write_csvs,
     write_funnel_to_db,
 )
@@ -358,6 +361,12 @@ def process_outer_zip(
                         source_file=rec.source_file,
                         processed_at=utc_now_str(),
                     )
+
+                # Passed form/route filter but no sugar alcohols found.
+                # Store as a candidate for SA-free alternative promotion.
+                if rec.active_ingredients_unii:
+                    insert_liquid_candidate(conn, rec, decision)
+                    pending += 1
                 continue
 
             inclusion = "included"
@@ -448,6 +457,7 @@ def _finalize(
     logger.info("  HIGH           : %d", total_counts["high"])
     logger.info("  MODERATE       : %d", total_counts["moderate"])
     logger.info("  REVIEW         : %d", total_counts["review"])
+    logger.info("  Alternatives   : %d", total_counts.get("alternative", 0))
     logger.info("  Excluded       : %d", total_counts["excluded"])
     logger.info("  Parse errors   : %d", total_counts["parse_errors"])
 
@@ -478,6 +488,7 @@ def run(cfg: Config) -> None:
     logger.info("=" * 60)
 
     conn = init_db(cfg.db_path)
+    clear_liquid_candidates(conn)
 
     outer_zips = list(iter_outer_zips(cfg.input_root))
     logger.info("Found %d outer ZIP file(s) under %s", len(outer_zips), cfg.input_root)
@@ -488,7 +499,7 @@ def run(cfg: Config) -> None:
 
     total_counts: dict[str, int] = {
         "high": 0, "moderate": 0, "review": 0, "excluded": 0,
-        "spls": 0, "parse_errors": 0,
+        "spls": 0, "parse_errors": 0, "alternative": 0,
     }
     total_funnel = FunnelCounts()
     all_parse_failures: list[dict] = []
@@ -541,6 +552,11 @@ def run(cfg: Config) -> None:
                 insert_parse_failure_to_db(conn, failure)
             conn.commit()
 
+    logger.info("Promoting SA-free alternatives...")
+    alt_count = promote_alternatives(conn)
+    total_counts["alternative"] = alt_count
+    logger.info("  Promoted %d SA-free alternative product(s)", alt_count)
+
     _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall)
 
 
@@ -567,6 +583,7 @@ def run_fetch(cfg: Config) -> None:
     logger.info("=" * 60)
 
     conn = init_db(cfg.db_path)
+    clear_liquid_candidates(conn)
     urls = _FETCH_URLS[cfg.fetch]
 
     if cfg.limit:
@@ -575,7 +592,7 @@ def run_fetch(cfg: Config) -> None:
 
     total_counts: dict[str, int] = {
         "high": 0, "moderate": 0, "review": 0, "excluded": 0,
-        "spls": 0, "parse_errors": 0,
+        "spls": 0, "parse_errors": 0, "alternative": 0,
     }
     total_funnel = FunnelCounts()
     all_parse_failures: list[dict] = []
@@ -650,6 +667,11 @@ def run_fetch(cfg: Config) -> None:
         # Remove temp directory (should be empty if all ZIPs were processed successfully)
         shutil.rmtree(tmpdir, ignore_errors=True)
         logger.info("Cleaned up temporary directory: %s", tmpdir)
+
+    logger.info("Promoting SA-free alternatives...")
+    alt_count = promote_alternatives(conn)
+    total_counts["alternative"] = alt_count
+    logger.info("  Promoted %d SA-free alternative product(s)", alt_count)
 
     _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall)
 

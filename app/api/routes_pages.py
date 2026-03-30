@@ -14,6 +14,7 @@ from app.api.dependencies import get_container
 from app.domain.models import ExcipientFilter
 from app.repositories import excipient_db
 from app.repositories.dailymed_api import DailyMedAPIError
+from app.services import osmotic_filter
 
 logger = logging.getLogger(__name__)
 
@@ -175,10 +176,12 @@ async def product_page(request: Request, setid: str, ndc: str = "") -> HTMLRespo
     container = get_container(request)
     try:
         product, cached = await container.search_service.get_product_detail(setid, ndc=ndc or None)
+        sugar_alcohols = osmotic_filter.match_sugar_alcohols(product.inactive_ingredients) if product else []
+        search_query = (product.active_ingredients[0].display_name or "") if (product and product.active_ingredients) else ""
         return templates.TemplateResponse(
             request=request,
             name="product.html",
-            context={"product": product, "cached": cached, "error": None},
+            context={"product": product, "cached": cached, "error": None, "sugar_alcohols": sugar_alcohols, "search_query": search_query},
         )
     except DailyMedAPIError:
         logger.warning("DailyMed product fetch failed for setid %s — trying local index", setid)
@@ -202,10 +205,37 @@ async def product_page(request: Request, setid: str, ndc: str = "") -> HTMLRespo
         )
 
 
+@router.get("/label-changes", response_class=HTMLResponse)
+async def label_changes_page(request: Request) -> HTMLResponse:
+    """Render the recent Rx label changes page."""
+    container = get_container(request)
+    try:
+        changes = await container.label_changes_service.get_recent_changes(days=7)
+        return templates.TemplateResponse(
+            request=request,
+            name="label_changes.html",
+            context={"changes": changes, "error": None},
+        )
+    except Exception:
+        logger.exception("Label changes fetch failed")
+        return templates.TemplateResponse(
+            request=request,
+            name="label_changes.html",
+            context={"changes": [], "error": "Unable to fetch label changes from DailyMed."},
+            status_code=502,
+        )
+
+
 _VALID_TIERS = {"high", "moderate", "review", "all"}
 
 
-@router.get("/sugar-alcohol-risk", response_class=HTMLResponse)
+@router.get("/sugar-alcohol-risk", response_class=HTMLResponse, include_in_schema=False)
+async def sugar_alcohol_risk_redirect(request: Request):
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url="/osmotic-excipient-screener", status_code=301)
+
+
+@router.get("/osmotic-excipient-screener", response_class=HTMLResponse)
 async def sugar_alcohol_risk_page(
     request: Request,
     sa: str = "all",

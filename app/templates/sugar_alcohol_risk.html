@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}Sugar Alcohol List | Excipient Search{% endblock %}
+{% block title %}Osmotic Excipient Screener | Excipient Search{% endblock %}
 
 {% block content %}
 <section class="panel sa-panel">
-    <h1>Sugar Alcohol Excipient List</h1>
+    <h1>Osmotic Excipient Screener</h1>
     <p class="tagline">
-        Oral and enteral liquid drug products containing sugar alcohol excipients,
+        Oral and enteral liquid drug products containing osmotically active excipients,
         sourced from DailyMed Rx labels.
     </p>
 
@@ -98,6 +98,39 @@
                         {% endfor %}
                     </tbody>
                 </table>
+                {% if group.alternatives %}
+                <div class="alternatives-section">
+                    <h4 class="alternatives-heading">Sugar-Alcohol-Free Liquid Alternatives</h4>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Form</th>
+                                <th>Strength</th>
+                                <th>Labeler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for alt in group.alternatives %}
+                            <tr data-product="{{ alt.product_name | lower }}">
+                                <td>
+                                    {% if alt.setid %}
+                                    <a href="/products/{{ alt.setid }}{% if alt.ndcs %}?ndc={{ alt.ndcs[0] }}{% endif %}">
+                                        {{ alt.product_name | product_name }}
+                                    </a>
+                                    {% else %}
+                                    {{ alt.product_name | product_name }}
+                                    {% endif %}
+                                </td>
+                                <td>{{ alt.dosage_form or "Unknown" }}</td>
+                                <td>{{ alt.strength or "&mdash;" }}</td>
+                                <td>{{ alt.labeler or "Unknown" }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
             </div>
         </details>
         {% endfor %}
@@ -112,52 +145,216 @@
 
 <script>
 (function () {
+    // ── Global search ────────────────────────────────────────────────────────
     const searchInput = document.getElementById("sa-search");
     const matchCount  = document.getElementById("sa-match-count");
-    const groups      = document.querySelectorAll("[data-group]");
+    const allGroups   = document.querySelectorAll("[data-group]");
 
-    if (!searchInput) return;
-
-    searchInput.addEventListener("input", function () {
-        const q = this.value.trim().toLowerCase();
-        let visibleProducts = 0;
-        let visibleGroups = 0;
-
-        groups.forEach(function (group) {
-            const groupName = group.dataset.group || "";
-            const rows = group.querySelectorAll("tr[data-product]");
-            let groupVisible = 0;
-
-            rows.forEach(function (row) {
-                const productName = row.dataset.product || "";
-                const matches = !q || groupName.includes(q) || productName.includes(q);
-                row.style.display = matches ? "" : "none";
-                if (matches) groupVisible++;
+    function updateMatchCount() {
+        let visibleProducts = 0, visibleGroups = 0;
+        allGroups.forEach(function (group) {
+            if (group.style.display === "none") return;
+            group.querySelectorAll("tbody tr[data-product]").forEach(function (row) {
+                if (row.style.display !== "none") visibleProducts++;
             });
-
-            const hide = q && groupVisible === 0;
-            group.style.display = hide ? "none" : "";
-            if (!hide) {
-                visibleProducts += groupVisible;
-                visibleGroups++;
-                // Auto-open groups with matches when searching
-                if (q && groupVisible > 0) group.open = true;
-            }
+            visibleGroups++;
         });
-
-        if (q) {
+        if (matchCount) {
             matchCount.textContent =
                 visibleProducts + " product" + (visibleProducts !== 1 ? "s" : "") +
                 " across " + visibleGroups + " ingredient" + (visibleGroups !== 1 ? "s" : "");
-        } else {
-            const totalProducts = Array.from(groups).reduce(
-                (n, g) => n + g.querySelectorAll("tr[data-product]").length, 0
-            );
-            matchCount.textContent =
-                totalProducts + " product" + (totalProducts !== 1 ? "s" : "") +
-                " across " + groups.length + " ingredient" + (groups.length !== 1 ? "s" : "");
         }
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener("input", function () {
+            const q = this.value.trim().toLowerCase();
+            allGroups.forEach(function (group) {
+                const groupName = group.dataset.group || "";
+                const rows = group.querySelectorAll("tr[data-product]");
+                let groupVisible = 0;
+                rows.forEach(function (row) {
+                    const productName = row.dataset.product || "";
+                    const matches = !q || groupName.includes(q) || productName.includes(q);
+                    row.style.display = matches ? "" : "none";
+                    if (matches) groupVisible++;
+                });
+                const hide = q && groupVisible === 0;
+                group.style.display = hide ? "none" : "";
+                if (!hide && q) group.open = true;
+            });
+            updateMatchCount();
+        });
+    }
+
+    // ── Per-column filters ───────────────────────────────────────────────────
+    const groupFilters = new WeakMap(); // group → Map<colIndex, Set<string>>
+    let activePopover   = null;
+    let activePopoverTh = null;
+
+    function getGroupFilters(group) {
+        if (!groupFilters.has(group)) groupFilters.set(group, new Map());
+        return groupFilters.get(group);
+    }
+
+    function getCellValues(cell) {
+        const spans = cell.querySelectorAll("span");
+        if (spans.length) {
+            return Array.from(spans).map(function (s) { return s.textContent.trim(); }).filter(Boolean);
+        }
+        const text = cell.textContent.trim();
+        return text && text !== "\u2014" ? [text] : [];
+    }
+
+    function applyFilters(group) {
+        const filters = getGroupFilters(group);
+        const table = group.querySelector("table.data-table");
+        if (!table) return;
+        table.querySelectorAll("tbody tr[data-product]").forEach(function (row) {
+            const visible = Array.from(filters.entries()).every(function (entry) {
+                const ci = entry[0], selected = entry[1];
+                if (!selected.size) return true;
+                const cell = row.cells[ci];
+                if (!cell) return true;
+                return getCellValues(cell).some(function (v) { return selected.has(v); });
+            });
+            row.style.display = visible ? "" : "none";
+        });
+        updateMatchCount();
+    }
+
+    function closePopover() {
+        if (activePopover) { activePopover.remove(); activePopover = null; }
+        if (activePopoverTh) { activePopoverTh.classList.remove("th-filter-open"); activePopoverTh = null; }
+    }
+
+    function setupGroupFilters(group) {
+        if (group.dataset.filtersBuilt) return;
+        group.dataset.filtersBuilt = "1";
+        const table = group.querySelector("table.data-table");
+        if (!table) return;
+        const headers = Array.from(table.querySelectorAll("thead th"));
+        const rows    = Array.from(table.querySelectorAll("tbody tr[data-product]"));
+
+        headers.forEach(function (thEl, ci) {
+            const vals = new Set();
+            rows.forEach(function (row) {
+                const cell = row.cells[ci];
+                if (cell) getCellValues(cell).forEach(function (v) { vals.add(v); });
+            });
+            if (vals.size <= 1) return;
+
+            const sortedVals = Array.from(vals).sort();
+            thEl.classList.add("th-filterable");
+
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "th-filter-btn";
+            btn.innerHTML = thEl.textContent.trim() + ' <span class="th-filter-indicator">\u25be</span>';
+            thEl.textContent = "";
+            thEl.appendChild(btn);
+
+            const filters  = getGroupFilters(group);
+            const selected = filters.get(ci) || new Set();
+            filters.set(ci, selected);
+
+            btn.addEventListener("click", function (e) {
+                e.stopPropagation();
+
+                // Toggle off if already open for this button
+                if (activePopoverTh === btn) { closePopover(); return; }
+                closePopover();
+
+                // Build popover and attach to body
+                const popover = document.createElement("div");
+                popover.className = "col-filter-popover";
+                popover.style.minWidth = "180px";
+                popover.style.maxWidth = "280px";
+                popover.addEventListener("click", function (ev) { ev.stopPropagation(); });
+
+                var searchBox = null;
+                if (sortedVals.length > 10) {
+                    searchBox = document.createElement("input");
+                    searchBox.type = "search";
+                    searchBox.className = "col-filter-popover-search";
+                    searchBox.placeholder = "Search\u2026";
+                    searchBox.autocomplete = "off";
+                    popover.appendChild(searchBox);
+                }
+
+                const list = document.createElement("div");
+                list.className = "col-filter-popover-list";
+
+                function renderList(filter) {
+                    list.innerHTML = "";
+                    sortedVals.forEach(function (val) {
+                        if (filter && !val.toLowerCase().includes(filter)) return;
+                        const item = document.createElement("label");
+                        item.className = "col-filter-popover-item";
+                        item.style.cssText = "display:flex;align-items:center;gap:0.4rem;padding:0.28rem 0.65rem;cursor:pointer;white-space:nowrap;";
+                        const cb = document.createElement("input");
+                        cb.type = "checkbox";
+                        cb.value = val;
+                        cb.checked = selected.has(val);
+                        cb.addEventListener("change", function () {
+                            if (this.checked) selected.add(val); else selected.delete(val);
+                            btn.classList.toggle("th-filter-active", selected.size > 0);
+                            const ind = btn.querySelector(".th-filter-indicator");
+                            if (ind) ind.textContent = selected.size > 0 ? " \u25cf" : " \u25be";
+                            applyFilters(group);
+                        });
+                        item.appendChild(cb);
+                        item.appendChild(document.createTextNode(" " + val));
+                        list.appendChild(item);
+                    });
+                }
+                renderList("");
+                popover.appendChild(list);
+
+                if (searchBox) {
+                    searchBox.addEventListener("input", function () { renderList(this.value.trim().toLowerCase()); });
+                }
+
+                const clearBtn = document.createElement("button");
+                clearBtn.type = "button";
+                clearBtn.className = "col-filter-popover-clear";
+                clearBtn.textContent = "Clear filter";
+                clearBtn.addEventListener("click", function () {
+                    selected.clear();
+                    btn.classList.remove("th-filter-active");
+                    const ind = btn.querySelector(".th-filter-indicator");
+                    if (ind) ind.textContent = " \u25be";
+                    applyFilters(group);
+                    renderList(searchBox ? searchBox.value.trim().toLowerCase() : "");
+                });
+                popover.appendChild(clearBtn);
+
+                document.body.appendChild(popover);
+
+                // Position below the button using document coords (avoids fixed/transform issues)
+                const rect = btn.getBoundingClientRect();
+                const pw   = popover.offsetWidth || 220;
+                const docTop  = rect.bottom + window.scrollY + 4;
+                const docLeft = Math.max(4, Math.min(rect.left + window.scrollX, document.documentElement.clientWidth - pw - 8));
+                popover.style.top  = docTop + "px";
+                popover.style.left = docLeft + "px";
+
+                activePopover   = popover;
+                activePopoverTh = btn;
+                btn.classList.add("th-filter-open");
+                if (searchBox) searchBox.focus();
+            });
+        });
+    }
+
+    allGroups.forEach(function (group) {
+        group.addEventListener("toggle", function () {
+            if (group.open) setupGroupFilters(group);
+        });
+        if (group.open) setupGroupFilters(group);
     });
+
+    document.addEventListener("click", function () { closePopover(); });
 }());
 </script>
 {% endblock %}

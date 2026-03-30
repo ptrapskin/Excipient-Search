@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Label Changes | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel lc-panel">
+    <h1>Recent Label Changes</h1>
+    <p class="tagline">
+        Rx prescription drug label updates from the last 7 days, sourced from DailyMed.
+        Showing section-by-section differences between the current and previous version.
+    </p>
+
+    {% if error %}
+    <div class="content-block">
+        <p class="message error">{{ error }}</p>
+    </div>
+    {% elif changes %}
+
+    <div class="sa-toolbar content-block">
+        <input
+            type="search"
+            id="lc-search"
+            class="sa-search"
+            placeholder="Search by drug name&hellip;"
+            autocomplete="off"
+        >
+        <span class="sa-search-count" id="lc-match-count">
+            {{ changes | length }} label update{{ "s" if changes | length != 1 else "" }}
+        </span>
+    </div>
+
+    <div class="lc-results" id="lc-results">
+        {% for record in changes %}
+        <details class="lc-record content-block" data-product="{{ record.product_name | lower }}">
+            <summary class="lc-summary">
+                <span class="lc-name">{{ record.product_name }}</span>
+                <span class="lc-meta">
+                    <span class="lc-version">v{{ record.previous_version }} &rarr; v{{ record.current_version }}</span>
+                    <span class="lc-date">{{ record.published_date }}</span>
+                    {% if record.has_changes %}
+                    <span class="lc-sections-changed">{{ record.section_diffs | length }} section{{ "s" if record.section_diffs | length != 1 else "" }} changed</span>
+                    {% elif not record.fetch_error %}
+                    <span class="lc-no-changes subtle">No text changes detected</span>
+                    {% endif %}
+                    <a class="lc-dailymed-link" href="{{ record.dailymed_url }}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">DailyMed &nearr;</a>
+                </span>
+            </summary>
+
+            <div class="lc-body">
+                {% if record.fetch_error %}
+                <p class="message error subtle">Could not load diff: {{ record.fetch_error }}</p>
+
+                {% elif not record.has_changes %}
+                <p class="message empty">No text differences detected between v{{ record.previous_version }} and v{{ record.current_version }}. Changes may be formatting only.</p>
+
+                {% else %}
+                {% for diff in record.section_diffs %}
+                <div class="lc-section">
+                    <h4 class="diff-section-heading">{{ diff.section_name }}</h4>
+                    {% if diff.removed %}
+                    <div class="diff-block diff-removed-block">
+                        {% for line in diff.removed %}
+                        <p class="diff-line diff-removed">{{ line }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% if diff.added %}
+                    <div class="diff-block diff-added-block">
+                        {% for line in diff.added %}
+                        <p class="diff-line diff-added">{{ line }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </details>
+        {% endfor %}
+    </div>
+
+    {% else %}
+    <div class="content-block">
+        <p class="message empty">No Rx label updates found for the last 7 days.</p>
+    </div>
+    {% endif %}
+</section>
+
+<script>
+(function () {
+    const searchInput = document.getElementById("lc-search");
+    const matchCount  = document.getElementById("lc-match-count");
+    const records     = document.querySelectorAll("[data-product]");
+
+    if (!searchInput) return;
+
+    searchInput.addEventListener("input", function () {
+        const q = this.value.trim().toLowerCase();
+        let visible = 0;
+
+        records.forEach(function (record) {
+            const name = record.dataset.product || "";
+            const matches = !q || name.includes(q);
+            record.style.display = matches ? "" : "none";
+            if (matches) {
+                visible++;
+                if (q) record.open = true;
+            }
+        });
+
+        if (q) {
+            matchCount.textContent = visible + " label update" + (visible !== 1 ? "s" : "");
+        } else {
+            matchCount.textContent = records.length + " label update" + (records.length !== 1 ? "s" : "");
+        }
+    });
+}());
+</script>
+{% endblock %}

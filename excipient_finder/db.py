@@ -15,8 +15,8 @@ import logging
 import sqlite3
 from pathlib import Path
 
-from .models import MatchedExcipient, ProductOutputRow
-from .utils import utc_now_str
+from .models import FilterDecision, MatchedExcipient, ProductOutputRow, SplRecord
+from .utils import normalize_text, utc_now_str
 
 BATCH_SIZE = 500
 
@@ -95,6 +95,38 @@ def _create_tables(conn: sqlite3.Connection) -> None:
             ON processing_log (source_file);
     """)
 
+    # Staging table for liquid oral products with no sugar alcohols.
+    # Populated during the main pass; joined against SA products in
+    # promote_alternatives() to identify SA-free alternatives.
+    # Cleared at the start of each run and again after promotion.
+    conn.executescript("""
+        CREATE TABLE IF NOT EXISTS liquid_candidates (
+            id                      INTEGER PRIMARY KEY AUTOINCREMENT,
+            spl_setid               TEXT NOT NULL,
+            product_name            TEXT,
+            labeler                 TEXT,
+            dosage_form             TEXT,
+            normalized_form         TEXT,
+            form_class              TEXT,
+            route                   TEXT,
+            normalized_route        TEXT,
+            route_class             TEXT,
+            ndcs                    TEXT,
+            active_ingredients_raw  TEXT,
+            active_strength         TEXT,
+            active_ingredients_unii TEXT,
+            inactive_ingredients_raw TEXT,
+            inactive_ingredients_unii TEXT,
+            source_file             TEXT,
+            processed_at            TEXT,
+            UNIQUE(spl_setid)
+        );
+        CREATE INDEX IF NOT EXISTS idx_candidates_setid
+            ON liquid_candidates (spl_setid);
+        CREATE INDEX IF NOT EXISTS idx_candidates_unii
+            ON liquid_candidates (active_ingredients_unii);
+    """)
+
 
 def _create_qa_tables(conn: sqlite3.Connection) -> None:
     conn.executescript("""
@@ -140,6 +172,8 @@ def _migrate(conn: sqlite3.Connection) -> None:
         conn.execute("ALTER TABLE products ADD COLUMN matched_sugar_alcohol_uniis TEXT")
     if "inactive_ingredients_unii" not in prod_cols:
         conn.execute("ALTER TABLE products ADD COLUMN inactive_ingredients_unii TEXT")
+    if "alternative_sugar_alcohols" not in prod_cols:
+        conn.execute("ALTER TABLE products ADD COLUMN alternative_sugar_alcohols TEXT")
 
     exc_cols = {row[1] for row in conn.execute("PRAGMA table_info(matched_excipients)")}
     if "unii" not in exc_cols:
@@ -153,7 +187,7 @@ def _migrate(conn: sqlite3.Connection) -> None:
 def insert_product(conn: sqlite3.Connection, row: ProductOutputRow) -> None:
     conn.execute(
         """
-        INSERT INTO products (
+        INSERT OR REPLACE INTO products (
             spl_setid, product_name, labeler, dosage_form, normalized_form,
             form_class, route, normalized_route, route_class, ndcs,
             active_ingredients_raw, active_strength, active_ingredients_unii,
@@ -222,6 +256,140 @@ def insert_excipients(
             for e in excipients
         ],
     )
+
+
+# ---------------------------------------------------------------------------
+# Liquid candidate staging (SA-free alternative pipeline)
+# ---------------------------------------------------------------------------
+
+def clear_liquid_candidates(conn: sqlite3.Connection) -> None:
+    """Clear the staging table at the start of a fresh pipeline run."""
+    conn.execute("DELETE FROM liquid_candidates")
+    conn.commit()
+
+
+def insert_liquid_candidate(
+    conn: sqlite3.Connection,
+    rec: SplRecord,
+    decision: FilterDecision,
+) -> None:
+    """Store a liquid oral product with no sugar alcohols as a candidate for SA-free alternative promotion."""
+    conn.execute(
+        """
+        INSERT OR IGNORE INTO liquid_candidates (
+            spl_setid, product_name, labeler, dosage_form, normalized_form,
+            form_class, route, normalized_route, route_class, ndcs,
+            active_ingredients_raw, active_strength, active_ingredients_unii,
+            inactive_ingredients_raw, inactive_ingredients_unii,
+            source_file, processed_at
+        ) VALUES (
+            ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?,
+            ?, ?, ?,
+            ?, ?,
+            ?, ?
+        )
+        """,
+        (
+            rec.setid, rec.product_name, rec.labeler, rec.dosage_form,
+            normalize_text(rec.dosage_form or ""),
+            decision.form_class, rec.route, normalize_text(rec.route or ""),
+            decision.route_class, "; ".join(rec.ndcs),
+            rec.active_ingredients_raw, rec.active_strength, rec.active_ingredients_unii,
+            rec.inactive_ingredients_raw,
+            "; ".join(e.unii or "" for e in rec.inactive_ingredient_entries),
+            rec.source_file, utc_now_str(),
+        ),
+    )
+
+
+def promote_alternatives(conn: sqlite3.Connection) -> int:
+    """Join liquid_candidates against SA products on active ingredient UNII.
+
+    For each candidate that shares a UNII with at least one SA product, insert
+    a row into products with concern_tier='alternative' and
+    alternative_sugar_alcohols set to the canonical SA names from the matched
+    SA products.  Returns the number of alternative rows inserted.
+    """
+    # Build UNII → set of canonical SA names from confirmed SA products
+    sa_rows = conn.execute(
+        """
+        SELECT active_ingredients_unii, matched_sugar_alcohols
+        FROM   products
+        WHERE  concern_tier IN ('high', 'moderate', 'review')
+          AND  active_ingredients_unii IS NOT NULL
+          AND  active_ingredients_unii != ''
+        """
+    ).fetchall()
+
+    unii_to_sas: dict[str, set[str]] = {}
+    for unii_str, sa_str in sa_rows:
+        for unii in (unii_str or "").split(";"):
+            unii = unii.strip()
+            if unii:
+                for sa in (sa_str or "").split(";"):
+                    sa = sa.strip()
+                    if sa:
+                        unii_to_sas.setdefault(unii, set()).add(sa)
+
+    if not unii_to_sas:
+        conn.execute("DELETE FROM liquid_candidates")
+        conn.commit()
+        return 0
+
+    # Fetch candidates and find those that share a UNII with SA products
+    orig_factory = conn.row_factory
+    conn.row_factory = sqlite3.Row
+    candidates = conn.execute("SELECT * FROM liquid_candidates").fetchall()
+    conn.row_factory = orig_factory
+
+    inserted = 0
+    now = utc_now_str()
+    for cand in candidates:
+        cand_uniis = [u.strip() for u in (cand["active_ingredients_unii"] or "").split(";") if u.strip()]
+        matching_sas: set[str] = set()
+        for unii in cand_uniis:
+            matching_sas |= unii_to_sas.get(unii, set())
+        if not matching_sas:
+            continue
+
+        alt_sa_str = "; ".join(sorted(matching_sas))
+        conn.execute(
+            """
+            INSERT OR IGNORE INTO products (
+                spl_setid, product_name, labeler, dosage_form, normalized_form,
+                form_class, route, normalized_route, route_class, ndcs,
+                active_ingredients_raw, active_strength, active_ingredients_unii,
+                concern_tier, inclusion_decision,
+                inactive_ingredients_raw, inactive_ingredients_unii,
+                matched_sugar_alcohols, matched_sugar_alcohol_terms, matched_sugar_alcohol_uniis,
+                alternative_sugar_alcohols, source_file, processed_at
+            ) VALUES (
+                ?, ?, ?, ?, ?,
+                ?, ?, ?, ?, ?,
+                ?, ?, ?,
+                'alternative', 'included',
+                ?, ?,
+                '', '', '',
+                ?, ?, ?
+            )
+            """,
+            (
+                cand["spl_setid"], cand["product_name"], cand["labeler"],
+                cand["dosage_form"], cand["normalized_form"],
+                cand["form_class"], cand["route"], cand["normalized_route"],
+                cand["route_class"], cand["ndcs"],
+                cand["active_ingredients_raw"], cand["active_strength"],
+                cand["active_ingredients_unii"],
+                cand["inactive_ingredients_raw"], cand["inactive_ingredients_unii"],
+                alt_sa_str, cand["source_file"], now,
+            ),
+        )
+        inserted += 1
+
+    conn.execute("DELETE FROM liquid_candidates")
+    conn.commit()
+    return inserted
 
 
 # ---------------------------------------------------------------------------
