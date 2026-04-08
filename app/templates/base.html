@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW46R6CCKD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BW46R6CCKD');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Excipient Search{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
