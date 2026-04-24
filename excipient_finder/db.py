@@ -175,6 +175,16 @@ def _migrate(conn: sqlite3.Connection) -> None:
     if "alternative_sugar_alcohols" not in prod_cols:
         conn.execute("ALTER TABLE products ADD COLUMN alternative_sugar_alcohols TEXT")
 
+    # Deduplicate products by spl_setid (keep highest id = most recent), then
+    # enforce uniqueness so INSERT OR REPLACE / INSERT OR IGNORE work correctly.
+    conn.execute(
+        "DELETE FROM products WHERE id NOT IN "
+        "(SELECT MAX(id) FROM products GROUP BY spl_setid)"
+    )
+    conn.execute(
+        "CREATE UNIQUE INDEX IF NOT EXISTS uq_products_setid ON products (spl_setid)"
+    )
+
     exc_cols = {row[1] for row in conn.execute("PRAGMA table_info(matched_excipients)")}
     if "unii" not in exc_cols:
         conn.execute("ALTER TABLE matched_excipients ADD COLUMN unii TEXT")
@@ -337,6 +347,16 @@ def promote_alternatives(conn: sqlite3.Connection) -> int:
         conn.commit()
         return 0
 
+    # Build a set of (product_name_lower, labeler_lower) already identified as SA-containing
+    # so we never promote the same product as a sugar-alcohol-free alternative
+    # (can happen when different label versions of the same product have different inactive ingredient lists)
+    sa_product_keys: set[tuple[str, str]] = {
+        ((name or "").lower(), (lab or "").lower())
+        for name, lab in conn.execute(
+            "SELECT product_name, labeler FROM products WHERE concern_tier IN ('high', 'moderate', 'review')"
+        )
+    }
+
     # Fetch candidates and find those that share a UNII with SA products
     orig_factory = conn.row_factory
     conn.row_factory = sqlite3.Row
@@ -346,6 +366,11 @@ def promote_alternatives(conn: sqlite3.Connection) -> int:
     inserted = 0
     now = utc_now_str()
     for cand in candidates:
+        # Skip if the same product+labeler is already identified as SA-containing
+        cand_key = ((cand["product_name"] or "").lower(), (cand["labeler"] or "").lower())
+        if cand_key in sa_product_keys:
+            continue
+
         cand_uniis = [u.strip() for u in (cand["active_ingredients_unii"] or "").split(";") if u.strip()]
         matching_sas: set[str] = set()
         for unii in cand_uniis:

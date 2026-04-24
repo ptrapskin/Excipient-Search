@@ -105,7 +105,7 @@
                 </table>
                 {% if group.alternatives %}
                 <div class="alternatives-section">
-                    <h4 class="alternatives-heading">Sugar-Alcohol-Free Liquid Alternatives</h4>
+                    <h4 class="alternatives-heading">Osmotic-Excipient-Free Liquid Alternatives</h4>
                     <table class="data-table">
                         <thead>
                             <tr>
@@ -159,9 +159,13 @@
         let visibleProducts = 0, visibleGroups = 0;
         allGroups.forEach(function (group) {
             if (group.style.display === "none") return;
-            group.querySelectorAll("tbody tr[data-product]").forEach(function (row) {
-                if (row.style.display !== "none") visibleProducts++;
-            });
+            // Count only main product rows (first table), not alternative rows
+            const mainTable = group.querySelector("table.data-table");
+            if (mainTable) {
+                mainTable.querySelectorAll("tbody tr[data-product]").forEach(function (row) {
+                    if (row.style.display !== "none") visibleProducts++;
+                });
+            }
             visibleGroups++;
         });
         if (matchCount) {
@@ -176,14 +180,21 @@
             const q = this.value.trim().toLowerCase();
             allGroups.forEach(function (group) {
                 const groupName = group.dataset.group || "";
-                const rows = group.querySelectorAll("tr[data-product]");
-                let groupVisible = 0;
-                rows.forEach(function (row) {
+                // Show/hide all rows (including alternatives) based on search
+                const allRows = group.querySelectorAll("tr[data-product]");
+                allRows.forEach(function (row) {
                     const productName = row.dataset.product || "";
                     const matches = !q || groupName.includes(q) || productName.includes(q);
                     row.style.display = matches ? "" : "none";
-                    if (matches) groupVisible++;
                 });
+                // Group visibility is determined only by main product rows
+                const mainTable = group.querySelector("table.data-table");
+                let groupVisible = 0;
+                if (mainTable) {
+                    mainTable.querySelectorAll("tbody tr[data-product]").forEach(function (row) {
+                        if (row.style.display !== "none") groupVisible++;
+                    });
+                }
                 const hide = q && groupVisible === 0;
                 group.style.display = hide ? "none" : "";
                 if (!hide && q) group.open = true;

@@ -367,6 +367,11 @@ def process_outer_zip(
                 if rec.active_ingredients_unii:
                     insert_liquid_candidate(conn, rec, decision)
                     pending += 1
+                else:
+                    logger.debug(
+                        "  Skipping liquid candidate (no UNII data): %s [%s]",
+                        rec.product_name, rec.setid,
+                    )
                 continue
 
             inclusion = "included"
