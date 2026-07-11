@@ -73,6 +73,7 @@ class ProductOutputRow:
     matched_sugar_alcohols: str          # semicolon-joined canonical names
     matched_sugar_alcohol_terms: str     # semicolon-joined raw matched terms
     matched_sugar_alcohol_uniis: str     # semicolon-joined UNIIs (empty string when absent, aligned)
+    product_type: str | None             # from document code displayName, e.g. "HUMAN PRESCRIPTION DRUG LABEL"
     source_file: str
     processed_at: str
     matched_excipient_list: list[MatchedExcipient] = field(default_factory=list)  # not stored in products table; used for matched_excipients table

@@ -1,27 +1,18 @@
-# Excipient Search
+# Excipient Finder
 
-Excipient Search is a FastAPI web application for searching live DailyMed product
-records and inspecting inactive ingredient listings for matching products and NDCs.
-Version 1 uses the live DailyMed API for both search and product detail retrieval and
-supports multi-product excipient comparison and basic include/exclude filtering. The
-codebase stays structured for later RxNorm refinement, local ZIP indexing, alias
-mapping, UNII matching, filtering, and risk logic.
+FastAPI web application with two tools:
+
+- **Excipient Finder** — search live DailyMed product records, compare inactive ingredient listings across formulations, and filter by specific excipients.
+- **Osmotic Excipient Screener** — pre-built index of oral/enteral liquid products containing sugar alcohol excipients (sorbitol, mannitol, xylitol, etc.) with concern tier classification and SA-free alternative identification.
 
 ## Stack
 
 - Python 3.12+
-- FastAPI
-- Jinja2 templates
-- SQLite
-- SQLAlchemy
-- Pydantic
-- httpx
-- pytest
+- FastAPI + Jinja2 templates
+- SQLite (`excipients.db` — main data; `excipient_search.db` — API cache)
+- SQLAlchemy, Pydantic, httpx
 
 ## Setup
-
-1. Create and activate a virtual environment.
-2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -29,62 +20,52 @@ pip install -r requirements.txt
 
 ## Run
 
-Start the application from the repository root:
-
 ```bash
 uvicorn app.main:app --reload
 ```
 
 Then open `http://127.0.0.1:8000`.
 
-## Database Initialization
+## Refreshing Data (Monthly)
 
-The SQLite database is initialized automatically on startup. By default the app creates
-`excipient_search.db` in the repository root.
-
-To point at a different database:
+Both tools read from `excipients.db`. Rebuild it from the latest DailyMed release with:
 
 ```bash
-set EXCIPIENT_SEARCH_DATABASE_URL=sqlite:///C:/path/to/excipient_search.db
+python -m excipient_finder.main --fetch all
 ```
+
+This downloads each DailyMed ZIP (~20 GB total across 17 files) one at a time into a temp folder, processes it, deletes it immediately, and cleans up — no ZIP files remain on disk. Only `excipients.db` is updated.
+
+To resume an interrupted run without reprocessing already-completed ZIPs:
+
+```bash
+python -m excipient_finder.main --fetch all --resume
+```
+
+DailyMed publishes updated releases monthly. The screener page shows the `processed_at` timestamp so you can tell when the data was last rebuilt.
+
+After each run, a diff report is written to `qa/update_diff.csv` showing every product that was added, removed, or had its concern tier or sugar alcohol list change relative to the previous build.
 
 ## Routes
 
-- `GET /` search page
-- `GET /search?q=...` server-rendered search results
-- `GET /search?q=...&include=...&exclude=...` comparison and excipient-filtered results
-- `GET /products/{setid}` server-rendered product detail
-- `GET /api/search?q=...&include=...&exclude=...` JSON search and comparison API
-- `GET /api/products/{setid}` JSON product detail API
-- `GET /api/rxnorm/suggest?q=...` RxNorm-backed suggestion API
+- `GET /` — search home
+- `GET /search?q=...` — product search results
+- `GET /search?q=...&include=...&exclude=...` — excipient-filtered comparison
+- `GET /products/{setid}` — product detail with sugar alcohol annotation
+- `GET /osmotic-excipient-screener` — osmotic excipient screener
+- `GET /api/search?q=...` — JSON search API
+- `GET /api/products/{setid}` — JSON product detail API
+- `GET /api/rxnorm/suggest?q=...` — RxNorm autocomplete
+
+## Architecture Notes
+
+- **`excipients.db`** — built offline by `excipient_finder/main.py`. Contains all oral/enteral liquid products with sugar alcohol classification (`concern_tier`: high, moderate, review, alternative). Both tools read from it; the excipient finder also falls back to it when the live DailyMed API is unavailable.
+- **`excipient_search.db`** — SQLAlchemy-managed cache for live DailyMed API responses and RxNorm suggestions. Auto-initialized on startup.
+- **`app/data/osmotic_risk_index.json`** — not used by the web app; written by `scripts/build_osmotic_index.py` as an offline audit artifact only.
+- DailyMed is the source of truth for live product/SPL/excipient retrieval. RxNorm backs autocomplete and ranked concept resolution.
 
 ## Tests
-
-Run the test suite from the repository root:
 
 ```bash
 pytest app/tests
 ```
-
-## Project Notes
-
-- DailyMed is the source of truth for product/SPL/excipient retrieval.
-- RxNorm is used as a terminology layer for autocomplete and ranked concept resolution.
-- Product expansion now uses ranked RxNorm concepts to drive DailyMed product retrieval
-  before falling back to plain text DailyMed search.
-- DailyMed retrieval now uses a composite repository:
-  local index/SPL cache first, then live API fallback, with merged results cached back locally.
-- Search results support cross-product excipient comparison and basic include/exclude
-  filtering so users can identify formulations that do or do not contain requested excipients.
-- Query normalization, search orchestration, parsing, repositories, caching, and UI
-  routes are separated into dedicated modules for maintainability.
-
-## Future Roadmap
-
-- Stronger RxNorm normalization and candidate ranking
-- RxCUI-based search refinement
-- Local DailyMed ZIP indexing alongside the live repository
-- Excipient alias and UNII mapping
-- Product filtering and cross-product analytics
-- Clinical warning and risk scoring layers
-- Export flows for CSV or PDF

@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import csv
 import dataclasses
+import json
 import logging
 import shutil
 import sys
@@ -39,6 +40,7 @@ from excipient_finder.config import Config, DEFAULT_OUTPUT_ROOT
 from excipient_finder.db import (
     BATCH_SIZE,
     clear_liquid_candidates,
+    clear_products,
     get_tier_counts,
     init_db,
     insert_excipients,
@@ -51,7 +53,9 @@ from excipient_finder.db import (
     log_file_start,
     log_file_success,
     promote_alternatives,
+    snapshot_products,
     write_csvs,
+    write_diff_report,
     write_funnel_to_db,
 )
 from excipient_finder.excipient_matcher import match_excipients
@@ -140,6 +144,56 @@ def _download_zip(url: str, dest_path: Path, logger: logging.Logger) -> bool:
         return False
 
 
+# ---------------------------------------------------------------------------
+# Rebuild snapshot helpers
+# ---------------------------------------------------------------------------
+
+_SNAPSHOT_FILENAME = "pre_rebuild_snapshot.json"
+
+
+def _prepare_rebuild(conn, cfg: Config, logger: logging.Logger) -> dict[str, dict]:
+    """Establish the pre-rebuild product snapshot and clear tables for a clean build.
+
+    On a fresh (non-resume) run this snapshots the current DB and persists it to
+    disk before clearing, so a later --resume continuation can recover the *true*
+    pre-rebuild baseline. Without persisting it, a resumed run's own
+    snapshot_products() call would only see whatever partial state the crashed
+    run already committed — not the original baseline — silently corrupting the
+    diff report. clear_liquid_candidates() is likewise skipped on resume so
+    SA-free-alternative candidates gathered by already-completed zips survive
+    the restart instead of being wiped and permanently lost.
+    """
+    snapshot_path = cfg.qa_dir / _SNAPSHOT_FILENAME
+
+    if cfg.resume and snapshot_path.exists():
+        old_snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
+        logger.info(
+            "Loaded pre-rebuild snapshot from %s (%d products)",
+            snapshot_path, len(old_snapshot),
+        )
+        return old_snapshot
+
+    old_snapshot = snapshot_products(conn)
+    cfg.qa_dir.mkdir(parents=True, exist_ok=True)
+    snapshot_path.write_text(json.dumps(old_snapshot), encoding="utf-8")
+
+    if cfg.resume:
+        logger.warning(
+            "--resume set but no snapshot file found at %s; using current DB "
+            "state as the diff baseline instead of the true pre-rebuild state.",
+            snapshot_path,
+        )
+    else:
+        clear_products(conn)
+        clear_liquid_candidates(conn)
+        logger.info(
+            "Cleared products table for clean rebuild (%d previous records snapshotted)",
+            len(old_snapshot),
+        )
+
+    return old_snapshot
+
+
 def build_output_row(
     rec,
     decision,
@@ -175,6 +229,7 @@ def build_output_row(
         matched_sugar_alcohols="; ".join(m.canonical_name for m in matched),
         matched_sugar_alcohol_terms="; ".join(m.raw_name for m in matched),
         matched_sugar_alcohol_uniis="; ".join(m.unii or "" for m in matched),
+        product_type=rec.product_type,
         source_file=rec.source_file,
         processed_at=utc_now_str(),
         matched_excipient_list=matched,
@@ -408,8 +463,9 @@ def _finalize(
     total_funnel: FunnelCounts,
     all_parse_failures: list[dict],
     all_broad_recall: list[dict],
+    old_snapshot: dict[str, dict],
 ) -> None:
-    """Write QA reports, CSV exports, and log the final summary."""
+    """Write QA reports, CSV exports, diff report, and log the final summary."""
     total_funnel.log_summary(logger)
     cfg.qa_dir.mkdir(parents=True, exist_ok=True)
     write_funnel_summary(total_funnel, cfg.qa_dir / "qa_funnel_summary.csv")
@@ -466,6 +522,16 @@ def _finalize(
     logger.info("  Excluded       : %d", total_counts["excluded"])
     logger.info("  Parse errors   : %d", total_counts["parse_errors"])
 
+    diff_path = cfg.qa_dir / "update_diff.csv"
+    write_diff_report(old_snapshot, conn, diff_path, logger=logger)
+
+    # The pre-rebuild snapshot has served its purpose (this build finished
+    # cleanly) — remove it so a later --resume never loads a stale baseline
+    # from an unrelated previous run.
+    snapshot_path = cfg.qa_dir / _SNAPSHOT_FILENAME
+    if snapshot_path.exists():
+        snapshot_path.unlink()
+
     logger.info("Writing CSV exports...")
     write_csvs(conn, cfg.csv_dir, write_excluded_debug=cfg.write_excluded_debug, logger=logger)
 
@@ -493,7 +559,7 @@ def run(cfg: Config) -> None:
     logger.info("=" * 60)
 
     conn = init_db(cfg.db_path)
-    clear_liquid_candidates(conn)
+    old_snapshot = _prepare_rebuild(conn, cfg, logger)
 
     outer_zips = list(iter_outer_zips(cfg.input_root))
     logger.info("Found %d outer ZIP file(s) under %s", len(outer_zips), cfg.input_root)
@@ -562,7 +628,8 @@ def run(cfg: Config) -> None:
     total_counts["alternative"] = alt_count
     logger.info("  Promoted %d SA-free alternative product(s)", alt_count)
 
-    _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall)
+    _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall,
+              old_snapshot=old_snapshot)
 
 
 def run_fetch(cfg: Config) -> None:
@@ -588,7 +655,7 @@ def run_fetch(cfg: Config) -> None:
     logger.info("=" * 60)
 
     conn = init_db(cfg.db_path)
-    clear_liquid_candidates(conn)
+    old_snapshot = _prepare_rebuild(conn, cfg, logger)
     urls = _FETCH_URLS[cfg.fetch]
 
     if cfg.limit:
@@ -678,7 +745,8 @@ def run_fetch(cfg: Config) -> None:
     total_counts["alternative"] = alt_count
     logger.info("  Promoted %d SA-free alternative product(s)", alt_count)
 
-    _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall)
+    _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall,
+              old_snapshot=old_snapshot)
 
 
 def parse_args() -> Config:

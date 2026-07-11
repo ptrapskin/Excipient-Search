@@ -63,8 +63,9 @@ def _create_tables(conn: sqlite3.Connection) -> None:
             matched_sugar_alcohols  TEXT,
             matched_sugar_alcohol_terms TEXT,
             matched_sugar_alcohol_uniis TEXT,
-            source_file             TEXT,
-            processed_at            TEXT
+            product_type             TEXT,
+            source_file              TEXT,
+            processed_at             TEXT
         );
 
         CREATE TABLE IF NOT EXISTS matched_excipients (
@@ -117,8 +118,9 @@ def _create_tables(conn: sqlite3.Connection) -> None:
             active_ingredients_unii TEXT,
             inactive_ingredients_raw TEXT,
             inactive_ingredients_unii TEXT,
-            source_file             TEXT,
-            processed_at            TEXT,
+            product_type             TEXT,
+            source_file              TEXT,
+            processed_at             TEXT,
             UNIQUE(spl_setid)
         );
         CREATE INDEX IF NOT EXISTS idx_candidates_setid
@@ -161,19 +163,29 @@ def _create_qa_tables(conn: sqlite3.Connection) -> None:
     """)
 
 
+def _table_columns(conn: sqlite3.Connection, table: str) -> set[str]:
+    """Return the set of column names present in *table*."""
+    return {row[1] for row in conn.execute(f"PRAGMA table_info({table})")}
+
+
+def _ensure_column(conn: sqlite3.Connection, table: str, column: str, coltype: str,
+                    existing_cols: set[str]) -> None:
+    """Add *column* to *table* if not already present (idempotent)."""
+    if column not in existing_cols:
+        conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {coltype}")
+
+
 def _migrate(conn: sqlite3.Connection) -> None:
     """Add columns introduced after the initial schema (idempotent)."""
-    prod_cols = {row[1] for row in conn.execute("PRAGMA table_info(products)")}
-    if "active_strength" not in prod_cols:
-        conn.execute("ALTER TABLE products ADD COLUMN active_strength TEXT")
-    if "active_ingredients_unii" not in prod_cols:
-        conn.execute("ALTER TABLE products ADD COLUMN active_ingredients_unii TEXT")
-    if "matched_sugar_alcohol_uniis" not in prod_cols:
-        conn.execute("ALTER TABLE products ADD COLUMN matched_sugar_alcohol_uniis TEXT")
-    if "inactive_ingredients_unii" not in prod_cols:
-        conn.execute("ALTER TABLE products ADD COLUMN inactive_ingredients_unii TEXT")
-    if "alternative_sugar_alcohols" not in prod_cols:
-        conn.execute("ALTER TABLE products ADD COLUMN alternative_sugar_alcohols TEXT")
+    prod_cols = _table_columns(conn, "products")
+    for column in (
+        "active_strength", "active_ingredients_unii", "matched_sugar_alcohol_uniis",
+        "inactive_ingredients_unii", "alternative_sugar_alcohols", "product_type",
+    ):
+        _ensure_column(conn, "products", column, "TEXT", prod_cols)
+
+    cand_cols = _table_columns(conn, "liquid_candidates")
+    _ensure_column(conn, "liquid_candidates", "product_type", "TEXT", cand_cols)
 
     # Deduplicate products by spl_setid (keep highest id = most recent), then
     # enforce uniqueness so INSERT OR REPLACE / INSERT OR IGNORE work correctly.
@@ -185,9 +197,8 @@ def _migrate(conn: sqlite3.Connection) -> None:
         "CREATE UNIQUE INDEX IF NOT EXISTS uq_products_setid ON products (spl_setid)"
     )
 
-    exc_cols = {row[1] for row in conn.execute("PRAGMA table_info(matched_excipients)")}
-    if "unii" not in exc_cols:
-        conn.execute("ALTER TABLE matched_excipients ADD COLUMN unii TEXT")
+    exc_cols = _table_columns(conn, "matched_excipients")
+    _ensure_column(conn, "matched_excipients", "unii", "TEXT", exc_cols)
 
 
 # ---------------------------------------------------------------------------
@@ -206,7 +217,7 @@ def insert_product(conn: sqlite3.Connection, row: ProductOutputRow) -> None:
             included_route_match, excluded_route_match,
             inactive_ingredients_raw, inactive_ingredients_unii, matched_sugar_alcohols,
             matched_sugar_alcohol_terms, matched_sugar_alcohol_uniis,
-            source_file, processed_at
+            product_type, source_file, processed_at
         ) VALUES (
             :spl_setid, :product_name, :labeler, :dosage_form, :normalized_form,
             :form_class, :route, :normalized_route, :route_class, :ndcs,
@@ -216,7 +227,7 @@ def insert_product(conn: sqlite3.Connection, row: ProductOutputRow) -> None:
             :included_route_match, :excluded_route_match,
             :inactive_ingredients_raw, :inactive_ingredients_unii, :matched_sugar_alcohols,
             :matched_sugar_alcohol_terms, :matched_sugar_alcohol_uniis,
-            :source_file, :processed_at
+            :product_type, :source_file, :processed_at
         )
         """,
         {
@@ -245,6 +256,7 @@ def insert_product(conn: sqlite3.Connection, row: ProductOutputRow) -> None:
             "matched_sugar_alcohols": row.matched_sugar_alcohols,
             "matched_sugar_alcohol_terms": row.matched_sugar_alcohol_terms,
             "matched_sugar_alcohol_uniis": row.matched_sugar_alcohol_uniis,
+            "product_type": row.product_type,
             "source_file": row.source_file,
             "processed_at": row.processed_at,
         },
@@ -291,13 +303,13 @@ def insert_liquid_candidate(
             form_class, route, normalized_route, route_class, ndcs,
             active_ingredients_raw, active_strength, active_ingredients_unii,
             inactive_ingredients_raw, inactive_ingredients_unii,
-            source_file, processed_at
+            product_type, source_file, processed_at
         ) VALUES (
             ?, ?, ?, ?, ?,
             ?, ?, ?, ?, ?,
             ?, ?, ?,
             ?, ?,
-            ?, ?
+            ?, ?, ?
         )
         """,
         (
@@ -308,7 +320,7 @@ def insert_liquid_candidate(
             rec.active_ingredients_raw, rec.active_strength, rec.active_ingredients_unii,
             rec.inactive_ingredients_raw,
             "; ".join(e.unii or "" for e in rec.inactive_ingredient_entries),
-            rec.source_file, utc_now_str(),
+            rec.product_type, rec.source_file, utc_now_str(),
         ),
     )
 
@@ -388,7 +400,7 @@ def promote_alternatives(conn: sqlite3.Connection) -> int:
                 concern_tier, inclusion_decision,
                 inactive_ingredients_raw, inactive_ingredients_unii,
                 matched_sugar_alcohols, matched_sugar_alcohol_terms, matched_sugar_alcohol_uniis,
-                alternative_sugar_alcohols, source_file, processed_at
+                alternative_sugar_alcohols, product_type, source_file, processed_at
             ) VALUES (
                 ?, ?, ?, ?, ?,
                 ?, ?, ?, ?, ?,
@@ -396,7 +408,7 @@ def promote_alternatives(conn: sqlite3.Connection) -> int:
                 'alternative', 'included',
                 ?, ?,
                 '', '', '',
-                ?, ?, ?
+                ?, ?, ?, ?
             )
             """,
             (
@@ -407,7 +419,7 @@ def promote_alternatives(conn: sqlite3.Connection) -> int:
                 cand["active_ingredients_raw"], cand["active_strength"],
                 cand["active_ingredients_unii"],
                 cand["inactive_ingredients_raw"], cand["inactive_ingredients_unii"],
-                alt_sa_str, cand["source_file"], now,
+                alt_sa_str, cand["product_type"], cand["source_file"], now,
             ),
         )
         inserted += 1
@@ -474,7 +486,7 @@ _CSV_FIELDS = [
     "included_form_match", "excluded_form_match",
     "included_route_match", "excluded_route_match",
     "inactive_ingredients_raw", "matched_sugar_alcohols",
-    "matched_sugar_alcohol_terms", "source_file", "processed_at",
+    "matched_sugar_alcohol_terms", "product_type", "source_file", "processed_at",
 ]
 
 
@@ -514,6 +526,146 @@ def get_tier_counts(conn: sqlite3.Connection) -> dict[str, int]:
         "SELECT concern_tier, COUNT(*) FROM products GROUP BY concern_tier"
     ).fetchall()
     return {tier: count for tier, count in rows}
+
+
+# ---------------------------------------------------------------------------
+# Diff / changelog helpers
+# ---------------------------------------------------------------------------
+
+_DIFF_FIELDS = [
+    "change_type", "spl_setid", "product_name", "labeler", "product_type",
+    "active_ingredients_raw", "old_concern_tier", "new_concern_tier",
+    "old_sugar_alcohols", "new_sugar_alcohols",
+]
+
+
+def snapshot_products(conn: sqlite3.Connection) -> dict[str, dict]:
+    """Read all included products into memory keyed by spl_setid.
+
+    Call this before clearing the table so the diff report has a before-state.
+    """
+    rows = conn.execute(
+        """
+        SELECT spl_setid, product_name, labeler, active_ingredients_raw,
+               concern_tier, matched_sugar_alcohols, product_type
+        FROM   products
+        WHERE  inclusion_decision = 'included'
+        """
+    ).fetchall()
+    return {
+        row[0]: {
+            "product_name":          row[1],
+            "labeler":               row[2],
+            "active_ingredients_raw": row[3],
+            "concern_tier":          row[4],
+            "matched_sugar_alcohols": row[5] or "",
+            "product_type":          row[6] or "",
+        }
+        for row in rows
+    }
+
+
+def clear_products(conn: sqlite3.Connection) -> None:
+    """Wipe products, matched_excipients, processing_log, and QA audit tables
+    for a clean rebuild.
+
+    Call after snapshot_products() and before the processing loop so stale
+    records and resume-skip entries from previous runs don't persist in the DB.
+    """
+    conn.execute("DELETE FROM products")
+    conn.execute("DELETE FROM matched_excipients")
+    conn.execute("DELETE FROM processing_log")
+    conn.execute("DELETE FROM qa_excluded_audit")
+    conn.execute("DELETE FROM qa_parse_failures")
+    conn.commit()
+
+
+def write_diff_report(
+    old_snapshot: dict[str, dict],
+    conn: sqlite3.Connection,
+    report_path: Path,
+    logger: logging.Logger | None = None,
+) -> None:
+    """Compare old_snapshot against the current DB and write a diff CSV.
+
+    Rows are classified as:
+      added              – setid present in new DB but not old snapshot
+      removed            – setid in old snapshot but absent from new DB
+      tier_changed       – same setid, concern_tier differs
+      sugar_alcohol_changed – same setid and tier, but matched SAs differ
+    """
+    new_snapshot = snapshot_products(conn)
+
+    old_setids = set(old_snapshot)
+    new_setids = set(new_snapshot)
+    diff_rows: list[dict] = []
+
+    for setid in sorted(new_setids - old_setids):
+        p = new_snapshot[setid]
+        diff_rows.append({
+            "change_type":           "added",
+            "spl_setid":             setid,
+            "product_name":          p["product_name"],
+            "labeler":               p["labeler"],
+            "product_type":          p["product_type"],
+            "active_ingredients_raw": p["active_ingredients_raw"],
+            "old_concern_tier":      "",
+            "new_concern_tier":      p["concern_tier"],
+            "old_sugar_alcohols":    "",
+            "new_sugar_alcohols":    p["matched_sugar_alcohols"],
+        })
+
+    for setid in sorted(old_setids - new_setids):
+        p = old_snapshot[setid]
+        diff_rows.append({
+            "change_type":           "removed",
+            "spl_setid":             setid,
+            "product_name":          p["product_name"],
+            "labeler":               p["labeler"],
+            "product_type":          p["product_type"],
+            "active_ingredients_raw": p["active_ingredients_raw"],
+            "old_concern_tier":      p["concern_tier"],
+            "new_concern_tier":      "",
+            "old_sugar_alcohols":    p["matched_sugar_alcohols"],
+            "new_sugar_alcohols":    "",
+        })
+
+    for setid in sorted(old_setids & new_setids):
+        old = old_snapshot[setid]
+        new = new_snapshot[setid]
+        tier_changed = old["concern_tier"] != new["concern_tier"]
+        sa_changed   = old["matched_sugar_alcohols"] != new["matched_sugar_alcohols"]
+        if not (tier_changed or sa_changed):
+            continue
+        diff_rows.append({
+            "change_type":           "tier_changed" if tier_changed else "sugar_alcohol_changed",
+            "spl_setid":             setid,
+            "product_name":          new["product_name"],
+            "labeler":               new["labeler"],
+            "product_type":          new["product_type"],
+            "active_ingredients_raw": new["active_ingredients_raw"],
+            "old_concern_tier":      old["concern_tier"],
+            "new_concern_tier":      new["concern_tier"],
+            "old_sugar_alcohols":    old["matched_sugar_alcohols"],
+            "new_sugar_alcohols":    new["matched_sugar_alcohols"],
+        })
+
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(report_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=_DIFF_FIELDS)
+        writer.writeheader()
+        writer.writerows(diff_rows)
+
+    added   = sum(1 for r in diff_rows if r["change_type"] == "added")
+    removed = sum(1 for r in diff_rows if r["change_type"] == "removed")
+    changed = len(diff_rows) - added - removed
+    if logger:
+        logger.info(
+            "Diff report: %d added, %d removed, %d changed -> %s",
+            added, removed, changed, report_path.name,
+        )
+    else:
+        print(f"Diff report: {added} added, {removed} removed, {changed} changed -> {report_path}")
 
 
 # ---------------------------------------------------------------------------

@@ -47,7 +47,7 @@ def iter_spl_xmls(
         outer_zf = zipfile.ZipFile(outer_zip_path, "r")
     except Exception as exc:
         logger.error("Cannot open outer zip %s: %s", outer_zip_path.name, exc)
-        return
+        raise
 
     with outer_zf:
         inner_entries = [n for n in outer_zf.namelist() if n.endswith(".zip")]
