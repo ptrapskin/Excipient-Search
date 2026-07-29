@@ -139,10 +139,14 @@ window.addEventListener('pagehide', () => stopScan());
 async function startScan() {
   scannerWrap.classList.add('active');
   startBtn.style.display = 'none';
-  scanStatus.textContent = 'Point camera at the GS1 DataMatrix barcode';
+  scanStatus.textContent = 'Hold the phone a few inches away so the barcode fills most of the frame';
   const { BrowserMultiFormatReader, DecodeHintType, BarcodeFormat } = ZXing;
   const hints = new Map();
   hints.set(DecodeHintType.POSSIBLE_FORMATS, [BarcodeFormat.DATA_MATRIX]);
+  // GS1 DataMatrix codes on pharma packaging are small/dense — TRY_HARDER
+  // enables ZXing's slower, more thorough decode pass, which matters far
+  // more here than for a typical large retail barcode.
+  hints.set(DecodeHintType.TRY_HARDER, true);
   // Throttle the decode loop (default is as-fast-as-possible) so scanning
   // doesn't pin the CPU/heat the phone if a user leaves the camera open.
   codeReader = new BrowserMultiFormatReader(hints, 250);
@@ -154,7 +158,16 @@ async function startScan() {
   }, SCAN_TIMEOUT_MS);
 
   try {
-    const constraints = { video: { facingMode: { ideal: 'environment' } } };
+    // Request the highest resolution the device offers — GS1 DataMatrix
+    // modules are physically tiny on pharma packaging, so decode success
+    // is very sensitive to how many camera pixels actually land on the code.
+    const constraints = {
+      video: {
+        facingMode: { ideal: 'environment' },
+        width: { ideal: 1920 },
+        height: { ideal: 1080 },
+      },
+    };
     await codeReader.decodeFromConstraints(constraints, 'video', (result, err) => {
       if (result) onScanSuccess(result.getText());
     });
