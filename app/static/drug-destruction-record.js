@@ -120,13 +120,26 @@ async function lookupDrugByGtin(gtin14) {
 //    granted, so label sniffing is unreliable there.
 //  - the <video> element has playsinline + muted attributes in the template so
 //    iOS renders it inline instead of forcing native fullscreen playback.
-let codeReader = null;
+// zxing-js (the old decode engine here) is an unmaintained pure-JS port with
+// known-weak DataMatrix reliability. zxing-wasm wraps the actively maintained
+// ZXing-C++ core (WebAssembly) — the same decode engine native scanning apps
+// use — and reads noticeably better on real, small/dense GS1 DataMatrix
+// codes. It doesn't ship a "watch this video element" helper like zxing-js
+// did, so we drive the camera ourselves: grab a frame to an offscreen canvas
+// on a timer and hand the pixel data to ZXingWASM.readBarcodes().
+let mediaStream = null;
+let decodeLoopHandle = null;
+let decodeBusy = false;
 let scanTimeoutHandle = null;
 const SCAN_TIMEOUT_MS = 90000; // auto-stop if left scanning idle, to save battery/heat
+const DECODE_INTERVAL_MS = 300;
 const startBtn = document.getElementById('startScanBtn');
 const cancelBtn = document.getElementById('cancelScanBtn');
 const scannerWrap = document.getElementById('scanner-wrap');
 const scanStatus = document.getElementById('scanStatus');
+const videoEl = document.getElementById('video');
+const scanCanvas = document.createElement('canvas');
+const scanCtx = scanCanvas.getContext('2d', { willReadFrequently: true });
 
 startBtn.addEventListener('click', startScan);
 cancelBtn.addEventListener('click', () => stopScan());
@@ -140,16 +153,10 @@ async function startScan() {
   scannerWrap.classList.add('active');
   startBtn.style.display = 'none';
   scanStatus.textContent = 'Hold the phone a few inches away so the barcode fills most of the frame';
-  const { BrowserMultiFormatReader, DecodeHintType, BarcodeFormat } = ZXing;
-  const hints = new Map();
-  hints.set(DecodeHintType.POSSIBLE_FORMATS, [BarcodeFormat.DATA_MATRIX]);
-  // GS1 DataMatrix codes on pharma packaging are small/dense — TRY_HARDER
-  // enables ZXing's slower, more thorough decode pass, which matters far
-  // more here than for a typical large retail barcode.
-  hints.set(DecodeHintType.TRY_HARDER, true);
-  // Throttle the decode loop (default is as-fast-as-possible) so scanning
-  // doesn't pin the CPU/heat the phone if a user leaves the camera open.
-  codeReader = new BrowserMultiFormatReader(hints, 250);
+
+  // Kick off the ~1.5MB WASM module fetch/instantiate in parallel with the
+  // camera permission prompt so the first frame decode isn't stalled on it.
+  ZXingWASM.prepareZXingModule({ fireImmediately: true }).catch(() => {});
 
   clearTimeout(scanTimeoutHandle);
   scanTimeoutHandle = setTimeout(() => {
@@ -168,9 +175,13 @@ async function startScan() {
         height: { ideal: 1080 },
       },
     };
-    await codeReader.decodeFromConstraints(constraints, 'video', (result, err) => {
-      if (result) onScanSuccess(result.getText());
-    });
+    mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+    videoEl.srcObject = mediaStream;
+    await videoEl.play();
+    if (!videoEl.videoWidth) {
+      await new Promise(resolve => videoEl.addEventListener('loadedmetadata', resolve, { once: true }));
+    }
+    scheduleDecode();
   } catch (e) {
     let msg = 'Camera error: ' + e.message;
     if (e.name === 'NotAllowedError') {
@@ -182,9 +193,46 @@ async function startScan() {
   }
 }
 
+function scheduleDecode() {
+  decodeLoopHandle = setTimeout(async () => {
+    if (decodeBusy || !mediaStream) return;
+    decodeBusy = true;
+    try {
+      await decodeOneFrame();
+    } catch (e) {
+      // Ignore individual frame failures (e.g. WASM module still warming up
+      // on the very first tick) — the loop just tries again next tick.
+    } finally {
+      decodeBusy = false;
+      if (mediaStream) scheduleDecode();
+    }
+  }, DECODE_INTERVAL_MS);
+}
+
+async function decodeOneFrame() {
+  if (!videoEl.videoWidth) return;
+  scanCanvas.width = videoEl.videoWidth;
+  scanCanvas.height = videoEl.videoHeight;
+  scanCtx.drawImage(videoEl, 0, 0, scanCanvas.width, scanCanvas.height);
+  const imageData = scanCtx.getImageData(0, 0, scanCanvas.width, scanCanvas.height);
+  const results = await ZXingWASM.readBarcodes(imageData, {
+    formats: ['DataMatrix'],
+    tryHarder: true,
+    textMode: 'Plain', // raw payload text, matching what parseGS1() expects
+  });
+  if (results && results.length) {
+    onScanSuccess(results[0].text);
+  }
+}
+
 function stopScan() {
   clearTimeout(scanTimeoutHandle);
-  if (codeReader) { codeReader.reset(); codeReader = null; }
+  clearTimeout(decodeLoopHandle);
+  if (mediaStream) {
+    mediaStream.getTracks().forEach(track => track.stop());
+    mediaStream = null;
+  }
+  videoEl.srcObject = null;
   scannerWrap.classList.remove('active');
   startBtn.style.display = 'block';
 }
