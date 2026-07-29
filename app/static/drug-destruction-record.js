@@ -73,25 +73,35 @@ function formatGS1Date(yymmdd) {
   return `${mm}/${dd === '00' ? '01' : dd}/${yyyy}`;
 }
 
-// GTIN-14 -> candidate NDC formats. Digits 2-12 of the GTIN (11 digits) are the
-// padded 5-4-2 NDC; de-pad each segment to try the 3 legal FDA formats too.
-function buildCandidatesFrom11(ndc11) {
-  if (!ndc11 || ndc11.length !== 11) return [];
-  const A = ndc11.slice(0, 5), B = ndc11.slice(5, 9), C = ndc11.slice(9, 11);
+// GTIN-14 structure for NDC-based GS1 healthcare barcodes (verified against
+// real, independently-documented GTIN/NDC pairs — e.g. GTIN 00349281547584 is
+// ActHIB NDC 49281-547-58; GTIN 00300051971015 is Prevnar 13 NDC 0005-1971-01):
+//   digit 1        = GS1 indicator digit
+//   digits 2-3     = constant "03" flag (marks "an NDC follows"), NOT part of the NDC
+//   digits 4-13    = the 10-digit NDC exactly as printed on the label, digits only
+//   digit 14       = check digit
+// The 10 raw digits split into labeler/product/package using one of 3 legal
+// FDA formats (4-4-2, 5-3-2, 5-4-1) — the barcode doesn't say which, so we
+// build a candidate for each and let the openFDA lookup find the real match.
+function buildNdcCandidatesFromGtin(gtin14) {
+  if (!gtin14 || gtin14.length !== 14) return [];
+  const raw10 = gtin14.slice(3, 13);
+  if (raw10.length !== 10) return [];
+  const splits = [
+    [raw10.slice(0, 4), raw10.slice(4, 8), raw10.slice(8, 10)],  // 4-4-2
+    [raw10.slice(0, 5), raw10.slice(5, 8), raw10.slice(8, 10)],  // 5-3-2
+    [raw10.slice(0, 5), raw10.slice(5, 9), raw10.slice(9, 10)],  // 5-4-1
+  ];
   const candidates = new Set();
-  candidates.add(`${A}-${B}`);              // as-is 5-4 (product_ndc)
-  if (A[0] === '0') candidates.add(`${A.slice(1)}-${B}`);   // 4-4
-  if (B[0] === '0') candidates.add(`${A}-${B.slice(1)}`);   // 5-3
-  // full package_ndc variants (with package segment)
-  candidates.add(`${A}-${B}-${C}`);
-  if (A[0] === '0') candidates.add(`${A.slice(1)}-${B}-${C}`);
-  if (B[0] === '0') candidates.add(`${A}-${B.slice(1)}-${C}`);
-  if (C[0] === '0') candidates.add(`${A}-${B}-${C.slice(1)}`);
+  for (const [labeler, product, pkg] of splits) {
+    candidates.add(`${labeler}-${product}`);        // product_ndc form
+    candidates.add(`${labeler}-${product}-${pkg}`);  // package_ndc form
+  }
   return [...candidates];
 }
 
 async function lookupDrugByGtin(gtin14) {
-  const candidates = buildCandidatesFrom11(gtin14.slice(1, 12));
+  const candidates = buildNdcCandidatesFromGtin(gtin14);
   for (const cand of candidates) {
     try {
       const res = await fetch(`https://api.fda.gov/drug/ndc.json?search=product_ndc:"${cand}"+OR+package_ndc:"${cand}"&limit=1`);
@@ -104,7 +114,7 @@ async function lookupDrugByGtin(gtin14) {
         if (r.active_ingredients && r.active_ingredients.length) {
           strength = r.active_ingredients.map(a => `${a.name} ${a.strength}`).join(', ');
         }
-        return { name, strength };
+        return { name, strength, ndc: cand };
       }
     } catch (e) { /* try next candidate */ }
   }
@@ -247,9 +257,11 @@ async function onScanSuccess(text) {
   let name = '', strength = '', ndcDisplay = '';
 
   if (gtin) {
-    ndcDisplay = buildCandidatesFrom11(gtin.slice(1, 12))[0] || '';
+    // Fall back to the undashed raw 10 digits — honest about not knowing the
+    // real labeler/product/package split — until/unless openFDA confirms one.
+    ndcDisplay = gtin.length === 14 ? gtin.slice(3, 13) : '';
     const drug = await lookupDrugByGtin(gtin);
-    if (drug) { name = drug.name; strength = drug.strength; }
+    if (drug) { name = drug.name; strength = drug.strength; ndcDisplay = drug.ndc; }
     else toast('Scanned OK, but no openFDA match — fill in name/strength manually');
   } else {
     toast('Could not read GTIN from barcode — check item manually');
