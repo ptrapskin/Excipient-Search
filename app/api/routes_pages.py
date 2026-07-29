@@ -219,6 +219,17 @@ async def sugar_alcohol_risk_redirect(request: Request):
     return RedirectResponse(url="/osmotic-excipient-screener", status_code=301)
 
 
+@router.get("/drug-destruction-record", response_class=HTMLResponse)
+async def drug_destruction_record_page(request: Request) -> HTMLResponse:
+    """Render the drug destruction record scanner tool (fully client-side)."""
+
+    return templates.TemplateResponse(
+        request=request,
+        name="drug_destruction_record.html",
+        context={},
+    )
+
+
 @router.get("/osmotic-excipient-screener", response_class=HTMLResponse)
 async def sugar_alcohol_risk_page(
     request: Request,

@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+
+{% block title %}Drug Repository Destruction Record | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel dr-tool">
+  <h1>Drug Repository Destruction Record</h1>
+  <p class="tagline">
+    Scan each item's barcode to auto-fill drug name, strength, NDC, lot, and expiration, matching
+    Wisconsin DHS Form F-62645C (Wis. Admin. Code &sect; DHS 148.11(2)).
+  </p>
+
+  <div class="dr-note no-print">
+    Scan each item's barcode to auto-fill drug name, strength, NDC, lot, and expiration.
+    Enter quantity for each item, fill in the destruction details once, sign, then generate the printable record.
+    Nothing you enter here is uploaded &mdash; the generated record is yours to print or save as a PDF.
+  </div>
+
+  <!-- FACILITY / DESTRUCTION INFO -->
+  <div class="dr-card no-print">
+    <h2>Pharmacy / Facility Information</h2>
+    <div class="dr-field">
+      <label for="facilityName">Name &ndash; Pharmacy or Medical Facility</label>
+      <input type="text" id="facilityName" autocomplete="organization">
+    </div>
+    <div class="dr-field">
+      <label for="facilityAddress">Street Address</label>
+      <input type="text" id="facilityAddress" autocomplete="street-address">
+    </div>
+    <div class="dr-grid3">
+      <div class="dr-field"><label for="facilityCity">City</label><input type="text" id="facilityCity" autocomplete="address-level2"></div>
+      <div class="dr-field"><label for="facilityState">State</label><input type="text" id="facilityState" value="WI" autocomplete="address-level1"></div>
+      <div class="dr-field"><label for="facilityZip">Zip Code</label><input type="text" id="facilityZip" inputmode="numeric" autocomplete="postal-code"></div>
+    </div>
+    <div class="dr-grid2">
+      <div class="dr-field">
+        <label for="personDestroying">Name &ndash; Person Destroying Drugs / Supplies</label>
+        <input type="text" id="personDestroying">
+      </div>
+      <div class="dr-field">
+        <label for="dateDestroyed">Date Destroyed</label>
+        <input type="date" id="dateDestroyed">
+      </div>
+    </div>
+  </div>
+
+  <!-- SCANNER -->
+  <div class="dr-card no-print">
+    <h2>Scan Items</h2>
+    <button class="dr-btn-primary" id="startScanBtn" type="button">📷 Scan Item Barcode</button>
+    <div id="scanner-wrap">
+      <video id="video" playsinline muted autoplay></video>
+      <div class="dr-scan-status" id="scanStatus">Point camera at the GS1 DataMatrix barcode</div>
+      <button class="dr-btn-secondary dr-btn-small" id="cancelScanBtn" type="button" style="margin-top:8px;width:100%;">Cancel</button>
+    </div>
+  </div>
+
+  <!-- ITEMS TABLE -->
+  <div class="dr-card no-print">
+    <h2>Drug / Medical Supply Information</h2>
+    <div id="itemsTableWrap">
+      <div class="dr-empty-state" id="emptyState">No items scanned yet</div>
+    </div>
+    <button class="dr-btn-secondary dr-btn-small" id="addManualBtn" type="button" style="margin-top:8px;">+ Add Item Manually</button>
+  </div>
+
+  <!-- SIGNATURE -->
+  <div class="dr-card no-print">
+    <h2>Signature</h2>
+    <div class="dr-field">
+      <label for="dateSigned">Date Signed</label>
+      <input type="date" id="dateSigned">
+    </div>
+    <label>Signature &ndash; Person Destroying Drugs or Medical Supplies</label>
+    <div class="dr-sig-pad-wrap">
+      <canvas id="sigpad"></canvas>
+    </div>
+    <div class="dr-sig-controls">
+      <span id="sigStatus" style="color:#c0392b;">Not signed</span>
+      <button class="dr-btn-secondary dr-btn-small" id="clearSigBtn" type="button">Clear</button>
+    </div>
+  </div>
+
+  <p class="dr-ios-hint no-print" id="iosPrintHint" style="display:none;">
+    On iPhone/iPad: after tapping "Generate &amp; Print Record", use the Share icon in the print
+    preview and choose "Save to Files" to get a PDF.
+  </p>
+
+  <div class="dr-actions no-print">
+    <button class="dr-btn-secondary" id="resetBtn" type="button">Reset Form</button>
+    <button class="dr-btn-primary" id="generateBtn" type="button">Generate &amp; Print Record</button>
+  </div>
+
+  <!-- PRINT-ONLY OFFICIAL LAYOUT, injected on generate -->
+  <div id="print-area"></div>
+</section>
+
+<div id="toast"></div>
+
+<style>
+  .dr-tool { --dr-blue: #1a4d7a; --dr-blue-dark: #0d3253; --dr-gray: #666; --dr-border: #ccc; --dr-red: #c0392b; }
+  /* The site header is position:sticky (styles.css), which stacks above static
+     content scrolled underneath it. iOS Safari auto-scrolls a focused field to
+     the top of the viewport when the keyboard opens, which would otherwise
+     tuck it behind the header and make it untappable. */
+  .dr-tool input, .dr-tool button, .dr-tool canvas, #sigpad { scroll-margin-top: 100px; }
+  .dr-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .dr-card h2 {
+    font-size: 15px;
+    margin: 0 0 12px;
+    color: var(--dr-blue-dark);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+  }
+  .dr-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .dr-grid3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; }
+  .dr-tool label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dr-gray);
+    margin-bottom: 3px;
+  }
+  .dr-tool input[type=text], .dr-tool input[type=date] {
+    width: 100%;
+    padding: 8px 9px;
+    border: 1px solid var(--dr-border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  .dr-field { margin-bottom: 10px; }
+  .dr-tool button {
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  .dr-btn-primary { background: var(--dr-blue); color: #fff; width: 100%; }
+  .dr-btn-primary:active { background: var(--dr-blue-dark); }
+  .dr-btn-secondary { background: #e6ecf1; color: var(--dr-blue-dark); }
+  .dr-btn-small { padding: 5px 10px; font-size: 12px; }
+  #scanner-wrap { display: none; margin-top: 12px; }
+  #scanner-wrap.active { display: block; }
+  #scanner-wrap video { width: 100%; border-radius: 8px; background: #000; }
+  .dr-scan-status { text-align: center; font-size: 13px; color: var(--dr-gray); margin-top: 6px; min-height: 18px; }
+  .dr-table-scroll { overflow-x: auto; }
+  .dr-tool table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+  .dr-tool th, .dr-tool td { border: 1px solid var(--dr-border); padding: 6px; font-size: 12.5px; text-align: left; vertical-align: top; }
+  .dr-tool th { background: #eef2f6; font-size: 11.5px; }
+  .dr-tool td input[type=text] { border: none; padding: 3px; font-size: 12.5px; background: transparent; }
+  .dr-tool td input.dr-qty-empty { background: #fdecea; border: 1px solid var(--dr-red); border-radius: 4px; }
+  .dr-row-num { width: 22px; text-align: center; color: var(--dr-gray); }
+  .dr-remove-btn { color: var(--dr-red); background: none; border: none; cursor: pointer; font-size: 16px; padding: 0 4px; }
+  .dr-empty-state { color: var(--dr-gray); font-size: 13px; text-align: center; padding: 18px 0; }
+  .dr-sig-pad-wrap { border: 1px solid var(--dr-border); border-radius: 8px; overflow: hidden; margin-top: 4px; }
+  canvas#sigpad { width: 100%; height: 130px; display: block; background: #fff; touch-action: none; }
+  .dr-sig-controls { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #f7f9fb; font-size: 12px; }
+  .dr-ios-hint { font-size: 12px; color: var(--dr-gray); background: #f7f9fb; border-left: 3px solid var(--dr-blue); padding: 8px 10px; border-radius: 4px; margin: 0 0 12px; }
+  .dr-actions { display: flex; gap: 10px; }
+  .dr-actions button { flex: 1; }
+  .dr-note {
+    font-size: 12px;
+    color: var(--dr-gray);
+    background: #f7f9fb;
+    border-left: 3px solid var(--dr-blue);
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  #toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    z-index: 50;
+    max-width: 85%;
+    text-align: center;
+  }
+  #toast.show { opacity: 1; }
+
+  /* ---- Print-only official record layout ---- */
+  #print-area { display: none; }
+  @media print {
+    body * { visibility: hidden; }
+    #print-area, #print-area * { visibility: visible; }
+    #print-area { display: block; position: absolute; top: 0; left: 0; width: 100%; }
+    .site-header, .site-footer, .no-print { display: none !important; }
+  }
+  .dr-form-page {
+    width: 7.5in;
+    margin: 0 auto 0.4in;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10.5px;
+    color: #000;
+    page-break-after: always;
+  }
+  .dr-form-page:last-child { page-break-after: auto; }
+  .dr-form-title-block { text-align: left; margin-bottom: 6px; }
+  .dr-form-title-block .dr-agency { font-size: 10px; font-weight: bold; }
+  .dr-form-title-block .dr-division { font-size: 9.5px; }
+  .dr-form-title-block .dr-formnum { font-size: 9px; float: right; }
+  .dr-form-title-block .dr-title { font-size: 13px; font-weight: bold; text-align: center; margin: 8px 0; text-transform: uppercase; }
+  .dr-form-note { font-size: 9px; margin-bottom: 8px; }
+  .dr-form-note li { margin-bottom: 2px; }
+  table.dr-official { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+  table.dr-official th, table.dr-official td {
+    border: 1px solid #000;
+    padding: 3px 5px;
+    font-size: 9.5px;
+    vertical-align: top;
+  }
+  table.dr-official .dr-label { font-size: 8px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
+  table.dr-official .dr-value { font-size: 10.5px; min-height: 14px; }
+  .dr-section-header {
+    background: #dde5ec;
+    font-weight: bold;
+    font-size: 9.5px;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid #000;
+    text-transform: uppercase;
+  }
+  .dr-drug-table th { background: #eef2f6; font-size: 8.5px; text-align: center; }
+  .dr-drug-table td { height: 20px; font-size: 9.5px; }
+  .dr-sig-line { border-bottom: 1px solid #000; height: 32px; position: relative; }
+  .dr-sig-line img { max-height: 30px; }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js"></script>
+<script src="{{ url_for('static', path='/drug-destruction-record.js') }}" defer></script>
+{% endblock %}
