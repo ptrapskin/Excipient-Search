@@ -230,6 +230,17 @@ async def drug_destruction_record_page(request: Request) -> HTMLResponse:
     )
 
 
+@router.get("/drug-donation-record", response_class=HTMLResponse)
+async def drug_donation_record_page(request: Request) -> HTMLResponse:
+    """Render the drug donation record scanner tool (fully client-side)."""
+
+    return templates.TemplateResponse(
+        request=request,
+        name="drug_donation_record.html",
+        context={},
+    )
+
+
 @router.get("/osmotic-excipient-screener", response_class=HTMLResponse)
 async def sugar_alcohol_risk_page(
     request: Request,
