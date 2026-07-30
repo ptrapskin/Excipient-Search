@@ -104,7 +104,10 @@ async function lookupDrugByGtin(gtin14) {
   const candidates = buildNdcCandidatesFromGtin(gtin14);
   for (const cand of candidates) {
     try {
-      const res = await fetch(`https://api.fda.gov/drug/ndc.json?search=product_ndc:"${cand}"+OR+package_ndc:"${cand}"&limit=1`);
+      // package_ndc is nested under "packaging" in openFDA's schema — a bare
+      // package_ndc:"..." clause matches nothing, so this must query
+      // packaging.package_ndc instead.
+      const res = await fetch(`https://api.fda.gov/drug/ndc.json?search=product_ndc:"${cand}"+OR+packaging.package_ndc:"${cand}"&limit=1`);
       if (!res.ok) continue;
       const data = await res.json();
       if (data.results && data.results[0]) {
