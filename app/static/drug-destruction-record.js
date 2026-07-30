@@ -127,7 +127,22 @@ function formatDrugInfo(r) {
   return { name, strength };
 }
 
+// Find the exact package the scanned barcode refers to (matched by raw digit
+// content, not by which format guess happened to succeed) and read its
+// declared unit count off openFDA's "N TABLET in 1 BOTTLE"-style description.
+// Multi-level packaging (e.g. "2 BOTTLE in 1 CARTON / 14 TABLET in 1 BOTTLE")
+// would need multiplying across levels to get a true total — rather than
+// guess wrong, we skip auto-fill for those and leave it for manual entry.
+function quantityFromPackaging(r, raw10) {
+  if (!r.packaging) return '';
+  const pkg = r.packaging.find(p => (p.package_ndc || '').replace(/-/g, '') === raw10);
+  if (!pkg || !pkg.description || pkg.description.includes('/')) return '';
+  const match = /^(\d+(?:\.\d+)?)\s/.exec(pkg.description);
+  return match ? match[1] : '';
+}
+
 async function lookupDrugByGtin(gtin14) {
+  const raw10 = gtin14.length === 14 ? gtin14.slice(3, 13) : '';
   const candidates = buildNdcCandidatesFromGtin(gtin14);
   for (const cand of candidates) {
     try {
@@ -139,7 +154,7 @@ async function lookupDrugByGtin(gtin14) {
       const data = await res.json();
       if (data.results && data.results[0]) {
         const r = data.results[0];
-        return { ...formatDrugInfo(r), ndc: cand };
+        return { ...formatDrugInfo(r), ndc: cand, quantity: quantityFromPackaging(r, raw10) };
       }
     } catch (e) { /* try next candidate */ }
   }
@@ -279,20 +294,26 @@ async function onScanSuccess(text) {
   const gtin = parsed['01'] || '';
   const lot = parsed['10'] || '';
   const expiration = formatGS1Date(parsed['17'] || '');
-  let name = '', strength = '', ndcDisplay = '';
+  let name = '', strength = '', ndcDisplay = '', quantity = '';
 
   if (gtin) {
     // Fall back to the undashed raw 10 digits — honest about not knowing the
     // real labeler/product/package split — until/unless openFDA confirms one.
     ndcDisplay = gtin.length === 14 ? gtin.slice(3, 13) : '';
     const drug = await lookupDrugByGtin(gtin);
-    if (drug) { name = drug.name; strength = drug.strength; ndcDisplay = drug.ndc; }
-    else toast('Scanned OK, but no openFDA match — fill in name/strength manually');
+    if (drug) {
+      name = drug.name; strength = drug.strength; ndcDisplay = drug.ndc;
+      // Pre-filled from the package's declared unit count — still editable,
+      // since this bottle may not have been full when it was destroyed.
+      quantity = drug.quantity || '';
+    } else {
+      toast('Scanned OK, but no openFDA match — fill in name/strength manually');
+    }
   } else {
     toast('Could not read GTIN from barcode — check item manually');
   }
 
-  addItem({ name, strength, ndc: ndcDisplay, lot, expiration, quantity: '' });
+  addItem({ name, strength, ndc: ndcDisplay, lot, expiration, quantity });
 }
 
 // ---------- Items table ----------
