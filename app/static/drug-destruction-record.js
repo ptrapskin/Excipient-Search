@@ -100,6 +100,33 @@ function buildNdcCandidatesFromGtin(gtin14) {
   return [...candidates];
 }
 
+function titleCase(s) {
+  return (s || '').toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// openFDA returns ALL-CAPS brand/generic names and per-ingredient strength
+// strings like "30 mg/1" (i.e. "per 1 unit"). Compose these the way a
+// pharmacist actually writes them: "Brand (generic)" and "30 mg tablet"
+// rather than repeating the ingredient name in the strength field.
+function formatDrugInfo(r) {
+  const brand = r.brand_name ? titleCase(r.brand_name) : '';
+  const generic = r.generic_name ? r.generic_name.toLowerCase() : '';
+  let name = brand || titleCase(generic);
+  if (brand && generic && generic !== brand.toLowerCase()) {
+    name = `${brand} (${generic})`;
+  }
+
+  let strength = '';
+  if (r.active_ingredients && r.active_ingredients.length) {
+    const perIngredient = r.active_ingredients
+      .map(a => (a.strength || '').split('/')[0].trim())
+      .filter(Boolean);
+    strength = perIngredient.join('/');
+    if (r.dosage_form) strength = `${strength} ${r.dosage_form.toLowerCase()}`.trim();
+  }
+  return { name, strength };
+}
+
 async function lookupDrugByGtin(gtin14) {
   const candidates = buildNdcCandidatesFromGtin(gtin14);
   for (const cand of candidates) {
@@ -112,12 +139,7 @@ async function lookupDrugByGtin(gtin14) {
       const data = await res.json();
       if (data.results && data.results[0]) {
         const r = data.results[0];
-        const name = r.brand_name || r.generic_name || '';
-        let strength = '';
-        if (r.active_ingredients && r.active_ingredients.length) {
-          strength = r.active_ingredients.map(a => `${a.name} ${a.strength}`).join(', ');
-        }
-        return { name, strength, ndc: cand };
+        return { ...formatDrugInfo(r), ndc: cand };
       }
     } catch (e) { /* try next candidate */ }
   }
