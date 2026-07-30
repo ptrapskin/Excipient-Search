@@ -12,6 +12,17 @@ function toast(msg, ms = 2600) {
   t._timer = setTimeout(() => t.classList.remove('show'), ms);
 }
 
+// Each tool injects the signature as a large base64 data: URL <img> right
+// before calling window.print(). Even for a data URL (no network fetch
+// needed), the browser still decodes the image asynchronously — calling
+// print() immediately after setting .innerHTML can race that decode and
+// print/save a PDF with a blank spot where the signature should be.
+// img.decode() resolves once the image is actually ready to paint.
+async function waitForImagesToDecode(container) {
+  const imgs = [...container.querySelectorAll('img')];
+  await Promise.all(imgs.map(img => img.decode().catch(() => {})));
+}
+
 // Used by each tool's "Generate & Print" validation: a toast alone doesn't
 // tell you WHICH field is empty, especially scrolled off-screen (a header
 // field above, or an item row below a long list). This scrolls to it,
@@ -43,9 +54,13 @@ document.addEventListener('input', e => {
 // refocus (see initWedgeScanner) so that has the last word too.
 function preserveScroll(fn) {
   const x = window.scrollX, y = window.scrollY;
-  fn();
-  requestAnimationFrame(() => window.scrollTo(x, y));
-  setTimeout(() => window.scrollTo(x, y), 80);
+  const restore = () => { requestAnimationFrame(() => window.scrollTo(x, y)); setTimeout(() => window.scrollTo(x, y), 80); };
+  const result = fn();
+  // Generate's handler is async (it awaits the signature image decoding
+  // before printing) — if fn() returns a promise, wait for it so the
+  // restore doesn't fire while the real work is still pending.
+  if (result && typeof result.then === 'function') result.then(restore);
+  else restore();
 }
 
 // ---------- GS1 DataMatrix parsing ----------

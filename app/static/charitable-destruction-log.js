@@ -248,7 +248,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
   if (!dateSignedEl.value) { warnMissingField(dateSignedEl, 'Enter the date signed before generating the record'); return; }
   const sourceProgram = document.getElementById('sourceProgram').value;
 
-  preserveScroll(() => {
+  preserveScroll(async () => {
     const facility = {
       sourceProgram,
       name: document.getElementById('facilityName').value,
@@ -269,7 +269,12 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     pages.forEach((pageItems, pIdx) => {
       html += buildFormPage(facility, pageItems, sigDataUrl, pIdx === pages.length - 1);
     });
-    document.getElementById('print-area').innerHTML = html;
+    const printArea = document.getElementById('print-area');
+    printArea.innerHTML = html;
+    // Wait for the signature <img> to actually finish decoding — otherwise
+    // printing immediately after setting a large data-URL src can race the
+    // browser's decode and produce a blank spot where the signature should be.
+    await waitForImagesToDecode(printArea);
 
     if (isIOS) {
       toast('Opening print preview — use the Share icon, then "Save to Files" for a PDF', 5000);
