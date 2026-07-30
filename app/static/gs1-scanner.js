@@ -34,6 +34,20 @@ document.addEventListener('input', e => {
   if (e.target.classList) e.target.classList.remove('field-missing');
 });
 
+// Clicking Add/Reset/Generate re-renders the items table (changing page
+// height) while also natively focusing the clicked button — the combination
+// makes some browsers invoke their own "scroll the focused element into
+// view" heuristic, silently jumping the page even though nothing asked it
+// to. Wrap the action and forcibly re-assert the pre-click scroll position
+// afterward, including a second pass after the wedge-scanner's delayed
+// refocus (see initWedgeScanner) so that has the last word too.
+function preserveScroll(fn) {
+  const x = window.scrollX, y = window.scrollY;
+  fn();
+  requestAnimationFrame(() => window.scrollTo(x, y));
+  setTimeout(() => window.scrollTo(x, y), 80);
+}
+
 // ---------- GS1 DataMatrix parsing ----------
 const GS = String.fromCharCode(29); // FNC1 group separator as decoded by ZXing
 
@@ -369,12 +383,25 @@ function initBarcodeScanner(onDecodedText) {
     // Keep the hidden capture input focused so wedge keystrokes always land
     // here, except while the user is legitimately typing into a real field —
     // in that case leave focus alone rather than stealing it mid-edit.
+    //
+    // preventScroll:true is the primary defense — this refocus is invisible
+    // housekeeping (so scanning can resume after clicking a button), not
+    // something the user asked to jump to. It's not universally honored
+    // though (older Safari ignores it entirely, pre-15.4), so back it with
+    // an explicit scroll-position restore too: without either, every click
+    // of Add/Reset/Generate would scroll the page to wherever this hidden
+    // input sits.
+    function focusWedgeInputInPlace() {
+      const x = window.scrollX, y = window.scrollY;
+      wedgeInput.focus({ preventScroll: true });
+      if (window.scrollX !== x || window.scrollY !== y) window.scrollTo(x, y);
+    }
     function refocusIfIdle() {
       const active = document.activeElement;
       const el = active && active.tagName;
-      if (!active || active === document.body || el === 'BUTTON') wedgeInput.focus();
+      if (!active || active === document.body || el === 'BUTTON') focusWedgeInputInPlace();
     }
-    wedgeInput.focus();
+    focusWedgeInputInPlace();
     document.addEventListener('focusin', () => setTimeout(refocusIfIdle, 50));
 
     wedgeInput.addEventListener('keydown', (e) => {

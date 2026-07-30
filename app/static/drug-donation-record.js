@@ -126,7 +126,7 @@ function addItem(item) {
 }
 
 document.getElementById('addManualBtn').addEventListener('click', () => {
-  addItem({ name: '', strength: '', ndc: '', lot: '', expiration: '', quantity: '', unit: '' });
+  preserveScroll(() => addItem({ name: '', strength: '', ndc: '', lot: '', expiration: '', quantity: '', unit: '' }));
 });
 
 function unitSelectHtml(idx, selected) {
@@ -245,18 +245,20 @@ document.getElementById('clearSigBtn').addEventListener('click', () => {
 // ---------- Reset ----------
 document.getElementById('resetBtn').addEventListener('click', () => {
   if (!confirm('Clear all scanned items and the signature? Recipient info is kept, donor info is cleared.')) return;
-  // Clear any red "missing field" highlight left over from a prior failed
-  // Generate attempt — without this, Reset could look like it did nothing
-  // if the only visible symptom was a highlighted header field.
-  document.querySelectorAll('.field-missing').forEach(el => el.classList.remove('field-missing'));
-  state.items = [];
-  renderItems();
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  hasSig = false;
-  document.getElementById('sigStatus').textContent = 'Not signed';
-  document.getElementById('sigStatus').style.color = '#c0392b';
-  clearDonorFields(false);
-  clearTimeout(donorIdleTimer);
+  preserveScroll(() => {
+    // Clear any red "missing field" highlight left over from a prior failed
+    // Generate attempt — without this, Reset could look like it did nothing
+    // if the only visible symptom was a highlighted header field.
+    document.querySelectorAll('.field-missing').forEach(el => el.classList.remove('field-missing'));
+    state.items = [];
+    renderItems();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    hasSig = false;
+    document.getElementById('sigStatus').textContent = 'Not signed';
+    document.getElementById('sigStatus').style.color = '#c0392b';
+    clearDonorFields(false);
+    clearTimeout(donorIdleTimer);
+  });
 });
 
 // ---------- Generate printable official record ----------
@@ -298,41 +300,43 @@ document.getElementById('generateBtn').addEventListener('click', () => {
   const dateSignedEl = document.getElementById('dateSigned');
   if (!dateSignedEl.value) { warnMissingField(dateSignedEl, 'Enter the date signed before generating the record'); return; }
 
-  const donor = {
-    name: document.getElementById('donorName').value,
-    address: document.getElementById('donorAddress').value,
-    city: document.getElementById('donorCity').value,
-    state: document.getElementById('donorState').value,
-    zip: document.getElementById('donorZip').value,
-    dateDonated: fmtDate(document.getElementById('dateDonated').value),
-    dateSigned: fmtDate(document.getElementById('dateSigned').value),
-    recipientName: document.getElementById('recipientName').value,
-  };
-  const sigDataUrl = canvas.toDataURL('image/png');
+  preserveScroll(() => {
+    const donor = {
+      name: document.getElementById('donorName').value,
+      address: document.getElementById('donorAddress').value,
+      city: document.getElementById('donorCity').value,
+      state: document.getElementById('donorState').value,
+      zip: document.getElementById('donorZip').value,
+      dateDonated: fmtDate(document.getElementById('dateDonated').value),
+      dateSigned: fmtDate(document.getElementById('dateSigned').value),
+      recipientName: document.getElementById('recipientName').value,
+    };
+    const sigDataUrl = canvas.toDataURL('image/png');
 
-  const pages = [];
-  for (let i = 0; i < state.items.length; i += 10) pages.push(state.items.slice(i, i + 10));
+    const pages = [];
+    for (let i = 0; i < state.items.length; i += 10) pages.push(state.items.slice(i, i + 10));
 
-  let html = '';
-  pages.forEach((pageItems, pIdx) => {
-    html += buildFormPage(donor, pageItems, sigDataUrl, pIdx === pages.length - 1);
+    let html = '';
+    pages.forEach((pageItems, pIdx) => {
+      html += buildFormPage(donor, pageItems, sigDataUrl, pIdx === pages.length - 1);
+    });
+    document.getElementById('print-area').innerHTML = html;
+
+    if (isIOS) {
+      toast('Opening print preview — use the Share icon, then "Save to Files" for a PDF', 5000);
+    }
+    window.print();
+
+    // Donor info is patient-identifying — clear it from memory immediately
+    // after the record is generated. From this point on, the printed/saved
+    // output is the durable record; the app's responsibility for this data
+    // ends here. Handle that output per SVdP's standard PHI procedures
+    // (secure storage, controlled disposal) — this app does not store or
+    // transmit donor data itself.
+    clearDonorFields(false);
+    clearTimeout(donorIdleTimer);
+    toast('Record generated and donor info cleared from this page. The printed/saved file now contains donor information — handle it per SVdP’s PHI procedures.', 6000);
   });
-  document.getElementById('print-area').innerHTML = html;
-
-  if (isIOS) {
-    toast('Opening print preview — use the Share icon, then "Save to Files" for a PDF', 5000);
-  }
-  window.print();
-
-  // Donor info is patient-identifying — clear it from memory immediately
-  // after the record is generated. From this point on, the printed/saved
-  // output is the durable record; the app's responsibility for this data
-  // ends here. Handle that output per SVdP's standard PHI procedures
-  // (secure storage, controlled disposal) — this app does not store or
-  // transmit donor data itself.
-  clearDonorFields(false);
-  clearTimeout(donorIdleTimer);
-  toast('Record generated and donor info cleared from this page. The printed/saved file now contains donor information — handle it per SVdP’s PHI procedures.', 6000);
 });
 
 function fmtDate(iso) {

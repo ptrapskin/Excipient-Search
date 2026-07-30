@@ -65,7 +65,7 @@ function addItem(item) {
 }
 
 document.getElementById('addManualBtn').addEventListener('click', () => {
-  addItem({ name: '', strength: '', ndc: '', lot: '', expiration: '', quantity: '' });
+  preserveScroll(() => addItem({ name: '', strength: '', ndc: '', lot: '', expiration: '', quantity: '' }));
 });
 
 function renderItems() {
@@ -167,16 +167,18 @@ document.getElementById('clearSigBtn').addEventListener('click', () => {
 // ---------- Reset ----------
 document.getElementById('resetBtn').addEventListener('click', () => {
   if (!confirm('Clear all scanned items and the signature? Facility info is kept.')) return;
-  // Clear any red "missing field" highlight left over from a prior failed
-  // Generate attempt — without this, Reset could look like it did nothing
-  // if the only visible symptom was a highlighted header field.
-  document.querySelectorAll('.field-missing').forEach(el => el.classList.remove('field-missing'));
-  state.items = [];
-  renderItems();
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  hasSig = false;
-  document.getElementById('sigStatus').textContent = 'Not signed';
-  document.getElementById('sigStatus').style.color = '#c0392b';
+  preserveScroll(() => {
+    // Clear any red "missing field" highlight left over from a prior failed
+    // Generate attempt — without this, Reset could look like it did nothing
+    // if the only visible symptom was a highlighted header field.
+    document.querySelectorAll('.field-missing').forEach(el => el.classList.remove('field-missing'));
+    state.items = [];
+    renderItems();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    hasSig = false;
+    document.getElementById('sigStatus').textContent = 'Not signed';
+    document.getElementById('sigStatus').style.color = '#c0392b';
+  });
 });
 
 // ---------- Generate printable official record ----------
@@ -213,31 +215,33 @@ document.getElementById('generateBtn').addEventListener('click', () => {
   const dateSignedEl = document.getElementById('dateSigned');
   if (!dateSignedEl.value) { warnMissingField(dateSignedEl, 'Enter the date signed before generating the record'); return; }
 
-  const facility = {
-    name: document.getElementById('facilityName').value,
-    address: document.getElementById('facilityAddress').value,
-    city: document.getElementById('facilityCity').value,
-    state: document.getElementById('facilityState').value,
-    zip: document.getElementById('facilityZip').value,
-    person: document.getElementById('personDestroying').value,
-    dateDestroyed: fmtDate(document.getElementById('dateDestroyed').value),
-    dateSigned: fmtDate(document.getElementById('dateSigned').value),
-  };
-  const sigDataUrl = canvas.toDataURL('image/png');
+  preserveScroll(() => {
+    const facility = {
+      name: document.getElementById('facilityName').value,
+      address: document.getElementById('facilityAddress').value,
+      city: document.getElementById('facilityCity').value,
+      state: document.getElementById('facilityState').value,
+      zip: document.getElementById('facilityZip').value,
+      person: document.getElementById('personDestroying').value,
+      dateDestroyed: fmtDate(document.getElementById('dateDestroyed').value),
+      dateSigned: fmtDate(document.getElementById('dateSigned').value),
+    };
+    const sigDataUrl = canvas.toDataURL('image/png');
 
-  const pages = [];
-  for (let i = 0; i < state.items.length; i += 10) pages.push(state.items.slice(i, i + 10));
+    const pages = [];
+    for (let i = 0; i < state.items.length; i += 10) pages.push(state.items.slice(i, i + 10));
 
-  let html = '';
-  pages.forEach((pageItems, pIdx) => {
-    html += buildFormPage(facility, pageItems, sigDataUrl, pIdx === pages.length - 1);
+    let html = '';
+    pages.forEach((pageItems, pIdx) => {
+      html += buildFormPage(facility, pageItems, sigDataUrl, pIdx === pages.length - 1);
+    });
+    document.getElementById('print-area').innerHTML = html;
+
+    if (isIOS) {
+      toast('Opening print preview — use the Share icon, then "Save to Files" for a PDF', 5000);
+    }
+    window.print();
   });
-  document.getElementById('print-area').innerHTML = html;
-
-  if (isIOS) {
-    toast('Opening print preview — use the Share icon, then "Save to Files" for a PDF', 5000);
-  }
-  window.print();
 });
 
 function fmtDate(iso) {
