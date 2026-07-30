@@ -313,7 +313,7 @@ function renderItems() {
   }
   let html = '<div class="dr-table-scroll"><table><thead><tr>' +
     '<th class="dr-row-num">#</th><th>Name of Drug/Supply</th><th>Strength</th><th>NDC No.</th>' +
-    '<th>Lot No.</th><th>Expiration</th><th>Qty Destroyed</th><th></th></tr></thead><tbody>';
+    '<th>Lot No.</th><th>Expiration</th><th title="Number of units (tablets/capsules/mL), not packages">Qty Destroyed (units)</th><th></th></tr></thead><tbody>';
   state.items.forEach((it, idx) => {
     html += `<tr>
       <td class="dr-row-num">${idx + 1}</td>
@@ -322,7 +322,7 @@ function renderItems() {
       <td><input type="text" data-idx="${idx}" data-field="ndc" value="${escapeHtml(it.ndc)}"></td>
       <td><input type="text" data-idx="${idx}" data-field="lot" value="${escapeHtml(it.lot)}"></td>
       <td><input type="text" data-idx="${idx}" data-field="expiration" value="${escapeHtml(it.expiration)}"></td>
-      <td><input type="text" inputmode="numeric" class="${it.quantity ? '' : 'dr-qty-empty'}" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
+      <td><input type="text" inputmode="numeric" placeholder="# units" title="Number of units (tablets/capsules/mL), not packages" class="${it.quantity ? '' : 'dr-qty-empty'}" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
       <td><button class="dr-remove-btn" data-idx="${idx}" aria-label="Remove item">✕</button></td>
     </tr>`;
   });

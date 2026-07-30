@@ -58,6 +58,7 @@
   <!-- ITEMS TABLE -->
   <div class="dr-card no-print">
     <h2>Drug / Medical Supply Information</h2>
+    <p class="dr-qty-hint">Enter the number of individual units destroyed (tablets, capsules, mL, patches, etc.) &mdash; not the number of bottles/packages.</p>
     <div id="itemsTableWrap">
       <div class="dr-empty-state" id="emptyState">No items scanned yet</div>
     </div>
@@ -162,6 +163,7 @@
   .dr-row-num { width: 22px; text-align: center; color: var(--dr-gray); }
   .dr-remove-btn { color: var(--dr-red); background: none; border: none; cursor: pointer; font-size: 16px; padding: 0 4px; }
   .dr-empty-state { color: var(--dr-gray); font-size: 13px; text-align: center; padding: 18px 0; }
+  .dr-qty-hint { font-size: 12px; color: var(--dr-gray); margin: -4px 0 10px; }
   .dr-sig-pad-wrap { border: 1px solid var(--dr-border); border-radius: 8px; overflow: hidden; margin-top: 4px; }
   canvas#sigpad { width: 100%; height: 130px; display: block; background: #fff; touch-action: none; }
   .dr-sig-controls { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #f7f9fb; font-size: 12px; }
@@ -245,5 +247,5 @@
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
-<script src="{{ url_for('static', path='/drug-destruction-record.js') }}?v=5" defer></script>
+<script src="{{ url_for('static', path='/drug-destruction-record.js') }}?v=6" defer></script>
 {% endblock %}
