@@ -225,7 +225,7 @@ function pos(e) {
   const p = e.touches ? e.touches[0] : e;
   return { x: p.clientX - rect.left, y: p.clientY - rect.top };
 }
-function start(e) { drawing = true; hasSig = true; const p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); document.getElementById('sigStatus').textContent = 'Signed'; document.getElementById('sigStatus').style.color = '#1a7a3a'; e.preventDefault(); }
+function start(e) { drawing = true; hasSig = true; const p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); document.getElementById('sigStatus').textContent = 'Signed'; document.getElementById('sigStatus').style.color = '#1a7a3a'; document.querySelector('.dn-sig-pad-wrap')?.classList.remove('field-missing'); e.preventDefault(); }
 function move(e) { if (!drawing) return; const p = pos(e); ctx.lineTo(p.x, p.y); ctx.stroke(); e.preventDefault(); }
 function end() { drawing = false; }
 canvas.addEventListener('mousedown', start);
@@ -256,14 +256,43 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 });
 
 // ---------- Generate printable official record ----------
+// Required fields, checked top-to-bottom to match reading order — the first
+// missing one gets scrolled to, highlighted, and named, rather than silently
+// letting the record print with a blank field.
+const REQUIRED_FIELDS = [
+  ['donorName', 'the donor name'],
+  ['donorAddress', 'the donor street address'],
+  ['donorCity', 'the donor city'],
+  ['donorState', 'the donor state'],
+  ['donorZip', 'the donor zip code'],
+  ['dateDonated', 'the date donated'],
+  ['recipientName', 'the recipient facility name'],
+];
+
 document.getElementById('generateBtn').addEventListener('click', () => {
+  for (const [id, label] of REQUIRED_FIELDS) {
+    const el = document.getElementById(id);
+    if (!el.value) { warnMissingField(el, `Enter ${label} before generating the record`); return; }
+  }
   if (state.items.length === 0) { toast('Add at least one item before generating the record'); return; }
-  const missingQty = state.items.some(it => !it.quantity);
-  if (missingQty) { toast('Enter a quantity for every item before generating'); return; }
-  const missingUnit = state.items.some(it => !it.unit);
-  if (missingUnit) { toast('Pick a unit (tablets, mL, etc.) for every item before generating'); return; }
-  if (!hasSig) { toast('Signature is required before generating the record'); return; }
-  if (!document.getElementById('donorName').value) { toast('Donor name is required before generating the record'); return; }
+  for (let i = 0; i < state.items.length; i++) {
+    if (!state.items[i].quantity) {
+      const el = document.querySelector(`#itemsTableWrap [data-field="quantity"][data-idx="${i}"]`);
+      warnMissingField(el, `Enter a quantity for item ${i + 1} before generating the record`);
+      return;
+    }
+    if (!state.items[i].unit) {
+      const el = document.querySelector(`#itemsTableWrap [data-field="unit"][data-idx="${i}"]`);
+      warnMissingField(el, `Pick a unit for item ${i + 1} before generating the record`);
+      return;
+    }
+  }
+  if (!hasSig) {
+    warnMissingField(document.querySelector('.dn-sig-pad-wrap'), 'Signature is required before generating the record');
+    return;
+  }
+  const dateSignedEl = document.getElementById('dateSigned');
+  if (!dateSignedEl.value) { warnMissingField(dateSignedEl, 'Enter the date signed before generating the record'); return; }
 
   const donor = {
     name: document.getElementById('donorName').value,

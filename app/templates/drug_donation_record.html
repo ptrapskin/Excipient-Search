@@ -198,6 +198,10 @@
   .dn-tool th { background: #eef2f6; font-size: 11.5px; }
   .dn-tool td input[type=text] { border: none; padding: 3px; font-size: 12.5px; background: transparent; }
   .dn-tool td input.dn-qty-empty, .dn-tool td select.dn-qty-empty { background: #fdecea; border: 1px solid var(--dn-red); border-radius: 4px; }
+  /* Applied by warnMissingField() (gs1-scanner.js) when Generate is clicked
+     with a required field left blank — scrolled to, focused, and named in a
+     toast, so a missing field is never just silently printed empty. */
+  .dn-tool .field-missing { border-color: var(--dn-red) !important; box-shadow: 0 0 0 2px rgba(192,57,43,0.15); }
   .dn-tool td select.dn-unit-select { width: 100%; font-size: 12px; padding: 3px 2px; border: 1px solid var(--dn-border); border-radius: 4px; background: #fff; }
 
   /* On phone-width screens, an 8-column table is too cramped to read at a
@@ -339,6 +343,6 @@
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
-<script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=1" defer></script>
-<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=1" defer></script>
+<script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=2" defer></script>
+<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=2" defer></script>
 {% endblock %}

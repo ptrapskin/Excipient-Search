@@ -12,6 +12,28 @@ function toast(msg, ms = 2600) {
   t._timer = setTimeout(() => t.classList.remove('show'), ms);
 }
 
+// Used by each tool's "Generate & Print" validation: a toast alone doesn't
+// tell you WHICH field is empty, especially scrolled off-screen (a header
+// field above, or an item row below a long list). This scrolls to it,
+// highlights it, focuses it, and names it in the toast, then returns false
+// so the caller can bail out of generation. Each page defines its own
+// ".field-missing" CSS rule inside its scoped <style> block.
+function warnMissingField(el, message) {
+  if (el) {
+    el.classList.add('field-missing');
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => el.focus(), 300); // let the scroll settle before focusing
+  }
+  toast(message);
+  return false;
+}
+
+// Clear a field's highlight the moment the user edits it, rather than making
+// them re-click Generate just to find out it's fixed.
+document.addEventListener('input', e => {
+  if (e.target.classList) e.target.classList.remove('field-missing');
+});
+
 // ---------- GS1 DataMatrix parsing ----------
 const GS = String.fromCharCode(29); // FNC1 group separator as decoded by ZXing
 
