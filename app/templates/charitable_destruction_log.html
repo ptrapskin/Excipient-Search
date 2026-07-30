@@ -1,0 +1,337 @@
+{% extends "base.html" %}
+
+{% block title %}Charitable Pharmacy Destruction Log | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel cl-tool">
+  <h1>Charitable Pharmacy Destruction Log</h1>
+  <p class="tagline">
+    For medications from charitable donation programs (Dispensary of Hope, Americares, etc.) &mdash;
+    not the Wisconsin Drug Repository Program, which has its own
+    <a href="/drug-destruction-record">Drug Repository Destruction Record</a> tool.
+  </p>
+
+  <div class="cl-note no-print">
+    Use this log for medications from charitable donation programs (Dispensary of Hope, Americares, etc.)
+    that are NOT part of the Wisconsin Drug Repository Program &mdash; those should use the separate
+    Drug Repository Destruction Record instead. Scan each item's barcode to auto-fill drug name, strength,
+    NDC, lot, and expiration. Enter the quantity and unit (tablets, mL, etc.) for each item, fill in the
+    destruction details once, sign, then generate the printable log. Retention requirements vary by
+    program (e.g. Dispensary of Hope requires records be kept at least 3 years) &mdash; check your
+    specific program's requirements.
+  </div>
+
+  <!-- FACILITY / DESTRUCTION INFO -->
+  <div class="cl-card no-print">
+    <h2>Pharmacy / Facility Information</h2>
+    <div class="cl-field">
+      <label for="sourceProgram">Source Program</label>
+      <select id="sourceProgram">
+        <option value="">Select source program&hellip;</option>
+        <option value="Dispensary of Hope">Dispensary of Hope</option>
+        <option value="Americares">Americares</option>
+        <option value="Other">Other charitable donation program</option>
+      </select>
+    </div>
+    <div class="cl-field">
+      <label for="facilityName">Name &ndash; Pharmacy or Medical Facility</label>
+      <input type="text" id="facilityName" autocomplete="organization">
+    </div>
+    <div class="cl-field">
+      <label for="facilityAddress">Street Address</label>
+      <input type="text" id="facilityAddress" autocomplete="street-address">
+    </div>
+    <div class="cl-grid3">
+      <div class="cl-field"><label for="facilityCity">City</label><input type="text" id="facilityCity" autocomplete="address-level2"></div>
+      <div class="cl-field"><label for="facilityState">State</label><input type="text" id="facilityState" value="WI" autocomplete="address-level1"></div>
+      <div class="cl-field"><label for="facilityZip">Zip Code</label><input type="text" id="facilityZip" inputmode="numeric" autocomplete="postal-code"></div>
+    </div>
+    <div class="cl-grid2">
+      <div class="cl-field">
+        <label for="personDestroying">Name &ndash; Person Destroying Drugs / Supplies</label>
+        <input type="text" id="personDestroying">
+      </div>
+      <div class="cl-field">
+        <label for="dateDestroyed">Date Destroyed</label>
+        <input type="date" id="dateDestroyed">
+      </div>
+    </div>
+  </div>
+
+  <!-- SCANNER -->
+  <div class="cl-card no-print">
+    <h2>Scan Items</h2>
+    <div id="cameraScanSection">
+      <button class="cl-btn-primary" id="startScanBtn" type="button">📷 Scan Item Barcode</button>
+      <div id="scanner-wrap">
+        <video id="video" playsinline muted autoplay></video>
+        <div class="cl-scan-status" id="scanStatus">Hold the phone a few inches away so the barcode fills most of the frame</div>
+        <button class="cl-btn-secondary cl-btn-small" id="cancelScanBtn" type="button" style="margin-top:8px;width:100%;">Cancel</button>
+      </div>
+    </div>
+    <div id="wedgeStatus" class="cl-wedge-status" style="display:none;">
+      <span><span class="cl-wedge-dot"></span><strong>Scanner ready</strong> &mdash; scan the next item</span>
+      <span class="cl-wedge-hint">Using a USB/Bluetooth barcode scanner in keyboard-wedge mode &mdash; just scan, no button needed. On a phone, use the camera instead.</span>
+    </div>
+    <input type="text" id="wedgeCaptureInput" class="cl-visually-hidden" autocomplete="off" aria-hidden="true" tabindex="-1">
+  </div>
+
+  <!-- ITEMS TABLE -->
+  <div class="cl-card no-print">
+    <h2>Drug / Medical Supply Information</h2>
+    <p class="cl-qty-hint">Enter the number of individual units destroyed (tablets, capsules, mL, patches, etc.) and pick a unit &mdash; not the number of bottles/packages.</p>
+    <div id="itemsTableWrap">
+      <div class="cl-empty-state" id="emptyState">No items scanned yet</div>
+    </div>
+    <button class="cl-btn-secondary cl-btn-small" id="addManualBtn" type="button" style="margin-top:8px;">+ Add Item Manually</button>
+  </div>
+
+  <!-- SIGNATURE -->
+  <div class="cl-card no-print">
+    <h2>Signature</h2>
+    <div class="cl-field">
+      <label for="dateSigned">Date Signed</label>
+      <input type="date" id="dateSigned">
+    </div>
+    <label>Signature &ndash; Person Destroying Drugs or Medical Supplies</label>
+    <div class="cl-sig-pad-wrap">
+      <canvas id="sigpad"></canvas>
+    </div>
+    <div class="cl-sig-controls">
+      <span id="sigStatus" style="color:#c0392b;">Not signed</span>
+      <button class="cl-btn-secondary cl-btn-small" id="clearSigBtn" type="button">Clear</button>
+    </div>
+  </div>
+
+  <p class="cl-ios-hint no-print" id="iosPrintHint" style="display:none;">
+    On iPhone/iPad: after tapping "Generate &amp; Print Record", use the Share icon in the print
+    preview and choose "Save to Files" to get a PDF.
+  </p>
+
+  <div class="cl-actions no-print">
+    <button class="cl-btn-secondary" id="resetBtn" type="button">Reset Form</button>
+    <button class="cl-btn-primary" id="generateBtn" type="button">Generate &amp; Print Record</button>
+  </div>
+
+  <!-- PRINT-ONLY LAYOUT, injected on generate -->
+  <div id="print-area"></div>
+</section>
+
+<div id="toast"></div>
+
+<style>
+  .cl-tool { --cl-blue: #1a4d7a; --cl-blue-dark: #0d3253; --cl-gray: #666; --cl-border: #ccc; --cl-red: #c0392b; }
+  /* The site header is position:sticky (styles.css), which stacks above static
+     content scrolled underneath it. iOS Safari auto-scrolls a focused field to
+     the top of the viewport when the keyboard opens, which would otherwise
+     tuck it behind the header and make it untappable. */
+  .cl-tool input, .cl-tool button, .cl-tool canvas, #sigpad { scroll-margin-top: 100px; }
+  .cl-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .cl-card h2 {
+    font-size: 15px;
+    margin: 0 0 12px;
+    color: var(--cl-blue-dark);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+  }
+  .cl-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cl-grid3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; }
+  .cl-tool label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cl-gray);
+    margin-bottom: 3px;
+  }
+  .cl-tool input[type=text], .cl-tool input[type=date], .cl-tool select {
+    width: 100%;
+    padding: 8px 9px;
+    border: 1px solid var(--cl-border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #fff;
+  }
+  .cl-field { margin-bottom: 10px; }
+  .cl-tool button {
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  .cl-btn-primary { background: var(--cl-blue); color: #fff; width: 100%; }
+  .cl-btn-primary:active { background: var(--cl-blue-dark); }
+  .cl-btn-secondary { background: #e6ecf1; color: var(--cl-blue-dark); }
+  .cl-btn-small { padding: 5px 10px; font-size: 12px; }
+  #scanner-wrap { display: none; margin-top: 12px; }
+  #scanner-wrap.active { display: block; }
+  #scanner-wrap video { width: 100%; border-radius: 8px; background: #000; }
+  .cl-scan-status { text-align: center; font-size: 13px; color: var(--cl-gray); margin-top: 6px; min-height: 18px; }
+  .cl-wedge-status {
+    display: flex; flex-direction: column; gap: 4px;
+    padding: 10px 12px; border-radius: 8px;
+    background: #eef7ee; border: 1px solid #cfe8cf;
+    font-size: 13px; color: #1a5c1a;
+  }
+  .cl-wedge-dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: #2e9e2e; margin-right: 6px;
+  }
+  .cl-wedge-hint { font-size: 12px; color: var(--cl-gray); }
+  .cl-visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+  .cl-table-scroll { overflow-x: auto; }
+  .cl-tool table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+  .cl-tool th, .cl-tool td { border: 1px solid var(--cl-border); padding: 6px; font-size: 12.5px; text-align: left; vertical-align: top; }
+  .cl-tool th { background: #eef2f6; font-size: 11.5px; }
+  .cl-tool td input[type=text] { border: none; padding: 3px; font-size: 12.5px; background: transparent; }
+  .cl-tool td input.cl-qty-empty, .cl-tool td select.cl-qty-empty { background: #fdecea; border: 1px solid var(--cl-red); border-radius: 4px; }
+  .cl-tool td select.cl-unit-select { width: 100%; font-size: 12px; padding: 3px 2px; border: 1px solid var(--cl-border); border-radius: 4px; background: #fff; }
+
+  /* On phone-width screens, an 8-column table is too cramped to read at a
+     glance. Switch each row to a labeled, stacked card instead — same
+     markup, just re-laid-out via CSS (print output is untouched, since
+     @media print already forces its own separate layout). */
+  @media (max-width: 640px) {
+    .cl-table-scroll { overflow-x: visible; }
+    #itemsTableWrap table, #itemsTableWrap tbody, #itemsTableWrap tr, #itemsTableWrap td { display: block; width: auto; }
+    #itemsTableWrap thead { display: none; }
+    #itemsTableWrap tbody tr {
+      border: 1px solid var(--cl-border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      background: #fafbfc;
+    }
+    #itemsTableWrap tbody td {
+      border: none;
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #itemsTableWrap tbody td::before {
+      content: attr(data-label);
+      flex: 0 0 78px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--cl-gray);
+      text-transform: uppercase;
+    }
+    /* 16px prevents iOS Safari from auto-zooming the page when the input gets focus */
+    #itemsTableWrap tbody td input[type=text], #itemsTableWrap tbody td select { font-size: 16px; flex: 1; min-width: 0; }
+    #itemsTableWrap tbody td.cl-row-num { font-weight: 700; color: var(--cl-blue); font-size: 13px; }
+    #itemsTableWrap tbody td.cl-row-num::before { content: "Item"; }
+    #itemsTableWrap tbody td.cl-remove-cell {
+      justify-content: flex-end;
+      border-top: 1px solid #eee;
+      margin-top: 4px;
+      padding-top: 8px;
+    }
+    #itemsTableWrap tbody td.cl-remove-cell .cl-remove-btn {
+      font-size: 13px;
+      padding: 6px 14px;
+      background: #fdecea;
+      border-radius: 6px;
+    }
+  }
+  .cl-row-num { width: 22px; text-align: center; color: var(--cl-gray); }
+  .cl-remove-btn { color: var(--cl-red); background: none; border: none; cursor: pointer; font-size: 16px; padding: 0 4px; }
+  .cl-empty-state { color: var(--cl-gray); font-size: 13px; text-align: center; padding: 18px 0; }
+  .cl-qty-hint { font-size: 12px; color: var(--cl-gray); margin: -4px 0 10px; }
+  .cl-sig-pad-wrap { border: 1px solid var(--cl-border); border-radius: 8px; overflow: hidden; margin-top: 4px; }
+  canvas#sigpad { width: 100%; height: 130px; display: block; background: #fff; touch-action: none; }
+  .cl-sig-controls { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #f7f9fb; font-size: 12px; }
+  .cl-ios-hint { font-size: 12px; color: var(--cl-gray); background: #f7f9fb; border-left: 3px solid var(--cl-blue); padding: 8px 10px; border-radius: 4px; margin: 0 0 12px; }
+  .cl-actions { display: flex; gap: 10px; }
+  .cl-actions button { flex: 1; }
+  .cl-note {
+    font-size: 12px;
+    color: var(--cl-gray);
+    background: #f7f9fb;
+    border-left: 3px solid var(--cl-blue);
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  #toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    z-index: 50;
+    max-width: 85%;
+    text-align: center;
+  }
+  #toast.show { opacity: 1; }
+
+  /* ---- Print-only log layout ---- */
+  #print-area { display: none; }
+  @media print {
+    body * { visibility: hidden; }
+    #print-area, #print-area * { visibility: visible; }
+    #print-area { display: block; position: absolute; top: 0; left: 0; width: 100%; }
+    .site-header, .site-footer, .no-print { display: none !important; }
+  }
+  .cl-form-page {
+    width: 7.5in;
+    margin: 0 auto 0.4in;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10.5px;
+    color: #000;
+    page-break-after: always;
+  }
+  .cl-form-page:last-child { page-break-after: auto; }
+  .cl-form-title-block { text-align: left; margin-bottom: 6px; }
+  .cl-form-title-block .cl-agency { font-size: 13px; font-weight: bold; text-transform: uppercase; }
+  .cl-form-title-block .cl-division { font-size: 9.5px; }
+  .cl-form-title-block .cl-title { font-size: 11px; font-weight: bold; margin: 4px 0 0; }
+  .cl-form-note { font-size: 9px; margin-bottom: 8px; }
+  .cl-form-note li { margin-bottom: 2px; }
+  table.cl-official { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+  table.cl-official th, table.cl-official td {
+    border: 1px solid #000;
+    padding: 3px 5px;
+    font-size: 9.5px;
+    vertical-align: top;
+  }
+  table.cl-official .cl-label { font-size: 8px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
+  table.cl-official .cl-value { font-size: 10.5px; min-height: 14px; }
+  .cl-section-header {
+    background: #dde5ec;
+    font-weight: bold;
+    font-size: 9.5px;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid #000;
+    text-transform: uppercase;
+  }
+  .cl-drug-table th { background: #eef2f6; font-size: 8.5px; text-align: center; }
+  .cl-drug-table td { height: 20px; font-size: 9.5px; }
+  .cl-sig-line { border-bottom: 1px solid #000; height: 32px; position: relative; }
+  .cl-sig-line img { max-height: 30px; }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
+<script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=1" defer></script>
+<script src="{{ url_for('static', path='/charitable-destruction-log.js') }}?v=1" defer></script>
+{% endblock %}
