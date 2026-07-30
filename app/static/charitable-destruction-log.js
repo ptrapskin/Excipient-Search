@@ -193,6 +193,10 @@ document.getElementById('clearSigBtn').addEventListener('click', () => {
 // ---------- Reset ----------
 document.getElementById('resetBtn').addEventListener('click', () => {
   if (!confirm('Clear all scanned items and the signature? Facility info is kept.')) return;
+  // Clear any red "missing field" highlight left over from a prior failed
+  // Generate attempt — without this, Reset could look like it did nothing
+  // if the only visible symptom was a highlighted header field.
+  document.querySelectorAll('.field-missing').forEach(el => el.classList.remove('field-missing'));
   state.items = [];
   renderItems();
   ctx.clearRect(0, 0, canvas.width, canvas.height);
