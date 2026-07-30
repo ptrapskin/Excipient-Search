@@ -316,6 +316,92 @@ async function onScanSuccess(text) {
   addItem({ name, strength, ndc: ndcDisplay, lot, expiration, quantity });
 }
 
+// ---------- Keyboard-wedge scanner (desktop) ----------
+// USB/Bluetooth 2D scanners in "keyboard wedge" mode need no drivers or
+// camera access — they just emit the decoded payload as keystrokes, followed
+// by Enter, exactly as if someone typed it very fast. We tell that apart from
+// real typing purely by speed: scanner keystrokes land well under
+// WEDGE_MAX_GAP_MS apart, sustained for the whole string; a human typing
+// can't sustain that pace. A gap longer than that resets the buffer, so
+// normal typing elsewhere on the page never accidentally gets treated as a
+// scan.
+const WEDGE_MAX_GAP_MS = 50;
+const WEDGE_MIN_LENGTH = 8; // ignore stray/accidental short bursts
+
+// Most 2D scanners emit GS1's ASCII-29 "group separator" (the same GS
+// character parseGS1() already expects) between variable-length AI fields,
+// transmitted as a Ctrl+] keystroke since GS can't otherwise be typed — that
+// combination is detected automatically below. Some scanners are configured
+// to send a different printable delimiter instead (or strip it entirely).
+// If your scanner isn't producing a parseable result, check its manual for
+// an "AIM/GS1 field separator" setting — many scanners are configured by
+// scanning a special setup barcode from the manual — and change
+// WEDGE_DELIMITER below to whatever character it actually transmits.
+let WEDGE_DELIMITER = GS;
+
+// A phone always uses the camera; a desktop/laptop is assumed to have a
+// keyboard-wedge scanner instead. This doesn't need to be perfect — it just
+// needs to not hide the camera button on an actual phone, which the
+// pointer:coarse check alone reliably guarantees.
+function isDesktopScannerMode() {
+  const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+  const narrowViewport = window.matchMedia('(max-width: 700px)').matches;
+  return !coarsePointer && !narrowViewport;
+}
+
+function initWedgeScanner() {
+  const wedgeInput = document.getElementById('wedgeCaptureInput');
+  const wedgeStatus = document.getElementById('wedgeStatus');
+  const cameraSection = document.getElementById('cameraScanSection');
+  if (!wedgeInput || !wedgeStatus || !cameraSection) return;
+
+  const desktop = isDesktopScannerMode();
+  wedgeStatus.style.display = desktop ? 'flex' : 'none';
+  cameraSection.style.display = desktop ? 'none' : 'block';
+  if (!desktop) return;
+
+  let buffer = '';
+  let lastKeyTime = 0;
+
+  // Keep the hidden capture input focused so wedge keystrokes always land
+  // here, except while the user is legitimately typing into a real field —
+  // in that case leave focus alone rather than stealing it mid-edit.
+  function refocusIfIdle() {
+    const active = document.activeElement;
+    const el = active && active.tagName;
+    if (!active || active === document.body || el === 'BUTTON') wedgeInput.focus();
+  }
+  wedgeInput.focus();
+  document.addEventListener('focusin', () => setTimeout(refocusIfIdle, 50));
+
+  wedgeInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const candidate = buffer;
+      buffer = '';
+      if (candidate.length >= WEDGE_MIN_LENGTH) {
+        const normalized = WEDGE_DELIMITER === GS ? candidate : candidate.split(WEDGE_DELIMITER).join(GS);
+        onScanSuccess(normalized);
+      }
+      return;
+    }
+
+    const isGsCombo = e.ctrlKey && e.key === ']';
+    const isPrintable = !isGsCombo && e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey;
+    if (!isGsCombo && !isPrintable) return; // ignore Shift, Tab, arrows, etc.
+    e.preventDefault();
+
+    const now = performance.now();
+    if (buffer && now - lastKeyTime > WEDGE_MAX_GAP_MS) {
+      buffer = ''; // gap too long to be a scanner burst — start over
+    }
+    buffer += isGsCombo ? GS : e.key;
+    lastKeyTime = now;
+  });
+}
+
+initWedgeScanner();
+
 // ---------- Items table ----------
 function addItem(item) {
   state.items.push(item);
