@@ -271,49 +271,54 @@
   /* ---- Print-only official record layout ---- */
   #print-area { display: none; }
   @media print {
+    /* Without an explicit @page size/margin, the browser falls back to its
+       own print margins — if those end up narrower than our fixed content
+       width assumed, some browsers auto-"shrink to fit," scaling the whole
+       page (and every font size on it) down. Locking this down avoids that. */
+    @page { size: letter; margin: 0.4in; }
     body * { visibility: hidden; }
     #print-area, #print-area * { visibility: visible; }
     #print-area { display: block; position: absolute; top: 0; left: 0; width: 100%; }
     .site-header, .site-footer, .no-print { display: none !important; }
   }
   .dr-form-page {
-    width: 7.5in;
-    margin: 0 auto 0.4in;
+    width: 100%;
+    margin: 0 auto 0.3in;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10.5px;
+    font-size: 13px;
     color: #000;
     page-break-after: always;
   }
   .dr-form-page:last-child { page-break-after: auto; }
-  .dr-form-title-block { text-align: left; margin-bottom: 6px; }
-  .dr-form-title-block .dr-agency { font-size: 10px; font-weight: bold; }
-  .dr-form-title-block .dr-division { font-size: 9.5px; }
-  .dr-form-title-block .dr-formnum { font-size: 9px; float: right; }
-  .dr-form-title-block .dr-title { font-size: 13px; font-weight: bold; text-align: center; margin: 8px 0; text-transform: uppercase; }
-  .dr-form-note { font-size: 9px; margin-bottom: 8px; }
-  .dr-form-note li { margin-bottom: 2px; }
-  table.dr-official { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+  .dr-form-title-block { text-align: left; margin-bottom: 8px; }
+  .dr-form-title-block .dr-agency { font-size: 13px; font-weight: bold; }
+  .dr-form-title-block .dr-division { font-size: 12px; }
+  .dr-form-title-block .dr-formnum { font-size: 11px; float: right; }
+  .dr-form-title-block .dr-title { font-size: 17px; font-weight: bold; text-align: center; margin: 10px 0; text-transform: uppercase; }
+  .dr-form-note { font-size: 11px; margin-bottom: 10px; }
+  .dr-form-note li { margin-bottom: 3px; }
+  table.dr-official { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
   table.dr-official th, table.dr-official td {
     border: 1px solid #000;
-    padding: 3px 5px;
-    font-size: 9.5px;
+    padding: 6px 8px;
+    font-size: 12px;
     vertical-align: top;
   }
-  table.dr-official .dr-label { font-size: 8px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
-  table.dr-official .dr-value { font-size: 10.5px; min-height: 14px; }
+  table.dr-official .dr-label { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
+  table.dr-official .dr-value { font-size: 13px; min-height: 20px; }
   .dr-section-header {
     background: #dde5ec;
     font-weight: bold;
-    font-size: 9.5px;
+    font-size: 12px;
     text-align: center;
-    padding: 3px;
+    padding: 5px;
     border: 1px solid #000;
     text-transform: uppercase;
   }
-  .dr-drug-table th { background: #eef2f6; font-size: 8.5px; text-align: center; }
-  .dr-drug-table td { height: 20px; font-size: 9.5px; }
-  .dr-sig-line { border-bottom: 1px solid #000; height: 32px; position: relative; }
-  .dr-sig-line img { max-height: 30px; }
+  .dr-drug-table th { background: #eef2f6; font-size: 11px; text-align: center; padding: 6px 4px; }
+  .dr-drug-table td { height: 30px; font-size: 12px; }
+  .dr-sig-line { border-bottom: 1px solid #000; height: 44px; position: relative; }
+  .dr-sig-line img { max-height: 42px; }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>

@@ -287,48 +287,53 @@
   /* ---- Print-only log layout ---- */
   #print-area { display: none; }
   @media print {
+    /* Without an explicit @page size/margin, the browser falls back to its
+       own print margins — if those end up narrower than our fixed content
+       width assumed, some browsers auto-"shrink to fit," scaling the whole
+       page (and every font size on it) down. Locking this down avoids that. */
+    @page { size: letter; margin: 0.4in; }
     body * { visibility: hidden; }
     #print-area, #print-area * { visibility: visible; }
     #print-area { display: block; position: absolute; top: 0; left: 0; width: 100%; }
     .site-header, .site-footer, .no-print { display: none !important; }
   }
   .cl-form-page {
-    width: 7.5in;
-    margin: 0 auto 0.4in;
+    width: 100%;
+    margin: 0 auto 0.3in;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10.5px;
+    font-size: 13px;
     color: #000;
     page-break-after: always;
   }
   .cl-form-page:last-child { page-break-after: auto; }
-  .cl-form-title-block { text-align: left; margin-bottom: 6px; }
-  .cl-form-title-block .cl-agency { font-size: 13px; font-weight: bold; text-transform: uppercase; }
-  .cl-form-title-block .cl-division { font-size: 9.5px; }
-  .cl-form-title-block .cl-title { font-size: 11px; font-weight: bold; margin: 4px 0 0; }
-  .cl-form-note { font-size: 9px; margin-bottom: 8px; }
-  .cl-form-note li { margin-bottom: 2px; }
-  table.cl-official { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+  .cl-form-title-block { text-align: left; margin-bottom: 8px; }
+  .cl-form-title-block .cl-agency { font-size: 17px; font-weight: bold; text-transform: uppercase; }
+  .cl-form-title-block .cl-division { font-size: 12px; }
+  .cl-form-title-block .cl-title { font-size: 14px; font-weight: bold; margin: 6px 0 0; }
+  .cl-form-note { font-size: 11px; margin-bottom: 10px; }
+  .cl-form-note li { margin-bottom: 3px; }
+  table.cl-official { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
   table.cl-official th, table.cl-official td {
     border: 1px solid #000;
-    padding: 3px 5px;
-    font-size: 9.5px;
+    padding: 6px 8px;
+    font-size: 12px;
     vertical-align: top;
   }
-  table.cl-official .cl-label { font-size: 8px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
-  table.cl-official .cl-value { font-size: 10.5px; min-height: 14px; }
+  table.cl-official .cl-label { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
+  table.cl-official .cl-value { font-size: 13px; min-height: 20px; }
   .cl-section-header {
     background: #dde5ec;
     font-weight: bold;
-    font-size: 9.5px;
+    font-size: 12px;
     text-align: center;
-    padding: 3px;
+    padding: 5px;
     border: 1px solid #000;
     text-transform: uppercase;
   }
-  .cl-drug-table th { background: #eef2f6; font-size: 8.5px; text-align: center; }
-  .cl-drug-table td { height: 20px; font-size: 9.5px; }
-  .cl-sig-line { border-bottom: 1px solid #000; height: 32px; position: relative; }
-  .cl-sig-line img { max-height: 30px; }
+  .cl-drug-table th { background: #eef2f6; font-size: 11px; text-align: center; padding: 6px 4px; }
+  .cl-drug-table td { height: 30px; font-size: 12px; }
+  .cl-sig-line { border-bottom: 1px solid #000; height: 44px; position: relative; }
+  .cl-sig-line img { max-height: 42px; }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
