@@ -90,7 +90,7 @@ document.getElementById('clearDonorBtn').addEventListener('click', () => {
 });
 
 // ---------- Scanner wiring ----------
-const UNIT_OPTIONS = ['tablets', 'capsules', 'mL', 'patches', 'vials', 'packets', 'suppositories', 'units', 'each', 'other'];
+const UNIT_OPTIONS = ['tablets', 'capsules', 'mL', 'g', 'patches', 'vials', 'ampules', 'syringes', 'pens', 'inhalers', 'films', 'strips', 'packets', 'suppositories', 'units', 'each', 'other'];
 
 initBarcodeScanner(async (text) => {
   const parsed = parseGS1(text);
@@ -317,9 +317,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     for (let i = 0; i < state.items.length; i += 10) pages.push(state.items.slice(i, i + 10));
 
     let html = '';
-    pages.forEach((pageItems, pIdx) => {
-      html += buildFormPage(donor, pageItems, sigDataUrl, pIdx === pages.length - 1);
-    });
+    pages.forEach(pageItems => { html += buildFormPage(donor, pageItems, sigDataUrl); });
     const printArea = document.getElementById('print-area');
     printArea.innerHTML = html;
     // Wait for the signature <img> to actually finish decoding — otherwise
@@ -350,19 +348,18 @@ function fmtDate(iso) {
   return `${m}/${d}/${y}`;
 }
 
-function buildFormPage(f, items, sigDataUrl, isLastPage) {
+function buildFormPage(f, items, sigDataUrl) {
   let rows = '';
-  for (let r = 0; r < 10; r++) {
-    const it = items[r];
+  items.forEach(it => {
     rows += `<tr>
-      <td>${it ? escapeHtml(it.name) : ''}</td>
-      <td>${it ? escapeHtml(it.strength) : ''}</td>
-      <td>${it ? escapeHtml(it.ndc) : ''}</td>
-      <td>${it ? escapeHtml(it.lot) : ''}</td>
-      <td>${it ? escapeHtml(it.expiration) : ''}</td>
-      <td>${it ? escapeHtml(it.quantity) + ' ' + escapeHtml(it.unit) : ''}</td>
+      <td>${escapeHtml(it.name)}</td>
+      <td>${escapeHtml(it.strength)}</td>
+      <td>${escapeHtml(it.ndc)}</td>
+      <td>${escapeHtml(it.lot)}</td>
+      <td>${escapeHtml(it.expiration)}</td>
+      <td>${escapeHtml(it.quantity)} ${escapeHtml(it.unit)}</td>
     </tr>`;
-  }
+  });
   return `
   <div class="dn-form-page">
     <div class="dn-form-title-block">
@@ -406,7 +403,6 @@ function buildFormPage(f, items, sigDataUrl, isLastPage) {
       <tbody>${rows}</tbody>
     </table>
 
-    ${isLastPage ? `
     <div class="dn-section-header">Attestation</div>
     <table class="dn-official">
       <tr><td style="font-size:9.5px;">I attest that the above-named drugs or medical supplies were stored as recommended by the manufacturer and have not been subject to tampering.</td></tr>
@@ -421,6 +417,6 @@ function buildFormPage(f, items, sigDataUrl, isLastPage) {
           <div class="dn-sig-line"><img src="${sigDataUrl}" alt="signature"></div>
         </td>
       </tr>
-    </table>` : `<p style="font-size:9px;color:#555;">(continued on next page)</p>`}
+    </table>
   </div>`;
 }

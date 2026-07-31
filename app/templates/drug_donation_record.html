@@ -313,43 +313,45 @@
     width: 100%;
     margin: 0 auto 0.3in;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     color: #000;
     page-break-after: always;
   }
   .dn-form-page:last-child { page-break-after: auto; }
-  .dn-form-title-block { text-align: left; margin-bottom: 8px; }
-  .dn-form-title-block .dn-agency { font-size: 13px; font-weight: bold; }
-  .dn-form-title-block .dn-division { font-size: 12px; }
-  .dn-form-title-block .dn-formnum { font-size: 11px; float: right; }
-  .dn-form-title-block .dn-title { font-size: 17px; font-weight: bold; text-align: center; margin: 10px 0; text-transform: uppercase; }
-  .dn-form-note { font-size: 11px; margin-bottom: 10px; }
-  .dn-form-note li { margin-bottom: 3px; }
-  table.dn-official { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
+  .dn-form-title-block { text-align: left; margin-bottom: 10px; }
+  .dn-form-title-block .dn-agency { font-size: 16px; font-weight: bold; }
+  .dn-form-title-block .dn-division { font-size: 15px; }
+  .dn-form-title-block .dn-formnum { font-size: 13px; float: right; }
+  .dn-form-title-block .dn-title { font-size: 21px; font-weight: bold; text-align: center; margin: 14px 0; text-transform: uppercase; }
+  .dn-form-note { font-size: 14px; margin-bottom: 14px; }
+  .dn-form-note li { margin-bottom: 5px; }
+  table.dn-official { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
   table.dn-official th, table.dn-official td {
     border: 1px solid #000;
-    padding: 6px 8px;
-    font-size: 12px;
+    padding: 9px 10px;
+    font-size: 15px;
     vertical-align: top;
   }
-  table.dn-official .dn-label { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
-  table.dn-official .dn-value { font-size: 13px; min-height: 20px; }
+  table.dn-official .dn-label { font-size: 12px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
+  table.dn-official .dn-value { font-size: 16px; min-height: 24px; }
   .dn-section-header {
     background: #dde5ec;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
-    padding: 5px;
+    padding: 7px;
     border: 1px solid #000;
     text-transform: uppercase;
   }
-  .dn-drug-table th { background: #eef2f6; font-size: 11px; text-align: center; padding: 6px 4px; }
-  .dn-drug-table td { height: 30px; font-size: 12px; }
-  .dn-sig-line { border-bottom: 1px solid #000; height: 44px; position: relative; }
-  .dn-sig-line img { max-height: 42px; }
+  .dn-drug-table th { background: #eef2f6; font-size: 14px; text-align: center; padding: 8px 6px; }
+  .dn-drug-table td { height: 42px; font-size: 15px; }
+  .dn-drug-table thead { display: table-header-group; }
+  .dn-drug-table tr { page-break-inside: avoid; }
+  .dn-sig-line { border-bottom: 1px solid #000; height: 58px; position: relative; }
+  .dn-sig-line img { max-height: 56px; }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
-<script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=4" defer></script>
-<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=5" defer></script>
+<script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=8" defer></script>
+<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=8" defer</script>
 {% endblock %}

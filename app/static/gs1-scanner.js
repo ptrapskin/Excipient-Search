@@ -161,24 +161,71 @@ function guessUnitFromDosageForm(dosageForm) {
   if (f.includes('TABLET')) return 'tablets';
   if (f.includes('PATCH')) return 'patches';
   if (f.includes('SUPPOSITORY')) return 'suppositories';
-  if (f.includes('VIAL') || f.includes('INJECT')) return 'vials';
+  if (f.includes('FILM')) return 'films';
+  // Liquid forms are measured by volume even when injected/vialed (e.g.
+  // insulin's "INJECTION, SOLUTION") — check these before the VIAL/INJECT
+  // catch-all below, or a solution would wrongly guess "vials".
   if (f.includes('SOLUTION') || f.includes('SUSPENSION') || f.includes('SYRUP') || f.includes('LIQUID') || f.includes('ELIXIR')) return 'mL';
+  // Metered inhalers/nasal sprays are counted by device, not dose — check
+  // before the VIAL/INJECT catch-all so "AEROSOL, METERED" doesn't fall
+  // through to "vials".
+  if (f.includes('AEROSOL') || f.includes('INHAL')) return 'inhalers';
+  if (f.includes('VIAL') || f.includes('INJECT')) return 'vials';
   if (f.includes('POWDER') || f.includes('PACKET') || f.includes('GRANULE')) return 'packets';
   return ''; // no confident guess — leave for the user to pick
+}
+
+// Maps a packaging-description unit word (e.g. "CARTRIDGE", "mL", "TABLET")
+// to one of the donation form's controlled unit options. Returns '' for
+// words we don't have a confident mapping for.
+function mapPackagingUnit(word) {
+  const w = (word || '').toUpperCase();
+  if (w.startsWith('CAPSULE')) return 'capsules';
+  if (w.startsWith('TABLET')) return 'tablets';
+  if (w.startsWith('PATCH')) return 'patches';
+  if (w.startsWith('SUPPOSITOR')) return 'suppositories';
+  if (w === 'ML') return 'mL';
+  if (w === 'G' || w === 'GM' || w.startsWith('GRAM')) return 'g';
+  if (w.startsWith('VIAL')) return 'vials';
+  if (w.startsWith('AMPUL') || w.startsWith('AMPOUL')) return 'ampules';
+  if (w.startsWith('SYRINGE')) return 'syringes';
+  if (w.startsWith('PEN')) return 'pens';
+  if (w.startsWith('INHALER')) return 'inhalers';
+  if (w.startsWith('FILM')) return 'films';
+  if (w.startsWith('PACKET') || w.startsWith('GRANULE')) return 'packets';
+  return '';
 }
 
 // Find the exact package the scanned barcode refers to (matched by raw digit
 // content, not by which format guess happened to succeed) and read its
 // declared unit count off openFDA's "N TABLET in 1 BOTTLE"-style description.
-// Multi-level packaging (e.g. "2 BOTTLE in 1 CARTON / 14 TABLET in 1 BOTTLE")
-// would need multiplying across levels to get a true total — rather than
-// guess wrong, we skip auto-fill for those and leave it for manual entry.
+// Multi-level packaging (e.g. "5 CARTRIDGE in 1 CARTON / 3 mL in 1 CARTRIDGE")
+// is walked level by level, multiplying each level's count, to get a true
+// total in the innermost (base) unit — e.g. 5 * 3 = 15 mL. If any level
+// doesn't parse as "N UNIT in ...", we bail rather than guess wrong.
 function quantityFromPackaging(r, raw10) {
-  if (!r.packaging) return '';
+  if (!r.packaging) return { quantity: '', unit: '' };
   const pkg = r.packaging.find(p => (p.package_ndc || '').replace(/-/g, '') === raw10);
-  if (!pkg || !pkg.description || pkg.description.includes('/')) return '';
-  const match = /^(\d+(?:\.\d+)?)\s/.exec(pkg.description);
-  return match ? match[1] : '';
+  if (!pkg || !pkg.description) return { quantity: '', unit: '' };
+  const levels = pkg.description.split('/').map(s => s.trim());
+  let total = 1;
+  let baseUnit = '';
+  for (const level of levels) {
+    // Unit phrases can be multiple words (e.g. "AEROSOL, METERED in 1
+    // INHALER"), so capture everything up to " in N" non-greedily rather
+    // than assuming a single word.
+    const match = /^(\d+(?:\.\d+)?)\s+(.+?)\s+in\s+\d/.exec(level);
+    if (!match) return { quantity: '', unit: '' };
+    total *= parseFloat(match[1]);
+    baseUnit = match[2];
+  }
+  const unit = mapPackagingUnit(baseUnit);
+  // A quantity without a unit we're confident matches the donation form's
+  // vocabulary (e.g. "120 AEROSOL, METERED" for an inhaler) is more
+  // misleading than helpful — leave both blank for manual entry rather than
+  // auto-filling a bare number.
+  if (!unit) return { quantity: '', unit: '' };
+  return { quantity: String(total), unit };
 }
 
 async function lookupDrugByGtin(gtin14) {
@@ -194,11 +241,12 @@ async function lookupDrugByGtin(gtin14) {
       const data = await res.json();
       if (data.results && data.results[0]) {
         const r = data.results[0];
+        const fromPackaging = quantityFromPackaging(r, raw10);
         return {
           ...formatDrugInfo(r),
           ndc: cand,
-          quantity: quantityFromPackaging(r, raw10),
-          unit: guessUnitFromDosageForm(r.dosage_form || ''),
+          quantity: fromPackaging.quantity,
+          unit: fromPackaging.unit || guessUnitFromDosageForm(r.dosage_form || ''),
         };
       }
     } catch (e) { /* try next candidate */ }
