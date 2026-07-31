@@ -4,8 +4,10 @@
 // before this file) — see that file for those details.
 
 const state = {
-  items: [], // {name, strength, ndc, lot, expiration, quantity}
+  items: [], // {name, strength, ndc, lot, expiration, quantity, unit}
 };
+
+const UNIT_OPTIONS = ['tablets', 'capsules', 'mL', 'g', 'patches', 'vials', 'ampules', 'syringes', 'pens', 'inhalers', 'films', 'strips', 'packets', 'suppositories', 'units', 'each', 'other'];
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -36,7 +38,7 @@ initBarcodeScanner(async (text) => {
   const gtin = parsed['01'] || '';
   const lot = parsed['10'] || '';
   const expiration = formatGS1Date(parsed['17'] || '');
-  let name = '', strength = '', ndcDisplay = '', quantity = '';
+  let name = '', strength = '', ndcDisplay = '', quantity = '', unit = '';
 
   if (gtin) {
     // Fall back to the undashed raw 10 digits — honest about not knowing the
@@ -48,6 +50,7 @@ initBarcodeScanner(async (text) => {
       // Pre-filled from the package's declared unit count — still editable,
       // since this bottle may not have been full when it was destroyed.
       quantity = drug.quantity || '';
+      unit = drug.unit || '';
     } else {
       toast('Scanned OK, but no openFDA match — fill in name/strength manually');
     }
@@ -55,7 +58,7 @@ initBarcodeScanner(async (text) => {
     toast('Could not read GTIN from barcode — check item manually');
   }
 
-  addItem({ name, strength, ndc: ndcDisplay, lot, expiration, quantity });
+  addItem({ name, strength, ndc: ndcDisplay, lot, expiration, quantity, unit });
 });
 
 // ---------- Items table ----------
@@ -65,8 +68,17 @@ function addItem(item) {
 }
 
 document.getElementById('addManualBtn').addEventListener('click', () => {
-  preserveScroll(() => addItem({ name: '', strength: '', ndc: '', lot: '', expiration: '', quantity: '' }));
+  preserveScroll(() => addItem({ name: '', strength: '', ndc: '', lot: '', expiration: '', quantity: '', unit: '' }));
 });
+
+function unitSelectHtml(idx, selected) {
+  const opts = UNIT_OPTIONS.map(u =>
+    `<option value="${u}" ${u === selected ? 'selected' : ''}>${u}</option>`
+  ).join('');
+  return `<select class="dr-unit-select" data-idx="${idx}" data-field="unit">
+    <option value="" ${selected ? '' : 'selected'} disabled>unit&hellip;</option>${opts}
+  </select>`;
+}
 
 function renderItems() {
   const wrap = document.getElementById('itemsTableWrap');
@@ -76,7 +88,7 @@ function renderItems() {
   }
   let html = '<div class="dr-table-scroll"><table><thead><tr>' +
     '<th class="dr-row-num">#</th><th>Name of Drug/Supply</th><th>Strength</th><th>NDC No.</th>' +
-    '<th>Lot No.</th><th>Expiration</th><th title="Number of units (tablets/capsules/mL), not packages">Qty Destroyed (units)</th><th></th></tr></thead><tbody>';
+    '<th>Lot No.</th><th>Expiration</th><th title="Number of units, not packages">Qty Destroyed (units)</th><th>Unit</th><th></th></tr></thead><tbody>';
   state.items.forEach((it, idx) => {
     html += `<tr>
       <td class="dr-row-num" data-label="#">${idx + 1}</td>
@@ -85,7 +97,8 @@ function renderItems() {
       <td data-label="NDC"><input type="text" data-idx="${idx}" data-field="ndc" value="${escapeHtml(it.ndc)}"></td>
       <td data-label="Lot"><input type="text" data-idx="${idx}" data-field="lot" value="${escapeHtml(it.lot)}"></td>
       <td data-label="Exp"><input type="text" data-idx="${idx}" data-field="expiration" value="${escapeHtml(it.expiration)}"></td>
-      <td data-label="Qty (units)"><input type="text" inputmode="numeric" placeholder="# units" title="Number of units (tablets/capsules/mL), not packages" class="${it.quantity ? '' : 'dr-qty-empty'}" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
+      <td data-label="Qty"><input type="text" inputmode="numeric" placeholder="e.g. 30" title="Number of units, not packages" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
+      <td data-label="Unit">${unitSelectHtml(idx, it.unit)}</td>
       <td class="dr-remove-cell"><button class="dr-remove-btn" data-idx="${idx}" aria-label="Remove item">✕</button></td>
     </tr>`;
   });
@@ -96,9 +109,12 @@ function renderItems() {
     inp.addEventListener('input', e => {
       const idx = +e.target.dataset.idx, field = e.target.dataset.field;
       state.items[idx][field] = e.target.value;
-      if (field === 'quantity') {
-        e.target.classList.toggle('dr-qty-empty', !e.target.value);
-      }
+    });
+  });
+  wrap.querySelectorAll('select.dr-unit-select').forEach(sel => {
+    sel.addEventListener('change', e => {
+      const idx = +e.target.dataset.idx;
+      state.items[idx].unit = e.target.value;
     });
   });
   wrap.querySelectorAll('.dr-remove-btn').forEach(btn => {
@@ -207,6 +223,11 @@ document.getElementById('generateBtn').addEventListener('click', () => {
       warnMissingField(el, `Enter a quantity for item ${i + 1} before generating the record`);
       return;
     }
+    if (!state.items[i].unit) {
+      const el = document.querySelector(`#itemsTableWrap [data-field="unit"][data-idx="${i}"]`);
+      warnMissingField(el, `Pick a unit for item ${i + 1} before generating the record`);
+      return;
+    }
   }
   if (!hasSig) {
     warnMissingField(document.querySelector('.dr-sig-pad-wrap'), 'Signature is required before generating the record');
@@ -265,7 +286,7 @@ function buildFormPage(f, items, sigDataUrl, isLastPage) {
       <td>${it ? escapeHtml(it.ndc) : ''}</td>
       <td>${it ? escapeHtml(it.lot) : ''}</td>
       <td>${it ? escapeHtml(it.expiration) : ''}</td>
-      <td>${it ? escapeHtml(it.quantity) : ''}</td>
+      <td>${it ? `${escapeHtml(it.quantity)} ${escapeHtml(it.unit)}` : ''}</td>
     </tr>`;
   }
   return `

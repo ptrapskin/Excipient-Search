@@ -65,7 +65,7 @@
   <!-- ITEMS TABLE -->
   <div class="dr-card no-print">
     <h2>Drug / Medical Supply Information</h2>
-    <p class="dr-qty-hint">Enter the number of individual units destroyed (tablets, capsules, mL, patches, etc.) &mdash; not the number of bottles/packages.</p>
+    <p class="dr-qty-hint">Enter the number of individual units destroyed (tablets, capsules, mL, patches, etc.) and pick a unit &mdash; not the number of bottles/packages.</p>
     <div id="itemsTableWrap">
       <div class="dr-empty-state" id="emptyState">No items scanned yet</div>
     </div>
@@ -188,13 +188,13 @@
   .dr-tool th, .dr-tool td { border: 1px solid var(--dr-border); padding: 6px; font-size: 12.5px; text-align: left; vertical-align: top; }
   .dr-tool th { background: #eef2f6; font-size: 11.5px; }
   .dr-tool td input[type=text] { border: none; padding: 3px; font-size: 12.5px; background: transparent; }
-  .dr-tool td input.dr-qty-empty { background: #fdecea; border: 1px solid var(--dr-red); border-radius: 4px; }
   /* Applied by warnMissingField() (gs1-scanner.js) when Generate is clicked
      with a required field left blank — scrolled to, focused, and named in a
      toast, so a missing field is never just silently printed empty. */
   .dr-tool .field-missing { border-color: var(--dr-red) !important; box-shadow: 0 0 0 2px rgba(192,57,43,0.15); }
+  .dr-tool td select.dr-unit-select { width: 100%; font-size: 12px; padding: 3px 2px; border: 1px solid var(--dr-border); border-radius: 4px; background: #fff; }
 
-  /* On phone-width screens, a 7-column table is too cramped to read at a
+  /* On phone-width screens, an 8-column table is too cramped to read at a
      glance. Switch each row to a labeled, stacked card instead — same
      markup, just re-laid-out via CSS (print output is untouched, since
      @media print already forces its own separate layout). */
@@ -334,5 +334,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
 <script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=8" defer></script>
-<script src="{{ url_for('static', path='/drug-destruction-record.js') }}?v=14" defer></script>
+<script src="{{ url_for('static', path='/drug-destruction-record.js') }}?v=15" defer></script>
 {% endblock %}

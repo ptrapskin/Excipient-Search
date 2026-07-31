@@ -204,12 +204,20 @@
   .dn-tool th, .dn-tool td { border: 1px solid var(--dn-border); padding: 6px; font-size: 12.5px; text-align: left; vertical-align: top; }
   .dn-tool th { background: #eef2f6; font-size: 11.5px; }
   .dn-tool td input[type=text] { border: none; padding: 3px; font-size: 12.5px; background: transparent; }
-  .dn-tool td input.dn-qty-empty, .dn-tool td select.dn-qty-empty { background: #fdecea; border: 1px solid var(--dn-red); border-radius: 4px; }
   /* Applied by warnMissingField() (gs1-scanner.js) when Generate is clicked
      with a required field left blank — scrolled to, focused, and named in a
      toast, so a missing field is never just silently printed empty. */
   .dn-tool .field-missing { border-color: var(--dn-red) !important; box-shadow: 0 0 0 2px rgba(192,57,43,0.15); }
   .dn-tool td select.dn-unit-select { width: 100%; font-size: 12px; padding: 3px 2px; border: 1px solid var(--dn-border); border-radius: 4px; background: #fff; }
+  /* Decision support for the 90-day donation rule (DHS 148.06(2)(c)) — set by
+     expirationStatus()/updateExpirationWarning() in drug-donation-record.js.
+     "soon" = inside the 90-day window but not yet expired (amber);
+     "expired" = already past expiration (red, same tone as other errors). */
+  .dn-tool td input.dn-exp-warn.dn-exp-soon { background: #fff6e0; border: 1px solid #b8860b; border-radius: 4px; }
+  .dn-tool td input.dn-exp-warn.dn-exp-expired { background: #fdecea; border: 1px solid var(--dn-red); border-radius: 4px; }
+  .dn-tool .dn-exp-warn-text { font-size: 10.5px; line-height: 1.3; margin-top: 2px; }
+  .dn-tool td input.dn-exp-warn.dn-exp-soon + .dn-exp-warn-text { color: #8a6100; }
+  .dn-tool td input.dn-exp-warn.dn-exp-expired + .dn-exp-warn-text { color: var(--dn-red); }
 
   /* On phone-width screens, an 8-column table is too cramped to read at a
      glance. Switch each row to a labeled, stacked card instead — same
@@ -353,5 +361,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
 <script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=8" defer></script>
-<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=8" defer</script>
+<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=10" defer></script>
 {% endblock %}

@@ -119,6 +119,76 @@ initBarcodeScanner(async (text) => {
   addItem({ name, strength, ndc: ndcDisplay, lot, expiration, quantity, unit });
 });
 
+// ---------- Expiration decision support (90-day rule) ----------
+// The WI Drug Repository Program (Wis. Admin. Code DHS 148.06(2)(c)) does not
+// allow donating drugs that expire within 90 days of the donation date. Dates
+// here are free-typed or scanned, easy to get wrong/overlook in a long item
+// list, so this flags violations live per-row AND gates Generate with a
+// confirm() — a soft block rather than a hard one, since a mistyped/odd date
+// format shouldn't make the tool impossible to use.
+const EXPIRY_WINDOW_DAYS = 90;
+
+function parseUSDate(str) {
+  const m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec((str || '').trim());
+  if (!m) return null;
+  const mm = +m[1], dd = +m[2], yyyy = +m[3];
+  const d = new Date(yyyy, mm - 1, dd);
+  if (d.getMonth() !== mm - 1 || d.getDate() !== dd) return null; // rejects e.g. 02/31
+  return d;
+}
+
+function donationBaseDate() {
+  const iso = document.getElementById('dateDonated').value;
+  if (!iso) return new Date();
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(y, m - 1, d);
+}
+
+// Returns null (no issue), 'expired', or 'soon' (inside the 90-day window).
+function expirationStatus(expStr) {
+  const exp = parseUSDate(expStr);
+  if (!exp) return null;
+  const base = donationBaseDate();
+  const cutoff = new Date(base);
+  cutoff.setDate(cutoff.getDate() + EXPIRY_WINDOW_DAYS);
+  if (exp < base) return 'expired';
+  if (exp < cutoff) return 'soon';
+  return null;
+}
+
+function expirationWarningText(status, expStr) {
+  if (status === 'expired') return '⚠ Already expired';
+  if (status === 'soon') {
+    const days = Math.round((parseUSDate(expStr) - donationBaseDate()) / 86400000);
+    return `⚠ Expires in ${days}d — inside 90-day window, not donatable`;
+  }
+  return '';
+}
+
+function updateExpirationWarning(idx) {
+  const input = document.querySelector(`#itemsTableWrap [data-field="expiration"][data-idx="${idx}"]`);
+  if (!input) return;
+  const status = expirationStatus(state.items[idx].expiration);
+  input.classList.remove('dn-exp-warn', 'dn-exp-expired', 'dn-exp-soon');
+  let warnDiv = input.nextElementSibling;
+  if (!warnDiv || !warnDiv.classList.contains('dn-exp-warn-text')) {
+    warnDiv = document.createElement('div');
+    warnDiv.className = 'dn-exp-warn-text';
+    input.after(warnDiv);
+  }
+  if (status) {
+    input.classList.add('dn-exp-warn', 'dn-exp-' + status);
+    warnDiv.textContent = expirationWarningText(status, state.items[idx].expiration);
+  } else {
+    warnDiv.textContent = '';
+  }
+}
+
+// Changing the donation date shifts the 90-day cutoff for every row.
+document.getElementById('dateDonated').addEventListener('input', () => {
+  state.items.forEach((_, idx) => updateExpirationWarning(idx));
+});
+
 // ---------- Items table ----------
 function addItem(item) {
   state.items.push(item);
@@ -133,7 +203,7 @@ function unitSelectHtml(idx, selected) {
   const opts = UNIT_OPTIONS.map(u =>
     `<option value="${u}" ${u === selected ? 'selected' : ''}>${u}</option>`
   ).join('');
-  return `<select class="dn-unit-select ${selected ? '' : 'dn-qty-empty'}" data-idx="${idx}" data-field="unit">
+  return `<select class="dn-unit-select" data-idx="${idx}" data-field="unit">
     <option value="" ${selected ? '' : 'selected'} disabled>unit&hellip;</option>${opts}
   </select>`;
 }
@@ -148,14 +218,17 @@ function renderItems() {
     '<th class="dn-row-num">#</th><th>Name of Drug/Supply</th><th>Strength</th><th>NDC No.</th>' +
     '<th>Lot No.</th><th>Expiration</th><th title="Number of units, not packages">Qty Donated (units)</th><th>Unit</th><th></th></tr></thead><tbody>';
   state.items.forEach((it, idx) => {
+    const expStatus = expirationStatus(it.expiration);
+    const expClass = expStatus ? ` dn-exp-warn dn-exp-${expStatus}` : '';
+    const expWarnText = expStatus ? expirationWarningText(expStatus, it.expiration) : '';
     html += `<tr>
       <td class="dn-row-num" data-label="#">${idx + 1}</td>
       <td data-label="Name"><input type="text" data-idx="${idx}" data-field="name" value="${escapeHtml(it.name)}"></td>
       <td data-label="Strength"><input type="text" data-idx="${idx}" data-field="strength" value="${escapeHtml(it.strength)}"></td>
       <td data-label="NDC"><input type="text" data-idx="${idx}" data-field="ndc" value="${escapeHtml(it.ndc)}"></td>
       <td data-label="Lot"><input type="text" data-idx="${idx}" data-field="lot" value="${escapeHtml(it.lot)}"></td>
-      <td data-label="Exp"><input type="text" data-idx="${idx}" data-field="expiration" value="${escapeHtml(it.expiration)}"></td>
-      <td data-label="Qty"><input type="text" inputmode="numeric" placeholder="e.g. 30" title="Number of units, not packages" class="${it.quantity ? '' : 'dn-qty-empty'}" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
+      <td data-label="Exp"><input type="text" class="${expClass}" data-idx="${idx}" data-field="expiration" value="${escapeHtml(it.expiration)}"><div class="dn-exp-warn-text">${expWarnText}</div></td>
+      <td data-label="Qty"><input type="text" inputmode="numeric" placeholder="e.g. 30" title="Number of units, not packages" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
       <td data-label="Unit">${unitSelectHtml(idx, it.unit)}</td>
       <td class="dn-remove-cell"><button class="dn-remove-btn" data-idx="${idx}" aria-label="Remove item">✕</button></td>
     </tr>`;
@@ -167,8 +240,8 @@ function renderItems() {
     inp.addEventListener('input', e => {
       const idx = +e.target.dataset.idx, field = e.target.dataset.field;
       state.items[idx][field] = e.target.value;
-      if (field === 'quantity') {
-        e.target.classList.toggle('dn-qty-empty', !e.target.value);
+      if (field === 'expiration') {
+        updateExpirationWarning(idx);
       }
     });
   });
@@ -176,7 +249,6 @@ function renderItems() {
     sel.addEventListener('change', e => {
       const idx = +e.target.dataset.idx;
       state.items[idx].unit = e.target.value;
-      e.target.classList.toggle('dn-qty-empty', !e.target.value);
     });
   });
   wrap.querySelectorAll('.dn-remove-btn').forEach(btn => {
@@ -290,6 +362,20 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     if (!state.items[i].unit) {
       const el = document.querySelector(`#itemsTableWrap [data-field="unit"][data-idx="${i}"]`);
       warnMissingField(el, `Pick a unit for item ${i + 1} before generating the record`);
+      return;
+    }
+  }
+  const flaggedIdx = state.items
+    .map((it, i) => (expirationStatus(it.expiration) ? i : -1))
+    .filter(i => i >= 0);
+  if (flaggedIdx.length > 0) {
+    const firstEl = document.querySelector(`#itemsTableWrap [data-field="expiration"][data-idx="${flaggedIdx[0]}"]`);
+    firstEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const itemList = flaggedIdx.map(i => `#${i + 1}`).join(', ');
+    const anyExpired = flaggedIdx.some(i => expirationStatus(state.items[i].expiration) === 'expired');
+    const msg = `Item${flaggedIdx.length > 1 ? 's' : ''} ${itemList} ${anyExpired ? 'is expired or expires' : 'expires'} within 90 days of the donation date. The WI Drug Repository Program (DHS 148.06(2)(c)) does not allow donating drugs that expire within 90 days.`;
+    if (!confirm(`${msg}\n\nGenerate the record anyway?`)) {
+      toast('Record not generated — check flagged expiration dates');
       return;
     }
   }
