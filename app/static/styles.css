@@ -1313,3 +1313,203 @@ details[open] > .lc-summary::before { transform: rotate(90deg); }
         padding: 1rem 0 2rem;
     }
 }
+
+/* Drug Repository Site Finder */
+.drf-field {
+    margin-bottom: 0.9rem;
+}
+
+.drf-field label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.drf-field input {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #fff;
+    color: var(--text);
+}
+
+.drf-grid3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 0.9rem;
+}
+
+.drf-submit {
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.drf-submit:hover {
+    background: var(--accent-strong);
+}
+
+@media (max-width: 600px) {
+    .drf-grid3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.drf-status {
+    margin: 1rem 0;
+    color: var(--muted, #5a6472);
+    font-size: 0.95rem;
+}
+
+.drf-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.drf-card {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.drf-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.drf-card-name {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.drf-card-distance {
+    flex-shrink: 0;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.drf-card-address,
+.drf-card-meta,
+.drf-card-participation {
+    margin: 0.35rem 0 0;
+    font-size: 0.95rem;
+}
+
+.drf-card-participation {
+    color: var(--muted, #5a6472);
+    font-size: 0.85rem;
+}
+
+.drf-jumpnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(47, 108, 143, 0.06);
+}
+
+.drf-jumpnav a {
+    font-weight: 700;
+}
+
+.drf-tool h2 {
+    margin-top: 2.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.drf-faq,
+.drf-supplies {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.drf-faq-item {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    padding: 0.9rem 1.1rem;
+}
+
+.drf-faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+}
+
+.drf-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.drf-faq-item summary::before {
+    content: "+";
+    display: inline-block;
+    width: 1.1rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.drf-faq-item[open] summary::before {
+    content: "\2212";
+}
+
+.drf-faq-body {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.drf-faq-body p {
+    margin: 0.5rem 0;
+}
+
+.drf-faq-body ul,
+.drf-faq-body ol {
+    margin: 0.5rem 0;
+    padding-left: 1.4rem;
+}
+
+.drf-faq-body ul ul,
+.drf-faq-body ol ul {
+    margin: 0.25rem 0;
+}
+
+.drf-general-rules {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(47, 108, 143, 0.06);
+}
+
+.drf-general-rules h3 {
+    margin-top: 0;
+}
+
+.drf-general-rules ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.4rem;
+}

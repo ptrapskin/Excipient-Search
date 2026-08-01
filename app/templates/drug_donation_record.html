@@ -18,6 +18,24 @@
     clear automatically after a few minutes of inactivity.
   </div>
 
+  <div class="dn-card no-print">
+    <h2>What Can Be Donated</h2>
+    <p class="dn-eligibility-intro">Per Wis. Admin. Code &sect; DHS 148.06, a drug or medical supply is eligible only if it meets <strong>all</strong> of the following:</p>
+    <ul class="dn-eligibility-list">
+      <li>In its <strong>original, unopened, tamper-evident packaging</strong> that shows the lot number and expiration date (unopened single-unit-dose packaging is also acceptable)</li>
+      <li>Expiration date is <strong>at least 90 days</strong> after the donation date</li>
+      <li>Not adulterated or misbranded</li>
+      <li>Accompanied by this signed donation record</li>
+    </ul>
+    <p class="dn-eligibility-intro">Not eligible, regardless of the above:</p>
+    <ul class="dn-eligibility-list">
+      <li><strong>Controlled substances</strong> (Wis. Stat. &sect; 961.01(4))</li>
+      <li>Drugs requiring FDA patient-registry enrollment (21 U.S.C. &sect; 355-1(f)(3)(F))</li>
+      <li>Opened, expired, or otherwise adulterated/misbranded items</li>
+    </ul>
+    <p class="dn-eligibility-link">See the DHS <a href="https://www.dhs.wisconsin.gov/guide/cancer-drugrepo.htm" target="_blank" rel="noopener">Drug Repository Program consumer guide</a> for full program details.</p>
+  </div>
+
   <!-- DONOR INFORMATION (patient-identifying — never persisted, see HIPAA notes in JS) -->
   <div class="dn-card no-print">
     <h2>Donor Information</h2>
@@ -276,6 +294,11 @@
   .dn-ios-hint { font-size: 12px; color: var(--dn-gray); background: #f7f9fb; border-left: 3px solid var(--dn-blue); padding: 8px 10px; border-radius: 4px; margin: 0 0 12px; }
   .dn-actions { display: flex; gap: 10px; }
   .dn-actions button { flex: 1; }
+  .dn-eligibility-intro { font-size: 13px; margin: 0 0 6px; }
+  .dn-eligibility-list { font-size: 13px; margin: 0 0 12px; padding-left: 20px; line-height: 1.5; }
+  .dn-eligibility-list li { margin-bottom: 4px; }
+  .dn-eligibility-link { font-size: 12px; color: var(--dn-gray); margin: 0; }
+  .dn-eligibility-link a { color: var(--dn-blue); }
   .dn-note {
     font-size: 12px;
     color: var(--dn-gray);

@@ -241,6 +241,23 @@ async def drug_donation_record_page(request: Request) -> HTMLResponse:
     )
 
 
+@router.get("/donate-meds", response_class=HTMLResponse)
+async def drug_repository_finder_page(request: Request) -> HTMLResponse:
+    """Render the Wisconsin Drug Repository Program site finder tool."""
+
+    return templates.TemplateResponse(
+        request=request,
+        name="drug_repository_finder.html",
+        context={},
+    )
+
+
+@router.get("/drug-repository-finder", response_class=HTMLResponse, include_in_schema=False)
+async def drug_repository_finder_redirect(request: Request):
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url="/donate-meds", status_code=301)
+
+
 @router.get("/charitable-destruction-log", response_class=HTMLResponse)
 async def charitable_destruction_log_page(request: Request) -> HTMLResponse:
     """Render the charitable pharmacy destruction log tool (fully client-side)."""

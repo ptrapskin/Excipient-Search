@@ -1,0 +1,367 @@
+{% extends "base.html" %}
+
+{% block title %}Drug Repository Site Finder | Excipient Search{% endblock %}
+
+{% block content %}
+<section class="panel drf-tool">
+  <h1>Wisconsin Drug Repository Program</h1>
+  <p class="tagline">
+    The Drug Repository Program is a way for people who can't afford medicines to get what they need.
+    Donors give medicine or medical supplies they haven't used to participating pharmacies or medical
+    facilities. These items then go to people with cancer or a long-term (chronic) condition. Data on
+    this page is sourced from the
+    <a href="https://www.dhs.wisconsin.gov/guide/cancer-drugrepo.htm" target="_blank" rel="noopener">
+      Wisconsin DHS Drug Repository Program guide</a> and may not reflect very recent changes &mdash;
+    call ahead to confirm a site is still accepting donations.
+  </p>
+
+  <nav class="drf-jumpnav" aria-label="Page sections">
+    <a href="#drf-finder">Find a Donation Site</a>
+    <a href="#drf-faq">FAQ</a>
+    <a href="#drf-other-supplies">Other Medical Supply Donations</a>
+  </nav>
+
+  <h2 id="drf-finder">Find a Donation Site Near You</h2>
+  <p>Enter your street address, city, or ZIP code to find the nearest participating pharmacies and medical facilities.</p>
+
+  <form class="search-form drf-form" id="drfForm">
+    <div class="drf-field">
+      <label for="drfStreet">Street address</label>
+      <input type="text" id="drfStreet" placeholder="123 Main St" autocomplete="address-line1">
+    </div>
+    <div class="drf-grid3">
+      <div class="drf-field">
+        <label for="drfCity">City</label>
+        <input type="text" id="drfCity" placeholder="Madison" autocomplete="address-level2">
+      </div>
+      <div class="drf-field">
+        <label for="drfState">State</label>
+        <input type="text" id="drfState" value="WI" maxlength="2" autocomplete="address-level1">
+      </div>
+      <div class="drf-field">
+        <label for="drfZip">ZIP code</label>
+        <input type="text" id="drfZip" placeholder="53703" inputmode="numeric" autocomplete="postal-code">
+      </div>
+    </div>
+    <button type="submit" class="drf-submit">Find Sites</button>
+  </form>
+
+  <div id="drfStatus" class="drf-status" role="status" aria-live="polite"></div>
+  <ul id="drfResults" class="drf-results"></ul>
+
+  <h2 id="drf-faq">Frequently Asked Questions</h2>
+  <div class="drf-faq">
+    <details class="drf-faq-item">
+      <summary>What prescription medicines can I donate?</summary>
+      <div class="drf-faq-body">
+        <p>These statements must be true to donate a prescription medicine as part of this program:</p>
+        <ul>
+          <li>The donation includes a signed <a href="https://www.dhs.wisconsin.gov/forms1/f6/f62645b.docx" target="_blank" rel="noopener">Drug Repository Program: Donation Record, F-62645B (Word)</a> from the donor or an authorized representative.</li>
+          <li>The drug is not adulterated or misbranded.
+            <ul>
+              <li>Adulterated means that the drug is either:
+                <ul>
+                  <li>Damaged.</li>
+                  <li>Stored the wrong way.</li>
+                  <li>Not safe to use based on something that happened to it.</li>
+                </ul>
+              </li>
+              <li>Misbranded means the drug had the wrong label from the start. This makes it not safe to use.</li>
+            </ul>
+          </li>
+          <li>The drug will not expire until at least 90 days after the donation date.</li>
+          <li>The drug is in its original, unopened, tamper-evident packaging.
+            <ul>
+              <li>Tamper-evident packaging means the package is sealed.</li>
+              <li>Other approved packaging includes:
+                <ul>
+                  <li>An inhaler sealed in a foil wrapper.</li>
+                  <li>Injectable drugs with the manufacture vial cap intact.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Can I donate controlled substances?</summary>
+      <div class="drf-faq-body">
+        <p>No, you cannot donate controlled substances, such as:</p>
+        <ul>
+          <li>Lorazepam</li>
+          <li>Morphine</li>
+          <li>Oxycodone</li>
+        </ul>
+        <p>These are often used to treat pain, anxiety, and sleep issues. You can't return these to a pharmacy or medical facility based on federal law, <a href="https://www.ecfr.gov/current/title-21/chapter-II/part-1317#p-1317.35(d)" target="_blank" rel="noopener">21 CFR 1317.35(d)</a>.</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Can I donate medicines that I receive from the pharmacy in a bottle?</summary>
+      <div class="drf-faq-body">
+        <p>No, you can't donate drugs you get from the pharmacy in a bottle. This includes the common brown or amber bottles.</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Where can I donate my unused prescription medicines?</summary>
+      <div class="drf-faq-body">
+        <p>You can donate unused prescription medicines to any pharmacy or medical facility listed in the
+          <a href="#drf-finder">site finder above</a>. Contact a location to learn more about their specific hours and donation process.</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Who can receive donated drugs?</summary>
+      <div class="drf-faq-body">
+        <p>Any person who lives in Wisconsin can receive drugs or supplies through the Drug Repository Program. The law sets priority of who gets the drugs or supplies first:</p>
+        <ol>
+          <li>Those who don't have insurance.</li>
+          <li>Those who receive or qualify for Medicaid, Medicare, or other government-based health care.</li>
+          <li>Everyone else who is otherwise eligible.</li>
+        </ol>
+        <p>Learn more from <a href="https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/148/07/4" target="_blank" rel="noopener">Wis. Admin. Code &sect; 148.07 (4)</a>.</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Do I have to pay to get donated drugs or supplies?</summary>
+      <div class="drf-faq-body">
+        <p>You may be charged a fee at some pharmacies for the extra work they do when giving out donated drugs. This includes time spent:</p>
+        <ul>
+          <li>Counseling</li>
+          <li>Documenting</li>
+          <li>Preparing</li>
+        </ul>
+        <p>The fee can't be more than $15.</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>How do I know which drugs are available?</summary>
+      <div class="drf-faq-body">
+        <p>Contact a participating pharmacy or medical facility to see which drugs they have &mdash; use the <a href="#drf-finder">site finder above</a> for contact details.</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Are there limits on what donated drugs pharmacies and medical facilities can give out?</summary>
+      <div class="drf-faq-body">
+        <p>Yes. Pharmacies and medical facilities can't give out drugs that have a restricted distribution status from the U.S. Food and Drug Administration.</p>
+        <p>If there's a question, the pharmacy or medical facility can call the drug maker directly or visit the <a href="https://www.fda.gov/drugs" target="_blank" rel="noopener">U.S. Food and Drug Administration's website</a>. Often, the maker of a restricted distribution drug has its own return policy for unused medicine.</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Why does Wisconsin have a drug repository program?</summary>
+      <div class="drf-faq-body">
+        <p>It's important for all people in Wisconsin to have access to medicine and supplies they need to fight a disease.</p>
+        <p>State law (<a href="https://docs.legis.wisconsin.gov/statutes/statutes/255/II/055" target="_blank" rel="noopener">Wis. Stat. &sect; 255.055</a>) also authorized DHS to set up and maintain a drug repository program. DHS was required to come up with rules for the program. <a href="https://docs.legis.wisconsin.gov/code/admin_code/dhs/110/148/" target="_blank" rel="noopener">Wis. Admin. Code ch. DHS 148</a> summarizes these rules.</p>
+      </div>
+    </details>
+  </div>
+
+  <h2 id="drf-other-supplies">Other Commonly Donated Medical Supplies &amp; Equipment</h2>
+  <p>
+    The Wisconsin Drug Repository Program only accepts unused <strong>prescription medicines</strong>.
+    For other unneeded medical supplies and equipment, the organizations below are common donation
+    destinations. Always call or check the organization's website before dropping off or shipping &mdash;
+    acceptance rules change often.
+  </p>
+
+  <div class="drf-supplies">
+    <details class="drf-faq-item">
+      <summary>Unused Prescription Medications</summary>
+      <div class="drf-faq-body">
+        <p><strong>Destination:</strong> Use the <a href="#drf-finder">site finder above</a> &mdash; this is the Wisconsin Drug Repository Program itself (Act 231 / AB62), not a referral to another organization.</p>
+        <p><strong>Form:</strong> DHS F-62645B (donation record)</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Blood Glucose Meters, Test Strips &amp; Insulin</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li><a href="https://www.iflusa.org" target="_blank" rel="noopener">Insulin for Life USA</a> &mdash; iflusa.org, (352) 327-8649
+            <ul>
+              <li>Unopened test strips (3+ months to expiration)</li>
+              <li>Meters in excellent working condition, only for models the manufacturer still supports with strips</li>
+              <li>Insulin: refrigerated, unopened, 3+ months to expiration</li>
+              <li>Ships to vetted clinics/providers only, not individuals</li>
+            </ul>
+          </li>
+          <li><a href="https://diabetesfoundationinc.org" target="_blank" rel="noopener">Diabetes Foundation &ndash; Supply Repository</a> &mdash; diabetesfoundationinc.org
+            <ul>
+              <li>Unopened, unexpired test strips, meters, lancing devices; remove Rx labels first</li>
+            </ul>
+          </li>
+          <li><a href="https://cr3diabetesassociation.org" target="_blank" rel="noopener">CR3 Diabetes Association</a> &mdash; cr3diabetesassociation.org
+            <ul>
+              <li>Meters, test strips, insulin pumps, pump supplies, several CGM brands</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Insulin Pens, Pen Needles &amp; Syringes</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li><a href="https://www.iflusa.org" target="_blank" rel="noopener">Insulin for Life USA</a> &mdash; pen needles need 6+ months to expiration; syringes same</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>CPAP / BiPAP Machines &amp; Supplies</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li><a href="https://sleephealth.org" target="_blank" rel="noopener">Wellness, Sleep and Circadian Network</a> (formerly ASAA) &mdash; sleephealth.org
+            <ul>
+              <li>Gently used PAP machines, data-capable, from a smoke-free home</li>
+              <li>Unopened supplies (masks, tubing, chambers, filters) in original packaging</li>
+            </ul>
+          </li>
+          <li><a href="https://secondwindcpap.com" target="_blank" rel="noopener">SecondWind CPAP</a> &mdash; secondwindcpap.com, (855) 263-2727
+            <ul>
+              <li>Machines in any condition (refurbished or parted out), new unopened supplies</li>
+            </ul>
+          </li>
+          <li>Health Equipment Recycling Organization (HERO) &mdash; search current intake info</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Oxygen Concentrators, Tubing &amp; Nebulizer Supplies</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li><a href="https://worldmedicalrelief.org" target="_blank" rel="noopener">World Medical Relief</a> &mdash; worldmedicalrelief.org
+            <ul>
+              <li>Oxygen concentrators, oxygen/nebulizer supplies, tubing, suction machines/supplies</li>
+              <li>Consumables generally need 1+ year to expiration</li>
+            </ul>
+          </li>
+          <li><a href="https://www.projectcure.org" target="_blank" rel="noopener">Project C.U.R.E.</a> &mdash; projectcure.org
+            <ul>
+              <li>Oxygen concentrators, other home health equipment; national warehouse network</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Catheters, Ostomy &amp; Wound Care Supplies</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li><a href="https://awhealth.org" target="_blank" rel="noopener">Advocates for World Health</a> &mdash; awhealth.org
+            <ul>
+              <li>Urinary catheters, ostomy supplies, incontinence products, wound dressings, IV/catheter supplies</li>
+            </ul>
+          </li>
+          <li><a href="https://worldmedicalrelief.org" target="_blank" rel="noopener">World Medical Relief</a> &mdash; worldmedicalrelief.org
+            <ul>
+              <li>IV infusion supplies, catheters, tubing, wound/dressing supplies, sterile unopened needles/syringes</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Incontinence Supplies / Adult Briefs</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li><a href="https://worldmedicalrelief.org" target="_blank" rel="noopener">World Medical Relief</a> &mdash; worldmedicalrelief.org</li>
+          <li>Local senior centers and loan closets often accept unopened packages directly</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Nebulizers, Inhalers, BP Monitors, Pulse Oximeters</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li><a href="https://worldmedicalrelief.org" target="_blank" rel="noopener">World Medical Relief</a> (nebulizer supplies specifically)</li>
+          <li>Local loan closets sometimes take BP monitors/pulse oximeters as small durable items</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Hearing Aids</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li>Lions Club hearing aid recycling programs (local chapter)</li>
+          <li>Hearing Charities of America</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Eyeglasses</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li>Lions Club eyeglass recycling (local chapter)</li>
+          <li>Most optical retailers have in-store collection boxes</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Compression Stockings</summary>
+      <div class="drf-faq-body">
+        <p>Fold into the general DME/local loan closet channel; no dedicated national org identified.</p>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>General DME &ndash; Wheelchairs, Walkers, Canes, Shower Chairs, Commodes (Dane County, local, usually free)</summary>
+      <div class="drf-faq-body">
+        <ul>
+          <li>NewBridge Madison &ndash; Loan Closet &mdash; (608) 512-0000
+            <ul>
+              <li>Serves Madison/Monona residents, Mon&ndash;Thu 9am&ndash;3pm, Cottage Grove Rd location</li>
+            </ul>
+          </li>
+          <li>Access to Independence &mdash; (608) 242-8484 / (800) 362-9877
+            <ul>
+              <li>Madison-based, listed DME donation site via WI ForwardHealth</li>
+            </ul>
+          </li>
+          <li><a href="https://www.agrace.org" target="_blank" rel="noopener">Agrace Durable Medical Equipment Recycling</a> &mdash; agrace.org
+            <ul>
+              <li>Maintains an updated list of loan closets across southern Wisconsin by town</li>
+              <li>Agrace Thrift Stores (Madison, Janesville) take lift chairs in good condition</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="drf-faq-item">
+      <summary>Heavier Equipment &ndash; Hospital Beds, Lift Chairs, Electric Wheelchairs/Scooters</summary>
+      <div class="drf-faq-body">
+        <p>Same local loan closets as above, but confirm pickup logistics/refurb capacity per item &mdash; these often have separate acceptance rules from smaller equipment.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="drf-general-rules">
+    <h3>General Rules Across All Categories</h3>
+    <ul>
+      <li>Call/check the website before dropping off or shipping &mdash; acceptance rules change often</li>
+      <li>Most programs require unopened, unused, unexpired items; opened packaging is almost never accepted (infection control)</li>
+      <li>Never donate used sharps (needles, lancets) &mdash; use approved sharps disposal, never trash or a donation box</li>
+      <li>Mail-in national programs: the donor typically covers shipping</li>
+      <li>Local Dane County options: typically free drop-off</li>
+    </ul>
+  </div>
+</section>
+
+<script src="{{ url_for('static', path='/drug-repository-finder.js') }}" defer></script>
+{% endblock %}
