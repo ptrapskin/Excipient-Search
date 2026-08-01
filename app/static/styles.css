@@ -1513,3 +1513,144 @@ details[open] > .lc-summary::before { transform: rotate(90deg); }
     margin: 0.5rem 0 0;
     padding-left: 1.4rem;
 }
+
+/* Medication & Sharps Disposal Guide */
+.disp-tool h2 {
+    margin-top: 2.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.disp-jumpnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(47, 108, 143, 0.06);
+}
+
+.disp-jumpnav a {
+    font-weight: 700;
+}
+
+.disp-callout {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin: 1rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(139, 47, 37, 0.3);
+    border-radius: 12px;
+    background: rgba(139, 47, 37, 0.08);
+}
+
+.disp-callout-icon {
+    flex-shrink: 0;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.disp-callout p {
+    margin: 0;
+    color: var(--error);
+    font-weight: 700;
+}
+
+.disp-callout p + p {
+    margin-top: 0.4rem;
+    color: var(--text);
+    font-weight: 400;
+}
+
+.disp-callout.disp-callout-info {
+    border-color: var(--border);
+    background: rgba(47, 108, 143, 0.06);
+}
+
+.disp-callout.disp-callout-info p {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.disp-org {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    margin: 1rem 0;
+}
+
+.disp-org h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+}
+
+.disp-org p {
+    margin: 0.4rem 0 0;
+    font-size: 0.95rem;
+}
+
+.disp-org ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.3rem;
+    font-size: 0.95rem;
+}
+
+.disp-org ul li {
+    margin-bottom: 0.3rem;
+}
+
+.disp-reminders {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(47, 108, 143, 0.06);
+}
+
+.disp-reminders h3 {
+    margin-top: 0;
+}
+
+.disp-reminders ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.4rem;
+}
+
+.disp-reminders li {
+    margin-bottom: 0.4rem;
+}
+
+.disp-print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.disp-print-btn:hover {
+    background: rgba(47, 108, 143, 0.08);
+}
+
+.disp-crosslink {
+    margin: 1rem 0 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+
+@media print {
+    .site-header, .site-footer, .disp-jumpnav, .disp-print-btn, .no-print {
+        display: none !important;
+    }
+}

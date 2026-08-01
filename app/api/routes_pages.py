@@ -264,6 +264,17 @@ async def drug_repository_finder_redirect(request: Request):
     return RedirectResponse(url="/donate-meds", status_code=301)
 
 
+@router.get("/dispose-meds", response_class=HTMLResponse)
+async def disposal_guide_page(request: Request) -> HTMLResponse:
+    """Render the medication, sharps, and equipment disposal guide (fully client-side)."""
+
+    return templates.TemplateResponse(
+        request=request,
+        name="disposal_guide.html",
+        context={},
+    )
+
+
 @router.get("/charitable-destruction-log", response_class=HTMLResponse)
 async def charitable_destruction_log_page(request: Request) -> HTMLResponse:
     """Render the charitable pharmacy destruction log tool (fully client-side)."""
