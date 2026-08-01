@@ -73,6 +73,66 @@
     </div>
   </div>
 
+  <!-- BARCODE HELP -->
+  <div class="dn-card no-print">
+    <h2>Which barcode do I scan?</h2>
+    <p class="dn-barcode-intro">
+      Most medicine packages have two different barcodes. Only one of them works with this scanner.
+    </p>
+    <div class="dn-barcode-compare">
+      <div class="dn-barcode-example dn-barcode-yes">
+        <svg class="dn-barcode-svg" viewBox="0 0 100 100" width="110" height="110" role="img" aria-label="Example of a square 2D barcode">
+          <rect x="0" y="0" width="100" height="100" fill="#fff"/>
+          <rect x="10" y="10" width="80" height="80" fill="#fff" stroke="#dde5ec" stroke-width="1"/>
+          <!-- solid L finder pattern (left + bottom edges) -->
+          <rect x="10" y="10" width="8" height="80" fill="#1a4d7a"/>
+          <rect x="10" y="82" width="80" height="8" fill="#1a4d7a"/>
+          <!-- alternating clock track (top + right edges) -->
+          <rect x="18" y="10" width="8" height="8" fill="#1a4d7a"/>
+          <rect x="34" y="10" width="8" height="8" fill="#1a4d7a"/>
+          <rect x="50" y="10" width="8" height="8" fill="#1a4d7a"/>
+          <rect x="66" y="10" width="8" height="8" fill="#1a4d7a"/>
+          <rect x="82" y="10" width="8" height="8" fill="#1a4d7a"/>
+          <rect x="82" y="18" width="8" height="8" fill="#1a4d7a"/>
+          <rect x="82" y="34" width="8" height="8" fill="#1a4d7a"/>
+          <rect x="82" y="50" width="8" height="8" fill="#1a4d7a"/>
+          <rect x="82" y="66" width="8" height="8" fill="#1a4d7a"/>
+          <!-- interior data modules (illustrative pattern, not a real decodable code) -->
+          <g fill="#1a4d7a">
+            <rect x="18" y="18" width="8" height="8"/><rect x="34" y="18" width="8" height="8"/><rect x="42" y="18" width="8" height="8"/><rect x="66" y="18" width="8" height="8"/>
+            <rect x="26" y="26" width="8" height="8"/><rect x="50" y="26" width="8" height="8"/><rect x="58" y="26" width="8" height="8"/><rect x="74" y="26" width="8" height="8"/>
+            <rect x="18" y="34" width="8" height="8"/><rect x="26" y="34" width="8" height="8"/><rect x="50" y="34" width="8" height="8"/><rect x="66" y="34" width="8" height="8"/><rect x="74" y="34" width="8" height="8"/>
+            <rect x="34" y="42" width="8" height="8"/><rect x="58" y="42" width="8" height="8"/><rect x="66" y="42" width="8" height="8"/>
+            <rect x="18" y="50" width="8" height="8"/><rect x="26" y="50" width="8" height="8"/><rect x="42" y="50" width="8" height="8"/><rect x="50" y="50" width="8" height="8"/><rect x="74" y="50" width="8" height="8"/>
+            <rect x="34" y="58" width="8" height="8"/><rect x="42" y="58" width="8" height="8"/><rect x="58" y="58" width="8" height="8"/>
+            <rect x="18" y="66" width="8" height="8"/><rect x="26" y="66" width="8" height="8"/><rect x="50" y="66" width="8" height="8"/><rect x="74" y="66" width="8" height="8"/>
+            <rect x="34" y="74" width="8" height="8"/><rect x="42" y="74" width="8" height="8"/><rect x="58" y="74" width="8" height="8"/><rect x="66" y="74" width="8" height="8"/>
+          </g>
+        </svg>
+        <p class="dn-barcode-caption"><strong>&#9989; Square barcode (2D) &mdash; scan this one.</strong> It has the lot number and expiration date built in, so scanning it fills those in for you.</p>
+      </div>
+      <div class="dn-barcode-example dn-barcode-no">
+        <svg class="dn-barcode-svg" viewBox="0 0 140 90" width="140" height="90" role="img" aria-label="Example of a long linear barcode">
+          <rect x="0" y="0" width="140" height="90" fill="#fff"/>
+          <g fill="#666">
+            <rect x="8" y="10" width="2" height="55"/><rect x="12" y="10" width="4" height="55"/><rect x="19" y="10" width="1" height="55"/><rect x="23" y="10" width="2" height="55"/>
+            <rect x="28" y="10" width="1" height="55"/><rect x="32" y="10" width="3" height="55"/><rect x="38" y="10" width="2" height="55"/><rect x="43" y="10" width="1" height="55"/>
+            <rect x="47" y="10" width="4" height="55"/><rect x="54" y="10" width="1" height="55"/><rect x="58" y="10" width="2" height="55"/><rect x="63" y="10" width="1" height="55"/>
+            <rect x="67" y="10" width="3" height="55"/><rect x="73" y="10" width="2" height="55"/><rect x="78" y="10" width="1" height="55"/><rect x="82" y="10" width="4" height="55"/>
+            <rect x="89" y="10" width="1" height="55"/><rect x="93" y="10" width="2" height="55"/><rect x="98" y="10" width="1" height="55"/><rect x="102" y="10" width="3" height="55"/>
+            <rect x="108" y="10" width="2" height="55"/><rect x="113" y="10" width="1" height="55"/><rect x="117" y="10" width="4" height="55"/><rect x="124" y="10" width="1" height="55"/>
+            <rect x="128" y="10" width="2" height="55"/><rect x="132" y="10" width="1" height="55"/>
+          </g>
+          <text x="70" y="78" text-anchor="middle" font-family="monospace" font-size="10" fill="#666">0 51234 56789 4</text>
+        </svg>
+        <p class="dn-barcode-caption"><strong>&#10060; Long barcode (linear) &mdash; not this one.</strong> It usually only identifies the product itself, not the lot number or expiration date, so scanning it won't fill those in.</p>
+      </div>
+    </div>
+    <p class="dn-barcode-tip">
+      Tip: look on the box or bottle near the printed lot number and expiration date &mdash; the square barcode is usually right next to that text.
+    </p>
+  </div>
+
   <!-- SCANNER -->
   <div class="dn-card no-print">
     <h2>Scan Items</h2>
@@ -326,6 +386,27 @@
     text-align: center;
   }
   #toast.show { opacity: 1; }
+
+  .dn-barcode-intro { font-size: 13px; color: var(--dn-gray); margin: 0 0 12px; }
+  .dn-barcode-compare {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .dn-barcode-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .dn-barcode-example.dn-barcode-yes { background: #eef7ee; border: 1px solid #cfe8cf; }
+  .dn-barcode-example.dn-barcode-no { background: #fdecea; border: 1px solid #f3c9c3; }
+  .dn-barcode-svg { max-width: 100%; height: auto; }
+  .dn-barcode-caption { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--dn-blue-dark); }
+  .dn-barcode-tip { margin: 12px 0 0; font-size: 12px; color: var(--dn-gray); }
 
   /* ---- Print-only official record layout ---- */
   #print-area { display: none; }

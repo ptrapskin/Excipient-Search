@@ -1,3 +1,11 @@
+document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
+  document.addEventListener("click", (event) => {
+    if (dropdown.open && !dropdown.contains(event.target)) {
+      dropdown.open = false;
+    }
+  });
+});
+
 const QUICK_CHOICES = [];
 
 const quickContainer = document.querySelector("[data-quick-include]");
