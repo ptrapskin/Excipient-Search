@@ -684,6 +684,13 @@ main.container {
     display: none;
 }
 
+/* Safari (incl. iOS) renders its own disclosure triangle via ::marker even
+   with list-style:none on the summary — without this it shows twice,
+   stacked with our custom ▾ from ::after below. */
+.nav-dropdown summary::marker {
+    content: "";
+}
+
 .nav-dropdown summary::after {
     content: "\25BE";
     margin-left: 0.35rem;
@@ -1312,6 +1319,23 @@ details[open] > .lc-summary::before { transform: rotate(90deg); }
     .site-nav {
         flex-wrap: wrap;
         gap: 0.75rem;
+    }
+
+    /* .nav-dropdown-menu is positioned relative to its nearest positioned
+       ancestor. Dropping .nav-dropdown's own position:relative here makes
+       that ancestor bubble up to .site-header (position:sticky), so the
+       menu spans near-full-width flush below the header instead of being
+       anchored to the (much narrower) trigger — which, for a trigger
+       positioned further right like "For Healthcare Professionals", would
+       otherwise push a fixed-width menu past the right edge of the screen. */
+    .nav-dropdown {
+        position: static;
+    }
+
+    .nav-dropdown-menu {
+        left: 12px;
+        right: 12px;
+        min-width: 0;
     }
 
     /* Search */
