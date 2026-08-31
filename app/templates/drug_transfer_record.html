@@ -1,75 +1,69 @@
 {% extends "base.html" %}
 
-{% block title %}Drug Repository Donation Record | Excipient Search{% endblock %}
+{% block title %}Drug Repository Transfer Record | Excipient Search{% endblock %}
 
 {% block content %}
 <section class="panel dn-tool">
-  <h1>Drug Repository Donation Record</h1>
+  <h1>Drug Repository Transfer Record</h1>
   <p class="tagline">
     Scan each item's barcode to auto-fill drug name, strength, NDC, lot, and expiration, matching
-    Wisconsin DHS Form F-62645B (Wis. Admin. Code &sect;&sect; DHS 148.06(2)(a)1, (b)3).
+    Wisconsin DHS Form F-62645A (Wis. Admin. Code &sect; DHS 148.09(3)).
   </p>
 
   <div class="dn-note no-print">
-    Scan each item's barcode to auto-fill drug name, strength, NDC, lot, and expiration. Enter the
-    quantity and unit (tablets, mL, etc.) donated for each item, fill in donor and recipient details
-    once, sign, then generate the printable record. Donor name and address are never saved to this
-    device &mdash; they exist only in memory until you generate the record or leave the page, and
-    clear automatically after a few minutes of inactivity.
+    Use this form when a pharmacy or medical facility distributes donated drugs or medical supplies
+    to a participating repository. Scan each item's barcode to auto-fill drug name, strength, NDC,
+    lot, and expiration. Enter the quantity and unit transferred for each item, fill in the
+    transferring and receiving facility details, indicate whether the whole or part of the original
+    donation is being transferred, sign, then generate the printable record. Everything stays on this
+    device &mdash; nothing is submitted anywhere.
   </div>
 
+  <!-- TRANSFERRING FACILITY -->
   <div class="dn-card no-print">
-    <h2>What Can Be Donated</h2>
-    <p class="dn-eligibility-intro">Per Wis. Admin. Code &sect; DHS 148.06, a drug or medical supply is eligible only if it meets <strong>all</strong> of the following:</p>
-    <ul class="dn-eligibility-list">
-      <li>In its <strong>original, unopened, tamper-evident packaging</strong> that shows the lot number and expiration date (unopened single-unit-dose packaging is also acceptable)</li>
-      <li>Expiration date is <strong>at least 90 days</strong> after the donation date</li>
-      <li>Not adulterated or misbranded</li>
-      <li>Accompanied by this signed donation record</li>
-    </ul>
-    <p class="dn-eligibility-intro">Not eligible, regardless of the above:</p>
-    <ul class="dn-eligibility-list">
-      <li><strong>Controlled substances</strong> (Wis. Stat. &sect; 961.01(4))</li>
-      <li>Drugs requiring FDA patient-registry enrollment (21 U.S.C. &sect; 355-1(f)(3)(F))</li>
-      <li>Opened, expired, or otherwise adulterated/misbranded items</li>
-    </ul>
-    <p class="dn-eligibility-link">See the DHS <a href="https://www.dhs.wisconsin.gov/guide/cancer-drugrepo.htm" target="_blank" rel="noopener">Drug Repository Program consumer guide</a> for full program details.</p>
-  </div>
-
-  <!-- DONOR INFORMATION (patient-identifying — never persisted, see HIPAA notes in JS) -->
-  <div class="dn-card no-print">
-    <h2>Donor Information</h2>
+    <h2>Transferring Pharmacy or Medical Facility</h2>
     <div class="dn-grid2">
       <div class="dn-field">
-        <label for="donorName">Name &ndash; Donor</label>
-        <input type="text" id="donorName" autocomplete="off" spellcheck="false">
+        <label for="transName">Name &ndash; Pharmacy or Medical Facility</label>
+        <input type="text" id="transName" autocomplete="organization">
       </div>
       <div class="dn-field">
-        <label for="dateDonated">Date Donated</label>
-        <input type="date" id="dateDonated">
+        <label for="dateTransfer">Date of Transfer</label>
+        <input type="date" id="dateTransfer">
       </div>
     </div>
     <div class="dn-field">
-      <label for="donorAddress">Street Address</label>
-      <input type="text" id="donorAddress" autocomplete="off" spellcheck="false">
+      <label for="transAddress">Street Address</label>
+      <input type="text" id="transAddress" autocomplete="off">
     </div>
     <div class="dn-grid3">
-      <div class="dn-field"><label for="donorCity">City</label><input type="text" id="donorCity" autocomplete="off" spellcheck="false"></div>
-      <div class="dn-field"><label for="donorState">State</label><input type="text" id="donorState" value="WI" autocomplete="off" spellcheck="false"></div>
-      <div class="dn-field"><label for="donorZip">Zip Code</label><input type="text" id="donorZip" inputmode="numeric" autocomplete="off" spellcheck="false"></div>
-    </div>
-    <div class="dn-donor-controls">
-      <span id="donorIdleStatus">Donor info clears automatically after 5 minutes of inactivity</span>
-      <button class="dn-btn-secondary dn-btn-small" id="clearDonorBtn" type="button">Clear Donor Info Now</button>
+      <div class="dn-field"><label for="transCity">City</label><input type="text" id="transCity" autocomplete="off"></div>
+      <div class="dn-field"><label for="transState">State</label><input type="text" id="transState" value="WI" autocomplete="off"></div>
+      <div class="dn-field"><label for="transZip">Zip Code</label><input type="text" id="transZip" inputmode="numeric" autocomplete="off"></div>
     </div>
   </div>
 
-  <!-- RECIPIENT INFORMATION (not patient data — persists like facility info elsewhere) -->
+  <!-- RECEIVING FACILITY -->
   <div class="dn-card no-print">
-    <h2>Recipient Information</h2>
+    <h2>Receiving Pharmacy or Medical Facility</h2>
+    <div class="dn-grid2">
+      <div class="dn-field">
+        <label for="recvName">Name &ndash; Pharmacy or Medical Facility</label>
+        <input type="text" id="recvName" autocomplete="organization">
+      </div>
+      <div class="dn-field">
+        <label for="dateReceipt">Date of Receipt</label>
+        <input type="date" id="dateReceipt">
+      </div>
+    </div>
     <div class="dn-field">
-      <label for="recipientName">Name &ndash; Pharmacy or Medical Facility Receiving Donations</label>
-      <input type="text" id="recipientName" autocomplete="organization">
+      <label for="recvAddress">Street Address</label>
+      <input type="text" id="recvAddress" autocomplete="off">
+    </div>
+    <div class="dn-grid3">
+      <div class="dn-field"><label for="recvCity">City</label><input type="text" id="recvCity" autocomplete="off"></div>
+      <div class="dn-field"><label for="recvState">State</label><input type="text" id="recvState" value="WI" autocomplete="off"></div>
+      <div class="dn-field"><label for="recvZip">Zip Code</label><input type="text" id="recvZip" inputmode="numeric" autocomplete="off"></div>
     </div>
   </div>
 
@@ -84,10 +78,8 @@
         <svg class="dn-barcode-svg" viewBox="0 0 100 100" width="110" height="110" role="img" aria-label="Example of a square 2D barcode">
           <rect x="0" y="0" width="100" height="100" fill="#fff"/>
           <rect x="10" y="10" width="80" height="80" fill="#fff" stroke="#dde5ec" stroke-width="1"/>
-          <!-- solid L finder pattern (left + bottom edges) -->
           <rect x="10" y="10" width="8" height="80" fill="#1a4d7a"/>
           <rect x="10" y="82" width="80" height="8" fill="#1a4d7a"/>
-          <!-- alternating clock track (top + right edges) -->
           <rect x="18" y="10" width="8" height="8" fill="#1a4d7a"/>
           <rect x="34" y="10" width="8" height="8" fill="#1a4d7a"/>
           <rect x="50" y="10" width="8" height="8" fill="#1a4d7a"/>
@@ -97,7 +89,6 @@
           <rect x="82" y="34" width="8" height="8" fill="#1a4d7a"/>
           <rect x="82" y="50" width="8" height="8" fill="#1a4d7a"/>
           <rect x="82" y="66" width="8" height="8" fill="#1a4d7a"/>
-          <!-- interior data modules (illustrative pattern, not a real decodable code) -->
           <g fill="#1a4d7a">
             <rect x="18" y="18" width="8" height="8"/><rect x="34" y="18" width="8" height="8"/><rect x="42" y="18" width="8" height="8"/><rect x="66" y="18" width="8" height="8"/>
             <rect x="26" y="26" width="8" height="8"/><rect x="50" y="26" width="8" height="8"/><rect x="58" y="26" width="8" height="8"/><rect x="74" y="26" width="8" height="8"/>
@@ -154,21 +145,40 @@
   <!-- ITEMS TABLE -->
   <div class="dn-card no-print">
     <h2>Drug / Medical Supply Information</h2>
-    <p class="dn-qty-hint">Enter the number of individual units donated (tablets, capsules, mL, patches, etc.) and pick a unit &mdash; not the number of bottles/packages.</p>
+    <p class="dn-qty-hint">Enter the number of individual units transferred (tablets, capsules, mL, patches, etc.) and pick a unit &mdash; not the number of bottles/packages.</p>
     <div id="itemsTableWrap">
       <div class="dn-empty-state" id="emptyState">No items scanned yet</div>
     </div>
     <button class="dn-btn-secondary dn-btn-small" id="addManualBtn" type="button" style="margin-top:8px;">+ Add Item Manually</button>
   </div>
 
+  <!-- TRANSFER SCOPE -->
+  <div class="dn-card no-print dn-scope-card">
+    <h2>Transfer Scope</h2>
+    <label class="dn-radio-row">
+      <input type="radio" name="transferScope" value="entire">
+      <span>The entire original donation is being transferred. The original donation form is attached to this transfer record.</span>
+    </label>
+    <label class="dn-radio-row">
+      <input type="radio" name="transferScope" value="partial">
+      <span>The original donation is being partially transferred. A copy of the original donation form is attached to this transfer record.</span>
+    </label>
+  </div>
+
   <!-- SIGNATURE -->
   <div class="dn-card no-print">
     <h2>Signature</h2>
-    <div class="dn-field">
-      <label for="dateSigned">Date Signed</label>
-      <input type="date" id="dateSigned">
+    <div class="dn-grid2">
+      <div class="dn-field">
+        <label for="repName">Name &ndash; Representative (Print or type)</label>
+        <input type="text" id="repName" autocomplete="name">
+      </div>
+      <div class="dn-field">
+        <label for="dateSigned">Date Signed</label>
+        <input type="date" id="dateSigned">
+      </div>
     </div>
-    <label>Signature &ndash; Donor</label>
+    <label>Signature &ndash; Representative</label>
     <div class="dn-sig-pad-wrap">
       <canvas id="sigpad"></canvas>
     </div>
@@ -196,10 +206,6 @@
 
 <style>
   .dn-tool { --dn-blue: #1a4d7a; --dn-blue-dark: #0d3253; --dn-gray: #666; --dn-border: #ccc; --dn-red: #c0392b; --dn-green: #1a7a3a; }
-  /* The site header is position:sticky (styles.css), which stacks above static
-     content scrolled underneath it. iOS Safari auto-scrolls a focused field to
-     the top of the viewport when the keyboard opens, which would otherwise
-     tuck it behind the header and make it untappable. */
   .dn-tool input, .dn-tool button, .dn-tool canvas, #sigpad { scroll-margin-top: 100px; }
   .dn-card {
     background: #fff;
@@ -246,11 +252,12 @@
   .dn-btn-primary:active { background: var(--dn-blue-dark); }
   .dn-btn-secondary { background: #e6ecf1; color: var(--dn-blue-dark); }
   .dn-btn-small { padding: 5px 10px; font-size: 12px; }
-  .dn-donor-controls {
-    display: flex; justify-content: space-between; align-items: center;
-    gap: 10px; margin-top: 6px; padding: 8px 10px;
-    background: #f7f9fb; border-radius: 6px; font-size: 12px; color: var(--dn-gray);
+  .dn-radio-row {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 13px; font-weight: 400; color: #333;
+    padding: 8px 0; line-height: 1.4;
   }
+  .dn-radio-row input { margin-top: 2px; flex: 0 0 auto; }
   #scanner-wrap { display: none; margin-top: 12px; }
   #scanner-wrap.active { display: block; }
   #scanner-wrap video { width: 100%; border-radius: 8px; background: #000; }
@@ -266,12 +273,6 @@
     background: #2e9e2e; margin-right: 6px;
   }
   .dn-wedge-hint { font-size: 12px; color: var(--dn-gray); }
-  /* !important because .dn-tool input[type=text] { width: 100% } outranks
-     this on specificity alone — without it, this "hidden" input actually
-     renders at full viewport width (position:absolute with no positioned
-     ancestor resolves % width against the viewport), which both overflows
-     the page horizontally and drags the whole page's auto-focus-triggered
-     scroll position down to wherever that invisible box ends up sitting. */
   .dn-visually-hidden {
     position: absolute !important; top: 0 !important; left: 0 !important;
     width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important;
@@ -282,25 +283,9 @@
   .dn-tool th, .dn-tool td { border: 1px solid var(--dn-border); padding: 6px; font-size: 12.5px; text-align: left; vertical-align: top; }
   .dn-tool th { background: #eef2f6; font-size: 11.5px; }
   .dn-tool td input[type=text] { border: none; padding: 3px; font-size: 12.5px; background: transparent; }
-  /* Applied by warnMissingField() (gs1-scanner.js) when Generate is clicked
-     with a required field left blank — scrolled to, focused, and named in a
-     toast, so a missing field is never just silently printed empty. */
   .dn-tool .field-missing { border-color: var(--dn-red) !important; box-shadow: 0 0 0 2px rgba(192,57,43,0.15); }
   .dn-tool td select.dn-unit-select { width: 100%; font-size: 12px; padding: 3px 2px; border: 1px solid var(--dn-border); border-radius: 4px; background: #fff; }
-  /* Decision support for the 90-day donation rule (DHS 148.06(2)(c)) — set by
-     expirationStatus()/updateExpirationWarning() in drug-donation-record.js.
-     "soon" = inside the 90-day window but not yet expired (amber);
-     "expired" = already past expiration (red, same tone as other errors). */
-  .dn-tool td input.dn-exp-warn.dn-exp-soon { background: #fff6e0; border: 1px solid #b8860b; border-radius: 4px; }
-  .dn-tool td input.dn-exp-warn.dn-exp-expired { background: #fdecea; border: 1px solid var(--dn-red); border-radius: 4px; }
-  .dn-tool .dn-exp-warn-text { font-size: 10.5px; line-height: 1.3; margin-top: 2px; }
-  .dn-tool td input.dn-exp-warn.dn-exp-soon + .dn-exp-warn-text { color: #8a6100; }
-  .dn-tool td input.dn-exp-warn.dn-exp-expired + .dn-exp-warn-text { color: var(--dn-red); }
 
-  /* On phone-width screens, an 8-column table is too cramped to read at a
-     glance. Switch each row to a labeled, stacked card instead — same
-     markup, just re-laid-out via CSS (print output is untouched, since
-     @media print already forces its own separate layout). */
   @media (max-width: 640px) {
     .dn-table-scroll { overflow-x: visible; }
     #itemsTableWrap table, #itemsTableWrap tbody, #itemsTableWrap tr, #itemsTableWrap td { display: block; width: auto; }
@@ -327,7 +312,6 @@
       color: var(--dn-gray);
       text-transform: uppercase;
     }
-    /* 16px prevents iOS Safari from auto-zooming the page when the input gets focus */
     #itemsTableWrap tbody td input[type=text], #itemsTableWrap tbody td select { font-size: 16px; flex: 1; min-width: 0; }
     #itemsTableWrap tbody td.dn-row-num { font-weight: 700; color: var(--dn-blue); font-size: 13px; }
     #itemsTableWrap tbody td.dn-row-num::before { content: "Item"; }
@@ -354,11 +338,6 @@
   .dn-ios-hint { font-size: 12px; color: var(--dn-gray); background: #f7f9fb; border-left: 3px solid var(--dn-blue); padding: 8px 10px; border-radius: 4px; margin: 0 0 12px; }
   .dn-actions { display: flex; gap: 10px; }
   .dn-actions button { flex: 1; }
-  .dn-eligibility-intro { font-size: 13px; margin: 0 0 6px; }
-  .dn-eligibility-list { font-size: 13px; margin: 0 0 12px; padding-left: 20px; line-height: 1.5; }
-  .dn-eligibility-list li { margin-bottom: 4px; }
-  .dn-eligibility-link { font-size: 12px; color: var(--dn-gray); margin: 0; }
-  .dn-eligibility-link a { color: var(--dn-blue); }
   .dn-note {
     font-size: 12px;
     color: var(--dn-gray);
@@ -411,10 +390,6 @@
   /* ---- Print-only official record layout ---- */
   #print-area { display: none; }
   @media print {
-    /* Without an explicit @page size/margin, the browser falls back to its
-       own print margins — if those end up narrower than our fixed content
-       width assumed, some browsers auto-"shrink to fit," scaling the whole
-       page (and every font size on it) down. Locking this down avoids that. */
     @page { size: letter; margin: 0.4in; }
     /* Fully remove the on-screen app from layout — display:none, not just
        visibility:hidden. Hidden boxes still occupy height and get paginated,
@@ -472,5 +447,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
 <script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=8" defer></script>
-<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=10" defer></script>
+<script src="{{ url_for('static', path='/drug-transfer-record.js') }}?v=1" defer></script>
 {% endblock %}

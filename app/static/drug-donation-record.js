@@ -116,6 +116,19 @@ initBarcodeScanner(async (text) => {
     toast('Could not read GTIN from barcode — check item manually');
   }
 
+  // Hard block: a drug that is expired or expires within 90 days of the
+  // donation date is not donatable under DHS 148.06(2)(c), so it is never
+  // added to the record — the scan is rejected with an explanation.
+  const scanExpStatus = expirationStatus(expiration);
+  if (scanExpStatus) {
+    const label = name || 'Item';
+    toast(scanExpStatus === 'expired'
+      ? `Not added — ${label} is already expired and cannot be donated`
+      : `Not added — ${label} (exp ${expiration}) is within 90 days of expiring and cannot be donated per DHS 148.06(2)(c)`,
+      6000);
+    return;
+  }
+
   addItem({ name, strength, ndc: ndcDisplay, lot, expiration, quantity, unit });
 });
 
@@ -123,9 +136,11 @@ initBarcodeScanner(async (text) => {
 // The WI Drug Repository Program (Wis. Admin. Code DHS 148.06(2)(c)) does not
 // allow donating drugs that expire within 90 days of the donation date. Dates
 // here are free-typed or scanned, easy to get wrong/overlook in a long item
-// list, so this flags violations live per-row AND gates Generate with a
-// confirm() — a soft block rather than a hard one, since a mistyped/odd date
-// format shouldn't make the tool impossible to use.
+// list, so this is enforced as a hard block: a flagged item is rejected on
+// scan, cleared back out if typed/edited manually (on blur), and can never
+// appear on a generated record. Only a real M/D/YYYY date is evaluated — a
+// blank or unparseable date isn't blocked, so an odd format can't make the
+// tool impossible to use, but a clearly in-window date is always refused.
 const EXPIRY_WINDOW_DAYS = 90;
 
 function parseUSDate(str) {
@@ -244,6 +259,22 @@ function renderItems() {
         updateExpirationWarning(idx);
       }
     });
+    // Hard block for a manually typed/edited expiration: on blur, if the date
+    // is expired or inside the 90-day window, it is not a donatable item, so
+    // the date is cleared back out and the user is told why. Checked on
+    // 'change' (not 'input') so partially-typed dates aren't fought with.
+    if (inp.dataset.field === 'expiration') {
+      inp.addEventListener('change', e => {
+        const idx = +e.target.dataset.idx;
+        if (expirationStatus(state.items[idx].expiration)) {
+          const bad = state.items[idx].expiration;
+          state.items[idx].expiration = '';
+          e.target.value = '';
+          updateExpirationWarning(idx);
+          toast(`Expiration ${bad} removed — a drug that is expired or expires within 90 days cannot be donated (DHS 148.06(2)(c))`, 6000);
+        }
+      });
+    }
   });
   wrap.querySelectorAll('select.dn-unit-select').forEach(sel => {
     sel.addEventListener('change', e => {
@@ -365,6 +396,10 @@ document.getElementById('generateBtn').addEventListener('click', () => {
       return;
     }
   }
+  // Hard block (safety net — flagged items are already rejected on scan and on
+  // manual entry, but the donation date can be moved later, pulling an
+  // already-added item into the window). A record can never be generated with
+  // a flagged item; the user must remove it.
   const flaggedIdx = state.items
     .map((it, i) => (expirationStatus(it.expiration) ? i : -1))
     .filter(i => i >= 0);
@@ -373,11 +408,8 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     firstEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     const itemList = flaggedIdx.map(i => `#${i + 1}`).join(', ');
     const anyExpired = flaggedIdx.some(i => expirationStatus(state.items[i].expiration) === 'expired');
-    const msg = `Item${flaggedIdx.length > 1 ? 's' : ''} ${itemList} ${anyExpired ? 'is expired or expires' : 'expires'} within 90 days of the donation date. The WI Drug Repository Program (DHS 148.06(2)(c)) does not allow donating drugs that expire within 90 days.`;
-    if (!confirm(`${msg}\n\nGenerate the record anyway?`)) {
-      toast('Record not generated — check flagged expiration dates');
-      return;
-    }
+    warnMissingField(firstEl, `Item${flaggedIdx.length > 1 ? 's' : ''} ${itemList} ${anyExpired ? 'is expired or expires' : 'expires'} within 90 days of the donation date and cannot be donated (DHS 148.06(2)(c)). Remove ${flaggedIdx.length > 1 ? 'them' : 'it'} to generate the record.`);
+    return;
   }
   if (!hasSig) {
     warnMissingField(document.querySelector('.dn-sig-pad-wrap'), 'Signature is required before generating the record');

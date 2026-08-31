@@ -304,10 +304,17 @@
        width assumed, some browsers auto-"shrink to fit," scaling the whole
        page (and every font size on it) down. Locking this down avoids that. */
     @page { size: letter; margin: 0.4in; }
-    body * { visibility: hidden; }
-    #print-area, #print-area * { visibility: visible; }
-    #print-area { display: block; position: absolute; top: 0; left: 0; width: 100%; }
-    .site-header, .site-footer, .no-print { display: none !important; }
+    /* Fully remove the on-screen app from layout — display:none, not just
+       visibility:hidden. Hidden boxes still occupy height and get paginated,
+       which is what printed a trailing blank second page. Only #print-area
+       contributes to the printed flow now, and it stays in normal flow (no
+       position:absolute) so nothing double-counts against the page height. */
+    html, body { height: auto !important; margin: 0 !important; padding: 0 !important; background: #fff !important; }
+    .site-header, .site-footer, .no-print, #toast { display: none !important; }
+    main.container { padding: 0 !important; margin: 0 !important; max-width: none !important; }
+    .cl-tool { padding: 0 !important; margin: 0 !important; border: none !important; box-shadow: none !important; background: #fff !important; }
+    .cl-tool > *:not(#print-area) { display: none !important; }
+    #print-area { display: block !important; }
   }
   .cl-form-page {
     width: 100%;
@@ -317,7 +324,7 @@
     color: #000;
     page-break-after: always;
   }
-  .cl-form-page:last-child { page-break-after: auto; }
+  .cl-form-page:last-child { page-break-after: auto; margin-bottom: 0; }
   .cl-form-title-block { text-align: left; margin-bottom: 8px; }
   .cl-form-title-block .cl-agency { font-size: 17px; font-weight: bold; text-transform: uppercase; }
   .cl-form-title-block .cl-division { font-size: 12px; }

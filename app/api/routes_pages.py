@@ -247,6 +247,23 @@ async def drug_donation_form_redirect(request: Request):
     return RedirectResponse(url="/drug-donation-record", status_code=301)
 
 
+@router.get("/drug-transfer-record", response_class=HTMLResponse)
+async def drug_transfer_record_page(request: Request) -> HTMLResponse:
+    """Render the drug repository transfer record scanner tool (fully client-side)."""
+
+    return templates.TemplateResponse(
+        request=request,
+        name="drug_transfer_record.html",
+        context={},
+    )
+
+
+@router.get("/drug-transfer-form", response_class=HTMLResponse, include_in_schema=False)
+async def drug_transfer_form_redirect(request: Request):
+    from fastapi.responses import RedirectResponse
+    return RedirectResponse(url="/drug-transfer-record", status_code=301)
+
+
 @router.get("/donate-meds", response_class=HTMLResponse)
 async def drug_repository_finder_page(request: Request) -> HTMLResponse:
     """Render the Wisconsin Drug Repository Program site finder tool."""
