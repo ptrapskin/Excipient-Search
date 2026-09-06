@@ -49,7 +49,15 @@
     <div class="dn-grid2">
       <div class="dn-field">
         <label for="recvName">Name &ndash; Pharmacy or Medical Facility</label>
-        <input type="text" id="recvName" autocomplete="organization">
+        <select id="recvName">
+          <option value="">Select a recipient&hellip;</option>
+          <option value="St. Vincent de Paul Charitable Pharmacy">St. Vincent de Paul Charitable Pharmacy</option>
+          <option value="__other__">Other&hellip;</option>
+        </select>
+      </div>
+      <div class="dn-field" id="recvNameOtherField" style="display:none;">
+        <label for="recvNameOther">Enter Receiving Facility Name</label>
+        <input type="text" id="recvNameOther" autocomplete="organization">
       </div>
       <div class="dn-field">
         <label for="dateReceipt">Date of Receipt</label>
@@ -178,12 +186,20 @@
         <input type="date" id="dateSigned">
       </div>
     </div>
-    <label>Signature &ndash; Representative</label>
-    <div class="dn-sig-pad-wrap">
+    <label>Signature &ndash; Representative (optional)</label>
+    <div class="dn-sig-mode-tabs">
+      <button type="button" class="dn-sig-mode-btn active" id="sigModeDrawBtn" data-mode="draw">Draw</button>
+      <button type="button" class="dn-sig-mode-btn" id="sigModeTypeBtn" data-mode="type">Type Name</button>
+    </div>
+    <div class="dn-sig-pad-wrap" id="sigDrawWrap">
       <canvas id="sigpad"></canvas>
     </div>
+    <div class="dn-sig-type-wrap" id="sigTypeWrap" style="display:none;">
+      <input type="text" id="sigTypedName" placeholder="Type full name" autocomplete="off">
+      <div class="dn-sig-typed-preview" id="sigTypedPreview"></div>
+    </div>
     <div class="dn-sig-controls">
-      <span id="sigStatus" style="color:#c0392b;">Not signed</span>
+      <span id="sigStatus" style="color:#888;">No signature (optional)</span>
       <button class="dn-btn-secondary dn-btn-small" id="clearSigBtn" type="button">Clear</button>
     </div>
   </div>
@@ -230,13 +246,14 @@
     color: var(--dn-gray);
     margin-bottom: 3px;
   }
-  .dn-tool input[type=text], .dn-tool input[type=date] {
+  .dn-tool input[type=text], .dn-tool input[type=date], .dn-tool select {
     width: 100%;
     padding: 8px 9px;
     border: 1px solid var(--dn-border);
     border-radius: 6px;
     font-size: 14px;
     font-family: inherit;
+    background: #fff;
   }
   .dn-field { margin-bottom: 10px; }
   .dn-tool button {
@@ -443,9 +460,26 @@
   .dn-drug-table tr { page-break-inside: avoid; }
   .dn-sig-line { border-bottom: 1px solid #000; height: 58px; position: relative; }
   .dn-sig-line img { max-height: 56px; }
+  .dn-sig-line .dn-sig-typed-print {
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;
+    font-size: 30px; line-height: 56px; display: inline-block;
+  }
+  .dn-sig-mode-tabs { display: flex; gap: 6px; margin: 4px 0 8px; }
+  .dn-sig-mode-btn {
+    flex: 1; padding: 6px 10px; font-size: 13px; border: 1px solid var(--dn-border);
+    background: #f7f9fb; border-radius: 6px; cursor: pointer; font-family: inherit; color: var(--dn-gray);
+  }
+  .dn-sig-mode-btn.active { background: var(--dn-blue); color: #fff; border-color: var(--dn-blue); }
+  .dn-sig-type-wrap input { margin-bottom: 6px; }
+  .dn-sig-typed-preview {
+    min-height: 56px; border: 1px solid var(--dn-border); border-radius: 8px;
+    display: flex; align-items: center; padding: 0 12px;
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;
+    font-size: 28px; color: #111; background: #fff;
+  }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
 <script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=8" defer></script>
-<script src="{{ url_for('static', path='/drug-transfer-record.js') }}?v=1" defer></script>
+<script src="{{ url_for('static', path='/drug-transfer-record.js') }}?v=2" defer></script>
 {% endblock %}

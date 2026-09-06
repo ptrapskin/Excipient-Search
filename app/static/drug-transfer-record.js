@@ -29,7 +29,7 @@ const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
 // persisted — they must be set explicitly for each record.
 const persistFields = [
   'transName', 'transAddress', 'transCity', 'transState', 'transZip',
-  'recvName', 'recvAddress', 'recvCity', 'recvState', 'recvZip',
+  'recvName', 'recvNameOther', 'recvAddress', 'recvCity', 'recvState', 'recvZip',
   'repName',
 ];
 persistFields.forEach(id => {
@@ -38,6 +38,20 @@ persistFields.forEach(id => {
   if (saved) el.value = saved;
   el.addEventListener('change', () => localStorage.setItem('transfer_' + id, el.value));
 });
+
+// ---------- Receiving facility "Other" toggle ----------
+function getRecvName() {
+  const sel = document.getElementById('recvName');
+  return sel.value === '__other__' ? document.getElementById('recvNameOther').value : sel.value;
+}
+
+function updateRecvNameOtherVisibility() {
+  const isOther = document.getElementById('recvName').value === '__other__';
+  document.getElementById('recvNameOtherField').style.display = isOther ? '' : 'none';
+}
+
+document.getElementById('recvName').addEventListener('change', updateRecvNameOtherVisibility);
+updateRecvNameOtherVisibility();
 
 (function setDefaultDates() {
   const today = new Date().toISOString().slice(0, 10);
@@ -152,7 +166,7 @@ function escapeHtml(s) {
 // ---------- Signature pad ----------
 const canvas = document.getElementById('sigpad');
 const ctx = canvas.getContext('2d');
-let drawing = false, hasSig = false;
+let drawing = false, hasDrawnSig = false;
 let lastRectW = 0, lastRectH = 0;
 
 function resizeCanvas() {
@@ -163,7 +177,7 @@ function resizeCanvas() {
   // touch the canvas when its on-screen size actually changed, and never
   // clear an existing signature.
   if (Math.round(rect.width) === lastRectW && Math.round(rect.height) === lastRectH) return;
-  if (hasSig) return;
+  if (hasDrawnSig) return;
   lastRectW = Math.round(rect.width);
   lastRectH = Math.round(rect.height);
   const ratio = window.devicePixelRatio || 1;
@@ -183,7 +197,7 @@ function pos(e) {
   const p = e.touches ? e.touches[0] : e;
   return { x: p.clientX - rect.left, y: p.clientY - rect.top };
 }
-function start(e) { drawing = true; hasSig = true; const p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); document.getElementById('sigStatus').textContent = 'Signed'; document.getElementById('sigStatus').style.color = '#1a7a3a'; document.querySelector('.dn-sig-pad-wrap')?.classList.remove('field-missing'); e.preventDefault(); }
+function start(e) { drawing = true; hasDrawnSig = true; const p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); updateSigStatus(); e.preventDefault(); }
 function move(e) { if (!drawing) return; const p = pos(e); ctx.lineTo(p.x, p.y); ctx.stroke(); e.preventDefault(); }
 function end() { drawing = false; }
 canvas.addEventListener('mousedown', start);
@@ -193,11 +207,52 @@ canvas.addEventListener('touchstart', start, { passive: false });
 canvas.addEventListener('touchmove', move, { passive: false });
 canvas.addEventListener('touchend', end);
 
+// ---------- Signature mode (draw vs. typed) ----------
+// The signature is optional (no hard block at Generate time) — a typed name
+// is rendered in a script font on the printed record in place of an <img>.
+const sigTypedInput = document.getElementById('sigTypedName');
+const sigTypedPreview = document.getElementById('sigTypedPreview');
+let sigMode = 'draw';
+
+function hasSignature() {
+  return sigMode === 'draw' ? hasDrawnSig : sigTypedInput.value.trim().length > 0;
+}
+
+function updateSigStatus() {
+  const statusEl = document.getElementById('sigStatus');
+  if (hasSignature()) {
+    statusEl.textContent = 'Signed';
+    statusEl.style.color = '#1a7a3a';
+    document.querySelector('.dn-sig-pad-wrap')?.classList.remove('field-missing');
+    document.getElementById('sigTypeWrap')?.classList.remove('field-missing');
+  } else {
+    statusEl.textContent = 'No signature (optional)';
+    statusEl.style.color = '#888';
+  }
+}
+
+function setSigMode(mode) {
+  sigMode = mode;
+  document.getElementById('sigModeDrawBtn').classList.toggle('active', mode === 'draw');
+  document.getElementById('sigModeTypeBtn').classList.toggle('active', mode === 'type');
+  document.getElementById('sigDrawWrap').style.display = mode === 'draw' ? '' : 'none';
+  document.getElementById('sigTypeWrap').style.display = mode === 'type' ? '' : 'none';
+  updateSigStatus();
+}
+
+document.getElementById('sigModeDrawBtn').addEventListener('click', () => setSigMode('draw'));
+document.getElementById('sigModeTypeBtn').addEventListener('click', () => setSigMode('type'));
+sigTypedInput.addEventListener('input', () => {
+  sigTypedPreview.textContent = sigTypedInput.value;
+  updateSigStatus();
+});
+
 document.getElementById('clearSigBtn').addEventListener('click', () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  hasSig = false;
-  document.getElementById('sigStatus').textContent = 'Not signed';
-  document.getElementById('sigStatus').style.color = '#c0392b';
+  hasDrawnSig = false;
+  sigTypedInput.value = '';
+  sigTypedPreview.textContent = '';
+  updateSigStatus();
 });
 
 // ---------- Reset ----------
@@ -208,9 +263,10 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     state.items = [];
     renderItems();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    hasSig = false;
-    document.getElementById('sigStatus').textContent = 'Not signed';
-    document.getElementById('sigStatus').style.color = '#c0392b';
+    hasDrawnSig = false;
+    sigTypedInput.value = '';
+    sigTypedPreview.textContent = '';
+    updateSigStatus();
     document.querySelectorAll('input[name="transferScope"]').forEach(r => { r.checked = false; });
   });
 });
@@ -223,7 +279,6 @@ const REQUIRED_FIELDS = [
   ['transState', 'the transferring facility state'],
   ['transZip', 'the transferring facility zip code'],
   ['dateTransfer', 'the date of transfer'],
-  ['recvName', 'the receiving facility name'],
   ['recvAddress', 'the receiving facility street address'],
   ['recvCity', 'the receiving facility city'],
   ['recvState', 'the receiving facility state'],
@@ -235,6 +290,13 @@ document.getElementById('generateBtn').addEventListener('click', () => {
   for (const [id, label] of REQUIRED_FIELDS) {
     const el = document.getElementById(id);
     if (!el.value) { warnMissingField(el, `Enter ${label} before generating the record`); return; }
+  }
+  if (!getRecvName()) {
+    const el = document.getElementById('recvName').value === '__other__'
+      ? document.getElementById('recvNameOther')
+      : document.getElementById('recvName');
+    warnMissingField(el, 'Select or enter the receiving facility name before generating the record');
+    return;
   }
   const scope = document.querySelector('input[name="transferScope"]:checked');
   if (!scope) {
@@ -254,10 +316,6 @@ document.getElementById('generateBtn').addEventListener('click', () => {
       return;
     }
   }
-  if (!hasSig) {
-    warnMissingField(document.querySelector('.dn-sig-pad-wrap'), 'Signature is required before generating the record');
-    return;
-  }
   const repNameEl = document.getElementById('repName');
   if (!repNameEl.value) { warnMissingField(repNameEl, 'Enter the representative name before generating the record'); return; }
   const dateSignedEl = document.getElementById('dateSigned');
@@ -270,7 +328,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
       transCity: document.getElementById('transCity').value,
       transState: document.getElementById('transState').value,
       transZip: document.getElementById('transZip').value,
-      recvName: document.getElementById('recvName').value,
+      recvName: getRecvName(),
       recvAddress: document.getElementById('recvAddress').value,
       recvCity: document.getElementById('recvCity').value,
       recvState: document.getElementById('recvState').value,
@@ -281,14 +339,16 @@ document.getElementById('generateBtn').addEventListener('click', () => {
       repName: document.getElementById('repName').value,
       scope: document.querySelector('input[name="transferScope"]:checked').value,
     };
-    const sigDataUrl = canvas.toDataURL('image/png');
+    const sig = !hasSignature() ? { type: 'none' }
+      : sigMode === 'draw' ? { type: 'draw', dataUrl: canvas.toDataURL('image/png') }
+      : { type: 'type', text: sigTypedInput.value.trim() };
 
     const pages = [];
     for (let i = 0; i < state.items.length; i += 8) pages.push(state.items.slice(i, i + 8));
     if (pages.length === 0) pages.push([]);
 
     let html = '';
-    pages.forEach(pageItems => { html += buildFormPage(f, pageItems, sigDataUrl); });
+    pages.forEach(pageItems => { html += buildFormPage(f, pageItems, sig); });
     const printArea = document.getElementById('print-area');
     printArea.innerHTML = html;
     // Wait for the signature <img> to actually finish decoding — otherwise
@@ -309,7 +369,13 @@ function fmtDate(iso) {
   return `${m}/${d}/${y}`;
 }
 
-function buildFormPage(f, items, sigDataUrl) {
+function signatureLineHtml(sig) {
+  if (sig.type === 'draw') return `<img src="${sig.dataUrl}" alt="signature">`;
+  if (sig.type === 'type') return `<span class="dn-sig-typed-print">${escapeHtml(sig.text)}</span>`;
+  return '';
+}
+
+function buildFormPage(f, items, sig) {
   let rows = '';
   items.forEach(it => {
     rows += `<tr>
@@ -387,7 +453,7 @@ function buildFormPage(f, items, sigDataUrl) {
       <tr>
         <td style="width:45%;">
           <span class="dn-label">Signature &ndash; Representative</span>
-          <div class="dn-sig-line"><img src="${sigDataUrl}" alt="signature"></div>
+          <div class="dn-sig-line">${signatureLineHtml(sig)}</div>
         </td>
         <td style="width:35%;"><span class="dn-label">Name &ndash; Representative (Print or type.)</span><span class="dn-value">${escapeHtml(f.repName)}</span></td>
         <td style="width:20%;"><span class="dn-label">Date Signed (MM/dd/yyyy)</span><span class="dn-value">${f.dateSigned}</span></td>

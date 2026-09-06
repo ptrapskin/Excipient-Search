@@ -38,13 +38,27 @@ const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
 
 // ---------- Persistence for recipient (facility) default only ----------
 // Donor fields are patient-identifying and are NEVER persisted to storage.
-const persistFields = ['recipientName'];
+const persistFields = ['recipientName', 'recipientNameOther'];
 persistFields.forEach(id => {
   const el = document.getElementById(id);
   const saved = localStorage.getItem('donation_' + id);
   if (saved) el.value = saved;
   el.addEventListener('change', () => localStorage.setItem('donation_' + id, el.value));
 });
+
+// ---------- Recipient "Other" toggle ----------
+function getRecipientName() {
+  const sel = document.getElementById('recipientName');
+  return sel.value === '__other__' ? document.getElementById('recipientNameOther').value : sel.value;
+}
+
+function updateRecipientOtherVisibility() {
+  const isOther = document.getElementById('recipientName').value === '__other__';
+  document.getElementById('recipientNameOtherField').style.display = isOther ? '' : 'none';
+}
+
+document.getElementById('recipientName').addEventListener('change', updateRecipientOtherVisibility);
+updateRecipientOtherVisibility();
 
 (function setDefaultDates() {
   const today = new Date().toISOString().slice(0, 10);
@@ -297,7 +311,7 @@ function escapeHtml(s) {
 // ---------- Signature pad ----------
 const canvas = document.getElementById('sigpad');
 const ctx = canvas.getContext('2d');
-let drawing = false, hasSig = false;
+let drawing = false, hasDrawnSig = false;
 let lastRectW = 0, lastRectH = 0;
 
 function resizeCanvas() {
@@ -308,7 +322,7 @@ function resizeCanvas() {
   // touch the canvas when its on-screen size actually changed, and never
   // clear an existing signature.
   if (Math.round(rect.width) === lastRectW && Math.round(rect.height) === lastRectH) return;
-  if (hasSig) return;
+  if (hasDrawnSig) return;
   lastRectW = Math.round(rect.width);
   lastRectH = Math.round(rect.height);
   const ratio = window.devicePixelRatio || 1;
@@ -328,7 +342,7 @@ function pos(e) {
   const p = e.touches ? e.touches[0] : e;
   return { x: p.clientX - rect.left, y: p.clientY - rect.top };
 }
-function start(e) { drawing = true; hasSig = true; const p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); document.getElementById('sigStatus').textContent = 'Signed'; document.getElementById('sigStatus').style.color = '#1a7a3a'; document.querySelector('.dn-sig-pad-wrap')?.classList.remove('field-missing'); e.preventDefault(); }
+function start(e) { drawing = true; hasDrawnSig = true; const p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); updateSigStatus(); e.preventDefault(); }
 function move(e) { if (!drawing) return; const p = pos(e); ctx.lineTo(p.x, p.y); ctx.stroke(); e.preventDefault(); }
 function end() { drawing = false; }
 canvas.addEventListener('mousedown', start);
@@ -338,11 +352,52 @@ canvas.addEventListener('touchstart', start, { passive: false });
 canvas.addEventListener('touchmove', move, { passive: false });
 canvas.addEventListener('touchend', end);
 
+// ---------- Signature mode (draw vs. typed) ----------
+// The signature is optional (no hard block at Generate time) — a typed name
+// is rendered in a script font on the printed record in place of an <img>.
+const sigTypedInput = document.getElementById('sigTypedName');
+const sigTypedPreview = document.getElementById('sigTypedPreview');
+let sigMode = 'draw';
+
+function hasSignature() {
+  return sigMode === 'draw' ? hasDrawnSig : sigTypedInput.value.trim().length > 0;
+}
+
+function updateSigStatus() {
+  const statusEl = document.getElementById('sigStatus');
+  if (hasSignature()) {
+    statusEl.textContent = 'Signed';
+    statusEl.style.color = '#1a7a3a';
+    document.querySelector('.dn-sig-pad-wrap')?.classList.remove('field-missing');
+    document.getElementById('sigTypeWrap')?.classList.remove('field-missing');
+  } else {
+    statusEl.textContent = 'No signature (optional)';
+    statusEl.style.color = '#888';
+  }
+}
+
+function setSigMode(mode) {
+  sigMode = mode;
+  document.getElementById('sigModeDrawBtn').classList.toggle('active', mode === 'draw');
+  document.getElementById('sigModeTypeBtn').classList.toggle('active', mode === 'type');
+  document.getElementById('sigDrawWrap').style.display = mode === 'draw' ? '' : 'none';
+  document.getElementById('sigTypeWrap').style.display = mode === 'type' ? '' : 'none';
+  updateSigStatus();
+}
+
+document.getElementById('sigModeDrawBtn').addEventListener('click', () => setSigMode('draw'));
+document.getElementById('sigModeTypeBtn').addEventListener('click', () => setSigMode('type'));
+sigTypedInput.addEventListener('input', () => {
+  sigTypedPreview.textContent = sigTypedInput.value;
+  updateSigStatus();
+});
+
 document.getElementById('clearSigBtn').addEventListener('click', () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  hasSig = false;
-  document.getElementById('sigStatus').textContent = 'Not signed';
-  document.getElementById('sigStatus').style.color = '#c0392b';
+  hasDrawnSig = false;
+  sigTypedInput.value = '';
+  sigTypedPreview.textContent = '';
+  updateSigStatus();
 });
 
 // ---------- Reset ----------
@@ -356,9 +411,10 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     state.items = [];
     renderItems();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    hasSig = false;
-    document.getElementById('sigStatus').textContent = 'Not signed';
-    document.getElementById('sigStatus').style.color = '#c0392b';
+    hasDrawnSig = false;
+    sigTypedInput.value = '';
+    sigTypedPreview.textContent = '';
+    updateSigStatus();
     clearDonorFields(false);
     clearTimeout(donorIdleTimer);
   });
@@ -375,13 +431,19 @@ const REQUIRED_FIELDS = [
   ['donorState', 'the donor state'],
   ['donorZip', 'the donor zip code'],
   ['dateDonated', 'the date donated'],
-  ['recipientName', 'the recipient facility name'],
 ];
 
 document.getElementById('generateBtn').addEventListener('click', () => {
   for (const [id, label] of REQUIRED_FIELDS) {
     const el = document.getElementById(id);
     if (!el.value) { warnMissingField(el, `Enter ${label} before generating the record`); return; }
+  }
+  if (!getRecipientName()) {
+    const el = document.getElementById('recipientName').value === '__other__'
+      ? document.getElementById('recipientNameOther')
+      : document.getElementById('recipientName');
+    warnMissingField(el, 'Select or enter the recipient facility name before generating the record');
+    return;
   }
   if (state.items.length === 0) { toast('Add at least one item before generating the record'); return; }
   for (let i = 0; i < state.items.length; i++) {
@@ -411,10 +473,6 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     warnMissingField(firstEl, `Item${flaggedIdx.length > 1 ? 's' : ''} ${itemList} ${anyExpired ? 'is expired or expires' : 'expires'} within 90 days of the donation date and cannot be donated (DHS 148.06(2)(c)). Remove ${flaggedIdx.length > 1 ? 'them' : 'it'} to generate the record.`);
     return;
   }
-  if (!hasSig) {
-    warnMissingField(document.querySelector('.dn-sig-pad-wrap'), 'Signature is required before generating the record');
-    return;
-  }
   const dateSignedEl = document.getElementById('dateSigned');
   if (!dateSignedEl.value) { warnMissingField(dateSignedEl, 'Enter the date signed before generating the record'); return; }
 
@@ -427,15 +485,17 @@ document.getElementById('generateBtn').addEventListener('click', () => {
       zip: document.getElementById('donorZip').value,
       dateDonated: fmtDate(document.getElementById('dateDonated').value),
       dateSigned: fmtDate(document.getElementById('dateSigned').value),
-      recipientName: document.getElementById('recipientName').value,
+      recipientName: getRecipientName(),
     };
-    const sigDataUrl = canvas.toDataURL('image/png');
+    const sig = !hasSignature() ? { type: 'none' }
+      : sigMode === 'draw' ? { type: 'draw', dataUrl: canvas.toDataURL('image/png') }
+      : { type: 'type', text: sigTypedInput.value.trim() };
 
     const pages = [];
     for (let i = 0; i < state.items.length; i += 10) pages.push(state.items.slice(i, i + 10));
 
     let html = '';
-    pages.forEach(pageItems => { html += buildFormPage(donor, pageItems, sigDataUrl); });
+    pages.forEach(pageItems => { html += buildFormPage(donor, pageItems, sig); });
     const printArea = document.getElementById('print-area');
     printArea.innerHTML = html;
     // Wait for the signature <img> to actually finish decoding — otherwise
@@ -466,7 +526,13 @@ function fmtDate(iso) {
   return `${m}/${d}/${y}`;
 }
 
-function buildFormPage(f, items, sigDataUrl) {
+function signatureLineHtml(sig) {
+  if (sig.type === 'draw') return `<img src="${sig.dataUrl}" alt="signature">`;
+  if (sig.type === 'type') return `<span class="dn-sig-typed-print">${escapeHtml(sig.text)}</span>`;
+  return '';
+}
+
+function buildFormPage(f, items, sig) {
   let rows = '';
   items.forEach(it => {
     rows += `<tr>
@@ -532,7 +598,7 @@ function buildFormPage(f, items, sigDataUrl) {
         <td style="width:30%;"><span class="dn-label">Date Signed (MM/dd/yyyy)</span><span class="dn-value">${f.dateSigned}</span></td>
         <td style="width:70%;">
           <span class="dn-label">Signature &ndash; Donor</span>
-          <div class="dn-sig-line"><img src="${sigDataUrl}" alt="signature"></div>
+          <div class="dn-sig-line">${signatureLineHtml(sig)}</div>
         </td>
       </tr>
     </table>

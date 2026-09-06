@@ -13,13 +13,27 @@ const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
 // ---------- Persistence for facility defaults (facility info only — no PHI, no signatures) ----------
-const persistFields = ['facilityName', 'facilityAddress', 'facilityCity', 'facilityState', 'facilityZip'];
+const persistFields = ['facilityName', 'facilityNameOther', 'facilityAddress', 'facilityCity', 'facilityState', 'facilityZip'];
 persistFields.forEach(id => {
   const el = document.getElementById(id);
   const saved = localStorage.getItem('destr_' + id);
   if (saved) el.value = saved;
   el.addEventListener('change', () => localStorage.setItem('destr_' + id, el.value));
 });
+
+// ---------- Facility name "Other" toggle ----------
+function getFacilityName() {
+  const sel = document.getElementById('facilityName');
+  return sel.value === '__other__' ? document.getElementById('facilityNameOther').value : sel.value;
+}
+
+function updateFacilityNameOtherVisibility() {
+  const isOther = document.getElementById('facilityName').value === '__other__';
+  document.getElementById('facilityNameOtherField').style.display = isOther ? '' : 'none';
+}
+
+document.getElementById('facilityName').addEventListener('change', updateFacilityNameOtherVisibility);
+updateFacilityNameOtherVisibility();
 
 (function setDefaultDates() {
   const today = new Date().toISOString().slice(0, 10);
@@ -132,7 +146,7 @@ function escapeHtml(s) {
 // ---------- Signature pad ----------
 const canvas = document.getElementById('sigpad');
 const ctx = canvas.getContext('2d');
-let drawing = false, hasSig = false;
+let drawing = false, hasDrawnSig = false;
 let lastRectW = 0, lastRectH = 0;
 
 function resizeCanvas() {
@@ -143,7 +157,7 @@ function resizeCanvas() {
   // touch the canvas when its on-screen size actually changed, and never
   // clear an existing signature.
   if (Math.round(rect.width) === lastRectW && Math.round(rect.height) === lastRectH) return;
-  if (hasSig) return;
+  if (hasDrawnSig) return;
   lastRectW = Math.round(rect.width);
   lastRectH = Math.round(rect.height);
   const ratio = window.devicePixelRatio || 1;
@@ -163,7 +177,7 @@ function pos(e) {
   const p = e.touches ? e.touches[0] : e;
   return { x: p.clientX - rect.left, y: p.clientY - rect.top };
 }
-function start(e) { drawing = true; hasSig = true; const p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); document.getElementById('sigStatus').textContent = 'Signed'; document.getElementById('sigStatus').style.color = '#1a7a3a'; document.querySelector('.dr-sig-pad-wrap')?.classList.remove('field-missing'); e.preventDefault(); }
+function start(e) { drawing = true; hasDrawnSig = true; const p = pos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); updateSigStatus(); e.preventDefault(); }
 function move(e) { if (!drawing) return; const p = pos(e); ctx.lineTo(p.x, p.y); ctx.stroke(); e.preventDefault(); }
 function end() { drawing = false; }
 canvas.addEventListener('mousedown', start);
@@ -173,11 +187,52 @@ canvas.addEventListener('touchstart', start, { passive: false });
 canvas.addEventListener('touchmove', move, { passive: false });
 canvas.addEventListener('touchend', end);
 
+// ---------- Signature mode (draw vs. typed) ----------
+// The signature is optional (no hard block at Generate time) — a typed name
+// is rendered in a script font on the printed record in place of an <img>.
+const sigTypedInput = document.getElementById('sigTypedName');
+const sigTypedPreview = document.getElementById('sigTypedPreview');
+let sigMode = 'draw';
+
+function hasSignature() {
+  return sigMode === 'draw' ? hasDrawnSig : sigTypedInput.value.trim().length > 0;
+}
+
+function updateSigStatus() {
+  const statusEl = document.getElementById('sigStatus');
+  if (hasSignature()) {
+    statusEl.textContent = 'Signed';
+    statusEl.style.color = '#1a7a3a';
+    document.querySelector('.dr-sig-pad-wrap')?.classList.remove('field-missing');
+    document.getElementById('sigTypeWrap')?.classList.remove('field-missing');
+  } else {
+    statusEl.textContent = 'No signature (optional)';
+    statusEl.style.color = '#888';
+  }
+}
+
+function setSigMode(mode) {
+  sigMode = mode;
+  document.getElementById('sigModeDrawBtn').classList.toggle('active', mode === 'draw');
+  document.getElementById('sigModeTypeBtn').classList.toggle('active', mode === 'type');
+  document.getElementById('sigDrawWrap').style.display = mode === 'draw' ? '' : 'none';
+  document.getElementById('sigTypeWrap').style.display = mode === 'type' ? '' : 'none';
+  updateSigStatus();
+}
+
+document.getElementById('sigModeDrawBtn').addEventListener('click', () => setSigMode('draw'));
+document.getElementById('sigModeTypeBtn').addEventListener('click', () => setSigMode('type'));
+sigTypedInput.addEventListener('input', () => {
+  sigTypedPreview.textContent = sigTypedInput.value;
+  updateSigStatus();
+});
+
 document.getElementById('clearSigBtn').addEventListener('click', () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  hasSig = false;
-  document.getElementById('sigStatus').textContent = 'Not signed';
-  document.getElementById('sigStatus').style.color = '#c0392b';
+  hasDrawnSig = false;
+  sigTypedInput.value = '';
+  sigTypedPreview.textContent = '';
+  updateSigStatus();
 });
 
 // ---------- Reset ----------
@@ -191,9 +246,10 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     state.items = [];
     renderItems();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    hasSig = false;
-    document.getElementById('sigStatus').textContent = 'Not signed';
-    document.getElementById('sigStatus').style.color = '#c0392b';
+    hasDrawnSig = false;
+    sigTypedInput.value = '';
+    sigTypedPreview.textContent = '';
+    updateSigStatus();
   });
 });
 
@@ -202,7 +258,6 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 // the first missing one gets scrolled to, highlighted, and named, rather
 // than silently letting the record print with a blank field.
 const REQUIRED_HEADER_FIELDS = [
-  ['facilityName', 'the pharmacy/facility name'],
   ['facilityAddress', 'the street address'],
   ['facilityCity', 'the city'],
   ['facilityState', 'the state'],
@@ -212,6 +267,13 @@ const REQUIRED_HEADER_FIELDS = [
 ];
 
 document.getElementById('generateBtn').addEventListener('click', () => {
+  if (!getFacilityName()) {
+    const el = document.getElementById('facilityName').value === '__other__'
+      ? document.getElementById('facilityNameOther')
+      : document.getElementById('facilityName');
+    warnMissingField(el, 'Select or enter the pharmacy/facility name before generating the record');
+    return;
+  }
   for (const [id, label] of REQUIRED_HEADER_FIELDS) {
     const el = document.getElementById(id);
     if (!el.value) { warnMissingField(el, `Enter ${label} before generating the record`); return; }
@@ -229,16 +291,12 @@ document.getElementById('generateBtn').addEventListener('click', () => {
       return;
     }
   }
-  if (!hasSig) {
-    warnMissingField(document.querySelector('.dr-sig-pad-wrap'), 'Signature is required before generating the record');
-    return;
-  }
   const dateSignedEl = document.getElementById('dateSigned');
   if (!dateSignedEl.value) { warnMissingField(dateSignedEl, 'Enter the date signed before generating the record'); return; }
 
   preserveScroll(async () => {
     const facility = {
-      name: document.getElementById('facilityName').value,
+      name: getFacilityName(),
       address: document.getElementById('facilityAddress').value,
       city: document.getElementById('facilityCity').value,
       state: document.getElementById('facilityState').value,
@@ -247,14 +305,16 @@ document.getElementById('generateBtn').addEventListener('click', () => {
       dateDestroyed: fmtDate(document.getElementById('dateDestroyed').value),
       dateSigned: fmtDate(document.getElementById('dateSigned').value),
     };
-    const sigDataUrl = canvas.toDataURL('image/png');
+    const sig = !hasSignature() ? { type: 'none' }
+      : sigMode === 'draw' ? { type: 'draw', dataUrl: canvas.toDataURL('image/png') }
+      : { type: 'type', text: sigTypedInput.value.trim() };
 
     const pages = [];
     for (let i = 0; i < state.items.length; i += 10) pages.push(state.items.slice(i, i + 10));
 
     let html = '';
     pages.forEach((pageItems, pIdx) => {
-      html += buildFormPage(facility, pageItems, sigDataUrl, pIdx === pages.length - 1);
+      html += buildFormPage(facility, pageItems, sig, pIdx === pages.length - 1);
     });
     const printArea = document.getElementById('print-area');
     printArea.innerHTML = html;
@@ -276,7 +336,13 @@ function fmtDate(iso) {
   return `${m}/${d}/${y}`;
 }
 
-function buildFormPage(f, items, sigDataUrl, isLastPage) {
+function signatureLineHtml(sig) {
+  if (sig.type === 'draw') return `<img src="${sig.dataUrl}" alt="signature">`;
+  if (sig.type === 'type') return `<span class="dr-sig-typed-print">${escapeHtml(sig.text)}</span>`;
+  return '';
+}
+
+function buildFormPage(f, items, sig, isLastPage) {
   let rows = '';
   for (let r = 0; r < 10; r++) {
     const it = items[r];
@@ -335,7 +401,7 @@ function buildFormPage(f, items, sigDataUrl, isLastPage) {
         <td style="width:30%;"><span class="dr-label">Date Signed (MM/dd/yyyy)</span><span class="dr-value">${f.dateSigned}</span></td>
         <td style="width:70%;">
           <span class="dr-label">Signature &ndash; Person Destroying Drugs or Medical Supplies</span>
-          <div class="dr-sig-line"><img src="${sigDataUrl}" alt="signature"></div>
+          <div class="dr-sig-line">${signatureLineHtml(sig)}</div>
         </td>
       </tr>
     </table>` : `<p style="font-size:9px;color:#555;">(continued on next page)</p>`}

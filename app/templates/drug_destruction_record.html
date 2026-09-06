@@ -21,7 +21,15 @@
     <h2>Pharmacy / Facility Information</h2>
     <div class="dr-field">
       <label for="facilityName">Name &ndash; Pharmacy or Medical Facility</label>
-      <input type="text" id="facilityName" autocomplete="organization">
+      <select id="facilityName">
+        <option value="">Select a facility&hellip;</option>
+        <option value="St. Vincent de Paul Charitable Pharmacy">St. Vincent de Paul Charitable Pharmacy</option>
+        <option value="__other__">Other&hellip;</option>
+      </select>
+    </div>
+    <div class="dr-field" id="facilityNameOtherField" style="display:none;">
+      <label for="facilityNameOther">Enter Facility Name</label>
+      <input type="text" id="facilityNameOther" autocomplete="organization">
     </div>
     <div class="dr-field">
       <label for="facilityAddress">Street Address</label>
@@ -79,12 +87,20 @@
       <label for="dateSigned">Date Signed</label>
       <input type="date" id="dateSigned">
     </div>
-    <label>Signature &ndash; Person Destroying Drugs or Medical Supplies</label>
-    <div class="dr-sig-pad-wrap">
+    <label>Signature &ndash; Person Destroying Drugs or Medical Supplies (optional)</label>
+    <div class="dr-sig-mode-tabs">
+      <button type="button" class="dr-sig-mode-btn active" id="sigModeDrawBtn" data-mode="draw">Draw</button>
+      <button type="button" class="dr-sig-mode-btn" id="sigModeTypeBtn" data-mode="type">Type Name</button>
+    </div>
+    <div class="dr-sig-pad-wrap" id="sigDrawWrap">
       <canvas id="sigpad"></canvas>
     </div>
+    <div class="dr-sig-type-wrap" id="sigTypeWrap" style="display:none;">
+      <input type="text" id="sigTypedName" placeholder="Type full name" autocomplete="off">
+      <div class="dr-sig-typed-preview" id="sigTypedPreview"></div>
+    </div>
     <div class="dr-sig-controls">
-      <span id="sigStatus" style="color:#c0392b;">Not signed</span>
+      <span id="sigStatus" style="color:#888;">No signature (optional)</span>
       <button class="dr-btn-secondary dr-btn-small" id="clearSigBtn" type="button">Clear</button>
     </div>
   </div>
@@ -135,13 +151,14 @@
     color: var(--dr-gray);
     margin-bottom: 3px;
   }
-  .dr-tool input[type=text], .dr-tool input[type=date] {
+  .dr-tool input[type=text], .dr-tool input[type=date], .dr-tool select {
     width: 100%;
     padding: 8px 9px;
     border: 1px solid var(--dr-border);
     border-radius: 6px;
     font-size: 14px;
     font-family: inherit;
+    background: #fff;
   }
   .dr-field { margin-bottom: 10px; }
   .dr-tool button {
@@ -337,9 +354,26 @@
   .dr-drug-table td { height: 30px; font-size: 12px; }
   .dr-sig-line { border-bottom: 1px solid #000; height: 44px; position: relative; }
   .dr-sig-line img { max-height: 42px; }
+  .dr-sig-line .dr-sig-typed-print {
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;
+    font-size: 24px; line-height: 42px; display: inline-block;
+  }
+  .dr-sig-mode-tabs { display: flex; gap: 6px; margin: 4px 0 8px; }
+  .dr-sig-mode-btn {
+    flex: 1; padding: 6px 10px; font-size: 13px; border: 1px solid var(--dr-border);
+    background: #f7f9fb; border-radius: 6px; cursor: pointer; font-family: inherit; color: var(--dr-gray);
+  }
+  .dr-sig-mode-btn.active { background: var(--dr-blue); color: #fff; border-color: var(--dr-blue); }
+  .dr-sig-type-wrap input { margin-bottom: 6px; }
+  .dr-sig-typed-preview {
+    min-height: 44px; border: 1px solid var(--dr-border); border-radius: 8px;
+    display: flex; align-items: center; padding: 0 12px;
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;
+    font-size: 24px; color: #111; background: #fff;
+  }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
 <script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=8" defer></script>
-<script src="{{ url_for('static', path='/drug-destruction-record.js') }}?v=15" defer></script>
+<script src="{{ url_for('static', path='/drug-destruction-record.js') }}?v=16" defer></script>
 {% endblock %}
