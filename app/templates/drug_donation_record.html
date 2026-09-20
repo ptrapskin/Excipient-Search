@@ -143,32 +143,30 @@
     </p>
   </div>
 
-  <!-- SCANNER -->
+  <!-- ITEMS TABLE + SCANNER -->
   <div class="dn-card no-print">
-    <h2>Scan Items</h2>
-    <div id="cameraScanSection">
-      <button class="dn-btn-primary" id="startScanBtn" type="button">📷 Scan Item Barcode</button>
-      <div id="scanner-wrap">
-        <video id="video" playsinline muted autoplay></video>
-        <div class="dn-scan-status" id="scanStatus">Hold the phone a few inches away so the barcode fills most of the frame</div>
-        <button class="dn-btn-secondary dn-btn-small" id="cancelScanBtn" type="button" style="margin-top:8px;width:100%;">Cancel</button>
+    <h2>Drug / Medical Supply Information</h2>
+    <div class="dn-item-actions">
+      <div id="cameraScanSection">
+        <button class="dn-btn-primary" id="startScanBtn" type="button">📷 Scan Item Barcode</button>
       </div>
+      <button class="dn-btn-secondary" id="addManualBtn" type="button">+ Add Item Manually</button>
+    </div>
+    <div id="scanner-wrap">
+      <video id="video" playsinline muted autoplay></video>
+      <div class="dn-scan-status" id="scanStatus">Hold the phone a few inches away so the barcode fills most of the frame</div>
+      <button class="dn-btn-secondary dn-btn-small" id="cancelScanBtn" type="button" style="margin-top:8px;width:100%;">Cancel</button>
     </div>
     <div id="wedgeStatus" class="dn-wedge-status" style="display:none;">
       <span><span class="dn-wedge-dot"></span><strong>Scanner ready</strong> &mdash; scan the next item</span>
       <span class="dn-wedge-hint">Using a USB/Bluetooth barcode scanner in keyboard-wedge mode &mdash; just scan, no button needed. On a phone, use the camera instead.</span>
     </div>
     <input type="text" id="wedgeCaptureInput" class="dn-visually-hidden" autocomplete="off" aria-hidden="true" tabindex="-1">
-  </div>
 
-  <!-- ITEMS TABLE -->
-  <div class="dn-card no-print">
-    <h2>Drug / Medical Supply Information</h2>
     <p class="dn-qty-hint">Enter the number of individual units donated (tablets, capsules, mL, patches, etc.) and pick a unit &mdash; not the number of bottles/packages.</p>
     <div id="itemsTableWrap">
       <div class="dn-empty-state" id="emptyState">No items scanned yet</div>
     </div>
-    <button class="dn-btn-secondary dn-btn-small" id="addManualBtn" type="button" style="margin-top:8px;">+ Add Item Manually</button>
   </div>
 
   <!-- SIGNATURE -->
@@ -271,6 +269,17 @@
     gap: 10px; margin-top: 6px; padding: 8px 10px;
     background: #f7f9fb; border-radius: 6px; font-size: 12px; color: var(--dn-gray);
   }
+  /* Scan and manual-add sit side by side as the two ways to start a line —
+     a grid (not flex) so each keeps an equal-width column and wraps its own
+     text onto a second line on a narrow phone, rather than the full button
+     falling back to stacking the way a shrink-to-fit flex row would.
+     #cameraScanSection (not this row) is what gs1-scanner.js hides entirely
+     on desktop (no camera to scan with), so on desktop this row just
+     collapses to the single "Add Item Manually" button spanning full width. */
+  .dn-item-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .dn-item-actions:has(#cameraScanSection[style*="display: none"]) { grid-template-columns: 1fr; }
+  .dn-item-actions #cameraScanSection button,
+  .dn-item-actions > #addManualBtn { width: 100%; height: 100%; }
   #scanner-wrap { display: none; margin-top: 12px; }
   #scanner-wrap.active { display: block; }
   #scanner-wrap video { width: 100%; border-radius: 8px; background: #000; }
