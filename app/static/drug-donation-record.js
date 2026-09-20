@@ -520,8 +520,15 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     const pages = [];
     for (let i = 0; i < state.items.length; i += 10) pages.push(state.items.slice(i, i + 10));
 
+    // Captured once, outside the loop, so every page's footer shows the same
+    // "generated at" instant rather than drifting across however long
+    // buildFormPage()/print take to run for a large multi-page donation.
+    const generatedAt = new Date();
+
     let html = '';
-    pages.forEach(pageItems => { html += buildFormPage(donor, pageItems, sig); });
+    pages.forEach((pageItems, i) => {
+      html += buildFormPage(donor, pageItems, sig, i + 1, pages.length, generatedAt);
+    });
     const printArea = document.getElementById('print-area');
     printArea.innerHTML = html;
     // Wait for the signature <img> to actually finish decoding — otherwise
@@ -558,7 +565,25 @@ function signatureLineHtml(sig) {
   return '';
 }
 
-function buildFormPage(f, items, sig) {
+function fmtDateTime(d) {
+  const date = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`;
+  let h = d.getHours();
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  const m = String(d.getMinutes()).padStart(2, '0');
+  return `${date} ${h}:${m} ${ampm}`;
+}
+
+// A multi-item donation is split across several of these pages (10 items
+// each, see the caller) — only the LAST page carries the Attestation and
+// Signature sections, so the donor signs once for the whole donation rather
+// than once per page. Every page still gets its own footer (donation date,
+// when the record was generated, and "Page X of Y") so a stack of printed
+// pages — possibly interleaved with other donors' multi-page records — can
+// always be sorted back into the right donation and see how many pages
+// belong to it.
+function buildFormPage(f, items, sig, pageNum, totalPages, generatedAt) {
+  const isLastPage = pageNum === totalPages;
   let rows = '';
   items.forEach(it => {
     rows += `<tr>
@@ -570,6 +595,24 @@ function buildFormPage(f, items, sig) {
       <td>${escapeHtml(it.quantity)} ${escapeHtml(it.unit)}</td>
     </tr>`;
   });
+
+  const attestationAndSignature = isLastPage ? `
+    <div class="dn-section-header">Attestation</div>
+    <table class="dn-official">
+      <tr><td style="font-size:9.5px;">I attest that the drugs or medical supplies listed on this record${totalPages > 1 ? ` (pages 1&ndash;${totalPages})` : ''} were stored as recommended by the manufacturer and have not been subject to tampering.</td></tr>
+    </table>
+
+    <div class="dn-section-header">Signature</div>
+    <table class="dn-official">
+      <tr>
+        <td style="width:30%;"><span class="dn-label">Date Signed (MM/dd/yyyy)</span><span class="dn-value">${f.dateSigned}</span></td>
+        <td style="width:70%;">
+          <span class="dn-label">Signature &ndash; Donor</span>
+          <div class="dn-sig-line">${signatureLineHtml(sig)}</div>
+        </td>
+      </tr>
+    </table>` : '';
+
   return `
   <div class="dn-form-page">
     <div class="dn-form-title-block">
@@ -612,21 +655,12 @@ function buildFormPage(f, items, sig) {
       </thead>
       <tbody>${rows}</tbody>
     </table>
+    ${attestationAndSignature}
 
-    <div class="dn-section-header">Attestation</div>
-    <table class="dn-official">
-      <tr><td style="font-size:9.5px;">I attest that the above-named drugs or medical supplies were stored as recommended by the manufacturer and have not been subject to tampering.</td></tr>
-    </table>
-
-    <div class="dn-section-header">Signature</div>
-    <table class="dn-official">
-      <tr>
-        <td style="width:30%;"><span class="dn-label">Date Signed (MM/dd/yyyy)</span><span class="dn-value">${f.dateSigned}</span></td>
-        <td style="width:70%;">
-          <span class="dn-label">Signature &ndash; Donor</span>
-          <div class="dn-sig-line">${signatureLineHtml(sig)}</div>
-        </td>
-      </tr>
-    </table>
+    <div class="dn-form-footer">
+      <span>Date Donated: ${f.dateDonated}</span>
+      <span>Generated: ${fmtDateTime(generatedAt)}</span>
+      <span>Page ${pageNum} of ${totalPages}</span>
+    </div>
   </div>`;
 }
