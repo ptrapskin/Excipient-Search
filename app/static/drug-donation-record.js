@@ -242,7 +242,7 @@ function unitSelectHtml(idx, selected) {
 // completed line looks like, without it ever being mistaken for a real item —
 // it's excluded from state.items, so it's never counted, validated, or
 // printed on the generated record.
-const EXAMPLE_ITEM = { name: 'Amoxicillin 500 mg', strength: '500 mg', ndc: '00000-1234-56', lot: 'AB1234C', expiration: '12/31/2027', quantity: '30', unit: 'capsules' };
+const EXAMPLE_ITEM = { name: 'Amoxicillin', strength: '500 mg', ndc: '00000-1234-56', lot: 'AB1234C', expiration: '12/31/2027', quantity: '30', unit: 'capsules' };
 
 function exampleRowHtml() {
   return `<tr class="dn-example-row">
