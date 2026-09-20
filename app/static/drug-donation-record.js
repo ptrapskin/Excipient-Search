@@ -499,8 +499,13 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     warnMissingField(firstEl, `Item${flaggedIdx.length > 1 ? 's' : ''} ${itemList} ${anyExpired ? 'is expired or expires' : 'expires'} within 90 days of the donation date and cannot be donated (DHS 148.06(2)(c)). Remove ${flaggedIdx.length > 1 ? 'them' : 'it'} to generate the record.`);
     return;
   }
+  // The signature itself is optional (see hasSignature() above) — only
+  // require a signed date to go with it when there's an actual signature to
+  // date. Without this, someone printing an unsigned record (e.g. to sign by
+  // hand later) could get blocked by a date field for a signature that was
+  // never going to be there.
   const dateSignedEl = document.getElementById('dateSigned');
-  if (!dateSignedEl.value) { warnMissingField(dateSignedEl, 'Enter the date signed before generating the record'); return; }
+  if (hasSignature() && !dateSignedEl.value) { warnMissingField(dateSignedEl, 'Enter the date signed before generating the record'); return; }
 
   preserveScroll(async () => {
     const donor = {
