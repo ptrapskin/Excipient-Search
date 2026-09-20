@@ -457,49 +457,54 @@
     .dn-tool > *:not(#print-area) { display: none !important; }
     #print-area { display: block !important; }
   }
+  /* Sized to keep a full record (donor/recipient info, up to ~10 items, and
+     the signature block) on a single printed page — the previous, much
+     larger sizes routinely overflowed onto a second, mostly-empty page for
+     anything past 4-5 items, which just spilled the signature block onto
+     its own page and looked like a duplicate/wasted "signature space". */
   .dn-form-page {
     width: 100%;
     margin: 0 auto 0.3in;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 11px;
     color: #000;
     page-break-after: always;
   }
   .dn-form-page:last-child { page-break-after: auto; margin-bottom: 0; }
-  .dn-form-title-block { text-align: left; margin-bottom: 10px; }
-  .dn-form-title-block .dn-agency { font-size: 16px; font-weight: bold; }
-  .dn-form-title-block .dn-division { font-size: 15px; }
-  .dn-form-title-block .dn-formnum { font-size: 13px; float: right; }
-  .dn-form-title-block .dn-title { font-size: 21px; font-weight: bold; text-align: center; margin: 14px 0; text-transform: uppercase; }
-  .dn-form-note { font-size: 14px; margin-bottom: 14px; }
-  .dn-form-note li { margin-bottom: 5px; }
-  table.dn-official { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+  .dn-form-title-block { text-align: left; margin-bottom: 6px; }
+  .dn-form-title-block .dn-agency { font-size: 12.5px; font-weight: bold; }
+  .dn-form-title-block .dn-division { font-size: 11px; }
+  .dn-form-title-block .dn-formnum { font-size: 9.5px; float: right; }
+  .dn-form-title-block .dn-title { font-size: 15px; font-weight: bold; text-align: center; margin: 8px 0; text-transform: uppercase; }
+  .dn-form-note { font-size: 9.5px; margin-bottom: 8px; }
+  .dn-form-note li { margin-bottom: 2px; }
+  table.dn-official { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
   table.dn-official th, table.dn-official td {
     border: 1px solid #000;
-    padding: 9px 10px;
-    font-size: 15px;
+    padding: 4px 6px;
+    font-size: 10.5px;
     vertical-align: top;
   }
-  table.dn-official .dn-label { font-size: 12px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
-  table.dn-official .dn-value { font-size: 16px; min-height: 24px; }
+  table.dn-official .dn-label { font-size: 8px; font-weight: bold; text-transform: uppercase; color: #333; display: block; }
+  table.dn-official .dn-value { font-size: 11px; min-height: 14px; }
   .dn-section-header {
     background: #dde5ec;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 10.5px;
     text-align: center;
-    padding: 7px;
+    padding: 3px;
     border: 1px solid #000;
     text-transform: uppercase;
   }
-  .dn-drug-table th { background: #eef2f6; font-size: 14px; text-align: center; padding: 8px 6px; }
-  .dn-drug-table td { height: 42px; font-size: 15px; }
+  .dn-drug-table th { background: #eef2f6; font-size: 9.5px; text-align: center; padding: 4px 6px; }
+  .dn-drug-table td { font-size: 10.5px; }
   .dn-drug-table thead { display: table-header-group; }
   .dn-drug-table tr { page-break-inside: avoid; }
-  .dn-sig-line { border-bottom: 1px solid #000; height: 58px; position: relative; }
-  .dn-sig-line img { max-height: 56px; }
+  .dn-sig-line { border-bottom: 1px solid #000; height: 34px; position: relative; }
+  .dn-sig-line img { max-height: 32px; }
   .dn-sig-line .dn-sig-typed-print {
     font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive;
-    font-size: 30px; line-height: 56px; display: inline-block;
+    font-size: 20px; line-height: 32px; display: inline-block;
   }
   .dn-sig-mode-tabs { display: flex; gap: 6px; margin: 4px 0 8px; }
   .dn-sig-mode-btn {
