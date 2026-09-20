@@ -304,8 +304,18 @@
   .dn-tool td input[type=text] { border: none; padding: 3px; font-size: 12.5px; background: transparent; }
   /* Applied by warnMissingField() (gs1-scanner.js) when Generate is clicked
      with a required field left blank — scrolled to, focused, and named in a
-     toast, so a missing field is never just silently printed empty. */
-  .dn-tool .field-missing { border-color: var(--dn-red) !important; box-shadow: 0 0 0 2px rgba(192,57,43,0.15); }
+     toast, so a missing field is never just silently printed empty.
+     Background-color (not just border-color/box-shadow) is the load-bearing
+     part here: iOS Safari renders native <select> elements (Recipient
+     Facility, each item's Unit dropdown) with OS-drawn chrome that ignores
+     custom border/box-shadow until the control is focused/redrawn — but it
+     reliably honors background-color even on an unfocused native select, so
+     that's what actually makes the highlight visible at a glance on iPhone. */
+  .dn-tool .field-missing {
+    border-color: var(--dn-red) !important;
+    background-color: #fdecea !important;
+    box-shadow: 0 0 0 2px rgba(192,57,43,0.15);
+  }
   .dn-tool td select.dn-unit-select { width: 100%; font-size: 12px; padding: 3px 2px; border: 1px solid var(--dn-border); border-radius: 4px; background: #fff; }
   /* Decision support for the 90-day donation rule (DHS 148.06(2)(c)) — set by
      expirationStatus()/updateExpirationWarning() in drug-donation-record.js.
