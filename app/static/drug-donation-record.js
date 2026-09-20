@@ -237,15 +237,36 @@ function unitSelectHtml(idx, selected) {
   </select>`;
 }
 
+// Shown as a permanent, non-editable first row so a patient filling this out
+// (by hand or reading over someone's shoulder) has a worked example of what a
+// completed line looks like, without it ever being mistaken for a real item —
+// it's excluded from state.items, so it's never counted, validated, or
+// printed on the generated record.
+const EXAMPLE_ITEM = { name: 'Amoxicillin 500 mg (generic)', strength: '500 mg capsule', ndc: '00000-1234-56', lot: 'AB1234C', expiration: '12/31/2027', quantity: '30', unit: 'capsules' };
+
+function exampleRowHtml() {
+  return `<tr class="dn-example-row">
+    <td class="dn-row-num" data-label="#">Ex.</td>
+    <td data-label="Name"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.name)}" disabled></td>
+    <td data-label="Strength"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.strength)}" disabled></td>
+    <td data-label="NDC"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.ndc)}" disabled></td>
+    <td data-label="Lot"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.lot)}" disabled></td>
+    <td data-label="Exp"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.expiration)}" disabled></td>
+    <td data-label="Qty"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.quantity)}" disabled></td>
+    <td data-label="Unit"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.unit)}" disabled></td>
+    <td class="dn-remove-cell"><span class="dn-example-tag">Example</span></td>
+  </tr>`;
+}
+
 function renderItems() {
   const wrap = document.getElementById('itemsTableWrap');
-  if (state.items.length === 0) {
-    wrap.innerHTML = '<div class="dn-empty-state" id="emptyState">No items scanned yet</div>';
-    return;
-  }
   let html = '<div class="dn-table-scroll"><table><thead><tr>' +
     '<th class="dn-row-num">#</th><th>Name of Drug/Supply</th><th>Strength</th><th>NDC No.</th>' +
     '<th>Lot No.</th><th>Expiration</th><th title="Number of units, not packages">Qty Donated (units)</th><th>Unit</th><th></th></tr></thead><tbody>';
+  html += exampleRowHtml();
+  if (state.items.length === 0) {
+    html += '<tr><td colspan="9"><div class="dn-empty-state" id="emptyState">No items scanned yet</div></td></tr>';
+  }
   state.items.forEach((it, idx) => {
     const expStatus = expirationStatus(it.expiration);
     const expClass = expStatus ? ` dn-exp-warn dn-exp-${expStatus}` : '';
@@ -265,7 +286,7 @@ function renderItems() {
   html += '</tbody></table></div>';
   wrap.innerHTML = html;
 
-  wrap.querySelectorAll('input').forEach(inp => {
+  wrap.querySelectorAll('input:not(:disabled)').forEach(inp => {
     inp.addEventListener('input', e => {
       const idx = +e.target.dataset.idx, field = e.target.dataset.field;
       state.items[idx][field] = e.target.value;
@@ -307,6 +328,11 @@ function renderItems() {
 function escapeHtml(s) {
   return (s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
+
+// Render once on load so the example row (and table header) are visible
+// immediately, rather than only appearing after the first item is added —
+// the HTML template's static placeholder markup is just a no-JS fallback.
+renderItems();
 
 // ---------- Signature pad ----------
 const canvas = document.getElementById('sigpad');
