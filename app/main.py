@@ -10,6 +10,7 @@ import httpx
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
+from app.api.routes_donation_submit import router as donation_submit_router
 from app.api.routes_drug_repository import router as drug_repository_router
 from app.api.routes_pages import router as pages_router
 from app.api.routes_products import router as products_router
@@ -103,6 +104,7 @@ def create_app() -> FastAPI:
     app.include_router(products_router)
     app.include_router(rxnorm_router)
     app.include_router(drug_repository_router)
+    app.include_router(donation_submit_router)
     app.mount("/static", StaticFiles(directory=str(Path(__file__).resolve().parent / "static")), name="static")
     return app
 
