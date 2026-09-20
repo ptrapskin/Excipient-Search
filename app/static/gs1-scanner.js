@@ -242,9 +242,15 @@ async function lookupDrugByGtin(gtin14) {
       if (data.results && data.results[0]) {
         const r = data.results[0];
         const fromPackaging = quantityFromPackaging(r, raw10);
+        // `cand` is just whichever format guess happened to match — for a
+        // 4-4-2/5-3-2 split it can match on product_ndc alone (labeler-product,
+        // no package segment) even though the barcode is a package-level GTIN,
+        // silently dropping the package digits from the printed NDC. Prefer the
+        // real package_ndc openFDA has on file for these exact raw digits.
+        const matchedPkg = (r.packaging || []).find(p => (p.package_ndc || '').replace(/-/g, '') === raw10);
         return {
           ...formatDrugInfo(r),
-          ndc: cand,
+          ndc: (matchedPkg && matchedPkg.package_ndc) || cand,
           quantity: fromPackaging.quantity,
           unit: fromPackaging.unit || guessUnitFromDosageForm(r.dosage_form || ''),
         };
