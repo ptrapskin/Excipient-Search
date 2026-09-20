@@ -13,11 +13,9 @@
   <div class="dn-note no-print">
     Scan each item's barcode to auto-fill drug name, strength, NDC, lot, and expiration. Enter the
     quantity and unit (tablets, mL, etc.) donated for each item, fill in donor and recipient details
-    once, sign, then generate the printable record or send it directly. Donor name and address are
-    never saved to this device &mdash; they exist only in memory until you generate/send the record
-    or leave the page, and clear automatically after a few minutes of inactivity. Donor info is
-    transmitted off this device only if you tap &ldquo;Send to Cognito&rdquo;, and only to the
-    recipient organization's own Cognito Forms account &mdash; this app does not store it anywhere.
+    once, sign, then generate the printable record. Donor name and address are never saved to this
+    device &mdash; they exist only in memory until you generate the record or leave the page, and
+    clear automatically after a few minutes of inactivity.
   </div>
 
   <div class="dn-card no-print">
@@ -204,7 +202,6 @@
   <div class="dn-actions no-print">
     <button class="dn-btn-secondary" id="resetBtn" type="button">Reset Form</button>
     <button class="dn-btn-primary" id="generateBtn" type="button">Generate &amp; Print Record</button>
-    <button class="dn-btn-primary" id="sendBtn" type="button">Send to Cognito</button>
   </div>
 
   <!-- PRINT-ONLY OFFICIAL LAYOUT, injected on generate -->
@@ -384,15 +381,8 @@
   canvas#sigpad { width: 100%; height: 130px; display: block; background: #fff; touch-action: none; }
   .dn-sig-controls { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; background: #f7f9fb; font-size: 12px; }
   .dn-ios-hint { font-size: 12px; color: var(--dn-gray); background: #f7f9fb; border-left: 3px solid var(--dn-blue); padding: 8px 10px; border-radius: 4px; margin: 0 0 12px; }
-  .dn-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-  .dn-actions button { flex: 1; min-width: 140px; }
-  .dn-actions button:disabled { opacity: 0.65; cursor: default; }
-  .dn-spinner {
-    display: inline-block; width: 11px; height: 11px; margin-right: 6px; vertical-align: -1px;
-    border: 2px solid rgba(255,255,255,0.4); border-top-color: #fff; border-radius: 50%;
-    animation: dn-spin 0.6s linear infinite;
-  }
-  @keyframes dn-spin { to { transform: rotate(360deg); } }
+  .dn-actions { display: flex; gap: 10px; }
+  .dn-actions button { flex: 1; }
   .dn-eligibility-intro { font-size: 13px; margin: 0 0 6px; }
   .dn-eligibility-list { font-size: 13px; margin: 0 0 12px; padding-left: 20px; line-height: 1.5; }
   .dn-eligibility-list li { margin-bottom: 4px; }
@@ -546,8 +536,6 @@
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/zxing-wasm@3.1.2/dist/iife/reader/index.js"></script>
-<script src="{{ url_for('static', path='/vendor/pdfmake/pdfmake.min.js') }}" defer></script>
-<script src="{{ url_for('static', path='/vendor/pdfmake/vfs_fonts.js') }}" defer></script>
 <script src="{{ url_for('static', path='/gs1-scanner.js') }}?v=9" defer></script>
-<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=20" defer></script>
+<script src="{{ url_for('static', path='/drug-donation-record.js') }}?v=19" defer></script>
 {% endblock %}
