@@ -29,6 +29,8 @@ class Settings(BaseSettings):
     rxnorm_candidate_limit: int = 16
     log_level: str = "INFO"
     secret_key: str = Field(default="development-secret-key", repr=False)
+    cognito_api_key: str | None = Field(default=None, repr=False)
+    cognito_donation_form_id: str = "38"
 
     @property
     def project_root(self) -> Path:
