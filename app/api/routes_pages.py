@@ -112,7 +112,7 @@ async def search_results_page(
         )
 
     try:
-        normalized_query, results, comparison_rows, excipient_filter, matching_rows, cached = (
+        normalized_query, results, comparison_rows, excipient_filter, matching_rows, cached, unavailable_count = (
             await container.search_service.search_with_excipients(q, include_terms=include, exclude_terms=exclude)
         )
         return templates.TemplateResponse(
@@ -128,6 +128,7 @@ async def search_results_page(
                 "include": include,
                 "exclude": exclude,
                 "cached": cached,
+                "unavailable_count": unavailable_count,
                 "error": None,
             },
         )
@@ -342,6 +343,7 @@ async def gluten_screener_page(request: Request, q: str = "") -> HTMLResponse:
         "rows": [],
         "tier_counts": {},
         "searched": False,
+        "unavailable_count": 0,
         "error": None,
         "tier_labels": gluten_screen.TIER_LABELS,
         "olmesartan_note": gluten_screen.OLMESARTAN_NOTE,
@@ -352,7 +354,7 @@ async def gluten_screener_page(request: Request, q: str = "") -> HTMLResponse:
     container = get_container(request)
     status_code = 200
     try:
-        _, _, comparison_rows, _, _, _ = await container.search_service.search_with_excipients(q)
+        _, _, comparison_rows, _, _, _, unavailable_count = await container.search_service.search_with_excipients(q)
         rows = [
             (row, gluten_screen.assess_product(row.inactive_ingredients, row.active_ingredients))
             for row in comparison_rows
@@ -361,7 +363,7 @@ async def gluten_screener_page(request: Request, q: str = "") -> HTMLResponse:
         tier_counts = {tier: 0 for tier in gluten_screen.TIER_ORDER}
         for _, assessment in rows:
             tier_counts[assessment.tier] += 1
-        context.update(rows=rows, tier_counts=tier_counts, searched=True)
+        context.update(rows=rows, tier_counts=tier_counts, searched=True, unavailable_count=unavailable_count)
     except ValueError as exc:
         context["error"] = str(exc)
     except DailyMedAPIError:

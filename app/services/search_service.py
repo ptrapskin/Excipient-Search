@@ -21,7 +21,9 @@ class SearchService:
         dailymed_repository,
         rxnorm_resolver,
         excipient_filter_service: ExcipientFilterService,
+        time_budget_seconds: float | None = None,
     ) -> None:
+        self._time_budget_seconds = time_budget_seconds
         self._cache_service = cache_service
         self._dailymed_repository = dailymed_repository
         self._rxnorm_resolver = rxnorm_resolver
@@ -92,17 +94,22 @@ class SearchService:
         raw_query: str,
         include_terms: str | None = None,
         exclude_terms: str | None = None,
-    ) -> tuple[DrugQuery, list[ProductSearchResult], list[ProductComparisonRow], ExcipientFilter, list[ProductComparisonRow], bool]:
-        """Search SPLs and build a multi-product excipient comparison view."""
+    ) -> tuple[DrugQuery, list[ProductSearchResult], list[ProductComparisonRow], ExcipientFilter, list[ProductComparisonRow], bool, int]:
+        """Search SPLs and build a multi-product excipient comparison view.
 
+        The final element is the number of labels that could not be loaded from DailyMed.
+        """
+
+        loop = asyncio.get_running_loop()
+        deadline = loop.time() + self._time_budget_seconds if self._time_budget_seconds else None
         query, results, cached = await self.search(raw_query)
         excipient_filter = self._excipient_filter_service.build_filter(
             include=include_terms,
             exclude=exclude_terms,
         )
-        comparison_rows, results = await self._build_comparison_rows(results, excipient_filter)
+        comparison_rows, results, unavailable_count = await self._build_comparison_rows(results, excipient_filter, deadline)
         matching_rows = self._excipient_filter_service.filter_rows(comparison_rows, excipient_filter)
-        return query, results, comparison_rows, excipient_filter, matching_rows, cached
+        return query, results, comparison_rows, excipient_filter, matching_rows, cached, unavailable_count
 
     async def get_product_detail(self, setid: str, ndc: str | None = None) -> tuple[ProductDetail, bool]:
         """Retrieve a single product detail, optionally scoped to a specific NDC variant."""
@@ -126,20 +133,38 @@ class SearchService:
         self,
         results: list[ProductSearchResult],
         excipient_filter: ExcipientFilter,
-    ) -> list[ProductComparisonRow]:
-        """Fetch all product variants per SPL and build one comparison row each."""
+        deadline: float | None = None,
+    ) -> tuple[list[ProductComparisonRow], list[ProductSearchResult], int]:
+        """Fetch all product variants per SPL and build one comparison row each.
+
+        Labels not fetched by ``deadline`` (event-loop time) are skipped. Returns
+        the rows, the results that had human products, and the number of labels
+        that failed to load or were skipped.
+        """
+
+        loop = asyncio.get_running_loop()
 
         semaphore = asyncio.Semaphore(4)
 
         human_setids: set[str] = set()
+        failed_setids: set[str] = set()
 
         async def build_one(result: ProductSearchResult) -> list[ProductComparisonRow]:
             if not result.setid:
                 return []
             try:
                 async with semaphore:
-                    details = await self._dailymed_repository.get_all_product_details(result.setid)
-            except DailyMedAPIError:
+                    fetch = self._dailymed_repository.get_all_product_details(result.setid)
+                    if deadline is None:
+                        details = await fetch
+                    else:
+                        remaining = deadline - loop.time()
+                        if remaining <= 0:
+                            fetch.close()
+                            raise TimeoutError
+                        details = await asyncio.wait_for(fetch, timeout=remaining)
+            except (DailyMedAPIError, TimeoutError):
+                failed_setids.add(result.setid)
                 return []
             rows = []
             for detail in details:
@@ -157,4 +182,4 @@ class SearchService:
         all_rows = [row for group in groups for row in group]
         # Remove any results whose SPL contained no human-labelled products
         filtered_results = [r for r in results if not r.setid or r.setid in human_setids]
-        return all_rows, filtered_results
+        return all_rows, filtered_results, len(failed_setids)

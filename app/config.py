@@ -24,6 +24,8 @@ class Settings(BaseSettings):
     rxnorm_base_url: str = "https://rxnav.nlm.nih.gov/REST"
     http_timeout_seconds: float = 20.0
     http_retries: int = 2
+    # Vercel stops functions at 60s; stop fetching labels in time to still return a page.
+    search_time_budget_seconds: float = 45.0
     cache_ttl_seconds: int = 60 * 60 * 24
     rxnorm_suggestion_limit: int = 8
     rxnorm_candidate_limit: int = 16

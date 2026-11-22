@@ -9,6 +9,11 @@
     {% if error %}
     <p class="message error">{{ error }}</p>
     {% else %}
+    {% if unavailable_count %}
+    <p class="message error">
+        {{ unavailable_count }} label{{ "s" if unavailable_count != 1 else "" }} could not be loaded from DailyMed in time and {{ "are" if unavailable_count != 1 else "is" }} missing from these results. DailyMed may be busy or limiting requests; try again in a minute.
+    </p>
+    {% endif %}
     <div class="meta-row">
         <p><strong>Query:</strong> {{ normalized_query.normalized_text if normalized_query else query }}</p>
     </div>

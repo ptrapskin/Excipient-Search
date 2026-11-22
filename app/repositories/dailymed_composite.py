@@ -36,6 +36,10 @@ class CompositeDailyMedRepository:
         try:
             api_results = await self._api_repository.search_spls(query)
         except DailyMedAPIError:
+            # Cached results are still useful; with none, surface the outage
+            # instead of reporting that nothing matched.
+            if not local_results:
+                raise
             api_results = []
         merged = dedupe_search_results([*local_results, *api_results])
         if merged:

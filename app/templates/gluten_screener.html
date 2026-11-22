@@ -43,6 +43,11 @@
     </details>
 
     {% if searched %}
+    {% if unavailable_count %}
+    <p class="message error">
+        {{ unavailable_count }} label{{ "s" if unavailable_count != 1 else "" }} could not be loaded from DailyMed in time and {{ "are" if unavailable_count != 1 else "is" }} missing from these results. DailyMed may be busy or limiting requests; try again in a minute.
+    </p>
+    {% endif %}
     {% if rows %}
     {% if rows | selectattr("1.olmesartan") | list %}
     <p class="message error">{{ olmesartan_note }}</p>

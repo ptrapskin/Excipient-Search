@@ -22,7 +22,7 @@ async def search_products(
 
     container = get_container(request)
     try:
-        query, results, comparison_rows, excipient_filter, matching_rows, cached = (
+        query, results, comparison_rows, excipient_filter, matching_rows, cached, unavailable_count = (
             await container.search_service.search_with_excipients(
                 q,
                 include_terms=include,
@@ -40,4 +40,5 @@ async def search_products(
         filter=excipient_filter,
         matching_products=matching_rows,
         cached=cached,
+        unavailable_count=unavailable_count,
     )

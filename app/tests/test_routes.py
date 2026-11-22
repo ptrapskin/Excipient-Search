@@ -9,6 +9,7 @@ from app.config import get_settings
 from app.domain.enums import DataSource
 from app.domain.models import DrugQuery, ExcipientFilter, IngredientEntry, ProductComparisonRow, ProductDetail, ProductSearchResult, RxNormSuggestion
 from app.main import create_app
+from app.repositories.dailymed_api import DailyMedAPIError
 
 
 @pytest.fixture
@@ -39,6 +40,7 @@ def test_results_page_shows_empty_state(client):
             ExcipientFilter(),
             [],
             False,
+            0,
         )
 
     client.app.state.container.search_service.search_with_excipients = fake_search_with_excipients
@@ -82,7 +84,7 @@ def test_results_page_omits_excipient_comparison_section(client):
             matches_filter=True,
             source=DataSource.DAILMED_LIVE,
         )
-        return query, [result], [row], ExcipientFilter(include_terms=["sucrose"]), [row], False
+        return query, [result], [row], ExcipientFilter(include_terms=["sucrose"]), [row], False, 0
 
     client.app.state.container.search_service.search_with_excipients = fake_search_with_excipients
     response = client.get("/search", params={"q": "amoxicillin", "include": "sucrose"})
@@ -189,7 +191,7 @@ def test_search_api_route_returns_filtered_matches(client):
             matches_filter=True,
             source=DataSource.DAILMED_LIVE,
         )
-        return query, [result], [row], ExcipientFilter(exclude_terms=["red dye"]), [row], False
+        return query, [result], [row], ExcipientFilter(exclude_terms=["red dye"]), [row], False, 0
 
     client.app.state.container.search_service.search_with_excipients = fake_search_with_excipients
     response = client.get("/api/search", params={"q": "amoxicillin", "exclude": "red dye"})
@@ -228,7 +230,7 @@ def test_gluten_screener_ranks_products_by_gluten_concern(client):
     ]
 
     async def fake_search_with_excipients(raw_query: str, include_terms=None, exclude_terms=None):
-        return DrugQuery(raw_text=raw_query, normalized_text=raw_query), [], rows, ExcipientFilter(), rows, False
+        return DrugQuery(raw_text=raw_query, normalized_text=raw_query), [], rows, ExcipientFilter(), rows, False, 0
 
     client.app.state.container.search_service.search_with_excipients = fake_search_with_excipients
     response = client.get("/gluten-screener", params={"q": "example"})
@@ -238,3 +240,27 @@ def test_gluten_screener_ranks_products_by_gluten_concern(client):
     assert text.index("Gamma Wheat Tablet") < text.index("Beta Plain Starch Tablet") < text.index("Alpha Corn Tablet")
     assert "Verify starch source" in text
     assert 'data-default-sort="gluten"' in text
+
+
+def test_results_page_warns_when_labels_could_not_load(client):
+    async def fake_search_with_excipients(raw_query: str, include_terms=None, exclude_terms=None):
+        return DrugQuery(raw_text=raw_query, normalized_text=raw_query), [], [], ExcipientFilter(), [], False, 3
+
+    client.app.state.container.search_service.search_with_excipients = fake_search_with_excipients
+
+    for path in ("/search", "/gluten-screener"):
+        response = client.get(path, params={"q": "example"})
+        assert response.status_code == 200
+        assert "3 labels could not be loaded from DailyMed in time" in response.text
+
+
+def test_gluten_screener_reports_dailymed_outage(client):
+    async def fake_search_with_excipients(raw_query: str, include_terms=None, exclude_terms=None):
+        raise DailyMedAPIError("DailyMed request failed")
+
+    client.app.state.container.search_service.search_with_excipients = fake_search_with_excipients
+    response = client.get("/gluten-screener", params={"q": "example"})
+
+    assert response.status_code == 502
+    assert "DailyMed is temporarily unavailable" in response.text
+    assert "No DailyMed products matched" not in response.text

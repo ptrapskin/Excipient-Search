@@ -80,6 +80,7 @@ async def lifespan(app: FastAPI):
         dailymed_repository=dailymed_repository,
         rxnorm_resolver=rxnorm_resolver,
         excipient_filter_service=excipient_filter_service,
+        time_budget_seconds=settings.search_time_budget_seconds,
     )
 
     app.state.container = AppContainer(

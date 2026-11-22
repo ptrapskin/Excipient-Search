@@ -29,6 +29,7 @@ class ProductSearchResponse(BaseModel):
     filter: ExcipientFilter = Field(default_factory=ExcipientFilter)
     matching_products: list[ProductComparisonRow] = Field(default_factory=list)
     cached: bool = False
+    unavailable_count: int = 0
 
 
 class ProductDetailResponse(BaseModel):
