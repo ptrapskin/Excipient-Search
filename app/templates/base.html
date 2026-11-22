@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Excipient Search{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+    {% block head %}{% endblock %}
 </head>
 <body>
     <header class="site-header">
@@ -24,7 +25,8 @@
                     <div class="nav-dropdown-menu">
                         <a href="/donate-meds">Drug Repository Site Finder</a>
                         <a href="/drug-donation-record">Repository Donation Form</a>
-                        <a href="/dispose-meds">Disposal Guide</a>
+                        <a href="/dispose-meds">Medicine Disposal</a>
+                        <a href="/dispose-sharps">Needle &amp; Sharps Disposal</a>
                         <a href="https://www.catylstrx.com/taper-calendar.html">TaperCal</a>
                     </div>
                 </details>

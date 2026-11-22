@@ -283,12 +283,23 @@ async def drug_repository_finder_redirect(request: Request):
 
 
 @router.get("/dispose-meds", response_class=HTMLResponse)
-async def disposal_guide_page(request: Request) -> HTMLResponse:
-    """Render the medication, sharps, and equipment disposal guide (fully client-side)."""
+async def medicine_disposal_page(request: Request) -> HTMLResponse:
+    """Render the medicine disposal handout page (fully client-side)."""
 
     return templates.TemplateResponse(
         request=request,
-        name="disposal_guide.html",
+        name="medicine_disposal.html",
+        context={},
+    )
+
+
+@router.get("/dispose-sharps", response_class=HTMLResponse)
+async def sharps_disposal_page(request: Request) -> HTMLResponse:
+    """Render the needle, sharps, and medical supply disposal handout page (fully client-side)."""
+
+    return templates.TemplateResponse(
+        request=request,
+        name="sharps_disposal.html",
         context={},
     )
 

@@ -264,3 +264,16 @@ def test_gluten_screener_reports_dailymed_outage(client):
     assert response.status_code == 502
     assert "DailyMed is temporarily unavailable" in response.text
     assert "No DailyMed products matched" not in response.text
+
+
+def test_disposal_pages_are_separate(client):
+    meds = client.get("/dispose-meds")
+    sharps = client.get("/dispose-sharps")
+
+    assert meds.status_code == 200
+    assert "Safe Medication Disposal" in meds.text
+    assert "How to use a drop box" in meds.text
+    assert sharps.status_code == 200
+    assert "Safe Sharps Disposal" in sharps.text
+    assert "What counts as sharps" in sharps.text
+    assert 'href="/dispose-sharps"' in meds.text

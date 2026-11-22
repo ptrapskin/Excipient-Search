@@ -1605,209 +1605,319 @@ details[open] > .lc-summary::before { transform: rotate(90deg); }
     padding-left: 1.4rem;
 }
 
-/* Medication & Sharps Disposal Guide */
-.disp-tool h2 {
-    margin-top: 2.5rem;
-    padding-top: 0.5rem;
-    border-top: 1px solid var(--border);
-    /* .site-header is position:sticky, so anchor-jumping to a heading would
-       otherwise land it right under the fixed header, hiding the heading text. */
-    scroll-margin-top: 100px;
-}
-
-.disp-picker {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 0.75rem;
-    margin: 1.25rem 0;
-}
-
-.disp-picker-item {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.9rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
+/* Disposal handout pages (medicine, sharps): match the printed black-and-white handouts */
+.handout {
+    --handout-ink: #111;
+    --handout-muted: #555;
+    --handout-rule: #c9c9c9;
+    margin: 1.5rem auto 1rem;
+    max-width: 960px;
+    padding: 2.5rem 3rem 1.75rem;
     background: #fff;
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: border-color 0.15s, background 0.15s;
+    color: var(--handout-ink);
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.4;
+    box-shadow: var(--shadow);
 }
 
-.disp-picker-item:hover {
-    border-color: var(--accent);
-    background: rgba(47, 108, 143, 0.06);
+.handout a {
+    color: var(--handout-ink);
 }
 
-.disp-picker-icon {
-    font-size: 1.3rem;
-    flex-shrink: 0;
+.handout h1,
+.handout-label,
+.handout-foot-title {
+    font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: normal;
 }
 
-.disp-callout-big {
-    padding: 1.25rem 1.4rem;
+.handout-head {
+    padding-bottom: 0.9rem;
+    border-bottom: 5px solid var(--handout-ink);
 }
 
-.disp-callout-big p:first-child {
-    font-size: 1.15rem;
+.handout-head h1 {
+    margin: 0 0 0.35rem;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.1;
 }
 
-.disp-accept-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.disp-accept-col {
-    padding: 0.9rem 1.1rem;
-    border-radius: 12px;
-}
-
-.disp-accept-col.disp-yes {
-    background: rgba(26, 122, 58, 0.08);
-    border: 1px solid rgba(26, 122, 58, 0.25);
-}
-
-.disp-accept-col.disp-no {
-    background: rgba(139, 47, 37, 0.08);
-    border: 1px solid rgba(139, 47, 37, 0.25);
-}
-
-.disp-accept-col h4 {
-    margin: 0 0 0.5rem;
-    font-size: 0.95rem;
-}
-
-.disp-accept-col ul {
+.handout-head p {
     margin: 0;
-    padding-left: 1.2rem;
-    font-size: 0.92rem;
+    font-size: 1.1rem;
 }
 
-.disp-accept-col li {
-    margin-bottom: 0.25rem;
+.handout-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 2.5rem;
+    margin-top: 1rem;
 }
 
-.disp-callout {
+.handout-block {
+    margin-bottom: 1.1rem;
+}
+
+.handout-block h3:not(.handout-label) {
+    margin: 0 0 0.2rem;
+    font-family: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.handout-block p {
+    margin: 0;
+}
+
+.handout-label {
     display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-    margin: 1rem 0;
-    padding: 1rem 1.1rem;
-    border: 1px solid rgba(139, 47, 37, 0.3);
-    border-radius: 12px;
-    background: rgba(139, 47, 37, 0.08);
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 0 0 0.6rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid var(--handout-ink);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.disp-callout-icon {
-    flex-shrink: 0;
-    font-size: 1.3rem;
+.handout-label span {
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.78rem;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--handout-muted);
+}
+
+.handout-label-bar {
+    padding-left: 0.6rem;
+    border-bottom-width: 1px;
+    border-left: 5px solid var(--handout-ink);
+}
+
+.handout-section-rule {
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 3px solid var(--handout-ink);
+    border-bottom: 0;
+}
+
+.handout-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: handout-step;
+}
+
+.handout-steps li {
+    position: relative;
+    margin-bottom: 0.45rem;
+    padding-left: 1.75rem;
+    counter-increment: handout-step;
+}
+
+.handout-steps li::before {
+    content: counter(handout-step);
+    position: absolute;
+    top: 0.12em;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: var(--handout-ink);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
     line-height: 1;
 }
 
-.disp-callout p {
-    margin: 0;
-    color: var(--error);
-    font-weight: 700;
-}
-
-.disp-callout p + p {
-    margin-top: 0.4rem;
-    color: var(--text);
-    font-weight: 400;
-}
-
-.disp-callout.disp-callout-info {
-    border-color: var(--border);
-    background: rgba(47, 108, 143, 0.06);
-}
-
-.disp-callout.disp-callout-info p {
-    color: var(--text);
-    font-weight: 700;
-}
-
-.disp-org {
-    padding: 1rem 1.1rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: #fff;
-    margin: 1rem 0;
-}
-
-.disp-org h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.05rem;
-}
-
-.disp-org p {
-    margin: 0.4rem 0 0;
-    font-size: 0.95rem;
-}
-
-.disp-org ul {
-    margin: 0.5rem 0 0;
+.handout-bullets {
+    margin: 0 0 0.4rem;
     padding-left: 1.3rem;
-    font-size: 0.95rem;
 }
 
-.disp-org ul li {
-    margin-bottom: 0.3rem;
+.handout-places {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.disp-reminders {
+.handout-places li {
+    padding: 0.15rem 0;
+    border-bottom: 1px solid var(--handout-rule);
+}
+
+.handout-places strong {
+    margin-right: 0.35rem;
+}
+
+.handout-places-wrap li {
+    color: #333;
+}
+
+.handout-places-plain li {
+    padding: 0.25rem 0;
+    border-bottom: 0;
+}
+
+.handout-note {
+    margin-top: 0.35rem !important;
+    font-size: 0.92rem;
+    font-style: italic;
+}
+
+.handout-fineprint {
+    margin-top: 0.5rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--handout-rule);
+}
+
+.handout-fineprint p {
+    margin: 0;
+}
+
+.handout-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem 2rem;
     margin-top: 1.5rem;
-    padding: 1rem 1.25rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: rgba(47, 108, 143, 0.06);
+    padding-top: 0.9rem;
+    border-top: 5px solid var(--handout-ink);
+    font-size: 0.92rem;
 }
 
-.disp-reminders h3 {
-    margin-top: 0;
+.handout-foot p {
+    margin: 0;
 }
 
-.disp-reminders ul {
-    margin: 0.5rem 0 0;
-    padding-left: 1.4rem;
+.handout-foot-title {
+    font-size: 0.95rem;
+    font-weight: 700;
 }
 
-.disp-reminders li {
-    margin-bottom: 0.4rem;
+.handout-foot a {
+    font-weight: 700;
 }
 
-.disp-print-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
+.handout-foot-right {
+    text-align: right;
+}
+
+.handout-muted {
+    color: var(--handout-muted);
+}
+
+.handout-extra {
+    max-width: 960px;
+    margin: 0 auto 0.75rem;
+}
+
+.handout-print {
+    display: block;
+    margin: 0 auto 1.5rem;
     padding: 0.6rem 1.2rem;
     border: 1px solid var(--border);
     border-radius: 999px;
     background: #fff;
     color: var(--text);
-    font-family: inherit;
-    font-size: 0.9rem;
+    font: inherit;
     font-weight: 700;
     cursor: pointer;
 }
 
-.disp-print-btn:hover {
+.handout-print:hover {
     background: rgba(47, 108, 143, 0.08);
 }
 
-.disp-crosslink {
-    margin: 1rem 0 0;
-    font-size: 0.92rem;
-    color: var(--muted);
+@media screen and (max-width: 720px) {
+    .handout {
+        padding: 1.5rem 1.1rem 1.25rem;
+    }
+
+    .handout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .handout-foot-right {
+        text-align: left;
+    }
 }
 
 @media print {
-    .site-header, .site-footer, .disp-jumpnav, .disp-print-btn, .no-print {
+    .site-header, .site-footer, .no-print {
         display: none !important;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    @page {
+        size: letter;
+        margin: 0.5in;
+    }
+
+    main.container {
+        width: auto;
+        padding: 0;
+    }
+
+    .handout {
+        margin: 0;
+        max-width: none;
+        padding: 0;
+        box-shadow: none;
+        font-size: 9.5pt;
+        line-height: 1.3;
+    }
+
+    .handout-head h1 {
+        font-size: 22pt;
+    }
+
+    .handout-head p {
+        font-size: 10.5pt;
+    }
+
+    .handout-grid {
+        gap: 0 0.3in;
+    }
+
+    .handout-block {
+        margin-bottom: 0.5rem;
+    }
+
+    .handout-steps li {
+        margin-bottom: 0.2rem;
+    }
+
+    .handout-places-plain li {
+        padding: 0.05rem 0;
+    }
+
+    .handout-foot {
+        flex-wrap: nowrap;
+        margin-top: 0.75rem;
+        font-size: 8.5pt;
+        break-inside: avoid;
+    }
+
+    .handout-foot-title,
+    .handout-block h3:not(.handout-label) {
+        font-size: 9.5pt;
+    }
+
+    .handout-note {
+        font-size: 8.5pt;
     }
 }
 

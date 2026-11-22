@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Safe Medication Disposal | CatylstRx{% endblock %}
+
+{% block head %}{% include "partials/handout_fonts.html" %}{% endblock %}
+
+{% block content %}
+<article class="handout">
+  <header class="handout-head">
+    <h1>Safe Medication Disposal</h1>
+  </header>
+
+  <div class="handout-grid">
+    <div>
+      <section class="handout-block">
+        <h2 class="handout-label">How to use a drop box</h2>
+        <ol class="handout-steps">
+          <li>Keep medicine in its bottle until you reach the box. Follow any posted instructions, since sites can differ.</li>
+          <li>Many sites ask you to pour pills into a zip bag there. Keep liquids and creams in their original containers.</li>
+          <li>Cover or cross out your name and prescription information on empty bottles, then recycle them.</li>
+          <li>Put the sealed bag in the box. Done.</li>
+        </ol>
+      </section>
+
+      <section class="handout-block">
+        <h3>Do not put these in the box:</h3>
+        <p>needles and sharps, EpiPens, IV bags, oxygen tanks, mercury thermometers, aerosol cans, and spray inhalers. Ask your pharmacy or local waste program how to dispose of them. For needles, see <a href="/dispose-sharps">Safe Sharps Disposal</a>.</p>
+      </section>
+
+      <section class="handout-block">
+        <h3>No box nearby?</h3>
+        <p>Ask your pharmacist how to dispose of it safely. Do not flush medicine unless a pharmacist tells you to. If you use the trash: mix pills (don't crush) or liquid with coffee grounds, dirt, or kitty litter, seal it in a bag, and throw it away. Ask first about strong pain medicines (opioids) and pain patches. They can harm others.</p>
+      </section>
+    </div>
+
+    <div>
+      <section class="handout-block">
+        <h2 class="handout-label">Madison</h2>
+        <ul class="handout-places">
+          <li><strong>UW-Madison Police</strong> 1429 Monroe St</li>
+          <li><strong>Madison Police West</strong> 1710 McKenna Blvd</li>
+          <li><strong>Madison Police East</strong> 809 S Thompson Dr</li>
+          <li><strong>Shorewood Hills Village Hall</strong> 810 Shorewood Blvd</li>
+        </ul>
+      </section>
+
+      <section class="handout-block">
+        <h2 class="handout-label">Nearby communities</h2>
+        <ul class="handout-places">
+          <li><strong>Middleton Police</strong> 7341 Donna Dr</li>
+          <li><strong>McFarland Public Safety</strong> 6001 Broadhead St</li>
+          <li><strong>Sun Prairie</strong> 300 E Main St</li>
+          <li><strong>Waunakee Police</strong> 205 N Klein Dr</li>
+          <li><strong>Oregon Police</strong> 383 Park St</li>
+          <li><strong>Stoughton Police</strong> 321 S 4th St</li>
+          <li><strong>DeForest Police</strong> 110 S Stevenson St</li>
+          <li><strong>Cottage Grove Police</strong> 210 Progress Dr</li>
+          <li><strong>Mount Horeb Police</strong> 400 Blue Mounds St</li>
+        </ul>
+      </section>
+
+      <section class="handout-block">
+        <h2 class="handout-label">Pharmacy drop boxes <span>Fitchburg police box closed in 2023</span></h2>
+        <ul class="handout-places handout-places-wrap">
+          <li><strong>Hy-Vee Pharmacy:</strong> 3801 E Washington Ave, 675 S Whitney Way, 2920 Fitchrona Rd (Fitchburg)</li>
+          <li><strong>Fitchburg Family Pharmacy:</strong> 3050 Cahill Main #6</li>
+          <li><strong>UW Health Pharmacies:</strong> 1 S Park St, 1102 S Park St, 3209 Dryden Dr, 2402 Winnebago St, 7102 Mineral Point Rd, 5249 E Terrace Dr, 600 Highland Ave, 4602 Eastpark Blvd, 451 Junction Rd</li>
+        </ul>
+        <p class="handout-note">Hy-Vee also takes strong pain medicines. Family Pharmacy and UW Health do not. UW Health takes pills and capsules only.</p>
+      </section>
+    </div>
+  </div>
+
+  <footer class="handout-foot">
+    <div>
+      <p class="handout-foot-title">Confirm locations and hours</p>
+      <p><a href="https://safercommunity.net/meddrop" target="_blank" rel="noopener">safercommunity.net/meddrop</a></p>
+      <p class="handout-muted">Statewide list: <a href="https://www.dhs.wisconsin.gov/opioids/permanent-drug-drop-boxes.htm" target="_blank" rel="noopener">Wisconsin DHS drug drop boxes</a></p>
+    </div>
+    <div class="handout-foot-right">
+      <p><strong>Locations and hours can change. Please check before you go.</strong></p>
+      <p class="handout-muted">Information checked September 2026.</p>
+    </div>
+  </footer>
+</article>
+
+<p class="handout-extra no-print">Medicine still sealed and not expired? It may be donatable instead. See the <a href="/donate-meds">Drug Repository Site Finder</a>.</p>
+<button class="handout-print no-print" type="button" onclick="window.print()">Print this page</button>
+{% endblock %}
