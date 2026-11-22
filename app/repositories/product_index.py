@@ -8,12 +8,19 @@ Queries are synchronous; wrap calls in ``asyncio.to_thread()`` from async code.
 
 from __future__ import annotations
 
+import gzip
+import logging
+import os
+import shutil
 import sqlite3
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
 from app.domain.enums import DataSource
 from app.domain.models import DrugQuery, IngredientEntry, ProductDetail, ProductSearchResult
+
+logger = logging.getLogger(__name__)
 
 # Upper bound on rows returned for one search, to keep very broad queries fast.
 MAX_RESULTS = 3000
@@ -38,6 +45,33 @@ def _parse_timestamp(value: str | None) -> datetime:
         return datetime.fromisoformat(value) if value else datetime.now(timezone.utc)
     except ValueError:
         return datetime.now(timezone.utc)
+
+
+def resolve_index_path(db_path: Path, unpack_dir: Path | None = None) -> Path:
+    """Return a usable index path, unpacking ``<db_path>.gz`` when only that exists.
+
+    The committed index is gzipped to stay under GitHub's file size limit. It is
+    unpacked once into a writable temp directory (the deployed code directory is
+    read-only), named by the archive's size and mtime so a new deploy unpacks fresh.
+    Returns *db_path* unchanged when neither file exists; the index is then unavailable.
+    """
+
+    gz_path = db_path.with_name(db_path.name + ".gz")
+    if db_path.exists() or not gz_path.exists():
+        return db_path
+
+    stat = gz_path.stat()
+    target = (unpack_dir or Path(tempfile.gettempdir())) / f"{db_path.stem}-{stat.st_size}-{stat.st_mtime_ns}.db"
+    if target.exists():
+        return target
+
+    target.parent.mkdir(parents=True, exist_ok=True)
+    partial = target.with_name(f"{target.name}.{os.getpid()}.part")
+    logger.info("Unpacking product index %s -> %s", gz_path, target)
+    with gzip.open(gz_path, "rb") as src, partial.open("wb") as dst:
+        shutil.copyfileobj(src, dst, length=1024 * 1024)
+    partial.replace(target)
+    return target
 
 
 class ProductIndexRepository:

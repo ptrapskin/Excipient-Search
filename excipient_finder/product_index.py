@@ -4,9 +4,14 @@ Written alongside excipients.db by the ingestion pipeline so the web app's
 Excipient Search and Gluten Excipient Screener can search locally instead of
 calling the live DailyMed API for every label. Kept in its own database file so
 its size can be managed separately from the liquid-only screener data.
+
+The full index is too large to commit, so ``export_compressed`` writes a slim,
+gzipped copy (product_index.db.gz) that is committed and deployed instead.
 """
 from __future__ import annotations
 
+import gzip
+import shutil
 import sqlite3
 from pathlib import Path
 
@@ -84,3 +89,36 @@ def insert_index_record(conn: sqlite3.Connection, rec: SplRecord) -> None:
             utc_now_str(),
         ),
     )
+
+
+# Columns the web app reads; build bookkeeping and the uniqueness index are dropped.
+_EXPORT_COLUMNS = (
+    "spl_setid, product_name, labeler, dosage_form, route, ndcs, "
+    "active_ingredients_raw, active_strength, inactive_ingredients_raw, "
+    "product_type, search_text, processed_at"
+)
+
+
+def export_compressed(index_db_path: Path, gz_path: Path) -> Path:
+    """Write a slim copy of the index without indexes, then gzip it to *gz_path*."""
+    slim_path = gz_path.with_name(gz_path.name + ".slim.tmp")
+    slim_path.unlink(missing_ok=True)
+    conn = sqlite3.connect(str(slim_path))
+    try:
+        conn.execute("ATTACH DATABASE ? AS src", (str(index_db_path),))
+        conn.execute(
+            f"CREATE TABLE indexed_products AS SELECT {_EXPORT_COLUMNS} "
+            "FROM src.indexed_products ORDER BY product_name COLLATE NOCASE"
+        )
+        conn.commit()
+        conn.execute("DETACH DATABASE src")
+        conn.execute("VACUUM")
+    finally:
+        conn.close()
+
+    tmp_gz = gz_path.with_name(gz_path.name + ".tmp")
+    with slim_path.open("rb") as src, gzip.open(tmp_gz, "wb", compresslevel=9) as dst:
+        shutil.copyfileobj(src, dst, length=1024 * 1024)
+    tmp_gz.replace(gz_path)
+    slim_path.unlink()
+    return gz_path

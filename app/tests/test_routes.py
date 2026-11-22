@@ -16,11 +16,14 @@ from app.repositories.dailymed_api import DailyMedAPIError
 def client(tmp_path: Path):
     db_path = tmp_path / "route-tests.db"
     os.environ["EXCIPIENT_SEARCH_DATABASE_URL"] = f"sqlite:///{db_path.as_posix()}"
+    # Keep route tests off the real product index; they fake the search service.
+    os.environ["EXCIPIENT_SEARCH_PRODUCT_INDEX_PATH"] = str(tmp_path / "no-product-index.db")
     get_settings.cache_clear()
     app = create_app()
     with TestClient(app) as test_client:
         yield test_client
     os.environ.pop("EXCIPIENT_SEARCH_DATABASE_URL", None)
+    os.environ.pop("EXCIPIENT_SEARCH_PRODUCT_INDEX_PATH", None)
     get_settings.cache_clear()
 
 

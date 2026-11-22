@@ -74,7 +74,7 @@ from excipient_finder.qa import (
     write_qa_samples,
     write_route_summary,
 )
-from excipient_finder.product_index import clear_index, init_index_db, insert_index_record
+from excipient_finder.product_index import clear_index, export_compressed, init_index_db, insert_index_record
 from excipient_finder.tiering import assign_concern_tier
 from excipient_finder.utils import normalize_text, setup_logging, utc_now_str
 from excipient_finder.xml_parser import parse_spl_subjects
@@ -476,6 +476,32 @@ def _open_product_index(cfg: Config, logger: logging.Logger):
     return index_conn
 
 
+def _export_product_index(cfg: Config, logger: logging.Logger, conn, expected_files: list[str]) -> None:
+    """Write the compressed product index the web app deploys with.
+
+    Skipped unless every ZIP processed successfully: the app treats the index
+    as complete, so a partial one would hide products from search.
+    """
+    if cfg.limit:
+        logger.info("Not compressing product index: --limit builds are partial.")
+        return
+    done = {
+        row[0]
+        for row in conn.execute("SELECT source_file FROM processing_log WHERE status = 'success'")
+    }
+    missing = [name for name in expected_files if name not in done]
+    if missing:
+        logger.warning(
+            "Not compressing product index: %d ZIP(s) did not finish (%s). "
+            "Re-run with --resume to complete it.",
+            len(missing), ", ".join(missing),
+        )
+        return
+    logger.info("Compressing product index...")
+    gz_path = export_compressed(cfg.index_db_path, cfg.index_gz_path)
+    logger.info("  Wrote %s (%.1f MB)", gz_path, gz_path.stat().st_size / 1e6)
+
+
 def _finalize(
     cfg: Config,
     conn,
@@ -651,6 +677,7 @@ def run(cfg: Config) -> None:
     logger.info("  Promoted %d SA-free alternative product(s)", alt_count)
 
     index_conn.close()
+    _export_product_index(cfg, logger, conn, [p.name for p in outer_zips])
     _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall,
               old_snapshot=old_snapshot)
 
@@ -770,6 +797,7 @@ def run_fetch(cfg: Config) -> None:
     logger.info("  Promoted %d SA-free alternative product(s)", alt_count)
 
     index_conn.close()
+    _export_product_index(cfg, logger, conn, [u.rsplit("/", 1)[-1] for u in urls])
     _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall,
               old_snapshot=old_snapshot)
 

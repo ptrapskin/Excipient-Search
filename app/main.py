@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from pathlib import Path
@@ -25,7 +26,7 @@ from app.repositories.dailymed_api import DailyMedApiRepository
 from app.repositories.dailymed_composite import CompositeDailyMedRepository
 from app.repositories.rxnorm_api import RxNormApiRepository
 from app.repositories.dailymed_zip import DailyMedZipRepository
-from app.repositories.product_index import ProductIndexRepository
+from app.repositories.product_index import ProductIndexRepository, resolve_index_path
 from app.services.cache_service import CacheService
 from app.services.excipient_filter import ExcipientFilterService
 from app.services.parsing_service import ParsingService
@@ -76,13 +77,14 @@ async def lifespan(app: FastAPI):
         candidate_limit=settings.rxnorm_candidate_limit,
     )
     excipient_filter_service = ExcipientFilterService()
+    product_index_path = await asyncio.to_thread(resolve_index_path, settings.resolved_product_index_path)
     search_service = SearchService(
         cache_service=cache_service,
         dailymed_repository=dailymed_repository,
         rxnorm_resolver=rxnorm_resolver,
         excipient_filter_service=excipient_filter_service,
         time_budget_seconds=settings.search_time_budget_seconds,
-        product_index=ProductIndexRepository(settings.resolved_product_index_path),
+        product_index=ProductIndexRepository(product_index_path),
     )
 
     app.state.container = AppContainer(

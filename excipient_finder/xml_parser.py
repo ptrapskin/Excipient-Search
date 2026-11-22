@@ -161,6 +161,13 @@ def parse_spl_subjects(
     if root is None:
         return []
 
+    # Bulk-release XML files are named by document (version) ID, not set ID.
+    # The set ID is what DailyMed's API and label pages use, so read it from
+    # the document whenever it is present.
+    document_setid = _extract_setid(root)
+    if document_setid != "unknown":
+        setid = document_setid
+
     doc_type = _extract_document_type(root)
     labeler = _extract_labeler(root)
     ndcs = _extract_ndcs(root)
