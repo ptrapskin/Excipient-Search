@@ -19,6 +19,9 @@
     </div>
 
     {% if results %}
+    {% if results[0].source == "dailymed-index" %}
+    <p class="subtle">Results come from the CatylstRx copy of DailyMed, refreshed monthly. Open a product to see its current label.</p>
+    {% endif %}
     <section class="content-block">
         <h2>Excipient Filter</h2>
         <form class="filter-form" action="/search" method="get">

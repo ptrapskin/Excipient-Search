@@ -22,8 +22,10 @@ class SearchService:
         rxnorm_resolver,
         excipient_filter_service: ExcipientFilterService,
         time_budget_seconds: float | None = None,
+        product_index=None,
     ) -> None:
         self._time_budget_seconds = time_budget_seconds
+        self._product_index = product_index
         self._cache_service = cache_service
         self._dailymed_repository = dailymed_repository
         self._rxnorm_resolver = rxnorm_resolver
@@ -100,16 +102,47 @@ class SearchService:
         The final element is the number of labels that could not be loaded from DailyMed.
         """
 
-        loop = asyncio.get_running_loop()
-        deadline = loop.time() + self._time_budget_seconds if self._time_budget_seconds else None
-        query, results, cached = await self.search(raw_query)
         excipient_filter = self._excipient_filter_service.build_filter(
             include=include_terms,
             exclude=exclude_terms,
         )
+
+        indexed = await self._search_product_index(raw_query)
+        if indexed is not None:
+            query, pairs = indexed
+            comparison_rows = [
+                self._excipient_filter_service.build_comparison_row(result=result, detail=detail, excipient_filter=excipient_filter)
+                for result, detail in pairs
+            ]
+            results = dedupe_search_results([result for result, _ in pairs])
+            matching_rows = self._excipient_filter_service.filter_rows(comparison_rows, excipient_filter)
+            return query, results, comparison_rows, excipient_filter, matching_rows, False, 0
+
+        loop = asyncio.get_running_loop()
+        deadline = loop.time() + self._time_budget_seconds if self._time_budget_seconds else None
+        query, results, cached = await self.search(raw_query)
         comparison_rows, results, unavailable_count = await self._build_comparison_rows(results, excipient_filter, deadline)
         matching_rows = self._excipient_filter_service.filter_rows(comparison_rows, excipient_filter)
         return query, results, comparison_rows, excipient_filter, matching_rows, cached, unavailable_count
+
+    async def _search_product_index(self, raw_query: str):
+        """Search the offline product index; None when it is missing or has no match.
+
+        Returns (query, [(result, detail), ...]) so callers can skip live label fetches.
+        """
+
+        if self._product_index is None or not await asyncio.to_thread(lambda: self._product_index.available):
+            return None
+        query = normalize_query(raw_query)
+        if not query.normalized_text and not query.ndc:
+            raise ValueError("Please enter a medication name or NDC.")
+        try:
+            concepts = await self._rxnorm_resolver.resolve(query)
+        except Exception:
+            concepts = []
+        aliases = self._extract_ingredient_names(concepts, query.normalized_text)
+        pairs = await asyncio.to_thread(self._product_index.search, query, aliases)
+        return (query, pairs) if pairs else None
 
     async def get_product_detail(self, setid: str, ndc: str | None = None) -> tuple[ProductDetail, bool]:
         """Retrieve a single product detail, optionally scoped to a specific NDC variant."""

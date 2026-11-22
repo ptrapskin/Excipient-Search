@@ -25,6 +25,7 @@ from app.repositories.dailymed_api import DailyMedApiRepository
 from app.repositories.dailymed_composite import CompositeDailyMedRepository
 from app.repositories.rxnorm_api import RxNormApiRepository
 from app.repositories.dailymed_zip import DailyMedZipRepository
+from app.repositories.product_index import ProductIndexRepository
 from app.services.cache_service import CacheService
 from app.services.excipient_filter import ExcipientFilterService
 from app.services.parsing_service import ParsingService
@@ -81,6 +82,7 @@ async def lifespan(app: FastAPI):
         rxnorm_resolver=rxnorm_resolver,
         excipient_filter_service=excipient_filter_service,
         time_budget_seconds=settings.search_time_budget_seconds,
+        product_index=ProductIndexRepository(settings.resolved_product_index_path),
     )
 
     app.state.container = AppContainer(

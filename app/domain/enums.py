@@ -11,3 +11,4 @@ class DataSource(str, Enum):
     DAILMED_LIVE = "dailymed-live"
     RXNORM_LIVE = "rxnorm-live"
     SQLITE_CACHE = "sqlite-cache"
+    LOCAL_INDEX = "dailymed-index"

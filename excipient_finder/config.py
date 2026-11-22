@@ -10,6 +10,7 @@ class Config:
     input_root: Path | None          # None when using --fetch
     output_root: Path = field(default_factory=lambda: DEFAULT_OUTPUT_ROOT)
     db_path: Path = field(default=None)
+    index_db_path: Path = field(default=None)   # full all-forms product index
     log_dir: Path = field(default=None)
     csv_dir: Path = field(default=None)
     limit: int | None = None
@@ -27,6 +28,8 @@ class Config:
     def __post_init__(self) -> None:
         if self.db_path is None:
             self.db_path = self.output_root / "excipients.db"
+        if self.index_db_path is None:
+            self.index_db_path = self.output_root / "product_index.db"
         if self.log_dir is None:
             self.log_dir = self.output_root / "logs"
         if self.csv_dir is None:

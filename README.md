@@ -34,7 +34,7 @@ Both tools read from `excipients.db`. Rebuild it from the latest DailyMed releas
 python -m excipient_finder.main --fetch all
 ```
 
-This downloads each DailyMed ZIP (~20 GB total across 17 files) one at a time into a temp folder, processes it, deletes it immediately, and cleans up — no ZIP files remain on disk. Only `excipients.db` is updated.
+This downloads each DailyMed ZIP (~20 GB total across 17 files) one at a time into a temp folder, processes it, deletes it immediately, and cleans up — no ZIP files remain on disk. It updates `excipients.db` (liquid products for the Osmotic screener) and `product_index.db` (every human product, all dosage forms). Excipient Search and the Gluten Excipient Screener search `product_index.db` first and fall back to the live DailyMed API when it is missing or has no match.
 
 To resume an interrupted run without reprocessing already-completed ZIPs:
 

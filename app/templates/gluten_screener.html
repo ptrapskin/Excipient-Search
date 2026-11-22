@@ -49,6 +49,9 @@
     </p>
     {% endif %}
     {% if rows %}
+    {% if rows[0][0].source == "dailymed-index" %}
+    <p class="subtle">Results come from the CatylstRx copy of DailyMed, refreshed monthly. Open a product to see its current label.</p>
+    {% endif %}
     {% if rows | selectattr("1.olmesartan") | list %}
     <p class="message error">{{ olmesartan_note }}</p>
     {% endif %}

@@ -74,6 +74,7 @@ from excipient_finder.qa import (
     write_qa_samples,
     write_route_summary,
 )
+from excipient_finder.product_index import clear_index, init_index_db, insert_index_record
 from excipient_finder.tiering import assign_concern_tier
 from excipient_finder.utils import normalize_text, setup_logging, utc_now_str
 from excipient_finder.xml_parser import parse_spl_subjects
@@ -241,8 +242,12 @@ def process_outer_zip(
     conn,
     cfg: Config,
     logger: logging.Logger,
+    index_conn=None,
 ) -> tuple[dict, FunnelCounts, list, list]:
     """Process one outer zip file.
+
+    Every human product is also written to the full product index when
+    *index_conn* is given, before the liquid-only filtering below.
 
     Returns:
         (counts_dict, funnel, broad_recall_rows, parse_failures)
@@ -303,6 +308,9 @@ def process_outer_zip(
                         processed_at=utc_now_str(),
                     )
                 continue
+
+            if index_conn is not None:
+                insert_index_record(index_conn, rec)
 
             # Funnel: form classification
             if rec.dosage_form:
@@ -448,11 +456,24 @@ def process_outer_zip(
         if pending >= BATCH_SIZE:
             conn.commit()
             pending = 0
+            if index_conn is not None:
+                index_conn.commit()
 
     if pending:
         conn.commit()
+    if index_conn is not None:
+        index_conn.commit()
 
     return counts, funnel, broad_recall_rows, parse_failures
+
+
+def _open_product_index(cfg: Config, logger: logging.Logger):
+    """Open the full product index, clearing it unless resuming."""
+    index_conn = init_index_db(cfg.index_db_path)
+    if not cfg.resume:
+        clear_index(index_conn)
+    logger.info("  product index   : %s", cfg.index_db_path)
+    return index_conn
 
 
 def _finalize(
@@ -560,6 +581,7 @@ def run(cfg: Config) -> None:
 
     conn = init_db(cfg.db_path)
     old_snapshot = _prepare_rebuild(conn, cfg, logger)
+    index_conn = _open_product_index(cfg, logger)
 
     outer_zips = list(iter_outer_zips(cfg.input_root))
     logger.info("Found %d outer ZIP file(s) under %s", len(outer_zips), cfg.input_root)
@@ -586,7 +608,7 @@ def run(cfg: Config) -> None:
         log_file_start(conn, zip_path.name)
         try:
             counts, zip_funnel, broad_rows, zip_failures = process_outer_zip(
-                zip_path, conn, cfg, logger
+                zip_path, conn, cfg, logger, index_conn
             )
         except KeyboardInterrupt:
             logger.warning("Interrupted by user. Partial results saved.")
@@ -628,6 +650,7 @@ def run(cfg: Config) -> None:
     total_counts["alternative"] = alt_count
     logger.info("  Promoted %d SA-free alternative product(s)", alt_count)
 
+    index_conn.close()
     _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall,
               old_snapshot=old_snapshot)
 
@@ -656,6 +679,7 @@ def run_fetch(cfg: Config) -> None:
 
     conn = init_db(cfg.db_path)
     old_snapshot = _prepare_rebuild(conn, cfg, logger)
+    index_conn = _open_product_index(cfg, logger)
     urls = _FETCH_URLS[cfg.fetch]
 
     if cfg.limit:
@@ -692,7 +716,7 @@ def run_fetch(cfg: Config) -> None:
             log_file_start(conn, filename)
             try:
                 counts, zip_funnel, broad_rows, zip_failures = process_outer_zip(
-                    zip_path, conn, cfg, logger
+                    zip_path, conn, cfg, logger, index_conn
                 )
             except KeyboardInterrupt:
                 logger.warning("Interrupted by user. Partial results saved.")
@@ -745,6 +769,7 @@ def run_fetch(cfg: Config) -> None:
     total_counts["alternative"] = alt_count
     logger.info("  Promoted %d SA-free alternative product(s)", alt_count)
 
+    index_conn.close()
     _finalize(cfg, conn, logger, total_counts, total_funnel, all_parse_failures, all_broad_recall,
               old_snapshot=old_snapshot)
 

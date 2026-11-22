@@ -26,6 +26,8 @@ class Settings(BaseSettings):
     http_retries: int = 2
     # Vercel stops functions at 60s; stop fetching labels in time to still return a page.
     search_time_budget_seconds: float = 45.0
+    # Offline all-forms product index built by excipient_finder; searched before the live API.
+    product_index_path: Path | None = None
     cache_ttl_seconds: int = 60 * 60 * 24
     rxnorm_suggestion_limit: int = 8
     rxnorm_candidate_limit: int = 16
@@ -39,6 +41,12 @@ class Settings(BaseSettings):
         """Return the repository root."""
 
         return Path(__file__).resolve().parent.parent
+
+    @property
+    def resolved_product_index_path(self) -> Path:
+        """Return the product index path, defaulting to the repository root."""
+
+        return self.product_index_path or self.project_root / "product_index.db"
 
     @property
     def sqlite_path(self) -> Path:
