@@ -64,6 +64,7 @@ class ExcipientFilterService:
             dailymed_strength=self._build_strength_summary(detail),
             labeler=detail.labeler or result.labeler,
             rxcui=result.rxcui,
+            active_ingredients=detail.active_ingredients,
             inactive_ingredients=detail.inactive_ingredients,
             inactive_ingredients_raw=detail.inactive_ingredients_raw,
             matched_include_terms=matched_include,

@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}Gluten Excipient Screener | Excipient Search{% endblock %}
+
+{% block content %}
+{% set tier_classes = {"avoid": "tier-high", "verify": "tier-moderate", "unknown": "tier-review", "low": "tier-low"} %}
+<section class="panel gluten-panel">
+    <h1>Gluten Excipient Screener</h1>
+    <p class="tagline">
+        Search a medication to screen every DailyMed label for inactive ingredients that could contain gluten.
+        Based on the Celiac Disease Foundation's guidance on
+        <a href="https://celiac.org/gluten-free-living/gluten-in-medicine-vitamins-and-supplements/" target="_blank" rel="noreferrer">gluten in medicine</a>.
+    </p>
+
+    <form class="search-form" action="/gluten-screener" method="get" autocomplete="off">
+        <label for="search-box">Medication or NDC</label>
+        <div class="search-input-row">
+            <input
+                id="search-box"
+                name="q"
+                type="text"
+                value="{{ query }}"
+                placeholder="e.g. levothyroxine or 0378-1800-01"
+            >
+            <button type="submit">Screen</button>
+        </div>
+    </form>
+    {% if error %}
+    <p class="message error">{{ error }}</p>
+    {% endif %}
+
+    <details class="content-block gluten-guide" {% if not searched %}open{% endif %}>
+        <summary><strong>How this screen works</strong></summary>
+        <ul>
+            <li><strong>Starch is the main concern.</strong> Tablets and capsules rarely contain gluten, and other excipients are highly unlikely to contain enough to cause a reaction.</li>
+            <li><strong>Unlabeled starch can come from wheat.</strong> In foods, plain "starch" must be corn, but that rule does not apply to medications. Plain starch, pregelatinized starch (usually corn), and sodium starch glycolate (usually potato) can come from any source.</li>
+            <li><strong>A named source settles it.</strong> Corn, potato, tapioca, and rice starch are not gluten sources. Wheat starch should be avoided.</li>
+            <li><strong>Sugar alcohols are safe.</strong> If a manufacturer says an ingredient is wheat-derived, it is often a sugar alcohol such as mannitol, sorbitol, maltitol, or xylitol, which contains no gluten.</li>
+            <li><strong>Cross-contact in drug plants is extremely unlikely</strong> because of the air-quality controls the FDA requires.</li>
+            <li><strong>Olmesartan (Benicar)</strong> contains no gluten but can cause a celiac-like enteropathy and is best avoided.</li>
+        </ul>
+        <p class="subtle">There is no law requiring drug makers to disclose excipient sources. When a starch source is not stated, call the manufacturer and ask what the starch is made from.</p>
+    </details>
+
+    {% if searched %}
+    {% if rows %}
+    {% if rows | selectattr("1.olmesartan") | list %}
+    <p class="message error">{{ olmesartan_note }}</p>
+    {% endif %}
+    <div class="content-block">
+        <div class="sa-stat-grid">
+            {% for tier, count in tier_counts.items() %}
+            <div class="sa-stat-card gluten-stat">
+                <span class="sa-stat-number">{{ count }}</span>
+                <span class="sa-stat-label"><span class="tier-badge {{ tier_classes[tier] }}">{{ tier_labels[tier] }}</span></span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <section class="content-block">
+        <h2>Products</h2>
+        <div class="drug-forms matching-form-filter" data-matching-form-filter hidden>
+            <span class="drug-forms-label">Filter by form:</span>
+            <div class="drug-forms-chips" data-matching-form-chips></div>
+            <span class="subtle" data-matching-form-summary></span>
+        </div>
+        <div class="gluten-table-wrap">
+        <table class="data-table gluten-table" data-sort-table data-default-sort="gluten">
+            <thead>
+                <tr>
+                    <th><button type="button" class="table-sort-button" data-sort-key="gluten">Gluten Screen</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="product">Product</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="form">Form</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="strength">Strength</button></th>
+                    <th><button type="button" class="table-sort-button" data-sort-key="labeler">Labeler</button></th>
+                    <th>Starch &amp; Grain Excipients</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row, assessment in rows %}
+                <tr
+                    data-matching-form="{{ row.dosage_form or '' }}"
+                    data-sort-gluten="{{ assessment.sort_key }} {{ row.product_name or '' }}"
+                    data-sort-product="{{ row.product_name or '' }}"
+                    data-sort-strength="{{ row.dailymed_strength or '' }}"
+                    data-sort-form="{{ row.dosage_form or '' }}"
+                    data-sort-labeler="{{ row.labeler or '' }}"
+                >
+                    <td data-label="Gluten Screen"><span class="tier-badge {{ tier_classes[assessment.tier] }}">{{ assessment.label }}</span></td>
+                    <td data-label="Product">
+                        {% if row.setid %}
+                        <a href="/products/{{ row.setid }}{% if row.ndcs %}?ndc={{ row.ndcs[0] }}{% endif %}">{{ row.product_name }}</a>
+                        {% else %}
+                        {{ row.product_name }}
+                        {% endif %}
+                        {% if row.ndcs %}<div class="subtle gluten-ndc">NDC {{ row.ndcs[0] }}</div>{% endif %}
+                    </td>
+                    <td data-label="Form">{{ row.dosage_form or "Unknown" }}</td>
+                    <td data-label="Strength">{{ row.dailymed_strength or "Unavailable" }}</td>
+                    <td data-label="Labeler">{{ row.labeler or "Unknown" }}</td>
+                    <td data-label="Starch &amp; Grain Excipients" class="gluten-findings">
+                        {% for finding in assessment.flagged %}
+                        <div class="gluten-finding">
+                            <span class="tag tag-sm {% if finding.category == 'gluten_source' %}tag-risk{% else %}tag-verify{% endif %}">{{ finding.ingredient }}</span>
+                            <span class="subtle">{{ finding.note }}</span>
+                        </div>
+                        {% endfor %}
+                        {% for finding in assessment.reassuring %}
+                        <div class="gluten-finding">
+                            <span class="tag tag-sm">{{ finding.ingredient }}</span>
+                            <span class="subtle">{{ finding.note }}</span>
+                        </div>
+                        {% endfor %}
+                        {% if assessment.olmesartan %}
+                        <div class="gluten-finding">
+                            <span class="tag tag-sm tag-risk">Olmesartan</span>
+                            <span class="subtle">Celiac-like enteropathy risk (see note above).</span>
+                        </div>
+                        {% endif %}
+                        {% if not assessment.findings %}
+                        <span class="subtle">
+                            {% if assessment.tier == "unknown" %}No inactive ingredients were parsed from this label. Check the label directly.{% else %}No starch or gluten-grain excipients listed.{% endif %}
+                        </span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </section>
+    {% elif not error %}
+    <p class="message empty">No DailyMed products matched this search.</p>
+    {% endif %}
+    {% endif %}
+
+    <div class="content-block sa-disclaimer">
+        <p><strong>Vitamins and supplements:</strong> Supplements are not required to disclose gluten, follow gluten-free labeling standards, or be tested for gluten, and many are not listed in DailyMed. Choose supplements labeled gluten-free and read the ingredient list.</p>
+        <p><strong>Data Limitations:</strong> This screen reads inactive ingredient text from labeling submitted to DailyMed. Manufacturers are not required to name excipient sources, and labels can change. A "Unlikely to contain gluten" result means no starch or gluten-grain excipients were listed, not that the product is certified gluten-free.</p>
+        <p><strong>Clinical Use:</strong> This tool supports, and does not replace, clinical judgment. Confirm excipient sources with the manufacturer or a pharmacist before relying on a result. CatylstRx makes no warranty regarding the accuracy or completeness of the information presented.</p>
+    </div>
+</section>
+{% endblock %}

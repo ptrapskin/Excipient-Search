@@ -117,6 +117,7 @@ class ProductComparisonRow(BaseModel):
     dailymed_strength: str | None = None
     labeler: str | None = None
     rxcui: str | None = None
+    active_ingredients: list[IngredientEntry] = Field(default_factory=list)
     inactive_ingredients: list[IngredientEntry] = Field(default_factory=list)
     inactive_ingredients_raw: str | None = None
     matched_include_terms: list[str] = Field(default_factory=list)

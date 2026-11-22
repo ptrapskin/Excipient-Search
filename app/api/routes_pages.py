@@ -14,7 +14,7 @@ from app.api.dependencies import get_container
 from app.domain.models import ExcipientFilter
 from app.repositories import excipient_db
 from app.repositories.dailymed_api import DailyMedAPIError
-from app.services import osmotic_filter
+from app.services import gluten_screen, osmotic_filter
 
 logger = logging.getLogger(__name__)
 
@@ -330,4 +330,48 @@ async def sugar_alcohol_risk_page(
             "multiple_count": multiple_count,
             "selected_sa": sa,
         },
+    )
+
+
+@router.get("/gluten-screener", response_class=HTMLResponse)
+async def gluten_screener_page(request: Request, q: str = "") -> HTMLResponse:
+    """Search DailyMed and screen each product's excipients for potential gluten sources."""
+
+    context = {
+        "query": q,
+        "rows": [],
+        "tier_counts": {},
+        "searched": False,
+        "error": None,
+        "tier_labels": gluten_screen.TIER_LABELS,
+        "olmesartan_note": gluten_screen.OLMESARTAN_NOTE,
+    }
+    if not q.strip():
+        return templates.TemplateResponse(request=request, name="gluten_screener.html", context=context)
+
+    container = get_container(request)
+    status_code = 200
+    try:
+        _, _, comparison_rows, _, _, _ = await container.search_service.search_with_excipients(q)
+        rows = [
+            (row, gluten_screen.assess_product(row.inactive_ingredients, row.active_ingredients))
+            for row in comparison_rows
+        ]
+        rows.sort(key=lambda pair: (gluten_screen.TIER_ORDER[pair[1].tier], (pair[0].product_name or "").casefold()))
+        tier_counts = {tier: 0 for tier in gluten_screen.TIER_ORDER}
+        for _, assessment in rows:
+            tier_counts[assessment.tier] += 1
+        context.update(rows=rows, tier_counts=tier_counts, searched=True)
+    except ValueError as exc:
+        context["error"] = str(exc)
+    except DailyMedAPIError:
+        logger.exception("DailyMed search failed for gluten screener query %s", q)
+        context["error"] = "DailyMed is temporarily unavailable. Please try again shortly."
+        status_code = 502
+
+    return templates.TemplateResponse(
+        request=request,
+        name="gluten_screener.html",
+        context=context,
+        status_code=status_code,
     )

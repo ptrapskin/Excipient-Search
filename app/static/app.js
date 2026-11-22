@@ -81,7 +81,7 @@ const sortButtons = matchingTable
 
 if (matchingRows.length) {
   const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
-  let activeSort = { key: "product", direction: "asc" };
+  let activeSort = { key: matchingTable.dataset.defaultSort || "product", direction: "asc" };
 
   const parseStrengthValue = (value) => {
     const text = value.trim();

@@ -198,3 +198,43 @@ def test_search_api_route_returns_filtered_matches(client):
     payload = response.json()
     assert payload["filter"]["exclude_terms"] == ["red dye"]
     assert payload["matching_products"][0]["product_name"] == "Amoxicillin Suspension"
+
+
+def test_gluten_screener_page_renders_without_query(client):
+    response = client.get("/gluten-screener")
+
+    assert response.status_code == 200
+    assert "Gluten Excipient Screener" in response.text
+    assert "How this screen works" in response.text
+
+
+def test_gluten_screener_ranks_products_by_gluten_concern(client):
+    def make_row(name: str, setid: str, inactive: list[str]) -> ProductComparisonRow:
+        return ProductComparisonRow(
+            product_name=name,
+            setid=setid,
+            ndcs=["12345-678-90"],
+            route="ORAL",
+            dosage_form="TABLET",
+            labeler="Labeler",
+            inactive_ingredients=[IngredientEntry(raw_name=i, display_name=i) for i in inactive],
+            source=DataSource.DAILMED_LIVE,
+        )
+
+    rows = [
+        make_row("Alpha Corn Tablet", "set-1", ["STARCH, CORN"]),
+        make_row("Beta Plain Starch Tablet", "set-2", ["STARCH"]),
+        make_row("Gamma Wheat Tablet", "set-3", ["STARCH, WHEAT"]),
+    ]
+
+    async def fake_search_with_excipients(raw_query: str, include_terms=None, exclude_terms=None):
+        return DrugQuery(raw_text=raw_query, normalized_text=raw_query), [], rows, ExcipientFilter(), rows, False
+
+    client.app.state.container.search_service.search_with_excipients = fake_search_with_excipients
+    response = client.get("/gluten-screener", params={"q": "example"})
+
+    assert response.status_code == 200
+    text = response.text
+    assert text.index("Gamma Wheat Tablet") < text.index("Beta Plain Starch Tablet") < text.index("Alpha Corn Tablet")
+    assert "Verify starch source" in text
+    assert 'data-default-sort="gluten"' in text
