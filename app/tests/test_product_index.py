@@ -137,3 +137,14 @@ def test_parser_uses_document_set_id_not_file_name():
     records = parse_spl_subjects(xml, "version-id-1", "sample.zip")
 
     assert [r.setid for r in records] == ["real-set-id"]
+
+
+def test_pipeline_config_derives_all_output_paths(tmp_path):
+    from excipient_finder.config import Config
+
+    cfg = Config(input_root=None, output_root=tmp_path)
+
+    assert cfg.db_path == tmp_path / "excipients.db"
+    assert cfg.index_gz_path == tmp_path / "product_index.db.gz"
+    assert cfg.log_dir == tmp_path / "logs"
+    assert cfg.csv_dir == tmp_path

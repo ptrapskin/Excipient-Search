@@ -30,15 +30,15 @@ class Config:
             self.db_path = self.output_root / "excipients.db"
         if self.index_db_path is None:
             self.index_db_path = self.output_root / "product_index.db"
+        if self.log_dir is None:
+            self.log_dir = self.output_root / "logs"
+        if self.csv_dir is None:
+            self.csv_dir = self.output_root
 
     @property
     def index_gz_path(self) -> Path:
         """Compressed, committed copy of the product index read by the web app."""
         return self.index_db_path.with_name(self.index_db_path.name + ".gz")
-        if self.log_dir is None:
-            self.log_dir = self.output_root / "logs"
-        if self.csv_dir is None:
-            self.csv_dir = self.output_root
 
     @property
     def qa_dir(self) -> Path:
