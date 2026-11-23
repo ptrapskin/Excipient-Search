@@ -81,7 +81,7 @@ function unitSelectHtml(idx, selected) {
   const opts = UNIT_OPTIONS.map(u =>
     `<option value="${u}" ${u === selected ? 'selected' : ''}>${u}</option>`
   ).join('');
-  return `<select class="cl-unit-select ${selected ? '' : 'cl-qty-empty'}" data-idx="${idx}" data-field="unit">
+  return `<select aria-label="Unit, item ${idx + 1}" class="cl-unit-select ${selected ? '' : 'cl-qty-empty'}" data-idx="${idx}" data-field="unit">
     <option value="" ${selected ? '' : 'selected'} disabled>unit&hellip;</option>${opts}
   </select>`;
 }
@@ -98,12 +98,12 @@ function renderItems() {
   state.items.forEach((it, idx) => {
     html += `<tr>
       <td class="cl-row-num" data-label="#">${idx + 1}</td>
-      <td data-label="Name"><input type="text" data-idx="${idx}" data-field="name" value="${escapeHtml(it.name)}"></td>
-      <td data-label="Strength"><input type="text" data-idx="${idx}" data-field="strength" value="${escapeHtml(it.strength)}"></td>
-      <td data-label="NDC"><input type="text" data-idx="${idx}" data-field="ndc" value="${escapeHtml(it.ndc)}"></td>
-      <td data-label="Lot"><input type="text" data-idx="${idx}" data-field="lot" value="${escapeHtml(it.lot)}"></td>
-      <td data-label="Exp"><input type="text" data-idx="${idx}" data-field="expiration" value="${escapeHtml(it.expiration)}"></td>
-      <td data-label="Qty"><input type="text" inputmode="numeric" placeholder="e.g. 30" title="Number of units, not packages" class="${it.quantity ? '' : 'cl-qty-empty'}" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
+      <td data-label="Name"><input aria-label="Drug or supply name, item ${idx + 1}" type="text" data-idx="${idx}" data-field="name" value="${escapeHtml(it.name)}"></td>
+      <td data-label="Strength"><input aria-label="Strength, item ${idx + 1}" type="text" data-idx="${idx}" data-field="strength" value="${escapeHtml(it.strength)}"></td>
+      <td data-label="NDC"><input aria-label="NDC, item ${idx + 1}" type="text" data-idx="${idx}" data-field="ndc" value="${escapeHtml(it.ndc)}"></td>
+      <td data-label="Lot"><input aria-label="Lot number, item ${idx + 1}" type="text" data-idx="${idx}" data-field="lot" value="${escapeHtml(it.lot)}"></td>
+      <td data-label="Exp"><input aria-label="Expiration date, item ${idx + 1}" type="text" data-idx="${idx}" data-field="expiration" value="${escapeHtml(it.expiration)}"></td>
+      <td data-label="Qty"><input aria-label="Quantity in units, item ${idx + 1}" type="text" inputmode="numeric" placeholder="e.g. 30" title="Number of units, not packages" class="${it.quantity ? '' : 'cl-qty-empty'}" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
       <td data-label="Unit">${unitSelectHtml(idx, it.unit)}</td>
       <td class="cl-remove-cell"><button class="cl-remove-btn" data-idx="${idx}" aria-label="Remove item">✕</button></td>
     </tr>`;

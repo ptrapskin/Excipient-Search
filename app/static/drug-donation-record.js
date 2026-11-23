@@ -232,7 +232,7 @@ function unitSelectHtml(idx, selected) {
   const opts = UNIT_OPTIONS.map(u =>
     `<option value="${u}" ${u === selected ? 'selected' : ''}>${u}</option>`
   ).join('');
-  return `<select class="dn-unit-select" data-idx="${idx}" data-field="unit">
+  return `<select aria-label="Unit, item ${idx + 1}" class="dn-unit-select" data-idx="${idx}" data-field="unit">
     <option value="" ${selected ? '' : 'selected'} disabled>unit&hellip;</option>${opts}
   </select>`;
 }
@@ -247,13 +247,13 @@ const EXAMPLE_ITEM = { name: 'Lantus', strength: '100 units/mL', ndc: '00000-123
 function exampleRowHtml() {
   return `<tr class="dn-example-row">
     <td class="dn-row-num" data-label="#">Ex.</td>
-    <td data-label="Name"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.name)}" disabled></td>
-    <td data-label="Strength"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.strength)}" disabled></td>
-    <td data-label="NDC"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.ndc)}" disabled></td>
-    <td data-label="Lot"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.lot)}" disabled></td>
-    <td data-label="Exp"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.expiration)}" disabled></td>
-    <td data-label="Qty"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.quantity)}" disabled></td>
-    <td data-label="Unit"><input type="text" value="${escapeHtml(EXAMPLE_ITEM.unit)}" disabled></td>
+    <td data-label="Name"><input aria-label="Example drug or supply name" type="text" value="${escapeHtml(EXAMPLE_ITEM.name)}" disabled></td>
+    <td data-label="Strength"><input aria-label="Example strength" type="text" value="${escapeHtml(EXAMPLE_ITEM.strength)}" disabled></td>
+    <td data-label="NDC"><input aria-label="Example NDC" type="text" value="${escapeHtml(EXAMPLE_ITEM.ndc)}" disabled></td>
+    <td data-label="Lot"><input aria-label="Example lot number" type="text" value="${escapeHtml(EXAMPLE_ITEM.lot)}" disabled></td>
+    <td data-label="Exp"><input aria-label="Example expiration date" type="text" value="${escapeHtml(EXAMPLE_ITEM.expiration)}" disabled></td>
+    <td data-label="Qty"><input aria-label="Example quantity in units" type="text" value="${escapeHtml(EXAMPLE_ITEM.quantity)}" disabled></td>
+    <td data-label="Unit"><input aria-label="Example unit" type="text" value="${escapeHtml(EXAMPLE_ITEM.unit)}" disabled></td>
     <td class="dn-remove-cell"><span class="dn-example-tag">Example</span></td>
   </tr>`;
 }
@@ -273,12 +273,12 @@ function renderItems() {
     const expWarnText = expStatus ? expirationWarningText(expStatus, it.expiration) : '';
     html += `<tr>
       <td class="dn-row-num" data-label="#">${idx + 1}</td>
-      <td data-label="Name"><input type="text" data-idx="${idx}" data-field="name" value="${escapeHtml(it.name)}"></td>
-      <td data-label="Strength"><input type="text" data-idx="${idx}" data-field="strength" value="${escapeHtml(it.strength)}"></td>
-      <td data-label="NDC"><input type="text" data-idx="${idx}" data-field="ndc" value="${escapeHtml(it.ndc)}"></td>
-      <td data-label="Lot"><input type="text" data-idx="${idx}" data-field="lot" value="${escapeHtml(it.lot)}"></td>
-      <td data-label="Exp"><input type="text" class="${expClass}" data-idx="${idx}" data-field="expiration" value="${escapeHtml(it.expiration)}"><div class="dn-exp-warn-text">${expWarnText}</div></td>
-      <td data-label="Qty"><input type="text" inputmode="numeric" placeholder="e.g. 30" title="Number of units, not packages" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
+      <td data-label="Name"><input aria-label="Drug or supply name, item ${idx + 1}" type="text" data-idx="${idx}" data-field="name" value="${escapeHtml(it.name)}"></td>
+      <td data-label="Strength"><input aria-label="Strength, item ${idx + 1}" type="text" data-idx="${idx}" data-field="strength" value="${escapeHtml(it.strength)}"></td>
+      <td data-label="NDC"><input aria-label="NDC, item ${idx + 1}" type="text" data-idx="${idx}" data-field="ndc" value="${escapeHtml(it.ndc)}"></td>
+      <td data-label="Lot"><input aria-label="Lot number, item ${idx + 1}" type="text" data-idx="${idx}" data-field="lot" value="${escapeHtml(it.lot)}"></td>
+      <td data-label="Exp"><input aria-label="Expiration date, item ${idx + 1}" type="text" class="${expClass}" data-idx="${idx}" data-field="expiration" value="${escapeHtml(it.expiration)}"><div class="dn-exp-warn-text">${expWarnText}</div></td>
+      <td data-label="Qty"><input aria-label="Quantity in units, item ${idx + 1}" type="text" inputmode="numeric" placeholder="e.g. 30" title="Number of units, not packages" data-idx="${idx}" data-field="quantity" value="${escapeHtml(it.quantity)}"></td>
       <td data-label="Unit">${unitSelectHtml(idx, it.unit)}</td>
       <td class="dn-remove-cell"><button class="dn-remove-btn" data-idx="${idx}" aria-label="Remove item">✕</button></td>
     </tr>`;

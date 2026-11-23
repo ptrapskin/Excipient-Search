@@ -280,3 +280,30 @@ def test_disposal_pages_are_separate(client):
     assert "Safe Sharps Disposal" in sharps.text
     assert "What counts as sharps" in sharps.text
     assert 'href="/dispose-sharps"' in meds.text
+
+
+def test_robots_and_sitemap_keep_crawlers_off_live_lookups(client):
+    robots = client.get("/robots.txt")
+    sitemap = client.get("/sitemap.xml")
+
+    assert robots.status_code == 200
+    for path in ("/api/", "/products/", "/search"):
+        assert f"Disallow: {path}" in robots.text
+    assert "Sitemap: https://tools.catylstrx.com/sitemap.xml" in robots.text
+    assert sitemap.status_code == 200
+    assert sitemap.headers["content-type"].startswith("application/xml")
+    assert "<loc>https://tools.catylstrx.com/dispose-sharps</loc>" in sitemap.text
+    assert "/products/" not in sitemap.text
+
+
+def test_tool_page_titles_use_site_brand(client):
+    for path in ("/", "/donate-meds", "/gluten-screener", "/dispose-meds"):
+        title = client.get(path).text.split("<title>")[1].split("</title>")[0]
+        assert title.endswith("| CatylstRx"), (path, title)
+
+
+def test_local_date_shows_central_time_date():
+    from app.api.routes_pages import _local_date
+
+    assert _local_date("2026-11-23T01:04:11+00:00") == "November 22, 2026"
+    assert _local_date("not a date") == "not a date"

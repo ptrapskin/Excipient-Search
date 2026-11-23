@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Product | Excipient Search{% endblock %}
+{% block title %}{{ product.product_name if product else "Product Detail" }} | CatylstRx{% endblock %}
 
 {% block content %}
 <section class="panel">

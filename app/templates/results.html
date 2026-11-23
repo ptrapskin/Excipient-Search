@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Results | Excipient Search{% endblock %}
+{% block title %}{% if query %}{{ query }} – {% endif %}Excipient Search Results | CatylstRx{% endblock %}
 
 {% block content %}
 <section class="panel results-panel">

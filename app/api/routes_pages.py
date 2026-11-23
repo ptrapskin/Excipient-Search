@@ -7,7 +7,7 @@ import logging
 from pathlib import Path
 
 from fastapi import APIRouter, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse, Response
 from fastapi.templating import Jinja2Templates
 
 from app.api.dependencies import get_container
@@ -70,6 +70,68 @@ def _datetimeformat(value: str) -> str:
 
 
 templates.env.filters["datetimeformat"] = _datetimeformat
+
+
+def _local_date(value: str) -> str:
+    """Format an ISO timestamp as a Wisconsin (Central time) calendar date.
+
+    Build timestamps are stored in UTC, so an evening build in Wisconsin would
+    otherwise show the next day's date.
+    """
+    try:
+        from datetime import datetime
+        from zoneinfo import ZoneInfo
+
+        dt = datetime.fromisoformat(value)
+        if dt.tzinfo is not None:
+            dt = dt.astimezone(ZoneInfo("America/Chicago"))
+        return f"{dt.strftime('%B')} {dt.day}, {dt.year}"
+    except Exception:
+        return _datetimeformat(str(value)[:10])
+
+
+templates.env.filters["local_date"] = _local_date
+
+
+SITE_URL = "https://tools.catylstrx.com"
+
+# Public pages listed in the sitemap. Product, search-result and API pages are
+# left out and disallowed in robots.txt: each one calls DailyMed live, and
+# crawler traffic could trip DailyMed's rate limits.
+SITEMAP_PATHS = (
+    "/",
+    "/gluten-screener",
+    "/osmotic-excipient-screener",
+    "/donate-meds",
+    "/drug-donation-record",
+    "/dispose-meds",
+    "/dispose-sharps",
+    "/drug-transfer-record",
+    "/drug-destruction-record",
+    "/charitable-destruction-log",
+)
+
+
+@router.get("/robots.txt", response_class=PlainTextResponse, include_in_schema=False)
+async def robots_txt() -> str:
+    return (
+        "User-agent: *\n"
+        "Disallow: /api/\n"
+        "Disallow: /products/\n"
+        "Disallow: /search\n"
+        "Allow: /\n"
+        f"Sitemap: {SITE_URL}/sitemap.xml\n"
+    )
+
+
+@router.get("/sitemap.xml", include_in_schema=False)
+async def sitemap_xml() -> Response:
+    urls = "".join(f" <url>\n  <loc>{SITE_URL}{path}</loc>\n </url>\n" for path in SITEMAP_PATHS)
+    body = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n'
+    )
+    return Response(content=body, media_type="application/xml")
 
 
 @router.get("/", response_class=HTMLResponse)

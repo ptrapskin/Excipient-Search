@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Osmotic Excipient Screener | Excipient Search{% endblock %}
+{% block title %}Osmotic Excipient Screener | CatylstRx{% endblock %}
 
 {% block content %}
 <section class="panel sa-panel">
@@ -34,7 +34,7 @@
             </a>
         </div>
         {% if stats.last_processed %}
-        <p class="sa-updated">Last updated {{ stats.last_processed[:10] | datetimeformat }}</p>
+        <p class="sa-updated">Last updated {{ stats.last_processed | local_date }}</p>
         {% endif %}
     </div>
 
@@ -53,6 +53,7 @@
             type="search"
             id="sa-search"
             class="sa-search"
+            aria-label="Search by drug or product name"
             placeholder="Search by drug or product name&hellip;"
             autocomplete="off"
         >
