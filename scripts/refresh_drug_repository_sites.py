@@ -34,6 +34,18 @@ _USER_AGENT = (
 )
 _OUTPUT_PATH = _PROJECT_ROOT / "app" / "data" / "drug_repository_sites.json"
 
+# Known errors in the DHS participant list, keyed by (site name, address as
+# DHS lists it). Each applies only while DHS still shows the wrong address,
+# so a fix on the DHS page takes over automatically.
+_ADDRESS_CORRECTIONS: dict[tuple[str, str], str] = {
+    # DHS merges a stray "1890-F1" into the street number.
+    ("Fitchburg Family Pharmacy", "1890-F13050 Cahill Main #6, Fitchburg, WI 53711"):
+        "3050 Cahill Main #6, Fitchburg, WI 53711",
+    # DHS lists the PO Box ZIP; the street address is in 53713.
+    ("St. Vincent de Paul Charitable Pharmacy", "2033 Fish Hatchery Road, Madison, WI 53725-9686"):
+        "2033 Fish Hatchery Road, Madison, WI 53713",
+}
+
 
 def fetch_source_html() -> str:
     req = urllib.request.Request(_SOURCE_URL, headers={"User-Agent": "Mozilla/5.0"})
@@ -167,6 +179,12 @@ def main() -> None:
         deduped.append(org)
     orgs = deduped
     print(f"Parsed {len(orgs)} unique participant sites.")
+
+    for org in orgs:
+        corrected = _ADDRESS_CORRECTIONS.get((org["name"], org["address"]))
+        if corrected:
+            print(f"  correcting address for {org['name']}: {corrected}")
+            org["address"] = corrected
 
     existing_by_address: dict[str, dict] = {}
     if _OUTPUT_PATH.exists():
