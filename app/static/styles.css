@@ -1531,8 +1531,7 @@ details[open] > .lc-summary::before { transform: rotate(90deg); }
     border-top: 1px solid var(--border);
 }
 
-.drf-faq,
-.drf-supplies {
+.drf-faq {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
@@ -1586,23 +1585,6 @@ details[open] > .lc-summary::before { transform: rotate(90deg); }
 .drf-faq-body ul ul,
 .drf-faq-body ol ul {
     margin: 0.25rem 0;
-}
-
-.drf-general-rules {
-    margin-top: 1.5rem;
-    padding: 1rem 1.25rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: rgba(47, 108, 143, 0.06);
-}
-
-.drf-general-rules h3 {
-    margin-top: 0;
-}
-
-.drf-general-rules ul {
-    margin: 0.5rem 0 0;
-    padding-left: 1.4rem;
 }
 
 /* Disposal handout pages (medicine, sharps): match the printed black-and-white handouts */
