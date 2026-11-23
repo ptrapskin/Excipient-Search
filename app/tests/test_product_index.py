@@ -148,3 +148,22 @@ def test_pipeline_config_derives_all_output_paths(tmp_path):
     assert cfg.index_gz_path == tmp_path / "product_index.db.gz"
     assert cfg.log_dir == tmp_path / "logs"
     assert cfg.csv_dir == tmp_path
+
+
+def test_exported_index_matches_ndc_in_any_format(tmp_path):
+    from app.repositories.product_index import resolve_index_path
+    from excipient_finder.product_index import export_compressed
+
+    db_path = tmp_path / "product_index.db"
+    conn = init_index_db(db_path)
+    insert_index_record(conn, _record("set-9", "Levothyroxine", "LEVOTHYROXINE SODIUM", "25 ug", "STARCH, CORN", ndcs=("0378-1800-01",)))
+    conn.commit()
+    conn.close()
+    deploy = tmp_path / "deploy"
+    deploy.mkdir()
+    export_compressed(db_path, deploy / "product_index.db.gz")
+    repo = ProductIndexRepository(resolve_index_path(deploy / "product_index.db", unpack_dir=tmp_path / "unpacked"))
+
+    for typed in ("0378-1800-01", "00378-1800-01", "00378180001", "0378180001"):
+        found = repo.search(DrugQuery(raw_text=typed, normalized_text=typed, ndc=typed))
+        assert [d.setid for _, d in found] == ["set-9"], typed

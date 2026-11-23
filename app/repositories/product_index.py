@@ -19,6 +19,7 @@ from pathlib import Path
 
 from app.domain.enums import DataSource
 from app.domain.models import DrugQuery, IngredientEntry, ProductDetail, ProductSearchResult
+from app.services.ndc import ndc_search_keys
 
 logger = logging.getLogger(__name__)
 
@@ -79,6 +80,7 @@ class ProductIndexRepository:
 
     def __init__(self, db_path: Path) -> None:
         self._db_path = db_path
+        self._ndc11: bool | None = None
 
     @property
     def available(self) -> bool:
@@ -112,6 +114,10 @@ class ProductIndexRepository:
         if query.ndc:
             clauses.append("ndcs LIKE ? ESCAPE '\\'")
             params.append(_like(query.ndc))
+            if self._has_ndc11():
+                for key in ndc_search_keys(query.ndc):
+                    clauses.append("ndc11 LIKE ?")
+                    params.append(f"%{key}%")
         else:
             terms = query.normalized_text.split()
             if terms:
@@ -134,6 +140,15 @@ class ProductIndexRepository:
         with self._connect() as conn:
             rows = conn.execute(sql, params).fetchall()
         return [self._to_models(row) for row in rows]
+
+    def _has_ndc11(self) -> bool:
+        """True when the index carries the 11-digit NDC column (added at export)."""
+
+        if self._ndc11 is None:
+            with self._connect() as conn:
+                columns = {row[1] for row in conn.execute("PRAGMA table_info(indexed_products)")}
+            self._ndc11 = "ndc11" in columns
+        return self._ndc11
 
     def _connect(self) -> sqlite3.Connection:
         conn = sqlite3.connect(f"file:{self._db_path.as_posix()}?mode=ro", uri=True)

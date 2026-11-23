@@ -15,6 +15,7 @@ import shutil
 import sqlite3
 from pathlib import Path
 
+from app.services.ndc import ndc11_list
 from excipient_finder.models import SplRecord
 from excipient_finder.utils import utc_now_str
 
@@ -112,6 +113,11 @@ def export_compressed(index_db_path: Path, gz_path: Path) -> Path:
         )
         conn.commit()
         conn.execute("DETACH DATABASE src")
+        # 11-digit NDC forms so searches match however the NDC is typed.
+        conn.create_function("ndc11_list", 1, ndc11_list, deterministic=True)
+        conn.execute("ALTER TABLE indexed_products ADD COLUMN ndc11 TEXT")
+        conn.execute("UPDATE indexed_products SET ndc11 = ndc11_list(ndcs)")
+        conn.commit()
         conn.execute("VACUUM")
     finally:
         conn.close()
