@@ -7,7 +7,7 @@ from app.config import Settings
 from app.domain.enums import DataSource
 from app.domain.models import CachedSearch, DrugQuery, IngredientEntry, ProductComparisonRow, ProductDetail, ProductSearchResult, RxNormConcept
 from app.services.excipient_filter import ExcipientFilterService
-from app.repositories.dailymed_api import DailyMedAPIRepository
+from app.repositories.dailymed_api import DailyMedApiRepository
 from app.services.parsing_service import ParsingService
 from app.services.search_service import SearchService
 
@@ -48,8 +48,14 @@ class FakeCacheService:
 
 
 class FakeDailyMedRepository:
-    def __init__(self) -> None:
+    def __init__(self, search_results: dict[str, list[ProductSearchResult]] | None = None) -> None:
         self.detail_calls = 0
+        self.search_results = search_results or {}
+        self.searched: list[str] = []
+
+    async def search_spls(self, query: DrugQuery) -> list[ProductSearchResult]:
+        self.searched.append(query.normalized_text)
+        return self.search_results.get(query.normalized_text, [])
 
     async def get_all_product_details(self, setid: str):
         self.detail_calls += 1
@@ -86,25 +92,6 @@ class FakeDailyMedRepository:
         )]
 
 
-class FakeProductExpander:
-    def __init__(self) -> None:
-        self.hydrate_calls = 0
-        self.expand_concepts_calls = 0
-        self.expanded_results: list[ProductSearchResult] = []
-
-    async def hydrate_results(self, results: list[ProductSearchResult]) -> list[ProductSearchResult]:
-        self.hydrate_calls += 1
-        return results
-
-    async def expand_from_concepts(
-        self,
-        query: DrugQuery,
-        concepts: list[RxNormConcept],
-    ) -> list[ProductSearchResult]:
-        self.expand_concepts_calls += 1
-        return self.expanded_results
-
-
 class FakeRxNormResolver:
     def __init__(self, concepts: list[RxNormConcept] | None = None) -> None:
         self.concepts = concepts or []
@@ -126,80 +113,56 @@ async def test_search_service_ignores_cached_search_results_and_hits_live_workfl
         expires_at=datetime.now(timezone.utc) + timedelta(hours=1),
     )
     cache = FakeCacheService(cached=cached)
-    repository = FakeDailyMedRepository()
-    expander = FakeProductExpander()
-    expander.expanded_results = [ProductSearchResult(product_name="Live Product", setid="live-1")]
+    repository = FakeDailyMedRepository({"metformin": [ProductSearchResult(product_name="Live Product", setid="live-1")]})
     resolver = FakeRxNormResolver()
-    service = SearchService(cache, repository, expander, resolver, ExcipientFilterService())
+    service = SearchService(cache, repository, resolver, ExcipientFilterService())
 
     query, results, cached_flag = await service.search("metformin")
 
     assert query.normalized_text == "metformin"
     assert cached_flag is False
-    assert results[0].product_name == "Live Product"
+    assert [r.product_name for r in results] == ["Live Product"]
     assert repository.detail_calls == 0
-    assert expander.expand_concepts_calls == 1
     assert resolver.calls == 1
 
 
 @pytest.mark.asyncio
-async def test_search_service_uses_expander_output_and_caches_results():
+async def test_search_service_caches_live_results():
     cache = FakeCacheService()
-    repository = FakeDailyMedRepository()
-    expander = FakeProductExpander()
-    expander.expanded_results = [ProductSearchResult(product_name="Live Product", setid="abc")]
-    resolver = FakeRxNormResolver()
-    service = SearchService(cache, repository, expander, resolver, ExcipientFilterService())
+    repository = FakeDailyMedRepository({"metformin": [ProductSearchResult(product_name="Live Product", setid="abc")]})
+    service = SearchService(cache, repository, FakeRxNormResolver(), ExcipientFilterService())
 
-    query, results, cached_flag = await service.search("metformin")
+    await service.search("metformin")
 
-    assert query.normalized_text == "metformin"
-    assert cached_flag is False
-    assert results[0].product_name == "Live Product"
-    assert expander.expand_concepts_calls == 1
-    assert expander.hydrate_calls == 0
-    assert resolver.calls == 1
-    assert cache.saved_results[0].product_name == "Live Product"
+    assert [r.product_name for r in cache.saved_results] == ["Live Product"]
 
 
 @pytest.mark.asyncio
-async def test_search_service_prefers_rxnorm_expanded_products():
+async def test_search_service_adds_products_for_rxnorm_ingredient_aliases():
     cache = FakeCacheService()
-    repository = FakeDailyMedRepository()
-    expander = FakeProductExpander()
-    expander.expanded_results = [ProductSearchResult(product_name="Expanded Product", setid="expanded")]
-    resolver = FakeRxNormResolver(
-        [
-            RxNormConcept(
-                rxcui="1",
-                name="metformin 500 MG Oral Tablet",
-                tty="SCD",
-                score=120.0,
-                source="rxnorm_api",
-            )
-        ]
-    )
-    service = SearchService(cache, repository, expander, resolver, ExcipientFilterService())
+    repository = FakeDailyMedRepository({
+        "keppra": [ProductSearchResult(product_name="Keppra", setid="brand")],
+        "levetiracetam": [ProductSearchResult(product_name="Levetiracetam", setid="generic")],
+    })
+    resolver = FakeRxNormResolver([
+        RxNormConcept(rxcui="1", name="levetiracetam", tty="IN", score=100.0, source="rxnorm_api"),
+        RxNormConcept(rxcui="2", name="Keppra 500 MG Oral Tablet", tty="SBD", score=90.0, source="rxnorm_api"),
+    ])
+    service = SearchService(cache, repository, resolver, ExcipientFilterService())
 
-    query, results, cached_flag = await service.search("metformin")
+    _, results, _ = await service.search("keppra")
 
-    assert query.normalized_text == "metformin"
-    assert cached_flag is False
-    assert [result.product_name for result in results] == ["Expanded Product"]
-    assert repository.detail_calls == 0
-    assert expander.expand_concepts_calls == 1
-    assert expander.hydrate_calls == 0
+    assert repository.searched == ["keppra", "levetiracetam"]
+    assert {r.setid for r in results} == {"brand", "generic"}
 
 
 @pytest.mark.asyncio
 async def test_search_service_builds_filtered_excipient_comparison():
     cache = FakeCacheService()
-    repository = FakeDailyMedRepository()
-    expander = FakeProductExpander()
-    expander.expanded_results = [
+    repository = FakeDailyMedRepository({"amoxicillin": [
         ProductSearchResult(product_name="Product A", setid="set-a"),
         ProductSearchResult(product_name="Product B", setid="set-b"),
-    ]
+    ]})
     resolver = FakeRxNormResolver()
 
     async def fake_all_details(setid: str):
@@ -256,14 +219,15 @@ async def test_search_service_builds_filtered_excipient_comparison():
         )]
 
     repository.get_all_product_details = fake_all_details
-    service = SearchService(cache, repository, expander, resolver, ExcipientFilterService())
+    service = SearchService(cache, repository, resolver, ExcipientFilterService())
 
-    query, results, comparison_rows, excipient_filter, matching_rows, cached_flag = (
+    query, results, comparison_rows, excipient_filter, matching_rows, cached_flag, unavailable = (
         await service.search_with_excipients("amoxicillin", exclude_terms="red dye")
     )
 
     assert query.normalized_text == "amoxicillin"
     assert cached_flag is False
+    assert unavailable == 0
     assert len(results) == 2
     assert len(comparison_rows) == 2
     assert excipient_filter.exclude_terms == ["red dye"]
@@ -289,7 +253,7 @@ async def test_dailymed_search_parses_live_json():
     transport = httpx.MockTransport(handler)
     async with httpx.AsyncClient(transport=transport, base_url="https://example.org") as client:
         settings = Settings(dailymed_base_url="https://example.org")
-        repository = DailyMedAPIRepository(settings, client, ParsingService())
+        repository = DailyMedApiRepository(settings, client, ParsingService())
         query = DrugQuery(raw_text="metformin", normalized_text="metformin")
 
         results = await repository.search_products(query)

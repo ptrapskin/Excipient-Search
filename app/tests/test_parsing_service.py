@@ -2,7 +2,7 @@ import httpx
 
 from app.config import Settings
 from app.repositories.dailymed_api import (
-    DailyMedAPIRepository,
+    DailyMedApiRepository,
     build_all_product_details_from_xml,
     build_product_detail_from_xml,
 )
@@ -54,7 +54,7 @@ def test_dailymed_product_detail_prefers_inactive_ingredient_table():
     </document>
     """
 
-    repository = DailyMedAPIRepository(Settings(), httpx.AsyncClient(), ParsingService())
+    repository = DailyMedApiRepository(Settings(), httpx.AsyncClient(), ParsingService())
     detail = repository._parse_product_detail(xml_text=xml, setid="set-123")
 
     assert len(detail.inactive_ingredients) == 1
@@ -81,7 +81,7 @@ def test_dailymed_product_detail_uses_structured_xml_before_narrative():
     </document>
     """
 
-    repository = DailyMedAPIRepository(Settings(), httpx.AsyncClient(), ParsingService())
+    repository = DailyMedApiRepository(Settings(), httpx.AsyncClient(), ParsingService())
     detail = repository._parse_product_detail(xml_text=xml, setid="set-123")
 
     assert [entry.display_name for entry in detail.inactive_ingredients] == [
@@ -130,7 +130,7 @@ def test_dailymed_product_detail_parses_inactive_section():
     </document>
     """
 
-    repository = DailyMedAPIRepository(Settings(), httpx.AsyncClient(), ParsingService())
+    repository = DailyMedApiRepository(Settings(), httpx.AsyncClient(), ParsingService())
     detail = repository._parse_product_detail(xml_text=xml, setid="set-123")
 
     assert detail.product_name == "Example Product"
@@ -198,7 +198,7 @@ def test_dailymed_product_detail_prefers_structured_tables_for_childrens_pain_re
     </document>
     """
 
-    repository = DailyMedAPIRepository(Settings(), httpx.AsyncClient(), ParsingService())
+    repository = DailyMedApiRepository(Settings(), httpx.AsyncClient(), ParsingService())
     detail = repository._parse_product_detail(xml_text=xml, setid="set-children")
 
     assert len(detail.active_ingredients) == 1
@@ -295,7 +295,7 @@ def test_dailymed_product_detail_uses_structured_product_data_when_document_titl
     </document>
     """
 
-    repository = DailyMedAPIRepository(Settings(), httpx.AsyncClient(), ParsingService())
+    repository = DailyMedApiRepository(Settings(), httpx.AsyncClient(), ParsingService())
     detail = repository._parse_product_detail(xml_text=xml, setid="set-fluoxetine")
 
     assert detail.product_name == "Fluoxetine hydrochloride FOR SOLUTION"

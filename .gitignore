@@ -16,6 +16,7 @@ env/
 
 # Testing artifacts
 .pytest_cache/
+.pytest_tmp/
 pytest-cache-files-*/
 route-tests-*.db
 dailymed-composite-*/
@@ -52,6 +53,7 @@ qa/
 
 # IDE
 .vscode/
+*.code-workspace
 .idea/
 *.suo
 *.user
